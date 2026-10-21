@@ -309,6 +309,22 @@ def ia_probe(force=False, now=time.time):
     return ok, msg
 
 
+def ia_guard(now=time.time):
+    """Refuse (without touching the network) while the last archive.org probe failed less than 30 minutes ago."""
+    st = read_probe()
+    if st and not st.get("ok") and now() - st.get("when", 0) < PROBE_WAIT:
+        raise polite.NetworkError("archive.org did not answer at %s; not trying again before %s" % (
+            time.strftime("%H:%M", time.localtime(st["when"])), time.strftime("%H:%M", time.localtime(st["when"] + PROBE_WAIT))))
+
+
+def ia_failed(err):
+    """Record that archive.org stopped answering, so every process backs off for 30 minutes."""
+    st = read_probe()
+    os.makedirs(corpus_dir(), exist_ok=True)
+    polite.write_json(probe_file(), {"when": time.time(), "ok": False, "message": str(err),
+                                     "history": (st.get("history") or [])[-20:] + [{"when": time.time(), "ok": False}]})
+
+
 def ia_text_url(identifier):
     q = urllib.parse.quote(identifier)
     return "%s/download/%s/%s_djvu.txt" % (IA, q, q)
@@ -326,14 +342,25 @@ def local_seed(identifier):
 def ia_meta(identifier):
     """Item metadata JSON, cached (needed for the in-item search server and dir)."""
     path = os.path.join(corpus_dir(), "_meta", identifier + ".json")
-    body, _ = polite.cached_get("%s/metadata/%s" % (IA, urllib.parse.quote(identifier)), path, timeout=90, log=log)
+    if not os.path.exists(path):
+        ia_guard()
+    try:
+        body, _ = polite.cached_get("%s/metadata/%s" % (IA, urllib.parse.quote(identifier)), path, timeout=90, log=log)
+    except (polite.NetworkError, polite.Blocked) as e:
+        ia_failed(e)
+        raise
     return json.loads(body)
 
 
 def download_ia_text(identifier, dest):
     """Stream <id>_djvu.txt to dest. Falls back to the file list in the item metadata when the usual name 404s."""
     url = ia_text_url(identifier)
-    r = polite.get(url, dest=dest, timeout=180, log=log)
+    ia_guard()
+    try:
+        r = polite.get(url, dest=dest, timeout=180, log=log)
+    except (polite.NetworkError, polite.Blocked) as e:
+        ia_failed(e)
+        raise
     if r.status == 200:
         return url
     if r.status == 404:
@@ -847,7 +874,12 @@ def inside_search(identifier, phrase):
     url = "https://%s/fulltext/inside.php?item_id=%s&doc=%s&path=%s&q=%s" % (
         srv, urllib.parse.quote(identifier), urllib.parse.quote(identifier), urllib.parse.quote(dr),
         urllib.parse.quote(phrase))
-    body, _ = polite.cached_get(url, path, timeout=120, log=log)
+    ia_guard()
+    try:
+        body, _ = polite.cached_get(url, path, timeout=120, log=log)
+    except (polite.NetworkError, polite.Blocked) as e:
+        ia_failed(e)
+        raise
     return json.loads(body)
 
 

@@ -295,6 +295,23 @@ class ArchiveOrgRules(unittest.TestCase):
         ok, msg = corpus.ia_probe(now=lambda: 1_000_000.0 + 1801)
         self.assertEqual(self.calls, 2)
 
+    def test_no_archive_org_traffic_for_30_minutes_after_a_failure(self):
+        corpus.ia_failed(polite.NetworkError("timed out"))
+        before = self.calls
+        with self.assertRaises(polite.NetworkError):
+            corpus.ia_guard()
+        with self.assertRaises(polite.NetworkError):
+            corpus.ia_meta("anything")
+        with self.assertRaises(polite.NetworkError):
+            corpus.download_ia_text("anything", os.path.join(self.raw, "x.txt"))
+        self.assertEqual(self.calls, before)
+        corpus.ia_guard(now=lambda: __import__("time").time() + 1900)  # 30 minutes later: allowed again
+
+    def test_a_timeout_mid_run_marks_archive_org_down(self):
+        with self.assertRaises(polite.NetworkError):
+            corpus.download_ia_text("x", os.path.join(self.raw, "y.txt"))
+        self.assertFalse(corpus.read_probe()["ok"])
+
     def test_parse_inside_reply(self):
         d = {"page_count": 317, "matches": [
             {"text": "67. <IA_FTS_MATCH>Portland Head</IA_FTS_MATCH>, Me.", "par": [{"page": 73, "boxes": []}]},
