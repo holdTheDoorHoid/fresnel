@@ -535,6 +535,7 @@ class Station:
         self.parts: list[Part] = []
         self.station_recs: list[Rec] = []
         self.absorbed_into: "Station | None" = None
+        self.retiring = False     # every record is pinned elsewhere (record_joins.py): the station will be retired
         self.joins: list[dict] = []
 
     def recs(self) -> list[Rec]:
@@ -635,6 +636,7 @@ class Matcher:
         self.retired: list[tuple[Station, Station]] = []
         self.key_index: dict[str, list[Station]] = defaultdict(list)   # hard keys (rec.hard_keys) -> stations
         self.quiet_unmatched: Counter = Counter()
+        self.quiet_recs: list[Rec] = []
         self.name_region_joins: list[dict] = []
         self.namesake_joins: list[dict] = []
         self.overrides: list[dict] = []
@@ -655,12 +657,18 @@ class Matcher:
         if rec.get("merged_into"):
             return
         keys = [s_["key"] for s_ in rec.get("sources") or [] if isinstance(s_, dict) and s_.get("key")]
-        if keys and all(k in record_joins.RECORD_JOINS for k in keys):
-            return    # every record of this station is pinned elsewhere (record_joins.py): it will be retired, nothing joins it
+        if keys and all(k in record_joins.RECORD_JOINS and not self.pinned_here(record_joins.RECORD_JOINS[k], st, keys) for k in keys):
+            st.retiring = True    # every record goes to another station: it will be retired and nothing joins it
+            return
         for s in rec.get("sources") or []:
             if isinstance(s, dict) and s.get("key"):
                 self.memory[s["key"]] = (st, s.get("part") or "station")
         self.index(st)
+
+    @staticmethod
+    def pinned_here(target: str, st: Station, keys: list[str]) -> bool:
+        """Whether a RECORD_JOINS target names this station itself: its id (with or without "new:") or one of its records."""
+        return (target[4:] if target.startswith("new:") else target) == st.id or target in keys
 
     def index(self, st: Station) -> None:
         for lat, lon in st.points():
@@ -908,14 +916,10 @@ class Matcher:
         for rec in recs:
             pin = record_joins.RECORD_JOINS.get(rec.key) if rec.key not in self.ignore_pins else None
             if pin:
-                st = self.pinned_station(pin)
-                if st is not None:
-                    self.attach(rec, st, "override")
-                    self.overrides.append({"key": rec.key, "to": pin})
-                    continue
-                if ":" in pin and not pin.startswith("new:"):   # the key of a record of a source matched later: wait for it
-                    self.deferred.append((rec, pin))
-                    continue
+                # A pinned record waits until every other record is placed, in a first run and in a run with
+                # memory alike: where it lands among a station's structures then depends only on them.
+                self.deferred.append((rec, pin))
+                continue
             if rec.key in self.memory:
                 st, anchor = self.memory[rec.key]
                 if st.absorbed_into is None:
@@ -978,6 +982,7 @@ class Matcher:
                 continue
             if rec.quiet:
                 self.quiet_unmatched[rec.source] += 1
+                self.quiet_recs.append(rec)
                 continue
             reason = merge_ca.unshown_reason(rec) or (
                       "seamark light with no lighthouse tag" if rec.enrich_only else
@@ -996,6 +1001,7 @@ class Matcher:
         LighthouseFriends one): attached now that every source has been matched; a pin that still points
         nowhere is ignored and the record is matched as if there were none."""
         pending, self.deferred = self.deferred, []
+        pending.sort(key=lambda it: it[0].key)   # the order the pinned records arrived in differs between a first run and a run with memory
         for rec, pin in pending:
             st = self.pinned_station(pin)
             if st is not None:
@@ -1004,6 +1010,58 @@ class Matcher:
             else:
                 self.ignore_pins.add(rec.key)
                 self.match_source([rec])
+
+    def retry_hard_keys(self) -> int:
+        """After both matching passes, give every US record that joined nothing one more try by the numbers it
+        shares with a station: its partner may have been placed after it (records of one pass go in key order,
+        and a run with memory puts the remembered ones first), so the order must not decide. Repeats while
+        records join. Returns how many did."""
+        total = 0
+        while True:
+            n = 0
+            for rec in list(self.unshown_recs) + list(self.quiet_recs):
+                if rec.country != "US" or not rec.hard_keys:
+                    continue
+                st = self.by_hard_key(rec)
+                if st is None:
+                    continue
+                self.attach(rec, st, "hard_key")
+                if rec in self.unshown_recs:
+                    self.unshown_recs.remove(rec)
+                    self.unshown[:] = [u for u in self.unshown if u["key"] != rec.key]
+                else:
+                    self.quiet_recs.remove(rec)
+                    self.quiet_unmatched[rec.source] -= 1
+                n += 1
+            total += n
+            if not n:
+                return total
+
+    def retry_unmatched(self) -> int:
+        """After the pinned records are placed, give every US record that joined nothing one more try by position and
+        name. A record of the second pass is matched before a pinned record has moved its station onto the right
+        spot, and a run with memory still has the station's earlier position in the grid, so the first try may or may
+        not have found it: this one sees the same stations in both. Returns how many joined."""
+        total = 0
+        while True:
+            n = 0
+            for rec in sorted(list(self.unshown_recs) + list(self.quiet_recs), key=lambda r: r.key):
+                if rec.country != "US" or not rec.has_point:
+                    continue
+                cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
+                if not cands:
+                    continue
+                self.attach(rec, cands[0][1], "late_place_name")
+                if rec in self.unshown_recs:
+                    self.unshown_recs.remove(rec)
+                    self.unshown[:] = [u for u in self.unshown if u["key"] != rec.key]
+                else:
+                    self.quiet_recs.remove(rec)
+                    self.quiet_unmatched[rec.source] -= 1
+                n += 1
+            total += n
+            if not n:
+                return total
 
     def fold_whole_range_parts(self) -> None:
         """A station with a front and a rear range structure and a further structure that is only the item for the
@@ -1052,7 +1110,7 @@ class Matcher:
             self.retired.append((st, target))
 
     def live(self) -> list[Station]:
-        return [s for s in self.stations if s.absorbed_into is None and not (s.existing or {}).get("merged_into")]
+        return [s for s in self.stations if s.absorbed_into is None and not s.retiring and not (s.existing or {}).get("merged_into")]
 
     def pair_ranges(self) -> dict:
         report = {"pairs": [], "ambiguous": [], "unpaired": []}
@@ -1824,6 +1882,8 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     merge_ca.retry_unshown(m)
     merge_ca.merge_stations(m, m.ca_curation)
     merge_ca.retry_unshown(m)  # records tied to both of two stations that curation has just made one
+    m.retry_hard_keys()
+    m.retry_unmatched()
     m.retire_emptied()
     ranges = m.pair_ranges()
 

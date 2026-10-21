@@ -268,11 +268,13 @@ def main(argv: list[str] | None = None) -> int:
         c.log(f"uslhs: {args.places} is not there yet (the corpus crawl writes it: research/roster.py build); nothing written")
         return 2
     places = json.loads(args.places.read_text(encoding="utf-8"))
-    records, skipped = [], Counter()
+    records, skipped, no_state = [], Counter(), []
     for p in places:
         rec = build_record(p)
         if rec is None:
             skipped[p.get("type") or "no type"] += 1
+            if p.get("type") in ("Light Station", "Lightship Station", "Lifesaving Station") and p.get("name") and not p.get("state"):
+                no_state.append(f"{p['name']} ({p.get('type')})")   # a station the archive gives no state: it cannot be placed by region
         else:
             records.append(rec)
     seen = set()
@@ -290,7 +292,7 @@ def main(argv: list[str] | None = None) -> int:
                      "link to each place's page; no text or images are copied. The underlying records are US federal records.",
         credit="U.S. Lighthouse Society Digital Archive (Lighthouse Research Catalog), used for facts with a link",
         records=unique,
-        notes={"places_read": len(places), "skipped_types": dict(skipped),
+        notes={"places_read": len(places), "skipped_types": dict(skipped), "skipped_no_state": sorted(no_state),
                "by_type": dict(Counter(r["extra"].get("type") for r in unique)),
                "positioned": sum(1 for r in unique if r["lat"] is not None),
                "built_from": "places.json written by research/roster.py build (the corpus crawl)"},
