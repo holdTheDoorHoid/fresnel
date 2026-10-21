@@ -583,7 +583,7 @@ def rank_candidates(places, names, state=None, near=None, kinds=None):
             rank += 0.12  # a name shared by a light and its life-saving station means the light, unless asked otherwise
         if d is not None:
             rank += 0.3 if d <= 1 else 0.15 if d <= 5 else 0.05 if d <= 25 else (-0.2 if d > 100 else 0.0)
-        if names and sc < 0.45 and (d is None or d > 1):
+        if names and sc < 0.55 and (d is None or d > 1):
             continue
         out.append((rank, sc, d, p))
     out.sort(key=lambda x: (-x[0], x[3].get("name", "")))
@@ -799,14 +799,20 @@ def resolve_station(station_id, places):
     if not cands:
         return None, cands, "; ".join(x for x in (note, "no USLHS place matches the name and state") if x)
     top = cands[0]
-    runner = cands[1] if len(cands) > 1 else None
-    sure_name = top[1] >= 0.85
-    sure_pos = near is None or (top[2] is not None and top[2] <= 1.0)
-    tie = runner is not None and runner[0] >= top[0] - 0.1 and runner[1] >= 0.85 and \
-        (near is None or (runner[2] is not None and runner[2] <= 1.0))
-    if sure_name and sure_pos and not tie:
-        msg = "matched %s by name%s" % (top[3]["slug"], " and position (%.2f km)" % top[2] if top[2] is not None else
-                                         " only (no position on the station record)")
+    rivals = [c for c in cands[1:] if c[1] >= 0.85 and c[0] >= top[0] - 0.1 and (near is None or c[2] is None or c[2] <= 30.0)]
+    close = top[2] is not None and top[2] <= 1.0
+    # USLHS positions are only to the nearest minute (and sometimes off by more), so an exact, unrivalled name
+    # within 30 km is accepted with a warning; a name that merely resembles the station must be within 1 km.
+    near_enough = top[2] is not None and top[2] <= 30.0 and top[1] >= 0.95 and not rivals
+    by_name_only = near is None and top[1] >= 0.95 and not rivals
+    if top[1] >= 0.85 and (close and not [r for r in rivals if r[2] is not None and r[2] <= 1.0] or near_enough or by_name_only):
+        if close:
+            how = "name and position (%.2f km)" % top[2]
+        elif near_enough:
+            how = "name; its USLHS position is %.1f km from the station's (USLHS positions are only to the minute)" % top[2]
+        else:
+            how = "name only (the station has no position)"
+        msg = "matched %s by %s" % (top[3]["slug"], how)
         if note:
             msg += "; " + note
         return top[3], cands, msg

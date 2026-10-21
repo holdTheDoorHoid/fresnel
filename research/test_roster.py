@@ -174,6 +174,18 @@ class Matching(unittest.TestCase):
         self.assertEqual(p["slug"], "split-rock")
         self.assertIn("km", msg)
 
+    def test_exact_unrivalled_name_within_30_km_is_accepted_with_a_warning(self):
+        os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
+        os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "mn"))
+        write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "mn", "us-mn-split-rock.json"), json.dumps(
+            {"id": "us-mn-split-rock", "name": "Split Rock Light", "kind": "lighthouse", "region": "MN",
+             "location": {"lat": 47.35, "lon": -91.6}}))  # about 17 km from the USLHS position
+        places = self.places()
+        places[0]["lat"], places[0]["lon"] = 47.2, -91.37
+        p, cands, msg = roster.resolve_station("us-mn-split-rock", places)
+        self.assertEqual(p["slug"], "split-rock")
+        self.assertIn("only to the minute", msg)
+
     def test_station_id_without_record_uses_the_id_name(self):
         os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
         p, cands, msg = roster.resolve_station("us-ca-point-reyes", self.places())

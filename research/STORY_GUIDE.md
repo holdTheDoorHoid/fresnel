@@ -198,35 +198,63 @@ home) or reachable only by boat, say so plainly in *Today*.
 From the source surveys (`docs/sources/survey_*.md`; method in `survey_history.md` §13). Work in this
 order, and stop when you have an honest story; a thin station needs only the first two steps.
 
-1. **Identity and roster.** `python3 research/roster.py <id>` prints the keepers the USLHS Digital
-   Archive lists for the station (name, role, start and end years, from NARA's keeper registers),
-   from the local cache. Compare with the station's LighthouseFriends page (keeper list in its
-   "Keepers" line; facts only), New England Lighthouses (Jeremy D'Entremont) or Terry Pepper's
-   Great Lakes pages where they cover it. Record every disagreement in `resolved_conflicts` or
-   `notes_for_editor`. Cite the archive page, not the cache.
+1. **Identity and roster.** `python3 /home/hoid/Desktop/fresnel/research/roster.py <station-id>` (for example
+   `us-me-portland-head`) prints the keepers the USLHS Digital Archive lists for the station: each line is
+   `Name (years)` under the archive's own role heading, with our normalised role in brackets (from NARA's
+   keeper registers, via Kraig Anderson's inventory). It works from the local cache, matches the station by
+   name and position (within about 1 km; USLHS positions are only to the minute) and, when it is not sure,
+   prints the candidates instead; then use `--place <slug>` (the slug is in the candidate list) or
+   `--name "<name>" --state XX [--near lat,lon]`. `--detail N` also fetches salary and source for the first N
+   people (one request each). USLHS covers the US only; there is nothing for `ca-` stations. Compare with
+   the station's LighthouseFriends page (keeper list in its "Keepers" line; facts only), New England
+   Lighthouses (Jeremy D'Entremont) or Terry Pepper's Great Lakes pages where they cover it. Record every
+   disagreement in `resolved_conflicts` or `notes_for_editor`. **Cite the archive page the tool prints**
+   (`https://archives.uslhs.org/places/<slug>`): `check_quotes.py` verifies a quote such as
+   `Joshua F. Strout (1869-1904)` against the cached copy of that page, so copy the roster line exactly as
+   printed ("at least" and all). A USLHS "at least 1950" is a documented span, not an appointment date.
 2. **Chronology skeleton.** The NRHP nomination when the station has an NRHP number
    (`https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/<ref>.pdf`, through `fetch_text.py --grep`;
    a 22 KB file is the "not digitised" placeholder), HABS/HAER data pages on loc.gov
    (`https://www.loc.gov/item/<id>/`), Parks Canada's statement of significance for a Canadian
    heritage lighthouse, and the station's Wikipedia article for leads only (article pages only,
    never `/w/` or `/api/`; cite what it cites where you can).
-3. **Official reports, from the local corpus.** `python3 research/corpus.py grep "<station name>"
-   [--alias "<OCR or old spelling>"] [--state XX] [--series lhb,commissioner,bulletin,lss,marine_ca]
-   [--years 1880-1900]` searches the downloaded text of the Lighthouse Board annual reports, the
-   Commissioner of Lighthouses reports, the Lighthouse Service Bulletin, the Life-Saving Service
-   annual reports and Canada's Department of Marine annual reports, and prints series, year and a
-   snippet. The OCR is poor: station names come out misspelled, so give aliases and a state.
-   **Page numbers:** the plain text has none; `corpus.py page <hit>` asks the Internet Archive for
-   the page (the Bulletin PDFs carry their own page numbers). A footnote cites the report, the year
-   and the page, with the Internet Archive URL. Copy evidence quotes from the corpus text exactly,
-   OCR errors and all.
-4. **Newspapers.** `python3 research/newspapers.py "<station name>" ["<keeper name>"]
-   [--years 1880-1910] [--state XX]` searches Chronicling America (Library of Congress) and prints
-   hits with their page URLs; `--page <url> --grep "<words>"` reads a hit's OCR text. It keeps to the
-   Library's rate limit for every agent at once, so expect it to be slow. Budget: up to about ten
-   searches for a well-documented station, fewer for a thin one. Search the station and keeper names
-   first, then date windows around events step 3 found. Most other state newspaper archives forbid
-   crawlers (CDNC, NYS Historic Newspapers, Digital Michigan Newspapers): do not use them.
+3. **Official reports, from the local corpus.** `python3 /home/hoid/Desktop/fresnel/research/corpus.py grep
+   "<station name>" [--alias "<OCR or old spelling>"] [--state XX] [--series lss,lhb,commissioner,bulletin,marine_ca]
+   [--years 1880-1900] [--max 20]` searches the downloaded text of the Life-Saving Service annual reports
+   (`lss`), the Lighthouse Board reports (`lhb`), the Commissioner of Lighthouses reports (`commissioner`),
+   the Lighthouse Service Bulletin (`bulletin`) and Canada's Department of Marine annual reports
+   (`marine_ca`), and prints `series | year | identifier | snippet`. The matching is fuzzy for OCR damage
+   (it finds "Point Beyes" and "Point Reyesy" for Point Reyes) but not magic: give `--alias` for spellings
+   you have seen, and `--state` (hits next to another state's name are hidden and counted; `--all-states`
+   shows them: "Split Rock" is also in New York) or `--years` (Split Rock, Minnesota, exists only from 1910).
+   Several annual reports are bound in one volume (the Commissioner volume holds fiscal 1915-1922); a hit
+   is labelled with its report's year when the volume's report boundaries are known, else with the
+   volume's range. `corpus.py status` shows what the corpus holds and what is missing.
+   **Pages:** the plain text has none. `corpus.py page <series> <year> "<phrase>"` asks the Internet
+   Archive's in-item search for the scan page and prints a page URL (it needs archive.org; if that is
+   down it says so, and you cite the volume without a page); the Bulletin's page is the PDF page, shown
+   in the grep line as `p.N`. The scan page is the viewer's image number: read the printed folio on the
+   page image before writing "p. 42", or write "scan page 73".
+   **Cite these URLs exactly** (so `check_quotes.py` can find the text offline):
+   - Internet Archive volumes: `https://archive.org/details/<identifier>` with the identifier grep printed
+     (a `/page/n<leaf>/mode/2up` tail is fine);
+   - Lighthouse Service Bulletin: `https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_<YYYY>.pdf`
+     (`#page=N` is fine).
+   Copy evidence quotes from the grep snippet exactly, OCR errors and all (line breaks and runs of spaces
+   do not matter; a word hyphenated across a line is rejoined, as the checker does).
+4. **Newspapers.** `python3 /home/hoid/Desktop/fresnel/research/newspapers.py "<station name>" ["<keeper name>"]
+   [--with lighthouse] [--years 1880-1910] [--state XX]` searches Chronicling America (Library of Congress)
+   for pages holding every quoted phrase and prints date, paper, page and the page URL; `--snippets N` also
+   reads the first N hit pages and prints their matching lines. `--page <url> --grep "<words>"` reads one
+   page's OCR text. `--state` limits to papers printed in that state; use `--with lighthouse` for names that
+   are also towns. The tool keeps to the Library's limit for every agent at once (5 s apart, 20 a minute, a
+   shared cooldown on HTTP 429/503), so expect a search to take 5 to 60 s; stop and report if it says loc.gov
+   is rate-limiting. Budget: up to about ten searches for a well-documented station, fewer for a thin one:
+   station and keeper names first, then date windows around events step 3 found. **Cite the
+   `https://www.loc.gov/resource/<lccn>/<date>/ed-1/?sp=<page>` URL the tool printed, for pages you have read
+   with `--page` or `--snippets`; `check_quotes.py` verifies the quote against that page's cached OCR text.**
+   Most other state newspaper archives forbid crawlers (CDNC, NYS Historic Newspapers, Digital Michigan
+   Newspapers): do not use them.
 5. **Keeper detail.** The Official Register of the United States (biennial; keepers with birthplace
    and salary) is searchable by surname only, page by page; use it to confirm a keeper you already
    know, not to find new ones.
