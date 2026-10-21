@@ -142,6 +142,7 @@ def build_record(ident: str, state: str, light: dict, flags: list[str]) -> dict:
             "community": light["community"],
             "destroyed": lost,
             "flags": sorted(flags),
+            "join_keys": [f"lhf:{ident}"],
         },
     }
 

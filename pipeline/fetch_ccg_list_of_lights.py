@@ -30,6 +30,9 @@ remarks (seasonal or year round, fog signal). Buoys are rows in italics (`<em>`)
   (Wikidata, OpenStreetMap lights that may start a station, the heritage lighthouses, Lighthouse
   Friends): those add the charted light (characteristic, heights, range, fog signal, list number) to
   a station the other sources already hold;
+- any other lit fixed aid that the Lighthouse Directory lists with a lantern, gallery or keeper's house
+  under the same list or Admiralty number (`extra.corroborated_by = "rowlett"`): a real lighthouse
+  that no station record in the other extracts happens to place;
 - nothing else. The thousands of small modern beacons (skeleton towers, poles, piles, dolphins,
   small prefabricated towers on a rock) are counted in the header and not written: DESIGN section 1
   leaves modern automated beacons out. `extra.aid_class` (`lighthouse`, `tower`, `beacon`, `other`) and
@@ -117,7 +120,8 @@ NOT_LIGHTHOUSE = re.compile(r"skelet|tripod|lattice|pole\b|\bpost\b|\bpile|dolph
                             r"daymark|day mark|\bcairn\b|pedestal|stanchion|\bpylon\b|\bcolumn\b|buoy|\bbeacon\b|\bcribwork\b|"
                             r"\bdyke\b|\bwharf\b|\bpier\b|\bbreakwater\b|floating|\bbarge\b|\bplatform\b|\bgantry\b", re.I)
 TOWER_WORDS = re.compile(r"\btower\b|\bcylinder\b|\bcylindrical\b|\boctagon|\bhexagon|\bpyramid|\bconical\b|\bcircular\b", re.I)
-NAME_TAIL_RE = re.compile(r"(?:\s*(?:,|-)?\s*(?:&|and)\s+(?:fog|siren|horn|bell|whistle|diaphone|radio)\b.*)$", re.I)
+NAME_TAIL_RE = re.compile(r"(?:\s*(?:,|-)?\s*(?:&|and)\s+(?:fog|siren|horn|bell|whistle|diaphone|radio)\b.*|\s+Racon\b.*|\s+Fog (?:Signal|Alarm) (?:Station|Building)$)", re.I)
+NUMBERED_AID_RE = re.compile(r"^(?:Light|Band|Bend|Beacon)\s+[A-Z]?\d+$|\b(?:Highway|Bridge|Pont)\b|\bRacon\b", re.I)
 RANGE_RE = re.compile(r"\brange\b|\b(front|rear)\b", re.I)
 
 
@@ -354,15 +358,36 @@ def near_reference(grid: dict, lat: float, lon: float, radius_m: float = MATCH_M
     return sorted(found)
 
 
-def keep_record(rec: dict, grid: dict | None) -> bool:
-    """Clear lighthouses always; any other fixed lit aid only where another source has a station."""
-    if rec["extra"]["clear_lighthouse"]:
-        return True
-    if grid is None:
+def rowlett_lantern_keys(sources_dir: Path | None = None) -> set[str]:
+    """`ccg:` and `adm:` keys of the Lighthouse Directory's entries that name a lantern or keeper's house
+    and have no Lighthouse Friends page."""
+    path = (sources_dir or (c.REPO / "data" / "sources")) / "rowlett.json"
+    if not path.exists():
+        return set()
+    keys: set[str] = set()
+    for r in json.loads(path.read_text(encoding="utf-8")).get("records", []):
+        ex = r.get("extra") or {}
+        # an entry with a Lighthouse Friends id is placed by that station already (a second, Coast Guard
+        # station for it would only be a duplicate)
+        if r.get("country") == "CA" and ex.get("lantern") and r.get("status") != "lost" and not ex.get("lhf_ids"):
+            keys |= {k for k in ex.get("join_keys", []) if k.startswith(("ccg:", "adm:"))}
+    return keys
+
+
+def keep_record(rec: dict, grid: dict | None, rowlett_keys: set[str] | None = None) -> bool:
+    """Clear lighthouses always; any other fixed lit aid where another source has a station near it;
+    else one the Directory lists with a lantern (it then counts as a lighthouse and may start a station)."""
+    if rec["extra"]["clear_lighthouse"] or grid is None:
         return True
     near = near_reference(grid, rec["lat"], rec["lon"])
     rec["extra"]["near"] = near
-    return bool(near)
+    if near:
+        return True
+    if rowlett_keys and set(rec["extra"]["join_keys"]) & rowlett_keys and not NUMBERED_AID_RE.search(rec["name"]):
+        rec["extra"]["clear_lighthouse"] = True
+        rec["extra"]["corroborated_by"] = "rowlett"
+        return True
+    return False
 
 
 def fetch(refresh: bool = False, match: bool = True) -> tuple[list[dict], dict, list[Path]]:
@@ -374,21 +399,24 @@ def fetch(refresh: bool = False, match: bool = True) -> tuple[list[dict], dict, 
     except Exception as e:  # noqa: BLE001 - the boundary files are cached; say so if they are not
         c.log(f"ccg_list_of_lights: no region lookup ({e})")
     grid = reference_points() if match else None
-    kept, counts = [], {"fixed_aids": 0, "clear_lighthouses": 0, "kept_near_a_station": 0, "dropped": 0, "no_region": 0}
+    rowlett_keys = rowlett_lantern_keys() if match else None
+    kept, counts = [], {"fixed_aids": 0, "clear_lighthouses": 0, "kept_for_the_directory": 0, "kept_near_a_station": 0, "dropped": 0, "no_region": 0}
     by_class: dict[str, int] = {}
     for path, vol, code, p in sections:
         _title, recs = parse_section(cc.decode(p.read_bytes()), vol, code, path)
         for rec in recs:
             counts["fixed_aids"] += 1
             by_class[rec["extra"]["aid_class"]] = by_class.get(rec["extra"]["aid_class"], 0) + 1
-            if not keep_record(rec, grid):
+            if not keep_record(rec, grid, rowlett_keys):
                 counts["dropped"] += 1
                 continue
             region = lookup.lookup(rec["lat"], rec["lon"], "CA")[0] if lookup else None
             if region is None:
                 counts["no_region"] += 1
             rec["region"] = region
-            if rec["extra"]["clear_lighthouse"]:
+            if rec["extra"].get("corroborated_by"):
+                counts["kept_for_the_directory"] += 1
+            elif rec["extra"]["clear_lighthouse"]:
                 counts["clear_lighthouses"] += 1
             else:
                 counts["kept_near_a_station"] += 1

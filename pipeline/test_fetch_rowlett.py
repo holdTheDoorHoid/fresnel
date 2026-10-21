@@ -91,6 +91,11 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((b["status"], b["extra"]["replica_of"]), ("replica", 1913))
         self.assertEqual(b["light"]["first_lit"], 1859)
 
+    def test_lantern_flag_reads_the_structure_sentence_only(self):
+        self.assertTrue(f.has_lantern("1900. Active; focal plane 9 m (30 ft); white flash. 9 m (30 ft) octagonal tower with lantern and gallery. Lighthouse painted white.", "1900"))
+        self.assertFalse(f.has_lantern("1928. Active; focal plane 7 m (24 ft). 5.5 m (18 ft) square pyramidal concrete tower built on a crib. No lantern. Lighthouse painted white.", "1928"))
+        self.assertFalse(f.has_lantern("1900. Active; focal plane 6 m (20 ft). 3 m (10 ft) post colored white. An original lighthouse had a lantern.", "1900"))
+
     def test_range_roles_and_kind(self):
         k = self.recs["Kaulbach Island Range Front"]
         self.assertEqual((k["kind"], k["role"]), ("range_lights", "front_range"))

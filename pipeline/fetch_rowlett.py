@@ -35,6 +35,8 @@ by a `<dd>` (the description). What is read, and nothing of the prose:
   Lights number (`CCG A-456`: the volume's letter, then the number), the Admiralty number
   (`H3680`), the NGA number, and the Lighthouse Friends id in the anchor. They are written in
   `aton`/`registers` and as `extra.join_keys`, which the merge reads.
+- `extra.lantern`: the sentence on the structure names a lantern, gallery, cupola or keeper's house
+  (the Coast Guard List of Lights keeps an aid that Rowlett lists with one, see fetch_ccg_list_of_lights.py).
 - access, as Rowlett states it ("Accessible only by boat", "Site open, tower closed"): `extra.access`.
 - owner / site manager text (`agency`).
 
@@ -304,6 +306,19 @@ def structure_facts(dd: str, head: str) -> dict:
     return {"height_m": height, "material": material, "type": stype}
 
 
+def has_lantern(dd: str, head: str) -> bool:
+    """The first sentence about the structure (from its height in metres on) names a lantern, gallery
+    or keeper's house ("No lantern" and later sentences about the lighthouse do not count)."""
+    rest = dd[len(head):]
+    for m in HEIGHT_RE.finditer(rest):
+        if "plane" in rest[max(0, m.start() - 14):m.start()].lower():
+            continue
+        sentence = re.split(r"(?<=[a-z\)])\.\s+(?=[A-Z])", rest[m.start():m.start() + 300])[0]
+        return bool(re.search(r"\blantern\b|\bgallery\b|keeper'?s'? (?:house|dwelling)|\bcupola\b", sentence, re.I)
+                    and not re.search(r"\bno lantern\b", sentence, re.I))
+    return False
+
+
 ACCESS_PATTERNS = [
     ("boat_only", re.compile(r"accessible only by (?:boat|air|boat or (?:air|plane|helicopter)|helicopter|water)|"
                              r"reachable only by (?:boat|air)", re.I)),
@@ -466,6 +481,7 @@ def build_record(page: str, entry: dict, seen: dict[str, int]) -> dict | None:
             "established": years["established"],
             "established_uncertain": years["established_uncertain"],
             "replica_of": years["replica_of"],
+            "lantern": has_lantern(dd, years["head"]),
             "access": access_of(dd),
             "lhf_ids": lhf,
             "ccg_numbers": ccg,

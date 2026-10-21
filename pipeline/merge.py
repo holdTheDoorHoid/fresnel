@@ -171,7 +171,7 @@ def clean_name(name: str | None) -> str | None:
     if name is None:
         return None
     s = re.sub(r"\s+", " ", str(name)).strip().strip(".").strip()
-    if not s or ascii_fold(s).lower() in PLACEHOLDER_NAMES:
+    if not s or ascii_fold(s).lower() in PLACEHOLDER_NAMES or re.fullmatch(r"[Qq]\d+", s):  # a Wikidata item with no label
         return None
     letters = [ch for ch in s if ch.isalpha()]
     if letters and all(ch.isupper() for ch in letters) and len(letters) > 3 and " " in s:
@@ -1370,7 +1370,7 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     assign_ids([(st, rec) for st, rec in resolved if not st.id], taken)
     for st, rec in resolved:
         rec["id"] = st.id
-        merge_ca.hide(rec, m.ca_curation, [r.key for r in st.recs()])
+        merge_ca.curate(rec, m.ca_curation, [r.key for r in st.recs()])
     links = link_related(resolved, m)
 
     written = unchanged = 0

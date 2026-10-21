@@ -66,6 +66,8 @@ def identifiers(raw: dict) -> list[str]:
         return []
     ex = raw.get("extra") or {}
     keys = list(ex.get("join_keys") or [])
+    if ex.get("lhf_id"):
+        keys.append(f"lhf:{ex['lhf_id']}")
     for reg in raw.get("registers") or []:
         if reg.get("register") == "Heritage Lighthouse (Canada)" and reg.get("number"):
             keys.append(f"hl:{str(reg['number']).strip()}")
@@ -105,7 +107,7 @@ def unshown_reason(rec) -> str | None:
 # Curation
 # ---------------------------------------------------------------------------------------------
 
-EMPTY_CURATION = {"rekind": [], "join": [], "apart": [], "hide": [], "merge_stations": []}
+EMPTY_CURATION = {"rekind": [], "join": [], "apart": [], "hide": [], "merge_stations": [], "rename": []}
 
 
 def load_curation(path: Path | None) -> dict:
@@ -137,6 +139,7 @@ class Curation:
                     self.apart_pairs.add(frozenset((a, b)))
         self.hide_ids = {e["id"]: e["reason"] for e in self.data["hide"] if e.get("id")}
         self.hide_keys = {e["key"]: e["reason"] for e in self.data["hide"] if e.get("key")}
+        self.rename_ids = {e["id"]: e for e in self.data["rename"]}
         self.applied: dict[str, list] = defaultdict(list)
 
     def kept_apart(self, rec_key: str, station_keys: set[str]) -> bool:
@@ -225,6 +228,11 @@ def identifier_join(matcher, rec):
         cands.append((len(held), st, held))
     if not cands:
         return None
+    if rec.role in ("front_range", "rear_range") and len(cands) > 1:
+        # a front light does not join the station that holds only the rear light of its range, nor the reverse
+        opposite = "rear_range" if rec.role == "front_range" else "front_range"
+        kept = [c for c in cands if not (c[1].parts and all(p.role == opposite for p in c[1].parts))]
+        cands = kept or cands
     cands.sort(key=lambda c: -c[0])
     if len(cands) > 1 and cands[0][0] == cands[1][0]:
         matcher.ca_ambiguous.append({"key": rec.key, "name": rec.name, "identifiers": sorted(keys),
@@ -435,17 +443,23 @@ def merge_stations(matcher, curation: Curation) -> None:
         curation.applied["merge_stations"].append({"keep": e["keep"], "retire": e["retire"], "reason": e["reason"]})
 
 
-def hide(rec: dict, curation: Curation, keys: list[str]) -> bool:
-    """Apply a curation `hide` to a resolved record (by id, or by any of its record keys)."""
+def curate(rec: dict, curation: Curation, keys: list[str]) -> None:
+    """Apply `rename` and `hide` to a resolved record: rename by id (the id never changes), hide by id
+    or by any of its record keys."""
+    e = curation.rename_ids.get(rec.get("id"))
+    if e is not None and rec.get("name") != e["name"]:
+        if rec.get("name") and rec["name"] not in rec["other_names"]:
+            rec["other_names"] = [rec["name"], *rec["other_names"]]
+        rec["other_names"] = [n for n in rec["other_names"] if n != e["name"]]
+        curation.applied["rename"].append({"id": rec["id"], "from": rec["name"], "to": e["name"], "reason": e["reason"]})
+        rec["name"] = e["name"]
     reason = curation.hide_ids.get(rec.get("id"))
     if reason is None:
         reason = next((curation.hide_keys[k] for k in keys if k in curation.hide_keys), None)
-    if reason is None:
-        return False
-    rec["hidden"] = True
-    rec["hidden_reason"] = reason
-    curation.applied["hide"].append({"id": rec.get("id"), "reason": reason})
-    return True
+    if reason is not None:
+        rec["hidden"] = True
+        rec["hidden_reason"] = reason
+        curation.applied["hide"].append({"id": rec.get("id"), "reason": reason})
 
 
 # ---------------------------------------------------------------------------------------------

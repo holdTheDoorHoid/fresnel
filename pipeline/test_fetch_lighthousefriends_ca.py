@@ -60,6 +60,7 @@ class RecordTest(unittest.TestCase):
         self.assertEqual(rec["key"], "lighthousefriends:2162")
         self.assertEqual((rec["country"], rec["region"], rec["status"]), ("CA", "MB", "lost"))
         self.assertEqual(rec["extra"]["flags"], ["boat", "climb"])
+        self.assertEqual(rec["extra"]["join_keys"], ["lhf:2162"])
         self.assertEqual(rec["links"][0]["url"], "https://www.lighthousefriends.com/light.asp?ID=2162")
         rng = f.build_record("2160", "MB", lights["2160"], [])
         self.assertEqual((rng["kind"], rng["role"], rng["status"]), ("range_lights", None, None))

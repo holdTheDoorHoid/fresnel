@@ -1,0 +1,248 @@
+{
+  "_note": "Canada's curation of the merge (pipeline/merge_ca.py; the decisions and their evidence are in docs/sources/review_2026-10-ca.md). Every entry has a reason. rekind: a source record is another kind of thing. join: records of one structure that the matcher kept apart. apart: records that are different lights and must stay apart. hide: a station that is not a light (by id, or by record key before it has an id). rename: the station's display name (its id never changes). merge_stations: two existing stations are one light; the retired id stays on disk with merged_into (ids are permanent).",
+  "rekind": [
+    {
+      "key": "lighthousefriends:2354",
+      "kind": "lightship_station",
+      "reason": "Lighthouse Friends' page 'Lower Traverse' is about the lightship station on the St. Roch shoals (a vessel from 1831, a pier lighthouse 1904-07, a vessel again from 1921, a buoy by 1940), not a lighthouse."
+    }
+  ],
+  "join": [
+    {
+      "keys": [
+        "lighthousefriends:1367",
+        "lighthousefriends:1391"
+      ],
+      "reason": "Lighthouse Friends lists Medway Head and Medway Head (1927) as two pages; they are two towers 72 m apart of one light station."
+    },
+    {
+      "keys": [
+        "lighthousefriends:1388",
+        "lighthousefriends:1389"
+      ],
+      "reason": "Pointe du Chene Range Front and Rear: one range, 148 m apart. The matcher could not pair them because the front sits in an OpenStreetMap station called 'North Channel'."
+    },
+    {
+      "keys": [
+        "lighthousefriends:2216",
+        "osm:node/1446629644"
+      ],
+      "reason": "Horse Chops: the lost lighthouse (Lighthouse Friends) and the light OpenStreetMap maps 42 m away, same name; the Coast Guard's 'Flat Rock Fog Signal Station' is a different place 65 m on."
+    },
+    {
+      "keys": [
+        "osm:node/10566489451",
+        "lighthousefriends:2217",
+        "ccg_list_of_lights:N7"
+      ],
+      "reason": "St. Shotts: OpenStreetMap's 'St. Shott's Lightstation' and Lighthouse Friends' St. Shotts, 297 m apart; the Coast Guard list and the staffed-lightstation list both name St. Shotts once."
+    },
+    {
+      "keys": [
+        "wikidata:Q114733573",
+        "lighthousefriends:1761"
+      ],
+      "reason": "Heath Point (Anticosti): the standing lighthouse and Lighthouse Friends' lost 'Pointe Heath', 70 m apart, are successive towers of one station."
+    },
+    {
+      "keys": [
+        "lighthousefriends:1278",
+        "ccg_list_of_lights:N213"
+      ],
+      "reason": "Flowers Cove: Lighthouse Friends' lighthouse and the Coast Guard's Flowers Cove Light are 1.5 km apart in their positions (a conflict is recorded) but are the one light of that name."
+    },
+    {
+      "keys": [
+        "wikidata:Q32757419",
+        "lighthousefriends:1617"
+      ],
+      "reason": "Cap-de-la-Table: Wikidata's item is 530 m off the OpenStreetMap node and Lighthouse Friends' position; one lighthouse."
+    },
+    {
+      "keys": [
+        "wikidata:Q47378005",
+        "lighthousefriends:1291"
+      ],
+      "reason": "Little Denier Island: Wikidata and the Coast Guard agree, Lighthouse Friends' fix is 1.2 km east; one lighthouse (the conflict stays on the page)."
+    },
+    {
+      "keys": [
+        "wikidata:Q137291739",
+        "lighthousefriends:1651"
+      ],
+      "reason": "Flint Island (Cape Breton): Wikidata's item is 3.4 km from where OpenStreetMap, the Coast Guard and Lighthouse Friends put the one light."
+    },
+    {
+      "keys": [
+        "parks_canada_hl:14933",
+        "lighthousefriends:1570"
+      ],
+      "reason": "Belle Isle South End Lower: the heritage designation (with Wikidata) and the Coast Guard / Lighthouse Friends place it 1.2 km apart; the name is unique to this light (the Upper light is separate, at the Coast Guard's position)."
+    },
+    {
+      "keys": [
+        "wikidata:Q46993552",
+        "lighthousefriends:959"
+      ],
+      "reason": "Wood Islands Range Front: Lighthouse Friends' front and Wikidata's front are 3 m apart."
+    },
+    {
+      "keys": [
+        "wikidata:Q46993697",
+        "lighthousefriends:960"
+      ],
+      "reason": "Wood Islands Range Rear: Lighthouse Friends' rear and Wikidata's rear are 5 m apart."
+    }
+  ],
+  "apart": [
+    {
+      "keys": [
+        "wikidata:Q115237068",
+        "wikidata:Q115237063"
+      ],
+      "reason": "Red River Range Light and Black Bear Island Light (Manitoba) are separate pages in every source, 40 m apart."
+    },
+    {
+      "keys": [
+        "lighthousefriends:1512",
+        "lighthousefriends:1513"
+      ],
+      "reason": "Bustard Rocks (the lighthouse) and Bustard Rocks Range are separate Lighthouse Friends pages, 89 m apart."
+    },
+    {
+      "keys": [
+        "wikidata:Q47007621",
+        "wikidata:Q45324411"
+      ],
+      "reason": "The former Northport back range (inactive) is a different tower from the present Northport rear range, 267 m away."
+    },
+    {
+      "keys": [
+        "osm:node/1684177580",
+        "osm:node/1684177578"
+      ],
+      "reason": "Two OpenStreetMap lights called Lyal Point on Vancouver Island, 2.3 km apart; only one is the Coast Guard's Lyall Point light."
+    }
+  ],
+  "hide": [
+    {
+      "id": "ca-ab-clearwater-park",
+      "reason": "Not an aid to navigation: tagged private, no lights, no list or register carries it, and the Alberta lighthouse lists name only the lake lights at Sylvan Lake, Lake Newell and Pratt's Landing. Unhide if a source shows a lake light here."
+    },
+    {
+      "id": "ca-ab-lighthouse-landing",
+      "reason": "A residential community in Country Hills Village, northwest Calgary, named for a lighthouse theme; no aid to navigation (Alberta has no official lights)."
+    },
+    {
+      "id": "ca-on-imperial-towers",
+      "reason": "A group designation: the Imperial Towers are six lighthouses (Point Clark, Chantry Island, Cove Island, Griffith Island, Nottawasaga Island, Point Clark's sisters) designated together; Wikidata's item sits on Point Clark Lighthouse, which has its own station."
+    },
+    {
+      "id": "ca-bc-bickford-tower-dy118",
+      "reason": "A navy dockyard signal tower at Esquimalt (DY118 is a dockyard building number), mistagged as a lighthouse in OpenStreetMap; no list of lights carries it."
+    },
+    {
+      "reason": "A US lightship vessel (LV-76 / WAL-504 'Relief', 1904, decommissioned 1960) that ended as a derelict on the Fraser River; it belongs with the US Pacific lightship vessels, not with Canadian stations.",
+      "key": "lighthousefriends:1207"
+    }
+  ],
+  "rename": [
+    {
+      "id": "ca-nl-flowers-cove",
+      "name": "Harbour Point Lighthouse",
+      "reason": "Wikidata labels the item 'Flower's Cove Lighthouse' but its position (48.457, -58.489) is Harbour Point (Sandy Point), where Lighthouse Friends, the Coast Guard and the Lighthouse Directory all put Harbour Point. Flowers Cove's own light is ca-nl-flowers-cove-2, 340 km away."
+    },
+    {
+      "id": "ca-on-nsc",
+      "name": "Stillwater Park (Graham Bay)",
+      "reason": "OpenStreetMap's name 'NSC' (a sailing club's initials); the Coast Guard lists this light as Stillwater Park (Graham Bay), list number I1297."
+    },
+    {
+      "id": "ca-qc-cvl",
+      "name": "Pointe aux Anglais",
+      "reason": "OpenStreetMap's name 'CVL' is the operator tag of a CanVec import; Lighthouse Friends and the Lighthouse Directory name the light Pointe aux Anglais (3 m away)."
+    },
+    {
+      "id": "ca-on-w2",
+      "name": "Slate Islands",
+      "reason": "OpenStreetMap's way is named 'w2' (construction year 1903, an 11 m building tagged as a major light); Lighthouse Friends and the Lighthouse Directory call the light on this spot (17 m away) Slate Islands."
+    }
+  ],
+  "merge_stations": [
+    {
+      "keep": "ca-nb-richibucto-head",
+      "retire": "ca-nb-cap-lumiere",
+      "reason": "Lighthouse Friends calls it 'Richibucto Head (Cap Lumière)'; the two stations are 6 m apart and the Coast Guard lists Richibucto Cape there."
+    },
+    {
+      "keep": "ca-nl-brigus",
+      "retire": "ca-nl-north-head",
+      "reason": "Wikidata's 'North Head Lighthouse' has the same coordinates as Brigus Lighthouse (2 m apart): the Brigus light stands on North Head."
+    },
+    {
+      "keep": "ca-qc-pointe-carleton",
+      "retire": "ca-qc-pointe-carleton-2",
+      "reason": "A Wikidata-only item 1.6 km from the lighthouse every other source places at Pointe Carleton; same name."
+    },
+    {
+      "keep": "ca-ns-sambro-harbour",
+      "retire": "ca-ns-sambro-harbour-2",
+      "reason": "A Wikidata-only 'Sambro Harbour light' 4.9 km from the lighthouse OpenStreetMap, the Coast Guard and Lighthouse Friends place at Sambro Harbour."
+    },
+    {
+      "keep": "ca-bc-sisters-islets",
+      "retire": "ca-bc-sisters-islets-2",
+      "reason": "Wikidata's item for Sisters Islets is 10 km out; OpenStreetMap, Lighthouse Friends and the Coast Guard (list P493) agree on the other position."
+    },
+    {
+      "keep": "ca-bc-cape-st-james",
+      "retire": "ca-bc-cape-st-james-2",
+      "reason": "Wikidata's Cape St. James is 18.8 km out (52.100 N); OpenStreetMap, Lighthouse Friends and the Coast Guard (P770) agree on 51.936 N."
+    },
+    {
+      "keep": "ca-bc-lennard-island",
+      "retire": "ca-bc-lennard-island-2",
+      "reason": "Two OpenStreetMap elements of Lennard Island Light Station 4 m from the station Wikidata and the staffed list hold (Wikidata's own coordinates are 1.1 km out)."
+    },
+    {
+      "keep": "ca-nb-cape-tormentine-range",
+      "retire": "ca-nb-cape-tormentine-range-2",
+      "reason": "One range, listed twice: a Wikidata item for the whole range with OpenStreetMap's two nodes, beside Wikidata's front and rear items."
+    },
+    {
+      "keep": "ca-pe-wrights-range",
+      "retire": "ca-pe-wrights-front-range",
+      "reason": "Wikidata's item for the whole Wrights Range (4 m from the front light) and the front light with all its other sources."
+    },
+    {
+      "keep": "ca-mb-warren-landing-lower-range",
+      "retire": "ca-mb-warren-landing-lower-range-front",
+      "reason": "The front light of the Lower Range, held apart from the range station that has the Coast Guard's entries (34 m)."
+    },
+    {
+      "keep": "ca-mb-warren-landing-lower-range",
+      "retire": "ca-mb-warren-landing-lower-range-rear",
+      "reason": "The rear light of the Lower Range, held apart because the Upper and Lower ranges share a base name."
+    },
+    {
+      "keep": "ca-mb-warren-landing-upper-range-front",
+      "retire": "ca-mb-warren-landing-upper-range-rear",
+      "reason": "The rear light of the Upper Range (256 m), held apart because the Upper and Lower ranges share a base name."
+    },
+    {
+      "keep": "ca-qc-bagot-bluff",
+      "retire": "ca-qc-pointe-sud",
+      "reason": "Lighthouse Friends names it 'Escarpement Bagot (South Point)': Wikidata's 'Phare de Pointe-Sud' is the Bagot Bluff light, 34 m away."
+    },
+    {
+      "keep": "ca-qc-la-pointe-de-la-prairie",
+      "retire": "ca-qc-la-block",
+      "reason": "A second Wikidata item at Pointe de la Prairie, 37 m from the light every other source places there; kept as a structure of that station."
+    },
+    {
+      "keep": "ca-nl-cape-bauld",
+      "retire": "ca-nl-quirpon",
+      "reason": "OpenStreetMap's 'Quirpon Lighthouse' (20 m away) is the keeper's house of the Cape Bauld light on Quirpon Island, which runs as the Quirpon Lighthouse Inn."
+    }
+  ]
+}

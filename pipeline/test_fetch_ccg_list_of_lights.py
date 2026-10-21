@@ -102,6 +102,8 @@ class NameTest(unittest.TestCase):
         self.assertEqual(f.clean_list_name("Cape Race Light Station & Fog Signal"), "Cape Race Light Station")
         self.assertEqual(f.clean_list_name("Portugal Cove South Light and Fog Signal"), "Portugal Cove South Light")
         self.assertEqual(f.clean_list_name("Parrsboro Wharf"), "Parrsboro Wharf")
+        self.assertEqual(f.clean_list_name("St. Shotts Fog Signal Station"), "St. Shotts")
+        self.assertEqual(f.clean_list_name("Butterworth Rocks Racon X (- . . -) X & S Bands"), "Butterworth Rocks")
 
     def test_place_called_lighthouse_point_with_a_skeleton_tower(self):
         self.assertEqual(f.classify("Lighthouse Beach", False, "Square skeleton tower, red and white rectangular daymark."), ("beacon", False))
@@ -129,6 +131,10 @@ class KeepTest(unittest.TestCase):
         self.assertTrue(f.keep_record(mk(False, 45.001), grid))   # ~110 m from a station
         self.assertFalse(f.keep_record(mk(False, 45.01), grid))   # a small beacon far from any
         self.assertTrue(f.keep_record(mk(False, 50.0), None))     # --no-match keeps everything
+        far = {"name": "Dalhousie Wharf", "lat": 50.0, "lon": -64.0, "extra": {"clear_lighthouse": False, "join_keys": ["ccg:A5", "adm:H1"]}}
+        self.assertFalse(f.keep_record(far, grid, set()))
+        self.assertTrue(f.keep_record(far, grid, {"adm:H1"}))     # the Directory lists it with a lantern
+        self.assertEqual((far["extra"]["clear_lighthouse"], far["extra"]["corroborated_by"]), (True, "rowlett"))
 
 
 if __name__ == "__main__":
