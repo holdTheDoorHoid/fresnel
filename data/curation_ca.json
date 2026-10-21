@@ -1,5 +1,5 @@
 {
-  "_note": "Canada's curation of the merge (pipeline/merge_ca.py; the decisions and their evidence are in docs/sources/review_2026-10-ca.md). Every entry has a reason. rekind: a source record is another kind of thing. join: records of one structure that the matcher kept apart. apart: records that are different lights and must stay apart. hide: a station that is not a light (by id, or by record key before it has an id). rename: the station's display name (its id never changes). merge_stations: two existing stations are one light; the retired id stays on disk with merged_into (ids are permanent).",
+  "_note": "Canada's curation of the merge (pipeline/merge_ca.py; the decisions and their evidence are in docs/sources/review_2026-10-ca.md). Every entry has a reason. rekind: a source record is another kind of thing. join: records of one structure that the matcher kept apart. apart: records that are not one structure and must stay apart. detach: a record an earlier run filed under the wrong station is forgotten, to be joined elsewhere. hide: a station that is not a light (by id, or by record key before it has an id). rename: the station's display name (its id never changes). merge_stations: two existing stations are one light; the retired id stays on disk with merged_into (ids are permanent).",
   "rekind": [
     {
       "key": "lighthousefriends:2354",
@@ -46,13 +46,6 @@
     },
     {
       "keys": [
-        "lighthousefriends:1278",
-        "ccg_list_of_lights:N213"
-      ],
-      "reason": "Flowers Cove: Lighthouse Friends' lighthouse and the Coast Guard's Flowers Cove Light are 1.5 km apart in their positions (a conflict is recorded) but are the one light of that name."
-    },
-    {
-      "keys": [
         "wikidata:Q32757419",
         "lighthousefriends:1617"
       ],
@@ -92,6 +85,13 @@
         "lighthousefriends:960"
       ],
       "reason": "Wood Islands Range Rear: Lighthouse Friends' rear and Wikidata's rear are 5 m apart."
+    },
+    {
+      "keys": [
+        "wikidata:Q106289312",
+        "lighthousefriends:1278"
+      ],
+      "reason": "Flowers Cove: Wikidata's item (ARLHS CAN657, Coast Guard N213, the same numbers the Lighthouse Directory gives Flowers Cove) is placed at Harbour Point, 340 km away. It belongs with the Flowers Cove light at 51.308 N."
     }
   ],
   "apart": [
@@ -124,6 +124,13 @@
       "reason": "Two OpenStreetMap lights called Lyal Point on Vancouver Island, 2.3 km apart; only one is the Coast Guard's Lyall Point light."
     }
   ],
+  "detach": [
+    {
+      "key": "wikidata:Q106289312",
+      "from_station": "ca-nl-flowers-cove",
+      "reason": "Filed by the first build under the Harbour Point station because its coordinates are Harbour Point's; its identifiers (ARLHS CAN657, Coast Guard N213) say Flowers Cove."
+    }
+  ],
   "hide": [
     {
       "id": "ca-ab-clearwater-park",
@@ -150,7 +157,7 @@
     {
       "id": "ca-nl-flowers-cove",
       "name": "Harbour Point Lighthouse",
-      "reason": "Wikidata labels the item 'Flower's Cove Lighthouse' but its position (48.457, -58.489) is Harbour Point (Sandy Point), where Lighthouse Friends, the Coast Guard and the Lighthouse Directory all put Harbour Point. Flowers Cove's own light is ca-nl-flowers-cove-2, 340 km away."
+      "reason": "With Wikidata's Flowers Cove item moved to its own station (curation detach), what is left at 48.457 N is Harbour Point (Sandy Point), the name Lighthouse Friends, the Coast Guard (N178) and the Lighthouse Directory give it."
     },
     {
       "id": "ca-on-nsc",

@@ -275,6 +275,23 @@ class CurationTest(MergeCase):
         merge.run(self.sources, self.tmp / "third", self.tmp / "r3.json", "2026-10-21")
         self.assertEqual(len(self.station_files(self.tmp / "third")), 2)
 
+    def test_detach_moves_a_record_out_of_the_station_an_earlier_run_filed_it_under(self):
+        self.write("wikidata", [ca("wikidata", "Q1", "Flower's Cove Lighthouse", 48.457, -58.489, region="NL", aton={"arlhs": "CAN657"})])
+        self.write("lighthousefriends", [ca("lighthousefriends", "1256", "Harbour Point", 48.4573, -58.4888, region="NL"),
+                                         ca("lighthousefriends", "1278", "Flowers Cove", 51.308, -56.749, region="NL")])
+        self.run_merge()
+        first = self.station_files()
+        self.assertEqual(sorted(first), ["ca-nl-flowers-cove", "ca-nl-flowers-cove-2"])
+        holder = next(i for i, f in first.items() if any(s["key"] == "wikidata:Q1" for s in f["sources"]))
+        self.assertEqual(holder, "ca-nl-flowers-cove")                     # filed by position: with Harbour Point
+        self.curation({"detach": [{"key": "wikidata:Q1", "from_station": "ca-nl-flowers-cove", "reason": "its identifiers say Flowers Cove"}],
+                       "join": [{"keys": ["wikidata:Q1", "lighthousefriends:1278"], "reason": "the same light"}]})
+        for _ in range(2):                                                  # and it stays moved on the next run
+            self.run_merge()
+            files = self.station_files()
+            self.assertEqual([s["key"] for s in files["ca-nl-flowers-cove"]["sources"]], ["lighthousefriends:1256"])
+            self.assertEqual(sorted(s["key"] for s in files["ca-nl-flowers-cove-2"]["sources"]), ["lighthousefriends:1278", "wikidata:Q1"])
+
     def test_merge_stations_retires_one_id_and_keeps_both_files(self):
         self.write("wikidata", [ca("wikidata", "Q1", "Richibucto Head Lighthouse", 46.6698, -64.7116, region="NB"),
                                 ca("wikidata", "Q2", "Cap-Lumière lighthouse", 46.6720, -64.7117, region="NB")])

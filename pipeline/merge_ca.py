@@ -21,8 +21,10 @@ the US branch can change merge.py without touching it.
 - **Curation** (`data/curation_ca.json`, `load_curation`): explicit decisions with reasons from the
   review of the merge report (docs/sources/review_2026-10-ca.md): `rekind` (a record is another
   kind), `join` (records of one structure), `apart` (records that are not), `hide` (a station that is
-  not a light, by id or by record key), `merge_stations` (two existing stations are one: one id is
-  retired with `merged_into`, as the permanent-ids rule requires).
+  not a light, by id or by record key), `rename` (a station's display name), `detach` (a record filed
+  under the wrong station by an earlier run is forgotten, to be joined elsewhere) and `merge_stations`
+  (two existing stations are one: one id is retired with `merged_into`, as the permanent-ids rule
+  requires).
 
 Python 3.12, standard library only; no import from merge.py (the Rec / Station objects are used by
 duck typing).
@@ -107,7 +109,7 @@ def unshown_reason(rec) -> str | None:
 # Curation
 # ---------------------------------------------------------------------------------------------
 
-EMPTY_CURATION = {"rekind": [], "join": [], "apart": [], "hide": [], "merge_stations": [], "rename": []}
+EMPTY_CURATION = {"rekind": [], "join": [], "apart": [], "hide": [], "merge_stations": [], "rename": [], "detach": []}
 
 
 def load_curation(path: Path | None) -> dict:
@@ -140,13 +142,31 @@ class Curation:
         self.hide_ids = {e["id"]: e["reason"] for e in self.data["hide"] if e.get("id")}
         self.hide_keys = {e["key"]: e["reason"] for e in self.data["hide"] if e.get("key")}
         self.rename_ids = {e["id"]: e for e in self.data["rename"]}
+        self.detach_from = {e["key"]: e["from_station"] for e in self.data["detach"]}
+        self.detach_reasons = {e["key"]: e["reason"] for e in self.data["detach"]}
         self.applied: dict[str, list] = defaultdict(list)
 
     def kept_apart(self, rec_key: str, station_keys: set[str]) -> bool:
         return any(frozenset((rec_key, k)) in self.apart_pairs for k in station_keys)
 
+    def barred(self, rec_key: str, station) -> bool:
+        """True when `detach` says this record must not be filed under this station (by id)."""
+        sid = self.detach_from.get(rec_key)
+        return sid is not None and getattr(station, "id", None) == sid
+
     def joined_with(self, rec_key: str) -> set[str]:
         return self.join_group.get(rec_key, set()) - {rec_key}
+
+
+def detach(matcher, curation: Curation) -> None:
+    """Forget that an earlier run filed a record under a given station (curation `detach`: the record's
+    source gives it the wrong position, or it was joined by a name that fits the wrong light). The record
+    is matched afresh and may not join that station again; a `join` entry can send it to the right one."""
+    for key, sid in curation.detach_from.items():
+        held = matcher.memory.get(key)
+        if held is not None and getattr(held[0], "id", None) == sid:
+            matcher.memory.pop(key)
+            curation.applied["detach"].append({"key": key, "from": sid, "reason": curation.detach_reasons[key]})
 
 
 def prepare(by_source: dict[str, list], curation: Curation) -> None:
@@ -189,6 +209,11 @@ def index_record(matcher, rec, st) -> None:
             ids[k].append(st)
 
 
+def station_keys(st) -> set[str]:
+    """Every record key a station holds or held (its earlier runs' sources[] too, which are its memory)."""
+    return {r.key for r in st.recs()} | {x["key"] for x in (st.existing or {}).get("sources", []) if isinstance(x, dict) and x.get("key")}
+
+
 def _live(st):
     while getattr(st, "absorbed_into", None) is not None:
         st = st.absorbed_into
@@ -219,7 +244,7 @@ def identifier_join(matcher, rec):
         if st.country() and rec.country and st.country() != rec.country:
             continue
         cur = getattr(matcher, "ca_curation", None)
-        if cur is not None and cur.kept_apart(rec.key, {r.key for r in st.recs()}):
+        if cur is not None and (cur.kept_apart(rec.key, station_keys(st)) or cur.barred(rec.key, st)):
             continue
         if rec.has_point and st.min_dist(rec.lat, rec.lon) > R_IDENTIFIER_M:
             matcher.ca_far.append({"key": rec.key, "name": rec.name, "identifiers": held,

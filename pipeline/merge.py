@@ -655,7 +655,7 @@ class Matcher:
             s = name_score(rec.forms, st.forms(starting_only=limited))
             if s is not None and s <= 0.2 and merge_ca.names_exclude(rec, s):
                 continue
-            if self.ca_curation.kept_apart(rec.key, {r.key for r in st.recs()}):
+            if self.ca_curation.kept_apart(rec.key, merge_ca.station_keys(st)) or self.ca_curation.barred(rec.key, st):
                 continue  # curation (data/curation_ca.json): not the same structure
             # A second record of one source in a station must be the same structure (a strong name), unless it
             # is the other half of a range: a front and a rear light are two structures by definition.
@@ -1352,6 +1352,7 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     merge_ca.prepare(by_source, m.ca_curation)
     for path, rec in existing:
         m.add_existing(path, rec)
+    merge_ca.detach(m, m.ca_curation)
     # Records that may start a station first (every source in order), then the ones that may only
     # join one, so those always see every station; with the memory of an earlier run this makes a
     # second run identical to the first.
