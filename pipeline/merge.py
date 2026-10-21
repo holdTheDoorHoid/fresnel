@@ -52,6 +52,26 @@ Then:
   `related` links (preceded_by / succeeded_by); a life-saving station within 1.5 km of a light
   station links both ways.
 
+The US sources of 2026-10-21 (DESIGN 2.4, 3.9) add these, all for US records only (Canada's output is unchanged):
+
+- **Hard keys.** A record sharing an NRHP number, an ARLHS number, a Light List number ("vol-LLNR") or a
+  LighthouseFriends id (`extra.xref`) with a station joins it (within R_HARD_KEY when both have a position).
+- **Records without a position** (Rowlett, the passport list, most of the Society's lightship and life-saving
+  stations) join by hard key, else by a name that is strong and unique in their state; the rest wait in the
+  extract and are listed in `not_shown`. A record with no position never starts a structure of its own.
+- **Far namesakes.** A starting record joins the one station of its state and kind whose name agrees strongly
+  within 10 km (a vanished tower or a light on a shoal pinned kilometres off by one source). Listed in the run's
+  output for review, not in the saved report.
+- **Replicas** (status `replica`, or "(Replica)" in the name) are their own stations: they join an original only
+  on the spot, by a hard key, or through record_joins.py.
+- **Decisions** (record_joins.py, each with its reason in docs/sources/review_2026-10-us.md): a record's key sent
+  to a station (`RECORD_JOINS`, "new:<id>" starts one), positions found wrong (`NO_POSITION`), records kept apart,
+  names, statuses, hidden stations, scale copies and successive lights. Pinned records wait until every other
+  record is placed, in key order.
+- **A second run changes nothing.** Records that joined nothing are tried again once the pins and the range
+  pairing are done (by hard key, then by position and name), so the order two records of one pass arrive in, or a
+  run with memory, never decides a join.
+
 Field precedence (first source with a value wins): name, region, county, kind, structure facts
 (type, material, built, height), light dates, ATON numbers, agency: Wikidata > OSM. Location and
 the light as charted (characteristic, focal height, range, fog signal): OSM > Wikidata (OSM
@@ -77,25 +97,69 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import merge_ca  # noqa: E402  (Canada's rules: identifiers, curation, staffing)
 import regions  # noqa: E402
+import record_joins as _real_decisions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 
-SOURCE_ORDER = ["wikidata", "osm"]
+
+class _NoDecisions:
+    """record_joins.py's lists, all empty: what merge.run() uses unless the command line (or a caller) hands it
+    the real ones, so a test on synthetic stations is never touched by decisions about real ones."""
+    RECORD_JOINS: dict = {}
+    NO_POSITION: set = set()
+    KEEP_APART_PAIRS: set = set()
+    NAME_PICKS: dict = {}
+    STATUS_PICKS: dict = {}
+    HIDE: dict = {}
+    KEEP_VISIBLE: set = set()
+    NOT_DUPLICATES: set = set()
+    REPLICA_OF: dict = {}
+    SUCCESSION: list = []
+
+
+record_joins = _NoDecisions()   # the decisions in force; main() sets record_joins.py's (set_decisions)
+
+
+def set_decisions(module) -> None:
+    global record_joins
+    record_joins = module
+
+# Matching order: records of an earlier source start stations first, a later source joins them. Wikidata and
+# OpenStreetMap lead; the Canadian sources keep the order they had when only they existed (alphabetical, with
+# LighthouseFriends and Rowlett shared by both countries); the US sources of 2026-10-21 (DESIGN 2.4) follow their
+# own order. The sources never share a station across the border, so the two orders do not interact. A source
+# missing from the list comes after the listed ones, alphabetically.
+SOURCE_ORDER = ["wikidata", "osm",
+                "ca_lightships_lifesaving", "ca_staffed_lightstations", "ccg_list_of_lights", "lighthousefriends",
+                "parks_canada_hl", "uslhs", "nrhp", "territories", "rowlett", "uscg_light_list", "enc", "uslhs_passport"]
 PRECEDENCE = {
-    "name": ["wikidata", "osm"],
-    "location": ["osm", "wikidata"],
-    "region": ["wikidata", "osm"],
-    "kind": ["wikidata", "osm"],
-    "structure": ["wikidata", "osm"],
-    "charted": ["osm", "wikidata"],
-    "light_dates": ["wikidata", "osm"],
-    "other": ["wikidata", "osm"],
+    "name": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "rowlett", "nrhp"],
+    "location": ["osm", "wikidata", "territories", "lighthousefriends", "uslhs", "nrhp"],
+    "region": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
+    "kind": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
+    "structure": ["wikidata", "osm", "uslhs", "rowlett", "territories", "nrhp"],
+    "charted": ["osm", "wikidata", "territories", "uslhs", "rowlett"],
+    "light_dates": ["wikidata", "osm", "uslhs", "rowlett", "territories", "lighthousefriends"],
+    "other": ["wikidata", "osm", "uscg_light_list", "rowlett", "territories", "uslhs", "nrhp", "lighthousefriends"],
+    "visit": ["uslhs_passport", "lighthousefriends", "uslhs", "wikidata", "osm"],
+    "access": ["lighthousefriends", "uslhs", "wikidata", "osm"],
+    "stay": ["uslhs_passport", "lighthousefriends", "wikidata", "osm"],
 }
 merge_ca.register(PRECEDENCE)  # ranks the Canadian sources in the tables above
+# The charted light of a US station: NOAA's ENC first, then the Coast Guard's Light List (DESIGN 2.4); the
+# Canadian List of Lights, if it leads the field, stays first (the sources never share a station).
+_charted = PRECEDENCE["charted"]
+_at = 1 if _charted and _charted[0] == "ccg_list_of_lights" else 0
+_charted[_at:_at] = ["enc", "uscg_light_list"]
 KIND_GROUP = {"lighthouse": "light", "range_lights": "light", "pier_light": "light", "harbor_light": "light",
               "lightship_station": "lightship_station", "lightship": "lightship",
               "life_saving_station": "life_saving_station"}
+# Sources whose record of a charted characteristic is a weak sign that the light is lit today (an old
+# Wikidata statement; a Light List or ENC entry that may belong to a modern light beside the old tower):
+# beaten by any explicit "inactive" or "lost".
+WEAK_ACTIVE_SOURCES = ("wikidata", "enc", "uscg_light_list")
+CHARTED_SOURCES = ("enc", "uscg_light_list")
 STRONG = 0.85
 PARTIAL = 0.5
 R_STRONG, R_PARTIAL, R_ANY = 1000.0, 250.0, 60.0
@@ -103,6 +167,9 @@ R_ENRICH_STRONG, R_ENRICH = 300.0, 150.0
 R_PART = 150.0
 R_OSM_DOUBLE = 60.0
 R_WIKIDATA_TAG = 10000.0
+R_NAMESAKE_M = 8000.0   # the report lists stations this close with the same name (near_namesakes)
+R_NAMESAKE_JOIN = 10000.0   # a record joins the one station of its region this close whose name agrees strongly
+R_HARD_KEY = 10000.0   # a shared NRHP / ARLHS / Light List number joins records up to this far apart
 R_RANGE_PAIR = 3000.0
 R_LSS_NEAR = 1500.0
 CONFLICT_DISTANCE_M = 500.0
@@ -353,6 +420,8 @@ class Rec:
         self.region: str | None = raw.get("region")
         self.lat: float | None = raw.get("lat")
         self.lon: float | None = raw.get("lon")
+        if raw.get("key") in record_joins.NO_POSITION:    # a position a human has found wrong (record_joins.py)
+            self.lat = self.lon = None
         self.kind: str = raw.get("kind") or "lighthouse"
         self.role: str | None = raw.get("role")
         self.status: str | None = raw.get("status")
@@ -384,9 +453,14 @@ class Rec:
             self.role = next((r for rx, r in ROLE_BY_ANCILLARY if rx.search(self.name)), "other")
         self.light = raw.get("light") or {}
         self.structure = raw.get("structure") or {}
+        # What a visitor can do, as a source says it (LighthouseFriends icons, the Society's lists):
+        # only keys the source knows are present, and a missing key never means false.
+        self.visit = raw.get("visit") or {}
+        self.stay = raw.get("stay") if isinstance(raw.get("stay"), dict) else None
+        self.access = raw.get("access") or {}
         # Weak "active" claim from Wikidata: a charted characteristic and no deactivation or end date.
         self.status_claim = self.status
-        if (source == "wikidata" and self.status is None and self.light.get("characteristic")
+        if (source in WEAK_ACTIVE_SOURCES and self.status is None and self.light.get("characteristic")
                 and not self.light.get("deactivated") and not self.possibly_lost and self.kind in KIND_GROUP
                 and KIND_GROUP[self.kind] == "light"):
             self.status_claim = "active_weak"
@@ -403,6 +477,36 @@ class Rec:
     def can_start(self) -> bool:
         return (bool(self.name) and self.has_point and not self.start_blocked and not self.enrich_only and not self.suspect and not self.group_listing
                 and not (self.ancillary and self.source != "wikidata"))
+
+    @property
+    def hard_keys(self) -> list[str]:
+        """Identifiers two records of one station share whatever their names or positions: the NRHP
+        reference number, the ARLHS number and the Light List number (a register listing that covers
+        several stations has none)."""
+        if self.group_listing or self.country != "US":    # Canada's identifiers are merge_ca.py's
+            return []
+        keys = []
+        for reg in self.raw.get("registers") or []:
+            if reg.get("register") == "NRHP" and reg.get("number"):
+                keys.append("nrhp:" + str(reg["number"]).strip())
+        for x in self.extra.get("xref") or []:     # another source's own id for the same station (lhf:765)
+            keys.append("xref:" + str(x))
+        aton = self.raw.get("aton") or {}
+        if aton.get("arlhs"):
+            keys.append("arlhs:" + re.sub(r"[^A-Z0-9]", "", str(aton["arlhs"]).upper()))
+        if aton.get("uscg_llnr"):
+            keys.append("llnr:" + re.sub(r"-0+(?=\d)", "-", str(aton["uscg_llnr"]).strip()))
+        return keys
+
+    @property
+    def is_replica(self) -> bool:
+        """A scale copy of a light (DESIGN 3.2): a source says `replica`, or the name says so."""
+        return self.status == "replica" or bool(re.search(r"\breplica\b", self.name or "", re.I))
+
+    @property
+    def quiet(self) -> bool:
+        """A record the report need not list when it joins nothing (a charted light with no station)."""
+        return bool(self.extra.get("quiet_unmatched"))
 
     @property
     def standing_evidence(self) -> bool:
@@ -451,6 +555,7 @@ class Station:
         self.parts: list[Part] = []
         self.station_recs: list[Rec] = []
         self.absorbed_into: "Station | None" = None
+        self.retiring = False     # every record is pinned elsewhere (record_joins.py): the station will be retired
         self.joins: list[dict] = []
 
     def recs(self) -> list[Rec]:
@@ -466,6 +571,9 @@ class Station:
                 out += r.forms
         if not out and self.existing:
             out = name_forms(self.existing.get("name"), self.existing.get("other_names"))
+        picked = record_joins.NAME_PICKS.get(self.id) if self.id else None
+        if picked:      # the name a human chose is the station's name whatever its records are called (Tucker's Island Light)
+            out = out + name_forms(picked)
         return out
 
     def points(self, starting_only: bool = False) -> list[tuple[float, float]]:
@@ -490,6 +598,10 @@ class Station:
         if self.existing:
             return KIND_GROUP.get(self.existing.get("kind"))
         return None
+
+    def is_replica(self) -> bool:
+        recs = [r for r in self.recs() if r.can_start]
+        return bool(recs) and all(r.is_replica for r in recs) or any(r.status == "replica" for r in recs)
 
     def min_dist(self, lat: float, lon: float, starting_only: bool = False) -> float:
         return min((haversine_m(a, b, lat, lon) for a, b in self.points(starting_only)), default=float("inf"))
@@ -545,6 +657,14 @@ class Matcher:
         self.same_source_joins: list[dict] = []
         self.wikidata_tag_far: list[dict] = []
         self.retired: list[tuple[Station, Station]] = []
+        self.key_index: dict[str, list[Station]] = defaultdict(list)   # hard keys (rec.hard_keys) -> stations
+        self.quiet_unmatched: Counter = Counter()
+        self.quiet_recs: list[Rec] = []
+        self.name_region_joins: list[dict] = []
+        self.namesake_joins: list[dict] = []
+        self.overrides: list[dict] = []
+        self.deferred: list[tuple] = []     # (record, the key of a record it is pinned to) waiting for a later source
+        self.ignore_pins: set[str] = set()
         self.ca_curation = merge_ca.Curation()
         self.unshown_recs: list[Rec] = []
         self.ca_far: list[dict] = []
@@ -559,10 +679,19 @@ class Matcher:
             self.by_id[st.id] = st
         if rec.get("merged_into"):
             return
+        keys = [s_["key"] for s_ in rec.get("sources") or [] if isinstance(s_, dict) and s_.get("key")]
+        if keys and all(k in record_joins.RECORD_JOINS and not self.pinned_here(record_joins.RECORD_JOINS[k], st, keys) for k in keys):
+            st.retiring = True    # every record goes to another station: it will be retired and nothing joins it
+            return
         for s in rec.get("sources") or []:
             if isinstance(s, dict) and s.get("key"):
                 self.memory[s["key"]] = (st, s.get("part") or "station")
         self.index(st)
+
+    @staticmethod
+    def pinned_here(target: str, st: Station, keys: list[str]) -> bool:
+        """Whether a RECORD_JOINS target names this station itself: its id (with or without "new:") or one of its records."""
+        return (target[4:] if target.startswith("new:") else target) == st.id or target in keys
 
     def index(self, st: Station) -> None:
         for lat, lon in st.points():
@@ -585,6 +714,11 @@ class Matcher:
         self.how[how] += 1
         self.station_of_key[rec.key] = st
         merge_ca.index_record(self, rec, st)
+        for hk in rec.hard_keys:
+            if st not in self.key_index[hk]:
+                self.key_index[hk].append(st)
+        if not rec.has_point and st.parts and anchor is None and rec.country == "US":
+            anchor = "station"   # a record with no position describes the station, never a structure of its own
         if anchor == "station" or (anchor is None and rec.station_level and st.parts):
             st.station_recs.append(rec)
         else:
@@ -594,15 +728,22 @@ class Matcher:
                 st.parts.append(part)
             if part is None:
                 part = self.choose_part(rec, st)
-            part.recs.append(rec)
-            if part.role is None and rec.role:
-                part.role = rec.role
+            if part is None:
+                st.station_recs.append(rec)
+            else:
+                part.recs.append(rec)
+                if part.role is None and rec.role:
+                    part.role = rec.role
         if rec.has_point:
             self.grid[cell_of(rec.lat, rec.lon)].add(st.idx)
 
     @staticmethod
-    def choose_part(rec: Rec, st: Station) -> Part:
+    def choose_part(rec: Rec, st: Station) -> Part | None:
+        """The structure of `st` that `rec` describes, else a new one. A record that only enriches (a charted
+        light, a Library of Congress item) or whose position is the register's batch-derived point never
+        starts a structure of its own: with none near it, it is None and joins the station as a whole."""
         best, best_key = None, None
+        limited = rec.country == "US" and (rec.enrich_only or (rec.source == "nrhp" and rec.raw.get("precision") != "exact"))
         for p in st.parts:
             if p.role and rec.role and p.role != rec.role:
                 continue
@@ -616,6 +757,11 @@ class Matcher:
                 # The same name, word for word, within 150 m: one structure listed twice by a source
                 # (an OSM node and its building, a duplicate Wikidata item), not a second tower.
                 twin = d <= R_PART and rec.forms and all(r.forms and {f.full for f in r.forms} & {f.full for f in rec.forms} for r in same)
+                # ... unless the two say they were built in different years: successive towers of one name
+                b1 = rec.structure.get("built")
+                if twin and rec.country == "US" and isinstance(b1, int) and any(isinstance(r.structure.get("built"), int) and abs(r.structure["built"] - b1) >= 3
+                                                        for r in same):
+                    twin = False
                 if not double and not twin and not rec.enrich_only:
                     continue
                 if rec.enrich_only and d > R_PART:
@@ -629,6 +775,8 @@ class Matcher:
             if best_key is None or key < best_key:
                 best, best_key = p, key
         if best is None:
+            if limited and st.parts:
+                return None
             best = Part(rec.key, rec.role)
             st.parts.append(best)
         return best
@@ -657,6 +805,9 @@ class Matcher:
                 continue
             if self.ca_curation.kept_apart(rec.key, merge_ca.station_keys(st)) or self.ca_curation.barred(rec.key, st):
                 continue  # curation (data/curation_ca.json): not the same structure
+            # A scale copy is its own station, whatever it is called: it joins the light it copies only on the spot
+            if rec.country == "US" and d > r_any and (rec.is_replica != st.is_replica() or (limited and st.is_replica() and rec.source in CHARTED_SOURCES)):
+                continue
             # A second record of one source in a station must be the same structure (a strong name), unless it
             # is the other half of a range: a front and a rear light are two structures by definition.
             same = any(r.source == rec.source and not r.station_level and (r.can_start or not limited)
@@ -678,8 +829,120 @@ class Matcher:
         out.sort(key=lambda x: x[0])
         return out
 
+    # -- joins a human has decided (record_joins.py) and joins on a shared identifier ---------
+
+    def pinned_station(self, target: str) -> Station | None:
+        """The station a RECORD_JOINS target names: a station id, the key of a record it holds, or "new:<id>", a
+        station of that id which this pin starts (two stations from one: Old and New Point Loma); once it is a file
+        the id finds it."""
+        if target.startswith("new:"):
+            sid = target[4:]
+            st = self.by_id.get(sid)
+            if st is None:
+                st = self.new_station()
+                st.id = sid
+                self.by_id[sid] = st
+            return st
+        st = self.by_id.get(target) or self.station_of_key.get(target)
+        if st is None and target in self.memory:
+            st = self.memory[target][0]
+        while st is not None and st.absorbed_into is not None:
+            st = st.absorbed_into
+        return st
+
+    def kept_apart(self, rec: Rec, st: Station) -> bool:
+        return any(frozenset((rec.key, r.key)) in record_joins.KEEP_APART_PAIRS for r in st.recs())
+
+    def by_hard_key(self, rec: Rec) -> Station | None:
+        """The one station holding a record with the same NRHP number, ARLHS number or Light List number
+        (same country, a compatible kind, and within R_HARD_KEY of the record when both have positions).
+        Several holders: the nearest, when the record has a position; else none (ambiguous)."""
+        found: list[Station] = []
+        for hk in rec.hard_keys:
+            for st in self.key_index.get(hk, []):
+                if st.absorbed_into is not None or (st.existing or {}).get("merged_into") or st in found:
+                    continue
+                if st.country() and rec.country and st.country() != rec.country:
+                    continue
+                g = st.kind_group()
+                if g and KIND_GROUP.get(rec.kind) and g != KIND_GROUP.get(rec.kind):
+                    continue
+                if self.kept_apart(rec, st) or rec.is_replica != st.is_replica():
+                    continue
+                if rec.region and first_region(st) and rec.region != first_region(st) and not hk.startswith("nrhp:"):
+                    continue   # a Light List or ARLHS number copied into another state's entry (a register lists a vessel where it is moored)
+                if rec.has_point and st.points() and st.min_dist(rec.lat, rec.lon) > R_HARD_KEY:
+                    continue
+                found.append(st)
+        if not found:
+            return None
+        if len(found) == 1:
+            return found[0]
+        if rec.has_point:
+            found.sort(key=lambda st: (st.min_dist(rec.lat, rec.lon), st.seq))
+            return found[0]
+        return None
+
+    def by_name_in_region(self, rec: Rec, pool: list[Station] | None = None) -> Station | None:
+        """A record with no position joins the one station of its region whose name agrees strongly
+        (>= STRONG), when no other station is within 0.1 of that score. Listed in the report."""
+        if not rec.region or not rec.forms:
+            return None
+        scored = []
+        for st in (self.live() if pool is None else pool):
+            if st.country() and rec.country and st.country() != rec.country:
+                continue
+            g = st.kind_group()
+            if g and KIND_GROUP.get(rec.kind) and g != KIND_GROUP.get(rec.kind):
+                continue
+            if first_region(st) != rec.region or self.kept_apart(rec, st) or rec.is_replica != st.is_replica():
+                continue
+            s = name_score(rec.forms, st.forms(starting_only=True))
+            if s is not None and s >= STRONG:
+                scored.append((s, st))
+        if not scored:
+            return None
+        scored.sort(key=lambda x: (-x[0], x[1].seq))
+        if len(scored) > 1 and scored[0][0] - scored[1][0] < 0.1:
+            return None
+        return scored[0][1]
+
+    def far_namesake(self, rec: Rec) -> Station | None:
+        """A source that pins a light a few kilometres from where another source does (a vanished tower, a
+        light on a shoal) still means the same light when exactly one station of its region and kind has
+        the same name (score >= STRONG, never opposites) within R_NAMESAKE_JOIN. A station that already
+        holds a starting record of the record's own source is a different tower, not this one. Listed in
+        the report (`namesake_joins`) for review."""
+        if rec.country != "US" or not rec.has_point or not rec.name or not rec.can_start or not rec.region:
+            return None
+        group = KIND_GROUP.get(rec.kind)
+        found = []
+        for st in self.near(rec.lat, rec.lon, R_NAMESAKE_JOIN):
+            if st.country() and rec.country and st.country() != rec.country:
+                continue
+            g = st.kind_group()
+            if g and group and g != group:
+                continue
+            if first_region(st) != rec.region or self.kept_apart(rec, st) or rec.is_replica != st.is_replica():
+                continue
+            if any(r.source == rec.source and not r.station_level and r.can_start for r in st.recs()):
+                continue
+            d = st.min_dist(rec.lat, rec.lon, starting_only=True)
+            if d > R_NAMESAKE_JOIN:
+                continue
+            sc = name_score(rec.forms, st.forms(starting_only=True))
+            if sc is not None and sc >= STRONG:
+                found.append((sc, d, st))
+        return found[0][2] if len(found) == 1 else None
+
     def match_source(self, recs: list[Rec]) -> None:
         for rec in recs:
+            pin = record_joins.RECORD_JOINS.get(rec.key) if rec.key not in self.ignore_pins else None
+            if pin:
+                # A pinned record waits until every other record is placed, in a first run and in a run with
+                # memory alike: where it lands among a station's structures then depends only on them.
+                self.deferred.append((rec, pin))
+                continue
             if rec.key in self.memory:
                 st, anchor = self.memory[rec.key]
                 if st.absorbed_into is None:
@@ -707,7 +970,17 @@ class Matcher:
             if hit is not None:
                 self.attach(rec, hit[0], "identifier", hit[1])
                 continue
-            cands = self.candidates(rec)
+            st = self.by_hard_key(rec)
+            if st is not None:
+                self.attach(rec, st, "hard_key")
+                continue
+            if not rec.has_point and rec.country == "US":
+                st = self.by_name_in_region(rec)
+                if st is not None:
+                    self.attach(rec, st, "name_region")
+                    self.name_region_joins.append({"key": rec.key, "name": rec.name, "station": st})
+                    continue
+            cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
             if not cands and not rec.has_point:
                 hit = merge_ca.name_join(self, rec, name_forms, name_score)
                 if hit is not None:
@@ -721,8 +994,18 @@ class Matcher:
                 self.attach(rec, st, "place_name")
                 continue
             if rec.can_start and rec.has_point:
+                st = self.far_namesake(rec)
+                if st is not None:
+                    d_ns = round(st.min_dist(rec.lat, rec.lon, starting_only=True))
+                    self.attach(rec, st, "namesake")
+                    self.namesake_joins.append({"key": rec.key, "name": rec.name, "station": st, "distance_m": d_ns})
+                    continue
                 st = self.new_station()
                 self.attach(rec, st, "new")
+                continue
+            if rec.quiet:
+                self.quiet_unmatched[rec.source] += 1
+                self.quiet_recs.append(rec)
                 continue
             reason = merge_ca.unshown_reason(rec) or (
                       "seamark light with no lighthouse tag" if rec.enrich_only else
@@ -736,8 +1019,132 @@ class Matcher:
 
     # -- after matching ---------------------------------------------------------------------
 
+    def apply_deferred(self) -> None:
+        """Records pinned to a record of a source matched after theirs (an OpenStreetMap element pinned to a
+        LighthouseFriends one): attached now that every source has been matched; a pin that still points
+        nowhere is ignored and the record is matched as if there were none."""
+        pending, self.deferred = self.deferred, []
+        pending.sort(key=lambda it: it[0].key)   # the order the pinned records arrived in differs between a first run and a run with memory
+        for rec, pin in pending:
+            st = self.pinned_station(pin)
+            if st is not None:
+                self.attach(rec, st, "override")
+                self.overrides.append({"key": rec.key, "to": pin})
+            else:
+                self.ignore_pins.add(rec.key)
+                self.match_source([rec])
+
+    def retry_hard_keys(self) -> int:
+        """After both matching passes, give every US record that joined nothing one more try by the numbers it
+        shares with a station: its partner may have been placed after it (records of one pass go in key order,
+        and a run with memory puts the remembered ones first), so the order must not decide. Repeats while
+        records join. Returns how many did."""
+        total = 0
+        while True:
+            n = 0
+            for rec in list(self.unshown_recs) + list(self.quiet_recs):
+                if rec.country != "US" or not rec.hard_keys:
+                    continue
+                st = self.by_hard_key(rec)
+                if st is None:
+                    continue
+                self.attach(rec, st, "hard_key")
+                if rec in self.unshown_recs:
+                    self.unshown_recs.remove(rec)
+                    self.unshown[:] = [u for u in self.unshown if u["key"] != rec.key]
+                else:
+                    self.quiet_recs.remove(rec)
+                    self.quiet_unmatched[rec.source] -= 1
+                n += 1
+            total += n
+            if not n:
+                return total
+
+    def retry_unmatched(self) -> int:
+        """After the pinned records are placed, give every US record that joined nothing one more try by position and
+        name (a record with no position, by its name within its state). A record of the second pass is matched before
+        a pinned record has moved its station onto the right spot, and a run with memory still has the station's
+        earlier position in the grid, so the first try may or may not have found it: this one sees the same
+        stations in both. Returns how many joined."""
+        total = 0
+        while True:
+            n = 0
+            by_region: dict[str | None, list[Station]] = defaultdict(list)
+            for st in self.live():
+                by_region[first_region(st)].append(st)
+            for rec in sorted(list(self.unshown_recs) + list(self.quiet_recs), key=lambda r: r.key):
+                if rec.country != "US":
+                    continue
+                if rec.has_point:
+                    cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
+                    if not cands:
+                        continue
+                    self.attach(rec, cands[0][1], "late_place_name")
+                else:
+                    st = self.by_name_in_region(rec, by_region.get(rec.region, []))   # its station may only now have a name that agrees
+                    if st is None:
+                        continue
+                    self.attach(rec, st, "late_name_region")
+                    self.name_region_joins.append({"key": rec.key, "name": rec.name, "station": st})
+                if rec in self.unshown_recs:
+                    self.unshown_recs.remove(rec)
+                    self.unshown[:] = [u for u in self.unshown if u["key"] != rec.key]
+                else:
+                    self.quiet_recs.remove(rec)
+                    self.quiet_unmatched[rec.source] -= 1
+                n += 1
+            total += n
+            if not n:
+                return total
+
+    def fold_whole_range_parts(self) -> None:
+        """A station with a front and a rear range structure and a further structure that is only the item for the
+        range as a whole (Wikidata's 'Nantucket Harbor Range Lights') keeps that item as a record of the station,
+        not as a third structure."""
+        for st in self.live():
+            roles = {p.role for p in st.parts}
+            if st.country() != "US" or not {"front_range", "rear_range"} <= roles:
+                continue
+            for p in list(st.parts):
+                if p.role is None and p.recs and all(r.kind == "range_lights" and r.role is None and re.search(r"\brange\b", r.name or "", re.I)
+                                                      and not r.enrich_only for r in p.recs):
+                    st.station_recs += p.recs
+                    st.parts.remove(p)
+
+    def fold_positionless_parts(self) -> None:
+        """A structure none of whose records has a position (its position was found wrong: NO_POSITION) is not a
+        structure of its own when the station has another: its records describe the station as a whole."""
+        for st in self.live():
+            if len(st.parts) < 2 or st.country() != "US":
+                continue
+            for p in list(st.parts):
+                if not any(r.has_point for r in p.recs) and any(q is not p and any(r.has_point for r in q.recs) for q in st.parts):
+                    st.station_recs += p.recs
+                    st.parts.remove(p)
+
+    def retire_emptied(self) -> None:
+        """A published station all of whose records RECORD_JOINS sent to one other station is that station
+        (a duplicate, or twin lights that are one station): it is retired, its file kept with `merged_into`
+        (DESIGN 3.2, ids are permanent). One whose records went to several stations stays as it is."""
+        for st in self.stations:
+            if st.absorbed_into is not None or not st.existing or st.existing.get("merged_into") or st.recs():
+                continue
+            keys = [k["key"] for k in st.existing.get("sources") or [] if isinstance(k, dict) and k.get("key")]
+            if not keys or not all(k in record_joins.RECORD_JOINS for k in keys):
+                continue
+            targets = {id(self.station_of_key[k]): self.station_of_key[k] for k in keys if k in self.station_of_key}
+            if len(targets) != 1:
+                continue
+            target = next(iter(targets.values()))
+            while target.absorbed_into is not None:
+                target = target.absorbed_into
+            if target is st:
+                continue
+            st.absorbed_into = target
+            self.retired.append((st, target))
+
     def live(self) -> list[Station]:
-        return [s for s in self.stations if s.absorbed_into is None and not (s.existing or {}).get("merged_into")]
+        return [s for s in self.stations if s.absorbed_into is None and not s.retiring and not (s.existing or {}).get("merged_into")]
 
     def pair_ranges(self) -> dict:
         report = {"pairs": [], "ambiguous": [], "unpaired": []}
@@ -823,10 +1230,13 @@ class Matcher:
 
 
 def first_region(st: Station) -> str | None:
-    for r in sorted(st.recs(), key=lambda r: source_rank("region", r.source)):
+    best, best_rank = None, None
+    for r in st.recs():      # the first record of the best-ranked source that names a region (a stable minimum, no sort)
         if r.region:
-            return r.region
-    return (st.existing or {}).get("region")
+            rank = source_rank("region", r.source)
+            if best_rank is None or rank < best_rank:
+                best, best_rank = r.region, rank
+    return best if best is not None else (st.existing or {}).get("region")
 
 
 _SUCCESSION_LEAD_RE = re.compile(r"^(old|new|original|former|the old|site patrimonial)\b", re.I)
@@ -908,13 +1318,18 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
                 {"source": n.split(" says ")[0], "value": n.split(" says ")[1]} for n in notes],
                 "note": "A source says this structure is gone, but OpenStreetMap maps it today."})
     kinds = [s for s, _ in states]
+    # A source with no position settles "gone" only when nothing else says whether a tower stands.
+    unplaced = [r.status for r in st.station_recs if not r.has_point and r.status in ("active", "inactive", "lost", "ruins")] \
+        if st.country() == "US" else []
+    if kinds and all(k == "unknown" for k in kinds) and unplaced and all(u in ("lost", "ruins") for u in unplaced):
+        return ("ruins" if "ruins" in unplaced else "lost"), None, conflicts
     if kinds and all(k == "lost" for k in kinds):
         return "lost", None, conflicts
     if kinds and all(k in ("lost", "ruins") for k in kinds):
         return "ruins", None, conflicts
     standing = any(k == "standing" for k in kinds)
     light_claims = sorted(((LIGHT_RANK[r.status_claim], source_rank("charted", r.source), r.key, r)
-                           for r in recs if r.status_claim in LIGHT_RANK
+                           for r in recs if r.status_claim in LIGHT_RANK and (r.has_point or r.country != "US")
                            and (r.status_claim != "inactive_if_standing" or standing)), key=lambda x: x[:3])
     claimed = {c[3].status_claim.replace("_weak", "").replace("_if_standing", "") for c in light_claims}
     if {"active", "inactive"} <= claimed:
@@ -935,15 +1350,61 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
         when = f" ({end})" if isinstance(end, int) else ""
         return "unknown", (f"Wikidata gives an end date{when} without saying whether the light was discontinued or the "
                            "tower taken down, and no current map shows a structure here. It may be gone."), conflicts
+    # No other source says: a source with no position (Rowlett's directory) may, when all its entries agree.
+    if len(set(unplaced)) == 1 and unplaced[0] in ("active", "inactive"):
+        return unplaced[0], "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).", conflicts
     return "unknown", None, conflicts
 
 
 def pick(recs: list[Rec], field: str, getter):
-    for r in sorted(recs, key=lambda r: (source_rank(field, r.source), r.enrich_only, r.key)):
+    # a secondary light of a station (a directional or sector light, an emergency light) comes after the main one
+    for r in sorted(recs, key=lambda r: (source_rank(field, r.source), r.enrich_only, bool(r.extra.get("secondary")), r.key)):
         val = getter(r)
         if val not in (None, "", [], {}):
             return val, r
     return None, None
+
+
+VISIT_KEYS = ("grounds_open", "climbable", "museum", "tours", "boat_only", "passport_stamp")
+
+
+def visit_stay_access(recs: list["Rec"], visit: dict, stay: dict | None, access_note: str | None, use) -> tuple:
+    """What the sources say about visiting, staying and access (3.2), field by field: the first source
+    in PRECEDENCE["visit" / "stay" / "access"] with a value wins. A source lists only what it knows
+    (LighthouseFriends lists the icons that are true), so a missing key never overrides a value and is
+    never read as false. Returns (visit, stay, access level, access note)."""
+    for key in VISIT_KEYS:
+        if visit.get(key) is not None:
+            continue
+        val, r = pick(recs, "visit", lambda r, k=key: r.visit.get(k))
+        if val is not None:
+            visit[key] = val
+            use(r, "visit")
+    notes = []
+    for r in sorted(recs, key=lambda r: (source_rank("visit", r.source), r.key)):
+        n = r.visit.get("note")
+        if isinstance(n, str) and n and n not in notes:
+            notes.append(n)
+            use(r, "visit")
+    if notes:
+        visit["note"] = " ".join(notes)
+    # Among the Society's entries for one station a place to sleep outranks a volunteer program.
+    stay_order = {"inn": 0, "rental": 1, "hostel": 2, "keeper_program": 3}
+    cands = sorted((r for r in recs if r.stay), key=lambda r: (source_rank("stay", r.source), stay_order.get(r.stay.get("type"), 9), r.key))
+    got, s_rec = (cands[0].stay, cands[0]) if cands else (None, None)
+    if got:
+        stay = dict(got)
+        use(s_rec, "stay")
+    level, l_rec = pick(recs, "access", lambda r: r.access.get("level") if r.access.get("level") not in (None, "unknown") else None)
+    if level:
+        use(l_rec, "access")
+    notes = [access_note] if access_note else []
+    for r in sorted(recs, key=lambda r: (source_rank("access", r.source), r.key)):
+        n = r.access.get("note")
+        if isinstance(n, str) and n and n not in notes:
+            notes.append(n)
+            use(r, "access")
+    return visit, stay, level or "unknown", " ".join(notes) or None
 
 
 def resolve(st: Station, today: str) -> tuple[dict, dict]:
@@ -1075,7 +1536,8 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         focal, f_rec = pick(ordered, "charted", lambda r: r.light.get("focal_height_m"))
         rng, g_rec = pick(ordered, "charted", lambda r: r.light.get("range_nm"))
         fog, o_rec = pick(ordered, "charted", lambda r: r.light.get("fog_signal"))
-        for r in (fl_rec, dz_rec, c_rec, f_rec, g_rec, o_rec):
+        lens, l_rec = pick(ordered, "charted", lambda r: r.light.get("lens") if isinstance(r.light.get("lens"), dict) else None)
+        for r in (fl_rec, dz_rec, c_rec, f_rec, g_rec, o_rec, l_rec):
             use(r, "light")
         if first_lit and deactivated and first_lit > deactivated:
             conflicts.append({"field": "light.first_lit", "values": [{"source": fl_rec.source, "value": first_lit},
@@ -1084,7 +1546,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
                                       f"({deactivated}); it may have been relit. Neither is shown as the first lighting."})
             first_lit = None
         frm = next((r.source for r in (c_rec, fl_rec, f_rec, g_rec, dz_rec) if r), None)
-        light = {"first_lit": first_lit, "deactivated": deactivated, "lens": None, "characteristic": char,
+        light = {"first_lit": first_lit, "deactivated": deactivated, "lens": dict(lens) if lens else None, "characteristic": char,
                  "focal_height_m": round(focal, 1) if isinstance(focal, (int, float)) else None,
                  "range_nm": round(rng, 1) if isinstance(rng, (int, float)) else None,
                  "fog_signal": fog, "from": frm}
@@ -1105,14 +1567,24 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         used[k_] |= f_
 
     # Registers, numbers, agency
-    registers, seen_reg = [], set()
+    registers, seen_reg = [], {}
     for r in sorted(recs, key=lambda r: (source_rank("other", r.source), r.key)):
         for reg in r.raw.get("registers") or []:
             k = (reg.get("register"), reg.get("number"))
-            if k not in seen_reg and reg.get("register"):
-                seen_reg.add(k)
-                registers.append({"register": reg["register"], "number": reg.get("number"), "url": reg.get("url")})
+            if not reg.get("register"):
+                continue
+            if k not in seen_reg:
+                entry = {"register": reg["register"], "number": reg.get("number"), "url": reg.get("url")}
+                seen_reg[k] = entry
+                registers.append(entry)
                 use(r, "registers")
+            entry = seen_reg[k]
+            # The same listing from another source adds what the first lacks: the NRHP workbook gives the
+            # listed date, the National Historic Landmark date and the nomination link (3.2).
+            for extra_key in ("url", "listed", "nhl", "nomination"):
+                if reg.get(extra_key) and not entry.get(extra_key):
+                    entry[extra_key] = reg[extra_key]
+                    use(r, "registers")
     registers.sort(key=lambda g: (g["register"] != "NRHP", g["number"] is None, g["register"], g["number"] or ""))
     aton = {}
     for k in ("uscg_llnr", "arlhs", "ccg_list_number", "nga"):
@@ -1129,22 +1601,40 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     for r in sorted(recs, key=lambda r: (source_rank("light_dates", r.source), r.key)):
         for e in r.raw.get("events") or []:
             k = (e.get("year"), e.get("event"))
-            if k in seen_ev or not isinstance(e.get("year"), int):
+            if not isinstance(e.get("year"), int):
+                continue
+            if k in seen_ev:
+                # the same event from a later source: keep the first, but take a note it lacks
+                prior = next(x for x in events if (x["year"], x["event"]) == k)
+                if not prior["note"] and e.get("note") and country == "US":
+                    prior["note"] = e["note"]
+                    use(r, "events")
                 continue
             seen_ev.add(k)
             events.append({"year": e["year"], "event": e["event"], "note": e.get("note"), "from": e.get("from") or r.source})
             use(r, "events")
     events.sort(key=lambda e: (e["year"], EVENT_ORDER.index(e["event"]) if e["event"] in EVENT_ORDER else 99, e["event"]))
-    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit")})
+    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit") and (e.get("from") != "rowlett" or country != "US")})
     if len(built_years) > 1 and built_years[-1] - built_years[0] >= 2 and len(parts) <= 1:
         firsts = {}
-        for r in main_recs:
+        for r in (x for x in main_recs if x.has_point or country != "US"):
             fl = r.light.get("first_lit") or r.structure.get("built")
             if isinstance(fl, int):
                 firsts.setdefault(r.source, fl)
         if len(set(firsts.values())) > 1:
             conflicts.append({"field": "first_year", "values": [{"source": s, "value": y} for s, y in sorted(firsts.items(), key=lambda x: source_rank("light_dates", x[0]))],
                               "note": "Sources give different first years (often the first tower against the present one)."})
+
+    if light is not None and country == "US":
+        ends = {}
+        for r in sorted(main_recs, key=lambda r: (source_rank("light_dates", r.source), r.key)):
+            y = r.light.get("deactivated")
+            if isinstance(y, int) and r.source not in ends:
+                ends[r.source] = y
+        if len(ends) > 1 and max(ends.values()) - min(ends.values()) >= 2:
+            conflicts.append({"field": "light.deactivated", "values": [{"source": s_, "value": y} for s_, y in ends.items()],
+                              "note": "Sources give different years for the light going out (a retirement against a later removal, "
+                                      "or the first against the last of several towers)."})
 
     automated = [e for e in events if e["event"] == "automated"]
     staffing = {"status": "automated", "as_of": str(automated[-1]["year"])} if automated and status in ("active", "inactive") else {"status": "unknown", "as_of": None}
@@ -1161,6 +1651,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         site = next((l["url"] for r in recs for l in r.raw.get("links") or [] if l.get("kind") == "website"), None)
         stay = {"type": "inn", "provider": None, "url": site, "season": None,
                 "note": "Wikidata classes it as a bed and breakfast. Check with the operator before planning a stay.", "checked": None}
+    visit, stay, access_level, access_note = visit_stay_access(recs, visit, stay, access_note, use)
 
     setting = None
     if any(r.raw.get("setting") == "offshore" for r in recs):
@@ -1185,7 +1676,9 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
 
     # Location conflicts: records of one structure more than 500 m apart
     for p in parts:
-        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only]
+        # Only positions a source gives as exact are compared: the register's batch-derived points and
+        # the pin of a vanished tower are approximations, not disagreements.
+        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only and (r.raw.get("precision", "exact") == "exact" or country != "US")]
         if len(pts) > 1:
             ppos = p.pos()
             far = [r for r in pts if r.dist(*ppos) > CONFLICT_DISTANCE_M]
@@ -1215,7 +1708,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         "location": location, "status": status, "status_note": status_note,
         "structures": structures, "light": light, "registers": registers, "aton": aton,
         "agency": agency, "ownership": ownership or "unknown",
-        "access": {"level": "unknown", "note": access_note},
+        "access": {"level": access_level, "note": access_note},
         "staffing": staffing, "visit": visit, "stay": stay,
         "events": events, "keepers_count": None, "related": [],
         "photos": photos, "links": links, "sources": sources, "conflicts": conflicts,
@@ -1331,6 +1824,63 @@ def link_related(resolved: list[tuple[Station, dict]], m: Matcher) -> dict:
     return {"succession_links": sorted(succession, key=lambda x: (x["from"], x["to"])), "life_saving_near_light": near_pairs}
 
 
+def apply_decisions(resolved: list[tuple[Station, dict]]) -> dict:
+    """The station-level decisions of record_joins.py, applied to the merged records: STATUS_PICKS, HIDE,
+    REPLICA_OF (status replica, related replica_of both ways) and SUCCESSION (older / newer lights that are two
+    stations, linked both ways). An id that matches no station is listed in the report, not an error."""
+    by_id = {rec["id"]: rec for _, rec in resolved}
+    applied, missing = Counter(), []
+
+    def get(i: str) -> dict | None:
+        rec = by_id.get(i)
+        if rec is None:
+            missing.append(i)
+        return rec
+
+    def link(rec: dict, relation: str, other: dict) -> None:
+        entry = {"id": other["id"], "relation": relation, "name": other["name"]}
+        if entry not in rec["related"]:
+            rec["related"].append(entry)
+            rec["related"].sort(key=lambda x: (x.get("relation") or "", x.get("id") or ""))
+
+    for sid, (status, note) in sorted(record_joins.STATUS_PICKS.items()):
+        rec = get(sid)
+        if rec:
+            rec["status"], rec["status_note"] = status, note
+            rec["conflicts"] = [c_ for c_ in rec["conflicts"] if c_["field"] != "status"]
+            if status in ("lost", "ruins"):
+                for st_ in rec["structures"]:
+                    if st_["role"] in ("tower", "front_range", "rear_range") and st_["status"] in ("standing", "unknown"):
+                        st_["status"] = status      # the buildings around a vanished tower may stand
+            applied["status"] += 1
+    for sid, nm in sorted(record_joins.NAME_PICKS.items()):
+        rec = get(sid)
+        if rec and rec["name"] != nm:
+            rec["other_names"] = [n for n in [rec["name"], *rec["other_names"]] if n != nm]
+            rec["name"] = nm
+            applied["name"] += 1
+    for sid, reason in sorted(record_joins.HIDE.items()):
+        rec = get(sid)
+        if rec:
+            rec["hidden"], rec["hidden_reason"] = True, reason
+            applied["hidden"] += 1
+    for copy_id, original_id in sorted(record_joins.REPLICA_OF.items()):
+        copy, original = get(copy_id), get(original_id)
+        if copy and original:
+            copy["status"] = "replica"
+            copy["status_note"] = None
+            link(copy, "replica_of", original)
+            link(original, "replica", copy)
+            applied["replica"] += 1
+    for old_id, new_id in record_joins.SUCCESSION:
+        old, new = get(old_id), get(new_id)
+        if old and new:
+            link(old, "succeeded_by", new)
+            link(new, "preceded_by", old)
+            applied["succession"] += 1
+    return {"applied": dict(applied), "ids_not_found": sorted(set(missing))}
+
+
 def retired_record(existing: dict, into: str, today: str) -> dict:
     return ordered({
         "id": existing["id"], "name": existing.get("name"), "country": existing.get("country"),
@@ -1363,10 +1913,18 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
         m.match_source([r for r in by_source[sid] if r.can_start or r.key in m.memory])
     for sid in order:
         m.match_source([r for r in by_source[sid] if not (r.can_start or r.key in m.memory)])
+    m.apply_deferred()
+    m.fold_positionless_parts()
+    m.fold_whole_range_parts()
     merge_ca.retry_unshown(m)
     merge_ca.merge_stations(m, m.ca_curation)
     merge_ca.retry_unshown(m)  # records tied to both of two stations that curation has just made one
+    m.retry_hard_keys()
+    m.retry_unmatched()
+    m.retire_emptied()
     ranges = m.pair_ranges()
+    m.retry_hard_keys()      # a front and a rear that have just become one station: records tied to either now find it
+    m.retry_unmatched()
 
     resolved: list[tuple[Station, dict]] = []
     for st in m.live():
@@ -1380,6 +1938,8 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
         rec["id"] = st.id
         merge_ca.curate(rec, m.ca_curation, [r.key for r in st.recs()])
     links = link_related(resolved, m)
+    decisions = apply_decisions(resolved)
+    links["decisions"] = decisions
 
     written = unchanged = 0
     outputs: list[tuple[Path, str]] = []
@@ -1404,7 +1964,10 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
 
     report = build_report(m, resolved, headers, ranges, links)
     report["canada"], ca_run = merge_ca.report(m, resolved, by_source)
-    report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged,
+    # How a record joined is what this run did (a run with memory re-places it where it was), so the lists of joins to
+    # review are printed with the run, never saved in the report.
+    joins_to_review = report.pop("joins_to_review")
+    report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged, "joins_to_review": joins_to_review,
                       "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"]),
                       "canada": ca_run}
     if write and report_path is not None:
@@ -1462,11 +2025,16 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
         if not rec["hidden"] and "front_range" in roles and "rear_range" in roles:
             paired.append({"id": rec["id"], "name": rec["name"]})
     ranges = {"paired": sorted(paired, key=lambda x: x["id"]), "ambiguous": ranges["ambiguous"], "unpaired": ranges["unpaired"]}
-    possibly_lost = [{"id": r["id"], "name": r["name"], "note": r["status_note"]} for r in visible if r.get("status_note")]
+    # a status with no evidence behind it that the light is still there: only the Wikidata end-date case
+    # (stations whose status a human settled in record_joins.py, and statuses taken from a source with no
+    # position, are not suspects)
+    possibly_lost = [{"id": r["id"], "name": r["name"], "note": r["status_note"]} for r in visible
+                     if r.get("status_note") and (r["country"] != "US" or (r["status"] == "unknown" and r["id"] not in record_joins.STATUS_PICKS))]
     decorative = []
     for st, rec in resolved:
-        if rec["hidden"]:
-            continue
+        if rec["hidden"] or rec["id"] in record_joins.KEEP_VISIBLE or rec["id"] in record_joins.REPLICA_OF or \
+                (rec["id"] in record_joins.STATUS_PICKS and record_joins.STATUS_PICKS[rec["id"]][0] == "replica"):
+            continue    # decided in record_joins.py
         hints = sorted({r.extra.get("decorative_hint") for r in st.recs() if r.extra.get("decorative_hint")})
         only_osm = {s["source"] for s in rec["sources"]} == {"osm"}
         no_light = not (rec.get("light") or {}).get("characteristic") and not rec["registers"]
@@ -1493,6 +2061,8 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
     for st, rec in resolved:
         if rec["hidden"] or {s["source"] for s in rec["sources"]} != {"osm"} or (rec.get("light") or {}).get("characteristic"):
             continue
+        if rec["id"] in record_joins.KEEP_VISIBLE or rec["id"] in record_joins.REPLICA_OF or rec["status"] == "replica":
+            continue    # decided in record_joins.py, or a replica already
         twins = sorted({i for f in name_forms(rec["name"]) for i, reg in known.get(f.core, []) if reg != rec["region"]})
         if twins:
             entry = by_id.get(rec["id"])
@@ -1511,6 +2081,23 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
             d = haversine_m(a[0], a[1], b[0], b[1])
             if d <= 150 and KIND_GROUP.get(a[4]) == KIND_GROUP.get(b[4]):
                 close.append({"a": a[2], "a_name": a[3], "b": b[2], "b_name": b[3], "distance_m": round(d)})
+    # Stations of one kind group within R_NAMESAKE_M whose names agree strongly: duplicates the 150 m test
+    # misses (a lost tower pinned a kilometre off by one source). Reviewed pairs (record_joins) are left out.
+    near_names = []
+    forms = {rec["id"]: name_forms(rec["name"], rec.get("other_names")) for rec in visible}
+    for i, a in enumerate(pts):
+        for b in pts[i + 1:]:
+            if b[0] - a[0] > R_NAMESAKE_M / 111000.0:
+                break
+            d = haversine_m(a[0], a[1], b[0], b[1])
+            if d <= 150 or d > R_NAMESAKE_M or KIND_GROUP.get(a[4]) != KIND_GROUP.get(b[4]):
+                continue
+            if frozenset((a[2], b[2])) in record_joins.NOT_DUPLICATES:
+                continue
+            sc = name_score(forms[a[2]], forms[b[2]])
+            if sc is not None and sc >= STRONG:
+                near_names.append({"a": a[2], "a_name": a[3], "b": b[2], "b_name": b[3], "distance_m": round(d), "score": sc})
+    close = [x for x in close if frozenset((x["a"], x["b"])) not in record_joins.NOT_DUPLICATES]
     multi = [{"id": rec["id"], "name": rec["name"], "structures": [s.get("name") for s in rec["structures"]]}
              for rec in visible if len([s for s in rec["structures"] if s["role"] not in ("front_range", "rear_range")]) > 1]
     conflicts = Counter(c["field"] for rec in visible for c in rec["conflicts"])
@@ -1534,6 +2121,7 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
             "wikidata_and_osm_by_tag": tag_confirmed,
             "conflicts": dict(sorted(conflicts.items())),
             "not_shown": dict(sorted(Counter(u["reason"].split(" (")[0] for u in unshown).items())),
+            "unmatched_not_listed": dict(sorted(m.quiet_unmatched.items())),
         },
         "hidden": [{"id": r["id"], "name": r["name"], "reason": r["hidden_reason"]} for r in sorted(hidden, key=lambda r: r["id"])],
         "range_lights": ranges,
@@ -1543,6 +2131,13 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
         "possibly_lost": sorted(possibly_lost, key=lambda x: x["id"]),
         "decorative_suspects": sorted(decorative, key=lambda x: x["id"]),
         "possible_duplicates": close,
+        "near_namesakes": near_names,
+        "joins_to_review": {
+            "by_name_in_region": sorted(({"key": j["key"], "name": j["name"], "station": j["station"].id} for j in m.name_region_joins),
+                                        key=lambda x: x["key"]),
+            "by_unique_namesake": sorted(({"key": j["key"], "name": j["name"], "station": j["station"].id,
+                                           "distance_m": j["distance_m"]} for j in m.namesake_joins), key=lambda x: x["key"]),
+        },
         "related": links,
         "not_shown": unshown,
     }
@@ -1557,6 +2152,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--today", default=dt.date.today().isoformat())
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
+    set_decisions(_real_decisions)
     report = run(args.sources, args.stations, args.report, args.today, write=not args.dry_run)
     c, run_ = report["counts"], report["_run"]
     print(f"merge: {c['stations']} stations shown, {c['hidden']} hidden, {c['merged_away']} merged away; "
@@ -1565,6 +2161,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  by status {c['by_status']}; wikidata+osm {c['wikidata_and_osm']} ({c['wikidata_and_osm_by_tag']} confirmed by an OSM wikidata tag)")
     print(f"  this run: matches {run_['record_matches']}; range pairs made {run_['range_pairs_made']}")
     print(f"  not shown {c['not_shown']}; conflicts {c['conflicts']}")
+    jr = run_.get("joins_to_review") or {}
+    if jr.get("by_name_in_region") or jr.get("by_unique_namesake"):
+        print(f"  joins to review (not saved): {len(jr['by_name_in_region'])} position-less records joined by name in their state, "
+              f"{len(jr['by_unique_namesake'])} by a unique namesake some kilometres off")
     ca_run = run_.get("canada") or {}
     if ca_run.get("joined_by"):
         print(f"  Canada: joined by {ca_run['joined_by']}; {len(ca_run['identifier_ambiguous'])} identifiers point at two stations, "

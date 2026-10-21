@@ -208,6 +208,35 @@ other sources, so **identifiers do the joining** (3.9). Wikidata's coordinates a
 (Cape St. James 18.8 km, Sisters Islets 10.3 km): the same light then appeared twice, and curation merges
 them. There is no Sambro lightship (Sambro is a lighthouse).
 
+### 2.4 United States sources, second round (2026-10-21, branch `agent/sources-us`)
+
+Eight more extracts, each from its own fetcher in `pipeline/` with tests (`pipeline/test_fetch_*.py`). The
+fetchers share `pipeline/_records.py` (the record builder; a polite, robots-obeying `polite_get` with the one
+clock per host that 2.3 describes; the xlsx reader; the writer). **A shared extract keeps the other country's
+records**: `lighthousefriends.json` and `rowlett.json` hold Canada's records (2.3) and the United States'
+(`write_extract(..., country="US")` replaces only the US ones), so either fetcher can run alone. Every
+request is sent as `FresnelBot/0.1 (+https://github.com/holdTheDoorHoid/fresnel)`; none runs in CI; the
+extracts are committed. Facts only from every copyrighted site: a name, a year, a flag, a number, a position
+and a link per station, never prose or pictures. Order is the order they were built; the merge reads them in
+`SOURCE_ORDER` (3.9).
+
+| Source id | Fetcher | Licence and use | What it supplies |
+|---|---|---|---|
+| `lighthousefriends` | `fetch_lighthousefriends.py` (US half of the file 2.3 describes) | All rights reserved, (c) Kraig Anderson: facts only, credit and link | 32 state index pages (Puerto Rico is one) read as a marker list plus seven icon-filter passes (`all`, `destroyed`, `climb`, `lodging`, `keeperprog`, `private`, `boat`): 1,076 lights, each with its 5-decimal position, community and id (`extra.xref` `lhf:<id>`, which Rowlett's links also carry). Destroyed gives status `lost`; the flags give `visit` (climbable, boat only), `stay` (rental, keeper programme) and `access` (private); a light with no flag gets nothing, never a false. No per-light page is read |
+| `uslhs` | `fetch_uslhs.py` (reads the cache the corpus agent crawls, `$RAW/uslhs/places.json`; never crawls) | (c) U.S. Lighthouse Society: facts only, link to each place's page | The Digital Archive's 2,299 places -> 2,139 records: 1,195 light stations, 134 lightship stations and 67 life-saving stations (3 and none of them with a position: they join an existing station by name, else wait as leads), 13 replicas, 681 minor aids and 48 private (faux) lighthouses (join-only; the faux ones carry a `decorative_hint`). Years, existing/lost, owner, optic, material, open to public; positions to 0.1 minute (`approximate`), 1,140 of them; 43 positions dropped (`plausible_position`: 0,0 placeholders, coordinates not on Earth, outside the bounding box of the state the record is filed under, or more than 15 km from it and nearer another). Ranks below Wikidata, OSM and LHF for location (it put Split Rock 23 km off) |
+| `nrhp` | `fetch_nrhp.py` | US federal public domain (NPS) | The workbook (reference number, name, other names, state, county, listed and NHL dates, nomination link) joined to the NPS point service by number: 577 properties (every number Wikidata carries on a station, the lighthouse and life-saving multiple-property listings, and names that say lighthouse, lightship, range light, life-saving station, house of refuge, Coast Guard station). `registers[]` with `listed`, `nhl`, `nomination`; positions are the service's batch-derived points (`approximate`). A district is station-level, a boundary increase never starts a station; a point outside the bounding box of its state (2 of the 577: Great Beds, NJ, at 44.09 N) is dropped and said (`extra.position_dropped`) |
+| `enc` | `fetch_enc.py` | US federal public domain (NOAA); not for navigation | NOAA ENC Direct light points, six chart bands, clustered (25 m) and kept only within 200 m of another source's record: 1,058 lights with the characteristic in Light List form (`Fl(2) W 6s`), focal height and nominal range. No names: position-only enrichment (`enrich_only`). The service drops bands at times (2026-10-21: the approach and harbour bands answered \"Could not find service\" and are partly read from cached pages; `notes.bands_missing` says which) |
+| `uscg_light_list` | `fetch_uscg_light_list.py` | US federal public domain (USCG) | Light List volumes I-VII (2025 edition; `pdftotext -layout`, token-offset columns): 2,054 lights that can be a station (their number is one Wikidata carries, or another source lies within 300 m) with number `vol-LLNR`, name, position to 0.001\", characteristic, range, structure and remarks. Enrichment and the hard key for joins |
+| `rowlett` | `fetch_rowlett_us.py` (US half of the file 2.3 describes) | (c) Russ Rowlett and UNC: facts only, credit and link | 73 regional pages, 1,697 US entries: years (tower, station established), status word, focal plane, the ARLHS, Light List and Admiralty numbers and the LHF id in the anchor. No positions: a record joins a station by number, else by a unique name in its state. Bracketed entries (fog signals, other buildings) are join-only |
+| `uslhs_passport` | `fetch_uslhs_passport.py` | (c) U.S. Lighthouse Society: facts only, link | The Passport Club stamp list (PDF, July 2026; 622 stations) -> `visit.passport_stamp`, and the accommodations pages (57 stations) -> `stay` type and the operator's site. No contact names or numbers. Position-less: joins by name within its state; ranks first for `visit` and `stay` |
+| `territories` | `fetch_territories.py` | Facts only: Wikipedia's list of territorial lighthouses (CC BY-SA) for the seed lights; Library of Congress HAER records (public domain) | 22 records for Guam, American Samoa, the Virgin Islands, Howland Island and Puerto Rico, where Wikidata and OSM are thin: 7 seed lights (the ones that pass DESIGN section 1) and 15 HAER PR-32..47 records, which only add the HAER number and link to the station they join. Guam had no station before this; the posts with no dated history are left out and named in the extract |
+
+Findings from the build: the Society's archive and Rowlett carry no usable positions for most lightship and
+life-saving stations, so those join by name or wait as leads (3.9); LighthouseFriends's and OpenStreetMap's
+positions for a handful of lights are tens of kilometres out (Six Mile Point Range), as are Wikidata's
+(Ship Shoal, Cape Fear, Point Stuart) and the Society's (Oswego, Split Rock, Race Point): the decisions are in
+`pipeline/record_joins.py`, with their reasons in `docs/sources/review_2026-10-us.md`.
+
 ---
 
 ## 3. Data model
@@ -497,7 +526,14 @@ structure the record describes (`front_range`, `rear_range`, `dwelling`) or null
 are null, never `""`. Coordinates WGS84, west negative; all lengths in metres, ranges in nautical
 miles. `extra` carries the source's own words and the flags the merge reads: `station_level`,
 `out_of_scope`, `possibly_lost`, `enrich_only`, `minor_beacon_suspect`, `decorative_hint`,
-`wikidata` (an OSM element's `wikidata=` tag).
+`wikidata` (an OSM element's `wikidata=` tag). The US sources of 2.4 add: optional `visit`, `stay` and
+`access` blocks on a record (only what the source states, never a false for a missing flag; the merge
+fills the station's from the first source in `PRECEDENCE`, passport and LighthouseFriends first for
+`visit` and `stay`); register entries with `listed`, `nhl` and `nomination` beside `number` and `url`;
+`extra.xref` (identifiers of another source that name the same light: `lhf:<id>`), `quiet_unmatched`
+(a record that joins a station or is not worth listing: ENC, the Light List, minor aids), `secondary` (a
+Light List entry for a directional, sector or emergency light of a station: it ranks after the main light
+for the charted fields) and `position_dropped` (the position a fetcher refused, and why).
 
 ### 3.9 Merge (`pipeline/merge.py`)
 
@@ -600,6 +636,45 @@ file describes the merged state, not the run). The module docstring has every ru
     Coast Guard list started; curation entries). What a run did (joins by kind, ambiguous identifiers) is
     printed, not saved.
 
+- **United States, second round (`merge.py`, rules for `country == "US"` records only; Canada's output is
+  unchanged).**
+  - *Hard keys.* An NRHP number, an ARLHS number, a Light List number (`vol-LLNR`: Wikidata's P3723 and the
+    Light List agree on the form) or an `xref` (`lhf:<id>`, which Rowlett's links carry) joins a record to the
+    station that holds the same key, within 10 km when both have a position, and in the same state unless the
+    key is an NRHP number (a register lists a vessel where it is moored, and a district can cross a state line;
+    a Light List or ARLHS number copied into another state's entry is not trusted).
+  - *Position-less records* (Rowlett, the passport list, most of the Society's lightship and life-saving
+    stations) join by a hard key, else by a name that is strong and unique in their state; the rest wait in the
+    extract and show in the report's `not_shown`. Such a record never starts a structure of its own: it
+    describes the station as a whole.
+  - *A unique namesake a few kilometres off* (a vanished tower pinned far from the station by one source) joins
+    when exactly one station of the state and kind has the same name within 10 km. The joins are printed by
+    the run, not saved: what a run did differs when it has memory.
+  - *Who may start a station.* A record with a name and a position, unless it is enrichment: ENC points, Light
+    List entries, HAER records, the Society's minor aids and private (faux) lighthouses and the register's
+    batch-derived points (`limited`) join a station and give it facts, never a structure. A scale copy
+    (status `replica`, or "(Replica)" in the name) is its own station, joined to an original only on the spot,
+    by a hard key or by a decision.
+  - *Status.* A Wikidata, ENC or Light List entry is a weak sign that a light is lit: any explicit "inactive"
+    or "lost" beats it. A status from a record with no position (Rowlett's) counts only when nothing with a
+    position speaks, and is never listed as a conflict.
+  - *Fields.* `visit`, `stay` and `access` come from the first source that states them (passport list and
+    LighthouseFriends first); the charted light from ENC, then the Light List, then OSM; a register adds an
+    entry (`listed`, `nhl`, `nomination`) and an event; location prefers OSM, Wikidata, LighthouseFriends, then
+    the Society, whose points are rounded and sometimes wrong.
+  - *Decisions* (`pipeline/record_joins.py`, generated from the review in `docs/sources/review_2026-10-us.md`,
+    every entry with its reason): records sent to a station (a station id, a record key, or `new:<id>`, which
+    starts a station of that id: Old Point Loma), positions found wrong, records kept apart, names, statuses,
+    hidden stations, scale copies (`replica_of`) and successive lights (`preceded_by`). Pinned records wait until
+    everything else is placed and go in key order; a station whose every record is sent elsewhere is retired
+    (`merged_into`, file kept); an id that matches no station is listed under `related.decisions`. The
+    DESIGN 3.2 rulings (twin lights one station; Old and New Point Loma two linked stations; scale copies
+    `replica`) are applied this way.
+  - *Second runs.* Records that joined nothing are tried again after the pins and the range pairing (by hard
+    key, then by position and name), so neither the order two records of a pass arrive in nor a run with
+    memory decides a join; a run on its own output writes nothing, and the review file is byte for byte the
+    same.
+
 First run (2026-10-21): 1,779 stations shown (1,127 US, 652 Canada), 3 hidden (decorative), 1,017
 held by both sources (760 joined through an OSM `wikidata=` tag), 376 Wikidata only, 390 OSM only;
 1,099 records not shown (701 likely minor beacons, 327 with no name, 39 station buildings with no
@@ -611,6 +686,20 @@ Canada run (2026-10-21, the first build merged again with the six sources of 2.3
 Canadian ids retired with `merged_into`. By province BC 75, MB 18, NB 137, NL 149, NS 256, NU 10, ON 237,
 PE 59, QC 252; by status 697 active, 133 inactive, 301 lost, 16 replica, 1 ruins, 45 unknown. 49 stations
 are staffed (44 of them resting only on the 2010 list), 2 destaffed in 2024. A second run changes no file.
+
+United States run (2026-10-21, the build merged again with the eight sources of 2.4, `data/curation_ca.json`
+and the decisions of `pipeline/record_joins.py`, reviewed in `docs/sources/review_2026-10-us.md`): 1,432 US
+stations shown (1,082 of them already published, 350 new: the Society's archive started 164, LighthouseFriends
+162, the NRHP 12, the territories 4, and Wikidata or OpenStreetMap records the decisions moved 8), 20 hidden
+(decorative, or in Canada), 26 ids retired with `merged_into`. By status 556 active, 319 inactive, 363 lost, 39
+replica, 5 ruins, 150 unknown; by kind 1,121 lighthouses, 158 range lights, 79 pier lights, 52 life-saving
+stations, 17 lightships, 4 lightship stations, 1 harbor light. Guam has 2 stations (it had none). The review's
+three lists: 50 possible duplicate pairs to 0, 56 possibly lost to 0, 40 decorative suspects to 0 (the Canadian
+stations in them are `agent/sources-ca`'s). Not placed: 967 Society places (629 minor aids, 130 lightship
+stations, 57 life-saving stations and 117 light stations with no position and no unique name in their state, 33
+private (faux) lighthouses), 1,159 Light List and 283 ENC entries with no station near, 645 Rowlett and 115
+passport entries that match no station by number or unique name. A second run changes no file and the review
+file is byte for byte the same.
 
 ### 3.10 What the site loads (`pipeline/build_site_data.py` → `web/public/data/`)
 
