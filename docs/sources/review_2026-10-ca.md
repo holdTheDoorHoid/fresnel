@@ -220,3 +220,15 @@ stations).
    a research task, or leave them flagged?
 4. The unplaced Directory entries: ask Russ Rowlett for coordinates (the drafted note in `docs/outreach/` is
    for the owner to send), or place them from the Coast Guard's own positions once question 1 is answered?
+
+## Orchestrator's answers (2026-10-21)
+
+1. **The 67 hidden harbor lights stay hidden**: DESIGN §1 leaves out modern automated beacons with no keeper
+   history, and no history source mentions these. Any one comes back the day a source gives it a history.
+2. **The five Coast Guard–started stations stay shown**: the Lighthouse Directory describes each one's lantern
+   or gallery, so they are lights with a structure, not bare beacons.
+3. **Ranges with halves far apart, Sydney and Malpeque**: left flagged; the story research for those stations
+   checks the positions and files `corrections`.
+4. **Unplaced Directory entries**: stay unplaced for now. The drafted note to Russ Rowlett was lost when the
+   agent's worktree was removed (`docs/outreach/` is git-ignored); it will be re-drafted with the other outreach
+   notes for the owner to send.
