@@ -55,7 +55,7 @@ import {
   type RenderContext,
 } from './common.ts';
 import { keepersTable, researchSourcesList } from './keepers.ts';
-import { nightSection } from './night.ts';
+import { nightSection, reachLine } from './night.ts';
 import { renderTimeline } from './timeline.ts';
 
 export type { RenderContext } from './common.ts';
@@ -234,7 +234,7 @@ export function lightRows(r: StationRecord): [string, unknown][] {
   const fh = lengthFor(country, L.focal_height_m);
   if (fh) rows.push(['Focal height', html`${fh}<span class="sub">The height of the light above the water.</span>${disagree(r, 'light.focal_height_m')}`]);
   const range = nauticalMiles(L.range_nm);
-  if (range) rows.push(['Range', html`${range}<span class="sub">How far out it ${r.status === 'active' ? 'can' : 'could'} be seen in clear weather, as charted.</span>${disagree(r, 'light.range_nm')}`]);
+  if (range) rows.push(['Range', html`${range}<span class="sub">How far out it ${r.status === 'active' ? 'can' : 'could'} be seen at night in clear weather, as charted. See <a href="#night">the light at night</a> for the horizon and the weather.</span>${disagree(r, 'light.range_nm')}`]);
   const lens = lensText(r);
   if (lens) rows.push(['Lens', lens]);
   if (L.fog_signal) rows.push(['Fog signal', L.fog_signal.replace(/^./, (c) => c.toUpperCase())]);
@@ -665,6 +665,8 @@ export function renderPanel(r: StationRecord, ctx: RenderContext, opts: { hidden
   if (fh) rows.push(['Focal height', fh]);
   const range = nauticalMiles(L?.range_nm);
   if (range) rows.push(['Range', range]);
+  const reachText = reachLine(r);
+  if (reachText) rows.push([r.status === 'active' ? 'Seen out to' : 'Could be seen', reachText]);
   const tower = (r.structures ?? []).find((s) => s && (s.role === 'tower' || s.role === 'front_range') && s.status === 'standing') ?? (r.structures ?? [])[0];
   if (tower) {
     const type = tower.type && STRUCTURE_TYPE[tower.type] ? STRUCTURE_TYPE[tower.type]!.label : null;

@@ -261,13 +261,13 @@ export function nightSection(r: StationRecord, ctx: RenderContext): SafeHtml | n
     ${howItWorks(eras.find((e) => e.focalM !== null) ?? era, country)}`;
 }
 
-/** A short line for the map panel: "Seen from a small boat out to about 15 nmi". */
+/** A short line for the map panel: "About 15.2 nmi (28 km) from a small boat’s deck". */
 export function reachLine(r: StationRecord): string | null {
   const L = r.light;
   if (!L || !hasLight(r.kind)) return null;
   const ring = ringRangeNm(L.focal_height_m, L.range_nm, DEFAULT_EYE_M);
   if (!ring) return null;
-  return `${r.status === 'active' ? 'Seen' : 'Could be seen'} from a small boat’s deck out to about ${nauticalMiles(ring.nm)}`;
+  return `About ${nauticalMiles(ring.nm)} from a small boat’s deck${ring.limit === 'horizon' && !(typeof L.range_nm === 'number') ? ' (its horizon; how bright it is is not recorded)' : ''}`;
 }
 
 
