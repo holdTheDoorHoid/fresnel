@@ -182,6 +182,7 @@ def clean_name(name: str | None) -> str | None:
 def name_tokens(s: str) -> list[str]:
     s = ascii_fold(s).lower()
     s = re.sub(r"\bu\.\s?s\.", " us ", s)
+    s = re.sub(r"(?<=\w)'s\b", "s", s)  # "Shott's" is Shotts, not "Shott South" (S is the abbreviation of South)
     s = s.replace("'", " ")
     s = re.sub(r"[^a-z0-9]+", " ", s)
     return [ABBREVIATIONS.get(t, t) for t in s.split()]

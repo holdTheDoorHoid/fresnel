@@ -209,6 +209,16 @@ class RangeHalfTest(MergeCase):
         self.assertEqual([s["role"] for s in next(iter(files.values()))["structures"]], ["front_range", "rear_range"])
 
 
+class NameTest(unittest.TestCase):
+    def test_possessive_is_not_south(self):
+        a = merge.name_forms("St. Shott's Lightstation")
+        b = merge.name_forms("St. Shotts")
+        self.assertEqual(merge.name_score(a, b), 1.0)
+        self.assertEqual(merge.name_tokens("Devil's Island"), ["devils", "island"])
+        self.assertEqual(merge.name_tokens("S. Point"), ["south", "point"])          # a real abbreviation still expands
+        self.assertEqual(merge.name_tokens("Île de l'Ouest"), ["ile", "de", "l", "ouest"])
+
+
 class PrecedenceTest(unittest.TestCase):
     def test_register_places_sources_around_osm(self):
         prec = {"charted": ["noaa", "osm", "wikidata"], "name": ["wikidata", "osm"], "location": ["osm", "wikidata"]}
