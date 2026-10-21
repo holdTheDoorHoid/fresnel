@@ -599,6 +599,9 @@ def cmd_match_stations(a):
 
 
 def load_data():
+    if not os.path.exists(places_file()) and os.path.isdir(os.path.join(uslhs_dir(), "place")):
+        log("places.json not built yet; building it from the cache")
+        cmd_build(None)
     try:
         places = polite.read_json(places_file())
         rosters = polite.read_json(rosters_file())
