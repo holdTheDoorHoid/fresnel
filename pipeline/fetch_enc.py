@@ -118,7 +118,7 @@ def characteristic(a: dict) -> str | None:
     if not abbr:
         return None
     grp = (a.get("SIGGRP") or "").strip()
-    if grp in ("(1)", "1"):
+    if grp in ("(1)", "1", "()", "(0)"):
         grp = ""
     colours = [COLOURS.get(x.strip(), "") for x in str(a.get("COLOUR") or "").split(",") if x.strip()]
     colour = " ".join(x for x in colours if x)

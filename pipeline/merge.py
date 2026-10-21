@@ -113,6 +113,8 @@ R_ENRICH_STRONG, R_ENRICH = 300.0, 150.0
 R_PART = 150.0
 R_OSM_DOUBLE = 60.0
 R_WIKIDATA_TAG = 10000.0
+R_NAMESAKE_M = 8000.0   # the report lists stations this close with the same name (near_namesakes)
+R_NAMESAKE_JOIN = 6000.0   # a record joins the one station of its region this close whose name agrees strongly
 R_HARD_KEY = 10000.0   # a shared NRHP / ARLHS / Light List number joins records up to this far apart
 R_RANGE_PAIR = 3000.0
 R_LSS_NEAR = 1500.0
@@ -584,6 +586,7 @@ class Matcher:
         self.key_index: dict[str, list[Station]] = defaultdict(list)   # hard keys (rec.hard_keys) -> stations
         self.quiet_unmatched: Counter = Counter()
         self.name_region_joins: list[dict] = []
+        self.namesake_joins: list[dict] = []
         self.overrides: list[dict] = []
 
     def add_existing(self, path: Path, rec: dict) -> None:
@@ -777,6 +780,34 @@ class Matcher:
             return None
         return scored[0][1]
 
+    def far_namesake(self, rec: Rec) -> Station | None:
+        """A source that pins a light a few kilometres from where another source does (a vanished tower, a
+        light on a shoal) still means the same light when exactly one station of its region and kind has
+        the same name (score >= STRONG, never opposites) within R_NAMESAKE_JOIN. A station that already
+        holds a starting record of the record's own source is a different tower, not this one. Listed in
+        the report (`namesake_joins`) for review."""
+        if not rec.has_point or not rec.name or not rec.can_start or not rec.region:
+            return None
+        group = KIND_GROUP.get(rec.kind)
+        found = []
+        for st in self.near(rec.lat, rec.lon, R_NAMESAKE_JOIN):
+            if st.country() and rec.country and st.country() != rec.country:
+                continue
+            g = st.kind_group()
+            if g and group and g != group:
+                continue
+            if first_region(st) != rec.region or self.kept_apart(rec, st):
+                continue
+            if any(r.source == rec.source and not r.station_level and r.can_start for r in st.recs()):
+                continue
+            d = st.min_dist(rec.lat, rec.lon, starting_only=True)
+            if d > R_NAMESAKE_JOIN:
+                continue
+            sc = name_score(rec.forms, st.forms(starting_only=True))
+            if sc is not None and sc >= STRONG:
+                found.append((sc, d, st))
+        return found[0][2] if len(found) == 1 else None
+
     def match_source(self, recs: list[Rec]) -> None:
         for rec in recs:
             pin = record_joins.RECORD_JOINS.get(rec.key)
@@ -824,6 +855,12 @@ class Matcher:
                 self.attach(rec, st, "place_name")
                 continue
             if rec.can_start and rec.has_point:
+                st = self.far_namesake(rec)
+                if st is not None:
+                    d_ns = round(st.min_dist(rec.lat, rec.lon, starting_only=True))
+                    self.attach(rec, st, "namesake")
+                    self.namesake_joins.append({"key": rec.key, "name": rec.name, "station": st, "distance_m": d_ns})
+                    continue
                 st = self.new_station()
                 self.attach(rec, st, "new")
                 continue
@@ -1226,7 +1263,8 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         focal, f_rec = pick(ordered, "charted", lambda r: r.light.get("focal_height_m"))
         rng, g_rec = pick(ordered, "charted", lambda r: r.light.get("range_nm"))
         fog, o_rec = pick(ordered, "charted", lambda r: r.light.get("fog_signal"))
-        for r in (fl_rec, dz_rec, c_rec, f_rec, g_rec, o_rec):
+        lens, l_rec = pick(ordered, "charted", lambda r: r.light.get("lens") if isinstance(r.light.get("lens"), dict) else None)
+        for r in (fl_rec, dz_rec, c_rec, f_rec, g_rec, o_rec, l_rec):
             use(r, "light")
         if first_lit and deactivated and first_lit > deactivated:
             conflicts.append({"field": "light.first_lit", "values": [{"source": fl_rec.source, "value": first_lit},
@@ -1235,7 +1273,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
                                       f"({deactivated}); it may have been relit. Neither is shown as the first lighting."})
             first_lit = None
         frm = next((r.source for r in (c_rec, fl_rec, f_rec, g_rec, dz_rec) if r), None)
-        light = {"first_lit": first_lit, "deactivated": deactivated, "lens": None, "characteristic": char,
+        light = {"first_lit": first_lit, "deactivated": deactivated, "lens": dict(lens) if lens else None, "characteristic": char,
                  "focal_height_m": round(focal, 1) if isinstance(focal, (int, float)) else None,
                  "range_nm": round(rng, 1) if isinstance(rng, (int, float)) else None,
                  "fog_signal": fog, "from": frm}
@@ -1680,6 +1718,23 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
             d = haversine_m(a[0], a[1], b[0], b[1])
             if d <= 150 and KIND_GROUP.get(a[4]) == KIND_GROUP.get(b[4]):
                 close.append({"a": a[2], "a_name": a[3], "b": b[2], "b_name": b[3], "distance_m": round(d)})
+    # Stations of one kind group within R_NAMESAKE_M whose names agree strongly: duplicates the 150 m test
+    # misses (a lost tower pinned a kilometre off by one source). Reviewed pairs (record_joins) are left out.
+    near_names = []
+    forms = {rec["id"]: name_forms(rec["name"], rec.get("other_names")) for rec in visible}
+    for i, a in enumerate(pts):
+        for b in pts[i + 1:]:
+            if b[0] - a[0] > R_NAMESAKE_M / 111000.0:
+                break
+            d = haversine_m(a[0], a[1], b[0], b[1])
+            if d <= 150 or d > R_NAMESAKE_M or KIND_GROUP.get(a[4]) != KIND_GROUP.get(b[4]):
+                continue
+            if frozenset((a[2], b[2])) in record_joins.NOT_DUPLICATES:
+                continue
+            sc = name_score(forms[a[2]], forms[b[2]])
+            if sc is not None and sc >= STRONG:
+                near_names.append({"a": a[2], "a_name": a[3], "b": b[2], "b_name": b[3], "distance_m": round(d), "score": sc})
+    close = [x for x in close if frozenset((x["a"], x["b"])) not in record_joins.NOT_DUPLICATES]
     multi = [{"id": rec["id"], "name": rec["name"], "structures": [s.get("name") for s in rec["structures"]]}
              for rec in visible if len([s for s in rec["structures"] if s["role"] not in ("front_range", "rear_range")]) > 1]
     conflicts = Counter(c["field"] for rec in visible for c in rec["conflicts"])
@@ -1713,6 +1768,13 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
         "possibly_lost": sorted(possibly_lost, key=lambda x: x["id"]),
         "decorative_suspects": sorted(decorative, key=lambda x: x["id"]),
         "possible_duplicates": close,
+        "near_namesakes": near_names,
+        "joins_to_review": {
+            "by_name_in_region": sorted(({"key": j["key"], "name": j["name"], "station": j["station"].id} for j in m.name_region_joins),
+                                        key=lambda x: x["key"]),
+            "by_unique_namesake": sorted(({"key": j["key"], "name": j["name"], "station": j["station"].id,
+                                           "distance_m": j["distance_m"]} for j in m.namesake_joins), key=lambda x: x["key"]),
+        },
         "related": links,
         "not_shown": unshown,
     }
