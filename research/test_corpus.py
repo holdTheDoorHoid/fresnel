@@ -290,6 +290,73 @@ class ArchiveOrgRules(unittest.TestCase):
                          "https://archive.org/details/abc/page/n73/mode/2up?q=Portland+Head")
 
 
+class DownloadIA(unittest.TestCase):
+    def setUp(self):
+        self.raw = tempfile.mkdtemp()
+        os.environ["FRESNEL_RAW_ROOT"] = self.raw
+        polite._ROBOTS_MEMO.clear()
+        self.orig = polite.get
+        self.log = []
+
+    def tearDown(self):
+        polite.get = self.orig
+
+    def fake(self, volume_text, first_status=200, meta=None):
+        def get(url, dest=None, **kw):
+            self.log.append(url)
+            if url.endswith("_djvu.txt") and "/download/" in url:
+                if first_status != 200 and len(self.log) == 1:
+                    return polite.Response(first_status, {}, b"", url)
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                with open(dest, "w", encoding="utf-8") as fh:
+                    fh.write(volume_text)
+                return polite.Response(200, {}, None, url)
+            if "/metadata/" in url:
+                return polite.Response(200, {}, json.dumps(meta or {}).encode(), url)
+            return polite.Response(404, {}, b"", url)
+        polite.get = get
+
+    def test_download_reads_the_year_from_the_text_not_the_label(self):
+        text = ("ANNUAL REPORT OF THE LIFE-SAVING SERVICE FOR THE FISCAL YEAR ENDED JUNE 30, 1894. " * 6) + "x " * 60000
+        self.fake(text)
+        idx = {"volumes": []}
+        rec = corpus.add_ia_volume(idx, {"series": "lss", "identifier": "fake_lss_vol", "years": [1893]})
+        self.assertEqual(rec["years"], [1894])
+        self.assertTrue(rec["year_mismatch"])
+        self.assertEqual(rec["label_years"], [1893])
+        self.assertTrue(rec["path"].startswith("lss/1894/"))
+        self.assertEqual(rec["source_url"], "https://archive.org/details/fake_lss_vol")
+        self.assertEqual(len(rec["sha256"]), 64)
+        self.assertEqual(self.log[0], "https://archive.org/download/fake_lss_vol/fake_lss_vol_djvu.txt")
+        self.assertTrue(os.path.exists(os.path.join(self.raw, "corpus", rec["path"])))
+        self.assertEqual(idx["volumes"][0]["identifier"], "fake_lss_vol")
+
+    def test_404_falls_back_to_the_files_in_the_item_metadata(self):
+        self.fake("year ended June 30, 1880. " * 9 + "x " * 60000, first_status=404,
+                  meta={"files": [{"name": "other_name_djvu.txt"}]})
+        # the second request (metadata) and the third (the real name) are served by the fake
+        def get(url, dest=None, **kw):
+            self.log.append(url)
+            if "/metadata/" in url:
+                return polite.Response(200, {}, json.dumps({"files": [{"name": "other_name_djvu.txt"}]}).encode(), url)
+            if url.endswith("fake_vol_djvu.txt"):
+                return polite.Response(404, {}, b"", url)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w") as fh:
+                fh.write("year ended June 30, 1880. " * 9 + "x " * 60000)
+            return polite.Response(200, {}, None, url)
+        polite.get = get
+        idx = {"volumes": []}
+        rec = corpus.add_ia_volume(idx, {"series": "lss", "identifier": "fake_vol", "years": [1880]})
+        self.assertEqual(rec["years"], [1880])
+        self.assertTrue(rec["text_url"].endswith("other_name_djvu.txt"))
+
+    def test_alias_option(self):
+        make_corpus()
+        rc, out = run(["grep", "Nothing Like This", "--alias", "Portland Head", "--series", "lhb"])
+        self.assertIn("786 hours", out)
+
+
 class BuildBulletins(unittest.TestCase):
     def test_pdf_to_text_with_form_feeds(self):
         raw = tempfile.mkdtemp()
