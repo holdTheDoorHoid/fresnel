@@ -944,8 +944,8 @@ def find_place(key, places):
 
 def print_candidates(cands, rosters, limit=8):
     for rank, sc, d, p in cands[:limit]:
-        print("  %.2f  %-8s %-44s %-24s %-2s  slug=%s nid=%s  roster=%d lines"
-              % (sc, ("%.1f km" % d) if d is not None else "-", (p.get("name") or "")[:44], (p.get("type") or "")[:24],
+        print("  %s  %-8s %-44s %-24s %-2s  slug=%s nid=%s  roster=%d lines"
+              % ("%.2f" % sc if sc else "  - ", ("%.1f km" % d) if d is not None else "-", (p.get("name") or "")[:44], (p.get("type") or "")[:24],
                  p.get("state") or "", p.get("slug"), p.get("nid"), p.get("roster_lines", 0)))
 
 
