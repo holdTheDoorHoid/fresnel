@@ -23,6 +23,8 @@
  *   y0  first year a light is recorded here
  *   y1  year the light went out or the station was lost
  *   st  has a story        1
+ *   fh  focal height, m    light.focal_height_m           (absent = not recorded)
+ *   rn  charted range, nmi light.range_nm                 (absent = not recorded)
  *
  * Coordinates are [lon, lat] rounded to 5 decimal places (about 1 m).
  */
@@ -47,6 +49,8 @@ export interface StationProps {
   y0?: number;
   y1?: number;
   st?: 1;
+  fh?: number;
+  rn?: number;
 }
 
 export interface StationFeature {

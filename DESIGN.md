@@ -358,7 +358,9 @@ charted.
 - `light.characteristic`: the Light List / IALA abbreviation as charted (`Fl W 6s`, `Fl(2) R 10s`,
   `Oc W 4s`, `Iso G 6s`, `Q R`, `Mo(A) W 8s`, `Al Fl W R 30s`, `F W`). Historical characteristics are
   events (`characteristic_changed`) with a note, so the light at night can show the light as it was
-  in a chosen year.
+  in a chosen year. Such an event gives the pattern from that year on in `characteristic` (else its
+  note is read: "Fl W 4s", "changed to Fl W 4s", "from F W to Fl W 4s"), and may give the one before
+  in `previous_characteristic` and that era's `focal_height_m` and `range_nm` (4.1).
 - `staffing.status`: `staffed` (keepers live there now), `automated` (with `as_of`), `volunteer`
   (resident volunteer or caretaker keepers), `unstaffed`, `unknown`.
 - `ownership`, `access.level`, `verification`: as in Firefinder (`ownership` adds `provincial` and
@@ -544,7 +546,8 @@ station near, 32 seamark lights).
   kind, `s` status, `v` verification, `a` access level (when known), `sf` staffed / volunteer, `bo` 1
   boat only, `cl` 1 climbable, `sy` 1 somewhere to stay, `tr` 1 tribal land, `rg` 1 on a register, `o`
   other names "|"-joined, `y0` first year lit (or built), `y1` year the light went out or the station
-  was lost, `st` 1 has a story.
+  was lost, `st` 1 has a story, `fh` the light's focal height in metres and `rn` its charted range in
+  nautical miles (when recorded; for the map's range rings, 4.1).
 - `s/<id>.json`: the canonical record, plus `story_html`, `chapters` (`[{id, title}]` from the story's
   `## ` headings, `pipeline/story_md.py`), `keepers`, `research_sources` and `research` when they
   exist.
@@ -607,12 +610,144 @@ where terrain matters, otherwise TypeScript).
   `web/src/render/station.ts`), map layers are `OVERLAYS` in `web/src/map/layers.ts` and map
   controls are in `web/src/map/controls.ts`, so the light at night, wrecks and old charts are one
   addition each.
-- **Not built yet**: the "lights lit per year" view, a mini-map on station pages, the keepers index,
-  vessels, guide and lessons.
+- **Not built yet**: the "lights lit per year" view, a general mini-map on station pages (the light at
+  night has its own, 4.1), the keepers index, vessels, guide and lessons.
 - **Commands** (in `web/`): `npm run data:fixtures` (sample data) or `npm run data` (the real
   stations), `npm run dev -- --port 5194 --strictPort`, `npm run check`, `npm test`, `npm run build`.
   `.github/workflows/pages.yml` runs the pipeline tests, `validate.py`, `build_site_data.py
   --fallback-fixtures --strict`, the website checks, tests and build, and deploys to Pages.
+
+### 4.1 The light at night (built 2026-10-21)
+
+Feature (a) of section 1: the light as it looks from a boat at night, in its real pattern and
+colour, at a distance the visitor chooses, with the ring of how far out it could be seen. Plain
+TypeScript and a 2D canvas (no terrain is needed at sea). A guide, not a navigation aid: the page
+says so once, plainly.
+
+**What the visitor sees.** On every station page with a light, a section *The light at night*,
+after the facts:
+
+- A tag naming the era shown ("Today, as charted", "As it was when last lit (the light went out in
+  1931)", "From 1883 to 1958"), the characteristic in plain words, and a caution when sources disagree
+  on the pattern or the focal height, with a choice between them (about half of the 49 focal-height
+  disagreements are one figure written in feet as metres; the page says so).
+- The night scene: sky, stars, sea, horizon and the light, flashing in its pattern and colour, with
+  its reflection on the water when it is bright. Controls: the distance (a slider, 0.5 nmi to well past
+  the farthest it could be seen; it starts at a typical approach, 60 % of the visible range, between
+  1 and 10 nmi), the eye height (1, 3, 6, 15, 30 m: kayak, small boat's deck (the default), fishing
+  boat's wheelhouse, ship's bridge, large ship's bridge; feet first in the US), the visibility (very
+  clear 20 nmi, normal 10 nmi, haze 3 nmi, fog 0.5 nmi), a 7× binocular view, Play / Pause; where the
+  record has them, the year (era), which light (front / rear, a passing light), which sector, which
+  source's pattern or height. Under it, a live sentence says what the scene shows ("From 25 nmi (46 km)
+  away ... the light is below your horizon ... Nothing of it can be seen."). The scene labels a light
+  that is too faint to see, below the horizon, in a dark sector, or drawn without a recorded height or
+  brightness, instead of quietly drawing or hiding it.
+- The **strip diagram** of one period, for everyone: lit spans in the light's colour, darkness in
+  night blue, drawn to scale with seconds marked (short periods repeat, paler, to show the rhythm),
+  one strip per sector colour or light; a playhead moves along it in step with the scene. Without a
+  recorded period the strip has no time scale and says so.
+- *Recorded, and drawn by convention*: every duration that is a convention, in words; *Not recorded*:
+  what is missing (pattern, focal height, range) and what that stops the page from working out.
+- *How far out it can be seen* from a small boat's deck and from a ship's bridge, which limit applies
+  (the horizon or the brightness), and a mini-map (MapLibre, loaded only when it scrolls into view)
+  with the ring for the chosen eye height and visibility and a dotted ring at the chosen distance.
+- *How this view is worked out*: the assumptions below, in plain words, with this light's numbers.
+- On the map: an optional layer, **Light ranges** (a chip in the status bar; `&reach=<eye m>` in the
+  URL), a ring round every light the filters show, so several together show how the lights covered a
+  coast; amber for lights lit today, grey and dashed for lights out, lost or of unknown status, as last
+  recorded. The map's side panel has the reach from a small boat's deck in one line.
+
+**Reading the characteristic** (`web/src/lib/characteristic.ts`). IALA / USCG Light List / CCG
+notation: F, Fl, LFl, Oc, Iso, Q, VQ, UQ, IQ, IVQ, IUQ, Mo(X), F Fl, groups `(2)` and composite groups
+`(2+1)`, `Gp`, `Q(6)+LFl`, `Al` alternating colours, colours W R G Y Bu Or (several letters without
+`Al` are sectors), the period. And the forms the records really use: dots, commas, `FL`, `FI` (a
+capital i), `L Fl`, `Alt`, `QF` (old "quick flashing"), "4 sec", minutes; `FF` (French *feu fixe*);
+words ("fixed white varied by a flash every 90 seconds", "flashing W 2.5s", "5 s R flash", "28 s on,
+2 s off", "Alternating R and G 24 s (R 12s, G 12s)", "Fl alternately R and W, interval between Fl
+10s", "continuous revolving W with a 90 s interval", "Feu fixe d'alignement"); sector clauses ("R
+sector", "with two R sectors", "R sector 045° to 135°", "dark sector", "obscured from 158° to 318°",
+"avec F W (secteur)"); several lights in one record ("F R (rear); F W (front)", "F G (along range
+line)<br>Fl W 4s (passing light)"); dates and eras ("F W (original); Fl W ... (current)", "F R
+(initially F W)", "F W (1901)", "(c1965)", "(as of 1941)"); notes kept as notes (an emergency light,
+"visible on range line only"); and two artefacts of an upstream "red" → "R" replacement ("obscuR",
+"Ruced"). Every decision is said in words on the page (`FF` read as feu fixe; a period with no unit
+read as seconds; a fixed light given a period drawn steady, with a warning; `Al WR 10s` with no type
+word drawn as alternating flashes, as most US and Canadian alternating lights are rotating beacons).
+Anything else is left unread and shown as the source writes it. **On 2026-10-21: 1,141 of the 1,148
+stations with a characteristic are read** (243 of 248 distinct strings); the 7 left are not patterns
+("inactive" ×2, "R" ×2, "decorative light", "current decorative light") or alternating with one
+colour ("Al W 10s"). One read pattern cannot be drawn: "Fl(6) W 1s" (six flashes do not fit in one
+second; the page says the record may be miswritten). `web/test/characteristic.test.ts` reads every
+real string in `data/stations/` and fails if that list changes.
+
+**Durations by convention** (`web/src/lib/pattern.ts`, within IALA R0110's limits and the Light
+List's rates): flash 0.5 s (a quarter of the period when that is shorter); 1 s between the flashes of
+a group of two, 1.5 s for three or more, twice that between the parts of a composite group, the dark
+after the group at least three times the gap (scaled down to fit a short period); long flash 2 s;
+occulting eclipse a quarter of the period, at most 2 s (1 s eclipses with 1 s of light in a group);
+isophase half and half; quick 60 a minute (the US Light List rate; IALA 50 to 79), very quick 120,
+ultra-quick 160, each flash 0.3 of its cycle; interrupted quick: quick flashes for three quarters of
+the period; Morse short 0.5 s, long 1.5 s, 0.5 s between; fixed-and-flashing: the steady light at 40 %;
+alternating colours evenly spaced (or as recorded), one colour per part of a composite group; no
+period: one is chosen only to show the rhythm (5 s for a flash) and the strip has no time scale; no
+colour: drawn white, said. A duration the record gives is used as given.
+
+**Physics** (`web/src/lib/sighting.ts`):
+
+- *Geographic range* D = 2.08 × (√H + √h) nmi (H focal height, h eye height, metres; standard
+  refraction, the Light List's and Bowditch's factor). The scene's vertical angles use the same
+  refraction, as a sphere of effective radius R' = (2.08 × 1852)² / 2 ≈ 7,420 km: the light's angle
+  above the eye's horizontal is (H − h)/d − d/2R', the horizon's dip √(2h/R'), so the light meets the
+  horizon exactly at D. Within 0.3 nmi of D it is "dipping".
+- *Luminous range*: Allard's law, E = I·T^d / d², with T = 0.05^(1/V) per nmi (Koschmieder's 5 %
+  contrast, V the meteorological visibility), and the threshold implied by the charted range: a light
+  of nominal range Rn is just visible at Rn when V = 10 nmi (IALA's definition of nominal range). So
+  brightness over threshold = (Rn/d)² × 0.05^(d/V − Rn/10). The intensity and the threshold (0.2 µlux)
+  cancel. The charted `range_nm` is taken as the nominal range.
+- *Visible range* = the smaller of the two; it is the ring on both maps.
+- *Loom*: shown for a light whose charted range is 18 nmi or more, below the horizon but within its
+  luminous range (bright enough, only the horizon in the way), fading from the horizon distance to the
+  luminous range, pulsing with the flashes. A sketch, labelled.
+- *The picture*: a moonless night; naked-eye view 40° wide, binoculars 7° (a 7×50 marine glass);
+  brightness drawn on a logarithmic scale (core and glow grow with log₁₀ of the brightness over
+  threshold), with a haze or fog halo. A screen cannot show glare, so the page says a near light looks
+  dimmer than in life and a faint one plainer.
+
+**Missing data.** No pattern: the scene shows where the light would be, labelled, and the ranges.
+No focal height: no horizon limit; the light is drawn on the horizon line, labelled, and the range is
+"if the horizon does not hide it first". No charted range: no brightness; it is drawn at a middling
+brightness, labelled, and the range is the horizon "however bright it is". Neither: distance, eye and
+weather controls are hidden, and the scene shows the pattern only. Nothing at all: one sentence and an
+invitation to suggest an edit. Life-saving stations have no section.
+
+**Past lights** (`web/src/lib/light-history.ts`). Eras come from `characteristic_changed` events
+(3.4), else from dates and era words in the characteristic itself, else one era: today, as charted;
+or, for a light that is out or gone, *as it was when last lit*; or, for status unknown, *as last
+recorded (whether it is still lit is not known)*. An era uses its own height and range where
+recorded; an earlier era borrows today's focal height (said on the page) but never today's range, so
+its brightness is "not recorded" unless the event gives it. On 2026-10-21 no station has a
+`characteristic_changed` event yet; three have eras written into the characteristic (Marcus Hook
+Range, Craighill Channel Upper Range Front, Fishing Battery), and the sample
+station `us-me-example-head` has two events, to exercise the year selector.
+
+**Motion and accessibility.** The scene plays by itself only when the visitor has not asked for
+reduced motion and the light comes on no more than three times in any second; otherwise it shows a
+still frame and the strip, with Play. Pause is always there; the scene stops when off screen or in a
+hidden tab. The canvas is decorative (`aria-hidden`); the live sentence (`role=status`) and the strip
+(an SVG with a title listing every phase) carry the same information. The scene is dark in both
+themes (it is night); the page around it follows the theme.
+
+**Limits, for later.** Sector bearings are rarely recorded (the visitor picks the sector);
+`fetch_osm.py` keeps only an OSM light's first sector in the station record, so OSM sector lights
+read as single-colour lights. The rings ignore land (headlands, hills, the light's arc of
+visibility). Range lights show one light at a time, not the pair in line. Old ranges in some records
+may be geographic rather than nominal; nothing marks them.
+
+**Files.** `web/src/lib/characteristic.ts` (reading), `pattern.ts` (timing), `sighting.ts` (physics,
+eye heights, visibility, rings), `light-history.ts` (eras); `web/src/render/night.ts` (the section and
+the live sentence), `render/strip.ts` (the strip); `web/src/ui/night.ts` (scene and controls),
+`ui/night-map.ts` (mini-map); `web/src/map/reach.ts` (map layer and control). Tests:
+`web/test/characteristic.test.ts`, `web/test/night.test.ts`.
 
 ---
 

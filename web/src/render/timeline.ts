@@ -22,7 +22,12 @@ function structureName(s: NonNullable<StationRecord['structures']>[number]): str
 export function timelineItems(r: Pick<StationRecord, 'events' | 'light' | 'structures'>): TimelineItem[] {
   const events: StationEvent[] = (r.events ?? []).filter((e) => e && typeof e.event === 'string');
   const has = (kind: string, year: number) => events.some((e) => e.event === kind && e.year === year);
-  const items: TimelineItem[] = events.map((e) => ({ year: typeof e.year === 'number' ? e.year : null, label: eventLabel(e.event), note: e.note ?? null, from: e.from ?? null }));
+  // A pattern change with no note says what the pattern became (DESIGN.md 3.4, `characteristic`).
+  const changedTo = (e: StationEvent) => {
+    const c = (e as StationEvent & { characteristic?: unknown }).characteristic;
+    return e.event === 'characteristic_changed' && typeof c === 'string' && c.trim() ? `To ${c.trim()}.` : null;
+  };
+  const items: TimelineItem[] = events.map((e) => ({ year: typeof e.year === 'number' ? e.year : null, label: eventLabel(e.event), note: e.note ?? changedTo(e), from: e.from ?? null }));
   const light = r.light;
   if (light && typeof light.first_lit === 'number' && !has('first_lit', light.first_lit)) {
     items.push({ year: light.first_lit, label: eventLabel('first_lit'), note: null, from: light.from ?? null });
