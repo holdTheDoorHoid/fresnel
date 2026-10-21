@@ -309,7 +309,7 @@ class BuildBulletins(unittest.TestCase):
             got, missing = corpus.build_bulletins(idx, years=[1932, 1933])
         finally:
             polite.get = orig
-        self.assertEqual((got, missing), (1, 1))
+        self.assertEqual((got, missing), (1, 2))  # 1933 found; 1932 and the 1930-35 index answer 404
         v = idx["volumes"][0]
         self.assertEqual(v["years"], [1933])
         self.assertEqual(v["pages"], 2)

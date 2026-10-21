@@ -43,7 +43,6 @@ SERIES = {
     "marine_ca": "Canada, Department of Marine annual report",
 }
 IA = "https://archive.org"
-BULLETIN_URL = "https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_%d.pdf"
 BULLETIN_YEARS = range(1912, 1940)
 PROBE_WAIT = 1800  # seconds between archive.org probes after a failed one
 CATALOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "corpus_catalog.json")
@@ -195,14 +194,35 @@ def pdftotext(pdf, out):
         raise RuntimeError("pdftotext failed: " + p.stderr.decode("utf-8", "replace")[:200])
 
 
+def bulletin_files():
+    """The Lighthouse Service Bulletin files on https://uslhs.org/resources/bulletins (checked 2026-10-21):
+    [(identifier, years, file name, [older names that serve the same file])]."""
+    out = []
+    odd = {1913: "LighthouseServiceBulletin_1913_0.pdf", 1925: "Lighthouse Service Bulletins 1925.pdf",
+           1936: "LighthouseServiceBulletin_1936_0.pdf"}
+    for y in BULLETIN_YEARS:
+        name = odd.get(y, "LighthouseServiceBulletin_%d.pdf" % y)
+        out.append(("LighthouseServiceBulletin_%d" % y, [y], name,
+                    ["LighthouseServiceBulletin_%d.pdf" % y] if name != "LighthouseServiceBulletin_%d.pdf" % y else []))
+    for a, b, name in ((1912, 1917, "Index to volume 1.pdf"), (1918, 1923, "1918_1923_Index.pdf"),
+                       (1924, 1929, "1924_1929_Index.pdf"), (1930, 1935, "1930_1935_Index.pdf"),
+                       (1936, 1939, "1936_1939_Index.pdf")):
+        out.append(("LighthouseServiceBulletin_Index_%d-%d" % (a, b), list(range(a, b + 1)), name, []))
+    return out
+
+
+def bulletin_url(name):
+    return "https://uslhs.org/sites/default/files/bulletins/" + urllib.parse.quote(name)
+
+
 def build_bulletins(idx, years=BULLETIN_YEARS):
     got = missing = 0
-    for y in years:
-        ident = "LighthouseServiceBulletin_%d" % y
-        if indexed(idx, "bulletin", ident):
+    for ident, yrs, name, aliases in bulletin_files():
+        if not (set(yrs) & set(years)) or indexed(idx, "bulletin", ident):
             continue
-        url = BULLETIN_URL % y
-        pdf = os.path.join(corpus_dir(), "_pdf", "bulletin", "%d.pdf" % y)
+        is_index = "_Index_" in ident
+        url = bulletin_url(name)
+        pdf = os.path.join(corpus_dir(), "_pdf", "bulletin", ident.replace("LighthouseServiceBulletin_", "") + ".pdf")
         if not os.path.exists(pdf):
             try:
                 r = polite.get(url, dest=pdf, timeout=120, log=log)
@@ -210,36 +230,42 @@ def build_bulletins(idx, years=BULLETIN_YEARS):
                 log("BLOCKED: %s" % e)
                 return got, missing
             except polite.PoliteError as e:
-                log("bulletin %d: %s" % (y, e))
+                log("%s: %s" % (ident, e))
                 missing += 1
                 continue
             if r.status != 200:
-                log("bulletin %d: HTTP %d (%s)" % (y, r.status, url))
-                idx.setdefault("not_found", {})["bulletin/%d" % y] = {"url": url, "status": r.status,
-                                                                         "when": time.strftime("%Y-%m-%d")}
+                log("%s: HTTP %d (%s)" % (ident, r.status, url))
+                idx.setdefault("not_found", {})["bulletin/" + ident] = {"url": url, "status": r.status,
+                                                                          "when": time.strftime("%Y-%m-%d")}
                 save_index(idx)
                 missing += 1
                 continue
         if polite.read_bytes(pdf, 5) != b"%PDF-":
-            log("bulletin %d: not a PDF; removing" % y)
+            log("%s: not a PDF; removing" % ident)
             os.remove(pdf)
             continue
-        outdir = os.path.join(corpus_dir(), "bulletin", str(y))
+        outdir = os.path.join(corpus_dir(), "bulletin", str(min(yrs)))
         os.makedirs(outdir, exist_ok=True)
         txt = os.path.join(outdir, ident + ".txt")
         pdftotext(pdf, txt)
         text = polite.read_text(txt, errors="replace")
         counts = bulletin_year_counts(text)
-        top = counts.most_common(1)[0][0] if counts else None
-        years_found = [y] if (top is None or counts[y] >= 0.5 * counts[top]) else [top]
-        rec = volume_record("bulletin", ident, years_found, url, txt, [y], counts,
-                            "text" if counts else "label", {"pages": text.count("\f"), "pdf": os.path.relpath(pdf, corpus_dir()),
-                                                              "pdf_sha256": sha256_file(pdf), "pdf_bytes": os.path.getsize(pdf)})
+        years_found = list(yrs)
+        if not is_index and counts:
+            top = counts.most_common(1)[0][0]
+            if counts[yrs[0]] < 0.5 * counts[top]:
+                years_found = [top]  # the volume's own text names a different year than its file name
+        rec = volume_record("bulletin", ident, years_found, url, txt, yrs, counts,
+                            "text" if counts else "label",
+                            {"pages": text.count("\f"), "pdf": os.path.relpath(pdf, corpus_dir()),
+                             "pdf_sha256": sha256_file(pdf), "pdf_bytes": os.path.getsize(pdf),
+                             "kind": "index" if is_index else "volume",
+                             "aliases": [bulletin_url(a) for a in aliases]})
         idx["volumes"] = [v for v in idx["volumes"] if not (v["series"] == "bulletin" and v["identifier"] == ident)]
         idx["volumes"].append(rec)
         save_index(idx)
         got += 1
-        log("bulletin %d: %d pages, %.1f MB pdf" % (y, rec["pages"], rec["pdf_bytes"] / 1e6))
+        log("%s: %d pages, %.1f MB pdf" % (ident, rec["pages"], rec["pdf_bytes"] / 1e6))
     return got, missing
 
 
@@ -852,7 +878,9 @@ def cmd_page(a):
             for m in rx.finditer(text):
                 page = text.count("\f", 0, m.start()) + 1
                 print("bulletin %d: PDF page %d of %d: %s" % (y, page, v["pages"], snippet(text, m.start(), m.end(), 80, 160)))
-                print("  cite: Lighthouse Service Bulletin %d, PDF page %d, %s#page=%d" % (y, page, v["source_url"], page))
+                what = ("Lighthouse Service Bulletin, index to %d-%d" % (v["years"][0], v["years"][-1])
+                        if v.get("kind") == "index" else "Lighthouse Service Bulletin %d" % y)
+                print("  cite: %s, PDF page %d, %s#page=%d" % (what, page, v["source_url"], page))
                 seen += 1
                 if seen >= a.max:
                     break
@@ -909,7 +937,13 @@ def local_text_for_url(url):
             return None
         ident = segs[1]
     elif host == "uslhs.org" and segs[:3] == ["sites", "default", "files"] and len(segs) == 5 and segs[3] == "bulletins":
-        ident = re.sub(r"\.pdf$", "", segs[4], flags=re.I)
+        want = "/".join(segs)
+        for v in _volumes_by_ident().values():
+            urls = [v.get("source_url", "")] + list(v.get("aliases") or [])
+            if v["series"] == "bulletin" and any(urllib.parse.unquote(urllib.parse.urlsplit(x).path).strip("/") == want
+                                                  for x in urls):
+                ident = v["identifier"]
+                break
     v = _volumes_by_ident().get(ident) if ident else None
     if not v:
         return None
