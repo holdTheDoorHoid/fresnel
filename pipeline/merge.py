@@ -545,6 +545,7 @@ class Matcher:
         self.wikidata_tag_far: list[dict] = []
         self.retired: list[tuple[Station, Station]] = []
         self.ca_curation = merge_ca.Curation()
+        self.unshown_recs: list[Rec] = []
         self.ca_far: list[dict] = []
         self.ca_ambiguous: list[dict] = []
         self.kind_group = KIND_GROUP
@@ -730,6 +731,7 @@ class Matcher:
                       "no name in any source" if not rec.name else "no position")
             self.unshown.append({"key": rec.key, "name": rec.name, "region": rec.region, "kind": rec.kind,
                                  "lat": rec.lat, "lon": rec.lon, "reason": reason})
+            self.unshown_recs.append(rec)
 
     # -- after matching ---------------------------------------------------------------------
 
@@ -762,7 +764,7 @@ class Matcher:
             if not fronts and not rears:
                 continue
             entry = {"region": key[1], "base": key[2],
-                     "front": [best_name(s) for s in fronts], "rear": [best_name(s) for s in rears]}
+                     "front": sorted(best_name(s) or "" for s in fronts), "rear": sorted(best_name(s) or "" for s in rears)}
             if len(wholes) == 1 and len(fronts) <= 1 and len(rears) <= 1:
                 whole = wholes[0]
                 halves = fronts + rears
@@ -1357,7 +1359,9 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
         m.match_source([r for r in by_source[sid] if r.can_start or r.key in m.memory])
     for sid in order:
         m.match_source([r for r in by_source[sid] if not (r.can_start or r.key in m.memory)])
+    merge_ca.retry_unshown(m)
     merge_ca.merge_stations(m, m.ca_curation)
+    merge_ca.retry_unshown(m)  # records tied to both of two stations that curation has just made one
     ranges = m.pair_ranges()
 
     resolved: list[tuple[Station, dict]] = []
@@ -1395,9 +1399,10 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
             written += 1
 
     report = build_report(m, resolved, headers, ranges, links)
-    report["canada"] = merge_ca.report(m, resolved, by_source)
+    report["canada"], ca_run = merge_ca.report(m, resolved, by_source)
     report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged,
-                      "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"])}
+                      "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"]),
+                      "canada": ca_run}
     if write and report_path is not None:
         report_path.parent.mkdir(parents=True, exist_ok=True)
         saved = {k: v for k, v in report.items() if k != "_run"}
@@ -1512,7 +1517,7 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
         "counts": {
             "stations": len(visible),
             "hidden": len(hidden),
-            "merged_away": len(m.retired),
+            "merged_away": len({st.id for st in m.stations if (st.existing or {}).get("merged_into")} | {gone.id for gone, _keep in m.retired}),
             "by_country": counts(visible, lambda r: r["country"]),
             "by_region": counts(visible, lambda r: r["region"]),
             "by_kind": counts(visible, lambda r: r["kind"]),
@@ -1556,6 +1561,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  by status {c['by_status']}; wikidata+osm {c['wikidata_and_osm']} ({c['wikidata_and_osm_by_tag']} confirmed by an OSM wikidata tag)")
     print(f"  this run: matches {run_['record_matches']}; range pairs made {run_['range_pairs_made']}")
     print(f"  not shown {c['not_shown']}; conflicts {c['conflicts']}")
+    ca_run = run_.get("canada") or {}
+    if ca_run.get("joined_by"):
+        print(f"  Canada: joined by {ca_run['joined_by']}; {len(ca_run['identifier_ambiguous'])} identifiers point at two stations, "
+              f"{len(ca_run['identifier_far'])} at one too far away; curation applied {ca_run['curation_applied']}")
     return 0
 
 

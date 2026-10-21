@@ -54,7 +54,7 @@ class JoinTest(MergeCase):
                  events=[{"year": 1884, "event": "first_lit", "note": None, "from": "rowlett"}])
         row["aton"]["admiralty"] = "H3840"
         self.write("rowlett", [row])
-        self.run_merge()
+        report = self.run_merge()
         files = self.station_files()
         self.assertEqual(len(files), 1)
         st = next(iter(files.values()))
@@ -62,8 +62,7 @@ class JoinTest(MergeCase):
         self.assertEqual(st["aton"]["ccg_list_number"], "A247")
         self.assertIn({"year": 1884, "event": "first_lit", "note": None, "from": "rowlett"}, st["events"])
         self.assertEqual(len(st["structures"]), 1)                       # a station-level record adds no structure
-        report = json.loads((self.tmp / "report.json").read_text())
-        self.assertEqual(report["canada"]["joined_by"]["identifier"], 1)
+        self.assertEqual(report["_run"]["canada"]["joined_by"]["identifier"], 1)
 
     def test_unjoined_positionless_record_is_listed_not_started(self):
         self.write("rowlett", [ca("rowlett", "ns:lost-light", "Lost Light", None, None, extra={"station_level": True})])
@@ -78,18 +77,16 @@ class JoinTest(MergeCase):
                            ca("osm", "node/3", "Green Island Light", 45.5, -62.0, extra={"forms": ["man_made=lighthouse"]})])
         self.write("rowlett", [ca("rowlett", "ns:cape-sharp", "Cape Sharp", None, None, extra={"station_level": True}, events=[{"year": 1900, "event": "built", "note": None, "from": "rowlett"}]),
                                ca("rowlett", "ns:green-island", "Green Island", None, None, extra={"station_level": True})])
-        self.run_merge()
-        report = json.loads((self.tmp / "report.json").read_text())
-        self.assertEqual([j["name"] for j in report["canada"]["joined_by_name_only"]], ["Cape Sharp"])
+        report = self.run_merge()
+        self.assertEqual([j["name"] for j in report["_run"]["canada"]["joined_by_name_only"]], ["Cape Sharp"])
         self.assertEqual([u["name"] for u in report["not_shown"]], ["Green Island"])   # two stations of that name: ambiguous
 
     def test_identifier_far_away_does_not_join(self):
         self.write("wikidata", [ca("wikidata", "Q1", "Sisters Islets Light", 49.0, -124.0, aton={"ccg_list_number": "P493"})])
         self.write("ccg_list_of_lights", [ca("ccg_list_of_lights", "P493", "Sisters Islets", 49.1, -124.0, aton={"ccg_list_number": "P493"},
                                               extra={"clear_lighthouse": False, "join_keys": ["ccg:P493"]})])
-        self.run_merge()
-        report = json.loads((self.tmp / "report.json").read_text())
-        self.assertEqual(report["canada"]["identifier_far"][0]["key"], "ccg_list_of_lights:P493")
+        report = self.run_merge()
+        self.assertEqual(report["_run"]["canada"]["identifier_far"][0]["key"], "ccg_list_of_lights:P493")
 
 
 class CoastGuardListTest(MergeCase):

@@ -246,7 +246,36 @@ def identifier_join(matcher, rec):
                 if not (p.role and rec.role and p.role != rec.role):
                     anchor = p.anchor
                 break
+        if anchor is None and rec.has_point and not rec.can_start and st.parts:
+            # a record that may not start a station (an OpenStreetMap element marked a minor beacon) and
+            # that an identifier ties to this one is the same light: it joins the nearest structure
+            # rather than becoming a second tower
+            near = [(rec.dist(*p.pos()), p.anchor) for p in st.parts if p.pos() and not (p.role and rec.role and p.role != rec.role)]
+            if near:
+                anchor = min(near)[1]
     return st, anchor
+
+
+def retry_unshown(matcher) -> int:
+    """After both matching passes, give every record that joined nothing one more try by identifier:
+    its partner may have been placed after it (the order of two records of the same pass must not
+    decide, or a second run with memory would differ from the first). Returns how many joined."""
+    n = 0
+    for rec in list(getattr(matcher, "unshown_recs", [])):
+        if not rec.join_keys:
+            continue
+        hit = identifier_join(matcher, rec)
+        if hit is None:
+            continue
+        matcher.attach(rec, hit[0], "identifier", hit[1])
+        matcher.unshown[:] = [u for u in matcher.unshown if u["key"] != rec.key]
+        matcher.unshown_recs.remove(rec)
+        n += 1
+    # what an earlier try listed about records that have since joined is no longer true
+    joined = set(matcher.station_of_key)
+    matcher.ca_ambiguous[:] = [x for x in matcher.ca_ambiguous if x["key"] not in joined]
+    matcher.ca_far[:] = [x for x in matcher.ca_far if x["key"] not in joined]
+    return n
 
 
 def curated_join(matcher, rec):
@@ -429,6 +458,8 @@ def merge_stations(matcher, curation: Curation) -> None:
         if keep is None or gone is None:
             curation.applied["merge_stations_missing"].append(e)
             continue
+        if (gone.existing or {}).get("merged_into"):
+            continue  # retired by an earlier run: nothing left to do, and the file stays as it is
         keep, gone = _live(keep), _live(gone)
         if keep is gone:
             continue
@@ -492,9 +523,11 @@ def register(precedence: dict) -> None:
         order[at:at] = sources
 
 
-def report(m, resolved, by_source) -> dict:
-    """The Canadian part of data/merge_report.json: what joined how, what did not, and the lists a
-    human should review (docs/sources/review_2026-10-ca.md records the decisions)."""
+def report(m, resolved, by_source) -> tuple[dict, dict]:
+    """(the Canadian part of data/merge_report.json, what this run did). The first describes the
+    merged state, so a re-run with unchanged inputs leaves the file as it is; the second (how records
+    joined, which identifiers pointed at two stations, which curation entries applied) is printed by
+    merge.py and kept out of the file, because a run with memory takes the joins it remembers."""
     ca = [(st, rec) for st, rec in resolved if rec.get("country") == "CA"]
     visible = [rec for _st, rec in ca if not rec["hidden"]]
 
@@ -506,12 +539,15 @@ def report(m, resolved, by_source) -> dict:
 
     sources_of = lambda st: sorted({r.source for r in st.recs()})  # noqa: E731
     staffed = [rec for _st, rec in ca if (rec.get("staffing") or {}).get("status") == "staffed" and not rec["hidden"]]
-    destaffed = [rec for _st, rec in ca if (rec.get("staffing") or {}).get("check") is False and (rec.get("staffing") or {}).get("status") == "automated" and rec["access"].get("level") == "restricted"]
+    destaffed = [rec for _st, rec in ca if (rec.get("staffing") or {}).get("check") is False
+                 and (rec.get("staffing") or {}).get("status") == "automated" and rec["access"].get("level") == "restricted"]
     staffed_recs = by_source.get("ca_staffed_lightstations", [])
     joined_keys = {r.key for _st, _rec in ca for r in _st.recs()}
     lhf_only = [rec for st, rec in ca if sources_of(st) == ["lighthousefriends"] and not rec["hidden"]]
-    ccg_only = [rec for st, rec in ca if "ccg_list_of_lights" in sources_of(st) and not ({"wikidata", "osm", "lighthousefriends", "parks_canada_hl"} & set(sources_of(st)))]
-    return {
+    ccg_only = [rec for st, rec in ca if "ccg_list_of_lights" in sources_of(st)
+                and not ({"wikidata", "osm", "lighthousefriends", "parks_canada_hl"} & set(sources_of(st)))]
+    curation = m.ca_curation.data
+    state = {
         "counts": {
             "stations": len(visible), "hidden": len([1 for _s, r in ca if r["hidden"]]),
             "by_region": counts(lambda r: r["region"]), "by_status": counts(lambda r: r["status"]),
@@ -520,10 +556,6 @@ def report(m, resolved, by_source) -> dict:
             "by_access": counts(lambda r: (r.get("access") or {}).get("level")),
             "by_sources": counts(lambda r: "+".join(sorted({s["source"] for s in r["sources"]}))),
         },
-        "joined_by": {k: v for k, v in sorted(m.how.items()) if k in ("identifier", "name_only", "curated_join")},
-        "joined_by_name_only": sorted(getattr(m, "ca_name_joins", []), key=lambda x: x["key"]),
-        "identifier_far": sorted(m.ca_far, key=lambda x: x["key"]),
-        "identifier_ambiguous": sorted(m.ca_ambiguous, key=lambda x: x["key"]),
         "staffed": {
             "listed": len(staffed_recs),
             "staffed_stations": len(staffed),
@@ -535,5 +567,13 @@ def report(m, resolved, by_source) -> dict:
         "lighthousefriends_only_standing": sorted(({"id": r["id"], "name": r["name"], "region": r["region"], "kind": r["kind"]}
                                                     for r in lhf_only if r["status"] != "lost"), key=lambda x: x["id"]),
         "ccg_started_stations": sorted(({"id": r["id"], "name": r["name"], "region": r["region"]} for r in ccg_only), key=lambda x: x["id"]),
-        "curation_applied": {k: v for k, v in m.ca_curation.applied.items()},
+        "curation_entries": {k: len(v) for k, v in curation.items()},
     }
+    run = {
+        "joined_by": {k: v for k, v in sorted(m.how.items()) if k in ("identifier", "name_only", "curated_join")},
+        "joined_by_name_only": sorted(getattr(m, "ca_name_joins", []), key=lambda x: x["key"]),
+        "identifier_far": sorted(m.ca_far, key=lambda x: x["key"]),
+        "identifier_ambiguous": sorted(m.ca_ambiguous, key=lambda x: x["key"]),
+        "curation_applied": {k: len(v) for k, v in sorted(m.ca_curation.applied.items())},
+    }
+    return state, run
