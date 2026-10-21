@@ -263,6 +263,8 @@ export function initNight(host: HTMLElement): void {
     if (fast) reasons.push(`This light flashes ${p!.flashRate} times within a second, so the scene does not play by itself. Press Play only if flashing is comfortable for you.`);
     warn.textContent = reasons.join(' ');
     warn.hidden = !reasons.length;
+    // Nothing to play, or a newly chosen light that flashes fast: stop until the visitor presses Play.
+    if (st.playing && (steadyOrNone(p) || (opts.eraChanged && fast))) setPlaying(false);
     playBtn.disabled = steadyOrNone(p);
     playBtn.title = steadyOrNone(p) ? (p ? 'A steady light: there is no rhythm to play' : 'There is no pattern to play') : '';
     // The readout.
