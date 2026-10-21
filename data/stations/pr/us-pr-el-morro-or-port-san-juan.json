@@ -1,0 +1,210 @@
+{
+  "id": "us-pr-el-morro-or-port-san-juan",
+  "name": "El Morro or Port San Juan Light",
+  "other_names": [
+    "Faro de San Juan",
+    "Castillo San Felipe del Morro Lighthouse",
+    "El Morro or Port San Juan Lighthouse",
+    "Faro Castillo del Morro",
+    "Castillo del Morro Lighthouse"
+  ],
+  "country": "US",
+  "region": "PR",
+  "county": "San Juan",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 18.471029,
+    "lon": -66.123607,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1846,
+      "height_m": 15.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1908,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl(3) W 40s",
+    "focal_height_m": 169.0,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "81000693",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000693"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "3-30735",
+    "arlhs": "PUR005",
+    "ccg_list_number": null,
+    "nga": "110-14436"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1962"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1846,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1981,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Faro_del_Morro_%28Original_structure%2C_1898%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Faro_del_Morro_%28Original_structure%2C_1898%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Faro_del_Morro_%28Original_structure%2C_1898%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Faro_del_Morro_%28San_Juan%2C_Puerto_Rico%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Faro_del_Morro_%28San_Juan%2C_Puerto_Rico%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Faro_del_Morro_%28San_Juan%2C_Puerto_Rico%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5351643",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Faro_del_Castillo_San_Felipe_del_Morro",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_San_Juan",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Castillo_San_Felipe_del_Morro_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights PUR005",
+      "url": "https://wlol.arlhs.com/lighthouse/PUR005.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4124264489",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5351643",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/4124264489",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 55.0
+        },
+        {
+          "source": "osm",
+          "value": 169.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,0 +1,218 @@
+{
+  "id": "us-oh-lorain-west-breakwater",
+  "name": "Lorain West Breakwater Light",
+  "other_names": [
+    "Lorain Lighthouse",
+    "Lorain West Breakwater Lighthouse"
+  ],
+  "country": "US",
+  "region": "OH",
+  "county": "Lorain",
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 41.477572,
+    "lon": -82.190559,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1917,
+      "height_m": 15.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1965,
+    "lens": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 17.5,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "78002108",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78002108"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-4335",
+    "arlhs": "USA453",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1909,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1965,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1978,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2001,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lorain_West_Breakwater_Light%2C_Lorain_OH.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lorain_West_Breakwater_Light%2C_Lorain_OH.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorain_West_Breakwater_Light%2C_Lorain_OH.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6678743",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lorain_West_Breakwater_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Lorain_Harbor_(ouest)",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Lorain_lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA453",
+      "url": "https://wlol.arlhs.com/lighthouse/USA453.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/697186738",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6678743",
+      "part": "wikidata:Q6678743",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/697186738",
+      "part": "wikidata:Q6678743",
+      "fields": [
+        "events",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2001
+        },
+        {
+          "source": "wikidata",
+          "value": 1965
+        }
+      ],
+      "note": "A source gives the light's service entry (2001) after its retirement (1965); it may have been relit. Neither is shown as the first lighting."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2001
+        },
+        {
+          "source": "osm",
+          "value": 1909
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

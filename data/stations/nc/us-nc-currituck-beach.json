@@ -1,0 +1,202 @@
+{
+  "id": "us-nc-currituck-beach",
+  "name": "Currituck Beach Lighthouse",
+  "other_names": [
+    "Currituck Beach Light"
+  ],
+  "country": "US",
+  "region": "NC",
+  "county": "Currituck",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 36.376667,
+    "lon": -75.830659,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1875,
+      "height_m": 49.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 20s",
+    "focal_height_m": 48.1,
+    "range_nm": 18.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "73001333",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001333"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "2-0555",
+    "arlhs": "USA212",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1939"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1939,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1973,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/99000911_currituck.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/99000911_currituck.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:99000911_currituck.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q3308122",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Currituck_Beach_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Currituck_Beach",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Currituck_Beach_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "Official website",
+      "url": "http://www.currituckbeachlight.com/",
+      "kind": "website"
+    },
+    {
+      "label": "ARLHS World List of Lights USA212",
+      "url": "https://wlol.arlhs.com/lighthouse/USA212.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/295320588",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q3308122",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/295320588",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 64.0
+        },
+        {
+          "source": "osm",
+          "value": 48.1
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

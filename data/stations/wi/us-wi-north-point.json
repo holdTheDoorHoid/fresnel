@@ -1,0 +1,226 @@
+{
+  "id": "us-wi-north-point",
+  "name": "North Point Light",
+  "other_names": [
+    "North Point light",
+    "North Point Lighthouse",
+    "North Point Lighthouse and Keeper's Quarters"
+  ],
+  "country": "US",
+  "region": "WI",
+  "county": "Milwaukee",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.065577,
+    "lon": -87.871398,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1855,
+      "height_m": 23.0,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1888,
+    "deactivated": 1994,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 47.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "84003732",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003732"
+    },
+    {
+      "register": "NRHP",
+      "number": "93000339",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93000339"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "USA556",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "North Point Lighthouse Museum",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1855,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1888,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1984,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1994,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Point_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Point_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:North_Point_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7056375",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/North_Point_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_North_Point",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:North_Point_light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA556",
+      "url": "https://wlol.arlhs.com/lighthouse/USA556.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/403385102",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/403385111",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7056375",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/403385102",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "events",
+        "location",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/403385111",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "agency",
+        "events"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1888
+        },
+        {
+          "source": "osm",
+          "value": 1855
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

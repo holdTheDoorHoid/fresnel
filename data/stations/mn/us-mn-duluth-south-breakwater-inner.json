@@ -1,0 +1,200 @@
+{
+  "id": "us-mn-duluth-south-breakwater-inner",
+  "name": "Duluth South Breakwater Inner Light",
+  "other_names": [
+    "Duluth South Breakwater Inner Lighthouse",
+    "South Breakwater Inner Light"
+  ],
+  "country": "US",
+  "region": "MN",
+  "county": "St. Louis",
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 46.778714,
+    "lon": -92.092016,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1889,
+      "height_m": 20.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1901,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 20.7,
+    "range_nm": 16.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "83000945",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000945"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15860",
+    "arlhs": "USA240",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1889,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1900,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duluth_South_Pier_Inner_Range_Light_%287564441122%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duluth_South_Pier_Inner_Range_Light_%287564441122%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duluth_South_Pier_Inner_Range_Light_%287564441122%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5313522",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Duluth_South_Breakwater_Inner_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_int%C3%A9rieur_du_brise-lames_sud_de_Duluth",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Duluth_South_Breakwater_Inner_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA240",
+      "url": "https://wlol.arlhs.com/lighthouse/USA240.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/9021121686",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5313522",
+      "part": "wikidata:Q5313522",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/9021121686",
+      "part": "wikidata:Q5313522",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1901
+        },
+        {
+          "source": "osm",
+          "value": 1900
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

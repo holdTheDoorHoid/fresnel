@@ -1,0 +1,219 @@
+{
+  "id": "us-ma-palmer-island",
+  "name": "Palmer Island Light",
+  "other_names": [
+    "Palmer Island Lighthouse",
+    "Palmers Island Light"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Bristol",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.626936,
+    "lon": -70.909108,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "stone",
+      "built": 1849,
+      "height_m": 7.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1999,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 13.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "80000433",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000433"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-16898",
+    "arlhs": "USA578",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "United States Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1941"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1849,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1941,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1980,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1999,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmer_Island_Light.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmer_Island_Light.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Palmer_Island_Light.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7128244",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Palmer_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Palmer_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Palmer_Island_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA578",
+      "url": "https://wlol.arlhs.com/lighthouse/USA578.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/713055704",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7128244",
+      "part": "wikidata:Q7128244",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/713055704",
+      "part": "wikidata:Q7128244",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 8s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1999
+        },
+        {
+          "source": "osm",
+          "value": 1849
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

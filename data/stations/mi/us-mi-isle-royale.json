@@ -1,0 +1,222 @@
+{
+  "id": "us-mi-isle-royale",
+  "name": "Isle Royale Light",
+  "other_names": [
+    "Isle Royale Lighthouse",
+    "Menagerie Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.947849,
+    "lon": -88.761268,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "stone",
+      "built": 1875,
+      "height_m": 19.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 22.0,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "83000880",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000880"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-16710",
+    "arlhs": "USA407",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isle_Royale_Light.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isle_Royale_Light.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Isle_Royale_Light.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6083855",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Isle_Royale_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_l%27Isle_Royale",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Isle_Royale_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA407",
+      "url": "https://wlol.arlhs.com/lighthouse/USA407.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1075701650",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.nps.gov/articles/000/isle-royale-lighthouse.htm",
+      "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/697192408",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6083855",
+      "part": "wikidata:Q6083855",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1075701650",
+      "part": "wikidata:Q6083855",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/697192408",
+      "part": "wikidata:Q6083855",
+      "fields": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            47.94139,
+            -88.76694
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            47.94785,
+            -88.76127
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            47.94795,
+            -88.76127
+          ]
+        }
+      ],
+      "distance_m": 833,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

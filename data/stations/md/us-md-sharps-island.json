@@ -1,0 +1,197 @@
+{
+  "id": "us-md-sharps-island",
+  "name": "Sharps Island Light",
+  "other_names": [
+    "Sharps Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "MD",
+  "county": "Talbot",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 38.639142,
+    "lon": -76.375718,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1882,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1838,
+    "deactivated": 2010,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "82002821",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82002821"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "USA751",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1882,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1982,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2010,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sharps_Island_Light_2009.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sharps_Island_Light_2009.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sharps_Island_Light_2009.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q3378389",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sharps_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Sharps_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Sharps_Island_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA751",
+      "url": "https://wlol.arlhs.com/lighthouse/USA751.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4769080482",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q3378389",
+      "part": "wikidata:Q3378389",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/4769080482",
+      "part": "wikidata:Q3378389",
+      "fields": [
+        "events",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1838
+        },
+        {
+          "source": "osm",
+          "value": 1882
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

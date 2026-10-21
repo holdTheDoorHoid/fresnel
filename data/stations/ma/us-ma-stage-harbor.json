@@ -1,0 +1,202 @@
+{
+  "id": "us-ma-stage-harbor",
+  "name": "Stage Harbor Light",
+  "other_names": [
+    "Stage Harbor Lighthouse"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Barnstable",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.658712,
+    "lon": -69.983682,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "cast_iron",
+      "material": "cast_iron",
+      "built": 1880,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1933,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 12.8,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "1-13860",
+    "arlhs": "USA806",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1880,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1933,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stage_Harbor_Light_Chatham_MA.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stage_Harbor_Light_Chatham_MA.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stage_Harbor_Light_Chatham_MA.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109352353",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stage_Harbor_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Stage_Harbor",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Stage_Harbor_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA806",
+      "url": "https://wlol.arlhs.com/lighthouse/USA806.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7596799",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1424811474",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109352353",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7596799",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1424811474",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "inactive"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

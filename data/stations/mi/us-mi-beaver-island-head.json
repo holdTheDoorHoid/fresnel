@@ -1,0 +1,203 @@
+{
+  "id": "us-mi-beaver-island-head",
+  "name": "Beaver Island Head Light",
+  "other_names": [
+    "Beaver Island Head Lighthouse",
+    "Beaver Head Lighthouse"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": "Charlevoix",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.575645,
+    "lon": -85.573565,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1858,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1858,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "78001495",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001495"
+    },
+    {
+      "register": "Michigan State Historic Site",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "USA046",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1858,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1978,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beaver_Head_Light_Station.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beaver_Head_Light_Station.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beaver_Head_Light_Station.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q4878099",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Beaver_Island_Head_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Beaver_Head",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Beaver_Island_Head_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA046",
+      "url": "https://wlol.arlhs.com/lighthouse/USA046.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/582784558",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q4878099",
+      "part": "wikidata:Q4878099",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/582784558",
+      "part": "wikidata:Q4878099",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

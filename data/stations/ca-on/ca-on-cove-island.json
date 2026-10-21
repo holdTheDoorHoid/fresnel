@@ -1,0 +1,197 @@
+{
+  "id": "ca-on-cove-island",
+  "name": "Cove Island Light",
+  "other_names": [
+    "phare de Cove Island",
+    "Cove Island Lighthouse"
+  ],
+  "country": "CA",
+  "region": "ON",
+  "county": "Bruce County",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.326372,
+    "lon": -81.735896,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1855,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1858,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": null,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "6958",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=6958"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "4466",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=4466"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN149",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1855,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "heritage_designated",
+      "note": "classified federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cove_island_light.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cove_island_light.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cove_island_light.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5178928",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cove_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Cove_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cove_Island_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN149",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN149.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1279898363",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5178928",
+      "part": "wikidata:Q5178928",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1279898363",
+      "part": "wikidata:Q5178928",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 10s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

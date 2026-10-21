@@ -1,0 +1,184 @@
+{
+  "id": "us-ri-fuller-rock",
+  "name": "Fuller Rock Light",
+  "other_names": [
+    "Fuller Rock Lighthouse",
+    "Fuller Rock Skeletal Tower Light"
+  ],
+  "country": "US",
+  "region": "RI",
+  "county": "Providence",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.794078,
+    "lon": -71.379714,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1872,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1923,
+    "lens": null,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 9.5,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "1-18580",
+    "arlhs": "USA957",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1872,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1923,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1997,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuller_Rock_Light_postcard.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuller_Rock_Light_postcard.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fuller_Rock_Light_postcard.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5508260",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fuller_Rock_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Fuller_Rock",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Fuller_Rock_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA957",
+      "url": "https://wlol.arlhs.com/lighthouse/USA957.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6183087008",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5508260",
+      "part": "wikidata:Q5508260",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/6183087008",
+      "part": "wikidata:Q5508260",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1997
+        },
+        {
+          "source": "wikidata",
+          "value": 1923
+        }
+      ],
+      "note": "A source gives the light's service entry (1997) after its retirement (1923); it may have been relit. Neither is shown as the first lighting."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

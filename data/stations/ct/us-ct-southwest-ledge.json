@@ -1,0 +1,193 @@
+{
+  "id": "us-ct-southwest-ledge",
+  "name": "Southwest Ledge Light",
+  "other_names": [
+    "Southwest Ledge Lighthouse"
+  ],
+  "country": "US",
+  "region": "CT",
+  "county": "New Haven",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.234461,
+    "lon": -72.912099,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1877,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 5s",
+    "focal_height_m": 17.0,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "89001475",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001475"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-21210",
+    "arlhs": "USA778",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "United States Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1877,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SouthwestLedge_NewHaven.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/SouthwestLedge_NewHaven.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SouthwestLedge_NewHaven.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7571308",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Southwest_Ledge_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Southwest_Ledge",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Southwest_Ledge_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA778",
+      "url": "https://wlol.arlhs.com/lighthouse/USA778.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1545981227",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7571308",
+      "part": "wikidata:Q7571308",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1545981227",
+      "part": "wikidata:Q7571308",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            41.23139,
+            -72.92361
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            41.23446,
+            -72.9121
+          ]
+        }
+      ],
+      "distance_m": 1021,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

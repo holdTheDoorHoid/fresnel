@@ -1,0 +1,236 @@
+{
+  "id": "us-va-keepers-house",
+  "name": "Keeper's House",
+  "other_names": [
+    "Old Point Comfort Light",
+    "Old Point Comfort Lighthouse"
+  ],
+  "country": "US",
+  "region": "VA",
+  "county": "Hampton",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 37.001747,
+    "lon": -76.306469,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": "Old Point Comfort Light",
+      "type": null,
+      "material": null,
+      "built": 1803,
+      "height_m": 17.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "role": "dwelling",
+      "name": "Keeper's House",
+      "type": null,
+      "material": null,
+      "built": 1900,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1804,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl(2) R 12s",
+    "focal_height_m": 16.4,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "73002212",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002212"
+    },
+    {
+      "register": "Virginia Historic Landmark",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "2-9380",
+    "arlhs": "USA567",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "United States of America",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "OpenStreetMap tags the structure access=private."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1802,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1803,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1804,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1900,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1973,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Point_Comfort_Light_VA2.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Point_Comfort_Light_VA2.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Old_Point_Comfort_Light_VA2.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7084747",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Old_Point_Comfort_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27Old_Point_Comfort",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Old_Point_Comfort_lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA567",
+      "url": "https://wlol.arlhs.com/lighthouse/USA567.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/388341790",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/943419565",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7084747",
+      "part": "wikidata:Q7084747",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/388341790",
+      "part": "osm:way/388341790",
+      "fields": [
+        "events",
+        "name",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/943419565",
+      "part": "wikidata:Q7084747",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl(2) R 12s"
+        },
+        {
+          "source": "wikidata",
+          "value": "FI(2) R 12s, W sector"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

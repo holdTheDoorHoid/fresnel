@@ -1,0 +1,164 @@
+{
+  "id": "us-vi-buck-island",
+  "name": "Buck Island Lighthouse",
+  "other_names": [],
+  "country": "US",
+  "region": "VI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 18.278333,
+    "lon": -64.891669,
+    "precision": "exact",
+    "from": "wikidata"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "mixed",
+      "built": 1990,
+      "height_m": 12.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1990,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 42.0,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "3-32565",
+    "arlhs": "VIR002",
+    "ccg_list_number": null,
+    "nga": "110-14632"
+  },
+  "agency": "Buck Island National Wildlife Refuge",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1913,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109324143",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q98120714",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Buck_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights VIR002",
+      "url": "https://wlol.arlhs.com/lighthouse/VIR002.html",
+      "kind": "register"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109324143",
+      "part": "wikidata:Q109324143",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "location",
+        "name",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q98120714",
+      "part": "wikidata:Q109324143",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -254,9 +254,9 @@ reads (fetch_text and newspaper pages together), corpus greps as needed but each
 `--max`. A thin station should take a fraction of that.
 
 **Lightship stations and vessels:** the USLHS Digital Archive's lightship-station records and vessel
-assignments, the USCG Lightship Station Index (a retired PDF read from its Internet Archive copy: allowed,
-it is not the Historian's live site), the Lighthouse Board and Commissioner reports (stations, collisions,
-drags), and newspapers. A lightship station's position comes from the Light List or the bearing text
+assignments, the Lighthouse Board and Commissioner reports (stations, collisions,
+drags), and newspapers. (The USCG Lightship Station Index is a Coast Guard PDF on a host that blocks us;
+its archived copies are on hold with the Historian's, DESIGN §2.) A lightship station's position comes from the Light List or the bearing text
 ("8 miles SE of …"); give the source of the position in `corrections` when the record has none.
 
 **Life-saving stations:** the Life-Saving Service annual reports (station lists with positions; wreck

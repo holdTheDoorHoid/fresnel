@@ -1,0 +1,57 @@
+{
+  "_note": "Controlled vocabularies for station records (DESIGN.md 3.4). pipeline/validate.py checks every station, research and source file against these lists; web/src/lib/vocab.ts gives each value its words on the site. Add a value here first, then give it words there.",
+  "kind": [
+    "lighthouse", "range_lights", "pier_light", "harbor_light", "lightship_station", "lightship", "life_saving_station"
+  ],
+  "setting": [
+    "coast", "island", "offshore", "bay", "river", "great_lakes", "harbor", "pier"
+  ],
+  "structure_type": [
+    "conical_masonry", "cast_iron", "skeletal", "screwpile", "caisson", "crib", "integral", "wood_frame", "concrete", "texas_tower", "other"
+  ],
+  "structure_role": [
+    "tower", "dwelling", "fog_signal", "oil_house", "boathouse", "front_range", "rear_range", "other"
+  ],
+  "structure_material": [
+    "brick", "stone", "wood", "concrete", "cast_iron", "iron", "steel", "aluminium", "fiberglass", "tabby", "mixed"
+  ],
+  "status": [
+    "active", "inactive", "lost", "ruins", "relocated", "replica", "unknown"
+  ],
+  "structure_status": [
+    "standing", "lost", "ruins", "relocated", "unknown"
+  ],
+  "lens_status": [
+    "in_place", "on_display", "lost", "unknown"
+  ],
+  "lens_type": [
+    "fresnel", "drum", "modern", "reflector", "other"
+  ],
+  "lens_order": [
+    "hyperradiant", "meso-radiant", "1", "2", "3", "3.5", "4", "5", "6"
+  ],
+  "staffing": [
+    "staffed", "automated", "volunteer", "unstaffed", "unknown"
+  ],
+  "ownership": [
+    "federal", "state", "provincial", "tribal", "local", "private", "nonprofit", "unknown"
+  ],
+  "access": [
+    "public", "restricted", "permission", "private", "closed", "unknown"
+  ],
+  "verification": [
+    "unverified", "facts", "researched", "verified"
+  ],
+  "stay_type": [
+    "rental", "inn", "hostel", "keeper_program"
+  ],
+  "event": [
+    "built", "first_lit", "rebuilt", "replaced", "relit", "deactivated", "automated", "keeper_appointed", "lens_installed", "lens_removed", "characteristic_changed", "fog_signal_installed", "damaged", "destroyed", "burned", "collapsed", "removed", "relocated", "restored", "modified", "wreck", "rescue", "storm", "war", "transferred", "closed", "opened_to_public", "nrhp_listed", "heritage_designated", "other"
+  ],
+  "relation": [
+    "preceded_by", "succeeded_by", "life_saving_station_nearby", "light_station_nearby", "range_partner", "same_place", "replica_of", "replica", "related"
+  ],
+  "link_kind": [
+    "wikidata", "wikipedia", "osm", "commons", "register", "website", "reference", "station", "other"
+  ]
+}

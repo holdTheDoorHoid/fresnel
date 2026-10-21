@@ -1,0 +1,233 @@
+{
+  "id": "us-ma-west-chop",
+  "name": "West Chop Light",
+  "other_names": [
+    "West Chop Lighthouse",
+    "Keeper's House",
+    "Assistant Keeper's Dwelling",
+    "Keeper's Dwelling"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Dukes",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.4808,
+    "lon": -70.599772,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "dwelling",
+      "name": "Keeper's House",
+      "type": null,
+      "material": null,
+      "built": 1881,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.480554,
+        "lon": -70.599606
+      }
+    },
+    {
+      "role": "tower",
+      "name": "West Chop Light",
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1891,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Oc R 4s",
+    "focal_height_m": 25.6,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "87001506",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001506"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-13775",
+    "arlhs": "USA877",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1881,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1891,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1987,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/West_Chop_Lighthouse_Martha%27s_Vineyard_Ma.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/West_Chop_Lighthouse_Martha%27s_Vineyard_Ma.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:West_Chop_Lighthouse_Martha%27s_Vineyard_Ma.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7984740",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/West_Chop_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_West_Chop",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:West_Chop_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA877",
+      "url": "https://wlol.arlhs.com/lighthouse/USA877.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1062312141",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/216359810",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/216359846",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7984740",
+      "part": "wikidata:Q7984740",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1062312141",
+      "part": "wikidata:Q7984740",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/216359810",
+      "part": "osm:way/216359810",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/216359846",
+      "part": "osm:way/216359810",
+      "fields": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Oc R 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Oc W 4s, R sector"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,0 +1,195 @@
+{
+  "id": "ca-nl-green-island",
+  "name": "Green Island Lighthouse",
+  "other_names": [
+    "Green Island (Catalina) Lighthouse",
+    "phare de Green Island (Catalina)",
+    "Green Island"
+  ],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 48.504186,
+    "lon": -53.043647,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1857,
+      "height_m": 9.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 18s",
+    "focal_height_m": 28.0,
+    "range_nm": 15.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "21133",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=21133"
+    },
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "4761",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=4761"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3968",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3968"
+    },
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "14972",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14972"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN687",
+    "ccg_list_number": "N453",
+    "nga": "110-1648"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1857,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "heritage_designated",
+      "note": "heritage lighthouse",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q106304911",
+      "kind": "wikidata"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN687",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN687.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q44452496",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1446776738",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q106304911",
+      "part": "wikidata:Q106304911",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "ownership",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q44452496",
+      "part": "wikidata:Q106304911",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1446776738",
+      "part": "wikidata:Q106304911",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 18s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

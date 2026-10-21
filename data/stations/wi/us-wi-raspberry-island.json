@@ -1,0 +1,193 @@
+{
+  "id": "us-wi-raspberry-island",
+  "name": "Raspberry Island Light",
+  "other_names": [
+    "Raspberry Island Lighthouse",
+    "Raspberry Island Light Station"
+  ],
+  "country": "US",
+  "region": "WI",
+  "county": "Bayfield",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 46.970532,
+    "lon": -90.804969,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "integral",
+      "material": null,
+      "built": null,
+      "height_m": 13.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1862,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 58.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "77000145",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000145"
+    },
+    {
+      "register": "National Register of Historic Places contributing property",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15555",
+    "arlhs": "USA688",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1862,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1977,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rastower.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rastower.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rastower.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7295189",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Raspberry_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Raspberry_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Raspberry_Island_Light_Station",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA688",
+      "url": "https://wlol.arlhs.com/lighthouse/USA688.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/582730404",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7295189",
+      "part": "wikidata:Q7295189",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/582730404",
+      "part": "wikidata:Q7295189",
+      "fields": [
+        "light",
+        "location",
+        "registers",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 23.0
+        },
+        {
+          "source": "osm",
+          "value": 58.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}
