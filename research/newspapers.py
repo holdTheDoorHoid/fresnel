@@ -336,4 +336,6 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    import signal
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # `| head` must not print a traceback
     sys.exit(main())

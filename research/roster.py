@@ -405,7 +405,7 @@ def normalise_role(raw, has_assistants=True):
     r = (raw or "").lower().strip()
     if "acting" in r:
         return "acting keeper"
-    if "principal" in r:
+    if "principal" in r and "keeper" in r:
         return "head keeper" if has_assistants else "keeper"
     for pat, role in ((r"\b(1st|first)\b", "first assistant"), (r"\b(2nd|second)\b", "second assistant"),
                       (r"\b(3rd|third)\b", "third assistant"), (r"\b(4th|fourth)\b", "fourth assistant")):
@@ -423,8 +423,7 @@ def normalise_role(raw, has_assistants=True):
         return "mate"
     if "engineer" in r:
         return "engineer"
-    if any(w in r for w in ("seaman", "cook", "fireman", "oiler", "deckhand", "steward", "crew", "boatswain",
-                            "coxswain", "pilot", "quartermaster")):
+    if re.search(r"\b(seaman|cook|fireman|oiler|deckhand|steward|crew|boatswain|coxswain|pilot|quartermaster)\b", r):
         return "crew"
     if "surfman" in r:
         return "surfman"
@@ -439,15 +438,21 @@ def normalise_role(raw, has_assistants=True):
     return "other"
 
 
+STANDARD_HEADINGS = {"Principal Lighthouse Keeper", "Acting Principal Lighthouse Keeper", "1st Assistant Lighthouse Keeper",
+                     "2nd Assistant Lighthouse Keeper", "3rd Assistant Lighthouse Keeper", "4th Assistant Lighthouse Keeper",
+                     "Laborer"}
+
+
 def roster_lines(raw_lines):
     has_asst = any("assistant" in (l["role_raw"] or "").lower() for l in raw_lines)
     out = []
     for l in raw_lines:
         l = dict(l)
         l["role"] = normalise_role(l["role_raw"], has_asst)
-        if l["role"] == "other" and l["role_raw"]:
-            l["role_note"] = ("Coast Guard personnel; position not stated" if l["role_raw"].upper() == "USCG"
-                              else "USLHS heading: " + l["role_raw"])
+        if l["role_raw"].upper() == "USCG":
+            l["role_note"] = "Coast Guard personnel; position not stated"
+        elif l["role_raw"] and l["role_raw"] not in STANDARD_HEADINGS:
+            l["role_note"] = "USLHS heading: " + l["role_raw"]
         out.append(l)
     return out
 
@@ -696,9 +701,8 @@ def fetch_details(lines, place_slug):
             or next((s for s in d["stints"] if s["place"] == place_slug), None)
         bits = []
         if st and (st["begin_salary"] or st["end_salary"]):
-            bits.append("$%g" % st["begin_salary"] if st["begin_salary"] == st["end_salary"] else
-                        "$%s-%s" % (("%g" % st["begin_salary"]) if st["begin_salary"] else "?",
-                                    ("%g" % st["end_salary"]) if st["end_salary"] else "?"))
+            b, e = st["begin_salary"], st["end_salary"]
+            bits.append("$%g" % (b or e) if (b == e or not b or not e) else "$%g-%g" % (b, e))
         if d.get("source"):
             bits.append("src: " + d["source"])
         if d.get("died"):
@@ -919,4 +923,6 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    import signal
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # `| head` must not print a traceback
     sys.exit(main())

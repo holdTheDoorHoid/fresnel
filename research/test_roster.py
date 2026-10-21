@@ -122,6 +122,9 @@ class Roles(unittest.TestCase):
         self.assertEqual(n("Laborer"), "laborer")
         self.assertEqual(n("Master"), "master")
         self.assertEqual(n("USCG"), "other")
+        self.assertEqual(n("Principal Radio Electrician"), "other")
+        self.assertEqual(n("Boilermaker's Helper"), "other")
+        self.assertEqual(n("Cook"), "crew")
         self.assertEqual(n("Contractor"), "other")
 
     def test_lines_get_role_note_for_other(self):
