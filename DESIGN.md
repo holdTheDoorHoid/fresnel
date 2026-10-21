@@ -64,6 +64,13 @@ Endpoint rulings (orchestrator, 2026-10-21, from the surveys):
   BAnQ numérique, Nauticapedia. Canadiana disallows the same names, and its `/search` and `/file`
   paths for every agent, so it is skipped too. The owner may overrule (in Firefinder the owner kept a
   source whose robots.txt named AI crawlers).
+- **Retired pages through the Wayback Machine: allowed.** A page its publisher has taken down (the
+  NPS light-station inventory, old Tripod sites) may be read from the Internet Archive and cited with
+  both the original URL and the archive URL.
+- **Live but blocked pages through the Wayback Machine: OWNER'S CALL, on hold.** The USCG Historian's
+  site (public-domain federal histories: station pages with keeper lists, the Lightship Station Index)
+  answers 403 to our requests. The territories survey read 292 archived copies of its pages. Until the
+  owner decides, no fetcher is built on them and no story cites them.
 - **Skipped as blocked:** USCG Historian (`history.uscg.mil`, Akamai 403 to everything), the Michigan
   Lighthouse Conservancy, PEI Island Newspapers, Maritime History of the Great Lakes (Cloudflare
   challenges), Library and Archives Canada search and the New Brunswick archives (robots.txt), NPS IRMA
