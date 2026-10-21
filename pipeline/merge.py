@@ -102,6 +102,10 @@ PRECEDENCE = {
 KIND_GROUP = {"lighthouse": "light", "range_lights": "light", "pier_light": "light", "harbor_light": "light",
               "lightship_station": "lightship_station", "lightship": "lightship",
               "life_saving_station": "life_saving_station"}
+# Sources whose record of a charted characteristic is a weak sign that the light is lit today (an old
+# Wikidata statement; a Light List or ENC entry that may belong to a modern light beside the old tower):
+# beaten by any explicit "inactive" or "lost".
+WEAK_ACTIVE_SOURCES = ("wikidata", "enc", "uscg_light_list")
 STRONG = 0.85
 PARTIAL = 0.5
 R_STRONG, R_PARTIAL, R_ANY = 1000.0, 250.0, 60.0
@@ -394,7 +398,7 @@ class Rec:
         self.access = raw.get("access") or {}
         # Weak "active" claim from Wikidata: a charted characteristic and no deactivation or end date.
         self.status_claim = self.status
-        if (source == "wikidata" and self.status is None and self.light.get("characteristic")
+        if (source in WEAK_ACTIVE_SOURCES and self.status is None and self.light.get("characteristic")
                 and not self.light.get("deactivated") and not self.possibly_lost and self.kind in KIND_GROUP
                 and KIND_GROUP[self.kind] == "light"):
             self.status_claim = "active_weak"
@@ -427,7 +431,7 @@ class Rec:
         if aton.get("arlhs"):
             keys.append("arlhs:" + re.sub(r"[^A-Z0-9]", "", str(aton["arlhs"]).upper()))
         if aton.get("uscg_llnr"):
-            keys.append("llnr:" + str(aton["uscg_llnr"]).strip().split("-")[-1].lstrip("0"))
+            keys.append("llnr:" + re.sub(r"-0+(?=\d)", "-", str(aton["uscg_llnr"]).strip()))
         return keys
 
     @property
@@ -1036,7 +1040,8 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
 
 
 def pick(recs: list[Rec], field: str, getter):
-    for r in sorted(recs, key=lambda r: (source_rank(field, r.source), r.enrich_only, r.key)):
+    # a secondary light of a station (a directional or sector light, an emergency light) comes after the main one
+    for r in sorted(recs, key=lambda r: (source_rank(field, r.source), r.enrich_only, bool(r.extra.get("secondary")), r.key)):
         val = getter(r)
         if val not in (None, "", [], {}):
             return val, r
