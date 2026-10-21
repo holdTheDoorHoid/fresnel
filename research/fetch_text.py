@@ -4,15 +4,22 @@
   research/fetch_text.py URL [--grep REGEX] [--context 1] [--max 6000]
 
 - nhlr.org / firetower.org pages are read from the crawl cache (data/raw/nhlr, data/raw/fflos);
-  everything else is fetched once and cached under data/raw/web/ (polite: 2 s per host, honest UA).
+  archive.org details/download/stream URLs of volumes in the local report corpus, the uslhs.org Lighthouse
+  Service Bulletin PDFs and the archives.uslhs.org place / showPeople pages we crawled are read from
+  research/corpus.py's and research/roster.py's caches (no network; this is how check_quotes.py verifies
+  quotes cited to them); everything else is fetched once and cached under data/raw/web/ (polite: 2 s per
+  host, 5 s and 20 a minute for loc.gov, honest UA). The cache root is $FRESNEL_RAW_ROOT, default data/raw.
 - HTML is reduced to text (scripts, styles and navigation dropped); PDFs go through pdftotext.
 - --grep prints only the lines matching REGEX (case-insensitive) with --context lines around them,
   so a 40-page NRHP nomination costs a few hundred words instead of thousands.
 - Output is capped at --max characters; the first line says how long the full text was."""
 import argparse, fcntl, hashlib, html, os, re, subprocess, sys, time, urllib.parse, urllib.request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW = os.path.join(ROOT, "data", "raw")
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+RAW = os.environ.get("FRESNEL_RAW_ROOT") or os.path.join(ROOT, "data", "raw")
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)
 UA = "FresnelBot/0.1 (+https://github.com/holdTheDoorHoid/fresnel)"
 LOCKDIR = os.path.join(RAW, "_locks")
 
@@ -29,27 +36,42 @@ def cached_register(url):
 
 def polite_get(url):
     host = urllib.parse.urlsplit(url).netloc.lower()
-    os.makedirs(LOCKDIR, exist_ok=True)
-    with open(os.path.join(LOCKDIR, "web-" + re.sub(r"[^a-z0-9.]", "_", host)), "a+") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
-        f.seek(0)
-        last = float((f.read() or "0").strip() or 0)
-        wait = last + 2.0 - time.time()
-        if wait > 0:
-            time.sleep(wait)
+    import polite  # the shared throttle: one lock file per site, also used by roster.py / corpus.py / newspapers.py
+    site = polite.site_key(host)
+    th = polite.Throttle("web-" + re.sub(r"[^a-z0-9.]", "_", site), gap=polite.site_gap(host),
+                         per_minute=20 if site == "loc.gov" else None, lockdir=LOCKDIR)
+    with th:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/pdf,*/*"})
-        try:
-            with urllib.request.urlopen(req, timeout=40) as r:
-                body, ctype = r.read(), r.headers.get("Content-Type", "")
-        finally:
-            f.seek(0); f.truncate(); f.write(str(time.time())); f.flush()
+        with urllib.request.urlopen(req, timeout=40) as r:
+            body, ctype = r.read(), r.headers.get("Content-Type", "")
     return body, ctype
 
 
+def local_source(url):
+    """(body, content-type) for URLs whose text we already hold locally, else None."""
+    host = urllib.parse.urlsplit(url).netloc.lower().removeprefix("www.")
+    try:
+        if host == "archives.uslhs.org":
+            import roster
+            t = roster.local_text_for_url(url)
+            return (t.encode("utf-8"), "text/plain; charset=utf-8") if t else None
+        if host in ("archive.org", "uslhs.org"):
+            import corpus
+            b = corpus.local_text_for_url(url)
+            return (b, "text/plain; charset=utf-8") if b else None
+    except Exception:  # a broken cache must not break ordinary fetching
+        return None
+    return None
+
+
 def get(url):
+    url = url.split("#", 1)[0]  # fragments (#page=7) never reach the server and must not split the cache
     reg = cached_register(url)
     if reg:
         return open(reg, "rb").read(), "text/html"
+    local = local_source(url)
+    if local:
+        return local
     os.makedirs(os.path.join(RAW, "web"), exist_ok=True)
     key = os.path.join(RAW, "web", hashlib.sha1(url.encode()).hexdigest())
     if os.path.exists(key + ".bin"):
@@ -61,6 +83,8 @@ def get(url):
 
 
 def to_text(body, ctype):
+    if ctype.lower().startswith("text/plain"):
+        return body.decode("utf-8", "replace")
     if body[:5] == b"%PDF-" or "pdf" in ctype:
         p = subprocess.run(["pdftotext", "-layout", "-", "-"], input=body, capture_output=True, timeout=120)
         return p.stdout.decode("utf-8", "replace")

@@ -384,7 +384,8 @@ def parse_roster(json_text):
         if not a:
             continue
         frm, to, fa, ta = parse_span(clean(a.group(3)))
-        rec = {"name": clean(a.group(2)), "role_raw": role or "", "from": frm, "to": to,
+        span = re.sub(r"\s+", " ", clean(a.group(3))).strip()
+        rec = {"name": clean(a.group(2)), "role_raw": role or "", "span": span.strip("() "), "from": frm, "to": to,
                "person": urllib.parse.unquote(a.group(1))}
         if fa:
             rec["from_approx"] = True
@@ -626,7 +627,8 @@ def print_roster(p, rosters, detail=0, as_json=False, max_lines=500):
         print("ROSTER: none listed")
         return
     yrs = [y for l in lines for y in (l.get("from"), l.get("to")) if y]
-    print("ROSTER: %d lines, %d-%d  (* = the archive says \"at least\": a documented span, not necessarily the whole term)"
+    print("ROSTER: %d lines, %d-%d  (lines are printed exactly as the archive prints them, so they can be quoted as "
+          "evidence; \"at least\" marks a documented span, not necessarily the whole term)"
           % (len(lines), min(yrs) if yrs else 0, max(yrs) if yrs else 0))
     shown, role_raw = 0, None
     details = {}
@@ -640,7 +642,7 @@ def print_roster(p, rosters, detail=0, as_json=False, max_lines=500):
             role_raw = l["role_raw"]
             print("%s  [%s]" % (role_raw or "(no heading)", l["role"]))
         extra = details.get(l["person"], "")
-        print("  %-11s %s%s" % (fmt_span(l), l["name"], ("  " + extra) if extra else ""))
+        print("  %s (%s)%s" % (l["name"], l.get("span") or fmt_span(l), ("  " + extra) if extra else ""))
         shown += 1
 
 
@@ -695,6 +697,52 @@ def fetch_details(lines, place_slug):
             bits.append("b.%s d.%s" % (d.get("born") or "?", d["died"]))
         res[slug] = "[" + "; ".join(bits) + "]" if bits else ""
     return res
+
+
+# -- the cached pages as text, for research/fetch_text.py (so check_quotes can verify quotes offline) ----
+
+def place_text(slug=None, rid=None):
+    """Plain text of a cached place page (its fact fields) followed by its roster, as the archive prints
+    them; None when the page is not cached."""
+    if slug and os.path.exists(place_path(slug)):
+        page = open(place_path(slug), encoding="utf-8").read()
+        _, rid = place_nids(page)
+        out = [clean(re.search(r'<h1><span class="field title">(.*?)</span>', page, re.S).group(1)) if "<h1>" in page else slug]
+        art = page[page.find("<article>"):page.find("</article>")]
+        for chunk in re.split(r'<div class="field_label">', art)[1:]:
+            lab, _, rest = chunk.partition("</div>")
+            rest = re.split(r'<h3|<h5|<div class="flex-grid"|<div class="row"|<div class="garydata"|'
+                            r'<div class="large-6 columns"|<div class="field_label">', rest)[0]
+            lab, val = clean(lab), clean(rest)
+            if lab and val and norm_label(lab) in set(FIELD_MAP) | set(DISCONTINUED_LABELS) | set(DEMOLISHED_LABELS):
+                out.append("%s %s" % (lab if lab.endswith(":") else lab + ":", val))
+    else:
+        out = []
+    if rid and os.path.exists(people_path(rid)):
+        raw = parse_roster(open(people_path(rid), encoding="utf-8").read())
+        out.append("")
+        out.append("People (%s/general/showPeople/%s)" % (BASE, rid))
+        role = None
+        for l in raw:
+            if l["role_raw"] != role:
+                role = l["role_raw"]
+                out.append(role)
+            out.append("%s (%s)" % (l["name"], l.get("span", "")))
+    return "\n".join(out) + "\n" if out else None
+
+
+def local_text_for_url(url):
+    """If `url` is a USLHS place page or roster endpoint we hold in the cache, its text (str), else None."""
+    u = urllib.parse.urlsplit(url)
+    if u.netloc.lower() != "archives.uslhs.org":
+        return None
+    m = re.match(r"^/places/([^/?#]+)/?$", u.path)
+    if m:
+        return place_text(slug=urllib.parse.unquote(m.group(1)))
+    m = re.match(r"^/general/showPeople/(\d+)/?$", u.path)
+    if m and os.path.exists(people_path(int(m.group(1)))):
+        return place_text(rid=int(m.group(1)))
+    return None
 
 
 # -- station-id resolution ------------------------------------------------------------------------

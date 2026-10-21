@@ -875,6 +875,44 @@ def cmd_page(a):
     return 0
 
 
+_INDEX_MEMO = {}
+
+
+def _volumes_by_ident():
+    p = index_file()
+    try:
+        m = os.path.getmtime(p)
+    except OSError:
+        return {}
+    memo = _INDEX_MEMO.get(p)
+    if memo and memo[0] == m:
+        return memo[1]
+    by = {v["identifier"]: v for v in load_index()["volumes"]}
+    _INDEX_MEMO[p] = (m, by)
+    return by
+
+
+def local_text_for_url(url):
+    """If `url` names a corpus volume (an archive.org details / download / stream URL of an indexed item, or a
+    Lighthouse Service Bulletin PDF on uslhs.org), the volume's text as bytes; otherwise None. Used by
+    research/fetch_text.py so that research/check_quotes.py can verify quotes without the network."""
+    u = urllib.parse.urlsplit(url)
+    host = u.netloc.lower().removeprefix("www.")
+    segs = [urllib.parse.unquote(x) for x in u.path.split("/") if x]
+    ident = None
+    if host == "archive.org" and len(segs) >= 2 and segs[0] in ("details", "download", "stream"):
+        if segs[0] != "details" and not segs[-1].endswith("_djvu.txt"):
+            return None
+        ident = segs[1]
+    elif host == "uslhs.org" and segs[:3] == ["sites", "default", "files"] and len(segs) == 5 and segs[3] == "bulletins":
+        ident = re.sub(r"\.pdf$", "", segs[4], flags=re.I)
+    v = _volumes_by_ident().get(ident) if ident else None
+    if not v:
+        return None
+    path = os.path.join(corpus_dir(), v["path"])
+    return open(path, "rb").read() if os.path.exists(path) else None
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
