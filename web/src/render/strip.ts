@@ -64,24 +64,24 @@ export function stripSvg(p: Pattern, opts: { label?: string; id?: string } = {})
       const major = Math.abs(t / p.period - Math.round(t / p.period)) < 1e-6;
       ticks.push(`<line x1="${tx}" x2="${tx}" y1="${barY + barH}" y2="${barY + barH + (major ? 7 : 4)}" stroke="currentColor" stroke-width="${major ? 1.4 : 1}"/>`);
     }
-    const labels = [0, p.period, ...(repeats > 1 ? [span] : [])];
-    for (const t of labels) {
-      const anchor = t === 0 ? 'start' : t === span ? 'end' : 'middle';
-      ticks.push(`<text x="${fmt(x(t))}" y="${barY + barH + 20}" text-anchor="${anchor}" font-size="12" fill="currentColor">${fmt(t)} s</text>`);
-    }
   }
   const periodMark = p.periodRecorded && !p.steady && repeats > 1
     ? `<line x1="${fmt(x(p.period))}" x2="${fmt(x(p.period))}" y1="${barY - 5}" y2="${barY + barH + 7}" stroke="currentColor" stroke-width="1.6"/>`
     : '';
   const words = phaseWords(p);
   const title = p.steady ? 'Lit all the time, no rhythm.' : `${repeats > 1 ? `${repeats} periods of ${fmt(p.period)} seconds, the first in full colour. ` : ''}One period: ${words}`;
-  const h = p.periodRecorded && !p.steady ? 66 : 46;
-  return html`<svg class="strip-svg" viewBox="0 0 ${VIEW_W} ${h}" role="img" aria-labelledby="${id}-t" data-period="${fmt(p.period)}" data-span="${fmt(span)}" data-x0="${BAR_X}" data-w="${BAR_W}" preserveAspectRatio="xMinYMin meet">
+  const h = p.periodRecorded && !p.steady ? 50 : 46;
+  // Time labels are HTML under the drawing, so they stay readable when the strip shrinks on a phone.
+  const labels = p.periodRecorded && !p.steady ? [0, p.period, ...(repeats > 1 ? [span] : [])] : [];
+  const scale = labels.length
+    ? html`<div class="strip-scale" aria-hidden="true">${labels.map((t) => html`<span class="${t === 0 ? 'at-start' : t === span ? 'at-end' : ''}" style="left:${fmt(((x(t) / VIEW_W) * 100))}%">${fmt(t)} s</span>`)}</div>`
+    : '';
+  return html`<div class="strip-draw"><svg class="strip-svg" viewBox="0 0 ${VIEW_W} ${h}" role="img" aria-labelledby="${id}-t" data-period="${fmt(p.period)}" data-span="${fmt(span)}" data-x0="${BAR_X}" data-w="${BAR_W}" preserveAspectRatio="xMinYMin meet">
     <title id="${id}-t">${opts.label ? `${opts.label}: ` : ''}${title}</title>
     <rect x="${BAR_X - 1}" y="${barY - 1}" width="${BAR_W + 2}" height="${barH + 2}" rx="3" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
     ${raw(rects.join(''))}${raw(ticks.join(''))}${raw(periodMark)}
     <line class="strip-head" x1="${BAR_X}" x2="${BAR_X}" y1="${barY - 6}" y2="${barY + barH + 6}" stroke="currentColor" stroke-width="2" visibility="hidden"/>
-  </svg>`;
+  </svg>${scale}</div>`;
 }
 
 /** The caption under the strip: what one period holds, to scale or not. */

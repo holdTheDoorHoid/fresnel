@@ -246,11 +246,17 @@ a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
 .strip.is-current { border-color: var(--lamp); box-shadow: inset 4px 0 0 var(--lamp); }
 .strip-label { font-weight: 700; font-size: 0.92rem; margin-bottom: 4px; }
 .strip-svg { display: block; width: 100%; height: auto; color: var(--ink-2); }
+.strip-scale { position: relative; height: 1.3em; font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.strip-scale span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.strip-scale span.at-start { transform: none; }
+.strip-scale span.at-end { transform: translateX(-100%); }
 .strip-cap { margin: 2px 0 4px; }
 .night-notes { margin: 0; padding-left: 1.2em; max-width: 76ch; font-size: 0.95rem; color: var(--ink-2); display: grid; gap: 4px; }
 .night-missing { color: var(--caution-ink); }
 .night-ranges > div { grid-template-columns: minmax(150px, 38%) minmax(0, 1fr); }
 .night-map-wrap { margin: 14px 0 4px; max-width: 760px; }
+/* Holds the map's place until MapLibre loads, so the page does not jump. */
+.night-map-wrap:empty { min-height: 320px; border-radius: 12px; border: 1px dashed var(--line); background: var(--surface-2); }
 .night-map { height: 320px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--map-sea); }
 .night-map-key { margin: 8px 0 0; }
 .night-guide { margin: 18px 0 10px; padding: 10px 14px; border: 1px solid var(--info-line); background: var(--info-bg); color: var(--info-ink); border-radius: 10px; max-width: 760px; }
@@ -262,5 +268,5 @@ a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
   .night-settings { grid-template-columns: minmax(0, 1fr); }
   .night-canvas { height: 260px; }
   .night-ranges > div { grid-template-columns: minmax(0, 1fr); }
-  .night-map { height: 260px; }
+  .night-map, .night-map-wrap:empty { height: 260px; min-height: 260px; }
 }

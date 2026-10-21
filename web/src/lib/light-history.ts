@@ -175,6 +175,7 @@ export function lightEras(r: EraInput): LightEra[] {
     return eras;
   }
   const one = current.lights.length === 1 ? current.lights[0]! : null;
-  const when = one?.era?.year ? ` (recorded ${one.era.approx ? 'about ' : ''}${one.era.year})` : '';
-  return [era({ id: 'era-0', label: `${fin.label}${when}`, short: fin.short, reading: current }, {}, true)];
+  const when = one?.era?.year ? `pattern recorded ${one.era.approx ? 'about' : 'in'} ${one.era.year}` : '';
+  const label = !when ? fin.label : fin.label.endsWith(')') ? `${fin.label.slice(0, -1)}; ${when})` : `${fin.label} (${when})`;
+  return [era({ id: 'era-0', label, short: fin.short, reading: current }, {}, true)];
 }

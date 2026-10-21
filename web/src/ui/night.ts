@@ -495,7 +495,7 @@ export function initNight(host: HTMLElement): void {
           g.translate(cx, yHor);
           g.scale(1, ry / rx);
           const loom = g.createRadialGradient(0, 0, 0, 0, 0, rx);
-          loom.addColorStop(0, rgba(hex, 0.3 * seen.loom * lv));
+          loom.addColorStop(0, rgba(hex, 0.38 * seen.loom * lv));
           loom.addColorStop(1, rgba(hex, 0));
           g.fillStyle = loom;
           g.fillRect(-rx, -rx, rx * 2, rx * 2);

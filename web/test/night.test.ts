@@ -285,7 +285,9 @@ describe('a light’s eras', () => {
   it('one era otherwise: today, or as it was when last lit, or as last recorded', () => {
     expect(lightEras(base({ characteristic: 'Fl W 4s' }))[0]!.label).toBe('Today, as charted');
     expect(lightEras(base({ characteristic: 'F R', deactivated: 1933 }, 'lost'))[0]).toMatchObject({ label: 'As it was when last lit (the light went out in 1933)', lastLit: true, past: true });
-    expect(lightEras(base({ characteristic: 'F W (1901)' }, 'lost'))[0]!.label).toBe('As it was when last lit (recorded 1901)');
+    expect(lightEras(base({ characteristic: 'F W (1901)' }, 'lost'))[0]!.label).toBe('As it was when last lit (pattern recorded in 1901)');
+    expect(lightEras(base({ characteristic: 'F W (1901)', deactivated: 1931 }, 'lost'))[0]!.label).toBe('As it was when last lit (the light went out in 1931; pattern recorded in 1901)');
+    expect(lightEras(base({ characteristic: 'Fl W 6s (c1965)' }, 'unknown'))[0]!.label).toBe('As last recorded (whether it is still lit is not known; pattern recorded about 1965)');
     expect(lightEras(base({ characteristic: 'Fl W 6s' }, 'unknown'))[0]!.label).toContain('whether it is still lit is not known');
   });
 
