@@ -5,8 +5,9 @@
 
 - nhlr.org / firetower.org pages are read from the crawl cache (data/raw/nhlr, data/raw/fflos);
   archive.org details/download/stream URLs of volumes in the local report corpus, the uslhs.org Lighthouse
-  Service Bulletin PDFs and the archives.uslhs.org place / showPeople pages we crawled are read from
-  research/corpus.py's and research/roster.py's caches (no network; this is how check_quotes.py verifies
+  Service Bulletin PDFs, the archives.uslhs.org place / showPeople pages we crawled and the Chronicling
+  America pages research/newspapers.py has read are read from the caches of corpus.py, roster.py and
+  newspapers.py (no network; this is how check_quotes.py verifies
   quotes cited to them); everything else is fetched once and cached under data/raw/web/ (polite: 2 s per
   host, 5 s and 20 a minute for loc.gov, honest UA). The cache root is $FRESNEL_RAW_ROOT, default data/raw.
 - HTML is reduced to text (scripts, styles and navigation dropped); PDFs go through pdftotext.
@@ -54,6 +55,10 @@ def local_source(url):
         if host == "archives.uslhs.org":
             import roster
             t = roster.local_text_for_url(url)
+            return (t.encode("utf-8"), "text/plain; charset=utf-8") if t else None
+        if host == "loc.gov":
+            import newspapers
+            t = newspapers.local_text_for_url(url)
             return (t.encode("utf-8"), "text/plain; charset=utf-8") if t else None
         if host in ("archive.org", "uslhs.org"):
             import corpus

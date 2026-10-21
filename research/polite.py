@@ -39,7 +39,7 @@ OUR_AGENT = "fresnelbot"
 # Hosts that are one site for rate-limit and robots purposes, and the gap each site needs.
 # (Download nodes of archive.org share archive.org's lock; tile.loc.gov shares www.loc.gov's.)
 SITE_GAPS = {"loc.gov": 5.0}
-ROBOTS_HOST = {"archive.org": "archive.org", "loc.gov": "www.loc.gov"}
+ROBOTS_HOST = {"archive.org": "archive.org"}
 DEFAULT_GAP = 2.0
 
 
@@ -62,6 +62,27 @@ def site_key(host):
 
 def site_gap(host):
     return SITE_GAPS.get(site_key(host), DEFAULT_GAP)
+
+
+
+def read_text(path, errors="strict"):
+    with open(path, encoding="utf-8", errors=errors) as fh:
+        return fh.read()
+
+
+def read_bytes(path, n=None):
+    with open(path, "rb") as fh:
+        return fh.read() if n is None else fh.read(n)
+
+
+def read_json(path):
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def write_json(path, obj, **kw):
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(obj, fh, **kw)
 
 
 class PoliteError(Exception):
@@ -122,7 +143,7 @@ class Throttle:
 
     def _read_side(self):
         try:
-            return json.load(open(self._side_path))
+            return read_json(self._side_path)
         except (OSError, ValueError):
             return {}
 
@@ -279,12 +300,12 @@ def record_skip(site, reason):
     os.makedirs(_robots_dir(), exist_ok=True)
     path = os.path.join(_robots_dir(), "skipped.json")
     try:
-        d = json.load(open(path))
+        d = read_json(path)
     except (OSError, ValueError):
         d = {}
     if site not in d:
         d[site] = {"reason": reason, "when": time.strftime("%Y-%m-%d %H:%M:%S")}
-        json.dump(d, open(path, "w"), indent=1)
+        write_json(path, d, indent=1)
 
 
 _ROBOTS_MEMO = {}
@@ -292,7 +313,7 @@ _ROBOTS_MEMO = {}
 
 def robots_groups(scheme, host, ttl=7 * 86400, fetcher=None):
     """Parsed robots.txt for the site `host` belongs to (cached on disk and in memory)."""
-    site = site_key(host)
+    site = "archive.org" if site_key(host) == "archive.org" else host.lower().split(":")[0]  # one robots.txt per host
     memo = _ROBOTS_MEMO.get((raw_root(), site))
     if memo is not None:
         return memo
@@ -302,14 +323,14 @@ def robots_groups(scheme, host, ttl=7 * 86400, fetcher=None):
     fresh = os.path.exists(path) and time.time() - os.path.getmtime(path) < ttl
     text = None
     if fresh:
-        text = open(path).read()
+        text = read_text(path)
     else:
         url = "%s://%s/robots.txt" % (scheme, ROBOTS_HOST.get(site, host))
         try:
             r = (fetcher or get)(url, robots=False, retries=1, timeout=25)
         except PoliteError:
             if os.path.exists(path):  # stale copy beats guessing
-                text = open(path).read()
+                text = read_text(path)
             else:
                 raise Blocked("robots.txt for %s could not be read and nothing is cached; not guessing" % site)
         else:
@@ -322,13 +343,12 @@ def robots_groups(scheme, host, ttl=7 * 86400, fetcher=None):
                 text = r.text()
             else:
                 if os.path.exists(path):
-                    text = open(path).read()
+                    text = read_text(path)
                 else:
                     raise Blocked("robots.txt for %s answered HTTP %d; not guessing" % (site, r.status))
             with open(path, "w") as fh:
                 fh.write(text)
-            json.dump({"status": r.status, "fetched": time.strftime("%Y-%m-%d %H:%M:%S"), "url": url},
-                      open(meta_path, "w"))
+            write_json(meta_path, {"status": r.status, "fetched": time.strftime("%Y-%m-%d %H:%M:%S"), "url": url})
     groups = parse_robots(text)
     if ai_blocked(groups):
         record_skip(site, "robots.txt names an Anthropic crawler as disallowed")
@@ -339,7 +359,7 @@ def robots_groups(scheme, host, ttl=7 * 86400, fetcher=None):
 def check_robots(url):
     u = urllib.parse.urlsplit(url)
     groups = robots_groups(u.scheme or "https", u.netloc)
-    site = site_key(u.netloc)
+    site = "archive.org" if site_key(u.netloc) == "archive.org" else u.netloc.lower()
     if ai_blocked(groups):
         raise Blocked("%s: robots.txt names AI/Claude crawlers as disallowed; skipped (DESIGN.md section 2)" % site)
     path = u.path or "/"
@@ -457,7 +477,7 @@ def get(url, *, timeout=40, retries=3, gap=None, per_minute=None, headers=None, 
 def cached_get(url, cache_path, **kw):
     """get() with a file cache: returns (bytes, from_cache). Only 200 responses are cached."""
     if os.path.exists(cache_path):
-        return open(cache_path, "rb").read(), True
+        return read_bytes(cache_path), True
     r = get(url, **kw)
     if r.status != 200:
         raise PoliteError("HTTP %d for %s" % (r.status, url))

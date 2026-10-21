@@ -67,7 +67,7 @@ def log(msg):
 
 def load_index():
     try:
-        return json.load(open(index_file(), encoding="utf-8"))
+        return polite.read_json(index_file())
     except (OSError, ValueError):
         return {"volumes": []}
 
@@ -77,7 +77,7 @@ def save_index(idx):
     idx["updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
     idx["volumes"].sort(key=lambda v: (v["series"], v["year"], v["identifier"]))
     tmp = index_file() + ".tmp%d" % os.getpid()
-    json.dump(idx, open(tmp, "w", encoding="utf-8"), indent=1)
+    polite.write_json(tmp, idx, indent=1)
     os.replace(tmp, index_file())
 
 
@@ -167,7 +167,7 @@ def bulletin_year_counts(text):
 
 def load_catalog():
     try:
-        return json.load(open(CATALOG_FILE, encoding="utf-8"))["items"]
+        return polite.read_json(CATALOG_FILE)["items"]
     except (OSError, ValueError, KeyError):
         return []
 
@@ -220,7 +220,7 @@ def build_bulletins(idx, years=BULLETIN_YEARS):
                 save_index(idx)
                 missing += 1
                 continue
-        if open(pdf, "rb").read(5) != b"%PDF-":
+        if polite.read_bytes(pdf, 5) != b"%PDF-":
             log("bulletin %d: not a PDF; removing" % y)
             os.remove(pdf)
             continue
@@ -228,7 +228,7 @@ def build_bulletins(idx, years=BULLETIN_YEARS):
         os.makedirs(outdir, exist_ok=True)
         txt = os.path.join(outdir, ident + ".txt")
         pdftotext(pdf, txt)
-        text = open(txt, encoding="utf-8", errors="replace").read()
+        text = polite.read_text(txt, errors="replace")
         counts = bulletin_year_counts(text)
         top = counts.most_common(1)[0][0] if counts else None
         years_found = [y] if (top is None or counts[y] >= 0.5 * counts[top]) else [top]
@@ -253,7 +253,7 @@ def probe_file():
 
 def read_probe():
     try:
-        return json.load(open(probe_file()))
+        return polite.read_json(probe_file())
     except (OSError, ValueError):
         return {}
 
@@ -278,7 +278,7 @@ def ia_probe(force=False, now=time.time):
         ok, msg = False, "archive.org did not answer: %s" % e
     os.makedirs(corpus_dir(), exist_ok=True)
     hist = (st.get("history") or [])[-20:] + [{"when": t, "ok": ok}]
-    json.dump({"when": t, "ok": ok, "message": msg, "history": hist}, open(probe_file(), "w"))
+    polite.write_json(probe_file(), {"when": t, "ok": ok, "message": msg, "history": hist})
     return ok, msg
 
 
@@ -383,8 +383,8 @@ def build_ia(idx, series_filter, max_items=None):
             n += 1
         except polite.NetworkError as e:
             log("archive.org stopped answering (%s); recording and stopping. Probe again in 30 minutes." % e)
-            json.dump({"when": time.time(), "ok": False, "message": str(e), "history": read_probe().get("history", [])},
-                      open(probe_file(), "w"))
+            polite.write_json(probe_file(), {"when": time.time(), "ok": False, "message": str(e),
+                                             "history": read_probe().get("history", [])})
             return False, n
         except polite.Blocked as e:
             log("BLOCKED: %s" % e)
@@ -663,7 +663,7 @@ def select_volumes(idx, series=None, years=None):
 
 
 def volume_text(v):
-    return normalise_text(open(os.path.join(corpus_dir(), v["path"]), encoding="utf-8", errors="replace").read())
+    return normalise_text(polite.read_text(os.path.join(corpus_dir(), v["path"]), errors="replace"))
 
 
 def snippet(text, s, e, before, after):
@@ -804,7 +804,7 @@ def inside_search(identifier, phrase):
     key = hashlib.sha1(("%s|%s" % (identifier, phrase)).encode()).hexdigest()
     path = os.path.join(corpus_dir(), "_inside", key + ".json")
     if os.path.exists(path):
-        return json.load(open(path))
+        return polite.read_json(path)
     meta = ia_meta(identifier)
     srv, dr = meta.get("server") or meta.get("d1"), meta.get("dir")
     if not srv or not dr:
@@ -910,7 +910,7 @@ def local_text_for_url(url):
     if not v:
         return None
     path = os.path.join(corpus_dir(), v["path"])
-    return open(path, "rb").read() if os.path.exists(path) else None
+    return polite.read_bytes(path) if os.path.exists(path) else None
 
 
 def main(argv=None):

@@ -92,7 +92,7 @@ def log(msg):
 def fetch_cached(url, path, validate=None):
     """-> (text, fetched_now). Caches only responses that validate."""
     if os.path.exists(path):
-        return open(path, encoding="utf-8").read(), False
+        return polite.read_text(path), False
     r = polite.get(url, log=log)
     if r.status != 200:
         raise polite.PoliteError("HTTP %d for %s" % (r.status, url))
@@ -131,7 +131,7 @@ def cached_index_slugs():
     """Index rows from every cached index page, in order, de-duplicated."""
     rows, seen, n = [], set(), 0
     while os.path.exists(index_path(n)):
-        for r in parse_index(open(index_path(n), encoding="utf-8").read()):
+        for r in parse_index(polite.read_text(index_path(n))):
             if r["slug"] not in seen:
                 seen.add(r["slug"])
                 rows.append(r)
@@ -186,7 +186,7 @@ def cmd_crawl(a):
             rate = fetched / max(time.time() - t0, 1)
             left = len(rows) - i
             log("%d/%d places (%d requests this run, %.2f req/s)" % (i, len(rows), fetched, rate))
-    json.dump(failures, open(os.path.join(uslhs_dir(), "crawl_failures.json"), "w"), indent=1)
+    polite.write_json(os.path.join(uslhs_dir(), "crawl_failures.json"), failures, indent=1)
     log("crawl finished: %d places, %d requests this run, %d failures" % (len(rows), fetched, len(failures)))
     return 0 if not failures else 1
 
@@ -467,7 +467,7 @@ def cmd_build(a):
         if not os.path.exists(path):
             missing.append(r["slug"])
             continue
-        page = open(path, encoding="utf-8").read()
+        page = polite.read_text(path)
         p = parse_place(page, r["slug"])
         p.setdefault("name", r["name"])
         if not p.get("type") and r.get("type"):
@@ -478,15 +478,15 @@ def cmd_build(a):
             unmapped[u] = unmapped.get(u, 0) + 1
         rid = p.get("roster_id")
         if rid and os.path.exists(people_path(rid)):
-            lines = roster_lines(parse_roster(open(people_path(rid), encoding="utf-8").read()))
+            lines = roster_lines(parse_roster(polite.read_text(people_path(rid))))
             p["roster_lines"] = len(lines)
             rosters[str(rid)] = {"slug": r["slug"], "name": p["name"], "lines": lines}
         else:
             p["roster_lines"] = 0
         places.append(p)
     os.makedirs(uslhs_dir(), exist_ok=True)
-    json.dump(places, open(places_file(), "w"), indent=0, ensure_ascii=False)
-    json.dump(rosters, open(rosters_file(), "w"), indent=0, ensure_ascii=False)
+    polite.write_json(places_file(), places, indent=0, ensure_ascii=False)
+    polite.write_json(rosters_file(), rosters, indent=0, ensure_ascii=False)
     log("built %d places (%d not fetched yet), %d rosters" % (len(places), len(missing), len(rosters)))
     if unmapped:
         log("labels not in FIELD_MAP (review): " + ", ".join("%s x%d" % kv for kv in sorted(unmapped.items())))
@@ -495,8 +495,8 @@ def cmd_build(a):
 
 def load_data():
     try:
-        places = json.load(open(places_file(), encoding="utf-8"))
-        rosters = json.load(open(rosters_file(), encoding="utf-8"))
+        places = polite.read_json(places_file())
+        rosters = polite.read_json(rosters_file())
     except OSError:
         sys.exit("No parsed USLHS cache at %s. Run `research/roster.py build` (after `crawl`)." % uslhs_dir())
     return places, rosters
@@ -562,6 +562,7 @@ def haversine_km(lat1, lon1, lat2, lon2):
 def rank_candidates(places, names, state=None, near=None, kinds=None):
     """-> [(rank, name_score, dist_km|None, place)] best first."""
     code = state_code(state) if state else None
+    prefer_light = not kinds and not any(re.search(r"life|saving|surf|lightship|vessel", n or "", re.I) for n in names)
     out = []
     for p in places:
         if code and p.get("state") and p["state"] != code:
@@ -573,6 +574,8 @@ def rank_candidates(places, names, state=None, near=None, kinds=None):
         if near and "lat" in p and "lon" in p:
             d = haversine_km(near[0], near[1], p["lat"], p["lon"])
         rank = sc
+        if prefer_light and p.get("type") == "Light Station":
+            rank += 0.12  # a name shared by a light and its life-saving station means the light, unless asked otherwise
         if d is not None:
             rank += 0.3 if d <= 1 else 0.15 if d <= 5 else 0.05 if d <= 25 else (-0.2 if d > 100 else 0.0)
         if names and sc < 0.45 and (d is None or d > 1):
@@ -705,7 +708,7 @@ def place_text(slug=None, rid=None):
     """Plain text of a cached place page (its fact fields) followed by its roster, as the archive prints
     them; None when the page is not cached."""
     if slug and os.path.exists(place_path(slug)):
-        page = open(place_path(slug), encoding="utf-8").read()
+        page = polite.read_text(place_path(slug))
         _, rid = place_nids(page)
         out = [clean(re.search(r'<h1><span class="field title">(.*?)</span>', page, re.S).group(1)) if "<h1>" in page else slug]
         art = page[page.find("<article>"):page.find("</article>")]
@@ -719,7 +722,7 @@ def place_text(slug=None, rid=None):
     else:
         out = []
     if rid and os.path.exists(people_path(rid)):
-        raw = parse_roster(open(people_path(rid), encoding="utf-8").read())
+        raw = parse_roster(polite.read_text(people_path(rid)))
         out.append("")
         out.append("People (%s/general/showPeople/%s)" % (BASE, rid))
         role = None
@@ -760,7 +763,7 @@ def station_record(station_id):
     folder = region if country == "us" else "%s-%s" % (country, region)
     path = os.path.join(stations_dir(), folder, station_id + ".json")
     if os.path.exists(path):
-        return json.load(open(path, encoding="utf-8")), None
+        return polite.read_json(path), None
     return None, "no station record at %s" % path
 
 
