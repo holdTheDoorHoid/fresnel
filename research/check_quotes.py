@@ -80,8 +80,11 @@ def cites(e):
     return [int(x) for x in re.findall(r"\d+", str(c))]
 
 
+DATA = os.path.join(ROOT, "data")  # --dir moves it (the writer pilot keeps each model's output apart)
+
+
 def check(rid):
-    path = os.path.join(ROOT, "data", "research", f"{rid}.json")
+    path = os.path.join(DATA, "research", f"{rid}.json")
     if not os.path.exists(path):  # not written (the researcher gave up or was blocked): nothing to check
         return {"id": rid, "found": 0, "close": 0, "missing": 0, "unreadable": 0, "no_source": 0, "bad": [], "absent": True}
     r = json.load(open(path, encoding="utf-8"))
@@ -130,8 +133,12 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--json")
+    ap.add_argument("--dir", help="folder holding research/ and stories/ (default: the repo's data/)")
     a = ap.parse_args()
-    ids = a.ids or ([os.path.basename(p)[:-5] for p in sorted(glob.glob(os.path.join(ROOT, "data", "research", "*.json")))]
+    global DATA
+    if a.dir:
+        DATA = os.path.abspath(a.dir)
+    ids = a.ids or ([os.path.basename(p)[:-5] for p in sorted(glob.glob(os.path.join(DATA, "research", "*.json")))]
                     if a.all else changed_ids())
     rows = [check(i) for i in ids]
     tot = {k: sum(r[k] for r in rows) for k in ("found", "close", "missing", "unreadable", "no_source")}
