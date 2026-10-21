@@ -172,7 +172,7 @@ def classify(name: str, bold_major: bool, desc: str) -> tuple[str, bool]:
     description naming a lighthouse, dwelling, keeper or lantern, or a tower attached to a building.
     Other towers are class `tower` (a small modern tower; kept only where a station is), skeleton
     towers, poles, piles, dolphins, masts, posts and anything with a daymark are `beacon`."""
-    if re.search(r"light ?house|light ?station|lightstation", name, re.I) and not (
+    if re.search(r"light ?house|light ?station|lightstation|fog signal station", name, re.I) and not (
             re.match(r"lighthouse (?:point|beach|island|shoal|rock|road|park|bay|cove)\b", name, re.I)
             and NOT_LIGHTHOUSE.search(desc)):
         return "lighthouse", True

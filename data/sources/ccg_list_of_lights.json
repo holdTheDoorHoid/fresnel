@@ -7,14 +7,14 @@
  "notes": {
   "sections": 114,
   "fixed_aids": 4482,
-  "clear_lighthouses": 58,
-  "kept_near_a_station": 845,
-  "dropped": 3579,
+  "clear_lighthouses": 60,
+  "kept_near_a_station": 844,
+  "dropped": 3578,
   "no_region": 3,
   "fixed_aids_by_class": {
    "beacon": 3182,
-   "lighthouse": 58,
-   "other": 241,
+   "lighthouse": 60,
+   "other": 239,
    "tower": 1001
   },
   "match_radius_m": 150.0,
@@ -52512,7 +52512,7 @@
    "lon": -53.2075,
    "precision": "exact",
    "kind": "harbor_light",
-   "kind_raw": "other",
+   "kind_raw": "lighthouse",
    "role": null,
    "status": "active",
    "status_raw": "listed in the current List of Lights",
@@ -52561,15 +52561,12 @@
     "location_text": "On building.",
     "structure_text": "....................",
     "major_light": false,
-    "aid_class": "other",
-    "clear_lighthouse": false,
+    "aid_class": "lighthouse",
+    "clear_lighthouse": true,
     "season": "year round",
     "join_keys": [
      "ccg:N463",
      "adm:H522"
-    ],
-    "near": [
-     "lighthousefriends"
     ]
    }
   },
@@ -54884,6 +54881,76 @@
     ],
     "near": [
      "lighthousefriends"
+    ]
+   }
+  },
+  {
+   "key": "ccg_list_of_lights:N7",
+   "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl1-en.php",
+   "name": "St. Shotts Fog Signal Station",
+   "other_names": [],
+   "country": "CA",
+   "region": "NL",
+   "county": null,
+   "lat": 46.623611,
+   "lon": -53.594333,
+   "precision": "exact",
+   "kind": "harbor_light",
+   "kind_raw": "lighthouse",
+   "role": null,
+   "status": "active",
+   "status_raw": "listed in the current List of Lights",
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": "horn",
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "N7",
+    "nga": null,
+    "admiralty": "H438"
+   },
+   "agency": "Canadian Coast Guard",
+   "ownership": "federal",
+   "events": [],
+   "photos": [],
+   "links": [
+    {
+     "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape Race to St. Shott’s",
+     "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl1-en.php",
+     "kind": "reference"
+    }
+   ],
+   "relations": {},
+   "extra": {
+    "ccg_volume": "newfoundland",
+    "section": "Newfoundland and Labrador Coast - Cape Race to St. Shott’s",
+    "area": null,
+    "list_name": "St. Shotts Fog Signal Station",
+    "location_text": null,
+    "structure_text": "White square building, brown roof.",
+    "major_light": false,
+    "aid_class": "lighthouse",
+    "clear_lighthouse": true,
+    "season": "year round",
+    "join_keys": [
+     "ccg:N7",
+     "adm:H438"
     ]
    }
   },
