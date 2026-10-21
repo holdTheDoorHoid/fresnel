@@ -41,8 +41,9 @@ What the tags mean (each rule is a field of the source record):
   light to a station it lies on, never start one (DESIGN.md section 1: no modern beacons).
 - extra.minor_beacon_suspect: elements that OSM itself suggests are minor beacons rather than
   lighthouses: a fixme saying "beacon" (787 of Canada's 1,485 lighthouses were imported from
-  NRCan CanVec with "fixme=could be a beacon with a light", survey_canada.md 1.7), or a
-  seamark:type=light_minor with no name, register, heritage or Wikidata link. The merge never
+  NRCan CanVec with "fixme=could be a beacon with a light", survey_canada.md 1.7), a
+  seamark:type=light_minor with no name, or a name that is a numbered aid ("Light 147",
+  "Daybeacon", "Aid to Navigation"), in each case with no register, heritage or Wikidata link. The merge never
   starts a station from one; it lists them for review.
 - extra.decorative_hint: tags that suggest a decorative "lighthouse" (miniature golf, a shop, a
   restaurant, a playground, a garden ornament): the merge lists these for review, never hides on
@@ -347,9 +348,14 @@ def decorative_hint(tags: dict, name: str | None) -> str | None:
     return None
 
 
+NUMBERED_AID_RE = re.compile(r"\b(light|daybeacon|beacon|lt)\s*#?\d+[a-z]?\b|\baid to navigation\b|\bdaybeacon\b|\bdaymark\b", re.I)
+
+
 def minor_beacon_hint(tags: dict, name: str | None) -> str | None:
     fixme = (tags.get("fixme") or tags.get("FIXME") or "")
     linked = tags.get("wikidata") or tags.get("ref:nrhp") or tags.get("heritage") or tags.get("wikipedia")
+    if name and NUMBERED_AID_RE.search(name) and not linked:
+        return f"a numbered aid or daybeacon by its name: {name}"
     if re.search(r"\bbeacon\b", fixme, re.I) and not linked:
         return f"fixme={fixme}"
     if tags.get("seamark:type") == "light_minor" and not name and not linked:

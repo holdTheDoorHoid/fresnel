@@ -1428,6 +1428,28 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
             why.append("name")
         if why:
             decorative.append({"id": rec["id"], "name": rec["name"], "region": rec["region"], "why": why})
+    # An OpenStreetMap-only station with no charted light that shares its name with a registered
+    # station of another region: often a replica (Lake Havasu's copies of famous lights) or a
+    # decorative copy.
+    known: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for st, rec in resolved:
+        if rec["hidden"] or not any(r.source == "wikidata" for r in st.recs()) or not rec["registers"]:
+            continue
+        for f in name_forms(rec["name"]):
+            if len(f.core.split()) >= 2:
+                known[f.core].append((rec["id"], rec["region"]))
+    by_id = {d["id"]: d for d in decorative}
+    for st, rec in resolved:
+        if rec["hidden"] or {s["source"] for s in rec["sources"]} != {"osm"} or (rec.get("light") or {}).get("characteristic"):
+            continue
+        twins = sorted({i for f in name_forms(rec["name"]) for i, reg in known.get(f.core, []) if reg != rec["region"]})
+        if twins:
+            entry = by_id.get(rec["id"])
+            if entry is None:
+                entry = {"id": rec["id"], "name": rec["name"], "region": rec["region"], "why": []}
+                decorative.append(entry)
+                by_id[rec["id"]] = entry
+            entry["why"].append("shares its name with " + ", ".join(twins[:3]) + " (a replica?)")
     # Possible duplicates: two visible stations within 150 m.
     close = []
     pts = sorted(((rec["location"]["lat"], rec["location"]["lon"], rec["id"], rec["name"], rec["kind"]) for rec in visible))
