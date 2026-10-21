@@ -80,6 +80,28 @@ def save_index(idx):
     os.replace(tmp, index_file())
 
 
+def update_index(idx, fn):
+    """Apply fn(index) to the index file as it is on disk right now (under a lock, so several processes can
+    extend the corpus at once without overwriting each other), then refresh the caller's in-memory copy."""
+    import fcntl
+    os.makedirs(corpus_dir(), exist_ok=True)
+    with open(index_file() + ".lock", "a+") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        disk = load_index()
+        fn(disk)
+        save_index(disk)
+    idx.clear()
+    idx.update(disk)
+
+
+def upsert_volume(idx, rec):
+    def fn(d):
+        d["volumes"] = [v for v in d["volumes"] if not (v["series"] == rec["series"] and v["identifier"] == rec["identifier"])]
+        d["volumes"].append(rec)
+        d.get("failed", {}).pop(rec["identifier"], None)
+    update_index(idx, fn)
+
+
 def indexed(idx, series, identifier):
     return any(v["series"] == series and v["identifier"] == identifier for v in idx["volumes"])
 
@@ -236,9 +258,8 @@ def build_bulletins(idx, years=BULLETIN_YEARS):
                 continue
             if r.status != 200:
                 log("%s: HTTP %d (%s)" % (ident, r.status, url))
-                idx.setdefault("not_found", {})["bulletin/" + ident] = {"url": url, "status": r.status,
-                                                                          "when": time.strftime("%Y-%m-%d")}
-                save_index(idx)
+                update_index(idx, lambda d: d.setdefault("not_found", {}).__setitem__(
+                    "bulletin/" + ident, {"url": url, "status": r.status, "when": time.strftime("%Y-%m-%d")}))
                 missing += 1
                 continue
         if polite.read_bytes(pdf, 5) != b"%PDF-":
@@ -262,9 +283,7 @@ def build_bulletins(idx, years=BULLETIN_YEARS):
                              "pdf_sha256": sha256_file(pdf), "pdf_bytes": os.path.getsize(pdf),
                              "kind": "index" if is_index else "volume",
                              "aliases": [bulletin_url(a) for a in aliases]})
-        idx["volumes"] = [v for v in idx["volumes"] if not (v["series"] == "bulletin" and v["identifier"] == ident)]
-        idx["volumes"].append(rec)
-        save_index(idx)
+        upsert_volume(idx, rec)
         got += 1
         log("%s: %d pages, %.1f MB pdf" % (ident, rec["pages"], rec["pdf_bytes"] / 1e6))
     return got, missing
@@ -405,9 +424,7 @@ def add_ia_volume(idx, item):
                          **({"seeded_from": os.path.relpath(seed, polite.raw_root())} if seed else {})})
     if size < 100000:
         rec["suspect"] = "text under 100 KB"
-    idx["volumes"] = [v for v in idx["volumes"] if not (v["series"] == series and v["identifier"] == ident)]
-    idx["volumes"].append(rec)
-    save_index(idx)
+    upsert_volume(idx, rec)
     flag = " MISMATCH label %s" % label if rec["year_mismatch"] else ""
     log("%s %s: years %s from %s, %.2f MB%s" % (series, ident, years, source, size / 1e6, flag))
     return rec
@@ -448,8 +465,7 @@ def build_ia(idx, series_filter, max_items=None):
             return False, n
         except polite.PoliteError as e:
             log("%s: %s (skipped; will retry on the next build)" % (item["identifier"], e))
-            idx.setdefault("failed", {})[item["identifier"]] = str(e)
-            save_index(idx)
+            update_index(idx, lambda d: d.setdefault("failed", {}).__setitem__(item["identifier"], str(e)))
     return True, n
 
 

@@ -390,6 +390,19 @@ class DownloadIA(unittest.TestCase):
         self.assertIn("786 hours", out)
 
 
+class IndexMerging(unittest.TestCase):
+    def test_two_writers_do_not_overwrite_each_other(self):
+        raw = tempfile.mkdtemp()
+        os.environ["FRESNEL_RAW_ROOT"] = raw
+        mine, theirs = {"volumes": []}, {"volumes": []}
+        rec = lambda i: {"series": "lss", "year": 1890, "years": [1890], "identifier": i, "path": "x", "bytes": 1}
+        corpus.upsert_volume(mine, rec("a"))
+        corpus.upsert_volume(theirs, rec("b"))  # a second process with its own stale copy
+        corpus.upsert_volume(mine, rec("c"))    # `mine` is stale (does not know "b"): must not drop it
+        self.assertEqual(sorted(v["identifier"] for v in corpus.load_index()["volumes"]), ["a", "b", "c"])
+        self.assertEqual(sorted(v["identifier"] for v in mine["volumes"]), ["a", "b", "c"])
+
+
 class BuildBulletins(unittest.TestCase):
     def test_pdf_to_text_with_form_feeds(self):
         raw = tempfile.mkdtemp()
