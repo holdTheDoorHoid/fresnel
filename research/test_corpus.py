@@ -91,6 +91,19 @@ class Years(unittest.TestCase):
              + "body " * 50 + "ANNUAL REPORT OF THE COMMISSIONER OF LIGHTHOUSES TO THE SECRETARY OF COMMERCE FOR THE FISCAL YEAR ENDED JUNE 30, 1916")
         self.assertEqual([y for _, y in corpus.report_starts(t)], [1915, 1916])
 
+    def test_a_citation_in_running_text_is_not_a_title_page(self):
+        t = ("The Lyle guns are described in the report of the Life-Saving Service for the fiscal year ending June 30, 1878, which "
+             "contains plates. ") + "x " * 50
+        self.assertEqual(corpus.report_starts(t), [])
+        title = "ANNUAL REPORT OF THE LIFE-SAVING SERVICE FOR THE FISCAL YEAR ENDING JUNE 30, 1888 "
+        self.assertEqual(corpus.report_starts(title), [[0, 1888]])
+
+    def test_single_report_volumes_keep_a_confirmed_label(self):
+        counts = corpus.detect_years("the fiscal year ended 31st March, 1921. " * 8 + "and the year ended 31st March, 1920. " * 4)
+        self.assertEqual(corpus.choose_years(counts, [1921], single=True), ([1921], "text"))
+        self.assertEqual(corpus.choose_years(counts, [1921])[0], [1920, 1921])
+        self.assertEqual(corpus.choose_years(counts, [1925], single=True)[0], [1920, 1921])  # label not confirmed
+
     def test_attribute_year(self):
         v = {"years": [1915, 1916], "report_starts": [[0, 1915], [700, 1916]]}
         self.assertEqual(corpus.attribute_year(v, 5), 1915)

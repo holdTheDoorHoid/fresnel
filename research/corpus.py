@@ -143,20 +143,25 @@ def detect_years(head, lo=1850, hi=1940):
     return c
 
 
-def choose_years(counts, label_years):
+def choose_years(counts, label_years, single=False):
     """The year(s) a volume covers, from its own text. Falls back to the label when the text is silent.
+    `single` marks series whose volumes hold exactly one report: then a label the text confirms stands (a Canadian
+    report for 1920-21 also names 1920 as the previous year, which is not a second report).
     -> (years, source) where source is 'text' or 'label'."""
     if not counts:
         return sorted(label_years), "label"
     top = max(counts.values())
     years = sorted(y for y, n in counts.items() if n >= max(2, 0.3 * top) or (top == 1 and n == 1))
+    if single and label_years and all(counts.get(y, 0) >= max(2, 0.3 * top) for y in label_years):
+        return sorted(label_years), "text"
     return (years or sorted(label_years)), "text"
 
 
-TITLE_RX = re.compile(r"(?:annual\s+)?report\s+of\s+the\s+(?:commissioner|light[\s-]*house\s+board|chief|general|"
-                      r"superintendent|department|minister|life[\s-]*saving)[^.]{0,200}?(?:fiscal\s+)?year\s+"
-                      r"(?:ending|ended)\s+(?:on\s+)?(?:the\s+)?(?:(?:30(?:th)?\s+)?June\s*(?:30(?:th)?)?[,.\s]*|[^0-9]{0,30}?)"
-                      r"(1[89]\d\d)", re.I)
+TITLE_RX = re.compile(r"(?:ANNUAL\s+)?REPORT\s+OF\s+THE\s+(?:COMMISSIONER|LIGHT[\s-]*HOUSE\s+BOARD|CHIEF|GENERAL|SUPERINTENDENT|"
+                      r"DEPARTMENT|MINISTER|LIFE[\s-]*SAVING|BUREAU)[A-Z0-9\s,.\-'&]{0,200}?(?:FISCAL\s+)?YEAR\s+"
+                      r"(?:ENDING|ENDED)\s+(?:ON\s+)?(?:THE\s+)?(?:(?:30(?:TH)?\s+)?JUNE\s*(?:30(?:TH)?)?[,.\s]*|"
+                      r"(?:31(?:ST)?\s+)?MARCH\s*(?:31(?:ST)?)?[,.\s]*)"
+                      r"(1[89]\d\d)")  # capital letters only: a title page, not a citation in the running text
 
 
 def report_starts(text):
@@ -416,7 +421,7 @@ def add_ia_volume(idx, item):
     counts = detect_years(body) if series != "general" else Counter()  # general histories: the label (publication year) stands
     # whole volume for the reports: compilations bind two years, and the front matter alone misleads
     label = item.get("years") or []
-    years, source = choose_years(counts, label)
+    years, source = choose_years(counts, label, single=series == "marine_ca")
     if not years:
         years = [0]
     outdir = os.path.join(corpus_dir(), series, str(min(years)))
@@ -558,6 +563,45 @@ def cmd_status(a):
     pending = [i for i in load_catalog() if not indexed(idx, i["series"], i["identifier"])]
     if pending:
         print("catalog items not yet downloaded: %d" % len(pending))
+    return 0
+
+
+def cmd_reindex(a):
+    """Recompute years, year counts and report boundaries of every archive.org volume from its stored text (no network),
+    moving a file when its year folder changes."""
+    import shutil
+    idx = load_index()
+    changed = 0
+    updates = {}
+    for v in list(idx["volumes"]):
+        if v["series"] in ("bulletin", "general"):
+            continue
+        path = os.path.join(corpus_dir(), v["path"])
+        if not os.path.exists(path):
+            continue
+        body = polite.read_text(path, errors="replace")
+        counts = detect_years(body)
+        years, source = choose_years(counts, v.get("label_years") or [], single=v["series"] == "marine_ca")
+        starts = report_starts(normalise_text(body))
+        years = sorted(set(years) | {y for _, y in starts}) or [0]
+        new_path = os.path.join(corpus_dir(), v["series"], str(min(years)), v["identifier"] + ".txt")
+        if (years, starts, source) == (v["years"], v.get("report_starts"), v.get("year_source")) and new_path == path:
+            continue
+        os.makedirs(os.path.dirname(new_path), exist_ok=True)
+        if new_path != path:
+            shutil.move(path, new_path)
+        updates[(v["series"], v["identifier"])] = {
+            "years": years, "year": min(years), "report_starts": starts, "year_source": source,
+            "year_counts": {str(k): n for k, n in counts.most_common(4)},
+            "year_mismatch": bool(v.get("label_years")) and sorted(v["label_years"]) != years and source == "text",
+            "path": os.path.relpath(new_path, corpus_dir())}
+        changed += 1
+        log("%s %s: years %s" % (v["series"], v["identifier"], years))
+    def fn(d):
+        for x in d["volumes"]:
+            x.update(updates.get((x["series"], x["identifier"]), {}))
+    update_index(idx, fn)
+    log("%d volume(s) re-indexed" % changed)
     return 0
 
 
@@ -1282,13 +1326,14 @@ def main(argv=None):
     b.add_argument("--pages", action="store_true",
                    help="fetch page-index data (OCR search text, page index, scan data) for volumes that lack it")
     sub.add_parser("status", help="what the corpus holds")
+    sub.add_parser("reindex", help="re-read every volume's years and report boundaries from its stored text")
     c = sub.add_parser("cite", help="the URL to cite for an identifier (or a Bulletin year)")
     c.add_argument("identifier")
     d = sub.add_parser("discover", help="list archive.org items for a query")
     d.add_argument("query")
     d.add_argument("--rows", type=int, default=100)
     a = ap.parse_args(argv)
-    return {"grep": cmd_grep, "page": cmd_page, "build": cmd_build, "status": cmd_status, "cite": cmd_cite, "discover": cmd_discover}[a.cmd](a)
+    return {"grep": cmd_grep, "page": cmd_page, "build": cmd_build, "status": cmd_status, "reindex": cmd_reindex, "cite": cmd_cite, "discover": cmd_discover}[a.cmd](a)
 
 
 if __name__ == "__main__":
