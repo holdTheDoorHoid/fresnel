@@ -83,7 +83,7 @@ class PageText(unittest.TestCase):
 
     def test_grep_context_and_gaps(self):
         text = "\n".join("line %d" % i for i in range(20))
-        out = newspapers.grep_lines(text, "line 3$|line 15$", 1)
+        out = newspapers.grep_lines(text, r"line 3\b|line 15\b", 1)
         self.assertEqual(out, ["line 2", "line 3", "line 4", "...", "line 14", "line 15", "line 16"])
 
 
