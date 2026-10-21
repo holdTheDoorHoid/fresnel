@@ -41,6 +41,7 @@ OUR_AGENT = "fresnelbot"
 SITE_GAPS = {"loc.gov": 5.0}
 ROBOTS_HOST = {"archive.org": "archive.org"}
 DEFAULT_GAP = 2.0
+MARGIN = 0.05  # seconds added to every gap, so clock jitter never makes two requests land inside it
 
 
 def raw_root():
@@ -165,7 +166,7 @@ class Throttle:
                 last = 0.0
             side = self._read_side()
             now = self.clock()
-            until = last + self.gap
+            until = last + self.gap + MARGIN
             cooldown = float(side.get("cooldown_until", 0) or 0)
             if cooldown > now:
                 if cooldown - now > self.max_cooldown_wait:

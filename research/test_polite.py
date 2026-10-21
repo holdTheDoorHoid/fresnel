@@ -68,7 +68,7 @@ class ThrottleTests(unittest.TestCase):
             fh.write(str(self.c.now))  # fetch_text stamps "now" at the end of its request
         with self.th():
             pass
-        self.assertAlmostEqual(sum(self.c.slept), 2.0, places=2)
+        self.assertAlmostEqual(sum(self.c.slept), 2.0 + polite.MARGIN, places=2)
 
     def test_per_minute_cap(self):
         starts = []
