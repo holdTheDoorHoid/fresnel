@@ -214,15 +214,73 @@ class Matching(unittest.TestCase):
         p, cands, msg = roster.resolve_station("us-ca-point-reyes", self.places())
         self.assertEqual(p["slug"], "point-reyes")  # the light, not the life-saving station of the same name
 
-    def test_far_position_is_unsure(self):
+    def test_partial_name_but_the_only_place_at_that_spot(self):
+        os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
+        os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "wi"))
+        write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "wi", "us-wi-ashland-harbor-breakwater.json"), json.dumps(
+            {"id": "us-wi-ashland-harbor-breakwater", "name": "Ashland Harbor Breakwater Light", "kind": "pier_light",
+             "region": "WI", "location": {"lat": 46.6, "lon": -90.87}}))
+        places = [{"nid": 9, "slug": "ashland-breakwater", "name": "Ashland Breakwater", "type": "Light Station",
+                   "state": "WI", "lat": 46.6001, "lon": -90.8701, "roster_lines": 3},
+                  {"nid": 10, "slug": "ashland-harbor", "name": "Ashland Something", "type": "Light Station",
+                   "state": "WI", "lat": 46.9, "lon": -90.5, "roster_lines": 1}]
+        p, cands, msg = roster.resolve_station("us-wi-ashland-harbor-breakwater", places)
+        self.assertEqual(p["slug"], "ashland-breakwater")
+        self.assertIn("part of the name", msg)
+
+    def test_place_without_position_but_exact_name(self):
+        os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
+        os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ny"))
+        write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ny", "us-ny-brewerton-range-rear.json"), json.dumps(
+            {"id": "us-ny-brewerton-range-rear", "name": "Brewerton Range Rear Lighthouse", "kind": "range_lights",
+             "region": "NY", "location": {"lat": 43.24, "lon": -76.14}}))
+        places = [{"nid": 11, "slug": "brewerton-range-rear", "name": "Brewerton Range Rear", "type": "Minor Aid to Navigation",
+                   "state": "NY", "roster_lines": 2}]
+        p, cands, msg = roster.resolve_station("us-ny-brewerton-range-rear", places)
+        self.assertEqual(p["slug"], "brewerton-range-rear")
+        self.assertIn("no position", msg)
+
+    def test_a_light_filed_under_the_neighbouring_state(self):
+        os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
+        os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ny"))
+        write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ny", "us-ny-ambrose.json"), json.dumps(
+            {"id": "us-ny-ambrose", "name": "Ambrose Light", "kind": "lighthouse", "region": "NY",
+             "location": {"lat": 40.45, "lon": -73.8}}))
+        places = [{"nid": 12, "slug": "ambrose", "name": "Ambrose", "type": "Light Station", "state": "NJ",
+                   "lat": 40.4583, "lon": -73.8, "roster_lines": 4}]
+        p, cands, msg = roster.resolve_station("us-ny-ambrose", places)
+        self.assertEqual(p["slug"], "ambrose")
+
+    def test_far_position_but_unique_name_is_accepted_with_a_warning(self):
         os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
         os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ca"))
         write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "ca", "us-ca-point-reyes.json"), json.dumps(
             {"id": "us-ca-point-reyes", "name": "Point Reyes", "kind": "lighthouse", "region": "CA",
              "location": {"lat": 33.0, "lon": -118.0}}))
         p, cands, msg = roster.resolve_station("us-ca-point-reyes", self.places())
+        self.assertEqual(p["slug"], "point-reyes")
+        self.assertIn("WARNING", msg)
+
+    def test_two_same_name_places_far_apart_is_unsure(self):
+        os.environ["FRESNEL_STATIONS_DIR"] = tempfile.mkdtemp()
+        os.makedirs(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "me"))
+        write(os.path.join(os.environ["FRESNEL_STATIONS_DIR"], "me", "us-me-grindle-point.json"), json.dumps(
+            {"id": "us-me-grindle-point", "name": "Grindle Point", "kind": "lighthouse", "region": "ME",
+             "location": {"lat": 44.0, "lon": -69.0}}))
+        places = [{"nid": 20, "slug": "grindle-point", "name": "Grindle Point", "type": "Light Station", "state": "ME",
+                   "lat": 44.5, "lon": -68.9}, {"nid": 21, "slug": "grindle-point-2", "name": "Grindle Point", "type": "Light Station",
+                   "state": "ME", "lat": 45.5, "lon": -67.0}]
+        p, cands, msg = roster.resolve_station("us-me-grindle-point", places)
         self.assertIsNone(p)
-        self.assertTrue(cands)
+        self.assertEqual(len(cands), 2)
+
+    def test_coordinates_with_impossible_minutes_are_flagged_and_ignored(self):
+        self.assertFalse(roster.coord_valid("64\u00b0 88.70'"))
+        self.assertTrue(roster.coord_valid("43\u00b0 37.4'"))
+        places = [{"nid": 30, "slug": "x", "name": "Buck Island", "type": "Light Station", "state": "VI",
+                   "lat": 18.4, "lon": -65.4, "coord_suspect": True}]
+        c = roster.rank_candidates(places, ["Buck Island"], near=(18.4, -65.4))
+        self.assertIsNone(c[0][2])  # the bad position is not used as a distance
 
     def test_canada_is_out_of_scope(self):
         p, cands, msg = roster.resolve_station("ca-ns-sambro-island", self.places())

@@ -293,6 +293,14 @@ def parse_coord(s):
     return round(deg + mins / 60.0 + secs / 3600.0, 5), hemi
 
 
+def coord_valid(raw):
+    """False for 'degrees minutes' strings that cannot be right (minutes or seconds of 60 or more): the archive has a few."""
+    nums = [float(x) for x in re.findall(r"\d+(?:\.\d+)?", htmllib.unescape(raw or ""))]
+    if not nums:
+        return True
+    return nums[0] <= 180 and all(n < 60 for n in nums[1:3])
+
+
 def signed_latlon(lat_raw, lon_raw, state):
     """Decimal degrees with signs. The pages print degrees and minutes with no hemisphere, so: north
     everywhere except American Samoa (south); west everywhere except Guam and the Northern Marianas (east)."""
@@ -334,6 +342,8 @@ def parse_place(page_html, slug=None):
             p[key] = f[label]
     p["state"] = state_code(p.get("state_name"))
     p["lat"], p["lon"] = signed_latlon(p.get("lat_raw"), p.get("lon_raw"), p.get("state_name"))
+    if not (coord_valid(p.get("lat_raw")) and coord_valid(p.get("lon_raw"))):
+        p["coord_suspect"] = True  # e.g. 64 degrees 88.7 minutes: a typo in the archive; not used for matching
     p["existing"] = yes_no(p.get("existing"))
     p["open_to_public"] = yes_no(p.get("open_to_public")) if "open_to_public" in p else None
     p["start_year"] = to_year(p.get("start_year")) if "start_year" in p else None
@@ -635,7 +645,7 @@ def rank_candidates(places, names, state=None, near=None, kinds=None):
             continue
         sc = max((name_score(n, p.get("name", "")) for n in names), default=0.0) if names else 0.0
         d = None
-        if near and "lat" in p and "lon" in p:
+        if near and "lat" in p and "lon" in p and not p.get("coord_suspect"):
             d = haversine_km(near[0], near[1], p["lat"], p["lon"])
         rank = sc
         if prefer_light and p.get("type") == "Light Station":
@@ -853,23 +863,35 @@ def resolve_station(station_id, places):
         elif rec.get("kind") in ("lightship_station", "lightship"):
             kinds = ["lightship"]
         region = (rec.get("region") or region).lower()
-    cands = rank_candidates(places, names, state=region.upper(), near=near, kinds=kinds)
+    code = state_code(region)
+    cands = rank_candidates(places, names, state=None, near=near, kinds=kinds)
+    # a light off one state's shore can be filed under its neighbour: keep other states' places only if they are close
+    cands = [c for c in cands if c[3].get("state") in (None, code) or (c[2] is not None and c[2] <= 30.0)]
     if not cands:
         return None, cands, "; ".join(x for x in (note, "no USLHS place matches the name and state") if x)
     top = cands[0]
+
+    def within(c, km):
+        return c[2] is not None and c[2] <= km
+
+    other_close = [c for c in cands[1:] if within(c, 1.0) and c[1] >= 0.5]
     rivals = [c for c in cands[1:] if c[1] >= 0.85 and c[0] >= top[0] - 0.1 and (near is None or c[2] is None or c[2] <= 30.0)]
-    close = top[2] is not None and top[2] <= 1.0
-    # USLHS positions are only to the nearest minute (and sometimes off by more), so an exact, unrivalled name
-    # within 30 km is accepted with a warning; a name that merely resembles the station must be within 1 km.
-    near_enough = top[2] is not None and top[2] <= 30.0 and top[1] >= 0.95 and not rivals
-    by_name_only = near is None and top[1] >= 0.95 and not rivals
-    if top[1] >= 0.85 and (close and not [r for r in rivals if r[2] is not None and r[2] <= 1.0] or near_enough or by_name_only):
-        if close:
-            how = "name and position (%.2f km)" % top[2]
-        elif near_enough:
-            how = "name; its USLHS position is %.1f km from the station's (USLHS positions are only to the minute)" % top[2]
-        else:
+    how = None
+    if within(top, 1.0) and top[1] >= 0.85 and not [c for c in other_close if c[1] >= 0.85]:
+        how = "name and position (%.2f km)" % top[2]
+    elif within(top, 0.6) and top[1] >= 0.6 and not other_close:
+        how = "position (%.2f km, the only USLHS place there) and part of the name" % top[2]
+    elif top[1] >= 0.95 and not rivals:
+        if near is None:
             how = "name only (the station has no position)"
+        elif top[2] is None:
+            how = "name only (USLHS gives no position for it)"
+        elif top[2] <= 30.0:
+            how = "name; its USLHS position is %.1f km from the station's (USLHS positions are only to the minute)" % top[2]
+        elif not [c for c in cands[1:] if c[1] >= 0.85 and c[0] >= top[0] - 0.1]:
+            how = ("name only, WARNING: its USLHS position is %.0f km from the station's; the archive has some wrong "
+                   "coordinates, so check the place page is the right light" % top[2])
+    if how:
         msg = "matched %s by %s" % (top[3]["slug"], how)
         if note:
             msg += "; " + note
