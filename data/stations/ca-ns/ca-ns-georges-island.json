@@ -38,9 +38,9 @@
     "first_lit": 1876,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F F W W",
+    "characteristic": "F W",
     "focal_height_m": 18.0,
-    "range_nm": null,
+    "range_nm": 15.0,
     "fog_signal": "horn",
     "from": "ccg_list_of_lights"
   },
@@ -208,20 +208,6 @@
     }
   ],
   "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "ccg_list_of_lights",
-          "value": "F F W W"
-        },
-        {
-          "source": "osm",
-          "value": "F W"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    },
     {
       "field": "first_year",
       "values": [

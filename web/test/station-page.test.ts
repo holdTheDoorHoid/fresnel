@@ -5,6 +5,7 @@
 import { describe, expect, it } from 'vitest';
 import { SECTIONS, recordSummary, renderPanel, renderPanelStub, renderStationHead, renderStationMain } from '../src/render/station.ts';
 import { countsLine, sourcesRows } from '../src/render/site.ts';
+import { escapeHtml } from '../src/lib/html.ts';
 import { contextFor, fixtureData } from './helpers.ts';
 
 const { records, meta, geo } = fixtureData();
@@ -197,7 +198,7 @@ describe('site pages from meta.json', () => {
     const rows = sourcesRows(meta).value;
     for (const s of meta.sources) {
       expect(rows).toContain(`id="source-${s.id}"`);
-      if (s.license) expect(rows).toContain(s.license);
+      if (s.license) expect(rows).toContain(escapeHtml(s.license)); // the page escapes it (an apostrophe is &#39;)
     }
     expect(text(rows)).not.toMatch(/\b(null|undefined)\b/);
     expect(countsLine(meta)).toBe('14 stations on the map, 1 with a written history, 1 with a keepers roster.');

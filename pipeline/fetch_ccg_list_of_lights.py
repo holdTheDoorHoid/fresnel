@@ -148,14 +148,29 @@ def number_or_none(text: str) -> float | None:
     return float(t) if NUM_RE.match(t) else None
 
 
+def first_light(fragment: str) -> str:
+    """A cell's first line. The List puts each light of a station on its own line inside one cell
+    (a main light and a lower or coloured one); the first is the station's main light."""
+    for part in re.split(r"(?i)<br\s*/?>", fragment):
+        text = cc.text_of(part)
+        if text:
+            return text
+    return ""
+
+
+def _blank(text: str) -> bool:
+    """Empty, or only the dots and ellipses the List prints where a value is not given."""
+    return not text.strip(" .\u2026")
+
+
 def characteristic_of(char: str, colour: str, period: str) -> str | None:
     char, colour, period = (re.sub(r"\s+", " ", x).strip() for x in (char, colour, period))
-    if not char or char.startswith("."):
+    if _blank(char):
         return None
     out = [char]
-    if colour and not colour.startswith("."):
+    if not _blank(colour):
         out.append(colour)
-    if period and not period.startswith("."):
+    if not _blank(period):
         out.append(period)
     return " ".join(out)
 
@@ -283,8 +298,8 @@ def parse_section(html_text: str, vol: str, code: str, path: str) -> tuple[str, 
             "status_raw": "listed in the current List of Lights",
             "structure": {"type": None, "material": None, "built": None, "height_m": height_m, "status": None},
             "light": {"first_lit": None, "deactivated": None,
-                      "characteristic": characteristic_of(cc.text_of(c4), cc.text_of(c5), cc.text_of(c6)),
-                      "focal_height_m": number_or_none(cc.text_of(c7)), "range_nm": number_or_none(cc.text_of(c8)),
+                      "characteristic": characteristic_of(first_light(c4), first_light(c5), first_light(c6)),
+                      "focal_height_m": number_or_none(first_light(c7)), "range_nm": number_or_none(first_light(c8)),
                       "fog_signal": fog_signal_of(c10), "lens": None},
             "setting": None,
             "registers": [],

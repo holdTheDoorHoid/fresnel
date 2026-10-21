@@ -35,7 +35,7 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl G W 4s",
+    "characteristic": "Fl G 4s",
     "focal_height_m": 6.8,
     "range_nm": 7.0,
     "fog_signal": null,
@@ -107,22 +107,7 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "ccg_list_of_lights",
-          "value": "Fl G W 4s"
-        },
-        {
-          "source": "osm",
-          "value": "Fl G 4s"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": true,

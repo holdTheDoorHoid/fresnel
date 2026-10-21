@@ -39,9 +39,9 @@
     "first_lit": 1928,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F F W W",
-    "focal_height_m": 30.0,
-    "range_nm": 23.0,
+    "characteristic": "F W",
+    "focal_height_m": 29.7,
+    "range_nm": 20.0,
     "fog_signal": null,
     "from": "ccg_list_of_lights"
   },
@@ -119,7 +119,6 @@
       "part": "osm:node/1203629308",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
@@ -164,22 +163,7 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "ccg_list_of_lights",
-          "value": "F F W W"
-        },
-        {
-          "source": "osm",
-          "value": "F W"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

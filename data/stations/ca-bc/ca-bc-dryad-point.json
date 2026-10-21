@@ -39,7 +39,7 @@
     "first_lit": 1899,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc W R 5s",
+    "characteristic": "Oc W 5s",
     "focal_height_m": 11.6,
     "range_nm": 7.0,
     "fog_signal": null,
@@ -282,6 +282,20 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Oc W 5s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Oc WR 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
     {
       "field": "first_year",
       "values": [
