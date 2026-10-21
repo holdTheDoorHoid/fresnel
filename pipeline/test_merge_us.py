@@ -186,7 +186,7 @@ class ReplicaAndNamesakeTest(Case):
         f = self.files()
         self.assertEqual(sum(1 for i in f if i.startswith("us-ms-horn-island")), 1)
         self.assertEqual(sum(1 for i in f if i.startswith("us-fl-dog-island")), 3)   # two Wikidata items, and the record that fits neither alone
-        self.assertEqual([j["key"] for j in rep["joins_to_review"]["by_unique_namesake"]], ["lighthousefriends:1"])
+        self.assertEqual([j["key"] for j in rep["_run"]["joins_to_review"]["by_unique_namesake"]], ["lighthousefriends:1"])
 
     def test_successive_towers_with_one_name_and_different_years_are_two_structures(self):
         self.write("wikidata", [rec("wikidata", "Q1", "Punta Borinquen Light", 18.4972, -67.1488, structure={"type": None, "material": None, "built": 1922, "height_m": None, "status": None}),
@@ -263,6 +263,66 @@ class DecisionTest(Case):
         f = self.files()
         self.assertEqual(len(f), 1)
         self.assertEqual({s["source"] for s in next(iter(f.values()))["sources"]}, {"osm", "lighthousefriends"})
+
+
+class SecondRunTest(Case):
+    """A second run on a run's own output changes nothing (DESIGN 3.9): the order of arrival, pins and memory never decide."""
+
+    def merge_with(self, **kw):
+        merge.set_decisions(decisions(**kw))
+        return self.run_merge()
+
+    def test_a_station_that_pins_its_own_records_is_not_retired(self):
+        # Old and New Point Loma: one published station whose records are split into two by a "new:" pin
+        self.write("wikidata", [rec("wikidata", "Q1", "Old Point Light", 32.6650, -117.2410), rec("wikidata", "Q2", "Point Light", 32.6651, -117.2411)])
+        merge.set_decisions(merge._NoDecisions())
+        self.run_merge()
+        ids = sorted(self.files())
+        self.assertEqual(len(ids), 1)            # "Old Point Light" and "Point Light" are one station until a decision splits them
+        pins = {"wikidata:Q1": "new:us-me-old-point"}
+        self.merge_with(RECORD_JOINS=pins)
+        first = {k: v for k, v in self.files().items()}
+        self.assertIn("us-me-old-point", first)
+        self.assertEqual(len([f for f in first.values() if not f.get("merged_into")]), 2)
+        again = self.merge_with(RECORD_JOINS=pins)
+        self.assertEqual(again["_run"]["files_changed"], 0)
+        second = self.files()
+        self.assertFalse(second["us-me-old-point"].get("hidden"))
+        self.assertIsNone(second["us-me-old-point"].get("merged_into"))
+        self.assertEqual([s["key"] for s in second["us-me-old-point"]["sources"]], ["wikidata:Q1"])
+
+    def test_a_record_with_no_position_joins_by_name_once_the_pinned_records_have_given_the_station_its_name(self):
+        self.write("wikidata", [rec("wikidata", "Q1", "Zeta Light", 43.0, -70.0)])
+        self.write("osm", [rec("osm", "n1", "Beta Range Front", 43.0001, -70.0001, kind="range_lights", role="front_range",
+                               extra={"forms": ["man_made=lighthouse"]})])
+        self.write("rowlett", [rec("rowlett", "beta-front", "Beta Range Front", None, None, kind="range_lights", role="front_range", precision="none")])
+        rep = self.merge_with(RECORD_JOINS={"osm:n1": "wikidata:Q1"})
+        live = [f for f in self.files().values() if not f.get("merged_into")]
+        self.assertEqual(len(live), 1)
+        self.assertEqual({s["source"] for s in live[0]["sources"]}, {"wikidata", "osm", "rowlett"})
+        self.assertEqual(self.merge_with(RECORD_JOINS={"osm:n1": "wikidata:Q1"})["_run"]["files_changed"], 0)
+        self.assertNotIn("joins_to_review", rep)   # what a run did is not saved in the report
+
+    def test_a_record_with_no_position_joins_a_station_by_the_name_a_human_picked(self):
+        self.write("uslhs", [rec("uslhs", "8793", "Tucker Beach", 39.6697, -74.2747, region="NJ", status="lost")])
+        self.write("uslhs_passport", [rec("uslhs_passport", "stamp:nj:tuckers-island", "Tucker's Island", None, None, region="NJ", precision="none")])
+        kw = {"RECORD_JOINS": {"uslhs:8793": "new:us-nj-tuckers-island"}, "NAME_PICKS": {"us-nj-tuckers-island": "Tucker's Island Light"}}
+        self.merge_with(**kw)
+        f = self.files()
+        self.assertEqual(f["us-nj-tuckers-island"]["name"], "Tucker's Island Light")
+        self.assertEqual({s["source"] for s in f["us-nj-tuckers-island"]["sources"]}, {"uslhs", "uslhs_passport"})
+        self.assertEqual(self.merge_with(**kw)["_run"]["files_changed"], 0)
+
+    def test_pinned_records_are_placed_in_key_order(self):
+        self.write("wikidata", [rec("wikidata", "Q1", "Anchor Light", 43.0, -70.0)])
+        self.write("osm", [rec("osm", "n2", "Anchor Light", 43.0001, -70.0001, extra={"forms": ["man_made=lighthouse"]}),
+                           rec("osm", "n1", "Anchor Light", 43.0001, -70.0002, extra={"forms": ["man_made=lighthouse"]})])
+        pins = {"osm:n1": "wikidata:Q1", "osm:n2": "wikidata:Q1"}
+        self.merge_with(RECORD_JOINS=pins)
+        one = json.dumps(self.files(), sort_keys=True)
+        # a run with memory (the files now exist) arranges the same station
+        self.merge_with(RECORD_JOINS=pins)
+        self.assertEqual(json.dumps(self.files(), sort_keys=True), one)
 
 
 class RangeTest(Case):

@@ -125,5 +125,54 @@ class TypeTest(unittest.TestCase):
         self.assertIsNone(r["lat"])
 
 
+class _Box:
+    """A state as a lat/lon box, with the contains() of the Census polygons."""
+    def __init__(self, lat0, lat1, lon0, lon1):
+        self.b = (lat0, lat1, lon0, lon1)
+
+    def contains(self, lat, lon):
+        return self.b[0] <= lat <= self.b[1] and self.b[2] <= lon <= self.b[3]
+
+
+class _States:
+    """Two neighbouring boxes standing in for the boundary file: RI and a land-less 'MA' to its north."""
+    polys = {"RI": _Box(41.0, 42.0, -72.0, -71.0), "MA": _Box(42.0, 43.0, -72.0, -70.0)}
+
+    def lookup(self, lat, lon, country=None):
+        for code, box in self.polys.items():
+            if box.contains(lat, lon):
+                return code, "inside", 0.0
+        return "RI", "nearest", 40.0      # the nearest coast, for a tower out at sea
+
+
+class PositionTest(unittest.TestCase):
+    rl = _States()
+
+    def test_a_position_in_its_state_stands(self):
+        self.assertIsNone(us.plausible_position(self.rl, "RI", 41.46, -71.36))
+        self.assertEqual(us.build_record(CASTLE_HILL, self.rl)["lat"], 41.46167)
+
+    def test_an_offshore_tower_belongs_to_the_nearest_coast(self):
+        self.assertIsNone(us.plausible_position(self.rl, "RI", 40.95, -71.2))   # off the coast, inside the state's box
+
+    def test_a_point_just_over_the_river_is_not_dropped(self):
+        self.assertIsNone(us.plausible_position(self.rl, "MA", 41.95, -71.5))   # inside RI, 5 km from MA
+
+    def test_a_typing_slip_is_dropped_and_said(self):
+        why = us.plausible_position(self.rl, "MA", 41.2, -71.5)               # inside RI, 80 km from MA
+        self.assertIn("MA", why)
+        r = us.build_record({**CASTLE_HILL, "state": "MA", "lat": 41.2, "lon": -71.5}, self.rl)
+        self.assertIsNone(r["lat"])
+        self.assertIn("41.2, -71.5", r["extra"]["position_dropped"])
+
+    def test_not_a_coordinate(self):
+        self.assertEqual(us.plausible_position(None, "VA", 360.87, -76.3), "not a coordinate on Earth")
+        self.assertEqual(us.plausible_position(None, "NJ", 39.157, -744.175), "not a coordinate on Earth")
+
+    def test_without_the_boundary_file_only_the_bounding_box_judges(self):
+        self.assertIsNone(us.plausible_position(None, "RI", 41.5, -71.5))
+        self.assertIn("bounding box", us.plausible_position(None, "RI", 44.1, -74.2))   # Great Beds' slip, NJ filed as NY
+
+
 if __name__ == "__main__":
     unittest.main()

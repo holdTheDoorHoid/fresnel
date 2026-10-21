@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LighthouseFriends.com state pages -> data/sources/lighthousefriends.json (DESIGN.md 2.3).
+"""LighthouseFriends.com state pages -> data/sources/lighthousefriends.json (DESIGN.md 2.4).
 
 Kraig Anderson's LighthouseFriends is the most complete visit-and-keeper site for the United States.
 Its text and photographs are copyrighted, so this fetcher takes **facts only** (a light's id, name,

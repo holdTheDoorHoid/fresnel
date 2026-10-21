@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""National Register of Historic Places -> data/sources/nrhp.json (DESIGN.md 2.3). Public domain
+"""National Register of Historic Places -> data/sources/nrhp.json (DESIGN.md 2.4). Public domain
 (a federal work of the National Park Service).
 
 Two NPS files, joined by the NRHP reference number:
@@ -25,6 +25,8 @@ the register's name for the property (the old form, "Portland Headlight", is kep
 on), and the point. A district (a whole light station) is station-level; a building or structure is
 one part. A boundary increase or an additional documentation never starts a station (it joins its
 station by number or place).
+A point outside the bounding box of the state the listing is filed under (the service puts Great Beds, NJ,
+in New York) is dropped, with `extra.position_dropped`; the listing still joins by its number.
 
 Usage: python3 pipeline/fetch_nrhp.py [--refresh]
 """
@@ -42,6 +44,7 @@ from urllib.parse import quote, urlencode
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _common as c  # noqa: E402
 import _records as rx  # noqa: E402
+import regions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO / "data" / "sources" / "nrhp.json"
@@ -250,6 +253,13 @@ def build_record(ref: str, row: dict, feature: dict | None, mps: str | None,
     from_polygon = False
     if lat is None and centre:
         lat, lon, from_polygon = centre[0], centre[1], True
+    dropped = None
+    if lat is not None and lon is not None:
+        flag = regions.flag_coordinate(region, lat, lon)
+        if flag:   # the service's point is outside the state it is filed under (Great Beds, NJ, at 44.09 N): joins by number or name only
+            dropped = f"{lat}, {lon}: outside {region}'s bounding box ({flag})"
+            lat = lon = None
+            from_polygon = False
     listed = rx.excel_date(row.get("Listed Date"))
     nhl = rx.excel_date(row.get("NHL Designated Date"))
     nara = (row.get("External Link") or "").strip() or None
@@ -281,6 +291,8 @@ def build_record(ref: str, row: dict, feature: dict | None, mps: str | None,
         extra["enrich_only"] = True   # a listing named for something else: it may join a station, never start one
     if lat is None:
         extra["no_point"] = True
+    if dropped:
+        extra["position_dropped"] = dropped
     if from_polygon:
         extra["position_from"] = "the centre of the register's boundary polygon"
     rec["extra"] = {k: v for k, v in extra.items() if v is not None}

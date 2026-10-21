@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """US territories seed: lights Wikidata, OpenStreetMap and the other sources miss, and the Library of
-Congress HAER records of Puerto Rico's lights -> data/sources/territories.json (DESIGN.md 2.3).
+Congress HAER records of Puerto Rico's lights -> data/sources/territories.json (DESIGN.md 2.4).
 
 Two small, hand-curated parts, both facts only:
 

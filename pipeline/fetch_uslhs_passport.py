@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """US Lighthouse Society passport-stamp list and accommodations pages -> data/sources/uslhs_passport.json
-(DESIGN.md 2.3).
+(DESIGN.md 2.4).
 
 Two pages of the Society's site (uslhs.org; "(c) the Society", so facts only, with a link):
 

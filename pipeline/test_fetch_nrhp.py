@@ -130,6 +130,13 @@ class RecordTest(unittest.TestCase):
         self.assertIsNotNone(rec["registers"][0]["nhl"])
         self.assertEqual([e["event"] for e in rec["events"]], ["nrhp_listed", "heritage_designated"])
 
+    def test_a_point_outside_the_state_is_dropped_and_said(self):
+        # a point in New York (44.09 N, 74.21 W) for a Maine listing: the record keeps its number, not the point
+        rec = nrhp.build_record("73000121", self.wb["73000121"], {"geometry": {"x": -74.2089, "y": 44.0907}}, None)
+        self.assertIsNone(rec["lat"])
+        self.assertTrue(rec["extra"]["no_point"])
+        self.assertIn("44.0907", rec["extra"]["position_dropped"])
+
     def test_boundary_increase_never_starts_a_station(self):
         rec = nrhp.build_record("09001288", self.wb["09001288"], None, None)
         self.assertTrue(rec["extra"]["enrich_only"])

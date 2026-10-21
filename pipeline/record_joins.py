@@ -30,6 +30,12 @@ from __future__ import annotations
 
 
 
+
+
+
+
+
+
 RECORD_JOINS: dict[str, str] = {}
 NO_POSITION: set[str] = set()
 KEEP_APART_PAIRS: set[frozenset] = set()
@@ -111,7 +117,7 @@ _join('us-ca-point-stuart',
 # one entry in Rowlett and in LighthouseFriends. The front light is gone and is in neither source as a
 # separate station.
 _join('us-nj-finns-point-range',
-      'wikidata:Q5450597')
+      )
 
 # us-nj-navesink-south into us-nj-navesink-north (twin lights, 22 m)
 # RULING (DESIGN 3.2): twin lights are one station. The Navesink Twin Lights (Highlands, NJ) stood as one
@@ -355,6 +361,163 @@ _join('us-nj-finns-point-range',
       'uslhs:3379',
       'uslhs:8778')
 
+# us-pr-punta-borinquen-3 into us-pr-punta-borinquen (clear, 3 m)
+# The 1922 Punta Borinquen tower is described by LighthouseFriends's entry 1163 (the other, 1162, is the
+# 1889 tower), the Light List's 3-30715, the HAER record PR-37 and an ENC point, all within 3 m of
+# Wikidata's Punta Borinquen Light of 1922. The first review joined the Wikidata and OpenStreetMap items of
+# the two towers; these four records started a third station on the same spot.
+_join('us-pr-punta-borinquen',
+      'enc:18.49720,-67.14873',
+      'lighthousefriends:1163',
+      'territories:haer-pr-37',
+      'uscg_light_list:3-30715')
+
+# us-va-nansemond into us-va-nansemond-river (clear, 63 m)
+# OpenStreetMap's 'Nansemond Lighthouse' is a node tagged abandoned, taken from a USGS map scan; it is 63 m
+# from LighthouseFriends's position for Nansemond River Light (screwpile, 1878-1935, destroyed), the only
+# light of that name in Virginia.
+_join('us-va-nansemond-river',
+      'osm:node/1054711348')
+
+# us-mi-six-mile-point-range-front into us-mi-six-mile-point-range (clear, positions wrong in two sources)
+# The Six Mile Point Range lights (1895, inactive) are on the St. Marys River below Sault Ste. Marie: the
+# Light List's 7-14045 (46.440 N, 84.266 W) and the Society's archive (46.438 N, 84.265 W) agree.
+# LighthouseFriends puts its front light at 45.993 N, 83.899 W and its rear at 45.999 N, 84.350 W, 40 km
+# from each other, which no range can be; the OpenStreetMap nodes repeat those two points. The Light List
+# and archive records join the front station; the four wrong points are set aside (NO_POSITION).
+_join('us-mi-six-mile-point-range',
+      'lighthousefriends:1560',
+      'rowlett:miup:six-mile-point-range-front-2',
+      'uscg_light_list:7-14045',
+      'uslhs:9829')
+
+# us-mi-six-mile-point-range-rear into us-mi-six-mile-point-range (one range, 0 m)
+# The Six Mile Point Range's rear light (1895): LighthouseFriends's and OpenStreetMap's rear entries (their
+# points set aside), Rowlett's rear and the Society's Six Mile Point Range Rear. The sources give the rear
+# no point of its own that can be trusted (the archive's is the front's, 0 m away), so the range is one
+# station with a front and a rear structure and the rear's published id is retired into it.
+_join('us-mi-six-mile-point-range',
+      'lighthousefriends:1559',
+      'osm:node/1012232474',
+      'rowlett:miup:six-mile-point-range-rear-3',
+      'uslhs:9830')
+
+# us-nj-horseshoe-range-east-group-upper-front into lighthousefriends:1882 (one group, 740 m)
+# The Horseshoe Range's East Group (Delaware River, 1881, all gone) has a lower front, a rear and an upper
+# front in the Society's archive; LighthouseFriends lists the group as one entry. The upper front joins the
+# group as its third structure.
+_join('lighthousefriends:1882',
+      'uslhs:8783')
+
+# us-pa-horseshoe-range-west-group-lower-front into lighthousefriends:1883 (one group, point copied from the
+# East Group)
+# The archive files the West Group under Pennsylvania but gives its three lights the same points as the East
+# Group (39.8705 N, 75.1503 W and so on), 5 km from where LighthouseFriends puts the West Group (39.883 N,
+# 75.209 W). The West Group's records join LighthouseFriends's entry and their points are set aside.
+_join('lighthousefriends:1883',
+      'uslhs:8887')
+
+# us-pa-horseshoe-range-west-group-range-rear into lighthousefriends:1883 (one group, point copied from the
+# East Group)
+# The West Group's rear light: see the lower front.
+_join('lighthousefriends:1883',
+      'uslhs:8888')
+
+# us-pa-horseshoe-range-west-group-upper-front into lighthousefriends:1883 (one group, point copied from the
+# East Group)
+# The West Group's upper front light: see the lower front.
+_join('lighthousefriends:1883',
+      'uslhs:8889')
+
+# us-oh-maumee-bay-straight-channel-range-east-front into lighthousefriends:1988 (one range, 360 m)
+# The Straight Channel Range of Maumee Bay (1884; an east and a west range with two lights each, and two
+# centre lights discontinued in 1895) is one entry in LighthouseFriends and the Light List; the Society's
+# archive lists its six lights separately, with one point for each pair. The East Front joins the range.
+_join('lighthousefriends:1988',
+      'uslhs:9928')
+
+# us-oh-maumee-bay-straight-channel-range-west-rear into lighthousefriends:1988 (one range, 360 m)
+# The West Rear light of the Straight Channel Range: see the East Front.
+_join('lighthousefriends:1988',
+      'uslhs:9925')
+
+# us-fl-st-joseph-point-beacon-hill-range-rear into us-fl-st-joseph-point (same years, 1.0 km)
+# Wikidata's St. Joseph Point Light (lit 1902, retired 1960) and the Society's St. Joseph Point Range (front
+# 1902; rear 'Beacon Hill', 1902-1960) have the same years; Rowlett lists the range's rear as 'St. Joseph
+# Point (Beacon Hill) Range Rear', inactive since 1960. The archive's points are rounded to 0.1 minute and
+# lie 0.3 to 1.0 km from Wikidata's. One range, one station with a front and a rear structure.
+_join('us-fl-st-joseph-point',
+      'rowlett:flw:st-joseph-point-beacon-hill-range-rear-1',
+      'uslhs:15242',
+      'uslhs:2788')
+
+# us-ga-tybee-knoll-cut-range-front into us-ga-tybee-island-range-front (one range, 750 m)
+# The Tybee Knoll Cut Range (1878): the Society's front light joins the station that already holds its rear
+# (the archive), LighthouseFriends's 'Tybee Knoll Cut Range', Rowlett's front and rear and the Light List's
+# 3-4715. Wikidata names the same two lights 'Tybee Island Range Front / Rear Light'.
+_join('us-ga-tybee-island-range-front',
+      'uslhs:8414')
+
+# us-md-mathias-point-shoal into us-md-mathias-point (clear, 430 m)
+# The Society's Mathias Point Shoal (1876-1963, lost) is Mathias Point Light: Wikidata lit 1876, retired
+# 1961, LighthouseFriends 'Mathias Point' destroyed, Rowlett 'Mathias Point Shoal' 1876; the archive's point
+# is 430 m off (rounded).
+_join('us-md-mathias-point',
+      'uslhs:8963')
+
+# us-nj-tinicum-island-range-rear into us-nj-tinicum-island-range (clear, archive point rounded)
+# The Society's Tinicum Island Range Rear (1880) is the rear light of the Tinicum Island (Billingsport)
+# Range that Wikidata, OpenStreetMap, LighthouseFriends, the NRHP and the Light List describe; the archive's
+# point is 1.6 km off.
+_join('us-nj-tinicum-island-range',
+      'uslhs:3390')
+
+# us-ny-long-beach-bar-replica into us-ny-orient-long-beach-bar (same site, 20 m)
+# Orient Long Beach Bar Light ('Bug Light', 1871) burned in 1963 and a replica was built on the spot in 1990
+# and lit as an aid (Rowlett: 'Light station reactivated'; Light List 1-27975; OpenStreetMap: 'Bug Light').
+# The Society lists the 1871 light and the 1990 replica as two places 20 m apart at the same site; one
+# station.
+_join('us-ny-orient-long-beach-bar',
+      'uslhs:34236',
+      'uslhs:8815')
+
+# us-oh-vermilion-replica into us-oh-vermilion (same lighthouse, 650 m)
+# Vermilion Light's present tower is the replica of the 1877 lighthouse built in 1991-92 at the Inland Seas
+# Maritime Museum and lit as an aid (Light List 7-4451 'Vermilion Museum Lighthouse'; Wikidata lit 1992).
+# Rowlett's and the Society's 'Vermilion (Replica)' are that tower; the archive's point is 650 m east.
+_join('us-oh-vermilion',
+      'rowlett:oh:vermilion-5',
+      'uslhs:9953')
+
+# us-mi-saginaw-river into us-mi-saginaw-river-rear-range (same years, 1.1 km)
+# The Society's Saginaw River (lit 1841, tower of 1876, retired 1960) is the Saginaw River Rear Range Light
+# station (Wikidata built 1876, retired 1960; NRHP 'Saginaw River Light Station'); the archive's point is
+# 1.1 km off.
+_join('us-mi-saginaw-river-rear-range',
+      'uslhs:3330')
+
+# us-wi-grassy-island-range-rear into us-wi-grassy-island-range (clear, archive point rounded)
+# The Society's front and rear (both 1872) and Rowlett's rear are the Grassy Island Range Lights (Wikidata,
+# NRHP, LighthouseFriends); the archive gives both lights one point 2.4 km off.
+_join('us-wi-grassy-island-range',
+      'rowlett:widp:grassy-island-range-rear',
+      'uslhs:8994',
+      'uslhs:8995')
+
+# us-la-ship-shoal-2 into us-la-ship-shoal (clear, 1.7 km)
+# The Society's Ship Shoal (1859-1965) is Ship Shoal Light (Wikidata retired 1965, Rowlett built 1859); the
+# archive's point is rounded and 1.7 km from LighthouseFriends's and the Light List's.
+_join('us-la-ship-shoal',
+      'uslhs:2813')
+
+# us-ny-oswego-harbor-west-pierhead-2 into us-ny-oswego-harbor-west-pierhead (clear, archive point wrong)
+# The Society's Oswego Harbor West Pierhead (1934, active) is the pierhead light that Wikidata,
+# OpenStreetMap, LighthouseFriends, the NRHP and the Light List describe at 43.473 N, 76.517 W. The
+# archive's point for it (43.789 N, 76.861 W) is 40 km off, and it gave the same point to two other Oswego
+# lights (see NO_POSITION).
+_join('us-ny-oswego-harbor-west-pierhead',
+      'uslhs:3426')
+
 # RULING (DESIGN 3.2): Old Point Loma (1855, on the ridge, now a museum in Cabrillo National Monument) and
 # New Point Loma (1891, at the shore) are two stations, each with its own established name, 0.8 km apart.
 # The published station keeps the active light; the ridge tower's records start the Old Point Loma station,
@@ -380,6 +543,50 @@ _join('new:us-ca-old-point-loma', 'uslhs_passport:stamp:ca:point-loma-old')
 # 4-730 are Ship Shoal Light, the offshore tower of 1859-1965. Wikidata's item for it (Q7497938) carries
 # South Pass Range's coordinates, which is why the first build put it 80 km from the shoal.
 _join('us-la-ship-shoal', 'lighthousefriends:816')
+
+# Two Rivers (Wisconsin): Wikidata's Two Rivers Light (retired 1969) and Rowlett's Two Rivers (1886,
+# inactive since 1969) are the lighthouse that OpenStreetMap and LighthouseFriends map as 'Two Rivers
+# Lighthouse', 1.2 km north of the pier where Wikidata puts it: one tower, which no longer stands where it
+# served. The pier now has the North Pierhead Light (1969, Light List 7-20925), a modern pier light that is
+# not a station of Fresnel's (DESIGN section 1); its records stay out of the lighthouse's station (see the
+# records kept apart).
+_join('us-wi-two-rivers', 'wikidata:Q7859191')
+
+# Rowlett's Two Rivers, the 1886 lighthouse inactive since 1969.
+_join('us-wi-two-rivers', 'rowlett:wi:two-rivers-1')
+
+# Rowlett's Lazaretto Point (built 1985, inactive) is the replica that OpenStreetMap and LighthouseFriends
+# map; the original (1831-1926) is the Society's Lazaretto Point, 530 m off.
+_join('us-md-lazaretto-point', 'rowlett:md:lazaretto-point')
+
+# HAER PR-32, the Library of Congress's record of the Spanish-era Punta Tuna lighthouse; the library's point
+# is a geocode 4 km from the light, and no other Puerto Rico station has this name.
+_join('us-pr-punta-tuna', 'territories:haer-pr-32')
+
+# HAER PR-35, 'Faro del Puerto de Ponce': the lighthouse of Ponce's harbour is the one on Cardona Island,
+# 670 m from the library's point.
+_join('us-pr-cardona-island', 'territories:haer-pr-35')
+
+# HAER PR-36, the lighthouse of Caja de Muertos island, 935 m from the library's point.
+_join('us-pr-caja-de-muertos', 'territories:haer-pr-36')
+
+# HAER PR-38, 'Faro de los Morillos de Arecibo': Arecibo Light, 1.4 km from the library's point.
+_join('us-pr-arecibo', 'territories:haer-pr-38')
+
+# HAER PR-41, 'Faro del Puerto de Guanica': Guanica Light, 7 km from the library's geocode of the harbour.
+_join('us-pr-guanica', 'territories:haer-pr-41')
+
+# HAER PR-45, the Puerto Ferro lighthouse on Vieques, 770 m from the library's point.
+_join('us-pr-puerto-ferro', 'territories:haer-pr-45')
+
+# HAER PR-46, the lighthouse of the Castillo de San Felipe del Morro (Port San Juan Light), 710 m from the
+# library's point.
+_join('us-pr-el-morro-or-port-san-juan', 'territories:haer-pr-46')
+
+# The Society's 'Tucker Beach' (wood tower of 1848, 14 m, lost 1927; the archive files it under Sea Haven)
+# is Tucker's Island Light, the original that the Tuckerton Seaport replica copies. It is its own station,
+# linked to the replica; the first review had left it without one.
+_join('new:us-nj-tuckers-island', 'uslhs:8793')
 
 # ---- Positions found wrong: the record keeps its facts, the merge does not use its coordinates ----
 # Ship Shoal Light's Wikidata item copies the coordinates of South Pass Range Lights (29.015, -89.167), 80
@@ -415,6 +622,61 @@ NO_POSITION.add('uslhs:2768')
 
 # The Society's archive puts Split Rock 17 km from the lighthouse.
 NO_POSITION.add('uslhs:3357')
+
+# OpenStreetMap's Six Mile Point Range Light repeats LighthouseFriends's point, 45.993 N, 83.899 W, 50 km
+# from the St. Marys River where the Light List and the Society put the range.
+NO_POSITION.add('osm:node/1011891274')
+
+# LighthouseFriends's Six Mile Point Range Front is 50 km from the St. Marys River, where the Light List
+# (7-14045) and the Society put the range, and 40 km from its own rear light.
+NO_POSITION.add('lighthousefriends:1560')
+
+# OpenStreetMap's Six Mile Point Range Rear Lighthouse repeats LighthouseFriends's point, 45.999 N, 84.350
+# W, 45 km from the St. Marys River.
+NO_POSITION.add('osm:node/1012232474')
+
+# LighthouseFriends's Six Mile Point Range Rear is 45 km from the St. Marys River, where the Society puts
+# the range.
+NO_POSITION.add('lighthousefriends:1559')
+
+# The Society's point for Oswego Harbor West Pierhead (43.789 N, 76.861 W) is 40 km from Oswego; the same
+# point is given to two other Oswego lights.
+NO_POSITION.add('uslhs:3426')
+
+# The Society's point for Oswego Harbor (43.789 N, 76.861 W) is 40 km from Oswego.
+NO_POSITION.add('uslhs:8817')
+
+# The Society's point for Oswego Breakwater (43.789 N, 76.861 W) is 40 km from Oswego.
+NO_POSITION.add('uslhs:7344')
+
+# The Society's Horseshoe Range West Group, Lower Front has the East Group's point.
+NO_POSITION.add('uslhs:8887')
+
+# The Society's Horseshoe Range West Group, Range Rear has the East Group's point.
+NO_POSITION.add('uslhs:8888')
+
+# The Society's Horseshoe Range West Group, Upper Front has the East Group's point.
+NO_POSITION.add('uslhs:8889')
+
+# Wikidata's Two Rivers Light is at the pier (44.143 N, 87.560 W) where the lighthouse served until 1969;
+# the lighthouse itself is mapped by OpenStreetMap and LighthouseFriends 1.2 km north, and the pier's lights
+# (the Light List's 7-20925 and 7-20930) are not its.
+NO_POSITION.add('wikidata:Q7859191')
+
+# ---- Records that are two stations although names and positions agree ----
+# Light List 4-12597 is Port Eads Marina Lower Dock Light, at South Pass (29.015 N, 89.166 W), which is the
+# point Wikidata's Ship Shoal Light item copies. Ship Shoal Light's own number is 4-730.
+_keep_apart('uscg_light_list:4-12597', 'wikidata:Q7497938')
+
+# Light List 7-20925 is the Two Rivers North Pierhead Light (1969) on the pier; Wikidata's item for the old
+# lighthouse carries its number, but the lighthouse no longer stands there.
+_keep_apart('uscg_light_list:7-20925', 'wikidata:Q7859191')
+
+# The ENC light at the Two Rivers pier is the North Pierhead Light, not the old lighthouse.
+_keep_apart('enc:44.14269,-87.56070', 'wikidata:Q7859191')
+
+# Rowlett lists the 1969 North Pierhead Light apart from the Two Rivers lighthouse.
+_keep_apart('rowlett:wi:two-rivers-north-pierhead-2', 'wikidata:Q7859191')
 
 # ---------------------------------------------------------------------------------------------
 # Pairs of stations reviewed and found to be two stations
@@ -573,6 +835,49 @@ _not_duplicates('us-va-stingray-point', 'us-va-stingray-point-replica')
 # The 1851 original (lost 1955) and the 2008 replica at the museum, 117 m apart by the sources' points.
 _not_duplicates('us-md-blakistone-island', 'us-md-blackistone-island-replica')
 
+# RULING (DESIGN 3.2): Old and New Point Loma are two stations 0.8 km apart, linked as successive lights.
+_not_duplicates('us-ca-point-loma', 'us-ca-old-point-loma')
+
+# Smith Point Light (1897) and the earlier Smith Point light (1868-1898, the Society's 'Smith Point (Old)')
+# were 1.2 km apart; linked as successive lights.
+_not_duplicates('us-va-smith-point-old', 'us-va-smith-point')
+
+# Hawkins Point Light and Leading Point Light are the front and rear of the Brewerton Channel Range, each
+# with its own item and name, 1.8 km apart.
+_not_duplicates('us-md-hawkins-point', 'us-md-leading-point')
+
+# The Keweenaw Waterway Lower Entrance Light (1920) and Jacobsville (Portage River) Lighthouse (1856-1920)
+# are different lights 1.7 km apart.
+_not_duplicates('us-mi-keweenaw-waterway-lower-entrance', 'us-mi-jacobsville')
+
+# The Santa Cruz Lighthouse (the 1967 memorial copy at Lighthouse Point) and the West Breakwater Light
+# (1964) are different lights 2.4 km apart.
+_not_duplicates('us-ca-santa-cruz', 'us-ca-santa-cruz-breakwater')
+
+# The Light List calls Pensacola Light the rear light of the Fort Barrancas Range (4-4785), and the Society
+# lists the range's front and rear as lost; they are kept as two stations, the range at Fort Barrancas 600 m
+# south-west, until a source settles whether the lost 'rear' is the Pensacola tower.
+_not_duplicates('us-fl-fort-barrancas-range', 'us-fl-pensacola')
+
+# The Society's Tybee Island Range (front 1822, lost; rear 1793, active) is probably the Tybee lighthouse as
+# the rear of its range, but its dates (1793, not the station's 1736 or the tower's 1867) do not match; kept
+# apart until a source settles it.
+_not_duplicates('us-ga-tybee-island-range', 'us-ga-tybee-island-lighthouse-and-museum')
+
+# The Tybee Island Range (Savannah River entrance, 1822) and the Tybee Knoll Cut Range (1878) are different
+# ranges 6.7 km apart.
+_not_duplicates('us-ga-tybee-island-range', 'us-ga-tybee-island-range-front')
+
+# Olcott Light (1873, lost) and its replica of 2003 are 575 m apart.
+_not_duplicates('us-ny-olcott', 'us-ny-olcott-2')
+
+# The 1985 replica at Lazaretto Point and the original light (1831-1926), 530 m apart.
+_not_duplicates('us-md-lazaretto-point', 'us-md-lazaretto-point-2')
+
+# The Horseshoe Range's East Group (New Jersey side) and West Group (Pennsylvania side) are two groups of
+# lights the sources keep apart.
+_not_duplicates('us-nj-horseshoe-range-east-group', 'us-pa-horseshoe-range-west-group')
+
 # ---- Names ----
 # The ridge tower of 1855 (Cabrillo National Monument).
 NAME_PICKS['us-ca-old-point-loma'] = 'Old Point Loma Lighthouse'
@@ -600,6 +905,10 @@ NAME_PICKS['us-fl-boca-grande'] = 'Boca Grande Lighthouse (Gasparilla Island Lig
 # OpenStreetMap's name for the oil house of the light station ('Oil Shed') won the station's name; the light
 # is Old Michigan City Light (1858, NRHP 74000023), now a museum.
 NAME_PICKS['us-in-old-michigan-city'] = 'Old Michigan City Light'
+
+# The original of 1848-1927; the replica at Tuckerton Seaport is us-nj-tuckers-beach. Rowlett and
+# LighthouseFriends call the island's light Tucker's Island / Tuckers Beach.
+NAME_PICKS['us-nj-tuckers-island'] = "Tucker's Island Light"
 
 # ---- Statuses settled from evidence ----
 # The 1851 Blakistone Island lighthouse was lost in 1955 (Wikidata: retired 1956; the Society's archive:
@@ -651,6 +960,22 @@ STATUS_PICKS['us-wi-1849-lighthouse-ruins'] = ('ruins', None)
 # The name says it: a replica, mapped by OpenStreetMap and listed by LighthouseFriends.
 STATUS_PICKS['us-md-bethel-bridge-lighthouse-replica'] = ('replica', None)
 
+# Mathias Point Light (1876): LighthouseFriends lists it as destroyed and the Society's archive as lost
+# (retired 1963); Wikidata gives an end date. The Light List's 'Upper Potomac River Channel Light 5' is a
+# modern light at the site.
+STATUS_PICKS['us-md-mathias-point'] = ('lost', None)
+
+# The replica of Bug Light shows a light as an aid (Light List 1-27975); the 1871 original burned in 1963.
+STATUS_PICKS['us-ny-orient-long-beach-bar'] = ('active', None)
+
+# The replica lighthouse shows a light as an aid (Light List 7-4451); the 1877 original is gone.
+STATUS_PICKS['us-oh-vermilion'] = ('active', None)
+
+# The lighthouse of New Buffalo (1840-1859) is listed as destroyed by LighthouseFriends and as lost by the
+# Society's archive; OpenStreetMap maps a lighthouse-shaped structure in the town, 950 m from
+# LighthouseFriends's point, which the Society lists as a private (faux) lighthouse.
+STATUS_PICKS['us-mi-new-buffalo'] = ('lost', None)
+
 # ---- Hidden: shown no more, file kept ----
 # OpenStreetMap's second 'Pooles Island Light' 3.3 km south of the 1825 tower, with the Light List's modern
 # light as its only other record: a modern aid with no history of its own (DESIGN 1).
@@ -700,6 +1025,19 @@ HIDE['us-ny-celoron'] = 'A private (faux) lighthouse at Celoron, Chautauqua Lake
 
 # The Society's archive lists it as a private (faux) lighthouse; OpenStreetMap only otherwise.
 HIDE['us-wa-dimick'] = 'A private (faux) lighthouse built in 1990 at Dimick: not an aid to navigation'
+
+# OpenStreetMap's 'Hyannis Harbor Lighthouse' is tagged disused; Rowlett calls the Lewis Bay light privately
+# maintained and unofficial, and the Society lists it as a private (faux) lighthouse.
+HIDE['us-ma-hyannis-harbor'] = 'A privately kept, unofficial light on Lewis Bay, not an aid to navigation'
+
+# OpenStreetMap only, with the Society's listing as a private (faux) lighthouse.
+HIDE['us-nh-spindle-point'] = 'A private (faux) lighthouse on Lake Winnipesaukee: not an aid to navigation'
+
+# OpenStreetMap, Rowlett ('privately maintained and unofficial') and the Society's private (faux) listing.
+HIDE['us-oh-rattlesnake-island'] = 'A privately kept, unofficial light (1990): not an aid to navigation'
+
+# OpenStreetMap, Rowlett and the Society's private (faux) listing; in no Light List.
+HIDE['us-wv-summersville-lake'] = 'A decorative lighthouse (2012) on an inland lake: not an aid to navigation'
 
 # ---- Scale copies (status replica, replica_of the light they copy) ----
 # The 2004 replica of Old Plantation Flats Light at Bay Creek Resort, Cape Charles (OpenStreetMap: 'Bay
@@ -794,6 +1132,17 @@ REPLICA_OF['us-ct-mystic-seaport'] = 'us-ma-brant-point'
 # (LighthouseFriends: memorial).
 REPLICA_OF['us-ca-trinidad-memorial'] = 'us-ca-trinidad-head'
 
+# The 1985 replica of Lazaretto Point Light (OpenStreetMap, LighthouseFriends: replica; Rowlett built 1985);
+# the original of 1831-1926 is the Society's Lazaretto Point.
+REPLICA_OF['us-md-lazaretto-point'] = 'us-md-lazaretto-point-2'
+
+# The replica of Olcott Light (2003; Rowlett: a decorative light is displayed); the original of 1873 is the
+# Society's Olcott.
+REPLICA_OF['us-ny-olcott'] = 'us-ny-olcott-2'
+
+# The replica at Tuckerton Seaport (1999) copies Tucker's Island Light (1848-1927).
+REPLICA_OF['us-nj-tuckers-beach'] = 'us-nj-tuckers-island'
+
 # ---- Successive lights that are two stations (preceded_by / succeeded_by) ----
 # RULING (DESIGN 3.2): Old Point Loma (1855-1891) and New Point Loma (1891-) are two stations, linked.
 SUCCESSION.append(('us-ca-old-point-loma', 'us-ca-point-loma'))
@@ -819,6 +1168,9 @@ SUCCESSION.append(('us-ma-three-sisters-of-nauset', 'us-ma-nauset'))
 # 1.9 km apart, each with its own established name.
 SUCCESSION.append(('us-mi-old-presque-isle', 'us-mi-new-presque-isle'))
 
+# The screwpile light of 1868 and the present Smith Point Light (1897), 1.2 km apart.
+SUCCESSION.append(('us-va-smith-point-old', 'us-va-smith-point'))
+
 # ---- Reviewed and kept visible ----
 # Listed by the Light List (7-18366) as a lit aid.
 KEEP_VISIBLE.add('us-mi-manning-memorial')
@@ -837,4 +1189,26 @@ KEEP_VISIBLE.add('us-or-cleft-of-the-rock')
 
 # Wikidata, ARLHS and Rowlett list it as a lighthouse; it is lit, although the Society calls it faux.
 KEEP_VISIBLE.add('us-wi-asylum')
+
+# Charted as a fixed green light (NOAA ENC 33.760 N, 118.194 W), though the Society calls it a private
+# (faux) lighthouse.
+KEEP_VISIBLE.add('us-ca-lions')
+
+# Listed by the Light List (7-12608) as a lit aid, though the Society calls it a private (faux) lighthouse.
+KEEP_VISIBLE.add('us-mi-wawatam')
+
+# NRHP-listed (82003614) and in Wikidata, although the Society calls it a private (faux) lighthouse.
+KEEP_VISIBLE.add('us-oh-grand-lake-st-marys')
+
+# A historic light of 1887 (Wikidata, LighthouseFriends, Rowlett) that the Society lists as a private (faux)
+# lighthouse.
+KEEP_VISIBLE.add('us-pa-turtle-rock')
+
+# Listed by the Light List (7-20765) as a lit private aid, though the Society calls it a private (faux)
+# lighthouse.
+KEEP_VISIBLE.add('us-wi-kevich')
+
+# The lost lighthouse of 1840-1859 (LighthouseFriends, the Society); the faux lighthouse the Society also
+# lists in the town is a separate structure.
+KEEP_VISIBLE.add('us-mi-new-buffalo')
 

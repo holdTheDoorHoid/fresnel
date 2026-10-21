@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NOAA ENC Direct light points -> data/sources/enc.json (DESIGN.md 2.3). US federal public domain.
+"""NOAA ENC Direct light points -> data/sources/enc.json (DESIGN.md 2.4). US federal public domain.
 
 NOAA's ENC Direct to GIS ArcGIS REST service serves the lights of the electronic navigational charts
 (one `Light_point` layer per chart scale band). A light has no name there and no Light List number; it

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""USCG Light List (volumes I-VII, PDF) -> data/sources/uscg_light_list.json (DESIGN.md 2.3). US
+"""USCG Light List (volumes I-VII, PDF) -> data/sources/uscg_light_list.json (DESIGN.md 2.4). US
 federal public domain (a US Coast Guard publication, COMDTPUB P16502).
 
 The Light List is the Coast Guard's list of every federal aid to navigation: lights, buoys,

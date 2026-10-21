@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """US Lighthouse Society Digital Archive ("Lighthouse Research Catalog") places -> data/sources/uslhs.json
-(DESIGN.md 2.3).
+(DESIGN.md 2.4).
 
 The archive (archives.uslhs.org) holds ~2,300 places: light stations, lightship stations, lifesaving
 stations, minor aids, depots, museums, replicas and faux lighthouses. It is "(c) U.S. Lighthouse
@@ -25,8 +25,12 @@ Readings of a light station's fields: `existing` false -> status `lost` (`demoli
 `structure.built`; material, shape and foundation -> structure material and type (screwpile, caisson,
 crib, skeletal); `current_optic` / `original_optic` "Third Order, Fresnel" -> lens; owner -> agency and a
 rough ownership class; `open_to_public` yes -> access public and open grounds (no is kept as a note only: it may mean the tower, the grounds or the interior); `automated` -> an `automated` event. Positions are
-degrees and decimal minutes (about 0.1 minute, 185 m) so they are `approximate`. A lightship station
-or lifesaving station without a position cannot start a station: the merge joins it to an existing one
+degrees and decimal minutes (about 0.1 minute, 185 m) so they are `approximate`; the archive's typing slips
+(a latitude of 360, a point in the open Atlantic, a Massachusetts light given a New York light's position)
+are dropped with `plausible_position`: a 0 0 placeholder, a number not on Earth, a point outside the bounding box
+of the state the place is filed under (the validator's own test), or more than 15 km from that state (waters
+included) and nearer another. The record is kept without a position (`extra.position_dropped`). A lightship
+station or lifesaving station without a position cannot start a station: the merge joins it to an existing one
 by name within its state, else it waits in the extract for a position.
 
 Usage: python3 pipeline/fetch_uslhs.py [--places PATH]
@@ -35,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import sys
 from collections import Counter
@@ -43,6 +48,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _common as c  # noqa: E402
 import _records as rx  # noqa: E402
+import regions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO / "data" / "sources" / "uslhs.json"
@@ -148,7 +154,49 @@ def read_name(name: str, ptype: str) -> dict:
     return {"name": n, "alts": alts, "status": status, "kind": kind, "role": role}
 
 
-def build_record(p: dict) -> dict | None:
+NEAR_REGION_KM = 15.0
+
+
+def near_region(rl, region: str, lat: float, lon: float, km: float = NEAR_REGION_KM) -> bool | None:
+    """Whether the point is in `region` (the Census boundary, waters included) or within `km` of it; None when the
+    boundary is not loaded (then nothing is judged)."""
+    poly = getattr(rl, "polys", {}).get(region) if rl is not None else None
+    if poly is None:
+        return None
+    if poly.contains(lat, lon):
+        return True
+    coslat = max(math.cos(math.radians(lat)), 0.05)
+    for ring in (3.0, 6.0, 10.0, km):
+        if ring > km:
+            continue
+        for i in range(24):
+            a = 2 * math.pi * i / 24
+            if poly.contains(lat + ring / 111.2 * math.cos(a), lon + ring / (111.2 * coslat) * math.sin(a)):
+                return True
+    return False
+
+
+def plausible_position(rl, region: str | None, lat, lon) -> str | None:
+    """None if the archive's position can be believed, else why not."""
+    if not isinstance(lat, (int, float)) or not isinstance(lon, (int, float)):
+        return None
+    if abs(lat) < 0.01 and abs(lon) < 0.01:
+        return "a 0 0 placeholder"
+    if abs(lat) > 90 or abs(lon) > 180:
+        return "not a coordinate on Earth"
+    flag = regions.flag_coordinate(region, lat, lon) if region else None
+    if flag:    # the validator's own test: a point outside the state's bounding box is an error there
+        return f"outside {region}'s bounding box ({flag})"
+    if region and rl is not None and region in getattr(rl, "polys", {}):
+        # an offshore tower (Frying Pan Shoals, Mount Desert Rock) belongs to the state whose coast is nearest: that is
+        # the state the point's lookup names; any other point must be in the state's waters or within 15 km of them
+        # (a river or sound between two states)
+        if rl.lookup(lat, lon, "US")[0] != region and near_region(rl, region, lat, lon) is False:
+            return f"in or near another state, and more than {NEAR_REGION_KM:.0f} km from {region}, the state it is filed under"
+    return None
+
+
+def build_record(p: dict, rl=None) -> dict | None:
     ptype = p.get("type")
     state = p.get("state")
     name = rx.clean_text(p.get("name"))
@@ -182,8 +230,9 @@ def build_record(p: dict) -> dict | None:
         elif existing is True:
             status = "active" if (p.get("active_aton") or p.get("private_aid")) else "inactive"
     lat, lon = p.get("lat"), p.get("lon")
-    if isinstance(lat, (int, float)) and isinstance(lon, (int, float)) and abs(lat) < 0.01 and abs(lon) < 0.01:
-        lat = lon = None   # "0 0'" placeholders
+    dropped = plausible_position(rl, state, lat, lon)
+    if dropped:
+        lat = lon = None   # "0 0'" placeholders and typing slips: the record joins by name, never by this point
     shown = f"{nm['name']} (Replica)" if status == "replica" else nm["name"]   # a copy keeps the word: it is its own station
     rec = rx.new_record(SOURCE, str(p.get("nid") or p.get("slug")), shown, url=p.get("url"), region=state,
                         lat=lat, lon=lon, precision="approximate", kind=kind, status=status)
@@ -252,6 +301,8 @@ def build_record(p: dict) -> dict | None:
         extra["decorative_hint"] = "The US Lighthouse Society's archive lists it as a private (faux) lighthouse"
     if ptype == "Minor Aid to Navigation":
         extra["minor_aid"] = True
+    if dropped:
+        extra["position_dropped"] = f"{p.get('lat')}, {p.get('lon')}: {dropped}"
     rec["extra"] = {k: v for k, v in extra.items() if v is not None}
     return rec
 
@@ -269,8 +320,13 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     places = json.loads(args.places.read_text(encoding="utf-8"))
     records, skipped, no_state = [], Counter(), []
+    try:
+        rl = regions.region_lookup(c.RAW_ROOT)
+    except Exception as exc:   # boundaries not fetched and offline: positions are then not judged against the state
+        c.log(f"uslhs: state boundaries unavailable ({exc}); positions are only checked for being on Earth")
+        rl = None
     for p in places:
-        rec = build_record(p)
+        rec = build_record(p, rl)
         if rec is None:
             skipped[p.get("type") or "no type"] += 1
             if p.get("type") in ("Light Station", "Lightship Station", "Lifesaving Station") and p.get("name") and not p.get("state"):
@@ -295,6 +351,8 @@ def main(argv: list[str] | None = None) -> int:
         notes={"places_read": len(places), "skipped_types": dict(skipped), "skipped_no_state": sorted(no_state),
                "by_type": dict(Counter(r["extra"].get("type") for r in unique)),
                "positioned": sum(1 for r in unique if r["lat"] is not None),
+               "positions_dropped": sorted(f"{r['key']} {r['name']} ({r['region']}): {r['extra']['position_dropped']}"
+                                           for r in unique if r["extra"].get("position_dropped")),
                "built_from": "places.json written by research/roster.py build (the corpus crawl)"},
         retrieved=c.retrieved_date(args.places))
     c.log(f"uslhs: wrote {len(unique)} records from {len(places)} places; skipped {dict(skipped)}; "

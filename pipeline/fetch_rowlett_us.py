@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Russ Rowlett's Lighthouse Directory, US pages -> data/sources/rowlett.json (DESIGN.md 2.3).
+"""Russ Rowlett's Lighthouse Directory, US pages -> data/sources/rowlett.json (DESIGN.md 2.4).
 
 The Lighthouse Directory (University of North Carolina at Chapel Hill, hosted at ibiblio.org/lighthouse/)
 describes lights worldwide in hand-written paragraphs, one per tower. Its text is copyrighted ("copying

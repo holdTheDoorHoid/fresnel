@@ -52,6 +52,26 @@ Then:
   `related` links (preceded_by / succeeded_by); a life-saving station within 1.5 km of a light
   station links both ways.
 
+The US sources of 2026-10-21 (DESIGN 2.4, 3.9) add these, all for US records only (Canada's output is unchanged):
+
+- **Hard keys.** A record sharing an NRHP number, an ARLHS number, a Light List number ("vol-LLNR") or a
+  LighthouseFriends id (`extra.xref`) with a station joins it (within R_HARD_KEY when both have a position).
+- **Records without a position** (Rowlett, the passport list, most of the Society's lightship and life-saving
+  stations) join by hard key, else by a name that is strong and unique in their state; the rest wait in the
+  extract and are listed in `not_shown`. A record with no position never starts a structure of its own.
+- **Far namesakes.** A starting record joins the one station of its state and kind whose name agrees strongly
+  within 10 km (a vanished tower or a light on a shoal pinned kilometres off by one source). Listed in the run's
+  output for review, not in the saved report.
+- **Replicas** (status `replica`, or "(Replica)" in the name) are their own stations: they join an original only
+  on the spot, by a hard key, or through record_joins.py.
+- **Decisions** (record_joins.py, each with its reason in docs/sources/review_2026-10-us.md): a record's key sent
+  to a station (`RECORD_JOINS`, "new:<id>" starts one), positions found wrong (`NO_POSITION`), records kept apart,
+  names, statuses, hidden stations, scale copies and successive lights. Pinned records wait until every other
+  record is placed, in key order.
+- **A second run changes nothing.** Records that joined nothing are tried again once the pins and the range
+  pairing are done (by hard key, then by position and name), so the order two records of one pass arrive in, or a
+  run with memory, never decides a join.
+
 Field precedence (first source with a value wins): name, region, county, kind, structure facts
 (type, material, built, height), light dates, ATON numbers, agency: Wikidata > OSM. Location and
 the light as charted (characteristic, focal height, range, fog signal): OSM > Wikidata (OSM
@@ -107,7 +127,7 @@ def set_decisions(module) -> None:
 
 # Matching order: records of an earlier source start stations first, a later source joins them. Wikidata and
 # OpenStreetMap lead; the Canadian sources keep the order they had when only they existed (alphabetical, with
-# LighthouseFriends and Rowlett shared by both countries); the US sources of 2026-10-21 (DESIGN 2.3) follow their
+# LighthouseFriends and Rowlett shared by both countries); the US sources of 2026-10-21 (DESIGN 2.4) follow their
 # own order. The sources never share a station across the border, so the two orders do not interact. A source
 # missing from the list comes after the listed ones, alphabetically.
 SOURCE_ORDER = ["wikidata", "osm",
@@ -127,7 +147,7 @@ PRECEDENCE = {
     "stay": ["uslhs_passport", "lighthousefriends", "wikidata", "osm"],
 }
 merge_ca.register(PRECEDENCE)  # ranks the Canadian sources in the tables above
-# The charted light of a US station: NOAA's ENC first, then the Coast Guard's Light List (DESIGN 2.3); the
+# The charted light of a US station: NOAA's ENC first, then the Coast Guard's Light List (DESIGN 2.4); the
 # Canadian List of Lights, if it leads the field, stays first (the sources never share a station).
 _charted = PRECEDENCE["charted"]
 _at = 1 if _charted and _charted[0] == "ccg_list_of_lights" else 0
@@ -551,6 +571,9 @@ class Station:
                 out += r.forms
         if not out and self.existing:
             out = name_forms(self.existing.get("name"), self.existing.get("other_names"))
+        picked = record_joins.NAME_PICKS.get(self.id) if self.id else None
+        if picked:      # the name a human chose is the station's name whatever its records are called (Tucker's Island Light)
+            out = out + name_forms(picked)
         return out
 
     def points(self, starting_only: bool = False) -> list[tuple[float, float]]:
@@ -860,13 +883,13 @@ class Matcher:
             return found[0]
         return None
 
-    def by_name_in_region(self, rec: Rec) -> Station | None:
+    def by_name_in_region(self, rec: Rec, pool: list[Station] | None = None) -> Station | None:
         """A record with no position joins the one station of its region whose name agrees strongly
         (>= STRONG), when no other station is within 0.1 of that score. Listed in the report."""
         if not rec.region or not rec.forms:
             return None
         scored = []
-        for st in self.live():
+        for st in (self.live() if pool is None else pool):
             if st.country() and rec.country and st.country() != rec.country:
                 continue
             g = st.kind_group()
@@ -1039,19 +1062,30 @@ class Matcher:
 
     def retry_unmatched(self) -> int:
         """After the pinned records are placed, give every US record that joined nothing one more try by position and
-        name. A record of the second pass is matched before a pinned record has moved its station onto the right
-        spot, and a run with memory still has the station's earlier position in the grid, so the first try may or may
-        not have found it: this one sees the same stations in both. Returns how many joined."""
+        name (a record with no position, by its name within its state). A record of the second pass is matched before
+        a pinned record has moved its station onto the right spot, and a run with memory still has the station's
+        earlier position in the grid, so the first try may or may not have found it: this one sees the same
+        stations in both. Returns how many joined."""
         total = 0
         while True:
             n = 0
+            by_region: dict[str | None, list[Station]] = defaultdict(list)
+            for st in self.live():
+                by_region[first_region(st)].append(st)
             for rec in sorted(list(self.unshown_recs) + list(self.quiet_recs), key=lambda r: r.key):
-                if rec.country != "US" or not rec.has_point:
+                if rec.country != "US":
                     continue
-                cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
-                if not cands:
-                    continue
-                self.attach(rec, cands[0][1], "late_place_name")
+                if rec.has_point:
+                    cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
+                    if not cands:
+                        continue
+                    self.attach(rec, cands[0][1], "late_place_name")
+                else:
+                    st = self.by_name_in_region(rec, by_region.get(rec.region, []))   # its station may only now have a name that agrees
+                    if st is None:
+                        continue
+                    self.attach(rec, st, "late_name_region")
+                    self.name_region_joins.append({"key": rec.key, "name": rec.name, "station": st})
                 if rec in self.unshown_recs:
                     self.unshown_recs.remove(rec)
                     self.unshown[:] = [u for u in self.unshown if u["key"] != rec.key]
@@ -1196,10 +1230,13 @@ class Matcher:
 
 
 def first_region(st: Station) -> str | None:
-    for r in sorted(st.recs(), key=lambda r: source_rank("region", r.source)):
+    best, best_rank = None, None
+    for r in st.recs():      # the first record of the best-ranked source that names a region (a stable minimum, no sort)
         if r.region:
-            return r.region
-    return (st.existing or {}).get("region")
+            rank = source_rank("region", r.source)
+            if best_rank is None or rank < best_rank:
+                best, best_rank = r.region, rank
+    return best if best is not None else (st.existing or {}).get("region")
 
 
 _SUCCESSION_LEAD_RE = re.compile(r"^(old|new|original|former|the old|site patrimonial)\b", re.I)
@@ -1886,6 +1923,8 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     m.retry_unmatched()
     m.retire_emptied()
     ranges = m.pair_ranges()
+    m.retry_hard_keys()      # a front and a rear that have just become one station: records tied to either now find it
+    m.retry_unmatched()
 
     resolved: list[tuple[Station, dict]] = []
     for st in m.live():
@@ -1925,7 +1964,10 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
 
     report = build_report(m, resolved, headers, ranges, links)
     report["canada"], ca_run = merge_ca.report(m, resolved, by_source)
-    report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged,
+    # How a record joined is what this run did (a run with memory re-places it where it was), so the lists of joins to
+    # review are printed with the run, never saved in the report.
+    joins_to_review = report.pop("joins_to_review")
+    report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged, "joins_to_review": joins_to_review,
                       "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"]),
                       "canada": ca_run}
     if write and report_path is not None:
@@ -2019,6 +2061,8 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
     for st, rec in resolved:
         if rec["hidden"] or {s["source"] for s in rec["sources"]} != {"osm"} or (rec.get("light") or {}).get("characteristic"):
             continue
+        if rec["id"] in record_joins.KEEP_VISIBLE or rec["id"] in record_joins.REPLICA_OF or rec["status"] == "replica":
+            continue    # decided in record_joins.py, or a replica already
         twins = sorted({i for f in name_forms(rec["name"]) for i, reg in known.get(f.core, []) if reg != rec["region"]})
         if twins:
             entry = by_id.get(rec["id"])
@@ -2117,6 +2161,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  by status {c['by_status']}; wikidata+osm {c['wikidata_and_osm']} ({c['wikidata_and_osm_by_tag']} confirmed by an OSM wikidata tag)")
     print(f"  this run: matches {run_['record_matches']}; range pairs made {run_['range_pairs_made']}")
     print(f"  not shown {c['not_shown']}; conflicts {c['conflicts']}")
+    jr = run_.get("joins_to_review") or {}
+    if jr.get("by_name_in_region") or jr.get("by_unique_namesake"):
+        print(f"  joins to review (not saved): {len(jr['by_name_in_region'])} position-less records joined by name in their state, "
+              f"{len(jr['by_unique_namesake'])} by a unique namesake some kilometres off")
     ca_run = run_.get("canada") or {}
     if ca_run.get("joined_by"):
         print(f"  Canada: joined by {ca_run['joined_by']}; {len(ca_run['identifier_ambiguous'])} identifiers point at two stations, "

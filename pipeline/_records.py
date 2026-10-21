@@ -1,4 +1,4 @@
-"""Helpers the US station-source fetchers share (DESIGN.md 2.3): the source-record builder
+"""Helpers the US station-source fetchers share (DESIGN.md 2.4): the source-record builder
 (3.8), a polite fetch that honours robots.txt and shares one rate limit per host with every other
 process on this machine, text and coordinate parsers, and the extract writer that adds a credit line.
 

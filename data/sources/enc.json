@@ -6,24 +6,23 @@
  "license": "US federal public domain (NOAA). Not for navigation.",
  "credit": "NOAA Office of Coast Survey, ENC Direct (public domain; not for navigation)",
  "notes": {
-  "features": 29207,
+  "features": 32393,
   "per_band": {
    "enc_overview": 1048,
    "enc_general": 2966,
-   "enc_coastal": 4000,
-   "enc_approach": 3000,
-   "enc_harbour": 18000,
+   "enc_coastal": 5186,
+   "enc_approach": 4000,
+   "enc_harbour": 19000,
    "enc_berthing": 193
   },
   "bands_missing": {
-   "enc_coastal": "service error: Error handling service request :Could not find service. Service may be stopped or it may not be configured.",
    "enc_approach": "service error: Error handling service request :Could not find service. Service may be stopped or it may not be configured.",
    "enc_harbour": "service error: Error handling service request :Could not find service. Service may be stopped or it may not be configured."
   },
   "clusters": {
-   "no station near": 17974,
-   "kept": 938,
-   "no light character": 515
+   "no station near": 19452,
+   "kept": 1058,
+   "no light character": 564
   }
  },
  "records": [
@@ -79,10 +78,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 4,
     "chart_cell": "US4AS1LH.000",
     "source_date": "20060701",
-    "sectors": 2
+    "sectors": 4
    }
   },
   {
@@ -202,6 +201,180 @@
    }
   },
   {
+   "key": "enc:17.75510,-64.69448",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 17.755098,
+   "lon": -64.694476,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 14.6,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20120221",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:17.76913,-64.87087",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 17.769131,
+   "lon": -64.870874,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 30s",
+    "focal_height_m": 120.10000000000001,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 4,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20170111",
+    "sectors": 4
+   }
+  },
+  {
+   "key": "enc:17.78688,-64.61909",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 17.78688,
+   "lon": -64.619089,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 103.3,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20150217",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:17.89315,-66.52119",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -253,10 +426,68 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PSECG.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20030902",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:17.93356,-67.19213",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 17.933565,
+   "lon": -67.192131,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 20s",
+    "focal_height_m": 36.9,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 4,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20160607",
+    "sectors": 2
    }
   },
   {
@@ -311,8 +542,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PSEDE.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20020417",
     "sectors": 0
    }
@@ -369,9 +600,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PR2GC.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20160614",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:18.08628,-67.84650",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.086278,
+   "lon": -67.8465,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 98.5,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20251210",
     "sectors": 0
    }
   },
@@ -427,9 +716,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PR2JI.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20000506",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:18.27822,-64.89264",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.278222,
+   "lon": -64.892639,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 42.4,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "19980303",
     "sectors": 0
    }
   },
@@ -460,7 +807,7 @@
     "first_lit": null,
     "deactivated": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 92.9,
+    "focal_height_m": 93.0,
     "range_nm": 14.0,
     "fog_signal": null,
     "lens": null
@@ -485,10 +832,126 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PR2LL.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20130924",
-    "sectors": 1
+    "sectors": 3
+   }
+  },
+  {
+   "key": "enc:18.33765,-65.08265",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.33765,
+   "lon": -65.082654,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 91.4,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20150217",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:18.36209,-67.27081",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.362088,
+   "lon": -67.270811,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Oc W 4s",
+    "focal_height_m": 27.400000000000002,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "19920620",
+    "sectors": 0
    }
   },
   {
@@ -543,10 +1006,68 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PR2MG.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20151208",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:18.47100,-66.12354",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.471004,
+   "lon": -66.123537,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(3) W 40s",
+    "focal_height_m": 51.5,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20160614",
+    "sectors": 3
    }
   },
   {
@@ -601,9 +1122,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PR1KJ.000",
+    "records": 3,
+    "chart_cell": "US3PR10M.000",
     "source_date": "20160621",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:18.49720,-67.14873",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 18.497203,
+   "lon": -67.148733,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 89.0,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3PR10M.000",
+    "source_date": "20130910",
     "sectors": 0
    }
   },
@@ -662,6 +1241,64 @@
     "records": 6,
     "chart_cell": "US1GLBCA.000",
     "source_date": "19961214",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:19.27871,166.64827",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 19.278707,
+   "lon": 166.648267,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Al W G",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5SP10M.000",
+    "source_date": "19980530",
     "sectors": 0
    }
   },
@@ -1942,6 +2579,64 @@
    }
   },
   {
+   "key": "enc:20.90066,-156.47151",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 20.900656,
+   "lon": -156.471507,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 7.600000000000001,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 5,
+    "chart_cell": "US2HA05M.000",
+    "source_date": "20100505",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:20.92905,-156.98765",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -3153,9 +3848,125 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 7,
     "chart_cell": "US1GC09M.000",
     "source_date": "20140701",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:24.62667,-81.10895",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 24.626674,
+   "lon": -81.108953,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl Y 4s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US4FL1FV.000",
+    "source_date": "20250114",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:24.62775,-81.10857",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 24.62775,
+   "lon": -81.108567,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(5) W 60s",
+    "focal_height_m": 5.8,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 6,
+    "chart_cell": "US1GC09M.000",
+    "source_date": "20150818",
     "sectors": 0
    }
   },
@@ -3211,8 +4022,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5FL5AA.000",
+    "records": 2,
+    "chart_cell": "US4FL1FV.000",
     "source_date": "20000909",
     "sectors": 0
    }
@@ -3269,7 +4080,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 5,
+    "records": 6,
     "chart_cell": "US1GC09M.000",
     "source_date": "20150908",
     "sectors": 0
@@ -3327,9 +4138,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 5,
+    "records": 6,
     "chart_cell": "US1GC09M.000",
     "source_date": "20171114",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:25.22238,-80.21010",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 25.222385,
+   "lon": -80.210103,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl Y 4s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US4FL1HY.000",
+    "source_date": "20250114",
     "sectors": 0
    }
   },
@@ -3385,7 +4254,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 5,
+    "records": 6,
     "chart_cell": "US1GC09M.000",
     "source_date": "20240807",
     "sectors": 0
@@ -3849,8 +4718,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5FL3LL.000",
+    "records": 2,
+    "chart_cell": "US4FL1LS.000",
     "source_date": "201109",
     "sectors": 0
    }
@@ -3864,7 +4733,7 @@
    "region": null,
    "county": null,
    "lat": 26.717271,
-   "lon": -82.260895,
+   "lon": -82.260894,
    "precision": "exact",
    "kind": "lighthouse",
    "kind_raw": null,
@@ -3907,7 +4776,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US3FL1DE.000",
     "source_date": "201305",
     "sectors": 0
@@ -4081,10 +4950,126 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US1GC09M.000",
     "source_date": "20171107",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:27.61358,-82.76480",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 27.613583,
+   "lon": -82.764802,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4FL1PQ.000",
+    "source_date": "20211214",
+    "sectors": 2
+   }
+  },
+  {
+   "key": "enc:27.61611,-82.73955",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 27.616106,
+   "lon": -82.739546,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4FL1PQ.000",
+    "source_date": "20211214",
+    "sectors": 2
    }
   },
   {
@@ -4255,7 +5240,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US1GC09M.000",
     "source_date": "201209",
     "sectors": 0
@@ -5012,6 +5997,64 @@
     "records": 2,
     "chart_cell": "US3LA1CB.000",
     "source_date": "20141021",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:29.47269,-93.72258",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 29.472693,
+   "lon": -93.722582,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q W",
+    "focal_height_m": 9.1,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3TX1DD.000",
+    "source_date": "20000215",
     "sectors": 0
    }
   },
@@ -6060,6 +7103,64 @@
    }
   },
   {
+   "key": "enc:30.25254,-88.03761",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 30.252537,
+   "lon": -88.037607,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q R",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4AL1BB.000",
+    "source_date": "20130406",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:30.29123,-88.58503",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -6749,7 +7850,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2EC02M.000",
     "source_date": "20041129",
     "sectors": 0
@@ -6985,6 +8086,64 @@
     "chart_cell": "US5SAVDF.000",
     "source_date": "20130625",
     "sectors": 1
+   }
+  },
+  {
+   "key": "enc:32.03555,-80.89028",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 32.035553,
+   "lon": -80.890283,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5SAVDF.000",
+    "source_date": "20041129",
+    "sectors": 0
    }
   },
   {
@@ -7735,10 +8894,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 12,
+    "records": 15,
     "chart_cell": "US1GC09M.000",
     "source_date": "20190326",
-    "sectors": 8
+    "sectors": 10
    }
   },
   {
@@ -7797,6 +8956,64 @@
     "chart_cell": "US5CHSDD.000",
     "source_date": "20050419",
     "sectors": 2
+   }
+  },
+  {
+   "key": "enc:33.22263,-79.18505",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 33.222634,
+   "lon": -79.185047,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 25.900000000000002,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5SC1OY.000",
+    "source_date": "20020202",
+    "sectors": 0
    }
   },
   {
@@ -8489,7 +9706,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US2EC02M.000",
     "source_date": "20201208",
     "sectors": 0
@@ -8667,6 +9884,64 @@
     "chart_cell": "US5ILMGD.000",
     "source_date": "20220111",
     "sectors": 2
+   }
+  },
+  {
+   "key": "enc:34.14310,-119.21191",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 34.1431,
+   "lon": -119.211906,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 9.4,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4CA1GQ.000",
+    "source_date": "20220324",
+    "sectors": 0
    }
   },
   {
@@ -9011,7 +10286,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US2EC03M.000",
     "source_date": "200504",
     "sectors": 0
@@ -9069,7 +10344,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US2EC03M.000",
     "source_date": "200405",
     "sectors": 0
@@ -9359,7 +10634,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
+    "records": 2,
     "chart_cell": "US2EC03M.000",
     "source_date": "20240430",
     "sectors": 0
@@ -9826,6 +11101,64 @@
     "records": 1,
     "chart_cell": "US5NC2SO.000",
     "source_date": "20110614",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:36.15661,-75.89242",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 36.156607,
+   "lon": -75.892417,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5NC2SQ.000",
+    "source_date": "200503",
     "sectors": 0
    }
   },
@@ -10874,6 +12207,64 @@
    }
   },
   {
+   "key": "enc:37.23291,-76.04937",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 37.232912,
+   "lon": -76.049373,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3EC08M.000",
+    "source_date": "20200901",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:37.30102,-76.27775",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -11396,6 +12787,122 @@
    }
   },
   {
+   "key": "enc:37.79767,-122.33260",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 37.797667,
+   "lon": -122.332598,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4CA2BK.000",
+    "source_date": "20100309",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:37.80010,-122.33117",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 37.800104,
+   "lon": -122.33117,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4CA2CK.000",
+    "source_date": "20131126",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:37.80728,-122.36225",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -11857,6 +13364,64 @@
     "chart_cell": "US4CA11M.000",
     "source_date": "20050412",
     "sectors": 3
+   }
+  },
+  {
+   "key": "enc:37.85043,-122.41744",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 37.850435,
+   "lon": -122.417443,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4CA2CJ.000",
+    "source_date": "19850601",
+    "sectors": 0
    }
   },
   {
@@ -14586,6 +16151,64 @@
    }
   },
   {
+   "key": "enc:39.25881,-76.57063",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 39.258808,
+   "lon": -76.570632,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q R",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5BALCB.000",
+    "source_date": "20241015",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:39.26178,-76.27801",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -14753,10 +16376,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 6,
     "chart_cell": "US4DE12M.000",
     "source_date": "20130205",
-    "sectors": 4
+    "sectors": 6
    }
   },
   {
@@ -14811,10 +16434,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 12,
     "chart_cell": "US4DE12M.000",
     "source_date": "19460101",
-    "sectors": 8
+    "sectors": 12
    }
   },
   {
@@ -14941,7 +16564,7 @@
    "country": "US",
    "region": null,
    "county": null,
-   "lat": 39.482537,
+   "lat": 39.482538,
    "lon": -75.591656,
    "precision": "exact",
    "kind": "lighthouse",
@@ -14985,8 +16608,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5ILGBE.000",
+    "records": 2,
+    "chart_cell": "US4DE1DB.000",
     "source_date": "19840401",
     "sectors": 0
    }
@@ -15043,10 +16666,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
-    "chart_cell": "US5ILGBE.000",
+    "records": 4,
+    "chart_cell": "US4DE1DB.000",
     "source_date": "19840401",
-    "sectors": 2
+    "sectors": 4
    }
   },
   {
@@ -15101,10 +16724,242 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
-    "chart_cell": "US5ILGBE.000",
+    "records": 6,
+    "chart_cell": "US4DE1DB.000",
     "source_date": "201205",
-    "sectors": 2
+    "sectors": 4
+   }
+  },
+  {
+   "key": "enc:39.56873,-75.51803",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 39.568729,
+   "lon": -75.518031,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4DE1DB.000",
+    "source_date": "20140304",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:39.56915,-75.51905",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 39.569151,
+   "lon": -75.519054,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4DE1DB.000",
+    "source_date": "20140107",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:39.57059,-75.51639",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 39.570593,
+   "lon": -75.516386,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US4DE1DB.000",
+    "source_date": "20130122",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:39.57104,-75.51734",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 39.571039,
+   "lon": -75.517335,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 6,
+    "chart_cell": "US4DE1DB.000",
+    "source_date": "20260113",
+    "sectors": 4
    }
   },
   {
@@ -15275,8 +17130,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5NJ1ML.000",
+    "records": 2,
+    "chart_cell": "US3NY1AE.000",
     "source_date": "20090106",
     "sectors": 0
    }
@@ -15449,10 +17304,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPC.000",
     "source_date": "20120918",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -15507,7 +17362,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPC.000",
     "source_date": "19400101",
     "sectors": 0
@@ -15568,6 +17423,64 @@
     "records": 1,
     "chart_cell": "US5NYCAC.000",
     "source_date": "20130627",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:40.50481,-74.20928",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 40.504806,
+   "lon": -74.209277,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5NYCBD.000",
+    "source_date": "19990202",
     "sectors": 0
    }
   },
@@ -15797,10 +17710,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
-    "chart_cell": "US5NYCBG.000",
+    "records": 4,
+    "chart_cell": "US3NY1AE.000",
     "source_date": "20050111",
-    "sectors": 1
+    "sectors": 2
    }
   },
   {
@@ -16087,10 +18000,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPC.000",
     "source_date": "200603",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -18291,10 +20204,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20050201",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -18813,10 +20726,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20220928",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -20147,10 +22060,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 10,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20190115",
-    "sectors": 4
+    "sectors": 5
    }
   },
   {
@@ -20205,8 +22118,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
-    "chart_cell": "US5NY2JL.000",
+    "records": 3,
+    "chart_cell": "US3RI1AA.000",
     "source_date": "20070619",
     "sectors": 0
    }
@@ -20669,10 +22582,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20250826",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -20727,7 +22640,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20190115",
     "sectors": 0
@@ -21075,9 +22988,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20140812",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.40056,-82.54520",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.400562,
+   "lon": -82.545203,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 7.600000000000001,
+    "range_nm": 4.3,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US6OH09M.000",
+    "source_date": "201310",
     "sectors": 0
    }
   },
@@ -21365,10 +23336,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20110419",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -21597,8 +23568,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5PVDCD.000",
+    "records": 2,
+    "chart_cell": "US3RI1AA.000",
     "source_date": "20180403",
     "sectors": 0
    }
@@ -21952,6 +23923,296 @@
    }
   },
   {
+   "key": "enc:41.48169,-71.32687",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.481694,
+   "lon": -71.326871,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PVDDD.000",
+    "source_date": "20070925",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.48253,-82.71146",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.482532,
+   "lon": -82.711459,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Iso G 6s",
+    "focal_height_m": 23.5,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5KDBDH.000",
+    "source_date": "20130618",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.48642,-82.70348",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.486423,
+   "lon": -82.703478,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 10.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5KDBDH.000",
+    "source_date": "20130618",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.48803,-71.32236",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.488028,
+   "lon": -71.322361,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PVDDE.000",
+    "source_date": "20211027",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.48808,-71.32203",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.488083,
+   "lon": -71.322028,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PVDDE.000",
+    "source_date": "20211027",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:41.48983,-82.69707",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -22296,6 +24557,64 @@
     "records": 1,
     "chart_cell": "US5PVDDC.000",
     "source_date": "200504",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:41.49535,-82.69441",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.495347,
+   "lon": -82.694414,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 23.5,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5KDBDH.000",
+    "source_date": "20180626",
     "sectors": 0
    }
   },
@@ -24678,6 +26997,64 @@
    }
   },
   {
+   "key": "enc:41.66096,-71.37275",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.660962,
+   "lon": -71.372753,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PVDFD.000",
+    "source_date": "200403",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:41.66688,-87.44203",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -25947,7 +28324,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US3CA1JD.000",
     "source_date": "200212",
     "sectors": 0
@@ -26527,7 +28904,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 5,
+    "records": 6,
     "chart_cell": "US2PACVY.000",
     "source_date": "20120925",
     "sectors": 0
@@ -27636,6 +30013,64 @@
    }
   },
   {
+   "key": "enc:41.92542,-70.03527",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 41.925415,
+   "lon": -70.035275,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 4.9,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MA1KS.000",
+    "source_date": "20011013",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:41.94306,-87.63561",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -28325,10 +30760,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 9,
+    "records": 12,
     "chart_cell": "US2ATLPD.000",
     "source_date": "200705",
-    "sectors": 9
+    "sectors": 12
    }
   },
   {
@@ -28441,7 +30876,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20200729",
     "sectors": 0
@@ -28499,8 +30934,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5MA1LQ.000",
+    "records": 2,
+    "chart_cell": "US3MA1CC.000",
     "source_date": "20070619",
     "sectors": 0
    }
@@ -28557,7 +30992,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20161108",
     "sectors": 0
@@ -28673,10 +31108,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20141014",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -28882,6 +31317,64 @@
     "characteristic": "Fl G 4s",
     "focal_height_m": 9.4,
     "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5DETED.000",
+    "source_date": "201608",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:42.08953,-83.17130",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.089533,
+   "lon": -83.171297,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 1.8,
+    "range_nm": null,
     "fog_signal": null,
     "lens": null
    },
@@ -29202,6 +31695,64 @@
    }
   },
   {
+   "key": "enc:42.15362,-80.07297",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.153616,
+   "lon": -80.072966,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 3.5,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PA1DF.000",
+    "source_date": "20250811",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:42.15518,-80.07001",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -29434,6 +31985,122 @@
    }
   },
   {
+   "key": "enc:42.18421,-83.14053",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.184211,
+   "lon": -83.140525,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5DETFD.000",
+    "source_date": "20250819",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:42.18530,-83.14195",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.185301,
+   "lon": -83.141948,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F G",
+    "focal_height_m": 9.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5DETFD.000",
+    "source_date": "20130108",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:42.18920,-83.14360",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -29601,8 +32268,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5MA1NJ.000",
+    "records": 2,
+    "chart_cell": "US3MA1CC.000",
     "source_date": "20121129",
     "sectors": 0
    }
@@ -29833,7 +32500,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "19980110",
     "sectors": 0
@@ -29894,6 +32561,64 @@
     "records": 1,
     "chart_cell": "US5DETGD.000",
     "source_date": "20041012",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:42.30362,-73.78274",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.303624,
+   "lon": -73.782737,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": 14.0,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5NYCZJ.000",
+    "source_date": "20001223",
     "sectors": 0
    }
   },
@@ -31174,6 +33899,64 @@
    }
   },
   {
+   "key": "enc:42.47603,-73.78557",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.476031,
+   "lon": -73.785572,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5NYC2J.000",
+    "source_date": "20230418",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:42.49145,-79.34655",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -31863,10 +34646,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20130226",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -32211,10 +34994,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20260602",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -32675,10 +35458,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "200408",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -32733,10 +35516,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
-    "chart_cell": "US5MA1TJ.000",
+    "records": 4,
+    "chart_cell": "US3MA1CC.000",
     "source_date": "200608",
-    "sectors": 2
+    "sectors": 4
    }
   },
   {
@@ -32791,8 +35574,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5MA1TK.000",
+    "records": 2,
+    "chart_cell": "US3MA1CC.000",
     "source_date": "200408",
     "sectors": 0
    }
@@ -32965,7 +35748,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "200304",
     "sectors": 0
@@ -33200,6 +35983,64 @@
     "records": 1,
     "chart_cell": "US5DETNM.000",
     "source_date": "201608",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:42.77212,-86.20676",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.772119,
+   "lon": -86.206758,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 7.3,
+    "range_nm": 3.5,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI1OJ.000",
+    "source_date": "20250918",
     "sectors": 0
    }
   },
@@ -33545,9 +36386,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 5,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20250204",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:42.86485,-82.46633",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 42.864851,
+   "lon": -82.466334,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 7.9,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5DETOM.000",
+    "source_date": "201608",
     "sectors": 0
    }
   },
@@ -34299,10 +37198,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20081203",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -34712,6 +37611,64 @@
    }
   },
   {
+   "key": "enc:43.05486,-70.71353",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 43.054861,
+   "lon": -70.71353,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 6.7,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PSMCD.000",
+    "source_date": "20140513",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:43.05693,-86.25596",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -34937,9 +37894,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20260210",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:43.06435,-79.04605",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 43.064346,
+   "lon": -79.046047,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Iso R 2s",
+    "focal_height_m": 4.9,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5BUFGC.000",
+    "source_date": "20250820",
     "sectors": 0
    }
   },
@@ -35053,10 +38068,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 6,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20160308",
-    "sectors": 2
+    "sectors": 3
    }
   },
   {
@@ -35111,10 +38126,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLPD.000",
     "source_date": "20001104",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -35930,6 +38945,64 @@
    }
   },
   {
+   "key": "enc:43.34075,-78.71947",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 43.340754,
+   "lon": -78.719469,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 8.8,
+    "range_nm": 5.2,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5NY25M.000",
+    "source_date": "19920815",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:43.35021,-76.70780",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -36097,7 +39170,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20070619",
     "sectors": 0
@@ -36503,7 +39576,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20251104",
     "sectors": 0
@@ -36619,10 +39692,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 10,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20021119",
-    "sectors": 4
+    "sectors": 5
    }
   },
   {
@@ -36677,10 +39750,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 20,
+    "records": 25,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20251021",
-    "sectors": 16
+    "sectors": 20
    }
   },
   {
@@ -36735,10 +39808,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 10,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20170627",
-    "sectors": 4
+    "sectors": 5
    }
   },
   {
@@ -37025,10 +40098,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20200114",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -37083,7 +40156,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 5,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20200218",
     "sectors": 0
@@ -37257,10 +40330,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20200616",
-    "sectors": 4
+    "sectors": 5
    }
   },
   {
@@ -37489,10 +40562,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20251007",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -37547,7 +40620,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20121023",
     "sectors": 0
@@ -37721,10 +40794,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 6,
+    "records": 8,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20130226",
-    "sectors": 3
+    "sectors": 4
    }
   },
   {
@@ -37837,10 +40910,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 12,
     "chart_cell": "US3EC10M.000",
     "source_date": "200412",
-    "sectors": 8
+    "sectors": 12
    }
   },
   {
@@ -38069,7 +41142,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "200412",
     "sectors": 0
@@ -38475,10 +41548,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
+    "records": 2,
     "chart_cell": "US3EC10M.000",
     "source_date": "19970301",
-    "sectors": 1
+    "sectors": 2
    }
   },
   {
@@ -38533,10 +41606,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 4,
     "chart_cell": "US3EC10M.000",
     "source_date": "19970301",
-    "sectors": 1
+    "sectors": 2
    }
   },
   {
@@ -38881,10 +41954,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 12,
+    "records": 15,
     "chart_cell": "US2ATLQD.000",
     "source_date": "201504",
-    "sectors": 12
+    "sectors": 15
    }
   },
   {
@@ -38939,10 +42012,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 6,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20180828",
-    "sectors": 2
+    "sectors": 3
    }
   },
   {
@@ -38997,10 +42070,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 6,
     "chart_cell": "US3EC11M.000",
     "source_date": "20010918",
-    "sectors": 2
+    "sectors": 3
    }
   },
   {
@@ -39055,7 +42128,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 5,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20130604",
     "sectors": 0
@@ -39229,10 +42302,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 8,
+    "records": 10,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20120611",
-    "sectors": 4
+    "sectors": 5
    }
   },
   {
@@ -39345,10 +42418,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 4,
     "chart_cell": "US3EC11M.000",
     "source_date": "20010505",
-    "sectors": 1
+    "sectors": 2
    }
   },
   {
@@ -39519,10 +42592,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 6,
     "chart_cell": "US3EC11M.000",
     "source_date": "20011027",
-    "sectors": 4
+    "sectors": 6
    }
   },
   {
@@ -39751,7 +42824,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US2ATLQD.000",
     "source_date": "200407",
     "sectors": 0
@@ -39925,7 +42998,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 4,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20120218",
     "sectors": 0
@@ -40215,7 +43288,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 2,
+    "records": 3,
     "chart_cell": "US3EC11M.000",
     "source_date": "200208",
     "sectors": 0
@@ -40273,7 +43346,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLQD.000",
     "source_date": "200303",
     "sectors": 0
@@ -40795,10 +43868,68 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US2ATLQD.000",
     "source_date": "20241022",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:44.36758,-67.86436",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 44.367581,
+   "lon": -67.86436,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 37.5,
+    "range_nm": 19.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3ME1AC.000",
+    "source_date": "200311",
+    "sectors": 1
    }
   },
   {
@@ -40911,10 +44042,10 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 4,
+    "records": 8,
     "chart_cell": "US3EC11M.000",
     "source_date": "20031101",
-    "sectors": 4
+    "sectors": 8
    }
   },
   {
@@ -41089,6 +44220,122 @@
     "chart_cell": "US5BGRHF.000",
     "source_date": "200209",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:44.47457,-67.53200",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 44.474572,
+   "lon": -67.532002,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 30s",
+    "focal_height_m": 21.900000000000002,
+    "range_nm": 20.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3ME1BC.000",
+    "source_date": "200404",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:44.56833,-67.36738",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 44.568332,
+   "lon": -67.367383,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2) W 20s",
+    "focal_height_m": 27.7,
+    "range_nm": 18.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3ME1BC.000",
+    "source_date": "20040401",
+    "sectors": 1
    }
   },
   {
@@ -41549,7 +44796,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 5,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20181016",
     "sectors": 0
@@ -42074,6 +45321,64 @@
     "records": 2,
     "chart_cell": "US2GRLBB.000",
     "source_date": "20220511",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:44.91867,-66.96667",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 44.918667,
+   "lon": -66.966667,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 10.0,
+    "range_nm": 17.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5ME3GH.000",
+    "source_date": "20031031",
     "sectors": 0
    }
   },
@@ -43408,6 +46713,122 @@
     "records": 1,
     "chart_cell": "US5MI2WW.000",
     "source_date": "19970322",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:45.33768,-83.48487",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 45.337677,
+   "lon": -83.484867,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q G",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI66A.000",
+    "source_date": "20011201",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:45.33834,-83.48243",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 45.338345,
+   "lon": -83.482429,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q R",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI66A.000",
+    "source_date": "20011201",
     "sectors": 0
    }
   },
@@ -45790,6 +49211,64 @@
    }
   },
   {
+   "key": "enc:46.10882,-83.00670",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.10882,
+   "lon": -83.0067,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 21.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLBC.000",
+    "source_date": "20011208",
+    "sectors": 2
+   }
+  },
+  {
    "key": "enc:46.10926,-84.01988",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -45845,6 +49324,64 @@
     "chart_cell": "US2GRLBC.000",
     "source_date": "19850101",
     "sectors": 6
+   }
+  },
+  {
+   "key": "enc:46.14500,-83.60661",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.144997,
+   "lon": -83.606615,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 18.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 3,
+    "chart_cell": "US2GRLBC.000",
+    "source_date": "19970614",
+    "sectors": 0
    }
   },
   {
@@ -45964,6 +49501,122 @@
    }
   },
   {
+   "key": "enc:46.26097,-84.09753",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.26097,
+   "lon": -84.09753,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F R",
+    "focal_height_m": 21.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI7VO.000",
+    "source_date": "20260227",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:46.26128,-84.09822",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.26128,
+   "lon": -84.09822,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F W",
+    "focal_height_m": 19.400000000000002,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI7VO.000",
+    "source_date": "20260227",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:46.27579,-124.05218",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -46015,7 +49668,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 5,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20081202",
     "sectors": 0
@@ -46131,7 +49784,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 5,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20250415",
     "sectors": 0
@@ -46192,6 +49845,64 @@
     "records": 3,
     "chart_cell": "US2GRLBC.000",
     "source_date": "19970426",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:46.31305,-84.11533",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.313047,
+   "lon": -84.115327,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F W",
+    "focal_height_m": 19.5,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI7WO.000",
+    "source_date": "20091030",
     "sectors": 0
    }
   },
@@ -46486,6 +50197,180 @@
    }
   },
   {
+   "key": "enc:46.46411,-84.47286",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.464111,
+   "lon": -84.472861,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Iso R 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 9.200000000000001,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 3,
+    "chart_cell": "US2GRLBC.000",
+    "source_date": "20100209",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:46.46625,-84.47530",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.46625,
+   "lon": -84.4753,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F G",
+    "focal_height_m": 17.6,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI7YJ.000",
+    "source_date": "20251117",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:46.46775,-84.47238",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.46775,
+   "lon": -84.472383,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F G",
+    "focal_height_m": 9.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI7YJ.000",
+    "source_date": "20251117",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:46.48800,-84.30365",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -46773,6 +50658,64 @@
     "chart_cell": "US2GRLBB.000",
     "source_date": "20060711",
     "sectors": 6
+   }
+  },
+  {
+   "key": "enc:46.53674,-87.37886",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 46.536738,
+   "lon": -87.378864,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 11.6,
+    "range_nm": 4.3,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5PSSDC.000",
+    "source_date": "19940319",
+    "sectors": 0
    }
   },
   {
@@ -48161,7 +52104,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 3,
+    "records": 4,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20130205",
     "sectors": 0
@@ -48915,8 +52858,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5OLMCD.000",
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
     "source_date": "20090127",
     "sectors": 0
    }
@@ -48973,8 +52916,8 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
-    "chart_cell": "US5OLMCE.000",
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
     "source_date": "200503",
     "sectors": 0
    }
@@ -49035,6 +52978,64 @@
     "chart_cell": "US2GRLBB.000",
     "source_date": "20070717",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.19549,-88.61601",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.195494,
+   "lon": -88.61601,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F W",
+    "focal_height_m": 16.8,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5MI6RB.000",
+    "source_date": "20130625",
+    "sectors": 1
    }
   },
   {
@@ -49212,6 +53213,122 @@
    }
   },
   {
+   "key": "enc:47.30591,-122.44426",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.30591,
+   "lon": -122.444264,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 11.6,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "19941116",
+    "sectors": 2
+   }
+  },
+  {
+   "key": "enc:47.31677,-122.54812",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.316767,
+   "lon": -122.548117,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 6.4,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "20080219",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:47.34109,-85.82641",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -49324,6 +53441,64 @@
     "records": 3,
     "chart_cell": "US2GRLBB.000",
     "source_date": "19980707",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.38813,-122.37439",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.388135,
+   "lon": -122.374388,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2) W 12s",
+    "focal_height_m": 12.200000000000001,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DG.000",
+    "source_date": "20121211",
     "sectors": 0
    }
   },
@@ -49850,6 +54025,412 @@
    }
   },
   {
+   "key": "enc:47.55822,-84.96358",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.558222,
+   "lon": -84.963583,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 24.0,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLBC.000",
+    "source_date": "20240329",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.57628,-122.42055",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.576277,
+   "lon": -122.420548,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 11.9,
+    "range_nm": 16.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "20140107",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.61632,-122.49645",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.616321,
+   "lon": -122.496446,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 9.1,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "19941116",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.61912,-122.49771",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.619125,
+   "lon": -122.497711,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "19941116",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.62086,-122.50389",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.620862,
+   "lon": -122.503889,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US5SEAFJ.000",
+    "source_date": "19940531",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.66197,-122.43572",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.661971,
+   "lon": -122.43572,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Al Fl W R 10s",
+    "focal_height_m": 8.2,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "20231227",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.71681,-85.79842",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.716806,
+   "lon": -85.798417,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F R",
+    "focal_height_m": 6.4,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLBC.000",
+    "source_date": "20240329",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:47.71864,-85.95603",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50140,6 +54721,122 @@
    }
   },
   {
+   "key": "enc:47.91216,-122.52681",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.912163,
+   "lon": -122.526813,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(3) W 10s",
+    "focal_height_m": 8.2,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "20060620",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.91925,-122.56981",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.91925,
+   "lon": -122.56981,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "F R",
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DF.000",
+    "source_date": "20160329",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:47.94333,-84.90728",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50252,6 +54949,238 @@
     "records": 2,
     "chart_cell": "US2GRLBB.000",
     "source_date": "20070904",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:47.94875,-122.30626",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 47.94875,
+   "lon": -122.306259,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 10.1,
+    "range_nm": 12.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1DG.000",
+    "source_date": "20211201",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.03086,-122.60705",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.030859,
+   "lon": -122.607049,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 7.600000000000001,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20091027",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.08128,-89.36014",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.081278,
+   "lon": -89.360139,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 18.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLCB.000",
+    "source_date": "20230630",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.10161,-122.68791",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.101611,
+   "lon": -122.687912,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 8.5,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20080212",
     "sectors": 0
    }
   },
@@ -50372,6 +55301,180 @@
    }
   },
   {
+   "key": "enc:48.14001,-123.40244",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.140014,
+   "lon": -123.40244,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(1+2) G W W 10s",
+    "focal_height_m": 15.200000000000001,
+    "range_nm": 16.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20231129",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.14416,-122.75479",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.144162,
+   "lon": -122.754795,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Al Fl R W 20s",
+    "focal_height_m": 15.5,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20241224",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.18176,-123.11025",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.181755,
+   "lon": -123.110253,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 20.400000000000002,
+    "range_nm": 18.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "19910722",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:48.19141,-88.42228",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50484,6 +55587,64 @@
     "records": 2,
     "chart_cell": "US2GRLCB.000",
     "source_date": "20090825",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.22803,-89.17461",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.228028,
+   "lon": -89.174611,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLCB.000",
+    "source_date": "20191227",
     "sectors": 0
    }
   },
@@ -50604,6 +55765,122 @@
    }
   },
   {
+   "key": "enc:48.29807,-123.53149",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.29807,
+   "lon": -123.531486,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 36.0,
+    "range_nm": 19.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201110",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.30178,-88.93814",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.301778,
+   "lon": -88.938139,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 10.700000000000001,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US2GRLCB.000",
+    "source_date": "20191227",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:48.34000,-88.64833",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50720,6 +55997,64 @@
    }
   },
   {
+   "key": "enc:48.35836,-123.71147",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.358361,
+   "lon": -123.711472,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q W",
+    "focal_height_m": 6.7,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EE.000",
+    "source_date": "20061018",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:48.36944,-89.12056",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50778,6 +56113,64 @@
    }
   },
   {
+   "key": "enc:48.37669,-123.92108",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.376694,
+   "lon": -123.921083,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 15s",
+    "focal_height_m": 19.5,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EE.000",
+    "source_date": "201110",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:48.39199,-124.73693",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -50829,10 +56222,474 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
+    "records": 2,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20130528",
     "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.39523,-123.30513",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.395233,
+   "lon": -123.305128,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 5s",
+    "focal_height_m": 28.3,
+    "range_nm": 13.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201110",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.40648,-123.38808",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.406481,
+   "lon": -123.388081,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 11.9,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201110",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.41350,-123.39381",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.4135,
+   "lon": -123.393806,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q R",
+    "focal_height_m": 13.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20180126",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.42204,-122.89427",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.422038,
+   "lon": -122.894271,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 10.700000000000001,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20060530",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.42452,-123.22578",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.424519,
+   "lon": -123.225779,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 28.3,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200504",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.42550,-123.27988",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.425501,
+   "lon": -123.27988,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q R",
+    "focal_height_m": 6.7,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200504",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.42619,-123.43886",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.426187,
+   "lon": -123.438862,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 6.100000000000001,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201110",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.43046,-123.44756",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.430462,
+   "lon": -123.44756,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Iso W 2s",
+    "focal_height_m": 21.6,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201110",
+    "sectors": 2
    }
   },
   {
@@ -50952,6 +56809,354 @@
    }
   },
   {
+   "key": "enc:48.45064,-122.96330",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.450637,
+   "lon": -122.963302,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 28.7,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200210",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.47794,-122.71379",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.477937,
+   "lon": -122.713792,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 13.700000000000001,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20260506",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.51587,-123.15251",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.515867,
+   "lon": -123.152509,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 13.700000000000001,
+    "range_nm": 17.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20160223",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.52369,-123.29186",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.523694,
+   "lon": -123.291861,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.5,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20160202",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.54758,-123.23686",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.547583,
+   "lon": -123.236861,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q W",
+    "focal_height_m": 10.700000000000001,
+    "range_nm": 10.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200504",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.60167,-122.99019",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.601672,
+   "lon": -122.990188,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200210",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:48.60463,-88.14325",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -51061,7 +57266,7 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
+    "records": 2,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20060307",
     "sectors": 0
@@ -51122,6 +57327,354 @@
     "records": 2,
     "chart_cell": "US2GRLCB.000",
     "source_date": "20240329",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.63849,-123.29876",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.638488,
+   "lon": -123.298758,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 5.5,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201305",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.64364,-122.57824",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.643643,
+   "lon": -122.578244,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2+1) G 6s",
+    "focal_height_m": 6.4,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20250225",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.66233,-123.27378",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.662333,
+   "lon": -123.273778,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 24.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20191012",
+    "sectors": 2
+   }
+  },
+  {
+   "key": "enc:48.68478,-123.29369",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.684778,
+   "lon": -123.293694,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(2+1) G 6s",
+    "focal_height_m": 7.0,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20181130",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.68876,-123.23744",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.688757,
+   "lon": -123.237437,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 13.4,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20130901",
+    "sectors": 1
+   }
+  },
+  {
+   "key": "enc:48.69917,-123.29869",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.699167,
+   "lon": -123.298694,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl(3) W 12s",
+    "focal_height_m": 8.8,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201305",
     "sectors": 0
    }
   },
@@ -51235,9 +57788,67 @@
    "extra": {
     "enrich_only": true,
     "quiet_unmatched": true,
-    "records": 1,
+    "records": 2,
     "chart_cell": "US1GLBDD.000",
     "source_date": "20180223",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.73565,-123.18380",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.73565,
+   "lon": -123.1838,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 10.700000000000001,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20240628",
     "sectors": 0
    }
   },
@@ -51300,6 +57911,64 @@
    }
   },
   {
+   "key": "enc:48.78300,-123.04583",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.783,
+   "lon": -123.045833,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 15s",
+    "focal_height_m": 36.9,
+    "range_nm": 17.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 2,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "200212",
+    "sectors": 2
+   }
+  },
+  {
    "key": "enc:48.78693,-125.21593",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -51358,6 +58027,122 @@
    }
   },
   {
+   "key": "enc:48.78900,-122.97134",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.788999,
+   "lon": -122.971344,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 15.8,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 3,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "20230329",
+    "sectors": 2
+   }
+  },
+  {
+   "key": "enc:48.87298,-123.29078",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.872979,
+   "lon": -123.290775,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 17.400000000000002,
+    "range_nm": 17.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201305",
+    "sectors": 1
+   }
+  },
+  {
    "key": "enc:48.92110,-125.54176",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -51412,6 +58197,64 @@
     "records": 1,
     "chart_cell": "US1GLBDD.000",
     "source_date": "201301",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:48.99224,-122.78406",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 48.992238,
+   "lon": -122.784055,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 4.600000000000001,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3WA1EF.000",
+    "source_date": "201305",
     "sectors": 0
    }
   },
@@ -51880,6 +58723,64 @@
    }
   },
   {
+   "key": "enc:54.03263,-132.19855",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 54.032628,
+   "lon": -132.198553,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Fl Y 1s",
+    "focal_height_m": 6.7,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3AK1DX.000",
+    "source_date": "201302",
+    "sectors": 0
+   }
+  },
+  {
    "key": "enc:54.04114,-132.56842",
    "url": "https://encdirect.noaa.gov/",
    "name": null,
@@ -51933,6 +58834,64 @@
     "quiet_unmatched": true,
     "records": 1,
     "chart_cell": "US3AK1DX.000",
+    "source_date": "201302",
+    "sectors": 0
+   }
+  },
+  {
+   "key": "enc:54.11605,-130.34633",
+   "url": "https://encdirect.noaa.gov/",
+   "name": null,
+   "other_names": [],
+   "country": "US",
+   "region": null,
+   "county": null,
+   "lat": 54.11605,
+   "lon": -130.346329,
+   "precision": "exact",
+   "kind": "lighthouse",
+   "kind_raw": null,
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": "Q W",
+    "focal_height_m": 7.600000000000001,
+    "range_nm": 3.0,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [],
+   "photos": [],
+   "links": [],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "enrich_only": true,
+    "quiet_unmatched": true,
+    "records": 1,
+    "chart_cell": "US3AK1DY.000",
     "source_date": "201302",
     "sectors": 0
    }
