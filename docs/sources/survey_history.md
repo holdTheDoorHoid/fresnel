@@ -828,7 +828,7 @@ redirects to a `dn` host), with no errors.
 - **(c) `_hocr_searchtext.txt.gz` page breaks.** The search text has **no form feeds**, but each item that has it also has
   `<id>_hocr_pageindex.json.gz`, a list with one `[start, end, ...]` entry per scan page giving the page's character range in the search text, which is
   exactly a page map (399 entries for a 399-leaf book). 66 of the 81 archive.org volumes have the pair; the 15 without are Google scans of
-  the 1860s-90s: five Board volumes (`annualreportlig00boargoog`, `...02statgoog`, `...04statgoog`, `...00statgoog`, `...01boargoog`), six LSS volumes (the `annualreportope0[06-9]servgoog` and `...06servgoog` scans and `united-states-life-saving-service-0001`) and four general histories; for these `corpus.py page` falls back to the in-item search API. `corpus.py` downloads the pair (about 0.1-1 MB
+  the 1860s-90s: five Board volumes (`annualreportlig00boargoog`, `...02statgoog`, `...04statgoog`, `...00statgoog`, `...01boargoog`), six LSS volumes (`annualreportope00servgoog`, `...06servgoog`, `...07servgoog`, `...08servgoog`, `...09servgoog` and `united-states-life-saving-service-0001`) and four general histories; for these `corpus.py page` falls back to the in-item search API. `corpus.py` downloads the pair (about 0.1-1 MB
   each, 31 MB for the lot) and maps a hit to its scan page by matching the words around it in the search text. The `_scandata.xml` file often carries a
   `pageNumber` for each leaf, but in the Google scans it can be a page out (leaf 52 of `annualreportlig03statgoog` reads 40 while the page's own head says 41),
   so the tool reports a printed page as certain only when scan data and the page's OCR head agree. The in-item search API (`inside.php`) works as in
