@@ -1,0 +1,223 @@
+{
+  "id": "us-me-portland-breakwater",
+  "name": "Portland Breakwater Light",
+  "other_names": [
+    "Portland Breakwater Lighthouse",
+    "Bug Light",
+    "South Portland Breakwater Light"
+  ],
+  "country": "US",
+  "region": "ME",
+  "county": "Cumberland",
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 43.65554,
+    "lon": -70.234853,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1855,
+      "height_m": 7.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 10.0,
+    "range_nm": 3.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "73000238",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000238"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-7699",
+    "arlhs": "USA659",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "United States Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1855,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1942,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1973,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portland_ME_-_Bug_Light.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portland_ME_-_Bug_Light.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Portland_ME_-_Bug_Light.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portlandbkwtr1855.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portlandbkwtr1855.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Portlandbkwtr1855.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7231886",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portland_Breakwater_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_South_Portland",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Portland_Breakwater_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA659",
+      "url": "https://wlol.arlhs.com/lighthouse/USA659.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/660606481",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7231886",
+      "part": "wikidata:Q7231886",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/660606481",
+      "part": "wikidata:Q7231886",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1875
+        },
+        {
+          "source": "osm",
+          "value": 1855
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

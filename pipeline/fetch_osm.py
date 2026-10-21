@@ -310,7 +310,8 @@ def kind_and_role(tags: dict, name: str | None) -> tuple[str, str | None]:
         return "range_lights", role
     if re.search(r"\b(pier ?head|pier|breakwater|jetty|mole)\b", n):
         return "pier_light", None
-    if tags.get("man_made") == "lighthouse" and tags.get("seamark:type") == "light_minor":
+    if (tags.get("man_made") == "lighthouse" and tags.get("seamark:type") == "light_minor"
+            and not re.search(r"\blight ?(house|station)\b|\bphare\b|\bfaro\b", n)):
         return "harbor_light", None
     return "lighthouse", None
 

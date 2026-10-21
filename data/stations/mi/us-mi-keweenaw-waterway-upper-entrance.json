@@ -1,0 +1,198 @@
+{
+  "id": "us-mi-keweenaw-waterway-upper-entrance",
+  "name": "Keweenaw Waterway Upper Entrance Light",
+  "other_names": [
+    "Keweenaw Waterway Upper Entrance Lighthouse",
+    "Keweenaw Upper Entrance Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": "Houghton",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.234532,
+    "lon": -88.630361,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1950,
+      "height_m": 21.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1950,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 15s",
+    "focal_height_m": 25.0,
+    "range_nm": 15.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "14000425",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/14000425"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15120",
+    "arlhs": "USA419",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1950,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1950,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gfp-michigan-mclain-state-park-full-view-of-the-lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gfp-michigan-mclain-state-park-full-view-of-the-lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gfp-michigan-mclain-state-park-full-view-of-the-lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28376357",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Keweenaw_Waterway_Upper_Entrance_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27entr%C3%A9e_sup%C3%A9rieure_de_la_voie_navigable_Keweenaw",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Keweenaw_Waterway_Upper_Entrance_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA419",
+      "url": "https://wlol.arlhs.com/lighthouse/USA419.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/9935975072",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=221",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q28376357",
+      "part": "wikidata:Q28376357",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/9935975072",
+      "part": "wikidata:Q28376357",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 15s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W, 15 sec"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

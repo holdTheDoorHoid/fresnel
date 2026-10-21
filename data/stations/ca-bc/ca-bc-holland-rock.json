@@ -1,0 +1,168 @@
+{
+  "id": "ca-bc-holland-rock",
+  "name": "Holland Rock Light",
+  "other_names": [
+    "phare d'Holland Rock",
+    "Holland Rock Lighthouse"
+  ],
+  "country": "CA",
+  "region": "BC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 54.172385,
+    "lon": -130.361187,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1908,
+      "height_m": 6.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1946,
+    "lens": null,
+    "characteristic": "Fl(3) W 12s",
+    "focal_height_m": 7.0,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN229",
+    "ccg_list_number": "P690",
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1908,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1946,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1949,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1949,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q45265779",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27Holland_Rock",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN229",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN229.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3772706525",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q45265779",
+      "part": "wikidata:Q45265779",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/3772706525",
+      "part": "wikidata:Q45265779",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1949
+        },
+        {
+          "source": "wikidata",
+          "value": 1946
+        }
+      ],
+      "note": "A source gives the light's service entry (1949) after its retirement (1946); it may have been relit. Neither is shown as the first lighting."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

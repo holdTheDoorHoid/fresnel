@@ -183,7 +183,7 @@ US_COUNTY_CLASS_RE = re.compile(
     r"county of |\bcounty of the United States|parish of Louisiana|borough of Alaska|census area|"
     r"municipality of Puerto Rico|municipio|district of the United States Virgin Islands|"
     r"district of American Samoa|municipality of the Northern Mariana Islands|village of Guam|"
-    r"independent city|consolidated city-county|unified municipality|city and borough", re.I)
+    r"independent city|consolidated city-county|unified municipality|city and borough|county-equivalent", re.I)
 CA_UNIT_CLASS_RE = re.compile(
     r"census division|regional county municipality|regional district|county of (Nova Scotia|New Brunswick|"
     r"Prince Edward Island|Ontario)|district of Ontario|regional municipality|united counties|"
@@ -567,6 +567,16 @@ def name_kind(name: str) -> str | None:
     return None
 
 
+CHAR_RE = re.compile(r"^(Al\.?\s*)?(Fl|LFl|Oc|Iso|Q|VQ|UQ|IQ|F|FFl|Mo)\b")
+
+
+def characteristic_rank(value: str) -> tuple:
+    """Sort key: a Light List form with a period first ("Fl W 4s"), then other Light List forms,
+    then anything else ("FF WRG (secteurs)"); shorter before longer."""
+    v = value.strip()
+    return (not CHAR_RE.match(v), not re.search(r"\d(\.\d+)?\s?s\b", v), "(" in v, len(v), v)
+
+
 def ownership_of(labels: list[str]) -> str | None:
     for label in labels:
         for rx, value in OWNERSHIP_WORDS:
@@ -683,7 +693,10 @@ def build_record(q: str, groups: set[str], d: dict, lookup) -> tuple[dict | None
     en, fr, es = first("en"), first("fr"), first("es")
     name = en or fr or es or q
     other_names = []
-    for alt in [fr if en else None, es if (en or fr) else None, *vals("aliases")]:
+    # The French name for a Canadian station, the Spanish one in Puerto Rico (as the place itself
+    # writes it); elsewhere Wikidata's French and Spanish labels are translations, not names.
+    local = fr if country == "CA" else (es if region == "PR" else None)
+    for alt in [local if local != name else None, *vals("aliases")]:
         if alt and alt != name and alt not in other_names:
             other_names.append(alt)
 
@@ -740,13 +753,18 @@ def build_record(q: str, groups: set[str], d: dict, lookup) -> tuple[dict | None
     for cq, why in INACTIVE_CLASSES.items():
         if cq in classes and not status:
             status, status_raw = "inactive", why
-    if not status and retired and not (first_lit and first_lit > retired):
+    possibly_lost = False
+    if dissolved_vals and status in (None, "inactive"):
+        # P576 "dissolved, abolished or demolished" does not say which. On lighthouse items it is
+        # most often a demolition or loss (Cape Henlopen 1926, Chandeleur Island 2005), sometimes
+        # the old tower of a light that still stands (Cape Hatteras 1871). So no standing claim:
+        # the merge calls the station inactive only when OpenStreetMap maps the structure today,
+        # and otherwise unknown, with a note, and lists it for review.
+        possibly_lost = True
+        status, status_raw = None, (f"Wikidata end date (P576): {dissolved or 'unknown value'}; it does not say "
+                                    "whether the light was discontinued or the structure taken down")
+    elif not status and retired and not (first_lit and first_lit > retired):
         status, status_raw = "inactive", f"Wikidata service retirement (P730): {retired}"
-    if not status and dissolved_vals:
-        # P576 "dissolved, abolished or demolished" does not say which: no status claim, but the
-        # date is kept as an event with that caveat (merge lists these for review).
-        status_raw = (f"Wikidata end date (P576): {dissolved or 'unknown value'}; it does not say whether "
-                      "the light was discontinued or the structure demolished")
 
     out_of_scope = next((why for cq, why in OUT_OF_SCOPE_CLASSES.items() if cq in classes), None)
 
@@ -766,10 +784,8 @@ def build_record(q: str, groups: set[str], d: dict, lookup) -> tuple[dict | None
     range_nm, ranges = quantity(qrows, "range", UNIT_NM)
     elev_m, _elevs = quantity(qrows, "elevation", UNIT_M)
 
-    chars = vals("chars")
-    characteristic = chars[0].strip() if chars else None
-    if characteristic is not None and not characteristic:
-        characteristic = None
+    chars = sorted({x.strip() for x in vals("chars") if x.strip()}, key=characteristic_rank)
+    characteristic = chars[0] if chars else None
 
     # Registers and numbers
     registers = []
@@ -878,6 +894,8 @@ def build_record(q: str, groups: set[str], d: dict, lookup) -> tuple[dict | None
         extra["out_of_scope"] = out_of_scope
     if dissolved_vals:
         extra["p576"] = dissolved or "unknown value"
+    if possibly_lost:
+        extra["possibly_lost"] = True
     if owners:
         extra["owners"] = owners
     if operators:

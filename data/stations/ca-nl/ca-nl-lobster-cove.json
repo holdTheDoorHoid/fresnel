@@ -1,0 +1,185 @@
+{
+  "id": "ca-nl-lobster-cove",
+  "name": "Lobster Cove Lighthouse",
+  "other_names": [
+    "phare de Lobster Cove Head",
+    "Lobster Cove Head Lighthouse",
+    "Lobster Cove Head"
+  ],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 49.602901,
+    "lon": -57.955677,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "cast_iron",
+      "material": "cast_iron",
+      "built": 1897,
+      "height_m": 8.4,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Iso W 4s",
+    "focal_height_m": 35.0,
+    "range_nm": 12.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "4813",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=4813"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3699",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3699"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN646",
+    "ccg_list_number": "N201",
+    "nga": "110-2640"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1897,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lobster_Cove_Head_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lobster_Cove_Head_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lobster_Cove_Head_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q30106230",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Lobster_Cove_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN646",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN646.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/491406196",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://parks.canada.ca/pn-np/nl/grosmorne/activ/decouverte-tours/lch",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q30106230",
+      "part": "wikidata:Q30106230",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/491406196",
+      "part": "wikidata:Q30106230",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Iso W 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

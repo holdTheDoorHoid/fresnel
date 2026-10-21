@@ -1,0 +1,194 @@
+{
+  "id": "us-vi-hams-bluff",
+  "name": "Hams Bluff Light",
+  "other_names": [
+    "Hams Bluff Lighthouse"
+  ],
+  "country": "US",
+  "region": "VI",
+  "county": "Saint Croix District",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 17.769189,
+    "lon": -64.870806,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1915,
+      "height_m": 11.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 2010,
+    "deactivated": 2010,
+    "lens": null,
+    "characteristic": "Fl(2) W 30s",
+    "focal_height_m": null,
+    "range_nm": 16.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "100004382",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100004382"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "3-32845",
+    "arlhs": "VIR001",
+    "ccg_list_number": null,
+    "nga": "110-14656"
+  },
+  "agency": "United States Navy",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1915,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2010,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2010,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hams-bluff-light2.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hams-bluff-light2.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hams-bluff-light2.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5646382",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hams_Bluff_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Hams_Bluff_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights VIR001",
+      "url": "https://wlol.arlhs.com/lighthouse/VIR001.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/526024480",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5646382",
+      "part": "wikidata:Q5646382",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/526024480",
+      "part": "wikidata:Q5646382",
+      "fields": [
+        "agency",
+        "light",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2010
+        },
+        {
+          "source": "osm",
+          "value": 1915
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

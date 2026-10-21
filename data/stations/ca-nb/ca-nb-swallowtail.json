@@ -1,0 +1,205 @@
+{
+  "id": "ca-nb-swallowtail",
+  "name": "Swallowtail Lighthouse",
+  "other_names": [
+    "Swallow Tail Lighthouse",
+    "Swallow Tail"
+  ],
+  "country": "CA",
+  "region": "NB",
+  "county": "Charlotte County",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 44.764206,
+    "lon": -66.732634,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1859,
+      "height_m": 16.2,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1860,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Oc W 6s",
+    "focal_height_m": 37.0,
+    "range_nm": 12.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "4735",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=4735"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "4331",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=4331"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN491",
+    "ccg_list_number": "A33",
+    "nga": "110-11364"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1986"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1859,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1860,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1860,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1986,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swallowtail_Lighthouse_-_Grand_Manan_Island_NB_2009.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swallowtail_Lighthouse_-_Grand_Manan_Island_NB_2009.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Swallowtail_Lighthouse_-_Grand_Manan_Island_NB_2009.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28375027",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Swallowtail_Lighthouse",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Swallowtail_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN491",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN491.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/203479098",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q28375027",
+      "part": "wikidata:Q28375027",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/203479098",
+      "part": "wikidata:Q28375027",
+      "fields": [
+        "events",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Oc W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl4 s; eclipse 2s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

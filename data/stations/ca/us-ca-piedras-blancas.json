@@ -1,0 +1,189 @@
+{
+  "id": "us-ca-piedras-blancas",
+  "name": "Piedras Blancas Light Station",
+  "other_names": [
+    "Piedras Blancas Lighthouse",
+    "Piedras Blancas"
+  ],
+  "country": "US",
+  "region": "CA",
+  "county": "San Luis Obispo",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 35.665637,
+    "lon": -121.284359,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W",
+    "focal_height_m": 43.2,
+    "range_nm": 21.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "91001095",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001095"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "6-0265",
+    "arlhs": "USA598",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piedras_Blancas_Public_Tours.jpeg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piedras_Blancas_Public_Tours.jpeg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piedras_Blancas_Public_Tours.jpeg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7191571",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Piedras_Blancas_Light_Station",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Piedras_Blancas",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Piedras_Blancas_Light_Station",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA598",
+      "url": "https://wlol.arlhs.com/lighthouse/USA598.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/348453134",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.blm.gov/ca/st/en/fo/bakersfield/Programs/pbls.html",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7191571",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/348453134",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 10s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

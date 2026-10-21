@@ -1,0 +1,191 @@
+{
+  "id": "us-wi-milwaukee-pierhead",
+  "name": "Milwaukee Pierhead Light",
+  "other_names": [
+    "Milwaukee Pierhead Lighthouse"
+  ],
+  "country": "US",
+  "region": "WI",
+  "county": "Milwaukee",
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 43.025962,
+    "lon": -87.895345,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1872,
+      "height_m": 12.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1872,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R",
+    "focal_height_m": 13.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "12000971",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000971"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-20670",
+    "arlhs": "USA498",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1872,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MilwaukeePierhead.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MilwaukeePierhead.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:MilwaukeePierhead.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6861794",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Milwaukee_Pierhead_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_la_jet%C3%A9e_de_Milwaukee",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Milwaukee_Pierhead_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA498",
+      "url": "https://wlol.arlhs.com/lighthouse/USA498.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/401086725",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6861794",
+      "part": "wikidata:Q6861794",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/401086725",
+      "part": "wikidata:Q6861794",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl R"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

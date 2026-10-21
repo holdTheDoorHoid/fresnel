@@ -1,0 +1,162 @@
+{
+  "id": "ca-nl-carbonear-island",
+  "name": "Carbonear Island Lighthouse",
+  "other_names": [
+    "Carbonear Island",
+    "Carbonear"
+  ],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.739611,
+    "lon": -53.164361,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1878,
+      "height_m": 4.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 4.3,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "N477",
+    "nga": "110-1752"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1878,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q111848020",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1831615705",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q111848020",
+      "part": "wikidata:Q111848020",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1831615705",
+      "part": "wikidata:Q111848020",
+      "fields": [
+        "light",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 195.0
+        },
+        {
+          "source": "osm",
+          "value": 4.3
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            47.74,
+            -53.15611
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            47.73961,
+            -53.16436
+          ]
+        }
+      ],
+      "distance_m": 618,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

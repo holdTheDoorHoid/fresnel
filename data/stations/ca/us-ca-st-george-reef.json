@@ -1,0 +1,202 @@
+{
+  "id": "us-ca-st-george-reef",
+  "name": "St. George Reef Light",
+  "other_names": [
+    "St George Reef Lighthouse",
+    "St. George Reef Lighthouse"
+  ],
+  "country": "US",
+  "region": "CA",
+  "county": "Del Norte",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.836921,
+    "lon": -124.375075,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "stone",
+      "built": 1892,
+      "height_m": 27.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1975,
+    "lens": null,
+    "characteristic": "Fl W 12s",
+    "focal_height_m": 45.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "93001373",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93001373"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "6-0561",
+    "arlhs": "USA793",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1892,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1975,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1993,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stgeorgereef.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stgeorgereef.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stgeorgereef.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7588222",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/St._George_Reef_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_St_George_Reef",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:St._George_Reef_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA793",
+      "url": "https://wlol.arlhs.com/lighthouse/USA793.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1083526903",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "http://stgeorgereeflighthouse.us/",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7588222",
+      "part": "wikidata:Q7588222",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1083526903",
+      "part": "wikidata:Q7588222",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2012
+        },
+        {
+          "source": "wikidata",
+          "value": 1975
+        }
+      ],
+      "note": "A source gives the light's service entry (2012) after its retirement (1975); it may have been relit. Neither is shown as the first lighting."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

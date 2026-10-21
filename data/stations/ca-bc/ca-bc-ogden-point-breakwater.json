@@ -1,0 +1,169 @@
+{
+  "id": "ca-bc-ogden-point-breakwater",
+  "name": "Ogden Point Breakwater Lighthouse",
+  "other_names": [
+    "phare d'Ogden Point",
+    "Ogden Point Light",
+    "Ogden Point Breakwater"
+  ],
+  "country": "CA",
+  "region": "BC",
+  "county": null,
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 48.413509,
+    "lon": -123.393828,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1916,
+      "height_m": 7.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1917,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Q R 1s",
+    "focal_height_m": 12.2,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "P204",
+    "nga": "111-13708"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1916,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1917,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-11-19_01_Ogden_Point_Breakwater_Lighthouse_-_Victoria%2C_BC_Canada.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-11-19_01_Ogden_Point_Breakwater_Lighthouse_-_Victoria%2C_BC_Canada.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2021-11-19_01_Ogden_Point_Breakwater_Lighthouse_-_Victoria%2C_BC_Canada.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109799478",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27Ogden_Point",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Ogden_Point_Breakwater_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4291664940",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109799478",
+      "part": "wikidata:Q109799478",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/4291664940",
+      "part": "wikidata:Q109799478",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Q R 1s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 1s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,0 +1,219 @@
+{
+  "id": "ca-mb-gull-harbour",
+  "name": "Gull Harbour Lighthouse",
+  "other_names": [
+    "phare de Gull Harbour (1898)",
+    "phare de Gull Harbour (1926)",
+    "Gill Harbour Light",
+    "Gull Harbour"
+  ],
+  "country": "CA",
+  "region": "MB",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 51.192666,
+    "lon": -96.604458,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1898,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 5.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "21060",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=21060"
+    },
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "21061",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=21061"
+    },
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "15112",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15112"
+    },
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "15132",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15132"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "1583",
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1898,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1926,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2016,
+      "event": "heritage_designated",
+      "note": "heritage lighthouse",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q45324578",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q45324593",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/2437896108",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/2437896110",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q45324578",
+      "part": "wikidata:Q45324578",
+      "fields": [
+        "events",
+        "kind",
+        "name",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q45324593",
+      "part": "wikidata:Q45324578",
+      "fields": [
+        "aton",
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/2437896108",
+      "part": "wikidata:Q45324578",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/2437896110",
+      "part": "wikidata:Q45324578",
+      "fields": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 27.4
+        },
+        {
+          "source": "osm",
+          "value": 5.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -338,7 +338,7 @@ AK_CENSUS_AREAS = {
 }
 _UNIT_SUFFIX_RE = re.compile(
     r"\b(County|Parish|Borough|Census Area|Municipality|City and Borough|Municipio|District|"
-    r"Island|Islands|Village)$", re.I)
+    r"Island|Islands|Village|Region)$", re.I)
 
 
 def local_unit_label(country: str | None, region: str | None, county: str | None) -> str | None:

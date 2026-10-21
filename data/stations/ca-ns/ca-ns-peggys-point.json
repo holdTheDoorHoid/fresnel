@@ -1,0 +1,196 @@
+{
+  "id": "ca-ns-peggys-point",
+  "name": "Peggy's Point Lighthouse",
+  "other_names": [
+    "phare de Peggy's Cove",
+    "Peggy Coves Lighthouse",
+    "Peggys Point Lighthouse",
+    "Peggys Point"
+  ],
+  "country": "CA",
+  "region": "NS",
+  "county": "Halifax",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 44.491821,
+    "lon": -63.918677,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1868,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1915,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F G",
+    "focal_height_m": 22.0,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "2921",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=2921"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "9869",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=9869"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN369",
+    "ccg_list_number": "A487",
+    "nga": "110-10040"
+  },
+  "agency": "Government of Canada",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1868,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2002,
+      "event": "heritage_designated",
+      "note": "classified federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peggys_Cove_Lighthouse_%2839030979315%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peggys_Cove_Lighthouse_%2839030979315%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peggys_Cove_Lighthouse_%2839030979315%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q1821453",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Peggys_Point_Lighthouse",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Peggy%27s_Point_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN369",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN369.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/358581448",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q1821453",
+      "part": "wikidata:Q1821453",
+      "fields": [
+        "agency",
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "ownership",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/358581448",
+      "part": "wikidata:Q1821453",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "F G"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}
