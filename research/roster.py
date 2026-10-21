@@ -16,10 +16,12 @@ Maintenance (all caches live under $FRESNEL_RAW_ROOT/uslhs, default <repo>/data/
           requests, 2 s apart; resumable: anything already cached is skipped; robots.txt honoured)
   crawl-people [--place SLUG] [--limit N]   opt-in: fetch each roster person's page for salary / source / dates
           (one request each; the whole archive is about 47,000 people, a day of crawling); `build` merges them in
+  match-stations   match every US station record in data/stations to a USLHS place -> station_matches.json
   build   parse the cache into places.json and rosters.json
   stats   counts by place type, places with rosters, roster lines
 """
 import argparse
+import functools
 import html as htmllib
 import json
 import os
@@ -567,6 +569,35 @@ def cmd_crawl_people(a):
     return 0
 
 
+def cmd_match_stations(a):
+    """Match every US station record in data/stations to a USLHS place and write station_matches.json
+    (station id -> place slug, node id, how, roster size), so counts such as `keepers_count` can be filled in."""
+    import glob
+    places, rosters = load_data()
+    out, tally, unsure = {}, {}, []
+    for f in sorted(glob.glob(os.path.join(stations_dir(), "*", "*.json"))):
+        d = polite.read_json(f)
+        if d.get("country") != "US" or d.get("hidden"):
+            continue
+        p, cands, msg = resolve_station(d["id"], places)
+        if p:
+            out[d["id"]] = {"slug": p["slug"], "nid": p.get("nid"), "how": msg, "roster_lines": p.get("roster_lines", 0)}
+            tally["matched"] = tally.get("matched", 0) + 1
+            tally["matched with a roster"] = tally.get("matched with a roster", 0) + (1 if p.get("roster_lines") else 0)
+        elif cands:
+            tally["unsure"] = tally.get("unsure", 0) + 1
+            unsure.append({"id": d["id"], "name": d["name"], "candidates": [c[3]["slug"] for c in cands[:3]]})
+        else:
+            tally["no USLHS place"] = tally.get("no USLHS place", 0) + 1
+    path = os.path.join(uslhs_dir(), "station_matches.json")
+    polite.write_json(path, {"matches": out, "unsure": unsure}, indent=0)
+    print("US station records: %d" % sum(tally.values()))
+    for k, v in tally.items():
+        print("  %-24s %5d" % (k, v))
+    print("written: %s" % path)
+    return 0
+
+
 def load_data():
     try:
         places = polite.read_json(places_file())
@@ -602,6 +633,7 @@ ABBREV = {"pt": "point", "st": "saint", "ft": "fort", "mt": "mount", "isl": "isl
           "harbour": "harbor", "pk": "park", "cr": "creek", "&": "and", "ls": "lifesaving"}
 
 
+@functools.lru_cache(maxsize=None)
 def name_tokens(name):
     import unicodedata
     t = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
@@ -633,20 +665,21 @@ def haversine_km(lat1, lon1, lat2, lon2):
     return 2 * 6371.0088 * asin(sqrt(d))
 
 
-def rank_candidates(places, names, state=None, near=None, kinds=None):
-    """-> [(rank, name_score, dist_km|None, place)] best first."""
+def rank_candidates(places, names, state=None, near=None, kinds=None, neighbour_km=None):
+    """-> [(rank, name_score, dist_km|None, place)] best first. With `neighbour_km`, places in other states are kept
+    when their (valid) position is that close to `near` (a light off one state's shore can be filed under its neighbour)."""
     code = state_code(state) if state else None
     prefer_light = not kinds and not any(re.search(r"life|saving|surf|lightship|vessel", n or "", re.I) for n in names)
     out = []
     for p in places:
-        if code and p.get("state") and p["state"] != code:
+        d = None
+        if near and "lat" in p and "lon" in p and not p.get("coord_suspect"):
+            d = haversine_km(near[0], near[1], p["lat"], p["lon"])
+        if code and p.get("state") and p["state"] != code and not (neighbour_km and d is not None and d <= neighbour_km):
             continue
         if kinds and not any(k in p.get("type", "").lower() for k in kinds):
             continue
         sc = max((name_score(n, p.get("name", "")) for n in names), default=0.0) if names else 0.0
-        d = None
-        if near and "lat" in p and "lon" in p and not p.get("coord_suspect"):
-            d = haversine_km(near[0], near[1], p["lat"], p["lon"])
         rank = sc
         if prefer_light and p.get("type") == "Light Station":
             rank += 0.12  # a name shared by a light and its life-saving station means the light, unless asked otherwise
@@ -864,9 +897,8 @@ def resolve_station(station_id, places):
             kinds = ["lightship"]
         region = (rec.get("region") or region).lower()
     code = state_code(region)
-    cands = rank_candidates(places, names, state=None, near=near, kinds=kinds)
-    # a light off one state's shore can be filed under its neighbour: keep other states' places only if they are close
-    cands = [c for c in cands if c[3].get("state") in (None, code) or (c[2] is not None and c[2] <= 30.0)]
+    # a light off one state's shore can be filed under its neighbour: other states' places count only if close
+    cands = rank_candidates(places, names, state=code, near=near, kinds=kinds, neighbour_km=30.0)
     if not cands:
         return None, cands, "; ".join(x for x in (note, "no USLHS place matches the name and state") if x)
     top = cands[0]
@@ -992,6 +1024,8 @@ def main(argv=None):
         ap.add_argument("--place", help="only this place slug")
         ap.add_argument("--limit", type=int)
         return cmd_crawl_people(ap.parse_args(argv[1:]))
+    if argv and argv[0] == "match-stations":
+        return cmd_match_stations(None)
     if argv and argv[0] == "build":
         return cmd_build(None)
     if argv and argv[0] == "stats":
