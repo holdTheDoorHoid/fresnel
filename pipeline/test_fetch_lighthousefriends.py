@@ -104,6 +104,11 @@ class RecordTest(unittest.TestCase):
         self.assertEqual((rec["status"], rec["precision"], rec["region"]), ("lost", "approximate", "ME"))
         self.assertEqual(rec["links"][0]["url"], "https://www.lighthousefriends.com/light.asp?ID=1863")
 
+    def test_a_replica_keeps_the_word_in_its_name(self):
+        light = {"id": "9", "name": "Blackistone Island (Replica)", "place": "Coltons Point, MD", "lat": 38.2, "lon": -76.7, "destroyed_card": False}
+        rec = lhf.build_record("MD", light, set(), False)
+        self.assertEqual((rec["name"], rec["status"]), ("Blackistone Island (Replica)", "replica"))
+
     def test_flags_become_visit_stay_access(self):
         out = lhf.parse_state_page(page(LIGHTS))
         rec = lhf.build_record("ME", out[1], {"climb", "boat", "private", "lodging", "keeperprog"}, False)

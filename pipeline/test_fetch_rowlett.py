@@ -85,7 +85,7 @@ class RecordTest(unittest.TestCase):
             r = rl.build_record("me2.htm", "ME", "Maine: South", e, used)
             if r:
                 recs[e["name"]] = r
-        self.assertNotIn("[Manana Island Fog Signal]", recs)   # a building, not a light
+        self.assertTrue(recs["[Manana Island Fog Signal]"]["extra"]["enrich_only"])   # a building: it may join, never start a station
         self.assertNotIn("Google Maps", recs)                  # not a light's entry
         goat = recs["Goat Island (3)"]
         self.assertEqual(goat["key"], "rowlett:me2:goat-island-3")

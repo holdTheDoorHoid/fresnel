@@ -178,8 +178,8 @@ def read_name(raw: str) -> dict:
             break
         inner = m.group(1).strip()
         name = name[:m.start()].strip()
-        if re.fullmatch(r"\d", inner):
-            tower = int(inner)
+        if re.fullmatch(r"\d\??", inner):
+            tower = int(inner[0])
         elif inner and not re.match(r"(relocated|replica|moved|formerly|now|see|ruins|lost|demolished)", inner, re.I):
             alts.append(inner)
     return {"name": name, "alts": alts, "tower": tower, "lost_mark": lost_mark, "bracket": bracket}
@@ -247,7 +247,7 @@ def rx_fold(s: str) -> str:
 
 def build_record(page: str, region: str, label: str, entry: dict, used: Counter) -> dict | None:
     nm = read_name(entry["name"])
-    if not nm["name"] or len(nm["name"]) > 90 or nm["bracket"]:
+    if not nm["name"] or len(nm["name"]) > 90:
         return None
     fa = read_text(entry["text"])
     if fa["built"] is None and fa["status"] is None and not fa["arlhs"] and not re.match(r"^Date unknown", entry["text"]):
@@ -259,7 +259,8 @@ def build_record(page: str, region: str, label: str, entry: dict, used: Counter)
     status = fa["status"]
     if nm["lost_mark"] and status != "active":
         status = "lost"
-    rec = rx.new_record(SOURCE, ident, nm["name"], url=url, region=region, lat=None, lon=None, precision="approximate",
+    shown = f"{nm['name']} (Replica)" if fa["replica"] else nm["name"]   # a copy keeps the word: it is its own station
+    rec = rx.new_record(SOURCE, ident, shown, url=url, region=region, lat=None, lon=None, precision="approximate",
                         kind="lighthouse", status=status)
     rec["other_names"] = nm["alts"]
     rec["kind_raw"] = entry["name"]
@@ -297,6 +298,11 @@ def build_record(page: str, region: str, label: str, entry: dict, used: Counter)
     # merge report counts it instead of listing it. A lost, inactive or undated entry stays on the list.
     if status in ("active", None):
         rec["extra"]["quiet_unmatched"] = True
+    if nm["bracket"]:
+        # Rowlett puts a fog signal building, a minor light or a post in square brackets: it may add to a
+        # station the other sources have, never start one
+        rec["extra"]["enrich_only"] = True
+        rec["extra"]["bracket"] = True
     return rec
 
 

@@ -106,7 +106,7 @@ class TypeTest(unittest.TestCase):
         self.assertEqual(minor["events"], [])
         rep = us.build_record({"nid": 5, "slug": "x", "name": "Blakistone Island (Replica)", "type": "Replica",
                                "existing": True, "state": "MD", "lat": 38.2, "lon": -76.7})
-        self.assertEqual((rep["status"], rep["name"]), ("replica", "Blakistone Island"))
+        self.assertEqual((rep["status"], rep["name"]), ("replica", "Blakistone Island (Replica)"))
         self.assertIsNone(us.build_record({"nid": 6, "slug": "x", "name": "A Museum", "type": "Museum", "state": "ME"}))
         self.assertIsNone(us.build_record({"nid": 7, "slug": "x", "name": "Cuban Light", "type": "Light Station"}))   # no US state
 

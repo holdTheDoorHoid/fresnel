@@ -184,7 +184,8 @@ def build_record(p: dict) -> dict | None:
     lat, lon = p.get("lat"), p.get("lon")
     if isinstance(lat, (int, float)) and isinstance(lon, (int, float)) and abs(lat) < 0.01 and abs(lon) < 0.01:
         lat = lon = None   # "0 0'" placeholders
-    rec = rx.new_record(SOURCE, str(p.get("nid") or p.get("slug")), nm["name"], url=p.get("url"), region=state,
+    shown = f"{nm['name']} (Replica)" if status == "replica" else nm["name"]   # a copy keeps the word: it is its own station
+    rec = rx.new_record(SOURCE, str(p.get("nid") or p.get("slug")), shown, url=p.get("url"), region=state,
                         lat=lat, lon=lon, precision="approximate", kind=kind, status=status)
     rec["kind_raw"] = ptype
     rec["role"] = nm["role"]

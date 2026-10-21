@@ -199,8 +199,9 @@ def build_record(state: str, light: dict, flags: set[str], destroyed: bool) -> d
         extra["decorative_hint"] = "LighthouseFriends lists it as a memorial"
     if nm["replica"] and not destroyed:
         extra["replica_of_name"] = nm["name"]
+    shown = f"{nm['name']} (Replica)" if nm["replica"] else nm["name"]   # a copy keeps the word: it is its own station
     rec = rx.new_record(
-        SOURCE, lid, nm["name"], url=url, region=region, lat=light["lat"], lon=light["lon"],
+        SOURCE, lid, shown, url=url, region=region, lat=light["lat"], lon=light["lon"],
         precision="approximate" if destroyed else "exact", kind=nm["kind"], status=status)
     rec["kind_raw"] = light["name"]
     rec["status_raw"] = status_raw
