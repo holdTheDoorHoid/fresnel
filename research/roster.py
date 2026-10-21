@@ -888,7 +888,7 @@ def resolve_station(station_id, places):
             how = "name only (USLHS gives no position for it)"
         elif top[2] <= 30.0:
             how = "name; its USLHS position is %.1f km from the station's (USLHS positions are only to the minute)" % top[2]
-        elif not [c for c in cands[1:] if c[1] >= 0.85 and c[0] >= top[0] - 0.1]:
+        elif not [c for c in cands[1:] if c[1] >= 0.85 and c[3].get("type") == top[3].get("type")]:
             how = ("name only, WARNING: its USLHS position is %.0f km from the station's; the archive has some wrong "
                    "coordinates, so check the place page is the right light" % top[2])
     if how:
