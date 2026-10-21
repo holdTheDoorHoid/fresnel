@@ -11,7 +11,8 @@
 
 Series: lss = US Life-Saving Service annual reports; lhb = Lighthouse Board annual reports;
 commissioner = Commissioner of Lighthouses annual reports; bulletin = Lighthouse Service Bulletin;
-marine_ca = Canada, Department of Marine (and Fisheries) annual reports.
+marine_ca = Canada, Department of Marine (and Fisheries) annual reports, Marine branch (by fiscal year);
+general = histories for marked period context (Putnam 1917, Weiss 1926, Johnson 1889, Kimball 1912 ...).
 
 Files live under $FRESNEL_RAW_ROOT/corpus/<series>/<year>/ (default <repo>/data/raw/corpus), with
 corpus_index.json (series, fiscal year, identifier, source URL, size, sha256). Every volume's year is
@@ -42,6 +43,7 @@ SERIES = {
     "commissioner": "Commissioner of Lighthouses annual report",
     "bulletin": "Lighthouse Service Bulletin",
     "marine_ca": "Canada, Department of Marine annual report",
+    "general": "General histories for period context (Putnam 1917, Weiss 1926, Johnson 1889, Kimball 1912 ...)",
 }
 IA = "https://archive.org"
 BULLETIN_YEARS = range(1912, 1940)
@@ -124,6 +126,8 @@ YEAR_PATTERNS = [
     r"(?:ending|ended)\s+(?:on\s+)?(?:the\s+)?(?:30(?:th)?\s+)?June[,.\s]{0,5}(?:30[,.\s]{0,4})?(1[89]\d\d)",
     r"June\s+30,?\s*(1[89]\d\d)",
     r"30(?:th)?\s+June,?\s*(1[89]\d\d)",
+    r"31(?:st)?\s+March,?\s*(1[89]\d\d)",  # Canada's fiscal year ends 31 March from 1907
+    r"March\s+31,?\s*(1[89]\d\d)",
 ]
 
 
@@ -409,7 +413,8 @@ def add_ia_volume(idx, item):
     with open(tmp, "rb") as fh:
         body = fh.read().decode("utf-8", "replace")
     size = os.path.getsize(tmp)
-    counts = detect_years(body)  # whole volume: compilations bind two years, and the front matter alone misleads
+    counts = detect_years(body) if series != "general" else Counter()  # general histories: the label (publication year) stands
+    # whole volume for the reports: compilations bind two years, and the front matter alone misleads
     label = item.get("years") or []
     years, source = choose_years(counts, label)
     if not years:
@@ -418,7 +423,7 @@ def add_ia_volume(idx, item):
     os.makedirs(outdir, exist_ok=True)
     dest = os.path.join(outdir, ident + ".txt")
     os.replace(tmp, dest)
-    starts = report_starts(normalise_text(body))
+    starts = report_starts(normalise_text(body)) if series != "general" else []
     years = sorted(set(years) | {y for _, y in starts})
     rec = volume_record(series, ident, years, "%s/details/%s" % (IA, ident), dest, label, counts, source,
                         {"text_url": url, "title": item.get("title"), "note": item.get("note"), "report_starts": starts,
@@ -428,7 +433,26 @@ def add_ia_volume(idx, item):
     upsert_volume(idx, rec)
     flag = " MISMATCH label %s" % label if rec["year_mismatch"] else ""
     log("%s %s: years %s from %s, %.2f MB%s" % (series, ident, years, source, size / 1e6, flag))
+    add_page_data(idx, rec)
     return rec
+
+
+def add_page_data(idx, rec):
+    """Fetch the page-index files of an indexed volume and note them in the index (best effort)."""
+    try:
+        info = fetch_page_data(rec["identifier"])
+    except polite.NetworkError:
+        raise
+    except polite.PoliteError as e:
+        log("%s: no page data (%s)" % (rec["identifier"], e))
+        info = None
+
+    def fn(d):
+        for v in d["volumes"]:
+            if v["series"] == rec["series"] and v["identifier"] == rec["identifier"]:
+                v["page_data"] = info or {"files": []}
+    update_index(idx, fn)
+    return info
 
 
 def build_ia(idx, series_filter, max_items=None):
@@ -480,7 +504,17 @@ def cmd_build(a):
         got, missing = build_bulletins(idx)
         log("bulletin: %d new, %d unavailable" % (got, missing))
     ia_series = series - {"bulletin"}
-    if ia_series and not a.no_ia:
+    if a.pages and not a.no_ia:
+        for v in list(idx["volumes"]):
+            if v["series"] in ia_series and "page_data" not in v:
+                try:
+                    info = add_page_data(idx, v)
+                    log("page data for %s: %s" % (v["identifier"], ", ".join(info["files"]) if info else "none"))
+                except polite.NetworkError as e:
+                    ia_failed(e)
+                    log("archive.org stopped answering; page data will continue on the next --pages run")
+                    break
+    if ia_series and not a.no_ia and not a.pages:
         while True:
             ok, n = build_ia(idx, ia_series, a.max)
             if ok or not a.wait:
@@ -508,7 +542,7 @@ def cmd_status(a):
         yrs = sorted({y for v in vs for y in v["years"]})
         print("  %-13s %3d volumes, years %d-%d, %.1f MB text  (%s)"
               % (s, len(vs), yrs[0], yrs[-1], sum(v["bytes"] for v in vs) / 1e6, label))
-        gaps = [y for y in range(yrs[0], yrs[-1] + 1) if y not in yrs]
+        gaps = [y for y in range(yrs[0], yrs[-1] + 1) if y not in yrs] if s != "general" else []
         if gaps:
             print("      years with no volume inside that range: " + ", ".join(map(str, gaps)))
         mism = [v for v in vs if v.get("year_mismatch")]
@@ -566,6 +600,175 @@ def cmd_discover(a):
         print("%s | %s | %s | %.1f MB | %s | %s" % (x["identifier"], (x.get("date") or "")[:10], x.get("volume", ""),
                                                    int(x.get("item_size", 0)) / 1e6, t[:90], c[:30]))
     return 0
+
+
+# --------------------------------------------------------------------------------------------------
+# Page data: archive.org's OCR search text with a page index, and the scan data's printed page numbers
+# --------------------------------------------------------------------------------------------------
+
+PAGE_FILES = ("_hocr_searchtext.txt.gz", "_hocr_pageindex.json.gz", "_scandata.xml")
+
+
+def pages_dir(identifier):
+    return os.path.join(corpus_dir(), "_pages", identifier)
+
+
+def fetch_page_data(identifier):
+    """Download whichever of <id>_hocr_searchtext.txt.gz, _hocr_pageindex.json.gz and _scandata.xml the item has
+    (a few hundred KB; the files are what lets us name the scan page of a hit without asking archive.org).
+    -> summary dict for the index, or None when the item has none."""
+    meta = ia_meta(identifier)
+    names = {f["name"] for f in meta.get("files", [])}
+    have = {}
+    for suf in PAGE_FILES:
+        name = identifier + suf
+        if name not in names:
+            continue
+        dest = os.path.join(pages_dir(identifier), suf.lstrip("_"))
+        if not os.path.exists(dest):
+            ia_guard()
+            try:
+                r = polite.get("%s/download/%s/%s" % (IA, urllib.parse.quote(identifier), urllib.parse.quote(name)),
+                               dest=dest, timeout=180, log=log)
+            except (polite.NetworkError, polite.Blocked) as e:
+                ia_failed(e)
+                raise
+            if r.status != 200:
+                continue
+        have[suf.lstrip("_")] = True
+    if not have:
+        return None
+    return {"files": sorted(have), "leaves": int(meta.get("metadata", {}).get("imagecount") or 0) or None}
+
+
+class PageMap:
+    """Maps a character offset in an item's OCR search text to a scan page (leaf) and a printed page number."""
+
+    def __init__(self, identifier):
+        import gzip
+        d = pages_dir(identifier)
+        self.identifier = identifier
+        self.text, self.index, self.printed = None, None, {}
+        p = os.path.join(d, "hocr_searchtext.txt.gz")
+        q = os.path.join(d, "hocr_pageindex.json.gz")
+        if os.path.exists(p) and os.path.exists(q):
+            with gzip.open(p, "rb") as fh:
+                self.text = fh.read().decode("utf-8", "replace")
+            with gzip.open(q, "rb") as fh:
+                self.index = json.loads(fh.read())
+            self.starts = [e[0] for e in self.index]
+        sd = os.path.join(d, "scandata.xml")
+        if os.path.exists(sd):
+            xml = polite.read_text(sd, errors="replace")
+            for m in re.finditer(r'<page leafNum="(\d+)">(.*?)</page>', xml, re.S):
+                n = re.search(r"<pageNumber>(.*?)</pageNumber>", m.group(2))
+                if n and n.group(1).strip():
+                    self.printed[int(m.group(1))] = n.group(1).strip()
+
+    @property
+    def ok(self):
+        return self.text is not None
+
+    def leaf_at(self, pos):
+        import bisect
+        return max(0, bisect.bisect_right(self.starts, pos) - 1)
+
+    def page_text(self, leaf):
+        s, e = self.index[leaf][0], self.index[leaf][1]
+        return self.text[s:e]
+
+    def folio(self, leaf):
+        """(printed page, certain): from the scan data when it has one, else a guess from a bare number at the head or
+        foot of the page's OCR text (certain=False)."""
+        if leaf in self.printed:
+            return self.printed[leaf], True
+        if not self.ok:
+            return None, False
+        lines = [l.strip() for l in self.page_text(leaf).splitlines() if l.strip()]
+        for cand in (lines[:2] + lines[-2:]):
+            m = (re.fullmatch(r"(\d{1,4})\.?", cand) or re.match(r"^(\d{1,4})\s+\S", cand)
+                 or re.search(r"\S\s+(\d{1,4})\.?$", cand))
+            if m and int(m.group(1)) < 1500:
+                return m.group(1), False
+        return None, False
+
+
+_PAGEMAPS = {}
+
+
+def pagemap_available(identifier):
+    d = pages_dir(identifier)
+    return os.path.exists(os.path.join(d, "hocr_searchtext.txt.gz")) and os.path.exists(os.path.join(d, "hocr_pageindex.json.gz"))
+
+
+def pagemap(identifier):
+    if identifier not in _PAGEMAPS:
+        _PAGEMAPS[identifier] = PageMap(identifier)
+    return _PAGEMAPS[identifier]
+
+
+def _words(text):
+    """[(start, word)] for the alphanumeric words of text, lower-cased."""
+    return [(m.start(), m.group(0)) for m in re.finditer(r"[a-z0-9]+", text.lower())]
+
+
+def locate_pages(v, text, spans, anchor_words=6):
+    """The scan page of each (start, end) span in `text` (the volume's normalised text), found by matching the words at
+    the span in the page-indexed OCR search text: the k-th occurrence of those words in one is the k-th in the other.
+    -> list of leaf numbers (None where the words could not be matched)."""
+    pm = pagemap(v["identifier"])
+    if not pm.ok:
+        return [None] * len(spans)
+    import bisect
+    w_a = _words(text)
+    a_pos = [p for p, _ in w_a]
+    a_join = " ".join(w for _, w in w_a)
+    a_off, off = [], 0
+    for _, w in w_a:
+        a_off.append(off)
+        off += len(w) + 1
+    w_b = _words(pm.text)
+    b_pos = [p for p, _ in w_b]
+    b_join = " ".join(w for _, w in w_b)
+    b_off, off = [], 0
+    for _, w in w_b:
+        b_off.append(off)
+        off += len(w) + 1
+    out = []
+    for s, e in spans:
+        i = bisect.bisect_left(a_pos, s)
+        if i >= len(w_a):
+            out.append(None)
+            continue
+        anchor = " ".join(w for _, w in w_a[i:i + anchor_words])
+        k, p = 0, a_join.find(anchor)
+        while p != -1 and p < a_off[i]:
+            k += 1
+            p = a_join.find(anchor, p + 1)
+        q, n = b_join.find(anchor), 0
+        while q != -1 and n < k:
+            n += 1
+            q = b_join.find(anchor, q + 1)
+        if q == -1:
+            q = b_join.find(anchor)  # the other text differs a little: take the first occurrence
+        if q == -1:
+            out.append(None)
+            continue
+        j = bisect.bisect_right(b_off, q) - 1
+        out.append(pm.leaf_at(b_pos[max(j, 0)]))
+    return out
+
+
+def page_label(v, leaf):
+    """'scan p.229' or 'scan p.229, printed p.57' (or 'printed p.57?' when only guessed)."""
+    if leaf is None:
+        return ""
+    pm = pagemap(v["identifier"])
+    fol, sure = pm.folio(leaf)
+    s = "scan p.%d" % leaf
+    if fol:
+        s += ", printed p.%s%s" % (fol, "" if sure else "?")
+    return s
 
 
 # --------------------------------------------------------------------------------------------------
@@ -829,7 +1032,7 @@ def grep_volume(v, patterns, state, before, after):
         win = text[w0: e + 400]
         hint = state_hint(win, s - w0, state) if state else None
         page = text.count("\f", 0, s) + 1 if v["series"] == "bulletin" else None
-        out.append({"pos": s, "n": n, "exact": any(r.search(matched) for r in exact_rx), "hint": hint,
+        out.append({"pos": s, "end": e, "n": n, "exact": any(r.search(matched) for r in exact_rx), "hint": hint,
                     "page": page, "snip": snippet(text, s, e, before, after), "volume": v,
                     "year": attribute_year(v, s)})
     return out
@@ -870,11 +1073,22 @@ def cmd_grep(a):
 
     chosen = sorted(all_hits, key=rank)[: a.max]
     chosen.sort(key=lambda h: (h["volume"]["year"], h["volume"]["series"], h["pos"]))
+    by_vol = {}
+    for h in chosen:
+        by_vol.setdefault(h["volume"]["identifier"], []).append(h)
+    for ident, hs in by_vol.items():
+        v = hs[0]["volume"]
+        if v["series"] != "bulletin" and pagemap_available(ident):
+            leaves = locate_pages(v, volume_text(v), [(h["pos"], h["end"]) for h in hs])
+            for h, leaf in zip(hs, leaves):
+                h["leaf"] = leaf
+                h["page_label"] = page_label(v, leaf)
     for h in chosen:
         v = h["volume"]
         yr = ("%d" % v["year"]) if len(v["years"]) == 1 else (
             "%d" % h["year"] if h.get("year") else "%d-%d" % (v["years"][0], v["years"][-1]))
-        ident = v["identifier"] + (" p.%d" % h["page"] if h["page"] else "")
+        ident = v["identifier"] + (" p.%d" % h["page"] if h["page"] else "") + (
+            " [%s]" % h["page_label"] if h.get("page_label") else "")
         tags = ("" if h["exact"] else " ~fuzzy") + (" [%s]" % h["hint"] if h["hint"] and h["hint"] != "-" else "") \
             + (" (+%d nearby)" % (h["n"] - 1) if h["n"] > 1 else "")
         print("%s | %s | %s%s | %s" % (v["series"], yr, ident, tags, h["snip"]))
@@ -962,6 +1176,20 @@ def cmd_page(a):
                 print("bulletin %d: no match for %r" % (y, a.phrase))
             continue
         ident = v["identifier"]
+        pm = pagemap(ident) if pagemap_available(ident) else None
+        if pm and pm.ok and not a.api:
+            rx = phrase_regex(a.phrase)
+            found = [(pm.leaf_at(m.start()), " ".join(pm.text[max(0, m.start() - 90): m.end() + 150].split()))
+                     for m in rx.finditer(pm.text)]
+            print("%s %s  %s  (%d scan pages; %d match(es) for %r; from the OCR page index)" % (
+                a.series, y, ident, len(pm.index), len(found), a.phrase))
+            for leaf, snip in found[: a.max]:
+                print("  %s | %s" % (page_label(v, leaf), snip))
+                print("    %s" % ia_page_url(ident, leaf, a.phrase))
+            if found:
+                print("  (scan p. = the image number in the Internet Archive viewer; printed p. is the number on the"
+                      " page: from the scan data when marked without '?', else guessed from the OCR; check the image)")
+            continue
         try:
             d = inside_search(ident, a.phrase)
         except polite.PoliteError as e:
@@ -1045,11 +1273,14 @@ def main(argv=None):
     p.add_argument("year")
     p.add_argument("phrase")
     p.add_argument("--max", type=int, default=5)
+    p.add_argument("--api", action="store_true", help="ask archive.org's in-item search instead of the local page index")
     b = sub.add_parser("build", help="download / extend the corpus")
     b.add_argument("--series", help="comma list; default all")
     b.add_argument("--no-ia", action="store_true", help="skip archive.org")
     b.add_argument("--wait", action="store_true", help="if archive.org is down, probe every 30 minutes until it answers")
     b.add_argument("--max", type=int, help="most archive.org volumes to fetch this run")
+    b.add_argument("--pages", action="store_true",
+                   help="fetch page-index data (OCR search text, page index, scan data) for volumes that lack it")
     sub.add_parser("status", help="what the corpus holds")
     c = sub.add_parser("cite", help="the URL to cite for an identifier (or a Bulletin year)")
     c.add_argument("identifier")

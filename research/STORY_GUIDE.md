@@ -220,22 +220,27 @@ order, and stop when you have an honest story; a thin station needs only the fir
    heritage lighthouse, and the station's Wikipedia article for leads only (article pages only,
    never `/w/` or `/api/`; cite what it cites where you can).
 3. **Official reports, from the local corpus.** `python3 /home/hoid/Desktop/fresnel/research/corpus.py grep
-   "<station name>" [--alias "<OCR or old spelling>"] [--state XX] [--series lss,lhb,commissioner,bulletin,marine_ca]
+   "<station name>" [--alias "<OCR or old spelling>"] [--state XX] [--series lss,lhb,commissioner,bulletin,marine_ca,general]
    [--years 1880-1900] [--max 20]` searches the downloaded text of the Life-Saving Service annual reports
    (`lss`), the Lighthouse Board reports (`lhb`), the Commissioner of Lighthouses reports (`commissioner`),
-   the Lighthouse Service Bulletin (`bulletin`) and Canada's Department of Marine annual reports
-   (`marine_ca`), and prints `series | year | identifier | snippet`. The matching is fuzzy for OCR damage
+   the Lighthouse Service Bulletin (`bulletin`), Canada's Department of Marine annual reports, Marine branch
+   (`marine_ca`; fiscal years 1900 to 1923-24, labelled by the year the fiscal year ends) and a few general
+   histories (`general`, step 7), and prints `series | year | identifier | snippet`. The matching is fuzzy for OCR damage
    (it finds "Point Beyes" and "Point Reyesy" for Point Reyes) but not magic: give `--alias` for spellings
    you have seen, and `--state` (hits next to another state's name are hidden and counted; `--all-states`
    shows them: "Split Rock" is also in New York) or `--years` (Split Rock, Minnesota, exists only from 1910).
    Several annual reports are bound in one volume (the Commissioner volume holds fiscal 1915-1922); a hit
    is labelled with its report's year when the volume's report boundaries are known, else with the
    volume's range. `corpus.py status` shows what the corpus holds and what is missing.
-   **Pages:** the plain text has none. `corpus.py page <series> <year> "<phrase>"` asks the Internet
-   Archive's in-item search for the scan page and prints a page URL (it needs archive.org; if that is
-   down it says so, and you cite the volume without a page); the Bulletin's page is the PDF page, shown
-   in the grep line as `p.N`. The scan page is the viewer's image number: read the printed folio on the
-   page image before writing "p. 42", or write "scan page 73".
+   **Pages:** the plain text has none, but for most Internet Archive volumes the tool reads archive.org's OCR
+   page index, so each grep line carries `[scan p.229, printed p.57]`. *Scan p.* is the image number in the Internet
+   Archive viewer (the URL tail `/page/n229/`); *printed p.* is the number on the page, taken from the scan data when
+   the archive has it and otherwise guessed from the OCR, in which case it is marked `?`: look at the page image
+   (open the URL `corpus.py page` prints) before you write "p. 57". The Bulletin's `p.N` is the PDF page.
+   `corpus.py page <series> <year> "<phrase>"` lists every page holding a phrase, with a URL for each (a bound
+   volume lists the pages of all its reports; use the printed page and the report's year to pick). Volumes without
+   page data fall back to archive.org's in-item search (slower, needs archive.org). Cite "scan page N" when you
+   cannot read a printed page.
    **Cite these URLs exactly** (so `check_quotes.py` can find the text offline); `corpus.py cite <identifier>`
    (or `corpus.py cite 1933` for a Bulletin year) prints the one to use:
    - Internet Archive volumes: `https://archive.org/details/<identifier>` with the identifier grep printed
@@ -273,9 +278,12 @@ order, and stop when you have an honest story; a thin station needs only the fir
    I. Kimball, *Organization and Methods of the United States Life-Saving Service*; W. D. O'Connor's
    1884 sketch of the Life-Saving Service; D. P. Heap, *Ancient and Modern Light-houses* (1889); for
    Canada, the Department of Marine and Fisheries' *Review of Improvements in Lighthouse and Coast
-   Service of Canada between 1896 and 1904* (1904). Putnam (1917) and Weiss (1926) only once a scan is
-   found. Internet Archive identifiers are in `survey_history.md` §7. Never cite a novel or a book for
-   young readers (James Otis, *The Life Savers*) as a record.
+   Service of Canada between 1896 and 1904* (1904). George R. Putnam, *Lighthouses and Lightships of the
+   United States* (1917), and George Weiss, *The Lighthouse Service* (1926), are now in the corpus too.
+   All of these are the corpus series `general`: `corpus.py grep "<words>" --series general` finds the passage
+   (the same page labels, quotes and `https://archive.org/details/<identifier>` citations as in step 3), so cite
+   them as general context only. Internet Archive identifiers are in `survey_history.md` §7. Never cite a novel
+   or a book for young readers (James Otis, *The Life Savers*) as a record.
 
 **Do not use** (robots.txt, blocks or the owner's rulings, DESIGN §2): query.wikidata.org,
 Overpass, Wikipedia's `/w/` and `/api/`, HathiTrust, Google Books, the NARA catalog, Canadiana, BAnQ,
@@ -296,8 +304,10 @@ its archived copies are on hold with the Historian's, DESIGN §2.) A lightship s
 narratives that name the keeper and surfmen), the 1909 report's station table, NRHP nominations, and
 newspapers.
 
-**Canada:** the Department of Marine annual reports 1901-1925 in the corpus (keepers and salaries;
-the OCR splits table columns, so read around a hit), Parks Canada and the Directory of Federal Heritage
+**Canada:** the Department of Marine annual reports in the corpus (`--series marine_ca`, the Marine branch
+reports, Sessional Paper 21: fiscal 1900 to 1923-24; the lighthouse sections list the year's works and the
+keepers' tables give name, station, date of appointment and salary, but the OCR prints each column as its own
+block, so read around a hit and take names and stations from the same position in their columns), Parks Canada and the Directory of Federal Heritage
 Designations, the Canadian Coast Guard List of Lights for today's light, provincial archives' open pages,
 the Nova Scotia Lighthouse Preservation Society, and LighthouseFriends' Canadian pages (facts only). Read
 French sources for Quebec; write in English; quote French exactly, with your own English rendering after

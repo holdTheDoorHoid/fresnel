@@ -398,6 +398,85 @@ class DownloadIA(unittest.TestCase):
         self.assertIn("786 hours", out)
 
 
+class PageData(unittest.TestCase):
+    PAGES = ["REPORT OF THE LIGHT-HOUSE BOARD. 12\nPoint Reyes, California. The siren was sounded.\n",
+             "13 REPORT OF THE LIGHT-HOUSE BOARD.\nBodega Head fog signal. Point Reyes, California. A new boiler.\n",
+             "",
+             "Third leaf with no number at all, and no Reyes here.\n"]
+
+    def setUp(self):
+        import gzip
+        self.raw = tempfile.mkdtemp()
+        os.environ["FRESNEL_RAW_ROOT"] = self.raw
+        corpus._PAGEMAPS.clear()
+        d = os.path.join(self.raw, "corpus", "_pages", "vol1")
+        os.makedirs(d)
+        text, index, pos = "", [], 0
+        for p in self.PAGES:
+            index.append([pos, pos + len(p), 0, 0])
+            text += p
+            pos += len(p)
+        with gzip.open(os.path.join(d, "hocr_searchtext.txt.gz"), "wb") as fh:
+            fh.write(text.encode())
+        with gzip.open(os.path.join(d, "hocr_pageindex.json.gz"), "wb") as fh:
+            fh.write(json.dumps(index).encode())
+        with open(os.path.join(d, "scandata.xml"), "w") as fh:
+            fh.write('<book><pageData><page leafNum="0"><pageType>Normal</pageType><pageNumber>12</pageNumber></page>'
+                     '<page leafNum="1"><pageType>Normal</pageType></page></pageData></book>')
+        self.text = text
+
+    def test_leaf_and_folio(self):
+        pm = corpus.pagemap("vol1")
+        self.assertTrue(pm.ok)
+        self.assertEqual(pm.leaf_at(self.text.index("Bodega")), 1)
+        self.assertEqual(pm.leaf_at(self.text.index("Third")), 3)  # the empty leaf 2 owns no characters
+        self.assertEqual(pm.folio(0), ("12", True))  # from the scan data
+        self.assertEqual(pm.folio(1), ("13", False))  # guessed from the page head
+        self.assertEqual(pm.folio(3), (None, False))
+
+    def test_the_kth_occurrence_in_one_text_is_the_kth_in_the_other(self):
+        v = {"identifier": "vol1"}
+        djvu = corpus.normalise_text(self.text.replace("\n", "\n "))  # same words, different line breaks
+        spans = [m.span() for m in __import__("re").finditer("Point Reyes", djvu)]
+        self.assertEqual(len(spans), 2)
+        self.assertEqual(corpus.locate_pages(v, djvu, spans), [0, 1])
+        self.assertEqual(corpus.page_label(v, 0), "scan p.0, printed p.12")
+        self.assertEqual(corpus.page_label(v, 1), "scan p.1, printed p.13?")
+
+    def test_no_page_data_means_no_label(self):
+        v = {"identifier": "nothing-here"}
+        self.assertEqual(corpus.locate_pages(v, "some text", [(0, 4)]), [None])
+
+    def test_page_command_uses_the_local_index(self):
+        corpus.save_index({"volumes": [{"series": "lhb", "year": 1896, "years": [1896], "identifier": "vol1",
+                                        "source_url": "https://archive.org/details/vol1", "path": "lhb/1896/vol1.txt",
+                                        "bytes": 1, "sha256": "x", "label_years": [1896]}]})
+        rc, out = run(["page", "lhb", "1896", "Point Reyes", "--max", "5"])
+        self.assertEqual(rc, 0)
+        self.assertIn("scan p.0, printed p.12", out)
+        self.assertIn("scan p.1, printed p.13?", out)
+        self.assertIn("https://archive.org/details/vol1/page/n1/mode/2up?q=Point+Reyes", out)
+
+    def test_fetch_page_data_takes_only_files_the_item_has(self):
+        got = []
+        orig_meta, orig_get = corpus.ia_meta, polite.get
+        corpus.ia_meta = lambda i: {"metadata": {"imagecount": "4"}, "files": [{"name": i + "_scandata.xml"}, {"name": i + "_djvu.txt"}]}
+
+        def get(url, dest=None, **kw):
+            got.append(url)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w") as fh:
+                fh.write("<book/>")
+            return polite.Response(200, {}, None, url)
+        polite.get = get
+        try:
+            info = corpus.fetch_page_data("other")
+        finally:
+            corpus.ia_meta, polite.get = orig_meta, orig_get
+        self.assertEqual(info, {"files": ["scandata.xml"], "leaves": 4})
+        self.assertEqual(got, ["https://archive.org/download/other/other_scandata.xml"])
+
+
 class IndexMerging(unittest.TestCase):
     def test_two_writers_do_not_overwrite_each_other(self):
         raw = tempfile.mkdtemp()
