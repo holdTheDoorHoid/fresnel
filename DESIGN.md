@@ -603,6 +603,13 @@ held by both sources (760 joined through an OSM `wikidata=` tag), 376 Wikidata o
 1,099 records not shown (701 likely minor beacons, 327 with no name, 39 station buildings with no
 station near, 32 seamark lights).
 
+Canada run (2026-10-21, the first build merged again with the six sources of 2.3 and `data/curation_ca.json`):
+1,193 Canadian stations shown (652 before; 628 new, 617 of them started by Lighthouse Friends), 74 hidden
+(67 of them small modern harbor lights that only OpenStreetMap or the Coast Guard list mention), 16
+Canadian ids retired with `merged_into`. By province BC 75, MB 18, NB 137, NL 149, NS 256, NU 10, ON 237,
+PE 59, QC 252; by status 697 active, 133 inactive, 301 lost, 16 replica, 1 ruins, 45 unknown. 49 stations
+are staffed (44 of them resting only on the 2010 list), 2 destaffed in 2024. A second run changes no file.
+
 ### 3.10 What the site loads (`pipeline/build_site_data.py` → `web/public/data/`)
 
 - `stations.geojson`: every visible station as a point (5 dp), short properties (the legend is in
