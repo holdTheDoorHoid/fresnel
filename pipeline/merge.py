@@ -686,7 +686,7 @@ class Matcher:
         for hk in rec.hard_keys:
             if st not in self.key_index[hk]:
                 self.key_index[hk].append(st)
-        if not rec.has_point and st.parts and anchor is None:
+        if not rec.has_point and st.parts and anchor is None and rec.country == "US":
             anchor = "station"   # a record with no position describes the station, never a structure of its own
         if anchor == "station" or (anchor is None and rec.station_level and st.parts):
             st.station_recs.append(rec)
@@ -712,7 +712,7 @@ class Matcher:
         light, a Library of Congress item) or whose position is the register's batch-derived point never
         starts a structure of its own: with none near it, it is None and joins the station as a whole."""
         best, best_key = None, None
-        limited = rec.enrich_only or (rec.source == "nrhp" and rec.raw.get("precision") != "exact")
+        limited = rec.country == "US" and (rec.enrich_only or (rec.source == "nrhp" and rec.raw.get("precision") != "exact"))
         for p in st.parts:
             if p.role and rec.role and p.role != rec.role:
                 continue
@@ -728,7 +728,7 @@ class Matcher:
                 twin = d <= R_PART and rec.forms and all(r.forms and {f.full for f in r.forms} & {f.full for f in rec.forms} for r in same)
                 # ... unless the two say they were built in different years: successive towers of one name
                 b1 = rec.structure.get("built")
-                if twin and isinstance(b1, int) and any(isinstance(r.structure.get("built"), int) and abs(r.structure["built"] - b1) >= 3
+                if twin and rec.country == "US" and isinstance(b1, int) and any(isinstance(r.structure.get("built"), int) and abs(r.structure["built"] - b1) >= 3
                                                         for r in same):
                     twin = False
                 if not double and not twin and not rec.enrich_only:
@@ -1011,7 +1011,7 @@ class Matcher:
         not as a third structure."""
         for st in self.live():
             roles = {p.role for p in st.parts}
-            if not {"front_range", "rear_range"} <= roles:
+            if st.country() != "US" or not {"front_range", "rear_range"} <= roles:
                 continue
             for p in list(st.parts):
                 if p.role is None and p.recs and all(r.kind == "range_lights" and r.role is None and re.search(r"\brange\b", r.name or "", re.I)
@@ -1023,7 +1023,7 @@ class Matcher:
         """A structure none of whose records has a position (its position was found wrong: NO_POSITION) is not a
         structure of its own when the station has another: its records describe the station as a whole."""
         for st in self.live():
-            if len(st.parts) < 2:
+            if len(st.parts) < 2 or st.country() != "US":
                 continue
             for p in list(st.parts):
                 if not any(r.has_point for r in p.recs) and any(q is not p and any(r.has_point for r in q.recs) for q in st.parts):
@@ -1224,7 +1224,8 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
                 "note": "A source says this structure is gone, but OpenStreetMap maps it today."})
     kinds = [s for s, _ in states]
     # A source with no position settles "gone" only when nothing else says whether a tower stands.
-    unplaced = [r.status for r in st.station_recs if not r.has_point and r.status in ("active", "inactive", "lost", "ruins")]
+    unplaced = [r.status for r in st.station_recs if not r.has_point and r.status in ("active", "inactive", "lost", "ruins")] \
+        if st.country() == "US" else []
     if kinds and all(k == "unknown" for k in kinds) and unplaced and all(u in ("lost", "ruins") for u in unplaced):
         return ("ruins" if "ruins" in unplaced else "lost"), None, conflicts
     if kinds and all(k == "lost" for k in kinds):
@@ -1233,7 +1234,7 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
         return "ruins", None, conflicts
     standing = any(k == "standing" for k in kinds)
     light_claims = sorted(((LIGHT_RANK[r.status_claim], source_rank("charted", r.source), r.key, r)
-                           for r in recs if r.status_claim in LIGHT_RANK and r.has_point
+                           for r in recs if r.status_claim in LIGHT_RANK and (r.has_point or r.country != "US")
                            and (r.status_claim != "inactive_if_standing" or standing)), key=lambda x: x[:3])
     claimed = {c[3].status_claim.replace("_weak", "").replace("_if_standing", "") for c in light_claims}
     if {"active", "inactive"} <= claimed:
@@ -1510,7 +1511,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
             if k in seen_ev:
                 # the same event from a later source: keep the first, but take a note it lacks
                 prior = next(x for x in events if (x["year"], x["event"]) == k)
-                if not prior["note"] and e.get("note"):
+                if not prior["note"] and e.get("note") and country == "US":
                     prior["note"] = e["note"]
                     use(r, "events")
                 continue
@@ -1518,10 +1519,10 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
             events.append({"year": e["year"], "event": e["event"], "note": e.get("note"), "from": e.get("from") or r.source})
             use(r, "events")
     events.sort(key=lambda e: (e["year"], EVENT_ORDER.index(e["event"]) if e["event"] in EVENT_ORDER else 99, e["event"]))
-    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit") and e.get("from") != "rowlett"})
+    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit") and (e.get("from") != "rowlett" or country != "US")})
     if len(built_years) > 1 and built_years[-1] - built_years[0] >= 2 and len(parts) <= 1:
         firsts = {}
-        for r in (x for x in main_recs if x.has_point):
+        for r in (x for x in main_recs if x.has_point or country != "US"):
             fl = r.light.get("first_lit") or r.structure.get("built")
             if isinstance(fl, int):
                 firsts.setdefault(r.source, fl)
@@ -1529,7 +1530,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
             conflicts.append({"field": "first_year", "values": [{"source": s, "value": y} for s, y in sorted(firsts.items(), key=lambda x: source_rank("light_dates", x[0]))],
                               "note": "Sources give different first years (often the first tower against the present one)."})
 
-    if light is not None:
+    if light is not None and country == "US":
         ends = {}
         for r in sorted(main_recs, key=lambda r: (source_rank("light_dates", r.source), r.key)):
             y = r.light.get("deactivated")
@@ -1582,7 +1583,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     for p in parts:
         # Only positions a source gives as exact are compared: the register's batch-derived points and
         # the pin of a vanished tower are approximations, not disagreements.
-        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only and r.raw.get("precision", "exact") == "exact"]
+        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only and (r.raw.get("precision", "exact") == "exact" or country != "US")]
         if len(pts) > 1:
             ppos = p.pos()
             far = [r for r in pts if r.dist(*ppos) > CONFLICT_DISTANCE_M]
@@ -1926,7 +1927,7 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
     # (stations whose status a human settled in record_joins.py, and statuses taken from a source with no
     # position, are not suspects)
     possibly_lost = [{"id": r["id"], "name": r["name"], "note": r["status_note"]} for r in visible
-                     if r.get("status_note") and r["status"] == "unknown" and r["id"] not in record_joins.STATUS_PICKS]
+                     if r.get("status_note") and (r["country"] != "US" or (r["status"] == "unknown" and r["id"] not in record_joins.STATUS_PICKS))]
     decorative = []
     for st, rec in resolved:
         if rec["hidden"] or rec["id"] in record_joins.KEEP_VISIBLE or rec["id"] in record_joins.REPLICA_OF or \
