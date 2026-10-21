@@ -283,14 +283,14 @@ class CurationTest(MergeCase):
         first = self.station_files()
         self.assertEqual(sorted(first), ["ca-nl-flowers-cove", "ca-nl-flowers-cove-2"])
         holder = next(i for i, f in first.items() if any(s["key"] == "wikidata:Q1" for s in f["sources"]))
-        self.assertEqual(holder, "ca-nl-flowers-cove")                     # filed by position: with Harbour Point
-        self.curation({"detach": [{"key": "wikidata:Q1", "from_station": "ca-nl-flowers-cove", "reason": "its identifiers say Flowers Cove"}],
+        self.assertEqual(holder, "ca-nl-flowers-cove-2")                   # filed by position: with Harbour Point
+        self.curation({"detach": [{"key": "wikidata:Q1", "from_station": "ca-nl-flowers-cove-2", "reason": "its identifiers say Flowers Cove"}],
                        "join": [{"keys": ["wikidata:Q1", "lighthousefriends:1278"], "reason": "the same light"}]})
         for _ in range(2):                                                  # and it stays moved on the next run
             self.run_merge()
             files = self.station_files()
-            self.assertEqual([s["key"] for s in files["ca-nl-flowers-cove"]["sources"]], ["lighthousefriends:1256"])
-            self.assertEqual(sorted(s["key"] for s in files["ca-nl-flowers-cove-2"]["sources"]), ["lighthousefriends:1278", "wikidata:Q1"])
+            self.assertEqual([s["key"] for s in files["ca-nl-flowers-cove-2"]["sources"]], ["lighthousefriends:1256"])
+            self.assertEqual(sorted(s["key"] for s in files["ca-nl-flowers-cove"]["sources"]), ["lighthousefriends:1278", "wikidata:Q1"])
 
     def test_merge_stations_retires_one_id_and_keeps_both_files(self):
         self.write("wikidata", [ca("wikidata", "Q1", "Richibucto Head Lighthouse", 46.6698, -64.7116, region="NB"),
