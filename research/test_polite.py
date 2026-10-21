@@ -228,6 +228,19 @@ class GetTests(unittest.TestCase):
         with self.assertRaises(polite.Blocked):
             polite.get("https://down.example/x", opener=op, clock=self.c.time, sleep=self.c.sleep)
 
+    def test_cut_off_body_is_a_retryable_network_error_and_leaves_no_part_file(self):
+        import http.client
+        dest = os.path.join(self.raw, "out", "g.bin")
+
+        class Cut(FakeResp):
+            def read(self, n=-1):
+                raise http.client.IncompleteRead(b"ab")
+        r, _ = self.get([Cut(200, b""), FakeResp(200, b"whole")], dest=dest, backoff=(1.0,))
+        self.assertEqual(r.status, 200)
+        with open(dest, "rb") as fh:
+            self.assertEqual(fh.read(), b"whole")
+        self.assertFalse(os.path.exists(dest + ".part"))
+
     def test_stream_to_file(self):
         dest = os.path.join(self.raw, "out", "f.bin")
         r, _ = self.get([FakeResp(200, b"abc" * 100000)], dest=dest)

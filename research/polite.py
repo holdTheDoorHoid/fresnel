@@ -22,6 +22,7 @@ The cache root is $FRESNEL_RAW_ROOT, default <repo>/data/raw (git-ignored).
 Python 3.12 standard library only.
 """
 import fcntl
+import http.client
 import json
 import os
 import re
@@ -440,8 +441,11 @@ def get(url, *, timeout=40, retries=3, gap=None, per_minute=None, headers=None, 
                     status, rh = e.code, {k.lower(): v for k, v in e.headers.items()}
                     body = None if dest else e.read()
                 resp = Response(status, rh, body, cur)
-            except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError) as e:
+            except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError,
+                    http.client.HTTPException) as e:
                 err = e
+                if dest and os.path.exists(dest + ".part"):
+                    os.remove(dest + ".part")  # a cut-off download must not be mistaken for a whole file
             if resp is not None and resp.status in (429, 503):
                 strikes = th.strikes()
                 pause = _retry_after(resp.headers, min(60.0 * (2 ** strikes), 3600.0))
