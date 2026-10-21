@@ -198,35 +198,73 @@ home) or reachable only by boat, say so plainly in *Today*.
 From the source surveys (`docs/sources/survey_*.md`; method in `survey_history.md` §13). Work in this
 order, and stop when you have an honest story; a thin station needs only the first two steps.
 
-1. **Identity and roster.** `python3 research/roster.py <id>` prints the keepers the USLHS Digital
-   Archive lists for the station (name, role, start and end years, from NARA's keeper registers),
-   from the local cache. Compare with the station's LighthouseFriends page (keeper list in its
-   "Keepers" line; facts only), New England Lighthouses (Jeremy D'Entremont) or Terry Pepper's
-   Great Lakes pages where they cover it. Record every disagreement in `resolved_conflicts` or
-   `notes_for_editor`. Cite the archive page, not the cache.
+1. **Identity and roster.** `python3 /home/hoid/Desktop/fresnel/research/roster.py <station-id>` (for example
+   `us-me-portland-head`) prints the keepers the USLHS Digital Archive lists for the station: each line is
+   `Name (years)` under the archive's own role heading, with our normalised role in brackets (from NARA's
+   keeper registers, via Kraig Anderson's inventory). It works from the local cache and matches the station
+   to a USLHS place by name and position (a name match within about 1 km, or an exact name nobody else in the
+   state shares, with a warning when USLHS's position is far: its positions are only to the minute and a few
+   are wrong). The first line says how it matched; when it is not sure it prints the candidates instead,
+   and you use `--place <slug>` (the slug is in the candidate list) or `--name "<name>" --state XX [--near lat,lon]`. `--detail N` also fetches salary and source for the first N
+   people (one request each). USLHS covers the US only; there is nothing for `ca-` stations. Compare with
+   the station's LighthouseFriends page (keeper list in its "Keepers" line; facts only), New England
+   Lighthouses (Jeremy D'Entremont) or Terry Pepper's Great Lakes pages where they cover it. Record every
+   disagreement in `resolved_conflicts` or `notes_for_editor`. **Cite the archive page the tool prints**
+   (`https://archives.uslhs.org/places/<slug>`): `check_quotes.py` verifies a quote such as
+   `Joshua F. Strout (1869-1904)` against the cached copy of that page, so copy the roster line exactly as
+   printed ("at least" and all). A USLHS "at least 1950" is a documented span, not an appointment date.
 2. **Chronology skeleton.** The NRHP nomination when the station has an NRHP number
    (`https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/<ref>.pdf`, through `fetch_text.py --grep`;
    a 22 KB file is the "not digitised" placeholder), HABS/HAER data pages on loc.gov
    (`https://www.loc.gov/item/<id>/`), Parks Canada's statement of significance for a Canadian
    heritage lighthouse, and the station's Wikipedia article for leads only (article pages only,
    never `/w/` or `/api/`; cite what it cites where you can).
-3. **Official reports, from the local corpus.** `python3 research/corpus.py grep "<station name>"
-   [--alias "<OCR or old spelling>"] [--state XX] [--series lhb,commissioner,bulletin,lss,marine_ca]
-   [--years 1880-1900]` searches the downloaded text of the Lighthouse Board annual reports, the
-   Commissioner of Lighthouses reports, the Lighthouse Service Bulletin, the Life-Saving Service
-   annual reports and Canada's Department of Marine annual reports, and prints series, year and a
-   snippet. The OCR is poor: station names come out misspelled, so give aliases and a state.
-   **Page numbers:** the plain text has none; `corpus.py page <hit>` asks the Internet Archive for
-   the page (the Bulletin PDFs carry their own page numbers). A footnote cites the report, the year
-   and the page, with the Internet Archive URL. Copy evidence quotes from the corpus text exactly,
-   OCR errors and all.
-4. **Newspapers.** `python3 research/newspapers.py "<station name>" ["<keeper name>"]
-   [--years 1880-1910] [--state XX]` searches Chronicling America (Library of Congress) and prints
-   hits with their page URLs; `--page <url> --grep "<words>"` reads a hit's OCR text. It keeps to the
-   Library's rate limit for every agent at once, so expect it to be slow. Budget: up to about ten
-   searches for a well-documented station, fewer for a thin one. Search the station and keeper names
-   first, then date windows around events step 3 found. Most other state newspaper archives forbid
-   crawlers (CDNC, NYS Historic Newspapers, Digital Michigan Newspapers): do not use them.
+3. **Official reports, from the local corpus.** `python3 /home/hoid/Desktop/fresnel/research/corpus.py grep
+   "<station name>" [--alias "<OCR or old spelling>"] [--state XX] [--series lss,lhb,commissioner,bulletin,marine_ca,general]
+   [--years 1880-1900] [--max 20]` searches the downloaded text of the Life-Saving Service annual reports
+   (`lss`), the Lighthouse Board reports (`lhb`), the Commissioner of Lighthouses reports (`commissioner`),
+   the Lighthouse Service Bulletin (`bulletin`), Canada's Department of Marine annual reports, Marine branch
+   (`marine_ca`; fiscal years 1900 to 1923-24, labelled by the year the fiscal year ends) and a few general
+   histories (`general`, step 7), and prints `series | year | identifier | snippet`. The matching is fuzzy for OCR damage
+   (it finds "Point Beyes" and "Point Reyesy" for Point Reyes) but not magic: give `--alias` for spellings
+   you have seen, and `--state` (hits next to another state's name are hidden and counted; `--all-states`
+   shows them: "Split Rock" is also in New York) or `--years` (Split Rock, Minnesota, exists only from 1910).
+   Several annual reports are bound in one volume (the Commissioner volume holds fiscal 1915-1922); a hit
+   is labelled with its report's year when the volume's report boundaries are known, else with the
+   volume's range. `corpus.py status` shows what the corpus holds and what is missing.
+   **Pages:** the plain text has none, but for most Internet Archive volumes the tool reads archive.org's OCR
+   page index, so each grep line carries `[scan p.229, printed p.57]`. *Scan p.* is the image number in the Internet
+   Archive viewer (the URL tail `/page/n229/`); *printed p.* is the number on the page, read from the page's OCR head and
+   checked against the archive's scan data; it is marked `?` unless the two agree: look at the page image
+   (open the URL `corpus.py page` prints) before you write "p. 57". The Bulletin's `p.N` is the PDF page.
+   `corpus.py page <series> <year> "<phrase>"` lists every page holding a phrase, with a URL for each (a bound
+   volume lists the pages of all its reports; use the printed page and the report's year to pick). Volumes without
+   page data fall back to archive.org's in-item search (slower, needs archive.org). Cite "scan page N" when you
+   cannot read a printed page.
+   **Cite these URLs exactly** (so `check_quotes.py` can find the text offline); `corpus.py cite <identifier>`
+   (or `corpus.py cite 1933` for a Bulletin year) prints the one to use:
+   - Internet Archive volumes: `https://archive.org/details/<identifier>` with the identifier grep printed
+     (a `/page/n<leaf>/mode/2up` tail is fine);
+   - Lighthouse Service Bulletin: the PDF's address on uslhs.org, usually
+     `https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_<YYYY>.pdf` (1925 and 1936 have
+     odd file names: use what `cite` prints; `#page=N` is fine). The Bulletin series also holds the five
+     **index** volumes (1912-17, 1918-23, 1924-29, 1930-35, 1936-39), which list each station with the
+     Bulletin pages that mention it: grep them first (`--series bulletin`) to find the right issue and page.
+   Copy evidence quotes from the grep snippet exactly, OCR errors and all (line breaks and runs of spaces
+   do not matter; a word hyphenated across a line is rejoined, as the checker does).
+4. **Newspapers.** `python3 /home/hoid/Desktop/fresnel/research/newspapers.py "<station name>" ["<keeper name>"]
+   [--with lighthouse] [--years 1880-1910] [--state XX]` searches Chronicling America (Library of Congress)
+   for pages holding every quoted phrase and prints date, paper, page and the page URL; `--snippets N` also
+   reads the first N hit pages and prints their matching lines. `--page <url> --grep "<words>"` reads one
+   page's OCR text. `--state` limits to papers printed in that state; use `--with lighthouse` for names that
+   are also towns. The tool keeps to the Library's limit for every agent at once (5 s apart, 20 a minute, a
+   shared cooldown on HTTP 429/503), so expect a search to take 5 to 60 s; stop and report if it says loc.gov
+   is rate-limiting. Budget: up to about ten searches for a well-documented station, fewer for a thin one:
+   station and keeper names first, then date windows around events step 3 found. **Cite the
+   `https://www.loc.gov/resource/<lccn>/<date>/ed-1/?sp=<page>` URL the tool printed, for pages you have read
+   with `--page` or `--snippets`; `check_quotes.py` verifies the quote against that page's cached OCR text.**
+   Most other state newspaper archives forbid crawlers (CDNC, NYS Historic Newspapers, Digital Michigan
+   Newspapers): do not use them.
 5. **Keeper detail.** The Official Register of the United States (biennial; keepers with birthplace
    and salary) is searchable by surname only, page by page; use it to confirm a keeper you already
    know, not to find new ones.
@@ -240,9 +278,12 @@ order, and stop when you have an honest story; a thin station needs only the fir
    I. Kimball, *Organization and Methods of the United States Life-Saving Service*; W. D. O'Connor's
    1884 sketch of the Life-Saving Service; D. P. Heap, *Ancient and Modern Light-houses* (1889); for
    Canada, the Department of Marine and Fisheries' *Review of Improvements in Lighthouse and Coast
-   Service of Canada between 1896 and 1904* (1904). Putnam (1917) and Weiss (1926) only once a scan is
-   found. Internet Archive identifiers are in `survey_history.md` §7. Never cite a novel or a book for
-   young readers (James Otis, *The Life Savers*) as a record.
+   Service of Canada between 1896 and 1904* (1904). George R. Putnam, *Lighthouses and Lightships of the
+   United States* (1917), and George Weiss, *The Lighthouse Service* (1926), are now in the corpus too.
+   All of these are the corpus series `general`: `corpus.py grep "<words>" --series general` finds the passage
+   (the same page labels, quotes and `https://archive.org/details/<identifier>` citations as in step 3), so cite
+   them as general context only. Internet Archive identifiers are in `survey_history.md` §7. Never cite a novel
+   or a book for young readers (James Otis, *The Life Savers*) as a record.
 
 **Do not use** (robots.txt, blocks or the owner's rulings, DESIGN §2): query.wikidata.org,
 Overpass, Wikipedia's `/w/` and `/api/`, HathiTrust, Google Books, the NARA catalog, Canadiana, BAnQ,
@@ -263,8 +304,10 @@ its archived copies are on hold with the Historian's, DESIGN §2.) A lightship s
 narratives that name the keeper and surfmen), the 1909 report's station table, NRHP nominations, and
 newspapers.
 
-**Canada:** the Department of Marine annual reports 1901-1925 in the corpus (keepers and salaries;
-the OCR splits table columns, so read around a hit), Parks Canada and the Directory of Federal Heritage
+**Canada:** the Department of Marine annual reports in the corpus (`--series marine_ca`, the Marine branch
+reports, Sessional Paper 21: fiscal 1900 to 1923-24; the lighthouse sections list the year's works and the
+keepers' tables give name, station, date of appointment and salary, but the OCR prints each column as its own
+block, so read around a hit and take names and stations from the same position in their columns), Parks Canada and the Directory of Federal Heritage
 Designations, the Canadian Coast Guard List of Lights for today's light, provincial archives' open pages,
 the Nova Scotia Lighthouse Preservation Society, and LighthouseFriends' Canadian pages (facts only). Read
 French sources for Quebec; write in English; quote French exactly, with your own English rendering after
