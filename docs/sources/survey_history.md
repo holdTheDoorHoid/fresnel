@@ -798,3 +798,73 @@ titles (try `creator:"United States. Light-House Board"` and Serial Set volumes)
 page breaks (it would give page numbers for plain-text grep without the in-item API); (d) find scans of Putnam 1917 and
 Weiss 1926; (e) size the Canadian Marine reports and test one for keeper salary lists; (f) repeat the Portland Head
 Chronicling America query; (g) try NRHP, HABS and ENC wrecks for Split Rock and Point Reyes.
+
+---
+
+### Follow-up 2026-10-21 (corpus agent: `research/roster.py`, `corpus.py`, `newspapers.py`)
+
+What was built, and what building it found. Shared layer `research/polite.py` (one lock per site, robots.txt, back-off);
+caches under `data/raw/{uslhs,corpus,newspapers}/` (git-ignored). Corpus root `data/raw/corpus/`: 114 volumes, about 90 MB of text
+(`corpus.py status` lists them).
+
+**archive.org.** Probes at 11:41 and 12:12 failed (robots.txt and search timed out at 25 s; `web.archive.org` answered); the 12:42 probe
+succeeded. Then 37 LSS volumes came down in 3.5 minutes at one request per 2 s (each file takes two requests, the `download/` URL
+redirects to a `dn` host), with no errors.
+
+**Open items (a)-(g) answered**
+
+- **(a) LSS.** The 37 volumes are in. Years read from the text: FY1876, 1877, 1878, 1879, 1880, 1881, **1882** (item `annualreportope02servgoog`,
+  labelled 1883), 1884 (three copies), 1888, 1889 (two copies), 1891-1899 (two copies each of 1895, 1896, 1898), 1900, 1901, 1902 (two copies
+  plus `united-states-life-saving-service-0001`, a 0.2 MB duplicate labelled 1903), 1903-1909. **Still missing from IA: 1883, 1885, 1886, 1887, 1890 and 1910-1914.**
+  Layout checked: the station table ("Quoddy Head ... Manned from Aug. 21, 1894, to May 31, 1895; 6 surfmen"), the table of casualties
+  (date, vessel, place, "Nature of casualty and service rendered") and the narratives of the year's rescues all print as separate column blocks, so a
+  vessel's date, place and outcome do not sit on one line: read around a hit. Station names appear as "Point Reyes, coast of California".
+- **(b) Other Board and Commissioner items.** `creator:"United States. Light-House Board"` (34 items), the Board's title and the Commissioner's title
+  return nothing new: **the Board run on IA is still the seven compilations, and the Commissioner run is the one volume** (which holds eight reports, below).
+  Full-text searches for the Board's report inside Serial Set volumes found only `unitedstatescon243offigoog` and the Secretary of the Treasury's
+  reports for 1873-75 (`SecTreasAnnReport187x`), which summarise the Board. The 1852-90 and 1902-10 Board reports and the 1911-14 and 1923-39
+  Commissioner reports remain HathiTrust / USCG Historian only. **Official Register:** 236 items under the `sim_united-states-official-register...` prefix,
+  every two years 1816-1905 (one or two volumes each), then 1913, 1921, 1932, 1945, 1951, 1955, plus 140 undated identifiers; not downloaded.
+- **(c) `_hocr_searchtext.txt.gz` page breaks.** The search text has **no form feeds**, but each item that has it also has
+  `<id>_hocr_pageindex.json.gz`, a list with one `[start, end, ...]` entry per scan page giving the page's character range in the search text, which is
+  exactly a page map (399 entries for a 399-leaf book). 66 of the 81 archive.org volumes have the pair; the 15 without are Google scans of
+  the 1860s-90s: five Board volumes (`annualreportlig00boargoog`, `...02statgoog`, `...04statgoog`, `...00statgoog`, `...01boargoog`), six LSS volumes (the `annualreportope0[06-9]servgoog` and `...06servgoog` scans and `united-states-life-saving-service-0001`) and four general histories; for these `corpus.py page` falls back to the in-item search API. `corpus.py` downloads the pair (about 0.1-1 MB
+  each, 31 MB for the lot) and maps a hit to its scan page by matching the words around it in the search text. The `_scandata.xml` file often carries a
+  `pageNumber` for each leaf, but in the Google scans it can be a page out (leaf 52 of `annualreportlig03statgoog` reads 40 while the page's own head says 41),
+  so the tool reports a printed page as certain only when scan data and the page's OCR head agree. The in-item search API (`inside.php`) works as in
+  section 1 only with the phrase in double quotes: unquoted, it matches any of the words (79 hits for "Portland Head" in a volume with 2).
+- **(d) Putnam 1917 and Weiss 1926 are on IA.** Putnam: `lighthousesandl00putngoog` (Google scan, `_djvu.txt` 395 KB) and `lighthouseslight00putn`; Weiss:
+  `lighthouseservic0000geor` ("the lighthouse service it's history activities and organization", 1926; not access-restricted; `_djvu.txt` 392 KB). The 1974
+  reprint `lighthouseservic0000weis` is access-restricted. Putnam, Weiss and the other works of section 7 are corpus series `general` (11 volumes, 3.6 MB).
+- **(e) Canadian Marine reports.** The usable items are the Sessional Paper 21 volumes `<year>v<vol>i<issue>p21_<seq>` ("Report of the Department of Marine and
+  Fisheries (Marine)"; the Fisheries branch is p22, "List of Shipping" p21b/p22, and the steamboat-inspection supplements p23): **25 reports, fiscal 1900 to 1923-24**
+  (June 30 year-end to 1906, March 31 from 1907), 0.3-1.3 MB of text each, **17.8 MB in all, not the 100-150 MB estimated**. 111 items match "Marine and
+  Fisheries" 1900-26; the Canadian run before 1900 and the report for 1924-25 were not found (the creator search lists a 1867 `Annual report`, 528 MB, and two
+  `Supplement to the annual report` items, not downloaded). Keeper lists: yes. The Marine report prints tables of lightkeepers with name, station, date of appointment and salary
+  ("Name. Station. Appointed. Salary."), but the OCR prints each column as its own block, so names and stations must be paired by position. A grep finds, for example, the Inner Sambro Island pole light (lit 3 January 1900) in the report for fiscal 1900.
+- **(f)** Portland Head on Chronicling America works (31 pages for the keeper query, 1880-1910, papers printed in Maine); the survey's failure was the HTTP/2 error.
+- **(g) NRHP, HABS, ENC for Split Rock and Point Reyes.** NRHP `69000073` is Split Rock (digitised, 19.7k characters). **NRHP `91001100`, the number
+  the station record `us-ca-point-reyes` carries, is the Point Reyes Lifeboat Station, not the lighthouse.** HABS: Point Reyes Lighthouse is `ca1357`; Split Rock has no
+  HABS record (a search returned a Blue Ridge Parkway item). ENC Direct's `enc_harbour/MapServer/36` answered "Could not find service" (HTTP 500 body) at 12:07, so
+  section 8.2's endpoint needs a re-test before the wrecks layer relies on it.
+
+**Other findings**
+
+- **The Commissioner volume `bub_gb_B2dYAAAAYAAJ` (IA label 1911) is eight annual reports, fiscal 1915 to 1922** (title pages at text offsets 185, 347,187, 672,197, 1,020,156,
+  1,301,261, 1,643,793, 2,034,020 and 2,361,172 of 2.66 MB normalised). Section 2.2's "one volume, fiscal 1915" becomes 8 of about 29 Commissioner years. The year check on the text is what showed it.
+- **Year labels of the seven Lighthouse Board volumes were off** (the survey read 60 KB of front matter). From the whole text: `annualreportlig03statgoog` FY1891 and 1892,
+  `...01statgoog` 1893 and 1894 (not 1892-93), `...00boargoog` **1895** (not 1896; so the "1,013 hours and 14 tons" Portland Head figure is FY1895), `...02statgoog` 1896 and 1897,
+  `...04statgoog` 1899, `...00statgoog` 1900, `...01boargoog` 1901. The run on IA is FY1891-97 and 1899-1901 (1898 is missing). Forward references ("estimates for the year ending
+  June 30, 1892") can add a year, so chosen years err on the inclusive side; `corpus.py` stores the label, the counts and the chosen years for every volume.
+- **Lighthouse Service Bulletin: all 28 years exist, and there are five index volumes.** The listing page is `https://uslhs.org/resources/bulletins`. 1925 is
+  `Lighthouse%20Service%20Bulletins%201925.pdf`; 1913 and 1936 are listed as `..._1913_0.pdf` and `..._1936_0.pdf` (1913 is byte-identical to the plain name; the 1936 file differs, 7.64 MB
+  against 7.50 MB, and the listed one is used); the indexes are `Index to volume 1.pdf` (1912-17), `1918_1923_Index.pdf`, `1924_1929_Index.pdf`, `1930_1935_Index.pdf`, `1936_1939_Index.pdf`: station by
+  station ("Point Reyes light station, report of severe storm 166"), the cheapest way to find which Bulletin page mentions a station. 33 files, 319 MB of PDF, 5.9 MB of text; a yearly PDF is 25-57 pages.
+- **Chronicling America.** The state filter that works is `fa=location_state:<lowercase state name>` ("papers printed in", not "places mentioned"). `at=results,pagination` keeps replies small; a
+  search takes 5-40 s. Under load the API once answered `of: 0` for a query that has 188 hits, so empty replies are not cached. The ALTO text comes from
+  `tile.loc.gov/storage-services/service/ndnp/...xml`, derived from the hit's IIIF `image_url`; a page URL not seen in a search resolves with one `?fo=json&at=page,resources` request.
+  Tested: Point Reyes (CA, 1890-1900, `lighthouse`) 188 pages; Portland Head + keeper (ME, 1880-1910) 31; Split Rock 1910-12 (no state) 3 pages (Calumet News, 22 Sep 1910, p. 3, the tug *Redwing*).
+- **USLHS.** The roster list carries only name, years and the role heading. Salary, source ("Register", "RG 26 Entry 18 - Letters Sent Regarding the Light-House Service") and birth and death years are
+  on the person page (one request each: `roster.py --detail N`; `crawl-people` for all, about a day at 2 s). Coordinates are degrees and minutes with no hemisphere, and some are
+  wrong: Split Rock is 23 km from the real light (47°20'N 91°36'W against 47.200, -91.367), Boston Light reads 40° for 42°, Buck Island (VI) has 64° 88.70', and "Baker's Island" (MA) carries Maine's Baker Island position.
+  The tool flags minutes of 60 or more and matches by name first.
