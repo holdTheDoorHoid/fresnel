@@ -2,26 +2,31 @@
 """The local text corpus of the official reports, for research agents.
 
   research/corpus.py grep "<station name>" [--alias "<OCR or old spelling>" ...] [--state XX]
-                     [--series lss,lhb,commissioner,bulletin,marine_ca] [--years 1880-1900] [--max 20]
-  research/corpus.py page <series> <year> "<phrase>"     the page for a phrase, and the URL to cite
+                     [--series lss,lhb,commissioner,bulletin,marine_ca,general] [--years 1880-1900] [--max 20]
+  research/corpus.py page <series> <year> "<phrase>"     scan page(s) and a URL for a phrase
   research/corpus.py cite <identifier | bulletin year>    the URL to cite (so check_quotes.py can find the text)
   research/corpus.py status                               what is in the corpus, what is missing, archive.org state
-  research/corpus.py build [--series ...] [--wait]        download / extend the corpus (slow, resumable)
-  research/corpus.py discover "<archive.org query>"       list archive.org items (to extend the catalog)
+  research/corpus.py build [--series ...] [--wait] [--pages]   download / extend the corpus (slow, resumable)
+  research/corpus.py reindex                              re-read years and report boundaries from the stored text
+  research/corpus.py discover "<archive.org query>"       list archive.org items (to extend corpus_catalog.json)
 
 Series: lss = US Life-Saving Service annual reports; lhb = Lighthouse Board annual reports;
-commissioner = Commissioner of Lighthouses annual reports; bulletin = Lighthouse Service Bulletin;
-marine_ca = Canada, Department of Marine (and Fisheries) annual reports, Marine branch (by fiscal year);
-general = histories for marked period context (Putnam 1917, Weiss 1926, Johnson 1889, Kimball 1912 ...).
+commissioner = Commissioner of Lighthouses annual reports; bulletin = Lighthouse Service Bulletin (yearly volumes
+and the five index volumes); marine_ca = Canada, Department of Marine (and Fisheries) annual reports, Marine
+branch, by fiscal year; general = histories for marked period context (Putnam 1917, Weiss 1926, Johnson 1889,
+Kimball 1912 ...).
 
 Files live under $FRESNEL_RAW_ROOT/corpus/<series>/<year>/ (default <repo>/data/raw/corpus), with
 corpus_index.json (series, fiscal year, identifier, source URL, size, sha256). Every volume's year is
-read from its own text; the archive's metadata year is only the label (the survey found mislabelled years).
+read from its own text; the archive's metadata year is only the label (the survey found mislabelled years),
+and a bound volume lists every report it holds (the Commissioner volume holds fiscal 1915 to 1922).
 
 The OCR is poor, so `grep` matches fuzzily: the name's letters may be confused (e/o/c, l/1/i, n/u/h ...),
 one letter may be wrong, missing or extra, and the words may be run together. Give aliases for spellings
-you have seen. The plain text has no page breaks, except the Bulletin PDFs (form feeds); `page` asks the
-Internet Archive's in-item search for the scan page of archive.org volumes.
+you have seen. The plain text has no page breaks, but archive.org's OCR page index does: each grep line
+carries `[scan p.N, printed p.M]` where the index exists (the Bulletin's `p.N` is the PDF page).
+Known archive.org volumes are listed in corpus_catalog.json; archive.org is probed at most once every
+30 minutes after a failure.
 """
 import argparse
 import hashlib
