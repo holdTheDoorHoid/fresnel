@@ -39,7 +39,11 @@ OUR_AGENT = "fresnelbot"
 
 # Hosts that are one site for rate-limit and robots purposes, and the gap each site needs.
 # (Download nodes of archive.org share archive.org's lock; tile.loc.gov shares www.loc.gov's.)
-SITE_GAPS = {"loc.gov": 5.0}
+SITE_GAPS = {"loc.gov": 5.0, "numerique.banq.qc.ca": 6.0, "www.nauticapedia.ca": 6.0, "nauticapedia.ca": 6.0}
+# Sites whose robots.txt names Anthropic's crawlers, which the owner decided to use anyway (2026-10-21,
+# DESIGN.md section 2): politely, at low volume (the slower gaps above), keeping to the `*` rules every
+# other agent follows. Nothing else is exempt.
+OWNER_ALLOWED_DESPITE_AI_RULES = {"numerique.banq.qc.ca", "www.nauticapedia.ca", "nauticapedia.ca"}
 ROBOTS_HOST = {"archive.org": "archive.org"}
 DEFAULT_GAP = 2.0
 MARGIN = 0.05  # seconds added to every gap, so clock jitter never makes two requests land inside it
@@ -352,7 +356,7 @@ def robots_groups(scheme, host, ttl=7 * 86400, fetcher=None):
                 fh.write(text)
             write_json(meta_path, {"status": r.status, "fetched": time.strftime("%Y-%m-%d %H:%M:%S"), "url": url})
     groups = parse_robots(text)
-    if ai_blocked(groups):
+    if ai_blocked(groups) and site not in OWNER_ALLOWED_DESPITE_AI_RULES:
         record_skip(site, "robots.txt names an Anthropic crawler as disallowed")
     _ROBOTS_MEMO[(raw_root(), site)] = groups
     return groups
@@ -362,7 +366,7 @@ def check_robots(url):
     u = urllib.parse.urlsplit(url)
     groups = robots_groups(u.scheme or "https", u.netloc)
     site = "archive.org" if site_key(u.netloc) == "archive.org" else u.netloc.lower()
-    if ai_blocked(groups):
+    if ai_blocked(groups) and site not in OWNER_ALLOWED_DESPITE_AI_RULES:
         raise Blocked("%s: robots.txt names AI/Claude crawlers as disallowed; skipped (DESIGN.md section 2)" % site)
     path = u.path or "/"
     if u.query:

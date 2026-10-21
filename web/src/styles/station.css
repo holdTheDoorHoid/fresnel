@@ -1,7 +1,9 @@
 /* Station pages. One column on phones in the order a visitor needs it; on wide screens a
    reading column plus a sticky rail with the map link, checklist and "Suggest an edit". */
 
-.station-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; overflow-x: clip; }
+/* No overflow clipping here: Chrome stops painting a clipped box taller than its texture limit (about
+   16,000 px), and a long story makes the page taller than that. Long words and URLs wrap instead. */
+.station-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; overflow-wrap: anywhere; }
 
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 6px; padding: 0; margin: 4px 0 16px; font-size: 0.9rem; color: var(--muted); }
 .crumbs li + li::before { content: '›'; margin-right: 6px; color: var(--line-strong); }

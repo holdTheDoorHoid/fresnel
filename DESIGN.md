@@ -31,7 +31,7 @@ worked-out detail, and Fresnel follows it unless this file says otherwise.
 | Audience | Balanced, in layers, as in Firefinder: a clean map for anyone; each page puts visit / climb / stay / access first and the history below. |
 | Stories | **Long-form, in chapters.** Length follows the evidence: about 800–3,000 words for a well-documented light, shorter (down to ~150) when the sources are thin. A short honest story beats a padded one. Chapters, used when there is something to put in them: *The place*, *Building the light*, *The keepers* (with a roster of names, roles and years), *Storms, wrecks and rescues*, *After the keepers*, *Today*. Sources include the Lighthouse Board and Commissioner of Lighthouses annual reports, keeper registers, the Life-Saving Service annual reports, historic-register nominations and old newspapers. Every factual sentence is footnoted. Detail: section 5 and `research/STORY_GUIDE.md`. |
 | Atmosphere | **Sourced scenes plus marked context.** Every detail of a scene (the weather that night, the sound of the fog signal, a keeper's words) comes from a source: logbooks, letters, inspectors' reports, newspaper accounts, weather and wreck records, short quotations in their own words. General passages about the period (what trimming a wick in the 1870s involved, life aboard a lightship) are allowed **only** when framed as general ("On most stations of the period…") and cited to a history of the service. They are **never** presented as having happened at this station. Nothing is invented: no imagined scenes, no guessed feelings, no composite characters. |
-| Writer | Pilot first: the same handful of stations researched once and written by **both Haiku and Sonnet**, shown to the owner side by side; the owner picks the writer for the big run. Then batches, as in Firefinder. |
+| Writer | Pilot first: the same handful of stations researched once and written by **both Haiku and Sonnet**, shown to the owner side by side; the owner picks the writer for the big run. Then batches, as in Firefinder. **Owner decided 2026-10-21 after the pilot (`research/PILOT.md`): the mix.** Sonnet researches and writes the roughly 300 best-documented stations (`research/queue.py --tier sonnet`), Haiku the rest; each model fact-checks its own stories. The big run goes in multi-agent workflows, back to back until the owner says stop, pausing near 90% of the weekly allowance. The pilot's seven Sonnet stories are published. |
 | Publishing | **Public from day one.** Thin or unchecked entries show a visible **Unverified** badge. |
 | Photos | **Same as Firefinder**: mirror photos from every source, hobbyist and registry sites included, **with credit and a takedown note**, served from a separate public repo `holdTheDoorHoid/fresnel-photos`. The owner chose this; do not relitigate. |
 | Features | (a) **The light at night**: the light seen from a ship's deck at sea, flashing in its real characteristic, at a distance the visitor chooses, plus a map ring showing how far out it could be seen (worked out from its focal height and its recorded range); lost lights use their recorded height and characteristic. (b) **Keepers index**: a page for each keeper, linked across every station they served. (c) **Wrecks and rescues**: a map layer of recorded wrecks near each light (NOAA) with the rescues the stories mention. (d) **Old charts and then-and-now**: a historical nautical-chart overlay, a timeline on each page, and a "lights lit per year" slider. By default (told the owner): a **lens and tower-type guide** (Fresnel orders, screwpile, caisson, skeletal iron, conical masonry…) linking to surviving examples, and a **"fix your position" lesson** (bearings on two lights, crossed on the chart), the sailor's version of Firefinder's smoke-spotting lesson. |
@@ -60,17 +60,17 @@ Endpoint rulings (orchestrator, 2026-10-21, from the surveys):
   at `https://www.wikidata.org/wiki/Special:EntityData/<Q>.json` is allowed by wikidata.org's robots.txt.
 - **Wikipedia: article pages only** (`/wiki/<Title>`). Its robots.txt disallows `/w/` (the Action API)
   and `/api/` (REST) for all agents; Firefinder follows the same rule.
-- **Skipped because robots.txt names Anthropic's crawlers** (ClaudeBot, anthropic-ai, Claude-Web):
-  BAnQ numérique, Nauticapedia. Canadiana disallows the same names, and its `/search` and `/file`
-  paths for every agent, so it is skipped too. The owner may overrule (in Firefinder the owner kept a
-  source whose robots.txt named AI crawlers).
+- **robots.txt that names Anthropic's crawlers** (ClaudeBot, anthropic-ai, Claude-Web): BAnQ numérique
+  and Nauticapedia are **used by the owner's decision (2026-10-21)**, told of the ban: politely, at low
+  volume, keeping to each site's rules for all other agents (`*`); `research/polite.py` lists them in
+  `OWNER_ALLOWED_DESPITE_AI_RULES`. Canadiana stays out: it disallows `/search` and `/file` for every agent.
 - **Retired pages through the Wayback Machine: allowed.** A page its publisher has taken down (the
   NPS light-station inventory, old Tripod sites) may be read from the Internet Archive and cited with
   both the original URL and the archive URL.
-- **Live but blocked pages through the Wayback Machine: OWNER'S CALL, on hold.** The USCG Historian's
-  site (public-domain federal histories: station pages with keeper lists, the Lightship Station Index)
-  answers 403 to our requests. The territories survey read 292 archived copies of its pages. Until the
-  owner decides, no fetcher is built on them and no story cites them.
+- **The USCG Historian's pages through the Wayback Machine: allowed (owner, 2026-10-21).** The site
+  (public-domain federal histories: station pages with keeper lists, the Lightship Station Index) answers
+  403 to our requests; its Internet Archive copies may be read and cited, every footnote giving both the
+  original address and the archive copy.
 - **Skipped as blocked:** USCG Historian (`history.uscg.mil`, Akamai 403 to everything), the Michigan
   Lighthouse Conservancy, PEI Island Newspapers, Maritime History of the Great Lakes (Cloudflare
   challenges), Library and Archives Canada search and the New Brunswick archives (robots.txt), NPS IRMA

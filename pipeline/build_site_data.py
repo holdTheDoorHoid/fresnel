@@ -379,6 +379,9 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         if res:
             rec.update(research_extras(res))
             rosters += bool(rec.get("keepers"))
+        if has_story:  # a researched story lifts the entry's standing; the record itself is never edited here
+            ver = res.get("verification") if res and isinstance(res.get("verification"), dict) else {}
+            rec["verification"] = "verified" if ver.get("verdict") in ("pass", "fixed") else "researched"
         _write_json(out / "s" / f"{rid}.json", rec)
         features.append(feature(rec, has_story))
         country = country_of(rec)
