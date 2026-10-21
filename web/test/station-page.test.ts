@@ -167,7 +167,7 @@ describe('each kind and status says what it is', () => {
     expect(page('us-wi-sample-bay-replica')).toContain('This is a replica of:');
     const unknown = page('us-gu-sample-point');
     expect(unknown).toContain('Status unknown');
-    expect(unknown).toContain('<code class="char">Q(6)+LFl W 15s</code><span class="sub">As the source writes it.</span>');
+    expect(unknown).toContain('<code class="char">Al W 10s</code><span class="sub">As the source writes it.</span>');
   });
 });
 

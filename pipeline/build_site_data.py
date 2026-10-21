@@ -72,6 +72,8 @@ FORMAT = {
     "y0": "first year a light is recorded here: first lit, or built when that is all we have (absent = unknown)",
     "y1": "year the light went out or the station was lost (absent = still lit or standing, or not recorded)",
     "st": "1 = has a researched story (absent = not yet)",
+    "fh": "the light's focal height in metres, as in light.focal_height_m (absent = not recorded)",
+    "rn": "the light's charted range in nautical miles, as in light.range_nm (absent = not recorded)",
 }
 
 KNOWN_SOURCES: dict[str, dict[str, str]] = {
@@ -209,6 +211,11 @@ def feature(rec: dict, has_story: bool = False) -> dict:
         props["y1"] = y1
     if has_story:
         props["st"] = 1
+    # The light's height and range, for the map's range rings (DESIGN.md section 4, the light at night).
+    light = rec.get("light") if isinstance(rec.get("light"), dict) else {}
+    for key, field in (("fh", "focal_height_m"), ("rn", "range_nm")):
+        if _num(light.get(field)) and light[field] > 0:
+            props[key] = round(float(light[field]), 1)
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},

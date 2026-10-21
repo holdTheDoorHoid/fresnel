@@ -1,3 +1,4 @@
+import { EYE_HEIGHTS } from '../src/lib/sighting.ts';
 import { describe, expect, it } from 'vitest';
 import { defaultState, formatView, parseState, serializeState, type AppState } from '../src/lib/urlstate.ts';
 
@@ -80,5 +81,20 @@ describe('URL state', () => {
     expect(s.filters.mine).toBeNull();
     expect(s.filters.climbable).toBe(false);
     expect(s.filters.access).toBeNull();
+  });
+
+  it('keeps the light ranges layer and its eye height, and only the heights it offers', () => {
+    expect(parseState('?reach=3').reach).toBe(3);
+    expect(parseState('?reach=15').reach).toBe(15);
+    expect(parseState('?reach=7').reach).toBeNull();
+    expect(parseState('?reach=yes').reach).toBeNull();
+    expect(parseState('').reach).toBeNull();
+    const st = parseState('?region=ME&reach=30');
+    expect(serializeState(st)).toBe('?region=ME&reach=30');
+    expect(parseState(serializeState(st)).reach).toBe(30);
+  });
+
+  it('offers the same eye heights as the light at night', () => {
+    for (const h of EYE_HEIGHTS) expect(parseState(`?reach=${h.m}`).reach).toBe(h.m);
   });
 });

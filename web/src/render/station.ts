@@ -11,7 +11,7 @@
 import { formatCoords, formatDate, distanceFor, distanceMetres, lengthFor, nauticalMiles, plainCoords, yesNo } from '../lib/format.ts';
 import { html, isSafeStoryHtml, raw, safeUrl, type SafeHtml } from '../lib/html.ts';
 import { accessLabels, isProminent } from '../lib/access.ts';
-import { parseCharacteristic, describeCharacteristic } from '../lib/characteristic.ts';
+import { describeReading, readLight } from '../lib/characteristic.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
 import { placeLine, regionName, regionWithCountry, stationCountry } from '../lib/regions.ts';
 import { isStationId } from '../lib/station-id.ts';
@@ -55,6 +55,7 @@ import {
   type RenderContext,
 } from './common.ts';
 import { keepersTable, researchSourcesList } from './keepers.ts';
+import { nightSection, reachLine } from './night.ts';
 import { renderTimeline } from './timeline.ts';
 
 export type { RenderContext } from './common.ts';
@@ -201,11 +202,13 @@ function disagree(r: StationRecord, ...fields: string[]): SafeHtml | string {
 /** The light's characteristic as charted, with its plain reading (or the raw string when it is in a form we do not read). */
 export function characteristicHtml(raw: string | null | undefined, opts: { lost?: boolean } = {}): SafeHtml | null {
   if (!raw || !raw.trim()) return null;
-  const c = parseCharacteristic(raw);
+  const r = readLight(raw);
   const asWas = opts.lost ? html`<span class="sub">As last recorded.</span>` : '';
-  if (!c) return html`<code class="char">${raw.trim()}</code><span class="sub">As the source writes it.</span>${asWas}`;
-  const reading = describeCharacteristic(c);
-  return html`<span class="char-read"><code class="char">${c.raw}</code>: ${reading.charAt(0).toLowerCase() + reading.slice(1)}.</span>${asWas}`;
+  const words = describeReading(r);
+  if (!words) return html`<code class="char">${raw.trim()}</code><span class="sub">As the source writes it.</span>${asWas}`;
+  const text = words.replace(/\.$/, '');
+  const one = r.lights.length === 1 && !r.lights[0]!.role && !r.lights[0]!.era;
+  return html`<span class="char-read"><code class="char">${raw.trim()}</code>: ${one ? text.charAt(0).toLowerCase() + text.slice(1) : text}.</span>${asWas}`;
 }
 
 function lensText(r: StationRecord): SafeHtml | null {
@@ -231,7 +234,7 @@ export function lightRows(r: StationRecord): [string, unknown][] {
   const fh = lengthFor(country, L.focal_height_m);
   if (fh) rows.push(['Focal height', html`${fh}<span class="sub">The height of the light above the water.</span>${disagree(r, 'light.focal_height_m')}`]);
   const range = nauticalMiles(L.range_nm);
-  if (range) rows.push(['Range', html`${range}<span class="sub">How far out it ${r.status === 'active' ? 'can' : 'could'} be seen in clear weather, as charted.</span>${disagree(r, 'light.range_nm')}`]);
+  if (range) rows.push(['Range', html`${range}<span class="sub">How far out it ${r.status === 'active' ? 'can' : 'could'} be seen at night in clear weather, as charted. See <a href="#night">the light at night</a> for the horizon and the weather.</span>${disagree(r, 'light.range_nm')}`]);
   const lens = lensText(r);
   if (lens) rows.push(['Lens', lens]);
   if (L.fog_signal) rows.push(['Fog signal', L.fog_signal.replace(/^./, (c) => c.toUpperCase())]);
@@ -559,6 +562,7 @@ export interface StationSection {
 export const SECTIONS: readonly StationSection[] = [
   { id: 'visit', title: 'Visit, climb and stay', render: (r) => visitSection(r) },
   { id: 'facts', title: 'Facts', render: (r) => factsSection(r) },
+  { id: 'night', title: 'The light at night', render: nightSection },
   { id: 'timeline', title: 'Timeline', render: timelineSection },
   { id: 'history', title: 'History', render: historySection },
   { id: 'keepers', title: 'Keepers', render: (r, ctx) => (r.kind === 'lightship_station' && !r.keepers?.length ? null : keepersSection(r, ctx)) },
@@ -661,6 +665,8 @@ export function renderPanel(r: StationRecord, ctx: RenderContext, opts: { hidden
   if (fh) rows.push(['Focal height', fh]);
   const range = nauticalMiles(L?.range_nm);
   if (range) rows.push(['Range', range]);
+  const reachText = reachLine(r);
+  if (reachText) rows.push([r.status === 'active' ? 'Seen out to' : 'Could be seen', reachText]);
   const tower = (r.structures ?? []).find((s) => s && (s.role === 'tower' || s.role === 'front_range') && s.status === 'standing') ?? (r.structures ?? [])[0];
   if (tower) {
     const type = tower.type && STRUCTURE_TYPE[tower.type] ? STRUCTURE_TYPE[tower.type]!.label : null;

@@ -14,6 +14,7 @@ import { parseState, serializeState, type AppState } from '../lib/urlstate.ts';
 import { DEFAULT_VIEW } from '../lib/views.ts';
 import { countText } from '../lib/count.ts';
 import { kindWording, statusWording } from '../lib/vocab.ts';
+import { countryOf } from '../lib/regions.ts';
 import { stationPath, type RenderContext } from '../render/common.ts';
 import { bindChecklistButtons, getChecklist, initChecklistDialog, loadRedirects } from '../ui/checklist-ui.ts';
 import { initCommon } from '../ui/common.ts';
@@ -23,6 +24,7 @@ import { addControls, initJump } from './controls.ts';
 import { renderFilterPanel } from './filters-ui.ts';
 import { initKeyPanel } from './key-ui.ts';
 import { L_CLUSTERS, L_POINTS, SRC, installOverlays, stations } from './layers.ts';
+import { initReach, reach, type ReachControl } from './reach.ts';
 import { Panel } from './panel.ts';
 import { initSearch } from './search-ui.ts';
 import { loadBaseStyle } from './style.ts';
@@ -80,15 +82,37 @@ async function main(): Promise<void> {
   };
 
   /* ---------- Key (always one click away) ---------- */
+  let reachCtl: ReachControl | null = null;
   const keyPanel = initKeyPanel({
     button: $<HTMLButtonElement>('open-key'),
     panel: $('key-panel'),
     body: $('key-panel-body'),
     closeBtn: $<HTMLButtonElement>('close-key'),
     wide: () => !PHONE.matches,
+    onToggle: (open) => {
+      if (open && reachCtl?.isOpen) reachCtl.close();
+    },
   });
 
   initJump($('jump'), () => map);
+
+  /* ---------- Light ranges (the light at night's rings) ---------- */
+  let shownFeatures: StationFeature[] = [];
+  reachCtl = initReach({
+    host: $('reach'),
+    country: () => state.filters.country ?? countryOf(state.filters.region) ?? 'US',
+    eye: () => state.reach,
+    counts: () => ({ rings: reach.count, lights: shownFeatures.filter((f) => f.properties.k !== 'life_saving_station').length }),
+    onChange: (eye) => {
+      state.reach = eye;
+      reach.set(shownFeatures, eye);
+      reachCtl?.sync();
+      writeUrl();
+    },
+    onOpen: () => {
+      if (keyPanel.isOpen) keyPanel.hide();
+    },
+  });
 
   /* ---------- Panel ---------- */
   const panel = new Panel({
@@ -137,6 +161,9 @@ async function main(): Promise<void> {
     shownIds = new Set(shown.map((f) => f.properties.i));
     collection = { type: 'FeatureCollection', features: shown };
     stations.setData(collection);
+    shownFeatures = shown;
+    reach.set(shown, state.reach);
+    reachCtl?.sync();
     const active = activeFilterCount(state.filters);
     const t = countText(shown.length, features.length, active > 0);
     countEl.innerHTML = html`<span class="count-main">${t.main}</span>${t.sub ? html`<span class="count-sub">: ${t.sub}</span>` : ''}`.value;

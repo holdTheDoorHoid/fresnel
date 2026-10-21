@@ -7,6 +7,7 @@
  * Switches: &climb=1 (climbable), &stay=1 (somewhere to stay), &reg=1 (on a heritage register),
  * &story=1 (has a written history), &staffed=1 (keepers live there), &noboat=1 (hide boat-only
  * stations). Access levels: &access=public,restricted. Checklist: &mine=visited,want.
+ * Light ranges layer (the light at night): &reach=3, the eye height in metres (1, 3, 6, 15, 30).
  * Place: one state, territory or province (&region=NS; the codes are unique across countries;
  * &state= is read too), or one whole country (&country=CA).
  *
@@ -29,11 +30,16 @@ export interface AppState {
   filters: Filters;
   view: View | null;
   selected: string | null;
+  /** The light ranges layer: the eye height in metres it is worked out for, or null when off. */
+  reach: number | null;
 }
 
 export function defaultState(): AppState {
-  return { filters: defaultFilters(), view: null, selected: null };
+  return { filters: defaultFilters(), view: null, selected: null, reach: null };
 }
+
+/** Eye heights the light ranges layer offers (lib/sighting.ts EYE_HEIGHTS). */
+const REACH_EYES = [1, 3, 6, 15, 30];
 
 /** "none" encodes a deliberately empty selection (every box unticked). */
 const NONE = 'none';
@@ -98,6 +104,8 @@ export function parseState(search: string): AppState {
   const mine = (q.get('mine') ?? '').split(',').filter((m): m is Mark => (MARKS as readonly string[]).includes(m));
   f.mine = mine.length ? new Set(mine) : null;
   state.view = parseView(q.get('at'));
+  const reach = Number(q.get('reach'));
+  state.reach = REACH_EYES.includes(reach) ? reach : null;
   const s = q.get('s');
   state.selected = isStationId(s) ? s : null;
   return state;
@@ -121,6 +129,7 @@ export function serializeState(state: AppState): string {
   if (f.region) q.set('region', f.region);
   else if (f.country) q.set('country', f.country);
   if (f.mine && f.mine.size) q.set('mine', MARKS.filter((m) => f.mine!.has(m)).join(','));
+  if (state.reach !== null) q.set('reach', String(state.reach));
   const s = q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/');
   return s ? `?${s}` : '';
 }

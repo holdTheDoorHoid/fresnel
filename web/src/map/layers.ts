@@ -8,6 +8,7 @@
 import type { ExpressionSpecification, GeoJSONSource, Map as MlMap } from 'maplibre-gl';
 import { GLYPHS, GLYPH_ORDER, SILHOUETTES, drawMarker, iconName } from '../lib/icons.ts';
 import type { StationCollection } from '../lib/types.ts';
+import { reach } from './reach.ts';
 import { BOLD_FONT, LABEL_FONT, type Theme } from './style.ts';
 
 export interface LayerContext {
@@ -178,8 +179,8 @@ export class StationsOverlay implements Overlay {
 
 export const stations = new StationsOverlay();
 
-/** Bottom to top. */
-export const OVERLAYS: readonly Overlay[] = [stations];
+/** Bottom to top: the range rings of the light at night (map/reach.ts) under the stations. */
+export const OVERLAYS: readonly Overlay[] = [reach, stations];
 
 export function installOverlays(map: MlMap, ctx: LayerContext): void {
   for (const o of OVERLAYS) o.install(map, ctx);
