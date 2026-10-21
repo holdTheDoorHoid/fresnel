@@ -160,7 +160,14 @@ GONE_RE = re.compile(r"^(?:demolished|destroyed|removed|replaced|burned|burnt|co
 INACTIVE_RE = re.compile(r"^(?:inactive|apparently inactive|officially inactive|deactivated|recently deactivated|"
                          r"light discontinued|discontinued|inaactive)\b", re.I)
 ACTIVE_RE = re.compile(r"^(?:active|activ|reactivated|currently active)\b", re.I)
+RANGE_WORDS_RE = re.compile(r"(?:(?:upper|lower|inner|outer|main|secondary)\s+)?(?:range(?:\s+(?:front|rear|lights?))?|front(?:\s+range)?|rear(?:\s+range)?)", re.I)
 WORD_YEAR = r"(?:the\s+)?(?:early\s+|mid\s+|late\s+|around\s+|about\s+|ca\.?\s+)?(\d{4})(s?)"
+
+
+def good_alt_name(x: str) -> bool:
+    """An other name worth keeping: not punctuation, a generic word, a range half or "ex-..."."""
+    return bool(re.search(r"[A-Za-zÀ-ÿ]{3}", x)) and not RANGE_WORDS_RE.fullmatch(x) \
+        and not re.fullmatch(r"(?:lantern|lights?|tower|old|new|replica|relocated.*|ex-.*)", x, re.I)
 
 
 def clean_name(dt_text: str) -> tuple[str, dict]:
@@ -193,12 +200,16 @@ def clean_name(dt_text: str) -> tuple[str, dict]:
             marks["notes"].append("replica")
         elif re.fullmatch(r"[A-Za-z]{0,3}\d+\s*\??", inner):
             pass
+        elif RANGE_WORDS_RE.fullmatch(inner):
+            # "Cole Shoal (Range Front)": the words name which half of a range this is
+            s = (s[:m.start()] + " " + inner + " " + s[m.end():]).strip()
+            continue
         else:
-            marks["alt_names"] += [x.strip() for x in re.split(r",\s*", inner) if x.strip()]
+            marks["alt_names"] += [x.strip() for x in re.split(r",\s*", inner) if good_alt_name(x.strip())]
         s = (s[:m.start()] + " " + s[m.end():]).strip()
     if "(" in s:  # an unclosed parenthesis in the page: the rest is another name
         s, _, rest = s.partition("(")
-        marks["alt_names"] += [x.strip() for x in re.split(r",\s*", rest.strip(" )")) if x.strip()]
+        marks["alt_names"] += [x.strip() for x in re.split(r",\s*", rest.strip(" )")) if good_alt_name(x.strip())]
     base = re.sub(r"\s+", " ", s).strip(" .;,")
     return base, marks
 
@@ -236,6 +247,14 @@ def status_of(dd: str, gone_mark: bool, head: str) -> tuple[str | None, str | No
     if INACTIVE_RE.match(first):
         return "inactive", first[:60]
     if ACTIVE_RE.match(first):
+        # "Active (inactive officially since 1958)", "Reactivated ... but now unofficial": a light is
+        # shown, but the aid is not official: no claim either way.
+        paren = re.match(r"\w+\s*\(([^)]*)\)", first)
+        if paren and re.search(r"\b(?:inactive|unofficial|not official|officially|decorative)\b", paren.group(1), re.I) \
+                and not first.lower().startswith("reactivated (inactive"):
+            return None, first[:60]
+        if re.match(r"reactivated.{0,60}\bunofficial\b", first, re.I):
+            return None, first[:60]
         return "active", first[:30]
     return None, None
 
