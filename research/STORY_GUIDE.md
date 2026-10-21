@@ -195,7 +195,77 @@ home) or reachable only by boat, say so plainly in *Today*.
 
 ## Where to look
 
-*(To be filled in from `docs/sources/survey_history.md`, `survey_us.md`, `survey_canada.md` and
-`survey_territories_lightships_lss.md`: the source order for a typical station, how to search the
-local annual-report corpus, the keeper-record sources, newspapers, NRHP nominations, and the
-per-station budget.)*
+From the source surveys (`docs/sources/survey_*.md`; method in `survey_history.md` §13). Work in this
+order, and stop when you have an honest story; a thin station needs only the first two steps.
+
+1. **Identity and roster.** `python3 research/roster.py <id>` prints the keepers the USLHS Digital
+   Archive lists for the station (name, role, start and end years, from NARA's keeper registers),
+   from the local cache. Compare with the station's LighthouseFriends page (keeper list in its
+   "Keepers" line; facts only), New England Lighthouses (Jeremy D'Entremont) or Terry Pepper's
+   Great Lakes pages where they cover it. Record every disagreement in `resolved_conflicts` or
+   `notes_for_editor`. Cite the archive page, not the cache.
+2. **Chronology skeleton.** The NRHP nomination when the station has an NRHP number
+   (`https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/<ref>.pdf`, through `fetch_text.py --grep`;
+   a 22 KB file is the "not digitised" placeholder), HABS/HAER data pages on loc.gov
+   (`https://www.loc.gov/item/<id>/`), Parks Canada's statement of significance for a Canadian
+   heritage lighthouse, and the station's Wikipedia article for leads only (article pages only,
+   never `/w/` or `/api/`; cite what it cites where you can).
+3. **Official reports, from the local corpus.** `python3 research/corpus.py grep "<station name>"
+   [--alias "<OCR or old spelling>"] [--state XX] [--series lhb,commissioner,bulletin,lss,marine_ca]
+   [--years 1880-1900]` searches the downloaded text of the Lighthouse Board annual reports, the
+   Commissioner of Lighthouses reports, the Lighthouse Service Bulletin, the Life-Saving Service
+   annual reports and Canada's Department of Marine annual reports, and prints series, year and a
+   snippet. The OCR is poor: station names come out misspelled, so give aliases and a state.
+   **Page numbers:** the plain text has none; `corpus.py page <hit>` asks the Internet Archive for
+   the page (the Bulletin PDFs carry their own page numbers). A footnote cites the report, the year
+   and the page, with the Internet Archive URL. Copy evidence quotes from the corpus text exactly,
+   OCR errors and all.
+4. **Newspapers.** `python3 research/newspapers.py "<station name>" ["<keeper name>"]
+   [--years 1880-1910] [--state XX]` searches Chronicling America (Library of Congress) and prints
+   hits with their page URLs; `--page <url> --grep "<words>"` reads a hit's OCR text. It keeps to the
+   Library's rate limit for every agent at once, so expect it to be slow. Budget: up to about ten
+   searches for a well-documented station, fewer for a thin one. Search the station and keeper names
+   first, then date windows around events step 3 found. Most other state newspaper archives forbid
+   crawlers (CDNC, NYS Historic Newspapers, Digital Michigan Newspapers): do not use them.
+5. **Keeper detail.** The Official Register of the United States (biennial; keepers with birthplace
+   and salary) is searchable by surname only, page by page; use it to confirm a keeper you already
+   know, not to find new ones.
+6. **Atmosphere sources.** Transcribed station logs where they exist (Port Sanilac and South Haven,
+   Michigan; others noted in `survey_history.md` §10), the reports' own descriptions of storms, ice,
+   fog-signal hours and damage, newspaper accounts of wrecks and rescues, the Life-Saving Service's
+   wreck narratives. A named hurricane may be checked against NOAA's HURDAT2 track only to confirm a
+   date a source already gives.
+7. **General period context** (marked as general, DESIGN §1): Arnold Burges Johnson, *The Modern
+   Light-House Service* (1889/1890); the *Instructions to Light-Keepers* (1871, 1881, 1902); Sumner
+   I. Kimball, *Organization and Methods of the United States Life-Saving Service*; W. D. O'Connor's
+   1884 sketch of the Life-Saving Service; D. P. Heap, *Ancient and Modern Light-houses* (1889); for
+   Canada, the Department of Marine and Fisheries' *Review of Improvements in Lighthouse and Coast
+   Service of Canada between 1896 and 1904* (1904). Putnam (1917) and Weiss (1926) only once a scan is
+   found. Internet Archive identifiers are in `survey_history.md` §7. Never cite a novel or a book for
+   young readers (James Otis, *The Life Savers*) as a record.
+
+**Do not use** (robots.txt, blocks or the owner's rulings, DESIGN §2): query.wikidata.org,
+Overpass, Wikipedia's `/w/` and `/api/`, HathiTrust, Google Books, the NARA catalog, Canadiana, BAnQ,
+Nauticapedia, the USCG Historian's site and its archived copies (on hold for the owner), CDNC, NYS
+Historic Newspapers, Digital Michigan Newspapers, the NOAA historical chart collection.
+
+**Budget per station:** at most 3 WebSearch calls (fallback `research/websearch.py`), at most 15 page
+reads (fetch_text and newspaper pages together), corpus greps as needed but each capped by its
+`--max`. A thin station should take a fraction of that.
+
+**Lightship stations and vessels:** the USLHS Digital Archive's lightship-station records and vessel
+assignments, the USCG Lightship Station Index (a retired PDF read from its Internet Archive copy: allowed,
+it is not the Historian's live site), the Lighthouse Board and Commissioner reports (stations, collisions,
+drags), and newspapers. A lightship station's position comes from the Light List or the bearing text
+("8 miles SE of …"); give the source of the position in `corrections` when the record has none.
+
+**Life-saving stations:** the Life-Saving Service annual reports (station lists with positions; wreck
+narratives that name the keeper and surfmen), the 1909 report's station table, NRHP nominations, and
+newspapers.
+
+**Canada:** the Department of Marine annual reports 1901-1925 in the corpus (keepers and salaries;
+the OCR splits table columns, so read around a hit), Parks Canada and the Directory of Federal Heritage
+Designations, the Canadian Coast Guard List of Lights for today's light, provincial archives' open pages,
+the Nova Scotia Lighthouse Preservation Society, and LighthouseFriends' Canadian pages (facts only). Read
+French sources for Quebec; write in English; quote French exactly, with your own English rendering after
+it, marked as a translation.
