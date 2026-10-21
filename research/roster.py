@@ -591,7 +591,7 @@ def cmd_match_stations(a):
             tally["no USLHS place"] = tally.get("no USLHS place", 0) + 1
     path = os.path.join(uslhs_dir(), "station_matches.json")
     polite.write_json(path, {"matches": out, "unsure": unsure}, indent=0)
-    print("US station records: %d" % sum(tally.values()))
+    print("US station records: %d" % (tally.get("matched", 0) + tally.get("unsure", 0) + tally.get("no USLHS place", 0)))
     for k, v in tally.items():
         print("  %-24s %5d" % (k, v))
     print("written: %s" % path)

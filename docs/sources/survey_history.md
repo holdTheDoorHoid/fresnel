@@ -868,3 +868,9 @@ redirects to a `dn` host), with no errors.
   on the person page (one request each: `roster.py --detail N`; `crawl-people` for all, about a day at 2 s). Coordinates are degrees and minutes with no hemisphere, and some are
   wrong: Split Rock is 23 km from the real light (47°20'N 91°36'W against 47.200, -91.367), Boston Light reads 40° for 42°, Buck Island (VI) has 64° 88.70', and "Baker's Island" (MA) carries Maine's Baker Island position.
   The tool flags minutes of 60 or more and matches by name first.
+- **USLHS cache totals (crawl 11:40-14:13, 2 s apart, 0 failures).** 2,299 places: Light Station 1,201, Minor Aid to Navigation 686, Lightship Station 139, Depot 88,
+  Lifesaving Station 67, Private (Faux) Lighthouse 48, Museum 45, Replica 13, Non-Government ATON 4, Fog Signal Station 3, House of refuge 1, NARA 1, Treasury Building 1, two with no type.
+  **1,400 places have a roster; 43,999 roster lines.** 1,190 places carry coordinates (44 of them impossible, e.g. 88.7 minutes) and the rest none. Matching the 1,127 US station
+  records in `data/stations` to USLHS places (`roster.py match-stations`): 809 matched (728 of them with a roster), 218 unsure (two towers or namesakes within a kilometre,
+  or a name USLHS spells differently), 100 with no USLHS place (airport beacons, replicas, recent lights, many life-boat stations).
+
