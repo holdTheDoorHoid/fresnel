@@ -35,13 +35,13 @@ describe('reading a light characteristic', () => {
   });
 
   it('returns the structure the light-at-night view will draw', () => {
-    expect(parseCharacteristic('Fl(2) R 10s')).toEqual({ raw: 'Fl(2) R 10s', type: 'Fl', group: [2], morse: null, colours: ['R'], alternating: false, period: 10 });
+    expect(parseCharacteristic('Fl(2) R 10s')).toEqual({ raw: 'Fl(2) R 10s', type: 'Fl', group: [2], morse: null, colours: ['R'], alternating: false, period: 10, tail: null, recorded: null, sectors: [], notes: [] });
     expect(parseCharacteristic('Mo(U) W 15s')).toMatchObject({ type: 'Mo', morse: 'U', period: 15 });
     expect(morseWords('U')).toBe('short, short, long');
   });
 
   it('leaves forms it does not cover unread, so the page shows them as given', () => {
-    for (const raw of ['Q(6)+LFl W 15s', 'flashing white', 'Fl W 400s', '', '   ', null, undefined]) expect(parseCharacteristic(raw as string), String(raw)).toBeNull();
+    for (const raw of ['Al W 10s', 'R', 'inactive', 'decorative light', 'Fl W 400s', 'Q(6)+Fl W 15s', '', '   ', null, undefined]) expect(parseCharacteristic(raw as string), String(raw)).toBeNull();
   });
 });
 
@@ -51,8 +51,8 @@ describe('the characteristic on a page', () => {
   });
 
   it('falls back to the raw string, and says so', () => {
-    const out = characteristicHtml('Q(6)+LFl W 15s')!.value;
-    expect(out).toContain('<code class="char">Q(6)+LFl W 15s</code>');
+    const out = characteristicHtml('Al W 10s')!.value;
+    expect(out).toContain('<code class="char">Al W 10s</code>');
     expect(out).toContain('As the source writes it.');
   });
 
