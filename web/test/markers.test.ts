@@ -5,6 +5,7 @@ import { GLYPHS, GLYPH_ORDER, MARKER_PALETTE, SILHOUETTES, glyphFor, iconName, m
 import { KEY_STATUS, mapKey } from '../src/render/site.ts';
 import { KIND_ORDER, STATUS_ORDER } from '../src/lib/vocab.ts';
 import { ICON_EXPR, SORT_EXPR } from '../src/map/layers.ts';
+import { MAP_LAND, MAP_SEA } from '../src/map/style.ts';
 
 const baseCss = readFileSync(resolve(import.meta.dirname, '../src/styles/base.css'), 'utf8');
 
@@ -50,6 +51,13 @@ describe('marker palette', () => {
     expect(used.size).toBeGreaterThan(1);
     for (const u of used) expect(tokens().has(u), u).toBe(true);
     expect(svg).toContain('aria-hidden="true"');
+  });
+});
+
+describe('map backgrounds', () => {
+  it('match the --map-land and --map-sea tokens, so the page behind the map matches it', () => {
+    expect(baseCss).toContain(`--map-land: light-dark(${MAP_LAND.light}, ${MAP_LAND.dark});`);
+    expect(baseCss).toContain(`--map-sea: light-dark(${MAP_SEA.light}, ${MAP_SEA.dark});`);
   });
 });
 

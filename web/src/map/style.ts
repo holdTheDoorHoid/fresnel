@@ -18,8 +18,8 @@ export const LABEL_FONT = ['Noto Sans Regular'];
 export const BOLD_FONT = ['Noto Sans Bold'];
 
 /** Keep the backgrounds in step with --map-land / --map-sea in src/styles/base.css. */
-export const MAP_LAND: Record<Theme, string> = { light: '#f3f5f2', dark: '#16212c' };
-export const MAP_SEA: Record<Theme, string> = { light: '#c6dbe8', dark: '#0a1a29' };
+export const MAP_LAND: Record<Theme, string> = { light: '#f3f5f2', dark: '#1c2834' };
+export const MAP_SEA: Record<Theme, string> = { light: '#c6dbe8', dark: '#071522' };
 
 const LIGHT_PAINT: Record<string, Record<string, string>> = {
   background: { 'background-color': MAP_LAND.light },
@@ -33,8 +33,8 @@ const LIGHT_PAINT: Record<string, Record<string, string>> = {
 
 const DARK_PAINT: Record<string, Record<string, string>> = {
   background: { 'background-color': MAP_LAND.dark },
-  landcover_wood: { 'fill-color': '#182530' },
-  landuse_park: { 'fill-color': '#182631' },
+  landcover_wood: { 'fill-color': '#1a2733' },
+  landuse_park: { 'fill-color': '#1b2934' },
   water: { 'fill-color': MAP_SEA.dark },
 };
 
