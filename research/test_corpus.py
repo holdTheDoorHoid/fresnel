@@ -95,7 +95,13 @@ class Years(unittest.TestCase):
         v = {"years": [1915, 1916], "report_starts": [[0, 1915], [700, 1916]]}
         self.assertEqual(corpus.attribute_year(v, 5), 1915)
         self.assertEqual(corpus.attribute_year(v, 900), 1916)
-        self.assertIsNone(corpus.attribute_year({"years": [1893, 1894], "report_starts": [[500, 1894]]}, 900))
+        # only the later report's title page was found: text before it can only belong to the earlier year
+        part = {"years": [1893, 1894], "report_starts": [[500, 1894]]}
+        self.assertEqual(corpus.attribute_year(part, 100), 1893)
+        self.assertEqual(corpus.attribute_year(part, 900), 1894)
+        # three reports, only the last title found: the first two cannot be told apart
+        self.assertIsNone(corpus.attribute_year({"years": [1893, 1894, 1895], "report_starts": [[500, 1895]]}, 100))
+        self.assertIsNone(corpus.attribute_year({"years": [1893, 1894], "report_starts": []}, 100))
 
 
 class Normalise(unittest.TestCase):

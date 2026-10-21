@@ -144,16 +144,17 @@ def report_starts(text):
 
 
 def attribute_year(v, pos):
-    """The fiscal year of the report that holds text offset `pos` in volume v; None when the volume's report
-    boundaries are not fully known (then the caller shows the volume's whole range)."""
-    starts = v.get("report_starts") or []
-    if not starts or len(v["years"]) < 2 or {y for _, y in starts} < set(v["years"]):
-        return None
-    cur = None
-    for off, y in starts:
-        if off <= pos:
-            cur = y
-    return cur if cur is not None else min(v["years"])
+    """The fiscal year of the report that holds text offset `pos` in volume v, from the title pages found in it:
+    the years the volume covers, minus those that start after `pos`, minus those before the last title page
+    before `pos`. None when that leaves more than one year (then the caller shows the volume's whole range)."""
+    years = sorted(v["years"])
+    if len(years) < 2:
+        return years[0] if years else None
+    starts = sorted(v.get("report_starts") or [])
+    cur = max((y for off, y in starts if off <= pos), default=None)
+    nxt = min((y for off, y in starts if off > pos), default=None)
+    cand = [y for y in years if (cur is None or y >= cur) and (nxt is None or y < nxt)]
+    return cand[0] if len(cand) == 1 else None
 
 
 def bulletin_year_counts(text):
