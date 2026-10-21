@@ -1,0 +1,197 @@
+{
+  "id": "us-ak-sentinel-island",
+  "name": "Sentinel Island Light",
+  "other_names": [
+    "Sentinel Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "AK",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 58.546257,
+    "lon": -134.923276,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1902,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1935,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl 10s",
+    "focal_height_m": 26.2,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "02001407",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001407"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "6-23850",
+    "arlhs": "ALK011",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1966"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1902,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1935,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1966,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2002,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sentinel_Island_Light_06.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sentinel_Island_Light_06.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sentinel_Island_Light_06.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q2856088",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sentinel_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_l%27%C3%AEle_Sentinel",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Sentinel_Island_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights ALK011",
+      "url": "https://wlol.arlhs.com/lighthouse/ALK011.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6525189150",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q2856088",
+      "part": "wikidata:Q2856088",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/6525189150",
+      "part": "wikidata:Q2856088",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl 10s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 10s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

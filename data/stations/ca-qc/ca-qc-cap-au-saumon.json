@@ -1,0 +1,221 @@
+{
+  "id": "ca-qc-cap-au-saumon",
+  "name": "Cap-au-Saumon Lighthouse",
+  "other_names": [
+    "phare de Cap-au-Saumon",
+    "Cap au Saumon Lightstation",
+    "Phare de Cap au Saumon",
+    "Cap au Saumon"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": "Charlevoix-Est",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.770511,
+    "lon": -69.905861,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1894,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl(3) W 15s",
+    "focal_height_m": 25.0,
+    "range_nm": 20.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "20713",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=20713"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "7593",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=7593"
+    },
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "14992",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14992"
+    },
+    {
+      "register": "recognized heritage site",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN078",
+    "ccg_list_number": "A1836",
+    "nga": "110-3660"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1894,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1996,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "heritage_designated",
+      "note": "recognized heritage site",
+      "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "heritage_designated",
+      "note": "heritage lighthouse",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_Saumon_01.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_Saumon_01.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cap_Saumon_01.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q3378195",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cap-au-Saumon_Lighthouse",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Cap-au-Saumon",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Phare_du_Cap-au-Saumon",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN078",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN078.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1142912025",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_fra.aspx?id=14992",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q3378195",
+      "part": "wikidata:Q3378195",
+      "fields": [
+        "agency",
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "ownership",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1142912025",
+      "part": "wikidata:Q3378195",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 70.0
+        },
+        {
+          "source": "osm",
+          "value": 25.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,0 +1,213 @@
+{
+  "id": "us-ny-tarrytown",
+  "name": "Tarrytown Light",
+  "other_names": [
+    "Tarrytown Lighthouse",
+    "Sleepy Hollow Light",
+    "Kingsland Point Light"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": "Westchester",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.084052,
+    "lon": -73.874242,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "steel",
+      "built": 1883,
+      "height_m": 18.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1883,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W",
+    "focal_height_m": 17.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "79001649",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001649"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "USA836",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1883,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1961,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1979,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TARRYTOWN_LIGHTHOUSE_1_150_500.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/TARRYTOWN_LIGHTHOUSE_1_150_500.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TARRYTOWN_LIGHTHOUSE_1_150_500.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7686723",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tarrytown_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Tarrytown",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Tarrytown_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA836",
+      "url": "https://wlol.arlhs.com/lighthouse/USA836.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/696517049",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7686723",
+      "part": "wikidata:Q7686723",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/696517049",
+      "part": "wikidata:Q7686723",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 3s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

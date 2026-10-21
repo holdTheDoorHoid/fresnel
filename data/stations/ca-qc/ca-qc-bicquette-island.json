@@ -1,0 +1,180 @@
+{
+  "id": "ca-qc-bicquette-island",
+  "name": "Bicquette Island Lighthouse",
+  "other_names": [
+    "phare de l'île Bicquette",
+    "Ile Bicquette"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": "Rimouski-Neigette",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 48.415475,
+    "lon": -68.892744,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1844,
+      "height_m": 22.6,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 3s",
+    "focal_height_m": 34.0,
+    "range_nm": 12.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "10474",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=10474"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3093",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3093"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN237",
+    "ccg_list_number": "A1748",
+    "nga": "110-6768"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1844,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1988,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Ele_Bicquette.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Ele_Bicquette.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%C3%8Ele_Bicquette.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q30403611",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Bicquette_Island_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN237",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN237.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1088598286",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q30403611",
+      "part": "wikidata:Q30403611",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1088598286",
+      "part": "wikidata:Q30403611",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 3s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 6s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

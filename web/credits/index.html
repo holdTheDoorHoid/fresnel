@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f8fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1622" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="{{base}}favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('fresnel.theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <title>Sources and credits · Fresnel</title>
+  <meta name="description" content="Every source of Fresnel's station data, with its licence, credit line and how many stations it informs, and the credits for the map, the software and the typefaces.">
+</head>
+<body class="page-credits">
+<!--fr:header-->
+<!--fr:banner-->
+<main id="main" class="plain-page credits">
+  <p class="eyebrow">Sources and credits</p>
+  <h1>Where Fresnel’s facts come from</h1>
+  <p class="lede">Fresnel takes <em>facts</em> (positions, dates, heights, light patterns, keeper names and years, register numbers) from the sources below, credits them on every station page that uses them, and writes its own words. Their text is never copied.</p>
+
+  <section id="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Station data</h2>
+    <div class="table-wrap">
+      <table class="sources-table">
+        <caption class="visually-hidden">Station data sources, with licence, credit line and counts</caption>
+        <thead><tr><th scope="col">Source</th><th scope="col">Licence or terms</th><th scope="col">Credit line</th><th scope="col" class="num">Records</th><th scope="col" class="num">Stations</th></tr></thead>
+        <tbody data-fr-sources><!--fr:sources--></tbody>
+      </table>
+    </div>
+    <p class="fine"><strong>Records</strong>: entries in that source’s extract. <strong>Stations</strong>: stations on the map that cite it. Each station page lists exactly what each source gave it.</p>
+    <p class="fine" data-fr-built><!--fr:built--></p>
+  </section>
+
+  <section id="history-sources" aria-labelledby="history-sources-h">
+    <h2 id="history-sources-h">Histories and keepers</h2>
+    <p>The histories and keeper rosters cite their own sources, footnote by footnote and line by line, on each station’s page: annual reports of the US Lighthouse Board (1852–1910), the Commissioner of Lighthouses (1911–1939) and the US Life-Saving Service (1876–1914); the Canadian Department of Marine and Fisheries reports in the Sessional Papers; keeper registers; National Register and Canadian heritage nominations; and newspapers of the time.</p>
+  </section>
+
+  <section id="site-credits" aria-labelledby="site-credits-h">
+    <h2 id="site-credits-h">Map and site</h2>
+    <ul class="credits-list-wide">
+      <li><strong>Base map:</strong> <a href="https://openfreemap.org">OpenFreeMap</a>, using <a href="https://openmaptiles.org/">OpenMapTiles</a> and data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL).</li>
+      <li><strong>Shaded relief at country scale:</strong> <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain), served by OpenFreeMap.</li>
+      <li><strong>Map software:</strong> <a href="https://maplibre.org/">MapLibre GL JS</a> (BSD-3-Clause).</li>
+      <li><strong>Typefaces:</strong> <a href="https://www.brailleinstitute.org/freefont/">Atkinson Hyperlegible Next</a> by the Braille Institute, and <a href="https://github.com/productiontype/Newsreader">Newsreader</a> by Production Type (both SIL Open Font License), served from this site.</li>
+      <li><strong>Built with</strong> <a href="https://vite.dev/">Vite</a> and <a href="https://www.typescriptlang.org/">TypeScript</a> (MIT and Apache-2.0). The site’s code began as a copy of its sister site <a href="{{sister}}" rel="noopener">Firefinder</a>’s.</li>
+      <li><strong>Marker and logo drawings:</strong> Fresnel’s own (GPL-3.0, with the code).</li>
+    </ul>
+  </section>
+</main>
+<!--fr:footer-->
+<dialog id="checklist-dialog" class="dialog" aria-labelledby="checklist-dialog-h"></dialog>
+<script type="module" src="/src/pages/credits.ts"></script>
+</body>
+</html>

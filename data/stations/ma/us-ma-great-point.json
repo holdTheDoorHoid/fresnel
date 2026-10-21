@@ -1,0 +1,195 @@
+{
+  "id": "us-ma-great-point",
+  "name": "Great Point Light",
+  "other_names": [
+    "Great Point Lighthouse"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.390092,
+    "lon": -70.048264,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1769,
+      "height_m": 21.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1984,
+    "lens": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 22.0,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "82005272",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82005272"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-0545",
+    "arlhs": "USA348",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1769,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1982,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1984,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1986,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Point_Lighthouse_-_panoramio.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Point_Lighthouse_-_panoramio.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_Point_Lighthouse_-_panoramio.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5599792",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Point_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Great_Point",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Great_Point_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA348",
+      "url": "https://wlol.arlhs.com/lighthouse/USA348.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/213821136",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5599792",
+      "part": "wikidata:Q5599792",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/213821136",
+      "part": "wikidata:Q5599792",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1986
+        },
+        {
+          "source": "wikidata",
+          "value": 1984
+        }
+      ],
+      "note": "A source gives the light's service entry (1986) after its retirement (1984); it may have been relit. Neither is shown as the first lighting."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

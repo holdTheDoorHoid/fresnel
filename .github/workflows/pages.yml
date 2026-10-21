@@ -1,0 +1,87 @@
+name: Build and publish the website
+
+# Tests the data pipeline, validates the station database, builds the site data from
+# data/stations (or the sample fixtures while that folder is empty), type-checks and tests the
+# website, builds it with one prerendered page per station, and publishes it to GitHub Pages.
+# Runs on every push to main, and on demand from the Actions tab.
+#
+# Nothing here fetches from the sources: the extracts in data/sources/ and the stations in
+# data/stations/ are committed, and are refreshed by running the fetchers and pipeline/merge.py
+# by hand (DESIGN.md section 2).
+#
+# One-time setup: Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Test the data pipeline
+        run: python3 -m unittest discover -s pipeline
+
+      # Schema and vocabulary checks over data/stations, data/research and data/stories (ids and
+      # folders, positions inside the country, vocabulary values, keepers rosters, footnotes).
+      # Fails the build on errors; an empty folder passes.
+      - name: Validate the station database
+        run: python3 pipeline/validate.py --quiet
+
+      # --fallback-fixtures: while data/stations/ is empty, build from the sample records in
+      # web/fixtures/ (the site then shows a "Sample data" notice). Once data/stations/ has
+      # records the flag does nothing.
+      - name: Build site data
+        run: python3 pipeline/build_site_data.py --fallback-fixtures --strict
+
+      - name: Install website dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Type-check and test the website
+        working-directory: web
+        run: |
+          npm run check
+          npm test
+
+      - name: Build the website and prerender station pages
+        working-directory: web
+        run: npm run build
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

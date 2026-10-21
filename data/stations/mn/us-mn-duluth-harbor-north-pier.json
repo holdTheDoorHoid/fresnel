@@ -1,0 +1,189 @@
+{
+  "id": "us-mn-duluth-harbor-north-pier",
+  "name": "Duluth Harbor North Pier Light",
+  "other_names": [
+    "Duluth Harbor North Breakwater Light",
+    "Duluth North Pierhead Light",
+    "Duluth North Pier Light",
+    "Duluth North Pier Lighthouse"
+  ],
+  "country": "US",
+  "region": "MN",
+  "county": "St. Louis",
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 46.780936,
+    "lon": -92.088258,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 11.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1910,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 13.1,
+    "range_nm": 10.4,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "16000340",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000340"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15855",
+    "arlhs": "USA238",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1910,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2016,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duluth_North_Pier_Light_HAER.png",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duluth_North_Pier_Light_HAER.png?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duluth_North_Pier_Light_HAER.png",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q14692599",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Duluth_Harbor_North_Pier_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_la_jet%C3%A9e_nord_de_Duluth",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Duluth_North_Pier_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA238",
+      "url": "https://wlol.arlhs.com/lighthouse/USA238.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1075242725",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q14692599",
+      "part": "wikidata:Q14692599",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1075242725",
+      "part": "wikidata:Q14692599",
+      "fields": [
+        "agency",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Iso R 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Iso R 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

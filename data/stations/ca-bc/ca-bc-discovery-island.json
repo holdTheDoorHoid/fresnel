@@ -1,0 +1,181 @@
+{
+  "id": "ca-bc-discovery-island",
+  "name": "Discovery Island Light",
+  "other_names": [
+    "phare de Discovery Island",
+    "Discovery Island Lighthouse"
+  ],
+  "country": "CA",
+  "region": "BC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 48.424587,
+    "lon": -123.225663,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1886,
+      "height_m": 11.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1970,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W",
+    "focal_height_m": 28.0,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN160",
+    "ccg_list_number": "P216",
+    "nga": "111-13684"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1996"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1886,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1970,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1996,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Discovery_Island_Marine_Park_2709638692_a7059ec9af_o.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Discovery_Island_Marine_Park_2709638692_a7059ec9af_o.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Discovery_Island_Marine_Park_2709638692_a7059ec9af_o.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5281932",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Discovery_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Discovery_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN160",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN160.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/258991733",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5281932",
+      "part": "wikidata:Q5281932",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "ownership",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/258991733",
+      "part": "wikidata:Q5281932",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

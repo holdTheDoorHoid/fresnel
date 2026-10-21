@@ -1,0 +1,206 @@
+{
+  "id": "ca-pe-cape-egmont",
+  "name": "Cape Egmont Lighthouse",
+  "other_names": [
+    "phare du Cap-Egmont",
+    "Cape Egmont"
+  ],
+  "country": "CA",
+  "region": "PE",
+  "county": "Prince County",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 46.402091,
+    "lon": -64.134629,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1884,
+      "height_m": 13.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "LFl W 5s",
+    "focal_height_m": 20.0,
+    "range_nm": 12.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "11078",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=11078"
+    },
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "19206",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=19206"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "4327",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=4327"
+    },
+    {
+      "register": "PEI Register of Historic Places",
+      "number": "7621",
+      "url": null
+    },
+    {
+      "register": "designated heritage place",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN114",
+    "ccg_list_number": "A1024",
+    "nga": "110-8328"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1884,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "heritage_designated",
+      "note": "designated heritage place",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phare_du_Cap-Egmont_01.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phare_du_Cap-Egmont_01.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phare_du_Cap-Egmont_01.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q30575081",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_du_Cap-Egmont",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cape_Egmont_Lighthouse_%28Canada%29",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN114",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN114.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1808235183",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q30575081",
+      "part": "wikidata:Q30575081",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1808235183",
+      "part": "wikidata:Q30575081",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "LFl W 5s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

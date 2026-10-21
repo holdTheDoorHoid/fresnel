@@ -1,0 +1,227 @@
+{
+  "id": "us-wi-michigan-island",
+  "name": "Michigan Island Light",
+  "other_names": [
+    "Michigan Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "WI",
+  "county": "Ashland",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 46.871131,
+    "lon": -90.496886,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1857,
+      "height_m": 36.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1869,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 170.0,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "77000145",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000145"
+    },
+    {
+      "register": "National Register of Historic Places contributing property",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15275",
+    "arlhs": "USA494",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1857,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1977,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Newmich2.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Newmich2.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Newmich2.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6837577",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Michigan_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Michigan_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Michigan_Island_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA494",
+      "url": "https://wlol.arlhs.com/lighthouse/USA494.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1699961661",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/475902605",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6837577",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1699961661",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/475902605",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "light",
+        "registers"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 52.0
+        },
+        {
+          "source": "osm",
+          "value": 170.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

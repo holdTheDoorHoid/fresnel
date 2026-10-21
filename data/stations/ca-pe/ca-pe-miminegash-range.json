@@ -1,0 +1,148 @@
+{
+  "id": "ca-pe-miminegash-range",
+  "name": "Miminegash Range Lights",
+  "other_names": [
+    "Miminegash"
+  ],
+  "country": "CA",
+  "region": "PE",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.879125,
+    "lon": -64.235892,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F R",
+    "focal_height_m": 5.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN318",
+    "ccg_list_number": "A1033",
+    "nga": "110-8384"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1972,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6862255",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Miminegash_Range_Lights",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN318",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN318.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1806628417",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6862255",
+      "part": "wikidata:Q6862255",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1806628417",
+      "part": "wikidata:Q6862255",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

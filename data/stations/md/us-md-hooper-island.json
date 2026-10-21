@@ -1,0 +1,194 @@
+{
+  "id": "us-md-hooper-island",
+  "name": "Hooper Island Light",
+  "other_names": [
+    "Hooper Island Lighthouse",
+    "Hooper Island Light Station",
+    "Hooper's Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "MD",
+  "county": "Dorchester",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 38.256254,
+    "lon": -76.249788,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1901,
+      "height_m": 10.5,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1902,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 19.2,
+    "range_nm": 9.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "02001426",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001426"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "2-7590",
+    "arlhs": "USA377",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "The Lighthouse Centers",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1901,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2002,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hooper.Island.Light.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hooper.Island.Light.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hooper.Island.Light.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5898379",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hooper_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Hooper_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Hooper_Island_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA377",
+      "url": "https://wlol.arlhs.com/lighthouse/USA377.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/5685312478",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5898379",
+      "part": "wikidata:Q5898379",
+      "fields": [
+        "agency",
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/5685312478",
+      "part": "wikidata:Q5898379",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W, 6s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

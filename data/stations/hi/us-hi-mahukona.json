@@ -1,0 +1,200 @@
+{
+  "id": "us-hi-mahukona",
+  "name": "Mahukona Lighthouse",
+  "other_names": [],
+  "country": "US",
+  "region": "HI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 20.180335,
+    "lon": -155.901501,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1915,
+      "height_m": 22.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1915,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 64.0,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "6-28325",
+    "arlhs": "HAW012",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "United States Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1899,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahukona_light_1904.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahukona_light_1904.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mahukona_light_1904.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q106394597",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Mahukona_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights HAW012",
+      "url": "https://wlol.arlhs.com/lighthouse/HAW012.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28376277",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13840977494",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q106394597",
+      "part": "wikidata:Q106394597",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "ownership",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q28376277",
+      "part": "wikidata:Q106394597",
+      "fields": [
+        "events",
+        "light",
+        "photos"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/13840977494",
+      "part": "wikidata:Q106394597",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 64.0
+        },
+        {
+          "source": "wikidata",
+          "value": 22.86
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

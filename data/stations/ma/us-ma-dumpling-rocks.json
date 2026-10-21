@@ -1,0 +1,225 @@
+{
+  "id": "us-ma-dumpling-rocks",
+  "name": "Dumpling Rocks Light",
+  "other_names": [
+    "Dumpling Rocks Light 7",
+    "Dumpling Rocks Lighthouse"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Barnstable",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.538044,
+    "lon": -70.921474,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1942,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1889,
+    "deactivated": 1942,
+    "lens": null,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 15.8,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "from": "wikidata"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "1-16040",
+    "arlhs": "USA247",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1889,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1942,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Replacing_Outdated_Lantern_%2825510247780%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Replacing_Outdated_Lantern_%2825510247780%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Replacing_Outdated_Lantern_%2825510247780%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dumpling_Rock_Light_1889_MA.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dumpling_Rock_Light_1889_MA.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dumpling_Rock_Light_1889_MA.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q108941289",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5313976",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dumpling_Rocks_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Dumpling_Rocks",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA247",
+      "url": "https://wlol.arlhs.com/lighthouse/USA247.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6710072744",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q108941289",
+      "part": "wikidata:Q108941289",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5313976",
+      "part": "wikidata:Q108941289",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "photos",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/6710072744",
+      "part": "wikidata:Q108941289",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "Fl G 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "F WR"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

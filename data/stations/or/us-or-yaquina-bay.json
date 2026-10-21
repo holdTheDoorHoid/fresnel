@@ -1,0 +1,206 @@
+{
+  "id": "us-or-yaquina-bay",
+  "name": "Yaquina Bay Light",
+  "other_names": [
+    "Old Yaquina Bay Lighthouse",
+    "Yaquina Bay Lighthouse"
+  ],
+  "country": "US",
+  "region": "OR",
+  "county": "Lincoln",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 44.624167,
+    "lon": -124.062985,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "integral",
+      "material": "wood",
+      "built": 1871,
+      "height_m": 16.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1996,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F W",
+    "focal_height_m": 50.0,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "74001692",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001692"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "6-9613",
+    "arlhs": "USA906",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "Private",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1870,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1871,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1974,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1996,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaquina_Bay_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaquina_Bay_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yaquina_Bay_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q1555757",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yaquina_Bay_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Yaquina_Bay",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Yaquina_Bay_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA906",
+      "url": "https://wlol.arlhs.com/lighthouse/USA906.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/405053767",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q1555757",
+      "part": "wikidata:Q1555757",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/405053767",
+      "part": "wikidata:Q1555757",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1996
+        },
+        {
+          "source": "osm",
+          "value": 1870
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

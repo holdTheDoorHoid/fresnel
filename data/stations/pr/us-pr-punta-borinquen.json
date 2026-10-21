@@ -1,0 +1,252 @@
+{
+  "id": "us-pr-punta-borinquen",
+  "name": "Punta Borinquen Light",
+  "other_names": [
+    "Faro de Punta Borinquen",
+    "Punta Borinquen Lighthouse"
+  ],
+  "country": "US",
+  "region": "PR",
+  "county": "Aguadilla",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 18.497212,
+    "lon": -67.148763,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "stone",
+      "built": 1889,
+      "height_m": 18.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1889,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 89.0,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "81000559",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000559"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "PUR022",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1889,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1918,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1981,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-pr-punta-borinquen-2",
+      "relation": "succeeded_by",
+      "name": "Punta Borinquen Light"
+    }
+  ],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Punta_de_Boriquen.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Punta_de_Boriquen.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Old_Punta_de_Boriquen.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7260508",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Punta_Borinquen_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Punta_Borinquen",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipedia (español)",
+      "url": "https://es.wikipedia.org/wiki/Faro_de_Punta_Borinqu%C3%A9n",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Punta_Borinquen_lighthouse_%281889%29",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights PUR022",
+      "url": "https://wlol.arlhs.com/lighthouse/PUR022.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1071349499",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7260508",
+      "part": "wikidata:Q7260508",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1071349499",
+      "part": "wikidata:Q7260508",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1889
+        },
+        {
+          "source": "osm",
+          "value": 1922
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            18.48861,
+            -67.16167
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            18.49721,
+            -67.14876
+          ]
+        }
+      ],
+      "distance_m": 1663,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

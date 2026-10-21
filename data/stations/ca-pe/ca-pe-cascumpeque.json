@@ -1,0 +1,233 @@
+{
+  "id": "ca-pe-cascumpeque",
+  "name": "Cascumpeque Light",
+  "other_names": [
+    "phare de Cascumpec",
+    "Cascumpeque Lighthouse",
+    "Cascumpeque Island"
+  ],
+  "country": "CA",
+  "region": "PE",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 46.798706,
+    "lon": -64.036807,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1876,
+      "height_m": 15.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Iso W 10s",
+    "focal_height_m": 18.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN808",
+    "ccg_list_number": "A1076",
+    "nga": "110-7872"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1854,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1876,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1968,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1968,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2004,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Cascumpec_Lighthouse_%2822101639090%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Cascumpec_Lighthouse_%2822101639090%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Former_Cascumpec_Lighthouse_%2822101639090%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109101301",
+      "kind": "wikidata"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN808",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN808.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109101361",
+      "kind": "wikidata"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN122",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN122.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5048273",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cascumpeque_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Cascumpec",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1806785941",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109101301",
+      "part": "wikidata:Q109101301",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109101361",
+      "part": "wikidata:Q109101301",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5048273",
+      "part": "wikidata:Q109101301",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1806785941",
+      "part": "wikidata:Q109101301",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

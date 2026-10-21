@@ -1,0 +1,168 @@
+{
+  "id": "us-oh-sandusky-harbor",
+  "name": "phare de Sandusky Harbor",
+  "other_names": [
+    "Sandusky Harbor Breakwater Light"
+  ],
+  "country": "US",
+  "region": "OH",
+  "county": "Erie",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.499279,
+    "lon": -82.674565,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1925,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1990,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 9.1,
+    "range_nm": 12.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-4560",
+    "arlhs": "USA730",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1925,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lighthouse_P6300428.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lighthouse_P6300428.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lighthouse_P6300428.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q81154951",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Sandusky_Harbor",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA730",
+      "url": "https://wlol.arlhs.com/lighthouse/USA730.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/475652064",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q81154951",
+      "part": "wikidata:Q81154951",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/475652064",
+      "part": "wikidata:Q81154951",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

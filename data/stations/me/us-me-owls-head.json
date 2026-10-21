@@ -1,0 +1,216 @@
+{
+  "id": "us-me-owls-head",
+  "name": "Owls Head Light",
+  "other_names": [
+    "Owl's Head Lighthouse",
+    "Owls Head Lighthouse"
+  ],
+  "country": "US",
+  "region": "ME",
+  "county": "Knox",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 44.0922,
+    "lon": -69.044073,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1825,
+      "height_m": 9.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1852,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F W",
+    "focal_height_m": 100.0,
+    "range_nm": 16.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "78000183",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000183"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-4105",
+    "arlhs": "USA574",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1989"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1825,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1852,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1978,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owl%27s_Head_Light.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owl%27s_Head_Light.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Owl%27s_Head_Light.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owl%27sHead.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owl%27sHead.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Owl%27sHead.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owls_Head_Light_ME.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Owls_Head_Light_ME.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Owls_Head_Light_ME.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7114904",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Owls_Head_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27Owls_Head",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Owl%27s_Head_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA574",
+      "url": "https://wlol.arlhs.com/lighthouse/USA574.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/426617214",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7114904",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/426617214",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 30.0
+        },
+        {
+          "source": "osm",
+          "value": 100.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

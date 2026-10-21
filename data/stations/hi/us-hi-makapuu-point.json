@@ -1,0 +1,214 @@
+{
+  "id": "us-hi-makapuu-point",
+  "name": "Makapuu Point Light",
+  "other_names": [
+    "Makapuu Point Lighthouse",
+    "Makapu'u Point Lighthouse",
+    "Makapu'u Point Light"
+  ],
+  "country": "US",
+  "region": "HI",
+  "county": "Hawaii",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 21.309899,
+    "lon": -157.649759,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1909,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1909,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Oc W 10s",
+    "focal_height_m": 420.0,
+    "range_nm": 19.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "77000447",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000447"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "6-28925",
+    "arlhs": "HAW005",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1909,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1909,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1977,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Makapu%27u_Lighthouse_from_hiking_trail.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Makapu%27u_Lighthouse_from_hiking_trail.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Makapu%27u_Lighthouse_from_hiking_trail.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6738723",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Makapu%CA%BBu_Point_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Makapu%CA%BBu",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Makapuu_Point_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights HAW005",
+      "url": "https://wlol.arlhs.com/lighthouse/HAW005.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/158322483",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6738723",
+      "part": "wikidata:Q6738723",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/158322483",
+      "part": "wikidata:Q6738723",
+      "fields": [
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 130.0
+        },
+        {
+          "source": "osm",
+          "value": 420.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            21.31472,
+            -157.6525
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            21.3099,
+            -157.64976
+          ]
+        }
+      ],
+      "distance_m": 607,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

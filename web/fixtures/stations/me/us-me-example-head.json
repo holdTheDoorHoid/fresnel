@@ -1,0 +1,210 @@
+{
+  "id": "us-me-example-head",
+  "name": "Example Head Light",
+  "other_names": [
+    "Example Head Lighthouse"
+  ],
+  "country": "US",
+  "region": "ME",
+  "county": "Cumberland",
+  "water": "Gulf of Maine",
+  "setting": "coast",
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.61,
+    "lon": -70.21,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": "First tower",
+      "type": "conical_masonry",
+      "material": "stone",
+      "built": 1791,
+      "height_m": 22.0,
+      "status": "lost",
+      "note": "Replaced in 1855.",
+      "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1855,
+      "height_m": 24.4,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "role": "dwelling",
+      "name": "Keeper's house",
+      "type": "other",
+      "material": "wood",
+      "built": 1891,
+      "height_m": null,
+      "status": "standing",
+      "note": "Now a museum.",
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1791,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "on_display",
+      "where": "museum on the station"
+    },
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 30.0,
+    "range_nm": 24.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "99000001",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000001"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "1-0000",
+    "arlhs": "USA-000",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "Town of Example",
+  "ownership": "local",
+  "access": {
+    "level": "public",
+    "note": "Park open sunrise to sunset."
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1989"
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": true,
+    "museum": true,
+    "tours": "Summer weekends",
+    "boat_only": false,
+    "passport_stamp": true,
+    "note": null
+  },
+  "stay": {
+    "type": "keeper_program",
+    "provider": "Example Lighthouse Friends",
+    "url": "https://example.org/keeper",
+    "season": "June to September",
+    "note": "Week-long volunteer keeper stays.",
+    "checked": "2026-10-21"
+  },
+  "events": [
+    {
+      "year": 1791,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "rebuilt",
+      "note": "A taller brick tower.",
+      "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1973,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-nj-sample-beach-life-saving-station",
+      "relation": "life_saving_station_nearby",
+      "name": "Sample Beach Life-Saving Station"
+    }
+  ],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Example.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Example.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Example.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": "The tower from the south",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q4115189",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q4115189",
+      "fields": [
+        "name",
+        "light",
+        "registers",
+        "events"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1",
+      "fields": [
+        "location",
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.first_lit",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1791
+        },
+        {
+          "source": "osm",
+          "value": 1790
+        }
+      ],
+      "note": "Sources differ by a year."
+    }
+  ],
+  "verification": "researched",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "fixture": true,
+  "updated": "2026-10-21"
+}

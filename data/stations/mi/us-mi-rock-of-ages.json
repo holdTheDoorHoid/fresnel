@@ -1,0 +1,205 @@
+{
+  "id": "us-mi-rock-of-ages",
+  "name": "Rock of Ages Light",
+  "other_names": [
+    "Rock of Ages Lighthouse"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": "Keweenaw",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.866385,
+    "lon": -89.314848,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "steel",
+      "built": 1908,
+      "height_m": 36.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1910,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 40.0,
+    "range_nm": 12.0,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "83000881",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000881"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-16655",
+    "arlhs": "USA698",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1908,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1910,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock_of_Ages_Light_%28Keweenaw_County%2C_Michigan%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock_of_Ages_Light_%28Keweenaw_County%2C_Michigan%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rock_of_Ages_Light_%28Keweenaw_County%2C_Michigan%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7354843",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rock_of_Ages_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_du_Rock_of_Ages",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Rock_of_Ages_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA698",
+      "url": "https://wlol.arlhs.com/lighthouse/USA698.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1075689285",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.nps.gov/articles/000/rock-of-ages-lighthouse.htm",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7354843",
+      "part": "wikidata:Q7354843",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1075689285",
+      "part": "wikidata:Q7354843",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl W 10s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl(2) W 10s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

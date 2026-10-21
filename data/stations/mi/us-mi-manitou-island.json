@@ -1,0 +1,191 @@
+{
+  "id": "us-mi-manitou-island",
+  "name": "Manitou Island Light Station",
+  "other_names": [
+    "Manitou Island Lighthouse"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": "Keweenaw",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.419701,
+    "lon": -87.587018,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1850,
+      "height_m": 13.0,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1862,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 25.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "84001773",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001773"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-15170",
+    "arlhs": "USA470",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1850,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1862,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1984,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manitouisland.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manitouisland.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Manitouisland.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6750241",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Manitou_Island_Light_Station",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Manitou_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA470",
+      "url": "https://wlol.arlhs.com/lighthouse/USA470.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1009982172",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=731",
+      "kind": "website"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q6750241",
+      "part": "wikidata:Q6750241",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1009982172",
+      "part": "wikidata:Q6750241",
+      "fields": [
+        "light",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1862
+        },
+        {
+          "source": "osm",
+          "value": 1850
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

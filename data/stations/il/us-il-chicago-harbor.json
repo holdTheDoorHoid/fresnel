@@ -1,0 +1,226 @@
+{
+  "id": "us-il-chicago-harbor",
+  "name": "Chicago Harbor Light",
+  "other_names": [
+    "Chicago Harbor Lighthouse"
+  ],
+  "country": "US",
+  "region": "IL",
+  "county": "Cook",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.88935,
+    "lon": -87.590564,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1893,
+      "height_m": 20.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1893,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 15s",
+    "focal_height_m": 25.0,
+    "range_nm": 15.0,
+    "fog_signal": "horn",
+    "from": "osm"
+  },
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "84000986",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000986"
+    },
+    {
+      "register": "Chicago Landmark",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": "7-19960",
+    "arlhs": "USA171",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "automated",
+    "as_of": "1979"
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1893,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1893,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1979,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1984,
+      "event": "nrhp_listed",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago-lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago-lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicago-lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5095636",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Harbor_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Chicago",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Chicago_Harbor_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA171",
+      "url": "https://wlol.arlhs.com/lighthouse/USA171.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/relation/18176414",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1188397898",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/200507316",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5095636",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:relation/18176414",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1188397898",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "agency",
+        "light"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/200507316",
+      "part": "wikidata:Q5095636",
+      "fields": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl R 15s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}
