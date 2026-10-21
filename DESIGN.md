@@ -228,6 +228,20 @@ station, linked from the old one (`succeeded_by` / `preceded_by`). A range is on
 front and a rear structure. Cape Hatteras, moved 2,900 ft inland in 1999, is one station with a
 `relocated` event.
 
+Rulings (orchestrator, 2026-10-21, from the first build's open questions):
+
+- **Twin lights are one station** with two tower structures (Navesink Twin Lights; Cape Ann Light
+  Station's twin towers on Thacher Island; Chatham's former pair), because they were one station with
+  one set of keepers.
+- **Successive lights at clearly separate sites with their own established names are separate
+  stations**, linked with `preceded_by` / `succeeded_by`: Old Point Loma (1855, on the ridge, now a
+  museum) and New Point Loma (1891, at the shore) are two stations. A rebuild at essentially the same
+  spot under the same name stays one station.
+- **Scale copies of a specific historic light are `replica`**, linked to the original (`related`,
+  relation `replica_of`). The Lake Havasu lights in Arizona (one-third-scale copies of named lights)
+  are shown as replicas; that they also mark the lake for boaters goes in a note. A decorative
+  "lighthouse" that copies no particular light and never served as an aid stays hidden.
+
 ```json
 {
   "id": "us-me-portland-head",
