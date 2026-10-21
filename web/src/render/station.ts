@@ -93,8 +93,13 @@ function isGone(status: string): boolean {
   return status === 'lost' || status === 'ruins';
 }
 
-export function badges(r: StationRecord): SafeHtml {
-  const labels = accessLabels(r);
+/**
+ * The badges under the name. On a page, an access label that also gets its own notice right
+ * below (`withProminent: false`) is left out of the badges, so it is said once; the map panel
+ * keeps them all as badges.
+ */
+export function badges(r: StationRecord, opts: { withProminent?: boolean } = {}): SafeHtml {
+  const labels = accessLabels(r).filter((l) => opts.withProminent !== false || !isProminent(l));
   const ver = verificationWording(r.verification);
   return html`<ul class="badges" aria-label="Status and access">
     ${statusBadge(r)}
@@ -121,6 +126,14 @@ export function statusLine(r: StationRecord): SafeHtml {
 
 /* ---------- Visit, climb & stay ---------- */
 
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return 'the provider’s site';
+  }
+}
+
 function stayBlock(r: StationRecord): SafeHtml {
   const s = r.stay;
   if (!s || typeof s !== 'object' || !Object.values(s).some((v) => v !== null && v !== undefined && v !== '')) {
@@ -136,7 +149,7 @@ function stayBlock(r: StationRecord): SafeHtml {
   return html`<div class="stay-card">
     <p class="stay-type"><strong>${type}.</strong> ${s.note ?? ''}</p>
     ${shown.length ? html`<dl class="kv kv-stay">${shown.map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>` : ''}
-    ${url ? html`<p class="stay-link"><a class="btn btn-primary" href="${url}" rel="noopener">See ${s.provider ? `${s.provider}’s page` : 'the listing'}${EXT}<span class="visually-hidden"> (opens another site)</span></a></p>` : ''}
+    ${url ? html`<p class="stay-link"><a class="btn btn-primary" href="${url}" rel="noopener">See it on ${hostOf(url)}${EXT}<span class="visually-hidden"> (opens another site)</span></a></p>` : ''}
     <p class="fine">${s.checked ? `Checked ${formatDate(s.checked)}. ` : ''}Seasons, prices and rules change: confirm with the provider before you plan a stay.</p>
   </div>`;
 }
@@ -191,7 +204,8 @@ export function characteristicHtml(raw: string | null | undefined, opts: { lost?
   const c = parseCharacteristic(raw);
   const asWas = opts.lost ? html`<span class="sub">As last recorded.</span>` : '';
   if (!c) return html`<code class="char">${raw.trim()}</code><span class="sub">As the source writes it.</span>${asWas}`;
-  return html`<span class="char-read"><code class="char">${c.raw}</code>: ${describeCharacteristic(c)}.</span>${asWas}`;
+  const reading = describeCharacteristic(c);
+  return html`<span class="char-read"><code class="char">${c.raw}</code>: ${reading.charAt(0).toLowerCase() + reading.slice(1)}.</span>${asWas}`;
 }
 
 function lensText(r: StationRecord): SafeHtml | null {
@@ -231,9 +245,8 @@ function structureLine(s: Structure, r: StationRecord): SafeHtml {
   const type = s.type && s.type !== 'other' ? STRUCTURE_TYPE[s.type] : null;
   const bits: (string | SafeHtml)[] = [];
   if (type) bits.push(html`<abbr title="${type.meaning}">${type.label}</abbr>`);
-  else if (s.type) bits.push(lookup({}, s.type) ?? '');
   const material = lookup(MATERIAL, s.material);
-  if (material) bits.push(material);
+  if (material) bits.push(bits.length ? material.toLowerCase() : material);
   if (typeof s.built === 'number') bits.push(`built ${s.built}`);
   const h = lengthFor(country, s.height_m);
   if (h) bits.push(`${h} tall`);
@@ -574,7 +587,7 @@ export function renderStationMain(r: StationRecord, ctx: RenderContext, sections
     <p class="eyebrow">${kindPlace(r)}</p>
     <h1>${r.name}</h1>
     ${other.length ? html`<p class="aka">Also known as ${other.join('; ')}</p>` : ''}
-    ${badges(r)}
+    ${badges(r, { withProminent: false })}
     <div class="notices">
       ${prominent.map((l, i) => accessNotice(l, i === 0 ? r.access?.note : null))}
       ${unverifiedNotice(r, ctx)}
@@ -651,7 +664,7 @@ export function renderPanel(r: StationRecord, ctx: RenderContext, opts: { hidden
   const tower = (r.structures ?? []).find((s) => s && (s.role === 'tower' || s.role === 'front_range') && s.status === 'standing') ?? (r.structures ?? [])[0];
   if (tower) {
     const type = tower.type && STRUCTURE_TYPE[tower.type] ? STRUCTURE_TYPE[tower.type]!.label : null;
-    const bits = [type, lookup(MATERIAL, tower.material), typeof tower.built === 'number' ? `built ${tower.built}` : null, lengthFor(country, tower.height_m)].filter(Boolean);
+    const bits = [type, lookup(MATERIAL, tower.material), typeof tower.built === 'number' ? `built ${tower.built}` : null, lengthFor(country, tower.height_m)].filter((b): b is string => !!b).map((b, i) => (i ? b.charAt(0).toLowerCase() + b.slice(1) : b));
     if (bits.length) rows.push([lookup(STRUCTURE_ROLE, tower.role) ?? 'Structure', bits.join(', ')]);
   }
   const v = r.visit ?? {};

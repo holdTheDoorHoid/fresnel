@@ -126,7 +126,7 @@ export function tokenFor(key: PaintKey): string {
 
 const SHAPE: Record<Silhouette, string> = {
   // a tapered tower with gallery, lantern and roof, on a plinth
-  tower: 'M12 2.4L14.1 4.5V6.6H15.2V8H14.5L16.3 19.8H17.8V21.6H6.2V19.8H7.7L9.5 8H8.8V6.6H9.9V4.5Z',
+  tower: 'M12 2.2L14.4 4.4V6.4H15.6V7.9H14.9L17 19.6H18.4V21.6H5.6V19.6H7L9.1 7.9H8.4V6.4H9.6V4.4Z',
   // a hull with a deckhouse and a mast carrying the lantern
   ship: 'M2.4 14.6H8.6V12H11.2V6.4H10.1V3.2H13.9V6.4H12.8V12H15.4V14.6H21.6L19.2 20.4H4.8Z',
   // a house with the lookout on its ridge
@@ -134,7 +134,7 @@ const SHAPE: Record<Silhouette, string> = {
 };
 
 const BROKEN: Record<Silhouette, string> = {
-  tower: 'M7.7 19.8L8.9 12L10.6 14.1L12 11.6L13.5 13.9L15.1 12L16.3 19.8H17.8V21.6H6.2V19.8Z',
+  tower: 'M7 19.6L8.72 10L10.4 12.2L11.9 9.2L13.6 11.8L15.28 10L17 19.6H18.4V21.6H5.6V19.6Z',
   ship: 'M2.4 14.6H9.2L10.3 11.2L12.7 12.6L12.1 14.6H21.6L19.2 20.4H4.8Z',
   house: 'M3 20.6V12.6L6.2 14.8L8.6 11.4L11.6 14L14.2 11L17.4 14.2L21 12.2V20.6Z',
 };

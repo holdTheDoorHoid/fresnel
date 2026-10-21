@@ -213,7 +213,10 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
     const countWith = (patch: Partial<Filters>) => feats.filter((x) => matches(x.properties, { ...f, ...patch }, d.checklist)).length;
     for (const s of SWITCHES) {
       // "Hide boat-only": how many it hides; the others: how many you would see.
-      if (s.key === 'noBoat') write(s.name, feats.filter((x) => x.properties.bo && matches(x.properties, { ...f, noBoat: false }, d.checklist)).length);
+      if (s.key === 'noBoat') {
+        const el = root.querySelector(`[data-count="${s.name}"]`);
+        if (el) el.textContent = `hides ${formatCount(feats.filter((x) => x.properties.bo && matches(x.properties, { ...f, noBoat: false }, d.checklist)).length)}`;
+      }
       else write(s.name, countWith({ [s.key]: true }));
     }
     for (const m of MARKS) write(`mine:${m}`, d.checklist.counts()[m]);

@@ -29,6 +29,8 @@ export interface KeyPanel {
   readonly isOpen: boolean;
   open(focus?: boolean): void;
   close(focusButton?: boolean): void;
+  /** Close it for now (another panel needs the room) without remembering it as closed. */
+  hide(): void;
 }
 
 export function initKeyPanel(opts: { button: HTMLButtonElement; panel: HTMLElement; body: HTMLElement; closeBtn: HTMLButtonElement; wide: () => boolean; onToggle?: (open: boolean) => void }): KeyPanel {
@@ -49,6 +51,7 @@ export function initKeyPanel(opts: { button: HTMLButtonElement; panel: HTMLEleme
     },
     open: (focus = true) => set(true, focus ? 'panel' : null, true),
     close: (focusButton = true) => set(false, focusButton ? 'button' : null, true),
+    hide: () => set(false, null, false),
   };
   button.addEventListener('click', () => (panel.hidden ? ctl.open() : ctl.close()));
   closeBtn.addEventListener('click', () => ctl.close());

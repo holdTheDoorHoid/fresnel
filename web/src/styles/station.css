@@ -64,7 +64,7 @@
 .prose .footnotes { margin-top: 2em; padding-top: 1em; border-top: 1px solid var(--line); font-size: 0.9rem; line-height: 1.55; color: var(--ink-2); }
 .prose .footnotes ol { padding-left: 1.4em; margin: 0; }
 .prose .footnotes li { margin-bottom: 0.4em; }
-.prose .footnotes li:target, .prose sup:target { background: var(--amber-soft); border-radius: 4px; }
+.prose .footnotes li:target, .prose sup:target { background: var(--lamp-soft); border-radius: 4px; }
 .prose .fn-back { text-decoration: none; margin-left: 4px; }
 
 /* Photos */
@@ -74,8 +74,8 @@
 .photo figcaption { margin-top: 6px; font-size: 0.9rem; }
 .photo .cap { display: block; color: var(--ink-2); }
 
-/* Interim card for an unmirrored photo whose original is not https (see render/tower.ts
-   photosSection): a link out instead of a broken/blocked <img>. */
+/* Interim card for an unmirrored photo whose original is not https (see render/station.ts
+   photosSection): a link out instead of a broken or blocked image. */
 .photo-link {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
   width: 100%; box-sizing: border-box; aspect-ratio: 4 / 3; padding: 12px; text-align: center;

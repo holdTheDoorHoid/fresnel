@@ -19,7 +19,7 @@ import { bindChecklistButtons, getChecklist, initChecklistDialog, loadRedirects 
 import { initCommon } from '../ui/common.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import siteConfig from '../../site.config.json';
-import { addControls } from './controls.ts';
+import { addControls, initJump } from './controls.ts';
 import { renderFilterPanel } from './filters-ui.ts';
 import { initKeyPanel } from './key-ui.ts';
 import { L_CLUSTERS, L_POINTS, SRC, installOverlays, stations } from './layers.ts';
@@ -88,6 +88,8 @@ async function main(): Promise<void> {
     wide: () => !PHONE.matches,
   });
 
+  initJump($('jump'), () => map);
+
   /* ---------- Panel ---------- */
   const panel = new Panel({
     el: $('panel'),
@@ -106,8 +108,8 @@ async function main(): Promise<void> {
   const select = (id: string, opts: { fly: boolean; focus: boolean }) => {
     const f = byId.get(id);
     state.selected = id;
-    // On phones the key and the details sheet would cover each other: the details win.
-    if (PHONE.matches && keyPanel.isOpen) keyPanel.close(false);
+    // Where the key and the details would crowd the map (phones, narrow windows), the details win.
+    if (keyPanel.isOpen && window.innerWidth < 1280) keyPanel.hide();
     void panel.open(id, f?.properties ?? null, { focus: opts.focus });
     if (map && f) {
       const coords = f.geometry.coordinates;
