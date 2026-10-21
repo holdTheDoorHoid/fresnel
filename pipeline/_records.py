@@ -215,3 +215,63 @@ def state_of(place: str | None) -> str | None:
     """", ME" at the end of an LHF place string."""
     m = re.search(r",\s*([A-Z]{2})\s*$", place or "")
     return m.group(1) if m else None
+
+
+# ---------------------------------------------------------------------------------------------
+# A small .xlsx reader (zip of XML; no third-party library)
+# ---------------------------------------------------------------------------------------------
+
+def _col_index(ref: str) -> int:
+    n = 0
+    for ch in re.match(r"[A-Z]+", ref).group(0):  # type: ignore[union-attr]
+        n = n * 26 + (ord(ch) - 64)
+    return n - 1
+
+
+def read_xlsx_rows(path: Path, sheet: str = "xl/worksheets/sheet1.xml"):
+    """Yield each row of the first worksheet as a list of strings ('' for an empty cell). Shared strings
+    are read once (the NRHP workbook's are 18 MB), the sheet is streamed."""
+    import zipfile
+    import xml.etree.ElementTree as ET
+    ns = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    with zipfile.ZipFile(path) as z:
+        strings: list[str] = []
+        if "xl/sharedStrings.xml" in z.namelist():
+            with z.open("xl/sharedStrings.xml") as f:
+                for _ev, el in ET.iterparse(f, events=("end",)):
+                    if el.tag == ns + "si":
+                        strings.append("".join(t.text or "" for t in el.iter(ns + "t")))
+                        el.clear()
+        with z.open(sheet) as f:
+            for _ev, row in ET.iterparse(f, events=("end",)):
+                if row.tag != ns + "row":
+                    continue
+                cells: dict[int, str] = {}
+                for cell in row.findall(ns + "c"):
+                    ref = cell.get("r") or ""
+                    v = cell.find(ns + "v")
+                    t = cell.get("t")
+                    if t == "inlineStr":
+                        val = "".join(x.text or "" for x in cell.iter(ns + "t"))
+                    elif v is None or v.text is None:
+                        val = ""
+                    elif t == "s":
+                        val = strings[int(v.text)]
+                    else:
+                        val = v.text
+                    cells[_col_index(ref) if ref else len(cells)] = val
+                row.clear()
+                if cells:
+                    yield [cells.get(i, "") for i in range(max(cells) + 1)]
+
+
+def excel_date(serial: str | float | None) -> str | None:
+    """An Excel serial day number (1900 system) as YYYY-MM-DD, else None."""
+    import datetime as dt
+    try:
+        n = float(serial)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+    if n < 1:
+        return None
+    return (dt.date(1899, 12, 30) + dt.timedelta(days=int(n))).isoformat()

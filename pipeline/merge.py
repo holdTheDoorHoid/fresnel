@@ -76,6 +76,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import regions  # noqa: E402
+import record_joins  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -108,6 +109,7 @@ R_ENRICH_STRONG, R_ENRICH = 300.0, 150.0
 R_PART = 150.0
 R_OSM_DOUBLE = 60.0
 R_WIKIDATA_TAG = 10000.0
+R_HARD_KEY = 10000.0   # a shared NRHP / ARLHS / Light List number joins records up to this far apart
 R_RANGE_PAIR = 3000.0
 R_LSS_NEAR = 1500.0
 CONFLICT_DISTANCE_M = 500.0
@@ -407,8 +409,31 @@ class Rec:
 
     @property
     def can_start(self) -> bool:
-        return (bool(self.name) and not self.enrich_only and not self.suspect and not self.group_listing
-                and not (self.ancillary and self.source != "wikidata"))
+        return (bool(self.name) and self.has_point and not self.enrich_only and not self.suspect
+                and not self.group_listing and not (self.ancillary and self.source != "wikidata"))
+
+    @property
+    def hard_keys(self) -> list[str]:
+        """Identifiers two records of one station share whatever their names or positions: the NRHP
+        reference number, the ARLHS number and the Light List number (a register listing that covers
+        several stations has none)."""
+        if self.group_listing:
+            return []
+        keys = []
+        for reg in self.raw.get("registers") or []:
+            if reg.get("register") == "NRHP" and reg.get("number"):
+                keys.append("nrhp:" + str(reg["number"]).strip())
+        aton = self.raw.get("aton") or {}
+        if aton.get("arlhs"):
+            keys.append("arlhs:" + re.sub(r"[^A-Z0-9]", "", str(aton["arlhs"]).upper()))
+        if aton.get("uscg_llnr"):
+            keys.append("llnr:" + str(aton["uscg_llnr"]).strip().split("-")[-1].lstrip("0"))
+        return keys
+
+    @property
+    def quiet(self) -> bool:
+        """A record the report need not list when it joins nothing (a charted light with no station)."""
+        return bool(self.extra.get("quiet_unmatched"))
 
     @property
     def standing_evidence(self) -> bool:
@@ -549,6 +574,10 @@ class Matcher:
         self.same_source_joins: list[dict] = []
         self.wikidata_tag_far: list[dict] = []
         self.retired: list[tuple[Station, Station]] = []
+        self.key_index: dict[str, list[Station]] = defaultdict(list)   # hard keys (rec.hard_keys) -> stations
+        self.quiet_unmatched: Counter = Counter()
+        self.name_region_joins: list[dict] = []
+        self.overrides: list[dict] = []
 
     def add_existing(self, path: Path, rec: dict) -> None:
         st = Station(rec, path)
@@ -583,6 +612,11 @@ class Matcher:
     def attach(self, rec: Rec, st: Station, how: str, anchor: str | None = None) -> None:
         self.how[how] += 1
         self.station_of_key[rec.key] = st
+        for hk in rec.hard_keys:
+            if st not in self.key_index[hk]:
+                self.key_index[hk].append(st)
+        if not rec.has_point and st.parts and anchor is None:
+            anchor = "station"   # a record with no position describes the station, never a structure of its own
         if anchor == "station" or (anchor is None and rec.station_level and st.parts):
             st.station_recs.append(rec)
         else:
@@ -670,8 +704,81 @@ class Matcher:
         out.sort(key=lambda x: x[0])
         return out
 
+    # -- joins a human has decided (record_joins.py) and joins on a shared identifier ---------
+
+    def pinned_station(self, target: str) -> Station | None:
+        """The station a RECORD_JOINS target names: a station id, or the key of a record it holds."""
+        st = self.by_id.get(target) or self.station_of_key.get(target)
+        if st is None and target in self.memory:
+            st = self.memory[target][0]
+        while st is not None and st.absorbed_into is not None:
+            st = st.absorbed_into
+        return st
+
+    def kept_apart(self, rec: Rec, st: Station) -> bool:
+        return any(frozenset((rec.key, r.key)) in record_joins.KEEP_APART_PAIRS for r in st.recs())
+
+    def by_hard_key(self, rec: Rec) -> Station | None:
+        """The one station holding a record with the same NRHP number, ARLHS number or Light List number
+        (same country, a compatible kind, and within R_HARD_KEY of the record when both have positions).
+        Several holders: the nearest, when the record has a position; else none (ambiguous)."""
+        found: list[Station] = []
+        for hk in rec.hard_keys:
+            for st in self.key_index.get(hk, []):
+                if st.absorbed_into is not None or (st.existing or {}).get("merged_into") or st in found:
+                    continue
+                if st.country() and rec.country and st.country() != rec.country:
+                    continue
+                g = st.kind_group()
+                if g and KIND_GROUP.get(rec.kind) and g != KIND_GROUP.get(rec.kind):
+                    continue
+                if self.kept_apart(rec, st):
+                    continue
+                if rec.has_point and st.points() and st.min_dist(rec.lat, rec.lon) > R_HARD_KEY:
+                    continue
+                found.append(st)
+        if not found:
+            return None
+        if len(found) == 1:
+            return found[0]
+        if rec.has_point:
+            found.sort(key=lambda st: (st.min_dist(rec.lat, rec.lon), st.seq))
+            return found[0]
+        return None
+
+    def by_name_in_region(self, rec: Rec) -> Station | None:
+        """A record with no position joins the one station of its region whose name agrees strongly
+        (>= STRONG), when no other station is within 0.1 of that score. Listed in the report."""
+        if not rec.region or not rec.forms:
+            return None
+        scored = []
+        for st in self.live():
+            if st.country() and rec.country and st.country() != rec.country:
+                continue
+            g = st.kind_group()
+            if g and KIND_GROUP.get(rec.kind) and g != KIND_GROUP.get(rec.kind):
+                continue
+            if first_region(st) != rec.region or self.kept_apart(rec, st):
+                continue
+            s = name_score(rec.forms, st.forms(starting_only=True))
+            if s is not None and s >= STRONG:
+                scored.append((s, st))
+        if not scored:
+            return None
+        scored.sort(key=lambda x: (-x[0], x[1].seq))
+        if len(scored) > 1 and scored[0][0] - scored[1][0] < 0.1:
+            return None
+        return scored[0][1]
+
     def match_source(self, recs: list[Rec]) -> None:
         for rec in recs:
+            pin = record_joins.RECORD_JOINS.get(rec.key)
+            if pin:
+                st = self.pinned_station(pin)
+                if st is not None:
+                    self.attach(rec, st, "override")
+                    self.overrides.append({"key": rec.key, "to": pin})
+                    continue
             if rec.key in self.memory:
                 st, anchor = self.memory[rec.key]
                 if st.absorbed_into is None:
@@ -691,7 +798,17 @@ class Matcher:
                         continue
                     self.wikidata_tag_far.append({"key": rec.key, "name": rec.name, "wikidata": rec.wikidata_tag,
                                                   "distance_m": round(d), "station_name": (st.recs() or [rec])[0].name})
-            cands = self.candidates(rec)
+            st = self.by_hard_key(rec)
+            if st is not None:
+                self.attach(rec, st, "hard_key")
+                continue
+            if not rec.has_point:
+                st = self.by_name_in_region(rec)
+                if st is not None:
+                    self.attach(rec, st, "name_region")
+                    self.name_region_joins.append({"key": rec.key, "name": rec.name, "station": st})
+                    continue
+            cands = [c for c in self.candidates(rec) if not self.kept_apart(rec, c[1])]
             if cands:
                 _k, st, d, s = cands[0]
                 if any(r.source == rec.source and not r.station_level for r in st.recs()) and not rec.enrich_only and not rec.ancillary:
@@ -702,6 +819,9 @@ class Matcher:
             if rec.can_start and rec.has_point:
                 st = self.new_station()
                 self.attach(rec, st, "new")
+                continue
+            if rec.quiet:
+                self.quiet_unmatched[rec.source] += 1
                 continue
             reason = ("seamark light with no lighthouse tag" if rec.enrich_only else
                       "a station building (keeper's house, fog signal, visitor centre) with no light station near" if rec.ancillary else
@@ -1115,14 +1235,24 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
                               "note": "Sources differ by more than 3 m."})
 
     # Registers, numbers, agency
-    registers, seen_reg = [], set()
+    registers, seen_reg = [], {}
     for r in sorted(recs, key=lambda r: (source_rank("other", r.source), r.key)):
         for reg in r.raw.get("registers") or []:
             k = (reg.get("register"), reg.get("number"))
-            if k not in seen_reg and reg.get("register"):
-                seen_reg.add(k)
-                registers.append({"register": reg["register"], "number": reg.get("number"), "url": reg.get("url")})
+            if not reg.get("register"):
+                continue
+            if k not in seen_reg:
+                entry = {"register": reg["register"], "number": reg.get("number"), "url": reg.get("url")}
+                seen_reg[k] = entry
+                registers.append(entry)
                 use(r, "registers")
+            entry = seen_reg[k]
+            # The same listing from another source adds what the first lacks: the NRHP workbook gives the
+            # listed date, the National Historic Landmark date and the nomination link (3.2).
+            for extra_key in ("url", "listed", "nhl", "nomination"):
+                if reg.get(extra_key) and not entry.get(extra_key):
+                    entry[extra_key] = reg[extra_key]
+                    use(r, "registers")
     registers.sort(key=lambda g: (g["register"] != "NRHP", g["number"] is None, g["register"], g["number"] or ""))
     aton = {}
     for k in ("uscg_llnr", "arlhs", "ccg_list_number", "nga"):
@@ -1139,7 +1269,14 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     for r in sorted(recs, key=lambda r: (source_rank("light_dates", r.source), r.key)):
         for e in r.raw.get("events") or []:
             k = (e.get("year"), e.get("event"))
-            if k in seen_ev or not isinstance(e.get("year"), int):
+            if not isinstance(e.get("year"), int):
+                continue
+            if k in seen_ev:
+                # the same event from a later source: keep the first, but take a note it lacks
+                prior = next(x for x in events if (x["year"], x["event"]) == k)
+                if not prior["note"] and e.get("note"):
+                    prior["note"] = e["note"]
+                    use(r, "events")
                 continue
             seen_ev.add(k)
             events.append({"year": e["year"], "event": e["event"], "note": e.get("note"), "from": e.get("from") or r.source})
@@ -1196,7 +1333,9 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
 
     # Location conflicts: records of one structure more than 500 m apart
     for p in parts:
-        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only]
+        # Only positions a source gives as exact are compared: the register's batch-derived points and
+        # the pin of a vanished tower are approximations, not disagreements.
+        pts = [r for r in p.structure_recs() if r.has_point and not r.enrich_only and r.raw.get("precision", "exact") == "exact"]
         if len(pts) > 1:
             ppos = p.pos()
             far = [r for r in pts if r.dist(*ppos) > CONFLICT_DISTANCE_M]
