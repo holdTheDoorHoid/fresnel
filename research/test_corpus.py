@@ -98,6 +98,16 @@ class Years(unittest.TestCase):
         self.assertIsNone(corpus.attribute_year({"years": [1893, 1894], "report_starts": [[500, 1894]]}, 900))
 
 
+class Normalise(unittest.TestCase):
+    def test_hyphen_line_breaks_match_the_quote_checker(self):
+        self.assertEqual(corpus.normalise_text("by  the  con- \ntractors, Messrs.\n Anderson"), "by the contractors, Messrs. Anderson")
+        self.assertEqual(corpus.normalise_text("Hat-\r\nteras"), "Hatteras")
+        self.assertEqual(corpus.normalise_text("a-b c"), "a-b c")  # an ordinary hyphen stays
+
+    def test_form_feeds_survive(self):
+        self.assertEqual(corpus.normalise_text("one  two\fthree\n four").split("\f"), ["one two", "three four"])
+
+
 class Fuzzy(unittest.TestCase):
     def matches(self, name, text):
         return bool(corpus.phrase_regex(name).search(text))

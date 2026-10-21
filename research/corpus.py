@@ -658,10 +658,14 @@ def state_hint(window, center, target, near_chars=120):
 # grep
 # --------------------------------------------------------------------------------------------------
 
+_HYPHEN_BREAK = re.compile(r"-[ \t]*\r?\n[ \t]*")
+
+
 def normalise_text(raw):
     """Words hyphenated across lines are rejoined and runs of whitespace become one space (the Commissioner text
     has double spaces). Form feeds (the Bulletin's page breaks) survive."""
-    raw = raw.replace("-\r\n", "").replace("-\n", "")
+    if "-" in raw:
+        raw = _HYPHEN_BREAK.sub("", raw)
     if "\f" in raw:
         return "\f".join(" ".join(page.split()) for page in raw.split("\f"))
     return " ".join(raw.split())
