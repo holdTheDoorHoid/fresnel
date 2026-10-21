@@ -166,9 +166,11 @@ export function lightEras(r: EraInput): LightEra[] {
       const latest = k === orders.length - 1;
       const members = new Set(current.lights.map((l, i) => ({ l, i })).filter(({ l }) => (l.era ? l.era.order === o : latest)).map(({ i }) => i));
       const first = current.lights[[...members][0]!]!;
-      const word = first.era?.label ?? 'later';
+      // A light that is out: its "current" pattern was the last one it showed.
+      const word = fin.lastLit && first.era?.label === 'current' ? 'later' : first.era?.label ?? 'later';
       const label = word.replace(/^./, (ch) => ch.toUpperCase());
-      eras.push(era({ id: `era-${k}`, label: latest ? `${label}: ${fin.label.replace(/^./, (ch) => ch.toLowerCase())}` : label, short: label, reading: filtered(current, (i) => members.has(i)), from: first.era?.year ?? null }, {}, latest));
+      const plainLatest = word === 'current' || word === 'later';
+      eras.push(era({ id: `era-${k}`, label: latest ? (plainLatest ? fin.label : `${label}: ${fin.label.replace(/^./, (ch) => ch.toLowerCase())}`) : label, short: latest && plainLatest ? fin.short : label, reading: filtered(current, (i) => members.has(i)), from: first.era?.year ?? null }, {}, latest));
     });
     return eras;
   }

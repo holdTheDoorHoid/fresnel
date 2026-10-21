@@ -1,4 +1,4 @@
-/** Enhancements for a prerendered station page: theme, checklist buttons, copy coordinates. */
+/** Enhancements for a prerendered station page: theme, checklist buttons, copy coordinates, the light at night. */
 import '../styles/station.css';
 import { enhanceCoords, initCommon } from '../ui/common.ts';
 import { initChecklistOnPage } from '../ui/checklist-ui.ts';
@@ -33,6 +33,9 @@ async function start(): Promise<void> {
   if (import.meta.env.DEV) await devRender();
   initChecklistOnPage();
   enhanceCoords();
+  // The light at night: its own chunk, so a station without a light never loads it.
+  const night = document.querySelector<HTMLElement>('[data-night]');
+  if (night) void import('../ui/night.ts').then((m) => m.initNight(night));
 }
 
 void start();
