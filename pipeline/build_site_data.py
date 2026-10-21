@@ -236,7 +236,7 @@ def regions_meta(by_region: Counter) -> dict:
 # Research: the keepers roster and the sources its lines cite (DESIGN.md 3.6)
 # ---------------------------------------------------------------------------------------
 
-KEEPER_KEYS = ("name", "role", "from", "to", "note", "cite", "person")
+KEEPER_KEYS = ("name", "role", "from", "to", "from_approx", "to_approx", "note", "cite", "person", "other_stations")
 SOURCE_KEYS = ("n", "title", "publisher", "url", "accessed", "date")
 
 

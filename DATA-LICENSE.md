@@ -22,8 +22,7 @@ ODbL.
 
 ## Sources folded into this database
 
-Facts come from many places, each credited on every tower page and listed in
-`data/sources/`. Notable: the Forest Fire Lookout Association, the National Historic Lookout
-Register and Former Fire Lookout Sites Register, the Recreation Information Database
-(recreation.gov), OpenStreetMap contributors (ODbL), Wikidata (CC0), USGS and the National
-Park Service (public domain).
+Facts come from many places, each credited on every station page that uses them and listed in
+`data/sources/`. So far: Wikidata (CC0) and OpenStreetMap contributors (ODbL), both read through
+QLever (University of Freiburg). Later rounds add NOAA, the US Coast Guard, the National Park
+Service (public domain) and Canadian government sources, each with its own credit line.

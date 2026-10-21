@@ -187,6 +187,11 @@ export interface Keeper {
   /** Numbers (`n`) of the research_sources entries this line rests on. */
   cite?: number[] | null;
   person?: string | null;
+  /** The source gives only an approximate year ("about 1880"). */
+  from_approx?: boolean;
+  to_approx?: boolean;
+  /** Service elsewhere, only when a source names it (feeds the keepers index later). */
+  other_stations?: { name?: string; from?: number | string | null; to?: number | string | null; cite?: number[] }[];
 }
 
 export interface ResearchSource {

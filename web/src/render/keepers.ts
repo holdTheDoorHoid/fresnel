@@ -40,7 +40,7 @@ export function keepersTable(keepers: readonly Keeper[] | null | undefined, sour
         (k) => html`<tr>
           <th scope="row" data-label="Name">${k.name}</th>
           <td data-label="Role">${k.role || html`<span class="muted">Not given</span>`}</td>
-          <td data-label="Years" class="years">${yearSpan(k.from, k.to)}</td>
+          <td data-label="Years" class="years">${yearSpan(k.from, k.to, k.from_approx === true, k.to_approx === true)}</td>
           <td data-label="Note">${k.note || ''}</td>
           <td data-label="Sources" class="cites">${citeLinks(k.cite, known)}</td>
         </tr>`,

@@ -127,9 +127,12 @@ export function yearOf(v: unknown): number | null {
  * The years a keeper served, in words: "1791–1795", "1880" (one year), "from 1855", "until 1884",
  * "12 May 1880 – 1884"; "Not recorded" when neither end is known.
  */
-export function yearSpan(from: unknown, to: unknown): string {
-  const a = formatYearish(from);
-  const b = formatYearish(to);
+export function yearSpan(from: unknown, to: unknown, fromApprox = false, toApprox = false): string {
+  const fa = formatYearish(from);
+  const fb = formatYearish(to);
+  // "about" when the source gives only an approximate year (research/STORY_GUIDE.md: from_approx / to_approx)
+  const a = fa && fromApprox ? `c. ${fa}` : fa;
+  const b = fb && toApprox ? `c. ${fb}` : fb;
   if (a && b) {
     if (a === b) return a;
     const spaced = a.includes(' ') || b.includes(' ');

@@ -21,7 +21,7 @@ describe('the keepers roster', () => {
     expect(out).toContain('Acting keeper');
     expect(out).toContain('1791–1795');
     expect(out).toContain('from 1855');
-    expect(out).toContain('1880–1884'); // years given as strings
+    expect(out).toContain('c. 1880 – 1884'); // years given as strings, the first one approximate
     expect(out).not.toMatch(/null|undefined|NaN/);
   });
 
