@@ -2,7 +2,9 @@
   "id": "ca-nl-cape-st-francis",
   "name": "Cape St. Francis Lighthouse",
   "other_names": [
-    "Cape St Francis Lighthouse"
+    "Cape St Francis Lighthouse",
+    "Cape St. Francis",
+    "Cape St. Francis Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -32,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1957,
+    "first_lit": 1877,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 29.0,
-    "range_nm": 15.0,
+    "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN835",
     "ccg_list_number": "N499",
-    "nga": "110-1844"
+    "nga": "110-1844",
+    "admiralty": "H468"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1957,
@@ -110,6 +125,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2503341103",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1293",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape St. Francis to Renews",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl499-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,7 +152,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -137,9 +166,50 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1293",
+      "part": "wikidata:Q106767955",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N499",
+      "part": "wikidata:Q106767955",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-st-francis",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1957
+        },
+        {
+          "source": "rowlett",
+          "value": 1877
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

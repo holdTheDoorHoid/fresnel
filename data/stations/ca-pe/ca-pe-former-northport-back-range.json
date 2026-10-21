@@ -1,8 +1,11 @@
 {
   "id": "ca-pe-former-northport-back-range",
-  "name": "Former Northport Back Range Light",
+  "name": "Northport Range Lights",
   "other_names": [
-    "phare de Northport (ancien)"
+    "Former Northport Back Range Light",
+    "phare de Northport (ancien)",
+    "Northport Range Rear",
+    "Northport Range (Former)"
   ],
   "country": "CA",
   "region": "PE",
@@ -11,21 +14,21 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.808333,
-    "lon": -64.052778,
+    "lat": 46.79396,
+    "lon": -64.06215,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
-      "material": "wood",
+      "material": null,
       "built": 1897,
-      "height_m": 13.0,
+      "height_m": null,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -48,10 +51,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -59,13 +62,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
@@ -134,29 +137,86 @@
       "label": "ARLHS World List of Lights CAN355",
       "url": "https://wlol.arlhs.com/lighthouse/CAN355.html",
       "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7059632",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Northport_Range_Lights",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=932",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=991",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q47007621",
-      "part": "wikidata:Q47007621",
+      "part": "station",
       "fields": [
         "aton",
         "county",
         "events",
         "kind",
         "light",
-        "location",
-        "name",
         "photos",
-        "region",
+        "region"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7059632",
+      "part": "wikidata:Q7059632",
+      "fields": [
+        "name",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:932",
+      "part": "wikidata:Q7059632",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:991",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:northport-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

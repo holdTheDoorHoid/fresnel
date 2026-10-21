@@ -3,7 +3,10 @@
   "name": "New London Lighthouse",
   "other_names": [
     "phare de New London",
-    "New London Range Rear Lighthouse"
+    "New London Range Rear Lighthouse",
+    "New London Range Rear",
+    "New London",
+    "Yankee Hill"
   ],
   "country": "CA",
   "region": "PE",
@@ -36,11 +39,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso R 4s",
-    "focal_height_m": 13.0,
+    "characteristic": "Iso W 4s",
+    "focal_height_m": 13.2,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -73,10 +76,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN341",
     "ccg_list_number": "A1060.01",
-    "nga": "110-7960"
+    "nga": "110-7960",
+    "admiralty": "H1130.05"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -86,8 +90,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -153,6 +157,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/366707075",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=939",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -164,7 +183,6 @@
         "aton",
         "county",
         "events",
-        "light",
         "name",
         "photos",
         "region",
@@ -180,9 +198,50 @@
         "kind",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:939",
+      "part": "wikidata:Q30575026",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1060.01",
+      "part": "wikidata:Q30575026",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:new-london-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Iso W 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Iso R 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

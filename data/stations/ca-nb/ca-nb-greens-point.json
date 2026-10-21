@@ -3,7 +3,10 @@
   "name": "Green's Point Lighthouse",
   "other_names": [
     "Letete Passage Lighthouse",
-    "L'Etete Passage Lighthouse"
+    "L'Etete Passage Lighthouse",
+    "Green’s Point (Letete Passage)",
+    "Green's Point",
+    "L'Etete Passage"
   ],
   "country": "CA",
   "region": "NB",
@@ -12,8 +15,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.038768,
-    "lon": -66.891793,
+    "lat": 45.037241,
+    "lon": -66.893452,
     "precision": "exact",
     "from": "osm"
   },
@@ -22,37 +25,53 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Green's Point Lighthouse",
       "type": null,
       "material": null,
       "built": 1903,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 45.038768,
+        "lon": -66.891793
+      }
+    },
+    {
+      "role": "fog_signal",
+      "name": "Letete Passage Fog signal",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 4.0,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1879,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
     "focal_height_m": 5.0,
     "range_nm": null,
-    "fog_signal": null,
+    "fog_signal": "horn",
     "from": "osm"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN214",
-    "ccg_list_number": null,
-    "nga": "110-11208"
+    "ccg_list_number": "A71",
+    "nga": "110-11208",
+    "admiralty": "H4120"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Greens Point Light Association",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -60,21 +79,40 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
+    {
+      "year": 1879,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1903,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1999,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -115,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1312425144",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1312426168",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1024",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,13 +196,70 @@
       "key": "osm:node/1312425144",
       "part": "wikidata:Q136685572",
       "fields": [
-        "light",
+        "light"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1312426168",
+      "part": "ccg_list_of_lights:A71",
+      "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1024",
+      "part": "wikidata:Q136685572",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A71",
+      "part": "ccg_list_of_lights:A71",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:green-s-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

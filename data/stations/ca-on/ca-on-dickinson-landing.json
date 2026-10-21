@@ -2,7 +2,8 @@
   "id": "ca-on-dickinson-landing",
   "name": "Dickinson Landing Lighthouse",
   "other_names": [
-    "phare de Dickinson Landing"
+    "phare de Dickinson Landing",
+    "Dickinson Landing"
   ],
   "country": "CA",
   "region": "ON",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1865,
     "deactivated": 1950,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
@@ -48,10 +49,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "St",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -59,16 +60,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1865,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1891,
       "event": "built",
@@ -115,6 +122,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4244776460",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1451",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,9 +158,43 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1451",
+      "part": "wikidata:Q111159851",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onse:dickinson-landing",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1891
+        },
+        {
+          "source": "rowlett",
+          "value": 1865
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

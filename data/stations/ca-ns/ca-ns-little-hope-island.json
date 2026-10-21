@@ -1,0 +1,164 @@
+{
+  "id": "ca-ns-little-hope-island",
+  "name": "Little Hope Island",
+  "other_names": [],
+  "country": "CA",
+  "region": "NS",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.80964,
+    "lon": -64.789427,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1865,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN279",
+    "ccg_list_number": "A393",
+    "nga": "10300",
+    "admiralty": "H3744"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1865,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2003,
+      "event": "destroyed",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3522021730",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2026",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/3522021730",
+      "part": "lighthousefriends:2026",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2026",
+      "part": "lighthousefriends:2026",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:little-hope-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "ca-nb-hendry-farm",
+  "name": "Hendry Farm",
+  "other_names": [],
+  "country": "CA",
+  "region": "NB",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.733261,
+    "lon": -66.048349,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": 1876,
+    "deactivated": 1995,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN520",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "Village of Cambridge-Narrows",
+  "ownership": "local",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1893,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1995,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1518935614",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1155",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/1518935614",
+      "part": "lighthousefriends:1155",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1155",
+      "part": "lighthousefriends:1155",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:hendry-farm",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

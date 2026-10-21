@@ -1,7 +1,9 @@
 {
   "id": "ca-qc-saint-simeon",
   "name": "Phare de Saint-Siméon",
-  "other_names": [],
+  "other_names": [
+    "Saint-Siméon"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -23,28 +25,29 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 6.2,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso R 2s",
+    "focal_height_m": 8.5,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "A1835",
+    "nga": "3656",
+    "admiralty": "H2168"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1128318326",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1756",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Rivière du Loup - Sorel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl18238-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,9 +113,65 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1756",
+      "part": "osm:way/1128318326",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1835",
+      "part": "osm:way/1128318326",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcc:saint-sim-on",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "osm",
+          "value": [
+            47.84375,
+            -69.87663
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            47.83992,
+            -69.87305
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            47.83992,
+            -69.87306
+          ]
+        }
+      ],
+      "distance_m": 503,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

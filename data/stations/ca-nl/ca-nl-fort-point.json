@@ -1,0 +1,194 @@
+{
+  "id": "ca-nl-fort-point",
+  "name": "Fort Point",
+  "other_names": [
+    "Fort Point (Admiral’s Point)",
+    "Fort Point Light Station",
+    "Admiral's Point"
+  ],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 48.365561,
+    "lon": -53.346041,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 12.4,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": 1874,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 23.9,
+    "range_nm": 15.0,
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN746",
+    "ccg_list_number": "N462",
+    "nga": "1696",
+    "admiralty": "H520"
+  },
+  "agency": "Trinity Historical Society (Fort Point Military",
+  "ownership": "nonprofit",
+  "access": {
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
+  },
+  "staffing": {
+    "status": "staffed",
+    "as_of": "2010",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Fisheries and Oceans Canada page of 23 names has the same list. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+        "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+        "date": "2019-09-24"
+      }
+    ]
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2003,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1446330301",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1249",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+      "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/1446330301",
+      "part": "ca_staffed_lightstations:nl-fort-point",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1249",
+      "part": "ca_staffed_lightstations:nl-fort-point",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N462",
+      "part": "ca_staffed_lightstations:nl-fort-point",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:fort-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nl-fort-point",
+      "part": "ca_staffed_lightstations:nl-fort-point",
+      "fields": [
+        "access",
+        "staffing"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,13 +1,15 @@
 {
   "id": "ca-nb-roaring-bull",
   "name": "Roaring Bull",
-  "other_names": [],
+  "other_names": [
+    "Pea Point"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 45.03907,
     "lon": -66.807812,
@@ -23,33 +25,34 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 10.6,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 5.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "osm"
+    "characteristic": "F W",
+    "focal_height_m": 17.3,
+    "range_nm": 12.0,
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN366",
+    "ccg_list_number": "A81",
+    "nga": "11192",
+    "admiralty": "H4114"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +60,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1965,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +91,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1272003288",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1205",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,16 +114,74 @@
       "key": "osm:way/1272003288",
       "part": "osm:way/1272003288",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1205",
+      "part": "osm:way/1272003288",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A81",
+      "part": "osm:way/1272003288",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:pea-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "F W"
+        },
+        {
+          "source": "osm",
+          "value": "Fl R 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "osm",
+          "value": 5.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 17.3
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

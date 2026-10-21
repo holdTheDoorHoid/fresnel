@@ -38,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 31.0,
-    "range_nm": null,
+    "focal_height_m": 33.4,
+    "range_nm": 19.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +57,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN454",
+    "ccg_list_number": "A289",
+    "nga": "10596",
+    "admiralty": "H3812"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -76,7 +77,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -89,10 +90,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1831,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1991,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2026,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -108,6 +121,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1488662412",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1682",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl271-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,8 +157,46 @@
       "key": "osm:way/1488662412",
       "part": "wikidata:Q137827360",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1682",
+      "part": "wikidata:Q137827360",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A289",
+      "part": "wikidata:Q137827360",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:seal-island-2",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:seal-island-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],
@@ -139,7 +205,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Fl W 10s"
         },
         {
@@ -148,6 +214,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1830
+        },
+        {
+          "source": "rowlett",
+          "value": 1831
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

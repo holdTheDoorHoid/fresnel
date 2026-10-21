@@ -32,23 +32,24 @@
     }
   ],
   "light": {
-    "first_lit": 1959,
+    "first_lit": 1879,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 3s",
-    "focal_height_m": 35.0,
+    "focal_height_m": 35.1,
     "range_nm": 20.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN332",
     "ccg_list_number": "A97",
-    "nga": "110-11148"
+    "nga": "110-11148",
+    "admiralty": "H4096"
   },
-  "agency": null,
+  "agency": "Nature Conservancy of Canada (Split Rock Trail/Musquash Head Lighthouse )",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -59,8 +60,8 @@
     "as_of": "1980"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,6 +75,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1879,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1959,
@@ -123,6 +130,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/910134605",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1373",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,7 +156,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -153,8 +174,34 @@
       "key": "osm:way/910134605",
       "part": "wikidata:Q106465459",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1373",
+      "part": "wikidata:Q106465459",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A97",
+      "part": "wikidata:Q106465459",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:musquash-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
@@ -163,7 +210,15 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
           "value": "active"
         },
         {
@@ -176,6 +231,20 @@
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1959
+        },
+        {
+          "source": "rowlett",
+          "value": 1879
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

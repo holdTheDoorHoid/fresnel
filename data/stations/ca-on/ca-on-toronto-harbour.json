@@ -2,7 +2,10 @@
   "id": "ca-on-toronto-harbour",
   "name": "Toronto Harbour Light",
   "other_names": [
-    "Toronto Harbour Lighthouse"
+    "Toronto Harbour Lighthouse",
+    "Toronto Harbour",
+    "Toronto Harbour Aquatic Park",
+    "\"Tommy Thompson\""
   ],
   "country": "CA",
   "region": "ON",
@@ -36,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 10s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 22.5,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -48,8 +51,8 @@
     "ccg_list_number": "I509.2",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Toronto (Tommy Thompson Park)",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -119,6 +122,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/878933152",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1458",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Ontario",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw4034-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -130,7 +148,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,6 +168,30 @@
       "key": "osm:way/878933152",
       "part": "wikidata:Q7826403",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1458",
+      "part": "wikidata:Q7826403",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I509.2",
+      "part": "wikidata:Q7826403",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:toronto-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

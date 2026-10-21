@@ -4,7 +4,10 @@
   "other_names": [
     "phare d'East Point",
     "East Point Lighthouse",
-    "Saturna Island"
+    "Saturna Island",
+    "East Point (Saturna Island)",
+    "Saturna Island Sector Light",
+    "East Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -34,14 +37,14 @@
     }
   ],
   "light": {
-    "first_lit": 1987,
+    "first_lit": 1888,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 37.0,
+    "focal_height_m": 36.9,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +60,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN448",
+    "ccg_list_number": "P264",
+    "nga": "13596",
+    "admiralty": "G5358"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +76,8 @@
     "as_of": "1996"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -83,10 +87,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1888,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1895,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1948,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1987,
@@ -135,6 +151,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1682615970",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14514",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1109",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Haro Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2228-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,7 +182,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -159,8 +194,42 @@
       "key": "osm:node/1682615970",
       "part": "wikidata:Q45324606",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14514",
+      "part": "wikidata:Q45324606",
+      "fields": [
+        "agency",
+        "ownership"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1109",
+      "part": "wikidata:Q45324606",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P264",
+      "part": "wikidata:Q45324606",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:east-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
@@ -169,7 +238,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Fl W 15s"
         },
         {
@@ -178,6 +247,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1987
+        },
+        {
+          "source": "rowlett",
+          "value": 1888
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1950
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

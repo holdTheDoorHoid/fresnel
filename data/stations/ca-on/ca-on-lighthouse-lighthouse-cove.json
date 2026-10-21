@@ -2,44 +2,46 @@
   "id": "ca-on-lighthouse-lighthouse-cove",
   "name": "Lighthouse/Lighthouse Cove",
   "other_names": [
-    "Thames River Lighthouse"
+    "Thames River Lighthouse",
+    "Thames River Range Rear",
+    "Thames River Entrance"
   ],
   "country": "CA",
   "region": "ON",
   "county": "Essex County",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 42.317554,
     "lon": -82.453302,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": null,
       "built": 1815,
-      "height_m": null,
+      "height_m": 6.3,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1810,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 5s",
+    "focal_height_m": 6.1,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -50,11 +52,11 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN594",
+    "ccg_list_number": "I712",
     "nga": null
   },
-  "agency": null,
+  "agency": "Lower Thames Valley Conservation Authority (Lighthouse Conservation Area)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -65,8 +67,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -76,10 +78,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1810,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1815,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1818,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2002,
@@ -116,6 +130,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6028224388",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1041",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake St. Clair",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw7101-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,7 +155,6 @@
       "fields": [
         "county",
         "events",
-        "kind",
         "name",
         "photos",
         "region",
@@ -141,9 +169,54 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1041",
+      "part": "wikidata:Q106458527",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I712",
+      "part": "wikidata:Q106458527",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:thames-river-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1815
+        },
+        {
+          "source": "rowlett",
+          "value": 1810
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

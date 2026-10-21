@@ -1,9 +1,11 @@
 {
   "id": "ca-nb-cape-tormentine-range",
-  "name": "Cape Tormentine range Lights",
+  "name": "Cape Tormentine range lights",
   "other_names": [
     "Cape Tormentine front range light",
-    "Cape Tormentine rear range light"
+    "Cape Tormentine rear range light",
+    "Cape Tormentine Outer Wharf",
+    "Cape Tormentine Outer Wharf Range Front"
   ],
   "country": "CA",
   "region": "NB",
@@ -12,10 +14,10 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.134872,
-    "lon": -63.772203,
+    "lat": 46.134833,
+    "lon": -63.772222,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -26,7 +28,7 @@
       "type": null,
       "material": "wood",
       "built": null,
-      "height_m": null,
+      "height_m": 10.1,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -45,29 +47,56 @@
         "lat": 46.131125,
         "lon": -63.78571
       }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": "Cape Tormentine range lights",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.134062,
+        "lon": -63.770692
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1901,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 2s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 12.0,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN112",
     "ccg_list_number": "A1090",
-    "nga": "110-7824"
+    "nga": "110-7824",
+    "admiralty": "H1308"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -75,16 +104,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -108,6 +144,16 @@
     }
   ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109718965",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cape_Tormentine_range_lights",
+      "kind": "commons"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q28375884",
@@ -137,21 +183,52 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1635831641",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1635832713",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1635833362",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=994",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1085-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q109718965",
+      "part": "wikidata:Q109718965",
+      "fields": [
+        "county",
+        "kind",
+        "name",
+        "region"
+      ]
+    },
     {
       "source": "wikidata",
       "key": "wikidata:Q28375884",
       "part": "wikidata:Q28375884",
       "fields": [
         "aton",
-        "county",
-        "kind",
-        "light",
-        "location",
         "photos",
-        "region",
         "structures"
       ]
     },
@@ -169,9 +246,80 @@
       "key": "osm:node/1635831641",
       "part": "wikidata:Q28375885",
       "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1635832713",
+      "part": "wikidata:Q109718965",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1635833362",
+      "part": "osm:node/1635833362",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:994",
+      "part": "wikidata:Q28375884",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1090",
+      "part": "wikidata:Q28375884",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:cape-tormentine-outer-wharf-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

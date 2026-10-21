@@ -5,7 +5,9 @@
     "phare de Peter Island",
     "Peter Island Lighthouse",
     "Peter Island Light",
-    "Peter Island"
+    "Peter Island",
+    "Peter's Island",
+    "Westport"
   ],
   "country": "CA",
   "region": "NS",
@@ -25,24 +27,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
       "built": 1909,
-      "height_m": null,
+      "height_m": 13.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1850,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl Y 5s",
+    "characteristic": "LFl G 6s",
     "focal_height_m": 18.0,
-    "range_nm": 8.0,
+    "range_nm": 6.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -53,14 +55,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN374",
+    "ccg_list_number": "A227",
+    "nga": "10872",
+    "admiralty": "H3878"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of Digby",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -68,21 +71,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1909,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2021,
@@ -119,6 +134,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1802216619",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=16453",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1343",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,10 +180,97 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:16453",
+      "part": "wikidata:Q28375834",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1343",
+      "part": "wikidata:Q28375834",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A227",
+      "part": "wikidata:Q28375834",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:peter-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl G 6s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl Y 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1909
+        },
+        {
+          "source": "rowlett",
+          "value": 1850
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1909
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

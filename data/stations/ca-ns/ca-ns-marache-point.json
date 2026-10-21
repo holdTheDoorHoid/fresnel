@@ -4,7 +4,10 @@
   "other_names": [
     "Arichat light",
     "Arichat lighthouse",
-    "Marache Point lighthouse"
+    "Marache Point lighthouse",
+    "Marache Point",
+    "Arichat",
+    "Cape Auguet"
   ],
   "country": "CA",
   "region": "NS",
@@ -18,7 +21,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -27,31 +30,32 @@
       "type": null,
       "material": "wood",
       "built": null,
-      "height_m": null,
+      "height_m": 7.9,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1851,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F W",
+    "focal_height_m": 10.2,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN303",
+    "ccg_list_number": "A708",
+    "nga": "9356",
+    "admiralty": "H3404"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,8 +65,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -70,7 +74,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1851,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -99,6 +116,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2331973223",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1659",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,6 +152,35 @@
       "part": "wikidata:Q28375805",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1659",
+      "part": "wikidata:Q28375805",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A708",
+      "part": "wikidata:Q28375805",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:marache-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

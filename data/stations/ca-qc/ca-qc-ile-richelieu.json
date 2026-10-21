@@ -1,0 +1,146 @@
+{
+  "id": "ca-qc-ile-richelieu",
+  "name": "Île Richelieu",
+  "other_names": [],
+  "country": "CA",
+  "region": "QC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 46.642639,
+    "lon": -71.909778,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 12.0,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": 1816,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F F G Y",
+    "focal_height_m": 6.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN1105",
+    "ccg_list_number": "A2001.8",
+    "nga": "4244",
+    "admiralty": "H2349"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1816,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1971,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1487",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Rivière du Loup - Sorel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl18238-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcs.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1487",
+      "part": "lighthousefriends:1487",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A2001.8",
+      "part": "lighthousefriends:1487",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcs:le-richelieu",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

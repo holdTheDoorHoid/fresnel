@@ -1,0 +1,179 @@
+{
+  "id": "ca-on-bronte",
+  "name": "Bronte",
+  "other_names": [
+    "Bronte West"
+  ],
+  "country": "CA",
+  "region": "ON",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.392855,
+    "lon": -79.705839,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": "Bronte",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 5.0,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights",
+      "location": {
+        "lat": 43.392683,
+        "lon": -79.70671
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Bronte West",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 5.2,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 7.4,
+    "range_nm": 3.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "I530",
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13384298607",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/385027415",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2272",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Ontario",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw4034-en.php",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/13384298607",
+      "part": "lighthousefriends:2272",
+      "fields": [
+        "kind",
+        "region"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/385027415",
+      "part": "osm:node/385027415",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2272",
+      "part": "lighthousefriends:2272",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I530",
+      "part": "lighthousefriends:2272",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I530.5",
+      "part": "osm:node/385027415",
+      "fields": [
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

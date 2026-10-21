@@ -3,7 +3,8 @@
   "name": "Seacow Head Light",
   "other_names": [
     "phare de Seacow Head",
-    "Seacow Head Lighthouse"
+    "Seacow Head Lighthouse",
+    "Seacow Head"
   ],
   "country": "CA",
   "region": "PE",
@@ -37,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 12s",
-    "focal_height_m": 27.0,
+    "focal_height_m": 26.8,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -83,12 +84,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN453",
     "ccg_list_number": "A1018",
-    "nga": "110-8308"
+    "nga": "110-8308",
+    "admiralty": "H1046"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Friends of Seacow Head Lighthouse",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -96,13 +98,13 @@
     "as_of": "1959"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -180,6 +182,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1921049913",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=16732",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=977",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -192,7 +214,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -206,6 +227,38 @@
       "part": "wikidata:Q7440295",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:16732",
+      "part": "wikidata:Q7440295",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:977",
+      "part": "wikidata:Q7440295",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1018",
+      "part": "wikidata:Q7440295",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:seacow-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

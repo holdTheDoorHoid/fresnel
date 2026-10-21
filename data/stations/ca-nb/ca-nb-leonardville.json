@@ -1,7 +1,9 @@
 {
   "id": "ca-nb-leonardville",
   "name": "Leonardville Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Leonardville"
+  ],
   "country": "CA",
   "region": "NB",
   "county": "Charlotte County",
@@ -9,10 +11,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.968231,
-    "lon": -66.955103,
+    "lat": 44.968222,
+    "lon": -66.955111,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -37,19 +39,20 @@
     "focal_height_m": 20.0,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN274",
     "ccg_list_number": "A46",
-    "nga": "110-11264"
+    "nga": "110-11264",
+    "admiralty": "H4146"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,13 +60,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -87,6 +90,21 @@
       "label": "ARLHS World List of Lights CAN274",
       "url": "https://wlol.arlhs.com/lighthouse/CAN274.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1023",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,17 +118,40 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1023",
+      "part": "wikidata:Q106245438",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A46",
+      "part": "wikidata:Q106245438",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:leonardville",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

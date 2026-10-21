@@ -26,21 +26,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 13.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1791,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 7.5s",
-    "focal_height_m": 35.0,
+    "characteristic": "Fl W 7.5",
+    "focal_height_m": 35.3,
     "range_nm": 19.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,14 +56,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN365",
+    "ccg_list_number": "A100",
+    "nga": "11100",
+    "admiralty": "H4082"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -71,16 +72,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1791,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1961,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2006,
       "event": "heritage_designated",
@@ -116,6 +129,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1070597232",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1377",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,12 +166,57 @@
       "key": "osm:way/1070597232",
       "part": "wikidata:Q55206245",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1377",
+      "part": "wikidata:Q55206245",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A100",
+      "part": "wikidata:Q55206245",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:partridge-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 7.5"
+        },
+        {
+          "source": "osm",
+          "value": "Fl W 7.5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

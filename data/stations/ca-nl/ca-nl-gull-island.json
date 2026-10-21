@@ -2,7 +2,11 @@
   "id": "ca-nl-gull-island",
   "name": "Gull Island Lighthouse",
   "other_names": [
-    "phare de l’île Gull"
+    "phare de l’île Gull",
+    "Gull Island (Cape St. John)",
+    "Gull Island Light Station (Cape St. John)",
+    "Gull Island",
+    "Cape St. John"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,12 +15,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 49.996784,
-    "lon": -55.365131,
+    "lat": 49.99675,
+    "lon": -55.365111,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,21 +29,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 5.2,
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 160.0,
+    "range_nm": 17.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,14 +59,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN660",
+    "ccg_list_number": "N326",
+    "nga": "1172",
+    "admiralty": "H686"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,21 +75,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1884,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1989,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -95,6 +112,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q47377933",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1281",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Notre Dame Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl326-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,14 +137,59 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1281",
+      "part": "wikidata:Q47377933",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N326",
+      "part": "wikidata:Q47377933",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:gull-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

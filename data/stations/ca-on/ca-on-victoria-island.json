@@ -1,0 +1,139 @@
+{
+  "id": "ca-on-victoria-island",
+  "name": "Victoria Island",
+  "other_names": [],
+  "country": "CA",
+  "region": "ON",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 48.081278,
+    "lon": -89.360139,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. I1161), a modern aid that took its place.",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 9.1,
+      "status": "lost",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": 1887,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 18.0,
+    "range_nm": 5.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN859",
+    "ccg_list_number": "I1161",
+    "nga": null
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2259",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Superior",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw1082-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onnw.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2259",
+      "part": "lighthousefriends:2259",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1161",
+      "part": "lighthousefriends:2259",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onnw:victoria-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -3,7 +3,10 @@
   "name": "Bay Bulls Lighthouse",
   "other_names": [
     "phare de Bay Bulls",
-    "Bull Head"
+    "Bull Head",
+    "Bay Bulls (Bull Head)",
+    "Bull Head (Bay Bulls) Light",
+    "Bay Bulls"
   ],
   "country": "CA",
   "region": "NL",
@@ -40,7 +43,7 @@
     "focal_height_m": 60.0,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +61,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN650",
     "ccg_list_number": "N508",
-    "nga": "110-1872"
+    "nga": "110-1872",
+    "admiralty": "H452"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -122,6 +126,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1654746729",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1305",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape St. Francis to Renews",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl499-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,8 +164,32 @@
       "key": "osm:node/1654746729",
       "part": "wikidata:Q33448470",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1305",
+      "part": "wikidata:Q33448470",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N508",
+      "part": "wikidata:Q33448470",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:bay-bulls",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership"
       ]
     }
   ],

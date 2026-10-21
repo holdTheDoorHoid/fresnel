@@ -3,7 +3,8 @@
   "name": "Egg Island Lighthouse",
   "other_names": [
     "phare d'Egg Island",
-    "Egg Island Light"
+    "Egg Island Light",
+    "Egg Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -23,24 +24,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "steel",
       "built": 1898,
       "height_m": 24.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": 1963,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 88.0,
-    "range_nm": 15.0,
+    "focal_height_m": 88.4,
+    "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,24 +59,39 @@
     "uscg_llnr": null,
     "arlhs": "CAN740",
     "ccg_list_number": "P579",
-    "nga": "111-12216"
+    "nga": "111-12216",
+    "admiralty": "G5658"
   },
   "agency": "CCG",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Coast Guard's 31 July 2024 release counts 25 other staffed stations in British Columbia without naming them. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -88,10 +104,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1963,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -128,6 +156,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1349709650",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14793",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1193",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Queen Charlotte Sound",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac5692-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,7 +198,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "registers",
@@ -161,9 +218,71 @@
       "key": "osm:way/1349709650",
       "part": "wikidata:Q45324677",
       "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14793",
+      "part": "wikidata:Q45324677",
+      "fields": [
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1193",
+      "part": "wikidata:Q45324677",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P579",
+      "part": "wikidata:Q45324677",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:egg-island",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-egg-island",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1963
+        },
+        {
+          "source": "rowlett",
+          "value": 1898
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1962
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

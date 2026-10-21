@@ -1,0 +1,148 @@
+{
+  "id": "ca-ns-glace-bay-range-front",
+  "name": "Glace Bay Range Front",
+  "other_names": [
+    "Glace Bay front range light"
+  ],
+  "country": "CA",
+  "region": "NS",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.196583,
+    "lon": -59.949028,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A772), a modern aid that took its place.",
+  "structures": [
+    {
+      "role": "front_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 5.5,
+      "status": "lost",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F R",
+    "focal_height_m": 8.4,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN957",
+    "ccg_list_number": "A772",
+    "nga": null,
+    "admiralty": "H752"
+  },
+  "agency": "private",
+  "ownership": "private",
+  "access": {
+    "level": "private",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": false,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "destroyed",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1695",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1695",
+      "part": "lighthousefriends:1695",
+      "fields": [
+        "kind",
+        "name",
+        "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A772",
+      "part": "lighthousefriends:1695",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:glace-bay-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

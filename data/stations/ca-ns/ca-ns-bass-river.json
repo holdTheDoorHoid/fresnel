@@ -1,7 +1,9 @@
 {
   "id": "ca-ns-bass-river",
   "name": "Bass River lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Bass River"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
@@ -44,12 +46,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN023",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H4022"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -57,16 +60,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1992,
       "event": "deactivated",
@@ -107,6 +116,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1748974265",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1012",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,6 +150,26 @@
       "part": "wikidata:Q30018280",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1012",
+      "part": "wikidata:Q30018280",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:bass-river",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

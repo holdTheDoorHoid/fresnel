@@ -3,7 +3,8 @@
   "name": "Leards Range Lights",
   "other_names": [
     "Leards Back Range Light",
-    "Leards Range Rear Light"
+    "Leards Range Rear Light",
+    "Leards Range Rear"
   ],
   "country": "CA",
   "region": "PE",
@@ -47,10 +48,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN513",
     "ccg_list_number": "A1009",
-    "nga": "110-8268"
+    "nga": "110-8268",
+    "admiralty": "H1028.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,6 +72,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2011,
       "event": "deactivated",
@@ -105,6 +113,16 @@
       "label": "Website",
       "url": "https://lighthousefriends.com/light.asp?ID=971",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=971",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,6 +146,23 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:971",
+      "part": "wikidata:Q6510000",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:leards-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership"
+      ]
     }
   ],
   "conflicts": [
@@ -140,6 +175,10 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
           "value": "inactive"
         }
       ],

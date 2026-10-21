@@ -1,7 +1,12 @@
 {
   "id": "ca-nb-fort-monckton",
   "name": "Fort Monckton Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Fort Monckton",
+    "Fort Monckton Point",
+    "Gaspareaux Point",
+    "Old Fort Point"
+  ],
   "country": "CA",
   "region": "NB",
   "county": "Westmorland County",
@@ -9,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.043233,
-    "lon": -64.070761,
+    "lat": 46.043228,
+    "lon": -64.070562,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,14 +29,14 @@
       "material": null,
       "built": 1908,
       "height_m": 7.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1971,
-    "deactivated": null,
+    "first_lit": 1908,
+    "deactivated": 2014,
     "lens": null,
     "characteristic": "Fl W 3s",
     "focal_height_m": 10.0,
@@ -44,7 +49,8 @@
     "uscg_llnr": null,
     "arlhs": "CAN183",
     "ccg_list_number": "A1086",
-    "nga": "110-7844"
+    "nga": "110-7844",
+    "admiralty": "H1304"
   },
   "agency": "Parks Canada",
   "ownership": "federal",
@@ -57,8 +63,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,10 +80,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1971,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1972,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2016,
+      "event": "removed",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -103,6 +133,16 @@
       "label": "ARLHS World List of Lights CAN183",
       "url": "https://wlol.arlhs.com/lighthouse/CAN183.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2133",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,17 +157,50 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2133",
+      "part": "wikidata:Q106514663",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:fort-monckton",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1971
+        },
+        {
+          "source": "rowlett",
+          "value": 1908
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,10 @@
 {
   "id": "ca-mb-winnipeg-beach-breakwater",
   "name": "Winnipeg Beach Breakwater Light",
-  "other_names": [],
+  "other_names": [
+    "Winnipeg Beach Breakwall",
+    "Winnipeg Beach"
+  ],
   "country": "CA",
   "region": "MB",
   "county": null,
@@ -9,10 +12,10 @@
   "setting": "pier",
   "kind": "pier_light",
   "location": {
-    "lat": 50.505905,
-    "lon": -96.963455,
+    "lat": 50.505861,
+    "lon": -96.963444,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -34,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
-    "focal_height_m": 10.8,
-    "range_nm": null,
+    "focal_height_m": 10.3,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -82,6 +85,16 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q115237073",
       "kind": "wikidata"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Winnipeg",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw15631-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,16 +106,31 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1565",
+      "part": "wikidata:Q115237073",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:winnipeg-beach-3",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

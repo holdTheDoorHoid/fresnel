@@ -1,7 +1,9 @@
 {
   "id": "ca-on-bruce-bay",
   "name": "Bruce Bay",
-  "other_names": [],
+  "other_names": [
+    "McKay Island"
+  ],
   "country": "CA",
   "region": "ON",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -23,33 +25,33 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 9.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso W 4s",
+    "focal_height_m": 12.7,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN311",
+    "ccg_list_number": "I1050",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -57,16 +59,42 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
-  "stay": null,
-  "events": [],
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
+  "events": [
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +103,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/311651873",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1142",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Joseph Channel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw1046-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onno.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,9 +131,67 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1142",
+      "part": "osm:node/311651873",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1050",
+      "part": "osm:node/311651873",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onno:mckay-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onno:mckay-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

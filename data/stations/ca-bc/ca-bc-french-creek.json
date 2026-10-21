@@ -1,7 +1,9 @@
 {
   "id": "ca-bc-french-creek",
   "name": "French Creek",
-  "other_names": [],
+  "other_names": [
+    "French Creek Harbour Entrance"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
@@ -19,7 +21,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "French Creek Harbour Entrance",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights",
+      "location": {
+        "lat": 49.351944,
+        "lon": -124.354944
+      }
+    },
+    {
+      "role": "tower",
+      "name": "French Creek",
       "type": null,
       "material": null,
       "built": null,
@@ -37,14 +54,15 @@
     "focal_height_m": 1.4,
     "range_nm": 3.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P491",
+    "nga": null,
+    "admiralty": "G5509"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +93,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1689407659",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac4475-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,17 +107,33 @@
       "part": "osm:node/1689407659",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P491",
+      "part": "osm:node/1689407659",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P491.1",
+      "part": "ccg_list_of_lights:P491.1",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A small modern aid with no history in any source: OpenStreetMap classes it a minor light (seamark light_minor) and, for most, the Coast Guard list gives only a tower or beacon; no heritage list, Wikidata item, Lighthouse Friends page or Lighthouse Directory entry covers it. DESIGN section 1 leaves such beacons out. Unhide if a source gives it a keeper, a history or a heritage listing.",
   "updated": "2026-10-21"
 }

@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Cape George",
     "Cape George Lighthouse",
-    "Cape George"
+    "Cape George",
+    "Cape George (Antigonish)",
+    "Antigonish"
   ],
   "country": "CA",
   "region": "NS",
@@ -26,22 +28,22 @@
       "name": null,
       "type": "concrete",
       "material": "concrete",
-      "built": null,
-      "height_m": null,
+      "built": 1968,
+      "height_m": 13.7,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1861,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(3) W 12s",
-    "focal_height_m": 121.0,
+    "focal_height_m": 121.3,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +59,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN98",
+    "ccg_list_number": "A892",
+    "nga": "8664",
+    "admiralty": "H1234"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "North Shore Development Association",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -82,6 +85,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1861,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1968,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -117,6 +132,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/637528749",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14893",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1392",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - East",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl8832-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsnw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,12 +175,62 @@
       "key": "osm:way/637528749",
       "part": "wikidata:Q28375755",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14893",
+      "part": "wikidata:Q28375755",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1392",
+      "part": "wikidata:Q28375755",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A892",
+      "part": "wikidata:Q28375755",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsnw:cape-george",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1861
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1968
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

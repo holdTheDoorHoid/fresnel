@@ -2,7 +2,8 @@
   "id": "ca-nb-machias-seal-island",
   "name": "Machias Seal Island Lighthouse",
   "other_names": [
-    "phare de l'Île-Machias-Seal"
+    "phare de l'Île-Machias-Seal",
+    "Machias Seal Island"
   ],
   "country": "CA",
   "region": "NB",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.501883,
-    "lon": -67.101886,
+    "lat": 44.501833,
+    "lon": -67.101139,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1915,
+    "first_lit": 1832,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 3s",
-    "focal_height_m": 18.0,
-    "range_nm": 17.0,
+    "focal_height_m": 25.0,
+    "range_nm": 18.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -67,24 +68,39 @@
     "uscg_llnr": null,
     "arlhs": "CAN292",
     "ccg_list_number": "A6",
-    "nga": "110-11444"
+    "nga": "110-11444",
+    "admiralty": "H4192"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024",
+    "basis": "Named in the Coast Guard's April 2010 list, and a newer source speaks of this station.",
+    "check": false,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Western Producer (March 2025), on Machias Seal Island in summer 2024: two residents, both lighthouse keepers",
+        "url": "https://www.producer.com/farm-family/canadian-american-disputed-island-where-puffins-rule/",
+        "date": "2025-03"
+      }
+    ]
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -97,10 +113,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1914,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1915,
@@ -154,6 +182,36 @@
       "label": "ARLHS World List of Lights CAN292",
       "url": "https://wlol.arlhs.com/lighthouse/CAN292.html",
       "kind": "register"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14913",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1371",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Western Producer (March 2025), on Machias Seal Island in summer 2024: two residents, both lighthouse keepers",
+      "url": "https://www.producer.com/farm-family/canadian-american-disputed-island-where-puffins-rule/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -166,8 +224,6 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "photos",
@@ -175,10 +231,87 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14913",
+      "part": "wikidata:Q21030715",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1371",
+      "part": "wikidata:Q21030715",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A6",
+      "part": "wikidata:Q21030715",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:machias-seal-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nb-machias-seal-island",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 18.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 25.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1915
+        },
+        {
+          "source": "rowlett",
+          "value": 1832
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1914
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

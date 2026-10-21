@@ -2,7 +2,8 @@
   "id": "ca-ns-port-george",
   "name": "Port George lighthouse",
   "other_names": [
-    "Port George Lighthouse"
+    "Port George Lighthouse",
+    "Port George"
   ],
   "country": "CA",
   "region": "NS",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.003009,
-    "lon": -65.160518,
+    "lat": 45.006944,
+    "lon": -65.156111,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -26,30 +27,30 @@
       "material": "wood",
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1999,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN406",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Friends of Port George Lighthouse",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -68,7 +69,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1888,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1999,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -92,6 +106,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Port_George_lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1329",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -101,15 +125,56 @@
       "part": "wikidata:Q28375837",
       "fields": [
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1329",
+      "part": "wikidata:Q28375837",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:port-george",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            45.00301,
+            -65.16052
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            45.00694,
+            -65.15611
+          ]
+        }
+      ],
+      "distance_m": 558,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

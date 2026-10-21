@@ -2,7 +2,12 @@
   "id": "ca-on-burlington-canal-front-range",
   "name": "Burlington Canal Front Range Lighthouse",
   "other_names": [
-    "Burlington Front Light"
+    "Burlington Front Light",
+    "Burlington Canal Pier",
+    "Burlington Canal North Pier Outer",
+    "Burlington Canal South Pier Outer",
+    "Burlington Canal South Pier",
+    "Burlington Canal Range Front"
   ],
   "country": "CA",
   "region": "ON",
@@ -16,12 +21,12 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Burlington Canal Front Range Lighthouse",
       "type": null,
       "material": null,
       "built": null,
@@ -29,27 +34,38 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "Burlington Canal South Pier Outer",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 13.1,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1842,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 9.1,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN618",
+    "ccg_list_number": "I533",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,7 +84,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1842,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1909,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -87,6 +116,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/558743402",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1067",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Ontario",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw4034-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,6 +150,42 @@
       "part": "wikidata:Q112199682",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1067",
+      "part": "wikidata:Q112199682",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I533",
+      "part": "wikidata:Q112199682",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I535",
+      "part": "ccg_list_of_lights:I535",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:burlington-canal-south-pier",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -4,8 +4,13 @@
   "other_names": [
     "phare du Cap de Richibucto",
     "Richibucto Head Lightstation",
+    "Cap-Lumière lighthouse",
     "Phare du Cap de Richibucto",
-    "Phare du Cap de Richibouctou"
+    "Phare du Cap de Richibouctou",
+    "Richibucto Head (Cap Lumière)",
+    "Richibucto Cape",
+    "Richibucto Head",
+    "Cap Lumière"
   ],
   "country": "CA",
   "region": "NB",
@@ -19,12 +24,12 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Richibucto Head Lighthouse",
       "type": null,
       "material": null,
       "built": 1865,
@@ -32,24 +37,36 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "Cap-Lumière lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1901,
-    "deactivated": 1901,
+    "first_lit": 1865,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 18.0,
-    "range_nm": 14.0,
+    "focal_height_m": 18.1,
+    "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN430",
     "ccg_list_number": "A1128",
-    "nga": "110-7660"
+    "nga": "110-7660",
+    "admiralty": "H1376"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -62,8 +79,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -77,6 +94,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1865,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1901,
@@ -102,6 +125,15 @@
       "license": null,
       "caption": null,
       "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NB-00820_-_Richibucto_Head_%28Cap_Lumiere%29_Lighthouse_%2851446031674%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/NB-00820_-_Richibucto_Head_%28Cap_Lumiere%29_Lighthouse_%2851446031674%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NB-00820_-_Richibucto_Head_%28Cap_Lumiere%29_Lighthouse_%2851446031674%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -116,9 +148,34 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q111630135",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cap-Lumi%C3%A8re_lighthouse",
+      "kind": "commons"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1336982521",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1229",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1085-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,12 +188,19 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q111630135",
+      "part": "wikidata:Q111630135",
+      "fields": [
+        "photos"
       ]
     },
     {
@@ -146,10 +210,55 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1229",
+      "part": "wikidata:Q111630135",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1128",
+      "part": "wikidata:Q106813386",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:richibucto-head",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

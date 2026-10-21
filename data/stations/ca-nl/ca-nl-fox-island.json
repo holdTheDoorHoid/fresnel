@@ -1,0 +1,113 @@
+{
+  "id": "ca-nl-fox-island",
+  "name": "Fox Island",
+  "other_names": [],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.354694,
+    "lon": -53.995528,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. N37), a modern aid that took its place.",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": null,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "N37",
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2200",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Placentia Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl144-en.php",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2200",
+      "part": "lighthousefriends:2200",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N37",
+      "part": "lighthousefriends:2200",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

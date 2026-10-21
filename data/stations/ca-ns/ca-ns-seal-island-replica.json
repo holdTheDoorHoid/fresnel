@@ -3,7 +3,9 @@
   "name": "Seal Island (replica) lighthouse",
   "other_names": [
     "Seal Island Light Museum",
-    "Seal Island (replica) Lighthouse"
+    "Seal Island (replica) Lighthouse",
+    "Seal Island Museum",
+    "Seal Island"
   ],
   "country": "CA",
   "region": "NS",
@@ -12,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 43.567143,
-    "lon": -65.580709,
+    "lat": 43.566843,
+    "lon": -65.580729,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "replica",
   "status_note": null,
@@ -49,10 +51,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Cape Sable Historical Society",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -60,16 +62,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1985,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -93,6 +102,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Seal_Island_%28replica%29_lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1357",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -103,16 +122,35 @@
       "fields": [
         "county",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1357",
+      "part": "wikidata:Q112944339",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:seal-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

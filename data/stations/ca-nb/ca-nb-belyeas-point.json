@@ -2,7 +2,8 @@
   "id": "ca-nb-belyeas-point",
   "name": "Belyea's Point Light",
   "other_names": [
-    "Belyea's Point Lighthouse"
+    "Belyea's Point Lighthouse",
+    "Belyeas Point"
   ],
   "country": "CA",
   "region": "NB",
@@ -25,31 +26,32 @@
       "type": null,
       "material": null,
       "built": 1882,
-      "height_m": null,
+      "height_m": 11.9,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1882,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 5s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 12.7,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN031",
     "ccg_list_number": "A122",
-    "nga": null
+    "nga": null,
+    "admiralty": "H4090.5"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,6 +76,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -109,6 +117,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/984690000",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1150",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Saint John River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1145-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,7 +143,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -133,6 +155,35 @@
       "part": "wikidata:Q4884948",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1150",
+      "part": "wikidata:Q4884948",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A122",
+      "part": "wikidata:Q4884948",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:belyeas-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

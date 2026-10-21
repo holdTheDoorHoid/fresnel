@@ -3,7 +3,8 @@
   "name": "Chatham Point Lighthouse",
   "other_names": [
     "phare de Chatham Point",
-    "Chatham Point Light"
+    "Chatham Point Light",
+    "Chatham Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -33,40 +34,55 @@
     }
   ],
   "light": {
-    "first_lit": 1957,
+    "first_lit": 1908,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 5s",
-    "focal_height_m": 6.5,
+    "focal_height_m": 6.4,
     "range_nm": 8.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN132",
     "ccg_list_number": "P518",
-    "nga": "111-12508"
+    "nga": "111-12508",
+    "admiralty": "G5590"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Coast Guard's 31 July 2024 release counts 25 other staffed stations in British Columbia without naming them. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -75,6 +91,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1957,
@@ -106,6 +134,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3772706521",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1189",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Johnstone Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac518-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,7 +170,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -130,9 +182,59 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1189",
+      "part": "wikidata:Q45764994",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P518",
+      "part": "wikidata:Q45764994",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:chatham-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-chatham-point",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1957
+        },
+        {
+          "source": "rowlett",
+          "value": 1908
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
     {
       "field": "location",
       "values": [
@@ -149,13 +251,27 @@
             50.33349,
             -125.44048
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            50.3334,
+            -125.4405
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            50.3335,
+            -125.44053
+          ]
         }
       ],
       "distance_m": 508,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

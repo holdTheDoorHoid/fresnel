@@ -40,7 +40,7 @@
     "focal_height_m": 57.9,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,12 +58,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN656",
     "ccg_list_number": "N509",
-    "nga": "110-1876"
+    "nga": "110-1876",
+    "admiralty": "H450"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Ferryland",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,13 +72,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -132,6 +133,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1654914071",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1306",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape St. Francis to Renews",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl499-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,9 +171,36 @@
       "key": "osm:node/1654914071",
       "part": "wikidata:Q18164801",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1306",
+      "part": "wikidata:Q18164801",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N509",
+      "part": "wikidata:Q18164801",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:ferryland-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "ca-nb-lighthouse-point",
   "name": "Lighthouse Point Lighthouse",
   "other_names": [
-    "Lighthouse Point"
+    "Lighthouse Point",
+    "Drews Head",
+    "Beaver Harbour"
   ],
   "country": "CA",
   "region": "NB",
@@ -32,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1876,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
-    "characteristic": "LFl W 15s",
-    "focal_height_m": 14.0,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 14.2,
     "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN162",
     "ccg_list_number": "A83",
-    "nga": "110-11184"
+    "nga": "110-11184",
+    "admiralty": "H4112"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -76,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1876,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1984,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1984,
@@ -126,6 +141,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1317899415",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1206",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -136,7 +166,6 @@
       "fields": [
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -163,6 +192,32 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1206",
+      "part": "wikidata:Q109516245",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A83",
+      "part": "wikidata:Q109516245",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:lighthouse-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -170,19 +225,33 @@
       "field": "light.characteristic",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "Iso W 6s"
+        },
+        {
           "source": "osm",
           "value": "LFl W 15s"
         },
         {
           "source": "wikidata",
           "value": "F W"
-        },
-        {
-          "source": "wikidata",
-          "value": "Iso W 6s"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1876
+        },
+        {
+          "source": "rowlett",
+          "value": 1875
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

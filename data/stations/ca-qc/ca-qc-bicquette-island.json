@@ -3,7 +3,8 @@
   "name": "Bicquette Island Lighthouse",
   "other_names": [
     "phare de l'île Bicquette",
-    "Ile Bicquette"
+    "Ile Bicquette",
+    "Île Bicquette"
   ],
   "country": "CA",
   "region": "QC",
@@ -58,10 +59,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN237",
     "ccg_list_number": "A1748",
-    "nga": "110-6768"
+    "nga": "110-6768",
+    "admiralty": "H2084"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,11 +73,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -127,6 +129,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1088598286",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1630",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -154,9 +166,46 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1630",
+      "part": "wikidata:Q30403611",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:le-bicquette",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "light.characteristic",
       "values": [
@@ -172,7 +221,7 @@
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

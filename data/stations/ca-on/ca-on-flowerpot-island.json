@@ -2,7 +2,8 @@
   "id": "ca-on-flowerpot-island",
   "name": "Flowerpot Island Lighthouse",
   "other_names": [
-    "phare de Flowerpot Island"
+    "phare de Flowerpot Island",
+    "Flowerpot Island"
   ],
   "country": "CA",
   "region": "ON",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "steel",
+      "built": 1969,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 27.7,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,12 +56,12 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN181",
+    "ccg_list_number": "I819",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,16 +71,35 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1968,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -110,6 +130,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1279899065",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14792",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1524",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,9 +174,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14792",
+      "part": "wikidata:Q45324451",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1524",
+      "part": "wikidata:Q45324451",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I819",
+      "part": "wikidata:Q45324451",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:flowerpot-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1897
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1969
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -7,7 +7,7 @@
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 44.620591,
     "lon": -64.054567,
@@ -23,33 +23,34 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 6.9,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 12.0,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 11.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN863",
+    "ccg_list_number": "A478",
+    "nga": "10068",
+    "admiralty": "H3665"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +58,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +83,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1080879696",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2039",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,15 +106,73 @@
       "key": "osm:node/1080879696",
       "part": "osm:node/1080879696",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2039",
+      "part": "osm:node/1080879696",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A478",
+      "part": "osm:node/1080879696",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:hubbards-cove",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl G 6s"
+        },
+        {
+          "source": "osm",
+          "value": "F R"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

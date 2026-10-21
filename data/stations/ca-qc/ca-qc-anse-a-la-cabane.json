@@ -5,7 +5,12 @@
     "phare de l'Anse-à-la-Cabane",
     "Anse-a-la-Cabane Lighthouse",
     "Phare de l'Anse-à-la-Cabane",
-    "Amherst Island Light"
+    "Amherst Island Light",
+    "Île du Havre-Aubert (Amherst Island)",
+    "Île du Havre-Aubert",
+    "L'Anse à la Cabane",
+    "Amherst Island",
+    "Cap du Sud"
   ],
   "country": "CA",
   "region": "QC",
@@ -68,12 +73,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN772",
+    "ccg_list_number": "A1500",
+    "nga": "8400",
+    "admiralty": "H906"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -83,8 +89,8 @@
     "as_of": "1970"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -93,6 +99,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1970,
       "event": "automated",
@@ -110,6 +122,12 @@
       "event": "heritage_designated",
       "note": "recognized heritage immovable",
       "from": "wikidata"
+    },
+    {
+      "year": 2011,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -145,6 +163,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/438446289",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1708",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,10 +200,43 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1708",
+      "part": "wikidata:Q3378435",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:le-du-havre-aubert",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

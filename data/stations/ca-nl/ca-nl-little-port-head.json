@@ -1,7 +1,9 @@
 {
   "id": "ca-nl-little-port-head",
   "name": "Little Port Head",
-  "other_names": [],
+  "other_names": [
+    "Little Port Head Light"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -23,28 +25,29 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 4.3,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1917,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 67.4,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N196",
+    "nga": "2600",
+    "admiralty": "H194"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1917,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/12895430401",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2198",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - West Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl173-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,9 +113,51 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2198",
+      "part": "osm:node/12895430401",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N196",
+      "part": "osm:node/12895430401",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:little-port-head",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

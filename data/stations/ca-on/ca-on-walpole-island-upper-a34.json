@@ -2,7 +2,8 @@
   "id": "ca-on-walpole-island-upper-a34",
   "name": "Walpole Island Upper A34 Lighthouse",
   "other_names": [
-    "phare amont A34 de Walpole Island"
+    "phare amont A34 de Walpole Island",
+    "Walpole Island Upper A34"
   ],
   "country": "CA",
   "region": "ON",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1929,
+      "height_m": 5.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 8.1,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,11 +57,11 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
+    "ccg_list_number": "I744",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -100,6 +101,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2205710492",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14833",
+      "kind": "register"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Clair River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw7312-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -121,6 +132,25 @@
       "part": "wikidata:Q45324515",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14833",
+      "part": "wikidata:Q45324515",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I744",
+      "part": "wikidata:Q45324515",
+      "fields": [
+        "aton",
+        "light"
       ]
     }
   ],

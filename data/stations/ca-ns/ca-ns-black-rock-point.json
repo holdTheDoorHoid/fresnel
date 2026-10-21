@@ -4,7 +4,11 @@
   "other_names": [
     "phare de Black Rock Point",
     "Black Rock Point lighthouse",
-    "Black Rock Point Light"
+    "Black Rock Point Light",
+    "Black Rock Point Lighthouse",
+    "Black Rock Point",
+    "Black Rock Point (Old)",
+    "Black Rock Point Sector"
   ],
   "country": "CA",
   "region": "NS",
@@ -13,35 +17,65 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.305251,
-    "lon": -60.39162,
+    "lat": 46.305194,
+    "lon": -60.39225,
     "precision": "exact",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Black Rock Point light",
       "type": null,
       "material": "wood",
+      "built": 1978,
+      "height_m": 10.8,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.305251,
+        "lon": -60.39162
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Black Rock Point Sector",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 3.5,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    },
+    {
+      "role": "tower",
+      "name": "Black Rock Point (Old)",
+      "type": null,
+      "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 46.297596,
+        "lon": -60.39706
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1868,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 25.8,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,14 +91,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN1289",
+    "ccg_list_number": "A799",
+    "nga": "8920",
+    "admiralty": "H778"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "private (Island Lights Inc",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -72,16 +107,40 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1978,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1978,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 2017,
       "event": "heritage_designated",
@@ -117,6 +176,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2190467804",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15452",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1399",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1697",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,13 +223,98 @@
       "source": "osm",
       "key": "osm:node/2190467804",
       "part": "wikidata:Q28375742",
+      "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15452",
+      "part": "wikidata:Q28375742",
       "fields": [
-        "location"
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1399",
+      "part": "wikidata:Q28375742",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1697",
+      "part": "lighthousefriends:1697",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A799",
+      "part": "wikidata:Q28375742",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A800",
+      "part": "ccg_list_of_lights:A800",
+      "fields": [
+        "aton",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:black-rock-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:black-rock-point-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

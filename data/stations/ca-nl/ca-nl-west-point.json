@@ -2,7 +2,11 @@
   "id": "ca-nl-west-point",
   "name": "West Point Lighthouse",
   "other_names": [
-    "phare de West Point"
+    "phare de West Point",
+    "François Bay (West Point)",
+    "West Point Light",
+    "François Bay",
+    "West Point"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,12 +15,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.56006,
-    "lon": -56.73383,
+    "lat": 47.559917,
+    "lon": -56.733917,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,21 +29,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 4.7,
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1929,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 46.0,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,12 +59,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN701",
+    "ccg_list_number": "N137",
+    "nga": "2360",
+    "admiralty": "H270"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -74,17 +79,35 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1929,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 2007,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -105,6 +128,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q47377943",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1320",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,15 +153,59 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1320",
+      "part": "wikidata:Q47377943",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N137",
+      "part": "wikidata:Q47377943",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:fran-ois-bay",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

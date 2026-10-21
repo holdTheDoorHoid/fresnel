@@ -2,7 +2,8 @@
   "id": "ca-ns-port-greville",
   "name": "Port Greville lighthouse",
   "other_names": [
-    "Port Greville Lighthouse"
+    "Port Greville Lighthouse",
+    "Port Greville"
   ],
   "country": "CA",
   "region": "NS",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.41429,
-    "lon": -64.5535,
+    "lat": 45.415204,
+    "lon": -64.552347,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -26,20 +27,20 @@
       "material": "wood",
       "built": 1907,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1976,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -60,14 +61,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN407",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H3948"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Age of Sail Heritage Museum",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -75,13 +77,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -90,6 +92,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1976,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2001,
@@ -121,6 +135,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Port_Greville_lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1016",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,17 +155,38 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1016",
+      "part": "wikidata:Q28375840",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:port-greville",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

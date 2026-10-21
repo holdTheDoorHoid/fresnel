@@ -1,7 +1,11 @@
 {
   "id": "ca-nl-jeans-head-lighthouse-site",
   "name": "Jean’s Head Lighthouse Site",
-  "other_names": [],
+  "other_names": [
+    "Jeans Head",
+    "Jeans Head Light",
+    "New Perlican"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.924944,
-    "lon": -53.361111,
+    "lat": 47.927142,
+    "lon": -53.363678,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -23,21 +27,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 4.3,
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1915,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 48.5,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -49,8 +53,9 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N469",
+    "nga": "1724",
+    "admiralty": "H506"
   },
   "agency": null,
   "ownership": "unknown",
@@ -74,6 +79,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1915,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 2013,
       "event": "heritage_designated",
       "note": "municipal heritage site",
@@ -88,6 +99,26 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q52405107",
       "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1435090056",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2183",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -98,14 +129,63 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1435090056",
+      "part": "wikidata:Q52405107",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2183",
+      "part": "wikidata:Q52405107",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N469",
+      "part": "wikidata:Q52405107",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:jeans-head",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

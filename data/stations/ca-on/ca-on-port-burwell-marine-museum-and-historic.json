@@ -3,7 +3,8 @@
   "name": "Port Burwell Marine Museum and Historic Lighthouse",
   "other_names": [
     "ancien phare de Port Burwell",
-    "Port Burwell Lighthouse"
+    "Port Burwell Lighthouse",
+    "Port Burwell"
   ],
   "country": "CA",
   "region": "ON",
@@ -60,10 +61,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Bayham Historical Society",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,13 +72,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -86,6 +87,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 1963,
@@ -138,6 +145,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1631378405",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1079",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -165,6 +182,25 @@
       "fields": [
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1079",
+      "part": "wikidata:Q7230520",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:port-burwell",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

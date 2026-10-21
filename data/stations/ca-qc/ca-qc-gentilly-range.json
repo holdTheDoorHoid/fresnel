@@ -1,0 +1,160 @@
+{
+  "id": "ca-qc-gentilly-range",
+  "name": "Gentilly Range",
+  "other_names": [
+    "Gentilly front range light",
+    "Gentilly Range Front",
+    "Gentilly Range Rear"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.43,
+    "lon": -72.263028,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 3.8,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    }
+  ],
+  "light": {
+    "first_lit": 1907,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F G",
+    "focal_height_m": 11.9,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN952",
+    "ccg_list_number": "A2050",
+    "nga": "4472",
+    "admiralty": "H2370"
+  },
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1907,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1920,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1479",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Rivière du Loup - Sorel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl18238-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcs.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1479",
+      "part": "lighthousefriends:1479",
+      "fields": [
+        "kind",
+        "name",
+        "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A2050",
+      "part": "lighthousefriends:1479",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcs:gentilly-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcs:gentilly-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

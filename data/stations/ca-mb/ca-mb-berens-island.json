@@ -2,7 +2,9 @@
   "id": "ca-mb-berens-island",
   "name": "Berens Island",
   "other_names": [
-    "Berens Island Light"
+    "Berens Island Light",
+    "Berens Island (Swampy Island)",
+    "Plunkett Island"
   ],
   "country": "CA",
   "region": "MB",
@@ -32,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
@@ -45,11 +47,11 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
+    "ccg_list_number": "I1602",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,16 +61,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -77,6 +86,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5912347357",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2162",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -91,9 +110,43 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2162",
+      "part": "osm:node/5912347357",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:berens-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

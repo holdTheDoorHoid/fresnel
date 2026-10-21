@@ -4,7 +4,8 @@
   "other_names": [
     "phare du cap Pine",
     "Cape Pine Lighthouse",
-    "Cape Pine"
+    "Cape Pine",
+    "Cape Pine Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -41,7 +42,7 @@
     "focal_height_m": 95.7,
     "range_nm": 16.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -69,10 +70,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN653",
     "ccg_list_number": "N6",
-    "nga": "110-1920"
+    "nga": "110-1920",
+    "admiralty": "H440"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -82,8 +84,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -154,6 +156,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1834890148",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1310",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape Race to St. Shott’s",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl1-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -177,8 +194,33 @@
       "key": "osm:node/1834890148",
       "part": "wikidata:Q15071756",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1310",
+      "part": "wikidata:Q15071756",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N6",
+      "part": "wikidata:Q15071756",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-pine",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

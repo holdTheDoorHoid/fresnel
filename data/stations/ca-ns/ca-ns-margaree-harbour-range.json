@@ -5,7 +5,11 @@
     "Margaree Harbour Rear Range Lighthouse",
     "phare d'alignement postérieur de Margaree Harbour",
     "Margaree Harbour Front Range Lighthouse",
-    "phare d’alignement antérieur de Margaree Harbour"
+    "phare d’alignement antérieur de Margaree Harbour",
+    "Margaree Harbour Range Front",
+    "Margaree Harbour Range Rear",
+    "Margaree Harbour front range light",
+    "Margaree Harbour rear range light"
   ],
   "country": "CA",
   "region": "NS",
@@ -14,48 +18,48 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.439619,
-    "lon": -61.112538,
+    "lat": 46.439611,
+    "lon": -61.112528,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
       "name": "Margaree Harbour Front Range Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1900,
       "height_m": 6.8,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     },
     {
       "role": "rear_range",
       "name": "Margaree Harbour Rear Range Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1900,
       "height_m": 10.2,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "parks_canada_hl",
       "location": {
-        "lat": 46.439044,
-        "lon": -61.112354
+        "lat": 46.439028,
+        "lon": -61.112333
       }
     },
     {
-      "role": "tower",
+      "role": "front_range",
       "name": "Margaree Harbour range lights",
       "type": null,
       "material": "wood",
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -64,11 +68,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F Y",
+    "focal_height_m": 15.2,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -84,12 +88,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN607",
+    "ccg_list_number": "A872",
+    "nga": "8764",
+    "admiralty": "H1202"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -100,7 +105,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -173,6 +178,36 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q64852223",
       "kind": "wikidata"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15672",
+      "kind": "register"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15673",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1394",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1395",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -205,15 +240,80 @@
       "key": "wikidata:Q64852223",
       "part": "wikidata:Q64852223",
       "fields": [
-        "location",
         "photos",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15672",
+      "part": "wikidata:Q64852223",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15673",
+      "part": "wikidata:Q64852016",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1394",
+      "part": "wikidata:Q28375807",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1395",
+      "part": "wikidata:Q64852016",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A872",
+      "part": "wikidata:Q64852223",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A873",
+      "part": "wikidata:Q64852016",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:margaree-harbour-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:margaree-harbour-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

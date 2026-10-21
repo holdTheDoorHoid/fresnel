@@ -1,0 +1,140 @@
+{
+  "id": "ca-nb-tongue-shoal-sand-reef",
+  "name": "Tongue Shoal (Sand Reef)",
+  "other_names": [
+    "Tongue Shoal",
+    "Sand Reef"
+  ],
+  "country": "CA",
+  "region": "NB",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.062444,
+    "lon": -67.012833,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A67), a modern aid that took its place.",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 7.0,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN948",
+    "ccg_list_number": "A67",
+    "nga": "11232",
+    "admiralty": "H4126"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2130",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2130",
+      "part": "lighthousefriends:2130",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A67",
+      "part": "lighthousefriends:2130",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:tongue-shoal",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

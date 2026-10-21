@@ -3,7 +3,10 @@
   "name": "Channel Head Lighthouse",
   "other_names": [
     "phare de Channel Head",
-    "Channel Head Lighttower"
+    "Channel Head Lighttower",
+    "Channel Head",
+    "Channel Head Light Station",
+    "Channel-Port-aux-Basques"
   ],
   "country": "CA",
   "region": "NL",
@@ -33,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1874,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 29.0,
+    "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +61,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN654",
     "ccg_list_number": "N160",
-    "nga": "110-2468"
+    "nga": "110-2468",
+    "admiralty": "H222"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,16 +75,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1895,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1988,
       "event": "heritage_designated",
@@ -126,6 +142,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1342162012",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1261",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +168,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,6 +181,34 @@
       "part": "wikidata:Q28375490",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1261",
+      "part": "wikidata:Q28375490",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N160",
+      "part": "wikidata:Q28375490",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:channel-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

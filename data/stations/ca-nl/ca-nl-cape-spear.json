@@ -8,7 +8,11 @@
     "Old Cape Spear Lighthouse",
     "Cape Spear Lighthouse (new)",
     "phare du Cap-Spear (nouveau)",
-    "Cape Spear"
+    "Cape Spear",
+    "Cape Spear (Old) Lighthouse",
+    "Cape Spear (New)",
+    "Cape Spear (Old)",
+    "Cape Spear Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -36,8 +40,8 @@
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 47.520005,
-        "lon": -52.623556
+        "lat": 47.522054,
+        "lon": -52.62584
       }
     },
     {
@@ -56,11 +60,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(3) W 15s",
-    "focal_height_m": 71.0,
+    "characteristic": "Fl W …..",
+    "focal_height_m": 71.1,
     "range_nm": 20.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -103,12 +107,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN748",
     "ccg_list_number": "507",
-    "nga": "110-1868"
+    "nga": "110-1868",
+    "admiralty": "H454"
   },
   "agency": "Parks Canada",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -116,13 +121,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -242,6 +247,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/470734373",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14993",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1313",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1314",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape St. Francis to Renews",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl499-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -279,8 +309,53 @@
       "key": "osm:node/470734373",
       "part": "wikidata:Q29870701",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14993",
+      "part": "wikidata:Q18668420",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1313",
+      "part": "wikidata:Q29870701",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1314",
+      "part": "wikidata:Q18668420",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N507",
+      "part": "wikidata:Q29870701",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-spear",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-spear-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
       ]
     }
   ],
@@ -289,7 +364,15 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
           "value": "active"
         },
         {
@@ -299,9 +382,27 @@
         {
           "source": "wikidata",
           "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W ….."
+        },
+        {
+          "source": "osm",
+          "value": "Fl(3) W 15s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     }
   ],
   "verification": "unverified",

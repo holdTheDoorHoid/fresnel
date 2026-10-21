@@ -5,7 +5,9 @@
     "phare de Cape St. Mary's",
     "Cape St. Mary's lighthouse",
     "Cape St. Mary's Lighthouse",
-    "Cape St. Mary's"
+    "Cape St. Mary's",
+    "Cape St. Mary’s",
+    "Cape St. Mary's Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -25,13 +27,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1860,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -42,7 +44,7 @@
     "focal_height_m": 118.9,
     "range_nm": 21.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -65,21 +67,36 @@
     "uscg_llnr": null,
     "arlhs": "CAN721",
     "ccg_list_number": "N14",
-    "nga": "110-1952"
+    "nga": "110-1952",
+    "admiralty": "H432"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2010",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Fisheries and Oceans Canada page of 23 names has the same list. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+        "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+        "date": "2019-09-24"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -88,6 +105,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1860,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2007,
       "event": "heritage_designated",
@@ -134,6 +157,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1548517152",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14954",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1301",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - St. Mary's Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl75-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+      "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,9 +209,52 @@
       "key": "osm:way/1548517152",
       "part": "wikidata:Q28375875",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14954",
+      "part": "wikidata:Q28375875",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1301",
+      "part": "wikidata:Q28375875",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N14",
+      "part": "wikidata:Q28375875",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-st-mary-s",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nl-cape-st-marys",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
       ]
     }
   ],

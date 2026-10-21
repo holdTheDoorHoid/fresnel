@@ -1,7 +1,12 @@
 {
   "id": "ca-nl-flowers-cove",
-  "name": "Flower's Cove Lighthouse",
-  "other_names": [],
+  "name": "Harbour Point Lighthouse",
+  "other_names": [
+    "Harbour Point (Sandy Point)",
+    "Harbour Point Light",
+    "Harbour Point",
+    "Sandy Point"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 48.457239,
-    "lon": -58.488706,
+    "lat": 48.457222,
+    "lon": -58.489,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -22,32 +27,33 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": 1899,
-      "height_m": null,
+      "built": null,
+      "height_m": 10.2,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": 1969,
+    "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl G 3s",
-    "focal_height_m": 5.0,
-    "range_nm": 4.0,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 10.7,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN657",
-    "ccg_list_number": "N213",
-    "nga": "110-2724"
+    "arlhs": "CAN690",
+    "ccg_list_number": "N178",
+    "nga": "2516",
+    "admiralty": "H208"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,27 +63,21 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
-      "year": 1899,
+      "year": 1883,
       "event": "built",
-      "note": null,
-      "from": "wikidata"
-    },
-    {
-      "year": 1969,
-      "event": "first_lit",
-      "note": null,
-      "from": "wikidata"
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -85,35 +85,59 @@
   "photos": [],
   "links": [
     {
-      "label": "Wikidata",
-      "url": "https://www.wikidata.org/wiki/Q106289312",
-      "kind": "wikidata"
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1256",
+      "kind": "reference"
     },
     {
-      "label": "ARLHS World List of Lights CAN657",
-      "url": "https://wlol.arlhs.com/lighthouse/CAN657.html",
-      "kind": "register"
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - West Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl173-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q106289312",
-      "part": "wikidata:Q106289312",
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1256",
+      "part": "lighthousefriends:1256",
       "fields": [
-        "aton",
-        "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N178",
+      "part": "lighthousefriends:1256",
+      "fields": [
+        "aton",
+        "light",
+        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:harbour-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

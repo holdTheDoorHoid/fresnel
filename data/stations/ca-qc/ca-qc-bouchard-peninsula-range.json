@@ -1,0 +1,173 @@
+{
+  "id": "ca-qc-bouchard-peninsula-range",
+  "name": "Bouchard Peninsula Range Lights",
+  "other_names": [
+    "Bouchard Peninsula (Île Ronde) Range Front",
+    "Bouchard Peninsula (Île Ronde) Range Rear",
+    "Île Ronde Range Front",
+    "Péninsule Bouchard",
+    "Île Ronde Range Rear"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 45.816413,
+    "lon": -73.347418,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Bouchard Peninsula (Île Ronde) Range Front",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
+    },
+    {
+      "role": "rear_range",
+      "name": "Bouchard Peninsula (Île Ronde) Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 45.811939,
+        "lon": -73.355151
+      }
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1995,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "A2300",
+    "nga": null,
+    "admiralty": "H2463"
+  },
+  "agency": "unknown",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1995,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1490",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1491",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcw.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1490",
+      "part": "lighthousefriends:1490",
+      "fields": [
+        "kind",
+        "location",
+        "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1491",
+      "part": "lighthousefriends:1491",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:le-ronde-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:le-ronde-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

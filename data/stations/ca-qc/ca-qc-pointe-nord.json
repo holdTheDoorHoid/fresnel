@@ -3,7 +3,10 @@
   "name": "Phare de Pointe-Nord",
   "other_names": [
     "phare de Pointe-Nord",
-    "Cap de Rabast"
+    "Cap de Rabast",
+    "Cap de Rabast (North Point)",
+    "Cap-de-Rabast",
+    "Pointe-Nord"
   ],
   "country": "CA",
   "region": "QC",
@@ -37,20 +40,21 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(3) W 30s",
-    "focal_height_m": 24.0,
+    "focal_height_m": 23.8,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN84",
+    "ccg_list_number": "A1515.2",
+    "nga": "3164",
+    "admiralty": "H1882"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -60,16 +64,30 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
-  "events": [],
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
+  "events": [
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -83,6 +101,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/879631210",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1615",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gulf of St. Lawrence",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl14775-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -102,8 +135,36 @@
       "key": "osm:node/879631210",
       "part": "wikidata:Q114733575",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1615",
+      "part": "wikidata:Q114733575",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1515.2",
+      "part": "wikidata:Q114733575",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:cap-de-rabast",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

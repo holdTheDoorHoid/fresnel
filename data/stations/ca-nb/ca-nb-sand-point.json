@@ -2,7 +2,9 @@
   "id": "ca-nb-sand-point",
   "name": "Sand Point Lighthouse",
   "other_names": [
-    "phare de Sand Point"
+    "phare de Sand Point",
+    "Sand Point Light",
+    "Sand Point"
   ],
   "country": "CA",
   "region": "NB",
@@ -16,30 +18,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "skeletal",
+      "material": "wood",
+      "built": 1898,
+      "height_m": 17.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F R",
+    "focal_height_m": 22.8,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,12 +57,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN445",
+    "ccg_list_number": "A121",
+    "nga": null,
+    "admiralty": "H4090.3"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,8 +73,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -80,6 +83,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2016,
       "event": "heritage_designated",
@@ -110,6 +125,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1247389938",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15154",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1149",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Saint John River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1145-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,9 +169,61 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15154",
+      "part": "wikidata:Q45324440",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1149",
+      "part": "wikidata:Q45324440",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A121",
+      "part": "wikidata:Q45324440",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:sand-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1869
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1898
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

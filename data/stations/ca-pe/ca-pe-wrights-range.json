@@ -1,7 +1,15 @@
 {
   "id": "ca-pe-wrights-range",
-  "name": "Wrights Range Lights",
-  "other_names": [],
+  "name": "Wright's Front Range Light",
+  "other_names": [
+    "phare d'alignement avant de Wright's",
+    "Wrights Range Front Light",
+    "Wrights Range Lights",
+    "Wrights Range Front Lighthouse",
+    "Wrights Point",
+    "Wrights Front Range Lighthouse",
+    "Wrights Range Front"
+  ],
   "country": "CA",
   "region": "PE",
   "county": "Queens County",
@@ -9,47 +17,80 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.204476,
-    "lon": -63.496808,
+    "lat": 46.204508,
+    "lon": -63.496819,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
+      "role": "front_range",
+      "name": "Wright's Front Range Light",
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1894,
+      "height_m": 3.0,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl"
+    },
+    {
       "role": "tower",
-      "name": null,
+      "name": "Wrights Range Lights",
       "type": null,
       "material": null,
       "built": 1894,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1894,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Q R",
+    "focal_height_m": 7.0,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": null
+    "from": "osm"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "20482",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=20482"
+    },
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "17693",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=17693"
+    },
+    {
+      "register": "PEI Register of Historic Places",
+      "number": "7950",
+      "url": null
+    },
+    {
+      "register": "Registered Heritage Place",
+      "number": null,
+      "url": null
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN516",
+    "ccg_list_number": "A1010",
+    "nga": "111-8272",
+    "admiralty": "H1032"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,13 +98,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -71,6 +112,42 @@
       "year": 1894,
       "event": "built",
       "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1903,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "heritage_designated",
+      "note": "Registered Heritage Place",
+      "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2025,
+      "event": "heritage_designated",
+      "note": "heritage lighthouse",
       "from": "wikidata"
     }
   ],
@@ -80,6 +157,16 @@
   "links": [
     {
       "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q47177000",
+      "kind": "wikidata"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN516",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN516.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q8038306",
       "kind": "wikidata"
     },
@@ -87,25 +174,113 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Wrights_Range_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1748032273",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://lighthousefriends.com/light.asp?ID=973",
+      "kind": "website"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=17693",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=973",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
-      "key": "wikidata:Q8038306",
-      "part": "wikidata:Q8038306",
+      "key": "wikidata:Q47177000",
+      "part": "wikidata:Q47177000",
       "fields": [
+        "agency",
+        "aton",
         "county",
         "events",
         "kind",
-        "location",
         "name",
+        "ownership",
         "region",
+        "registers",
         "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q8038306",
+      "part": "wikidata:Q8038306",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1748032273",
+      "part": "wikidata:Q47177000",
+      "fields": [
+        "events",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:17693",
+      "part": "wikidata:Q47177000",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:973",
+      "part": "wikidata:Q47177000",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:wrights-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

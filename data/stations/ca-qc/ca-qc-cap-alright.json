@@ -6,7 +6,13 @@
     "House Harbour Island Lighthouse",
     "L'Échouerie Lighthouse",
     "Phare du Cap-Alright",
-    "Phare de l'Échouerie"
+    "Phare de l'Échouerie",
+    "Île-du-Havre-aux-Maisons Lighthouse",
+    "Echouerie de la Pointe-Basse Lighttower",
+    "Cape Alright Lighttower",
+    "Cap-Alright (Île du Havre aux Maisons)",
+    "Île du Havre aux Maisons",
+    "Cap Alright"
   ],
   "country": "CA",
   "region": "QC",
@@ -20,30 +26,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
       "built": 1928,
       "height_m": 8.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2015,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -64,12 +70,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN775",
+    "ccg_list_number": "A1496",
+    "nga": "8460",
+    "admiralty": "H900"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -79,8 +86,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -100,6 +107,12 @@
       "event": "heritage_designated",
       "note": "recognized heritage immovable",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -141,6 +154,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549809241",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14752",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1706",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -165,6 +193,33 @@
       "part": "wikidata:Q20656079",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14752",
+      "part": "wikidata:Q20656079",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1706",
+      "part": "wikidata:Q20656079",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:le-du-havre-aux-maisons",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

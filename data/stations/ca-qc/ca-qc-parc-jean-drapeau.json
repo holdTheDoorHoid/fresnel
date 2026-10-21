@@ -1,20 +1,24 @@
 {
   "id": "ca-qc-parc-jean-drapeau",
   "name": "Phare du Parc Jean-Drapeau",
-  "other_names": [],
+  "other_names": [
+    "Île Sainte-Hélène",
+    "Île Ronde Range Rear",
+    "Tétreauville Range Rear"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 45.51855,
     "lon": -73.53822,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -30,24 +34,25 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1907,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 30.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN977",
+    "ccg_list_number": "A2360",
+    "nga": "5548",
+    "admiralty": "H2496.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Montréal",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +71,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1907,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1911,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1912,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +99,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/393908972",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1468",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,14 +117,59 @@
       "key": "osm:way/393908972",
       "part": "osm:way/393908972",
       "fields": [
-        "kind",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1468",
+      "part": "osm:way/393908972",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:le-sainte-h-l-ne",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:t-treauville-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

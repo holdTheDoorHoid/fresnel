@@ -5,7 +5,8 @@
     "phare de Cape Bonavista",
     "Cape Bonavista Lighthouse",
     "Bonavista Lighthouse",
-    "Cape Bonavista"
+    "Cape Bonavista",
+    "Cape Bonavista Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -28,21 +29,21 @@
       "type": null,
       "material": "wood",
       "built": 1843,
-      "height_m": null,
+      "height_m": 12.7,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1966,
+    "first_lit": 1843,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 51.0,
-    "range_nm": 16.0,
+    "focal_height_m": 50.3,
+    "range_nm": 17.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,26 +61,41 @@
     "uscg_llnr": null,
     "arlhs": "CAN093",
     "ccg_list_number": "N449",
-    "nga": "110-1644"
+    "nga": "110-1644",
+    "admiralty": "H536"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Province of Newfoundland and Labrador",
+  "ownership": "provincial",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2010",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Fisheries and Oceans Canada page of 23 names has the same list. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+        "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+        "date": "2019-09-24"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -88,6 +104,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1843,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1966,
@@ -151,6 +179,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1412751114",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1253",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Bonavista Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl396-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+      "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,7 +215,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,7 +227,6 @@
       "key": "osm:node/1446757242",
       "part": "wikidata:Q5034596",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -184,6 +235,54 @@
       "key": "osm:way/1412751114",
       "part": "wikidata:Q5034596",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1253",
+      "part": "wikidata:Q5034596",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N449",
+      "part": "wikidata:Q5034596",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-bonavista",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:cape-bonavista-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nl-cape-bonavista",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
   "conflicts": [
@@ -191,15 +290,41 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
           "value": "active"
         },
         {
           "source": "wikidata",
           "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1966
+        },
+        {
+          "source": "rowlett",
+          "value": 1843
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

@@ -32,7 +32,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1905,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
@@ -44,12 +44,12 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN844",
     "ccg_list_number": "1600",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,11 +59,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -74,6 +74,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -89,6 +95,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5910691247",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2163",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -113,10 +129,44 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2163",
+      "part": "wikidata:Q115237064",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:cox-reef",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

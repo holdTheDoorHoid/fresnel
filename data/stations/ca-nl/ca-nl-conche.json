@@ -1,7 +1,12 @@
 {
   "id": "ca-nl-conche",
   "name": "Conche Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Conche",
+    "Conche Light",
+    "Conche Wharf Light",
+    "Silver Point"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,45 +14,61 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 50.88572,
-    "lon": -55.896663,
+    "lat": 50.886083,
+    "lon": -55.894694,
     "precision": "exact",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Conche Lighthouse",
       "type": null,
       "material": null,
       "built": 1914,
       "height_m": 4.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 50.88572,
+        "lon": -55.896663
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Conche Wharf Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 2.6,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": 1992,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 6.0,
+    "characteristic": "Fl R 5s",
+    "focal_height_m": 7.2,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN749",
     "ccg_list_number": "N247",
-    "nga": "110-1096"
+    "nga": "110-1096",
+    "admiralty": "H722"
   },
   "agency": "Village of Conche",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +78,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -98,6 +119,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1466483142",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1280",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - White Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl235-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -109,7 +145,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -120,13 +155,70 @@
       "key": "osm:way/1466483142",
       "part": "wikidata:Q106239615",
       "fields": [
-        "agency",
-        "location"
+        "agency"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1280",
+      "part": "wikidata:Q106239615",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N247",
+      "part": "wikidata:Q106239615",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N247.1",
+      "part": "ccg_list_of_lights:N247.1",
+      "fields": [
+        "aton",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:conche",
+      "part": "station",
+      "fields": [
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Point Prim",
     "Point Prim Lighttower",
-    "Point Prim Lighthouse"
+    "Point Prim Lighthouse",
+    "Point Prim",
+    "Prim Point"
   ],
   "country": "CA",
   "region": "PE",
@@ -24,13 +26,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1845,
+      "height_m": 18.3,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -38,10 +40,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 21.0,
+    "focal_height_m": 20.7,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -84,12 +86,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN809",
     "ccg_list_number": "A983",
-    "nga": "110-8192"
+    "nga": "110-8192",
+    "admiralty": "H982"
   },
-  "agency": null,
+  "agency": "Belfast Community Development Corporation",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -97,13 +100,13 @@
     "as_of": "1969"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -112,6 +115,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1846,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1969,
@@ -181,6 +190,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/362427077",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14835",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=961",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -192,7 +221,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -206,10 +234,46 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14835",
+      "part": "wikidata:Q18167815",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:961",
+      "part": "wikidata:Q18167815",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A983",
+      "part": "wikidata:Q18167815",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:point-prim",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

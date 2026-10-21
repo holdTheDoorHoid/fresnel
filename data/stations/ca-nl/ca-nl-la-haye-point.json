@@ -2,7 +2,9 @@
   "id": "ca-nl-la-haye-point",
   "name": "La Haye Point Light",
   "other_names": [
-    "Point La Haye"
+    "Point La Haye",
+    "La Haye Point",
+    "La Haye Point Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -32,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1883,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 18.9,
-    "range_nm": 16.0,
+    "range_nm": 17.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN1445",
+    "ccg_list_number": "N8",
+    "nga": "1932",
+    "admiralty": "H436"
   },
   "agency": null,
   "ownership": "unknown",
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,7 +71,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -77,6 +87,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1837777129",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1311",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - St. Mary's Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl75-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -86,16 +111,41 @@
       "part": "osm:node/1837777129",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1311",
+      "part": "osm:node/1837777129",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N8",
+      "part": "osm:node/1837777129",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:la-haye-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

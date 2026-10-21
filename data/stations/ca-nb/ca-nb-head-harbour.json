@@ -7,7 +7,10 @@
     "East Quoddy Light station",
     "Head Harbour Lighthouse",
     "Head Harbour Light",
-    "East Quoddy Head Lighthouse"
+    "East Quoddy Head Lighthouse",
+    "Head Harbour (East Quoddy)",
+    "Head Harbour",
+    "East Quoddy Head"
   ],
   "country": "CA",
   "region": "NB",
@@ -41,10 +44,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 18.0,
+    "focal_height_m": 17.6,
     "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -61,13 +64,14 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN166",
-    "ccg_list_number": null,
-    "nga": "110-11332"
+    "ccg_list_number": "A44",
+    "nga": "110-11332",
+    "admiralty": "H4154"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Friends of Head Harbour Lightstation",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -75,13 +79,13 @@
     "as_of": "1986"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -142,6 +146,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1300983520",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1022",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -165,9 +184,36 @@
       "key": "osm:way/1300983520",
       "part": "wikidata:Q28375901",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1022",
+      "part": "wikidata:Q28375901",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A44",
+      "part": "wikidata:Q28375901",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:head-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

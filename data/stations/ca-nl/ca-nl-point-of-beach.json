@@ -2,7 +2,8 @@
   "id": "ca-nl-point-of-beach",
   "name": "Point of Beach",
   "other_names": [
-    "Point of Beach Sector"
+    "Point of Beach Sector",
+    "Point of Beach (Harbour Grace)"
   ],
   "country": "CA",
   "region": "NL",
@@ -35,18 +36,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
+    "characteristic": "F R W G",
     "focal_height_m": 6.3,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N481.1",
+    "nga": "1768",
+    "admiralty": "H487"
   },
   "agency": null,
   "ownership": "unknown",
@@ -59,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -77,6 +79,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1831659237",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2178",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -86,14 +103,66 @@
       "part": "osm:node/1831659237",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2178",
+      "part": "osm:node/1831659237",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N481.1",
+      "part": "osm:node/1831659237",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:point-of-beach-sector",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "F R W G"
+        },
+        {
+          "source": "osm",
+          "value": "F R"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

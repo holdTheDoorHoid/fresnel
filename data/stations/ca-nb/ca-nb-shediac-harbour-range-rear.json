@@ -1,7 +1,11 @@
 {
   "id": "ca-nb-shediac-harbour-range-rear",
   "name": "Shediac Harbour Range Rear Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Phare de la Pointe-du-Chêne",
+    "Shediac Wharf Range Rear",
+    "Shediac Harbour"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -9,8 +13,8 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.24062,
-    "lon": -64.530511,
+    "lat": 46.241828,
+    "lon": -64.530069,
     "precision": "exact",
     "from": "osm"
   },
@@ -30,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1914,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso Y 4s",
-    "focal_height_m": 12.0,
+    "characteristic": "F Y",
+    "focal_height_m": 11.0,
     "range_nm": 22.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "osm"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN940",
     "ccg_list_number": "A1111",
-    "nga": "110-7748"
+    "nga": "110-7748",
+    "admiralty": "H1332.1"
   },
   "agency": null,
   "ownership": "unknown",
@@ -72,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1914,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2017,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -90,8 +107,18 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/869834334",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/517780854",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,15 +138,65 @@
     },
     {
       "source": "osm",
-      "key": "osm:way/517780854",
+      "key": "osm:node/869834334",
       "part": "wikidata:Q109577858",
       "fields": [
+        "light",
         "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/517780854",
+      "part": "wikidata:Q109577858",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:shediac-wharf-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "F Y"
+        },
+        {
+          "source": "wikidata",
+          "value": "Iso Y 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

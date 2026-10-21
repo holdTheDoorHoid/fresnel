@@ -1,7 +1,10 @@
 {
   "id": "ca-nl-baccalieu-island-lighthouse-southwest-point",
   "name": "Baccalieu Island Lighthouse Southwest Point",
-  "other_names": [],
+  "other_names": [
+    "Baccalieu Island Southwest Point",
+    "Baccalieu Island (Southwest Point) Light Station"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -12,7 +15,7 @@
     "lat": 48.107222,
     "lon": -52.810861,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -30,26 +33,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s",
+    "characteristic": "Fl W 4s",
     "focal_height_m": 53.3,
-    "range_nm": 15.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN672",
     "ccg_list_number": "N473",
-    "nga": "110-1740"
+    "nga": "110-1740",
+    "admiralty": "H500"
   },
-  "agency": null,
+  "agency": "Baccalieu Island Ecological Reserve",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +61,22 @@
     "as_of": "2002"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1953,
       "event": "built",
@@ -93,6 +103,21 @@
       "label": "ARLHS World List of Lights CAN672",
       "url": "https://wlol.arlhs.com/lighthouse/CAN672.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1248",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -104,16 +129,73 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1248",
+      "part": "wikidata:Q29869569",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N473",
+      "part": "wikidata:Q29869569",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:baccalieu-island-southwest-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 10s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1953
+        },
+        {
+          "source": "rowlett",
+          "value": 1906
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

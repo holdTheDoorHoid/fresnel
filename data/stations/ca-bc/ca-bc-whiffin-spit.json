@@ -1,7 +1,9 @@
 {
   "id": "ca-bc-whiffin-spit",
   "name": "Whiffin Spit Light",
-  "other_names": [],
+  "other_names": [
+    "Whiffin Spit"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
@@ -30,24 +32,25 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q W",
-    "focal_height_m": 6.7,
+    "characteristic": "Q W 1s",
+    "focal_height_m": 6.6,
     "range_nm": 7.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P188",
+    "nga": "13772",
+    "admiralty": "G5296"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1931783270",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +104,51 @@
       "part": "osm:node/1931783270",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P188",
+      "part": "osm:node/1931783270",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:whiffin-spit",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Q W 1s"
+        },
+        {
+          "source": "osm",
+          "value": "Q W"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

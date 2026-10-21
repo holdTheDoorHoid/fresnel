@@ -4,7 +4,10 @@
   "other_names": [
     "phare de Cascumpec",
     "Cascumpeque Lighthouse",
-    "Cascumpeque Island"
+    "Cascumpeque Island",
+    "Cascumpec (Cascumpeque)",
+    "Cascumpeque",
+    "Cascumpec"
   ],
   "country": "CA",
   "region": "PE",
@@ -34,7 +37,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1854,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 10s",
@@ -48,12 +51,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN808",
     "ccg_list_number": "A1076",
-    "nga": "110-7872"
+    "nga": "110-7872",
+    "admiralty": "H1086"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -61,13 +65,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
@@ -76,6 +80,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1876,
@@ -96,10 +106,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1970,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
       "year": 2004,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2005,
+      "event": "removed",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2005,
@@ -161,6 +183,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1806785941",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=933",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -203,6 +235,36 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:933",
+      "part": "wikidata:Q109101301",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:cascumpeque",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:cascumpeque-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -218,11 +280,29 @@
           "value": "inactive"
         },
         {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
           "source": "wikidata",
           "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1876
+        },
+        {
+          "source": "rowlett",
+          "value": 1854
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

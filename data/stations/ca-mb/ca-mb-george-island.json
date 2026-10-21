@@ -62,11 +62,11 @@
     "as_of": "1981"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -119,6 +119,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3308394275",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2164",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,6 +155,22 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2164",
+      "part": "wikidata:Q5540970",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:george-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

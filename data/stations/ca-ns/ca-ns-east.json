@@ -1,13 +1,17 @@
 {
   "id": "ca-ns-east",
   "name": "East Light",
-  "other_names": [],
+  "other_names": [
+    "Sable Island East End",
+    "Sable Island",
+    "East End"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 43.959986,
     "lon": -59.790613,
@@ -30,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
@@ -44,10 +48,11 @@
     "uscg_llnr": null,
     "arlhs": null,
     "ccg_list_number": null,
-    "nga": null
+    "nga": "9572",
+    "admiralty": "H3584"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,16 +62,35 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2012,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +99,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/802957297",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2054",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,15 +117,51 @@
       "key": "osm:node/802957297",
       "part": "osm:node/802957297",
       "fields": [
-        "kind",
         "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2054",
+      "part": "osm:node/802957297",
+      "fields": [
+        "kind",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:sable-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

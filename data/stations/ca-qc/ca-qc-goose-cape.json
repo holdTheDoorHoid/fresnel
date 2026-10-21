@@ -1,7 +1,11 @@
 {
   "id": "ca-qc-goose-cape",
   "name": "Goose Cape",
-  "other_names": [],
+  "other_names": [
+    "Cap-aux-Oies (Goose Cape)",
+    "Cap-aux-Oies",
+    "Cap aux Oies"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -15,7 +19,7 @@
     "from": "osm"
   },
   "status": "lost",
-  "status_note": null,
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A1849), a modern aid that took its place.",
   "structures": [
     {
       "role": "tower",
@@ -23,28 +27,29 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 9.5,
       "status": "lost",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1876,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 16.0,
+    "focal_height_m": 15.9,
     "range_nm": 20.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN79",
+    "ccg_list_number": "A1849",
+    "nga": "3680",
+    "admiralty": "H2202"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +71,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +87,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1209315260",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1755",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Rivière du Loup - Sorel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl18238-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +111,41 @@
       "part": "osm:node/1209315260",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1755",
+      "part": "osm:node/1209315260",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1849",
+      "part": "osm:node/1209315260",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcc:cap-aux-oies",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,157 @@
+{
+  "id": "ca-qc-ile-aux-vaches-traverse-range",
+  "name": "Île aux Vaches Traverse Range",
+  "other_names": [
+    "Varennes",
+    "Traverse de l'Île aux Vaches front range light"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 45.69006,
+    "lon": -73.440174,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Varennes",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 9.5,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    },
+    {
+      "role": "rear_range",
+      "name": "Île aux Vaches Traverse Range",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 45.686897,
+        "lon": -73.442449
+      }
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F G",
+    "focal_height_m": 12.2,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": "A2344",
+    "nga": null,
+    "admiralty": "H2487"
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/924334517",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/951123798",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1745",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Sorel - Port de Montréal",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl22722-en.php",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/924334517",
+      "part": "lighthousefriends:1745",
+      "fields": [
+        "kind",
+        "region"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/951123798",
+      "part": "ccg_list_of_lights:A2344",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1745",
+      "part": "lighthousefriends:1745",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A2344",
+      "part": "ccg_list_of_lights:A2344",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

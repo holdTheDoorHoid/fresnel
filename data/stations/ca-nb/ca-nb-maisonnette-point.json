@@ -3,7 +3,10 @@
   "name": "Maisonnette Point Lighthouse",
   "other_names": [
     "Maisonnette Lighthouse",
-    "Pointe de Maisonnette lighthouse"
+    "Pointe de Maisonnette lighthouse",
+    "Maisonnette",
+    "Pointe de Maisonnette",
+    "Maisonnette Point"
   ],
   "country": "CA",
   "region": "NB",
@@ -12,13 +15,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.837614,
-    "lon": -65.003533,
+    "lat": 47.8375,
+    "lon": -65.003611,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "active",
-  "status_note": null,
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A1324), a modern aid that took its place.",
   "structures": [
     {
       "role": "tower",
@@ -27,27 +30,28 @@
       "material": null,
       "built": 1915,
       "height_m": 13.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1915,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 2.4s",
-    "focal_height_m": 18.0,
-    "range_nm": 15.0,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 17.0,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN919",
     "ccg_list_number": "A1324",
-    "nga": "110-7264"
+    "nga": "110-7264",
+    "admiralty": "H1590"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -60,8 +64,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +79,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -90,6 +100,21 @@
       "label": "ARLHS World List of Lights CAN919",
       "url": "https://wlol.arlhs.com/lighthouse/CAN919.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2141",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -102,17 +127,57 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2141",
+      "part": "wikidata:Q106405381",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1324",
+      "part": "wikidata:Q106405381",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:maisonnette",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 2.4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

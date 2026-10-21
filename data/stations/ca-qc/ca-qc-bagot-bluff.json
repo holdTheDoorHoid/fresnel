@@ -1,9 +1,13 @@
 {
   "id": "ca-qc-bagot-bluff",
-  "name": "Bagot Bluff Lighthouse",
+  "name": "Phare de Pointe-Sud",
   "other_names": [
+    "phare de Pointe-Sud",
+    "Bagot Bluff Lighthouse",
     "phare de Bagot Bluff",
-    "Bagot Bluff"
+    "Bagot Bluff",
+    "Escarpement Bagot (South Point)",
+    "Escarpement Bagot"
   ],
   "country": "CA",
   "region": "QC",
@@ -22,25 +26,40 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Phare de Pointe-Sud",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 49.065972,
+        "lon": -62.259778
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Bagot Bluff Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 15.7,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1871,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 17.0,
+    "focal_height_m": 17.2,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,12 +75,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN172",
+    "ccg_list_number": "A1514",
+    "nga": "3132",
+    "admiralty": "H1864"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,16 +91,40 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1912,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1980,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1980,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 1991,
       "event": "heritage_designated",
@@ -94,6 +138,11 @@
   "links": [
     {
       "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q114733577",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q40153702",
       "kind": "wikidata"
     },
@@ -101,19 +150,41 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/818424444",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1611",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gulf of St. Lawrence",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl14775-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
+      "key": "wikidata:Q114733577",
+      "part": "wikidata:Q114733577",
+      "fields": [
+        "county",
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "wikidata",
       "key": "wikidata:Q40153702",
       "part": "wikidata:Q40153702",
       "fields": [
-        "county",
         "events",
-        "kind",
-        "name",
-        "region",
         "registers"
       ]
     },
@@ -122,13 +193,76 @@
       "key": "osm:node/818424444",
       "part": "wikidata:Q40153702",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1611",
+      "part": "wikidata:Q114733577",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1514",
+      "part": "wikidata:Q40153702",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:escarpement-bagot",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:escarpement-bagot-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

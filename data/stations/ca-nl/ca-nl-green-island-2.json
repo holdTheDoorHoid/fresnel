@@ -3,7 +3,10 @@
   "name": "Green Island Lighthouse",
   "other_names": [
     "Green Island",
-    "L'ile Verte"
+    "L'ile Verte",
+    "Green Island (Fortune Bay)",
+    "Green Island Light Station",
+    "Fortune Bay"
   ],
   "country": "CA",
   "region": "NL",
@@ -33,43 +36,71 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1908,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 10s",
-    "focal_height_m": 45.0,
+    "focal_height_m": 45.4,
     "range_nm": 15.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN658",
     "ccg_list_number": "N100",
-    "nga": "111-2156"
+    "nga": "111-2156",
+    "admiralty": "H348"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2010",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Fisheries and Oceans Canada page of 23 names has the same list. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+        "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+        "date": "2019-09-24"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1993,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -88,6 +119,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7767904807",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1297",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Fortune Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl100-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+      "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -110,8 +166,44 @@
       "key": "osm:node/7767904807",
       "part": "wikidata:Q29644690",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1297",
+      "part": "wikidata:Q29644690",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N100",
+      "part": "wikidata:Q29644690",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:green-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nl-green-island-fortune-bay",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
       ]
     }
   ],
@@ -120,7 +212,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Iso W 10s"
         },
         {

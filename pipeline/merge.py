@@ -969,6 +969,8 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     use(name_rec, "name")
     others = []
     for r in sorted(recs, key=lambda r: (source_rank("name", r.source), r.key)):
+        if r.ancillary:  # a keeper's house or fog-signal building names itself, not the station
+            continue
         for n in [r.name, *r.other_names]:
             n = clean_name(n)
             if n and n != name and n not in others:

@@ -4,7 +4,8 @@
   "other_names": [
     "phare de La Martre",
     "Sainte-Marthe-de-Gaspé Lighthouse",
-    "Phare de La Martre"
+    "Phare de La Martre",
+    "La Martre"
   ],
   "country": "CA",
   "region": "QC",
@@ -18,30 +19,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
-      "built": null,
-      "height_m": null,
+      "built": 1906,
+      "height_m": 19.2,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1876,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl(4) W 30s",
+    "focal_height_m": 39.6,
+    "range_nm": 17.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -67,14 +68,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN266",
+    "ccg_list_number": "A1657",
+    "nga": "6848",
+    "admiralty": "H1842"
   },
-  "agency": null,
+  "agency": "Municipalité de La Martre (Musée des Phares)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -82,16 +84,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1988,
       "event": "heritage_designated",
@@ -144,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/317964466",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=17772",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1137",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence Estuary, Gulf of St. Lawrence - Rivière du Loup",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1620-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,9 +203,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:17772",
+      "part": "wikidata:Q14826835",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1137",
+      "part": "wikidata:Q14826835",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1657",
+      "part": "wikidata:Q14826835",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:la-martre",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1876
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1906
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

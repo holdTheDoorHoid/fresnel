@@ -2,7 +2,9 @@
   "id": "ca-bc-cape-st-james",
   "name": "Cape St. James Lighthouse",
   "other_names": [
-    "phare de Cape St. James"
+    "phare de Cape St. James",
+    "Cape St. James Light",
+    "Cape St. James"
   ],
   "country": "CA",
   "region": "BC",
@@ -11,42 +13,58 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 52.1,
-    "lon": -131.083333,
+    "lat": 51.935866,
+    "lon": -131.015782,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cape St. James Lighthouse",
       "type": null,
       "material": null,
       "built": 1914,
       "height_m": 4.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 52.1,
+        "lon": -131.083333
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Cape St. James Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1984,
+    "first_lit": 1914,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 315.0,
-    "range_nm": null,
+    "focal_height_m": 96.0,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN110",
     "ccg_list_number": "P770",
-    "nga": "111-11316"
+    "nga": "111-11316",
+    "admiralty": "G5826"
   },
   "agency": null,
   "ownership": "unknown",
@@ -63,7 +81,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -74,6 +92,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1914,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1984,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1984,
@@ -116,6 +146,26 @@
       "label": "ARLHS World List of Lights CAN110",
       "url": "https://wlol.arlhs.com/lighthouse/CAN110.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3127147333",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2172",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Haida Gwaii",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac7686-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,16 +177,62 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/3127147333",
+      "part": "osm:node/3127147333",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2172",
+      "part": "osm:node/3127147333",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P770",
+      "part": "osm:node/3127147333",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:cape-st-james",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

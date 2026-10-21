@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Point Prim",
     "Prim Point Lighthouse",
-    "Prim Point"
+    "Prim Point",
+    "Point Prim"
   ],
   "country": "CA",
   "region": "NS",
@@ -34,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1804,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 25.0,
+    "focal_height_m": 24.8,
     "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -64,7 +65,8 @@
     "uscg_llnr": null,
     "arlhs": "CAN391",
     "ccg_list_number": "A201",
-    "nga": "110-10908"
+    "nga": "110-10908",
+    "admiralty": "H3890"
   },
   "agency": "Friends of Point Prim",
   "ownership": "nonprofit",
@@ -77,8 +79,8 @@
     "as_of": "1984"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,6 +89,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1804,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1964,
       "event": "built",
@@ -164,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/179875355",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14834",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1339",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -201,9 +229,60 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14834",
+      "part": "wikidata:Q111448917",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1339",
+      "part": "wikidata:Q111448917",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A201",
+      "part": "wikidata:Q111448917",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:prim-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1964
+        },
+        {
+          "source": "rowlett",
+          "value": 1804
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1964
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

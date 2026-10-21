@@ -3,7 +3,8 @@
   "name": "Discovery Island Light",
   "other_names": [
     "phare de Discovery Island",
-    "Discovery Island Lighthouse"
+    "Discovery Island Lighthouse",
+    "Discovery Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -33,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1970,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 28.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 28.3,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN160",
     "ccg_list_number": "P216",
-    "nga": "111-13684"
+    "nga": "111-13684",
+    "admiralty": "G5334"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -60,11 +62,11 @@
     "as_of": "1996"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -77,10 +79,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1958,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1970,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1970,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 1996,
@@ -127,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/258991733",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1180",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,7 +174,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -152,28 +186,114 @@
       "key": "osm:way/258991733",
       "part": "wikidata:Q5281932",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1180",
+      "part": "wikidata:Q5281932",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P216",
+      "part": "wikidata:Q5281932",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:discovery-island",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:discovery-island-2",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:discovery-island-3",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.characteristic",
+      "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
-          "value": "Fl W"
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
         },
         {
           "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
           "value": "Fl W 5s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl W"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1970
+        },
+        {
+          "source": "rowlett",
+          "value": 1886
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

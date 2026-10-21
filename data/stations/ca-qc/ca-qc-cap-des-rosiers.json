@@ -28,7 +28,7 @@
       "type": "conical_masonry",
       "material": "stone",
       "built": 1858,
-      "height_m": null,
+      "height_m": 34.1,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -39,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 20s",
-    "focal_height_m": 41.0,
+    "focal_height_m": 41.5,
     "range_nm": 24.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -70,12 +70,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN085",
     "ccg_list_number": "A1621",
-    "nga": "110-6936"
+    "nga": "110-6936",
+    "admiralty": "H1768"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -83,13 +84,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -160,6 +161,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1305144540",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1134",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence Estuary, Gulf of St. Lawrence - Rivière du Loup",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1620-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -184,8 +200,36 @@
       "key": "osm:node/1305144540",
       "part": "wikidata:Q3378198",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1134",
+      "part": "wikidata:Q3378198",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1621",
+      "part": "wikidata:Q3378198",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:cap-des-rosiers",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

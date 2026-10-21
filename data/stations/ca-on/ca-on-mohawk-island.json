@@ -1,0 +1,174 @@
+{
+  "id": "ca-on-mohawk-island",
+  "name": "Mohawk Island Lighthouse",
+  "other_names": [
+    "Gull Island Lighthouse",
+    "Mohawk Island",
+    "Gull Island"
+  ],
+  "country": "CA",
+  "region": "ON",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 42.834014,
+    "lon": -79.522648,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1848,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1969,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "14814",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14814"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN324",
+    "ccg_list_number": "I561",
+    "nga": null
+  },
+  "agency": "Environment and Climate Change Canada",
+  "ownership": "federal",
+  "access": {
+    "level": "closed",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": false,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": "The Lighthouse Directory says the site is closed to visitors."
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1848,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1969,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2015,
+      "event": "heritage_designated",
+      "note": "Heritage lighthouse of Canada (Heritage Lighthouse Protection Act), designated 2015-05-29",
+      "from": "parks_canada_hl"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1404956933",
+      "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14814",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1075",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/1404956933",
+      "part": "lighthousefriends:1075",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14814",
+      "part": "lighthousefriends:1075",
+      "fields": [
+        "agency",
+        "events",
+        "name",
+        "ownership",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1075",
+      "part": "lighthousefriends:1075",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:mohawk-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

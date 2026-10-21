@@ -3,44 +3,46 @@
   "name": "Pointe Bonaventure Lighthouse",
   "other_names": [
     "phare de la Pointe Bonaventure",
-    "Phare de la Pointe Bonaventure"
+    "Phare de la Pointe Bonaventure",
+    "Pointe Bonaventure",
+    "Bonaventure front range light"
   ],
   "country": "CA",
   "region": "QC",
   "county": "Bonaventure",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 48.035674,
     "lon": -65.482807,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "front_range",
       "name": null,
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 4.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso R 2s",
+    "focal_height_m": 6.3,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,14 +58,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN779",
+    "ccg_list_number": "A1369",
+    "nga": null,
+    "admiralty": "H1655"
   },
-  "agency": null,
+  "agency": "Ville de Bonaventure",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,21 +74,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1902,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1996,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 1998,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -121,6 +136,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549674850",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1580",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,7 +161,6 @@
       "fields": [
         "county",
         "events",
-        "kind",
         "name",
         "photos",
         "region",
@@ -145,10 +174,55 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1580",
+      "part": "wikidata:Q28653990",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1369",
+      "part": "wikidata:Q28653990",
+      "fields": [
+        "aton",
+        "kind",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:pointe-bonaventure",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

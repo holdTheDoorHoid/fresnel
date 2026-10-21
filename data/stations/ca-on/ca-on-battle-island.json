@@ -2,7 +2,8 @@
   "id": "ca-on-battle-island",
   "name": "Battle Island Light",
   "other_names": [
-    "Battle Island Lighthouse"
+    "Battle Island Lighthouse",
+    "Battle Island"
   ],
   "country": "CA",
   "region": "ON",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1911,
+    "first_lit": 1877,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(3) W 24s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 36.0,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -49,7 +50,7 @@
     "nga": null
   },
   "agency": "Canadian Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,16 +60,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1911,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1911,
       "event": "first_lit",
@@ -109,6 +122,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/855436094",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1562",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Superior",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw1082-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onnw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,7 +148,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region"
@@ -135,9 +162,65 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1562",
+      "part": "wikidata:Q4870063",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1117",
+      "part": "wikidata:Q4870063",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onnw:battle-island",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 10s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl(3) W 24s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1911
+        },
+        {
+          "source": "rowlett",
+          "value": 1877
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

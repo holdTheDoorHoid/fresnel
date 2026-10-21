@@ -1,7 +1,9 @@
 {
   "id": "ca-bc-maude-island",
   "name": "Maude Island",
-  "other_names": [],
+  "other_names": [
+    "Maude Island (Nanoose Harbour)"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
@@ -34,17 +36,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 10.0,
+    "focal_height_m": 9.8,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P486",
+    "nga": null,
+    "admiralty": "G5504"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1689457751",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac4475-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,17 +92,25 @@
       "part": "osm:node/1689457751",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P486",
+      "part": "osm:node/1689457751",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A small modern aid with no history in any source: OpenStreetMap classes it a minor light (seamark light_minor) and, for most, the Coast Guard list gives only a tower or beacon; no heritage list, Wikidata item, Lighthouse Friends page or Lighthouse Directory entry covers it. DESIGN section 1 leaves such beacons out. Unhide if a source gives it a keeper, a history or a heritage listing.",
   "updated": "2026-10-21"
 }

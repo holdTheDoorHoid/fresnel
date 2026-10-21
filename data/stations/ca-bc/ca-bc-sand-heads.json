@@ -33,21 +33,22 @@
     }
   ],
   "light": {
-    "first_lit": 2002,
+    "first_lit": 1884,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 5s",
-    "focal_height_m": 13.0,
+    "focal_height_m": 13.3,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN446",
     "ccg_list_number": "P311",
-    "nga": "111-13116"
+    "nga": "111-13116",
+    "admiralty": "G5401"
   },
   "agency": null,
   "ownership": "unknown",
@@ -60,11 +61,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +76,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2002,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2002,
@@ -121,6 +134,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1346789967",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1178",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Fraser River - South Arm",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac310-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,7 +161,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -144,9 +171,7 @@
       "source": "osm",
       "key": "osm:node/1199797245",
       "part": "wikidata:Q46941204",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -155,9 +180,51 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1178",
+      "part": "wikidata:Q46941204",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P311",
+      "part": "wikidata:Q46941204",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcs:sand-heads",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2002
+        },
+        {
+          "source": "rowlett",
+          "value": 1884
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

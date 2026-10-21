@@ -2,7 +2,9 @@
   "id": "ca-pe-murray-harbour-back-range",
   "name": "Murray Harbour Back Range Light",
   "other_names": [
-    "phare arrière de Murray Harbour"
+    "phare arrière de Murray Harbour",
+    "Murray Harbour rear range light",
+    "Murray Harbour Range Rear"
   ],
   "country": "CA",
   "region": "PE",
@@ -11,16 +13,16 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.014444,
-    "lon": -62.4925,
+    "lat": 46.014389,
+    "lon": -62.492472,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": null,
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1879,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 17.0,
+    "focal_height_m": 17.8,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +59,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN329",
     "ccg_list_number": "A965",
-    "nga": "110-8144"
+    "nga": "110-8144",
+    "admiralty": "H954.1"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,13 +73,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -85,6 +88,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1879,
@@ -122,6 +137,16 @@
       "label": "ARLHS World List of Lights CAN329",
       "url": "https://wlol.arlhs.com/lighthouse/CAN329.html",
       "kind": "register"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,8 +160,6 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "photos",
@@ -144,10 +167,46 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A965",
+      "part": "wikidata:Q69730714",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:murray-harbour-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1879
+        },
+        {
+          "source": "rowlett",
+          "value": 1869
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

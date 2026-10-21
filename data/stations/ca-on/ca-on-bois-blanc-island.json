@@ -1,7 +1,11 @@
 {
   "id": "ca-on-bois-blanc-island",
   "name": "Bois Blanc Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Bois Blanc (Boblo) Island",
+    "Boblo Island",
+    "Bois Blanc"
+  ],
   "country": "CA",
   "region": "ON",
   "county": "Essex County",
@@ -14,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -22,7 +26,7 @@
       "name": null,
       "type": "conical_masonry",
       "material": "stone",
-      "built": null,
+      "built": 1836,
       "height_m": null,
       "status": "standing",
       "note": null,
@@ -31,13 +35,13 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1959,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -67,8 +71,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -78,16 +82,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1837,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1959,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 1994,
       "event": "heritage_designated",
@@ -134,6 +150,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1313410753",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14612",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1088",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -159,6 +190,34 @@
       "part": "wikidata:Q28375501",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14612",
+      "part": "wikidata:Q28375501",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1088",
+      "part": "wikidata:Q28375501",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:boblo-island",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

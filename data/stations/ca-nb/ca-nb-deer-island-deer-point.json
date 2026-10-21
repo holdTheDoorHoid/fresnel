@@ -1,7 +1,10 @@
 {
   "id": "ca-nb-deer-island-deer-point",
   "name": "Deer Island Deer Point Light",
-  "other_names": [],
+  "other_names": [
+    "Deer Island Point",
+    "Deer Point"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -34,17 +37,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "LFl R 12s",
-    "focal_height_m": 10.0,
+    "focal_height_m": 9.6,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN157",
+    "ccg_list_number": "A49",
+    "nga": "11316",
+    "admiralty": "H4147"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +79,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1318119200",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1027",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,16 +103,39 @@
       "part": "osm:node/1318119200",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1027",
+      "part": "osm:node/1318119200",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A49",
+      "part": "osm:node/1318119200",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:deer-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

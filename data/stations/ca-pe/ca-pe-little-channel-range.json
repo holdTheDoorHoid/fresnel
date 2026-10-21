@@ -2,7 +2,9 @@
   "id": "ca-pe-little-channel-range",
   "name": "Little Channel Range Lights",
   "other_names": [
-    "Little Channel Range Rear Light"
+    "Little Channel Range Rear Light",
+    "Little Channel Range Rear",
+    "Hardy's Channel"
   ],
   "country": "CA",
   "region": "PE",
@@ -43,26 +45,27 @@
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1872,
     "deactivated": 1969,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN1257",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H1100"
   },
-  "agency": null,
+  "agency": "Hardy's Channel Lighthouse Retreat",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -70,16 +73,35 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1877,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1877,
       "event": "first_lit",
@@ -121,6 +143,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549745508",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=990",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,6 +182,26 @@
       "part": "wikidata:Q6649496",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:990",
+      "part": "wikidata:Q6649496",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:little-channel-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

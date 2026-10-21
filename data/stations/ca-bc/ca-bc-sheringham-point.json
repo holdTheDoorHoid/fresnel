@@ -3,7 +3,8 @@
   "name": "Sheringham Point Light",
   "other_names": [
     "phare de Sheringham Point",
-    "Sheringham Point Lighthouse"
+    "Sheringham Point Lighthouse",
+    "Sheringham Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -23,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "concrete",
+      "material": "concrete",
       "built": 1912,
       "height_m": 19.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -40,7 +41,7 @@
     "focal_height_m": 21.9,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,12 +59,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN458",
     "ccg_list_number": "P186",
-    "nga": "111-13800"
+    "nga": "111-13800",
+    "admiralty": "G5292"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -71,13 +73,13 @@
     "as_of": "1986"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -143,6 +145,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/521031868",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14995",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1103",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -167,8 +189,40 @@
       "key": "osm:way/521031868",
       "part": "wikidata:Q7495022",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14995",
+      "part": "wikidata:Q7495022",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1103",
+      "part": "wikidata:Q7495022",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P186",
+      "part": "wikidata:Q7495022",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:sheringham-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

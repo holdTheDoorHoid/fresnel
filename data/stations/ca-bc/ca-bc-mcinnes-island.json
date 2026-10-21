@@ -2,7 +2,8 @@
   "id": "ca-bc-mcinnes-island",
   "name": "McInnes Island Lighthouse",
   "other_names": [
-    "phare de McInnes Island"
+    "phare de McInnes Island",
+    "McInnes Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "concrete",
+      "material": "concrete",
       "built": 1921,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": 1954,
-    "deactivated": 1954,
+    "first_lit": 1921,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 30.0,
+    "focal_height_m": 29.5,
     "range_nm": 22.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,24 +58,39 @@
     "uscg_llnr": null,
     "arlhs": "CAN310",
     "ccg_list_number": "P619",
-    "nga": "111-12040"
+    "nga": "111-12040",
+    "admiralty": "G5715"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Coast Guard's 31 July 2024 release counts 25 other staffed stations in British Columbia without naming them. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -85,6 +101,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1921,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1954,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1954,
@@ -133,6 +161,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1339181107",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14915",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1431",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Inside Channels",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac587-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "registers",
@@ -165,10 +222,93 @@
       "key": "osm:way/1339181107",
       "part": "wikidata:Q45283494",
       "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14915",
+      "part": "wikidata:Q45283494",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1431",
+      "part": "wikidata:Q45283494",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P619",
+      "part": "wikidata:Q45283494",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:mcinnes-island",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-mcinnes-island",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1954
+        },
+        {
+          "source": "rowlett",
+          "value": 1921
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1954
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,10 @@
   "id": "ca-qc-cap-de-la-table",
   "name": "Cap-de-la-Table Lighthouse",
   "other_names": [
-    "phare du Cap-de-la-Table"
+    "phare du Cap-de-la-Table",
+    "Cap-de-la-Table",
+    "Table Head",
+    "Cap de la Table"
   ],
   "country": "CA",
   "region": "QC",
@@ -11,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 49.35,
-    "lon": -61.88,
+    "lat": 49.351196,
+    "lon": -61.8957,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +29,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +38,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 34.0,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "osm"
   },
   "registers": [
     {
@@ -55,12 +58,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN82",
+    "ccg_list_number": "A1513.2",
+    "nga": "3172",
+    "admiralty": "H1886"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,8 +74,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -80,6 +84,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1991,
       "event": "heritage_designated",
@@ -95,6 +105,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q32757419",
       "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/880015648",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1617",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,14 +131,83 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/880015648",
+      "part": "wikidata:Q32757419",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1617",
+      "part": "wikidata:Q32757419",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:cap-de-la-table",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            49.35,
+            -61.88
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            49.3512,
+            -61.8957
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            49.35118,
+            -61.89616
+          ]
+        }
+      ],
+      "distance_m": 1145,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -37,14 +37,15 @@
     "focal_height_m": 7.3,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P196",
+    "nga": null,
+    "admiralty": "G5307"
   },
   "agency": "CCG",
   "ownership": "unknown",
@@ -85,6 +86,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1343875912",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -94,7 +100,6 @@
       "part": "osm:node/1657150274",
       "fields": [
         "agency",
-        "light",
         "location",
         "name",
         "region",
@@ -114,10 +119,19 @@
       "fields": [
         "kind"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P196",
+      "part": "osm:node/1657150274",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

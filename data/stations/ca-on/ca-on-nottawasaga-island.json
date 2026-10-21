@@ -2,7 +2,8 @@
   "id": "ca-on-nottawasaga-island",
   "name": "Nottawasaga Island Light",
   "other_names": [
-    "phare de Nottawasaga"
+    "phare de Nottawasaga",
+    "Nottawasaga Island"
   ],
   "country": "CA",
   "region": "ON",
@@ -16,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -33,13 +34,13 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2003,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -55,14 +56,14 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN356",
+    "ccg_list_number": "I845",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,21 +71,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1999,
       "event": "heritage_designated",
       "note": "classified federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2003,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -115,6 +128,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1289117321",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1059",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/ongb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,6 +160,27 @@
       "part": "wikidata:Q56707379",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1059",
+      "part": "wikidata:Q56707379",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:nottawasaga-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

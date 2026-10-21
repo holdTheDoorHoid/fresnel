@@ -2,7 +2,9 @@
   "id": "ca-ns-flint-island",
   "name": "Flint Island Lighthouse",
   "other_names": [
-    "Flint Island light"
+    "Flint Island light",
+    "Flint island",
+    "Flint Island"
   ],
   "country": "CA",
   "region": "NS",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.17895,
-    "lon": -59.81441,
+    "lat": 46.180282,
+    "lon": -59.770377,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,21 +27,21 @@
       "type": null,
       "material": null,
       "built": 1963,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 17.8,
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1856,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": null
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 22.6,
+    "range_nm": 8.0,
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,12 +57,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN180",
+    "ccg_list_number": "A770",
+    "nga": "9156",
+    "admiralty": "H750"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,16 +73,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1962,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1963,
       "event": "built",
@@ -101,6 +116,26 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q137291739",
       "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1230141018",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1651",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,16 +146,119 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1230141018",
+      "part": "wikidata:Q137291739",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1651",
+      "part": "wikidata:Q137291739",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A770",
+      "part": "wikidata:Q137291739",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:flint-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl(2) W 25s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1963
+        },
+        {
+          "source": "rowlett",
+          "value": 1856
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            46.17895,
+            -59.81441
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            46.18028,
+            -59.77038
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.18083,
+            -59.77033
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            46.18083,
+            -59.77033
+          ]
+        }
+      ],
+      "distance_m": 3393,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

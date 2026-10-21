@@ -3,7 +3,8 @@
   "name": "Pointe-des-Monts Lighthouse",
   "other_names": [
     "phare de Pointe-des-Monts",
-    "Phare de Pointe-des-Monts"
+    "Phare de Pointe-des-Monts",
+    "Pointe des Monts"
   ],
   "country": "CA",
   "region": "QC",
@@ -58,12 +59,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN396",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H2024"
   },
-  "agency": null,
+  "agency": "Québec Ministère de la Culture et des Communication",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,15 +73,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
     {
       "year": 1830,
@@ -148,6 +157,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/286461501",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1623",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -181,6 +200,24 @@
       "key": "osm:way/286461501",
       "part": "wikidata:Q15648998",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1623",
+      "part": "wikidata:Q15648998",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:pointe-des-monts",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

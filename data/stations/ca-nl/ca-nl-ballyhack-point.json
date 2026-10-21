@@ -39,14 +39,15 @@
     "focal_height_m": 11.3,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N489",
+    "nga": null,
+    "admiralty": "H476"
   },
   "agency": null,
   "ownership": "unknown",
@@ -77,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1832315470",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -86,16 +92,24 @@
       "part": "osm:node/1832315470",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N489",
+      "part": "osm:node/1832315470",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "ca-ns-belliveau-cove",
   "name": "Belliveau Cove light",
   "other_names": [
-    "Belliveau Cove lighthouse"
+    "Belliveau Cove lighthouse",
+    "Belliveau Cove"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -51,20 +52,21 @@
     "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 6.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN30",
+    "ccg_list_number": "A234",
+    "nga": null,
+    "admiralty": "H3859"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of L'Anse-des-Belliveau",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -74,8 +76,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -117,6 +119,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2471678806",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1345",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,6 +157,24 @@
       "key": "osm:node/2471678806",
       "part": "osm:node/2471678806",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1345",
+      "part": "wikidata:Q28375740",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:belliveau-cove",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

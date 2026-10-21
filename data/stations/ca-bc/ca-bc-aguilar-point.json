@@ -1,7 +1,9 @@
 {
   "id": "ca-bc-aguilar-point",
   "name": "Aguilar Point",
-  "other_names": [],
+  "other_names": [
+    "Aguilar Point Sector Light"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
@@ -19,7 +21,18 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Aguilar Point",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
+    },
+    {
+      "role": "tower",
+      "name": "Aguilar Point",
       "type": null,
       "material": null,
       "built": null,
@@ -33,18 +46,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q W",
-    "focal_height_m": 5.0,
-    "range_nm": 5.0,
+    "characteristic": "F W",
+    "focal_height_m": 8.5,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P172",
+    "nga": null,
+    "admiralty": "G5258"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +89,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1684184184",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - West Coast, Vancouver Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac66-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,17 +103,60 @@
       "part": "osm:node/1684184184",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P172",
+      "part": "osm:node/1684184184",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P172.1",
+      "part": "ccg_list_of_lights:P172.1",
+      "fields": []
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "F W"
+        },
+        {
+          "source": "osm",
+          "value": "Q W"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "osm",
+          "value": 5.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 8.5
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A small modern aid with no history in any source: OpenStreetMap classes it a minor light (seamark light_minor) and, for most, the Coast Guard list gives only a tower or beacon; no heritage list, Wikidata item, Lighthouse Friends page or Lighthouse Directory entry covers it. DESIGN section 1 leaves such beacons out. Unhide if a source gives it a keeper, a history or a heritage listing.",
   "updated": "2026-10-21"
 }

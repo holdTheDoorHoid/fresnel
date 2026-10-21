@@ -1,13 +1,18 @@
 {
   "id": "ca-on-pointe-au-baril",
-  "name": "Pointe au Baril Lighthouse",
-  "other_names": [],
+  "name": "Pointe au Baril Range Lights",
+  "other_names": [
+    "Pointe au Baril Lighthouse",
+    "Pointe au Baril Range Rear",
+    "Pointe au Baril Range Front",
+    "Pointe au Baril front range light"
+  ],
   "country": "CA",
   "region": "ON",
   "county": "Parry Sound District",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 45.559106,
     "lon": -80.503547,
@@ -18,8 +23,8 @@
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Pointe au Baril Lighthouse",
       "type": null,
       "material": null,
       "built": 1888,
@@ -27,6 +32,21 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Pointe au Baril Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 45.5527,
+        "lon": -80.4877
+      }
     }
   ],
   "light": {
@@ -35,9 +55,9 @@
     "lens": null,
     "characteristic": "F R",
     "focal_height_m": 13.1,
-    "range_nm": null,
+    "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,10 +77,10 @@
     "ccg_list_number": "I942",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -68,13 +88,13 @@
     "as_of": "1983"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -86,9 +106,21 @@
     },
     {
       "year": 1889,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1889,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1909,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1983,
@@ -136,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2450039128",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1522",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1523",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/ongb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -147,9 +199,7 @@
         "aton",
         "county",
         "events",
-        "kind",
         "light",
-        "name",
         "photos",
         "region",
         "registers",
@@ -162,6 +212,51 @@
       "part": "wikidata:Q30320134",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1522",
+      "part": "lighthousefriends:1522",
+      "fields": [
+        "kind",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1523",
+      "part": "wikidata:Q30320134",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I942",
+      "part": "wikidata:Q30320134",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:pointe-au-baril-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:pointe-au-baril-range-rear",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
       ]
     }
   ],

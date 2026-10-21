@@ -1,55 +1,61 @@
 {
   "id": "ca-ns-french-point",
   "name": "French Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "French Point (Musquodoboit Harbour Range Rear)",
+    "French Point",
+    "Pleasant Point",
+    "Musquodoboit Harbour Range Rear"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 44.705849,
     "lon": -63.075901,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 9.4,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F R",
+    "focal_height_m": 14.0,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN334",
+    "ccg_list_number": "A569",
+    "nga": "9852",
+    "admiralty": "H3579"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +63,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1904,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +88,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/459021042",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1326",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,15 +111,45 @@
       "key": "osm:way/459021042",
       "part": "osm:way/459021042",
       "fields": [
-        "kind",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1326",
+      "part": "osm:way/459021042",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A569",
+      "part": "osm:way/459021042",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:french-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

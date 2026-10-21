@@ -24,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1908,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -38,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 7.5s",
-    "focal_height_m": 47.0,
+    "focal_height_m": 46.9,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -64,21 +64,41 @@
     "uscg_llnr": null,
     "arlhs": "CAN362",
     "ccg_list_number": "P178",
-    "nga": "111-13828"
+    "nga": "111-13828",
+    "admiralty": "G5280"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The Canadian Coast Guard ended keeper functions here on 31 July 2024 because the ground under the station is unstable and some facilities are no longer safe to use; the light is automated. Check with the Coast Guard or Parks Canada (West Coast Trail) before you go."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "2024",
+    "basis": "The Senate report's April 2010 list names it staffed; the Coast Guard's release of 31 July 2024 ended keeper functions (the newer source wins), and a December 2024 note says the keepers were relocated.",
+    "check": false,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      },
+      {
+        "label": "Fisheries and Oceans Canada Question Period note DFO-2024-QP-00038 (received 17 December 2024): keepers relocated to other lightstations",
+        "url": "https://search.open.canada.ca/qpnotes/record/dfo-mpo%2CDFO-2024-QP-00038",
+        "date": "2024-12-17"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,6 +107,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1908,
       "event": "first_lit",
@@ -104,6 +130,12 @@
       "event": "heritage_designated",
       "note": "heritage lighthouse",
       "from": "wikidata"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Coast Guard ended keeper functions here (31 July 2024); the light is automated",
+      "from": "ca_staffed_lightstations"
     }
   ],
   "keepers_count": null,
@@ -149,6 +181,41 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/325827477",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14713",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1200",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - West Coast, Vancouver Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac66-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada Question Period note DFO-2024-QP-00038 (received 17 December 2024): keepers relocated to other lightstations",
+      "url": "https://search.open.canada.ca/qpnotes/record/dfo-mpo%2CDFO-2024-QP-00038",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,6 +243,50 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14713",
+      "part": "wikidata:Q7122015",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1200",
+      "part": "wikidata:Q7122015",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P178",
+      "part": "wikidata:Q7122015",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:pachena-point",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-pachena-point",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "staffing"
       ]
     }
   ],

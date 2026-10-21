@@ -2,7 +2,13 @@
   "id": "ca-nl-grand-bank",
   "name": "Grand Bank Lighthouse",
   "other_names": [
-    "Grand Bank wharf"
+    "Grand Bank wharf",
+    "Grand Bank Wharf",
+    "Grand Bank Wharf Light",
+    "Grand Bank Sector Light",
+    "Grand Bank West Pier Light",
+    "Grand Bank",
+    "East Pier"
   ],
   "country": "CA",
   "region": "NL",
@@ -12,46 +18,62 @@
   "kind": "lighthouse",
   "location": {
     "lat": 47.101306,
-    "lon": -55.749389,
+    "lon": -55.750778,
     "precision": "exact",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Grand Bank Lighthouse",
       "type": null,
       "material": null,
       "built": 1890,
       "height_m": 7.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 47.101306,
+        "lon": -55.749389
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Grand Bank Sector Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": 1922,
+    "first_lit": 1890,
     "deactivated": null,
     "lens": null,
     "characteristic": "Q G 1s",
     "focal_height_m": 8.2,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN686",
     "ccg_list_number": "N106",
-    "nga": "110-2248"
+    "nga": "110-2248",
+    "admiralty": "H322"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -59,13 +81,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -74,6 +96,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1922,
@@ -110,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1920574884",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1299",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Fortune Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl100-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,7 +171,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -134,28 +182,53 @@
       "source": "osm",
       "key": "osm:node/1920574884",
       "part": "wikidata:Q106300683",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1299",
+      "part": "wikidata:Q106300683",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N106",
+      "part": "wikidata:Q106300683",
       "fields": [
-        "light",
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N106.5",
+      "part": "ccg_list_of_lights:N106.5",
+      "fields": [
+        "aton",
         "location"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N107",
+      "part": "wikidata:Q106300683",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:grand-bank",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "osm",
-          "value": "Q G 1s"
-        },
-        {
-          "source": "wikidata",
-          "value": "Q G"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -6,7 +6,12 @@
     "phare de Wood Islands (Range Rear)",
     "Wood Islands Lighthouse",
     "phare de Wood Islands",
-    "Front Range Light"
+    "Front Range Light",
+    "Wood Islands",
+    "Wood Islands Range Front",
+    "Wood Islands Range Rear",
+    "Wood Islands Harbour Range Front",
+    "Wood Islands Harbour Range Rear"
   ],
   "country": "CA",
   "region": "PE",
@@ -20,7 +25,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -48,17 +53,28 @@
         "lat": 45.949921,
         "lon": -62.746242
       }
+    },
+    {
+      "role": "rear_range",
+      "name": "Wood Islands Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": 2007,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Feu fixe d'alignement",
-    "focal_height_m": 7.0,
-    "range_nm": 6.0,
+    "characteristic": "Iso W 10s",
+    "focal_height_m": 21.9,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -86,12 +102,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN536",
     "ccg_list_number": "A973",
-    "nga": "110-8168"
+    "nga": "110-8168",
+    "admiralty": "H962"
   },
-  "agency": null,
+  "agency": "Wood Islands and Area Development Corporation (Wood Islands Lighthouse)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -99,13 +116,13 @@
     "as_of": "1990"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -247,6 +264,26 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=959",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=958",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=960",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -258,7 +295,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "photos",
         "region",
         "structures"
@@ -269,7 +305,6 @@
       "key": "wikidata:Q46993697",
       "part": "wikidata:Q46993697",
       "fields": [
-        "light",
         "photos",
         "structures"
       ]
@@ -298,12 +333,77 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:958",
+      "part": "wikidata:Q46993697",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:959",
+      "part": "wikidata:Q46993552",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:960",
+      "part": "lighthousefriends:960",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A976",
+      "part": "wikidata:Q46993697",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:wood-islands",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:wood-islands-harbour-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:wood-islands-harbour-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
         {
           "source": "wikidata",
           "value": "active"
@@ -314,6 +414,14 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
           "value": "inactive"
         }
       ],

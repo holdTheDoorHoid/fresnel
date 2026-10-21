@@ -3,7 +3,8 @@
   "name": "Carbonear Island Lighthouse",
   "other_names": [
     "Carbonear Island",
-    "Carbonear"
+    "Carbonear",
+    "Carbonear Island Light"
   ],
   "country": "CA",
   "region": "NL",
@@ -33,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 4.3,
+    "focal_height_m": 54.3,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
     "ccg_list_number": "N477",
-    "nga": "110-1752"
+    "nga": "110-1752",
+    "admiralty": "H490"
   },
   "agency": null,
   "ownership": "unknown",
@@ -60,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +77,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -90,6 +98,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1831615705",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2180",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,13 +134,52 @@
       "key": "osm:node/1831615705",
       "part": "wikidata:Q111848020",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2180",
+      "part": "wikidata:Q111848020",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N477",
+      "part": "wikidata:Q111848020",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:carbonear-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
     {
       "field": "light.focal_height_m",
       "values": [
@@ -128,6 +190,10 @@
         {
           "source": "osm",
           "value": 4.3
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 54.3
         }
       ],
       "note": "Sources differ by more than 3 m."
@@ -144,6 +210,20 @@
         },
         {
           "source": "osm",
+          "value": [
+            47.73961,
+            -53.16436
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            47.73956,
+            -53.1643
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
           "value": [
             47.73961,
             -53.16436

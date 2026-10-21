@@ -1,7 +1,9 @@
 {
   "id": "ca-nl-harbour-grace-islands",
   "name": "Harbour Grace Islands",
-  "other_names": [],
+  "other_names": [
+    "Harbour Grace Islands Light"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -30,21 +32,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1837,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 4s",
+    "characteristic": "Fl W 5s",
     "focal_height_m": 41.4,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N479",
+    "nga": "1760",
+    "admiralty": "H484"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,16 +60,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1831650832",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2179",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +109,69 @@
       "part": "osm:node/1831650832",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2179",
+      "part": "osm:node/1831650832",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N479",
+      "part": "osm:node/1831650832",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:harbour-grace-islands",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 5s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl W 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

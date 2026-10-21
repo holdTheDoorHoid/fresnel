@@ -1,7 +1,9 @@
 {
   "id": "ca-nl-portugal-cove",
   "name": "Portugal Cove",
-  "other_names": [],
+  "other_names": [
+    "Portugal Cove Breakwater Light"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -33,18 +35,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso G 6s",
-    "focal_height_m": 5.1,
-    "range_nm": 4.0,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 6.1,
+    "range_nm": 7.0,
     "fog_signal": "whistle",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N497",
+    "nga": null,
+    "admiralty": "H472"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1832505500",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,10 +97,34 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N497",
+      "part": "osm:node/1832505500",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl G 4s"
+        },
+        {
+          "source": "osm",
+          "value": "Iso G 6s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

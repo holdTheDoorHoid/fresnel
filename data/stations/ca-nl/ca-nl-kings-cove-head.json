@@ -3,7 +3,10 @@
   "name": "King's Cove Head Lighthouse",
   "other_names": [
     "phare de King's Cove Head",
-    "King's Cove Lighthouse"
+    "King's Cove Lighthouse",
+    "King’s Cove Head",
+    "Kings Cove Head Light",
+    "King's Cove Head"
   ],
   "country": "CA",
   "region": "NL",
@@ -37,10 +40,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 54.0,
+    "focal_height_m": 53.6,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +61,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN662",
     "ccg_list_number": "N443",
-    "nga": "110-1620"
+    "nga": "110-1620",
+    "admiralty": "H540"
   },
   "agency": "Canadian Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -122,6 +126,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1311164165",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1254",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Bonavista Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl396-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,7 +152,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -147,8 +165,32 @@
       "part": "wikidata:Q47377823",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1254",
+      "part": "wikidata:Q47377823",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N443",
+      "part": "wikidata:Q47377823",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:king-s-cove-head",
+      "part": "station",
+      "fields": [
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

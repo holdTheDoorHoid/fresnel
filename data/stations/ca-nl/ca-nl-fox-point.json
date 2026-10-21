@@ -1,7 +1,13 @@
 {
   "id": "ca-nl-fox-point",
   "name": "Fox Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Fox Point (Fishing Point)",
+    "Fox Point (Fishing Point) Light Station",
+    "Fox Point",
+    "Fishing Point",
+    "St. Anthony"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -14,7 +20,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -30,35 +36,50 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1960,
+    "first_lit": 1912,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 26.8,
     "range_nm": 17.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN684",
     "ccg_list_number": "N240",
-    "nga": "110-1068"
+    "nga": "110-1068",
+    "admiralty": "H730"
   },
-  "agency": null,
+  "agency": "Lightkeepers Café",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2010",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Fisheries and Oceans Canada page of 23 names has the same list. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+        "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+        "date": "2019-09-24"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,6 +95,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1912,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1960,
       "event": "built",
       "note": null,
@@ -84,6 +111,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2002,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2003,
@@ -142,6 +175,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1071513295",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1279",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - White Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl235-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Fisheries and Oceans Canada, 'Lightstations of Newfoundland and Labrador' (brochure 2005, page modified 2019-09-24): 23 staffed of 55 major lightstations, named",
+      "url": "https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -153,7 +211,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -165,7 +222,6 @@
       "part": "wikidata:Q106298966",
       "fields": [
         "events",
-        "light",
         "structures"
       ]
     },
@@ -185,12 +241,56 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1279",
+      "part": "wikidata:Q106298966",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N240",
+      "part": "wikidata:Q106298966",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:fox-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:nl-fox-point",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
         {
           "source": "wikidata",
           "value": "active"
@@ -207,24 +307,10 @@
       "note": "Sources differ on whether the light is still lit."
     },
     {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 2003
-        },
-        {
-          "source": "wikidata",
-          "value": 1960
-        }
-      ],
-      "note": "A source gives the light's service entry (2003) after its retirement (1960); it may have been relit. Neither is shown as the first lighting."
-    },
-    {
       "field": "light.characteristic",
       "values": [
         {
-          "source": "wikidata",
+          "source": "ccg_list_of_lights",
           "value": "Fl W 10s"
         },
         {
@@ -248,9 +334,27 @@
         {
           "source": "wikidata",
           "value": 26.82
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 26.8
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2003
+        },
+        {
+          "source": "rowlett",
+          "value": 1912
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

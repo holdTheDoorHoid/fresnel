@@ -33,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1923,
+    "first_lit": 1734,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s",
-    "focal_height_m": 32.0,
-    "range_nm": 16.0,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 31.9,
+    "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +58,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN286",
     "ccg_list_number": "A756",
-    "nga": "110-9204"
+    "nga": "110-9204",
+    "admiralty": "H3344"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,8 +72,8 @@
     "as_of": "1990"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -88,10 +89,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1734,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1758,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1923,
@@ -160,6 +173,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/962341745",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1406",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,7 +200,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -194,12 +221,44 @@
       "key": "osm:way/962341745",
       "part": "wikidata:Q6688576",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1406",
+      "part": "wikidata:Q6688576",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A756",
+      "part": "wikidata:Q6688576",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:louisbourg",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "light.characteristic",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
         {
           "source": "osm",
           "value": "Fl W 10s"
@@ -210,6 +269,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1923
+        },
+        {
+          "source": "rowlett",
+          "value": 1734
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

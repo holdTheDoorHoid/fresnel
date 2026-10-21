@@ -1,13 +1,15 @@
 {
   "id": "ca-bc-bare-point",
   "name": "Bare Point",
-  "other_names": [],
+  "other_names": [
+    "Chemainus Bay"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 48.929554,
     "lon": -123.70609,
@@ -30,21 +32,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 4s",
     "focal_height_m": 9.3,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN19",
+    "ccg_list_number": "P280",
+    "nga": "13356",
+    "admiralty": "G5384"
   },
   "agency": null,
   "ownership": "unknown",
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1682749995",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2169",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Southern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2652-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,15 +108,56 @@
       "key": "osm:node/1682749995",
       "part": "osm:node/1682749995",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2169",
+      "part": "osm:node/1682749995",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P280",
+      "part": "osm:node/1682749995",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:bare-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
