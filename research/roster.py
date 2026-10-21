@@ -14,6 +14,8 @@ primary record for the keepers it names (DESIGN.md 3.6: never join two people by
 Maintenance (all caches live under $FRESNEL_RAW_ROOT/uslhs, default <repo>/data/raw/uslhs):
   crawl   fetch the places index, every place page and every showPeople/<nid> roster (about 2,300 places x 2
           requests, 2 s apart; resumable: anything already cached is skipped; robots.txt honoured)
+  crawl-people [--place SLUG] [--limit N]   opt-in: fetch each roster person's page for salary / source / dates
+          (one request each; the whole archive is about 47,000 people, a day of crawling); `build` merges them in
   build   parse the cache into places.json and rosters.json
   stats   counts by place type, places with rosters, roster lines
 """
@@ -489,6 +491,8 @@ def cmd_build(a):
         rid = p.get("roster_id")
         if rid and os.path.exists(people_path(rid)):
             lines = roster_lines(parse_roster(polite.read_text(people_path(rid))))
+            for l in lines:
+                add_person_facts(l, r["slug"])
             p["roster_lines"] = len(lines)
             rosters[str(rid)] = {"slug": r["slug"], "name": p["name"], "lines": lines}
         else:
@@ -500,6 +504,56 @@ def cmd_build(a):
     log("built %d places (%d not fetched yet), %d rosters" % (len(places), len(missing), len(rosters)))
     if unmapped:
         log("labels not in FIELD_MAP (review): " + ", ".join("%s x%d" % kv for kv in sorted(unmapped.items())))
+    return 0
+
+
+def add_person_facts(line, place_slug):
+    """If this person's page has been fetched (`--detail`, `crawl-people`), add salary / source / dates (facts)."""
+    path = person_path(line["person"])
+    if not os.path.exists(path):
+        return
+    d = parse_person(polite.read_text(path))
+    st = next((x for x in d["stints"] if x["place"] == place_slug and x["from"] == line.get("from")
+               and (x["position"] or "") == line["role_raw"]), None) \
+        or next((x for x in d["stints"] if x["place"] == place_slug and x["from"] == line.get("from")), None)
+    if st:
+        if st["begin_salary"] is not None:
+            line["salary_begin"] = st["begin_salary"]
+        if st["end_salary"] is not None:
+            line["salary_end"] = st["end_salary"]
+    if d.get("source"):
+        line["source"] = d["source"]
+    if d.get("died"):  # birth and death years only for people who have died
+        line["died"] = d["died"]
+        if d.get("born"):
+            line["born"] = d["born"]
+
+
+def cmd_crawl_people(a):
+    """Fetch the person page of every roster line (or of one place): salary, source, dates. One request per
+    person, 2 s apart: about 47,000 people is a day of crawling, so this is opt-in and resumable."""
+    places, rosters = load_data()
+    todo = []
+    for rid, r in rosters.items():
+        if a.place and r["slug"] != a.place:
+            continue
+        for l in r["lines"]:
+            if l["person"] not in todo:
+                todo.append(l["person"])
+    todo = [p for p in todo if not os.path.exists(person_path(p))]
+    if a.limit:
+        todo = todo[: a.limit]
+    log("%d person pages to fetch" % len(todo))
+    for i, slug in enumerate(todo, 1):
+        try:
+            fetch_cached("%s/people/%s" % (BASE, urllib.parse.quote(slug)), person_path(slug), lambda t: "<h1>" in t)
+        except (polite.Blocked, polite.RateLimited) as e:
+            log("stopping: %s" % e)
+            return 2
+        except polite.PoliteError as e:
+            log("FAILED %s: %s" % (slug, e))
+        if i % 100 == 0:
+            log("%d/%d" % (i, len(todo)))
     return 0
 
 
@@ -911,6 +965,11 @@ def main(argv=None):
         ap.add_argument("--limit", type=int)
         ap.add_argument("--only", nargs="*")
         return cmd_crawl(ap.parse_args(argv[1:]))
+    if argv and argv[0] == "crawl-people":
+        ap = argparse.ArgumentParser(prog="roster.py crawl-people")
+        ap.add_argument("--place", help="only this place slug")
+        ap.add_argument("--limit", type=int)
+        return cmd_crawl_people(ap.parse_args(argv[1:]))
     if argv and argv[0] == "build":
         return cmd_build(None)
     if argv and argv[0] == "stats":

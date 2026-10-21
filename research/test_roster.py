@@ -108,6 +108,26 @@ class ParseIndexAndRoster(unittest.TestCase):
         self.assertEqual(roster.parse_roster("[]"), [])
 
 
+class Person(unittest.TestCase):
+    def test_person_page_facts(self):
+        d = roster.parse_person(read("person_strout.html"))
+        self.assertEqual(d["born"], 1826)
+        self.assertEqual(d["died"], 1907)
+        self.assertEqual(d["source"], "Register of Lighthouse Keepers")
+        st = d["stints"][0]
+        self.assertEqual((st["place"], st["position"], st["from"], st["to"]), ("portland-head", "Principal Lighthouse Keeper", 1869, 1904))
+        self.assertEqual((st["begin_salary"], st["end_salary"]), (620.0, 600.0))
+
+    def test_person_facts_merge_into_a_roster_line(self):
+        raw = tempfile.mkdtemp()
+        os.environ["FRESNEL_RAW_ROOT"] = raw
+        os.makedirs(os.path.join(raw, "uslhs", "person"))
+        write(os.path.join(raw, "uslhs", "person", "joshua-f-strout.html"), read("person_strout.html"))
+        line = {"person": "joshua-f-strout", "from": 1869, "to": 1904, "role_raw": "Principal Lighthouse Keeper"}
+        roster.add_person_facts(line, "portland-head")
+        self.assertEqual((line["salary_begin"], line["salary_end"], line["died"]), (620.0, 600.0, 1907))
+
+
 class Roles(unittest.TestCase):
     def test_vocabulary(self):
         n = roster.normalise_role
