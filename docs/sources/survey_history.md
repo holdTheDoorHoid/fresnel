@@ -872,5 +872,5 @@ redirects to a `dn` host), with no errors.
   Lifesaving Station 67, Private (Faux) Lighthouse 48, Museum 45, Replica 13, Non-Government ATON 4, Fog Signal Station 3, House of refuge 1, NARA 1, Treasury Building 1, two with no type.
   **1,400 places have a roster; 43,999 roster lines.** 1,190 places carry coordinates (44 of them impossible, e.g. 88.7 minutes) and the rest none. Matching the 1,127 US station
   records in `data/stations` to USLHS places (`roster.py match-stations`): 809 matched (728 of them with a roster), 218 unsure (two towers or namesakes within a kilometre,
-  or a name USLHS spells differently), 100 with no USLHS place (airport beacons, replicas, recent lights, many life-boat stations).
+  or a name USLHS spells differently), 100 with no USLHS place (63 lighthouse-kind records such as airport beacons and replicas, 34 life-saving or Coast Guard stations: USLHS has only 67 life-saving stations). By kind: lighthouses 723 matched, 151 unsure, 63 none; life-saving stations 6, 8, 34.
 
