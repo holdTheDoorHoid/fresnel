@@ -73,9 +73,9 @@ export function accessLabels(r: Pick<StationRecord, 'access' | 'ownership' | 'vi
   });
 }
 
-/** The same from a map point's short properties (no ownership there, so no tribal label). */
-export function accessLabelsFromProps(p: Pick<StationProps, 'a' | 'bo' | 'sf'>): AccessLabel[] {
-  return labels({ level: p.a, boatOnly: !!p.bo, staffing: p.sf ?? null });
+/** The same from a map point's short properties (tr = 1 marks tribal land). */
+export function accessLabelsFromProps(p: Pick<StationProps, 'a' | 'bo' | 'sf' | 'tr'>): AccessLabel[] {
+  return labels({ level: p.a, boatOnly: !!p.bo, staffing: p.sf ?? null, tribal: !!p.tr });
 }
 
 /** True when the page should lead with the warning, above everything else. */

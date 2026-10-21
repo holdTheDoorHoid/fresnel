@@ -66,6 +66,7 @@ FORMAT = {
     "bo": "1 = reached only by boat (absent = no, or not recorded)",
     "cl": "1 = the tower can be climbed (absent = no, or not recorded)",
     "sy": "1 = somewhere to stay: rental, inn, hostel or keeper program (absent = none recorded)",
+    "tr": "1 = on tribal land: ownership tribal (absent = no, or not recorded)",
     "rg": "1 = on a heritage register such as the NRHP or the Canadian Register (absent = none recorded)",
     "o": "other names joined with | (absent = none)",
     "y0": "first year a light is recorded here: first lit, or built when that is all we have (absent = unknown)",
@@ -194,6 +195,8 @@ def feature(rec: dict, has_story: bool = False) -> dict:
         props["cl"] = 1
     if isinstance(rec.get("stay"), dict) and rec["stay"]:
         props["sy"] = 1
+    if rec.get("ownership") == "tribal":
+        props["tr"] = 1
     if rec.get("registers"):
         props["rg"] = 1
     others = [n for n in rec.get("other_names") or [] if isinstance(n, str) and n.strip()]

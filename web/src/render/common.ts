@@ -112,7 +112,7 @@ export function statusBadge(r: { status: string; kind: string }): SafeHtml {
 }
 
 export function unverifiedBadge(): SafeHtml {
-  return html`<li class="badge badge-unverified" title="From a single source and not yet checked. Details may be wrong.">${WARN}<span>Unverified</span></li>`;
+  return html`<li class="badge badge-unverified" title="Not yet confirmed: no two independent sources agree on it, and nobody has checked it. Details may be wrong.">${WARN}<span>Unverified</span></li>`;
 }
 
 export function accessBadge(l: AccessLabel): SafeHtml {

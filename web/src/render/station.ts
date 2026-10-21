@@ -113,7 +113,7 @@ export function unverifiedNotice(r: StationRecord, ctx: RenderContext): SafeHtml
   if (r.verification !== 'unverified') return html``;
   return html`<div class="notice tone-caution" role="note">${WARN}<div>
     <p class="notice-title">Unverified entry</p>
-    <p>This comes from a single source and nobody has checked it yet, so details may be wrong. If you know better, <a href="${editIssueUrl(r, ctx)}">suggest an edit</a>.</p>
+    <p>No two independent sources agree on this entry yet, and nobody has checked it, so details may be wrong. If you know better, <a href="${editIssueUrl(r, ctx)}">suggest an edit</a>.</p>
   </div></div>`;
 }
 
@@ -683,7 +683,7 @@ export function renderPanel(r: StationRecord, ctx: RenderContext, opts: { hidden
     ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters hide this station on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
     ${prominent.map((l, i) => accessNotice(l, i === 0 ? r.access?.note : null))}
     ${statusLine(r)}
-    ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
+    ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: not yet confirmed by two sources, not yet checked.</p>` : ''}
     ${visit.length ? html`<p class="panel-visit">${visit.join(' · ')}</p>` : ''}
     ${rows.length ? html`<dl class="kv kv-panel">${rows.map(([k, val]) => html`<div><dt>${k}</dt><dd>${val}</dd></div>`)}</dl>` : ''}
     ${checklistButtons(r.id)}

@@ -47,6 +47,7 @@ describe('access labels', () => {
   it('reads the same from a map point', () => {
     expect(accessLabelsFromProps({ a: 'permission', bo: 1, sf: 'staffed' }).map((l) => l.id)).toEqual(['permission', 'staffed', 'boat_only']);
     expect(accessLabelsFromProps({}).map((l) => l.id)).toEqual(['unknown']);
+    expect(accessLabelsFromProps({ a: 'permission', tr: 1 }).map((l) => l.id)).toContain('tribal');
   });
 });
 

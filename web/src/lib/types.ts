@@ -15,6 +15,7 @@
  *   a   access level       vocab.access                   (absent = unknown)
  *   sf  staffing           "staffed" | "volunteer"        (absent = otherwise)
  *   bo  boat only          1                              (absent = no, or not recorded)
+ *   tr  tribal land        1  (ownership tribal)          (absent = no, or not recorded)
  *   cl  climbable          1
  *   sy  somewhere to stay  1
  *   rg  heritage register  1
@@ -38,6 +39,7 @@ export interface StationProps {
   a?: string;
   sf?: 'staffed' | 'volunteer';
   bo?: 1;
+  tr?: 1;
   cl?: 1;
   sy?: 1;
   rg?: 1;

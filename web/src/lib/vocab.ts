@@ -153,7 +153,7 @@ export const ACCESS: Record<string, Wording & { tone: Tone }> = {
 };
 
 export const VERIFICATION: Record<string, Wording> = {
-  unverified: { label: 'Unverified', meaning: 'From a single source and not yet checked. Details may be wrong.' },
+  unverified: { label: 'Unverified', meaning: 'Not yet confirmed: no two independent sources agree on it, and nobody has checked it. Details may be wrong.' },
   facts: { label: 'Facts agree', meaning: 'Two or more independent sources agree on where it is and its status.' },
   researched: { label: 'Researched', meaning: 'Its history has been researched and written up, with footnoted sources.' },
   verified: { label: 'Verified', meaning: 'Researched, then checked independently.' },
