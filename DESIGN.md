@@ -51,11 +51,36 @@ robots.txt names AI or Claude crawlers as disallowed is skipped, and the skip is
 responses under `data/raw/` (git-ignored) so nothing is fetched twice. Never automate around a
 CAPTCHA or a Cloudflare challenge.
 
+Endpoint rulings (orchestrator, 2026-10-21, from the surveys):
+
+- **Wikidata and OpenStreetMap through QLever.** `query.wikidata.org/robots.txt` disallows `/sparql`
+  and `overpass-api.de/robots.txt` disallows `/api/` for all agents, so neither is used. QLever
+  (University of Freiburg; no robots.txt) serves the same data: `https://qlever.dev/api/wikidata`
+  (SPARQL; explicit `PREFIX` lines needed) and `https://qlever.dev/api/osm-planet`. Per-entity JSON
+  at `https://www.wikidata.org/wiki/Special:EntityData/<Q>.json` is allowed by wikidata.org's robots.txt.
+- **Wikipedia: article pages only** (`/wiki/<Title>`). Its robots.txt disallows `/w/` (the Action API)
+  and `/api/` (REST) for all agents; Firefinder follows the same rule.
+- **Skipped because robots.txt names Anthropic's crawlers** (ClaudeBot, anthropic-ai, Claude-Web):
+  BAnQ numérique, Nauticapedia. Canadiana disallows the same names, and its `/search` and `/file`
+  paths for every agent, so it is skipped too. The owner may overrule (in Firefinder the owner kept a
+  source whose robots.txt named AI crawlers).
+- **Retired pages through the Wayback Machine: allowed.** A page its publisher has taken down (the
+  NPS light-station inventory, old Tripod sites) may be read from the Internet Archive and cited with
+  both the original URL and the archive URL.
+- **Live but blocked pages through the Wayback Machine: OWNER'S CALL, on hold.** The USCG Historian's
+  site (public-domain federal histories: station pages with keeper lists, the Lightship Station Index)
+  answers 403 to our requests. The territories survey read 292 archived copies of its pages. Until the
+  owner decides, no fetcher is built on them and no story cites them.
+- **Skipped as blocked:** USCG Historian (`history.uscg.mil`, Akamai 403 to everything), the Michigan
+  Lighthouse Conservancy, PEI Island Newspapers, Maritime History of the Great Lakes (Cloudflare
+  challenges), Library and Archives Canada search and the New Brunswick archives (robots.txt), NPS IRMA
+  `/DataStore/DownloadFile/` (robots.txt).
+
 The source survey (2026-10-21, `docs/sources/survey_*.md`) fills this table. Leads to check:
 
 | Kind | Leads |
 |---|---|
-| Open, bulk | Wikidata (CC0; ~990 US and ~490 Canadian lighthouses, ~500 with NRHP ids), OpenStreetMap `man_made=lighthouse` (ODbL), NOAA ENC `LIGHTS` objects (public domain: characteristic, period, height, range of active lights), the USCG Light List, the Canadian Coast Guard List of Lights, the NPS National Register dataset, Parks Canada's heritage lighthouses (Heritage Lighthouse Protection Act), the Canadian Register of Historic Places |
+| Open, bulk | Wikidata (CC0; ~990 US and ~490 Canadian lighthouses, ~500 with NRHP ids; LighthouseFriends suggests Canada has ~740 standing and ~390 lost, so Wikidata holds less than half), OpenStreetMap `man_made=lighthouse` (ODbL), NOAA ENC `LIGHTS` objects (public domain: characteristic, period, height, range of active lights), the USCG Light List, the Canadian Coast Guard List of Lights, the NPS National Register dataset, Parks Canada's heritage lighthouses (Heritage Lighthouse Protection Act), the Canadian Register of Historic Places |
 | Public-domain history | USCG Historian's Office station histories and lightship lists; the NPS Maritime Heritage Program's inventory of historic light stations; the Lighthouse Board (1852–1910) and Commissioner of Lighthouses (1911–39) annual reports and the Lighthouse Service Bulletin (HathiTrust / Google Books / Internet Archive); the US Life-Saving Service annual reports (1876–1914, wreck-by-wreck); NRHP nomination forms (NPGallery); HABS/HAER (Library of Congress); Chronicling America; NARA RG 26 keeper registers (M1373 and later) |
 | Canadian history | Department of Marine and Fisheries / Marine annual reports in the Sessional Papers (Canadiana; they list keepers and salaries), Library and Archives Canada, provincial archives, the Nova Scotia Lighthouse Preservation Society, BAnQ and the RPCQ for Quebec |
 | Community sites (facts only) | LighthouseFriends.com (histories and keeper lists), Russ Rowlett's Lighthouse Directory (worldwide, lost lights included, ARLHS numbers), Lighthouse Digest (the Doomsday List of endangered lights), the US Lighthouse Society (passport stamps, rentals, keeper programs), regional conservancies and Friends groups |
