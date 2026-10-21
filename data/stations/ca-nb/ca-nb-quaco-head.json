@@ -3,7 +3,8 @@
   "name": "Quaco Head Lighthouse",
   "other_names": [
     "St. Martins lighthouse",
-    "Quaco Head"
+    "Quaco Head",
+    "West Quaco"
   ],
   "country": "CA",
   "region": "NB",
@@ -33,21 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1966,
+    "first_lit": 1835,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 26.0,
     "range_nm": 21.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN421",
     "ccg_list_number": "A150",
-    "nga": "110-11080"
+    "nga": "110-11080",
+    "admiralty": "H4076"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -77,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1966,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1976,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -116,6 +130,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1514778357",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1382",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - East",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl145-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,7 +157,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -141,12 +169,51 @@
       "key": "osm:node/1514778357",
       "part": "wikidata:Q106809873",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1382",
+      "part": "wikidata:Q106809873",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A150",
+      "part": "wikidata:Q106809873",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:quaco-head",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1966
+        },
+        {
+          "source": "rowlett",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

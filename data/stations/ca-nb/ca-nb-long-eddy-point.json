@@ -3,7 +3,9 @@
   "name": "Long Eddy Point Lighthouse",
   "other_names": [
     "phare de Long Eddy Point",
-    "Long Eddy Point Light"
+    "Long Eddy Point Light",
+    "The Whistle",
+    "Long Eddy Point"
   ],
   "country": "CA",
   "region": "NB",
@@ -23,24 +25,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1967,
       "height_m": 9.3,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": 1966,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 8s",
+    "characteristic": "Fl R",
     "focal_height_m": 38.3,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,7 +60,8 @@
     "uscg_llnr": null,
     "arlhs": "CAN283",
     "ccg_list_number": "A34",
-    "nga": "110-11360"
+    "nga": "110-11360",
+    "admiralty": "H4166"
   },
   "agency": null,
   "ownership": "unknown",
@@ -132,6 +135,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1363876056",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15292",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1209",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,13 +174,50 @@
       "key": "osm:way/1363876056",
       "part": "wikidata:Q30069009",
       "fields": [
-        "light",
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15292",
+      "part": "wikidata:Q30069009",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1209",
+      "part": "wikidata:Q30069009",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A34",
+      "part": "wikidata:Q30069009",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl R"
+        },
+        {
+          "source": "osm",
+          "value": "Fl R 8s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

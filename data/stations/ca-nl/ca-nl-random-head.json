@@ -2,7 +2,11 @@
   "id": "ca-nl-random-head",
   "name": "Random Head Lighthouse",
   "other_names": [
-    "phare de Random Head"
+    "phare de Random Head",
+    "Motion Island",
+    "Random Head",
+    "Random Head Harbour Light",
+    "Random Head Harbour"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,10 +15,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 48.094705,
-    "lon": -53.545327,
+    "lat": 48.095024,
+    "lon": -53.543333,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
@@ -35,11 +39,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 3s",
-    "focal_height_m": 38.0,
-    "range_nm": 7.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 38.4,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +61,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN667",
     "ccg_list_number": "N465",
-    "nga": "110-1704"
+    "nga": "110-1704",
+    "admiralty": "H514"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,13 +75,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -106,6 +111,26 @@
       "label": "ARLHS World List of Lights CAN667",
       "url": "https://wlol.arlhs.com/lighthouse/CAN667.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1280962258",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1323",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,17 +142,70 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1280962258",
+      "part": "wikidata:Q47377893",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1323",
+      "part": "wikidata:Q47377893",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N465",
+      "part": "wikidata:Q47377893",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:random-head-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 5s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl R 3s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 3s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

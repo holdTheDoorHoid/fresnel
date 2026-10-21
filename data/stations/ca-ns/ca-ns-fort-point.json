@@ -1,7 +1,9 @@
 {
   "id": "ca-ns-fort-point",
   "name": "Fort Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Fort Point"
+  ],
   "country": "CA",
   "region": "NS",
   "county": "Region of Queens Municipality",
@@ -62,10 +64,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Region of Queens Municipality (Fort Point Lighthouse Park )",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -73,13 +75,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -145,6 +147,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Fort_Point_Lighthouse_%28Nova_Scotia%29",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1363",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -171,6 +183,24 @@
       "part": "wikidata:Q28232897",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1363",
+      "part": "wikidata:Q28232897",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:fort-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

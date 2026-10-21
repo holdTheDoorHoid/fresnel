@@ -1,7 +1,9 @@
 {
   "id": "ca-nb-beacon",
   "name": "Beacon Light",
-  "other_names": [],
+  "other_names": [
+    "Saint John Harbour Beacon"
+  ],
   "country": "CA",
   "region": "NB",
   "county": "Saint John County",
@@ -12,10 +14,10 @@
     "lat": 45.250221,
     "lon": -66.053437,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1913) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -24,7 +26,7 @@
       "material": null,
       "built": 1828,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -104,6 +106,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Beacon_Light%2C_Saint_John%2C_New_Brunswick",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2126",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,15 +122,22 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2126",
+      "part": "wikidata:Q125545602",
+      "fields": [
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

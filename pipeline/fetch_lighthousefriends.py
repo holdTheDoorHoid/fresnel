@@ -33,6 +33,9 @@ Readings:
   keeper program -> `stay` type `keeper_program`. LHF lists only the flags that are true, so a light
   without a flag gets nothing, never a false.
 
+The extract `data/sources/lighthousefriends.json` is shared with the Canadian fetcher
+(fetch_lighthousefriends_ca.py): each writes only its own country's records and keeps the other's.
+
 Usage: python3 pipeline/fetch_lighthousefriends.py [--refresh] [--states ME,NH]
 """
 from __future__ import annotations
@@ -277,7 +280,7 @@ def main(argv: list[str] | None = None) -> int:
                      "light's page; no text or photographs are copied.",
         credit="LighthouseFriends.com (Kraig Anderson), used for facts with a link",
         records=records, notes={"states": len(states), "passes": list(PASSES), "problems": problems},
-        retrieved=c.retrieved_date(*files))
+        retrieved=c.retrieved_date(*files), country="US")
     cnt = Counter(r["status"] for r in records)
     flg = Counter(f for r in records for f in r["extra"]["flags"])
     c.log(f"lighthousefriends: wrote {len(records)} records; status {dict(cnt)}; flags {dict(flg)}; problems {problems}")

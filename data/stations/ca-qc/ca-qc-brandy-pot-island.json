@@ -7,7 +7,11 @@
     "site patrimonial de l'Île-du-Pot-à-l'Eau-de-Vie",
     "Phare du Pot à l'Eau-de-vie",
     "Pot à l'Eau-de-vie lighthouse",
-    "Brandypot"
+    "Brandypot",
+    "Île du Pot à l'Eau-de-Vie Lighthouse",
+    "Pot à l'Eau-de-Vie (Brandy Pot)",
+    "Pot à l'Eau-de-Vie",
+    "Brandy Pot"
   ],
   "country": "CA",
   "region": "QC",
@@ -29,11 +33,11 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
+      "built": 1861,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -80,14 +84,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN601",
+    "ccg_list_number": "A1827",
+    "nga": "6684",
+    "admiralty": "H2164"
   },
-  "agency": null,
+  "agency": "La Société Duvetnor Ltée (Pot à l'Eau-de-Vie)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -95,16 +100,41 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
+    {
+      "year": 1862,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 1998,
       "event": "heritage_designated",
@@ -116,6 +146,12 @@
       "event": "heritage_designated",
       "note": "heritage lighthouse",
       "from": "wikidata"
+    },
+    {
+      "year": 2025,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -170,6 +206,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549796285",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14734",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1592",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -204,10 +255,80 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14734",
+      "part": "wikidata:Q16634749",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1592",
+      "part": "wikidata:Q16634749",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:pot-l-eau-de-vie",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:pot-l-eau-de-vie-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1862
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1861
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

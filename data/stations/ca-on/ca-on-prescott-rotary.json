@@ -4,7 +4,9 @@
   "other_names": [
     "Dominion Lighthouse",
     "Dominion Lighthouse Depot",
-    "Rotary Lighthouse"
+    "Rotary Lighthouse",
+    "Prescott",
+    "Prescott Rotary"
   ],
   "country": "CA",
   "region": "ON",
@@ -50,10 +52,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Prescott",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -61,13 +63,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -106,6 +108,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/403830283",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1097",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,6 +141,22 @@
       "part": "wikidata:Q111515430",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1097",
+      "part": "wikidata:Q111515430",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onse:prescott",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

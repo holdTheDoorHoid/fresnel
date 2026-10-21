@@ -4,7 +4,12 @@
   "other_names": [
     "phare du Borgot",
     "L'Étang-du-Nord Lighthouse",
-    "Phare du Borgot"
+    "Phare du Borgot",
+    "Cap-aux-Meules (Étang-du-Nord)",
+    "Cap-aux-Meules",
+    "Grindstone",
+    "Pointe Hérisse",
+    "Étang-du-Nord"
   ],
   "country": "CA",
   "region": "QC",
@@ -18,7 +23,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -34,8 +39,8 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1874,
+    "deactivated": 2015,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 28.0,
@@ -58,11 +63,12 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN961",
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "A1488",
+    "nga": "8408",
+    "admiralty": "H912"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +78,8 @@
     "as_of": "1987"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -82,6 +88,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1987,
       "event": "built",
@@ -99,6 +111,12 @@
       "event": "heritage_designated",
       "note": "recognized heritage immovable",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -139,6 +157,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6548288060",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1707",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -166,10 +194,58 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1707",
+      "part": "wikidata:Q3378440",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:cap-aux-meules",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1987
+        },
+        {
+          "source": "rowlett",
+          "value": 1874
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

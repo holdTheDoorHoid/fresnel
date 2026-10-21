@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Panmure Head",
     "Panmure Island Lighhouse",
-    "Panmure"
+    "Panmure",
+    "Panmure Head",
+    "Panmure Island"
   ],
   "country": "CA",
   "region": "PE",
@@ -24,13 +26,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "wood_frame",
+      "material": "wood",
       "built": 1853,
       "height_m": 18.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -39,9 +41,9 @@
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 25.0,
-    "range_nm": 17.0,
+    "range_nm": 19.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -74,12 +76,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN363",
     "ccg_list_number": "A953",
-    "nga": "110-8108"
+    "nga": "110-8108",
+    "admiralty": "H932"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Panmure Island Lighthouse Association",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -87,13 +90,13 @@
     "as_of": "1985"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -165,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/361785944",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14872",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=952",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -177,7 +200,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -198,6 +220,42 @@
       "key": "osm:way/361785944",
       "part": "wikidata:Q30575037",
       "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14872",
+      "part": "wikidata:Q30575037",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:952",
+      "part": "wikidata:Q30575037",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A953",
+      "part": "wikidata:Q30575037",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:panmure-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

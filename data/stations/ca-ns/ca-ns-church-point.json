@@ -2,7 +2,9 @@
   "id": "ca-ns-church-point",
   "name": "Church Point lighthouse",
   "other_names": [
-    "Church Point Lighthouse"
+    "Church Point Lighthouse",
+    "Church Point",
+    "Pointe de l'Église"
   ],
   "country": "CA",
   "region": "NS",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.331896,
-    "lon": -66.125754,
+    "lat": 44.331895,
+    "lon": -66.125818,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +28,7 @@
       "material": "wood",
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -44,11 +46,11 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN138",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Université Sainte-Anne",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -59,7 +61,7 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -68,7 +70,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1984,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2014,
+      "event": "destroyed",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2017,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -92,6 +113,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Church_Point_lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1346",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -101,16 +132,34 @@
       "part": "wikidata:Q28375776",
       "fields": [
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1346",
+      "part": "wikidata:Q28375776",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:church-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,10 @@
   "id": "ca-nl-green-point",
   "name": "Green Point Lighthouse",
   "other_names": [
-    "phare de Green Point"
+    "phare de Green Point",
+    "Green Point",
+    "Green Point (Bay Roberts) Light",
+    "Bay Roberts"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.611484,
-    "lon": -53.176725,
+    "lat": 47.611472,
+    "lon": -53.176694,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -22,24 +25,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "cast_iron",
       "material": "mixed",
       "built": 1883,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "L Fl W 10s",
-    "focal_height_m": 17.0,
-    "range_nm": 6.0,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 17.1,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,7 +60,8 @@
     "uscg_llnr": null,
     "arlhs": "CAN659",
     "ccg_list_number": "N486",
-    "nga": "110-1784"
+    "nga": "110-1784",
+    "admiralty": "H482"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -70,8 +74,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -112,6 +116,26 @@
       "label": "ARLHS World List of Lights CAN659",
       "url": "https://wlol.arlhs.com/lighthouse/CAN659.html",
       "kind": "register"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15417",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1243",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -124,18 +148,64 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15417",
+      "part": "wikidata:Q46146075",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1243",
+      "part": "wikidata:Q46146075",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N486",
+      "part": "wikidata:Q46146075",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:green-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "L Fl W 10s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

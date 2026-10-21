@@ -3,7 +3,9 @@
   "name": "Ile Parisienne Light",
   "other_names": [
     "phare de l'Île-Parisienne",
-    "Ile Parisienne Lighthouse"
+    "Ile Parisienne Lighthouse",
+    "Île Parisienne",
+    "Ile Parisienne"
   ],
   "country": "CA",
   "region": "ON",
@@ -37,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 53.0,
-    "range_nm": 16.0,
+    "focal_height_m": 16.1,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,10 +62,10 @@
     "ccg_list_number": "I1082",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -71,13 +73,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -86,6 +88,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1912,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1991,
@@ -137,6 +145,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2709898313",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1530",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Superior",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw1082-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onno.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,9 +184,35 @@
       "key": "osm:node/2709898313",
       "part": "wikidata:Q14875204",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1530",
+      "part": "wikidata:Q14875204",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1082",
+      "part": "wikidata:Q14875204",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onno:le-parisienne",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -178,6 +227,10 @@
         {
           "source": "osm",
           "value": 53.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 16.1
         }
       ],
       "note": "Sources differ by more than 3 m."

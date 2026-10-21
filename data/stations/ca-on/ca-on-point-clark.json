@@ -2,7 +2,9 @@
   "id": "ca-on-point-clark",
   "name": "Point Clark Lighthouse",
   "other_names": [
-    "phare de Point Clark"
+    "phare de Point Clark",
+    "Imperial Tower",
+    "Point Clark"
   ],
   "country": "CA",
   "region": "ON",
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 28.3,
+    "range_nm": 21.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -79,10 +81,10 @@
     "ccg_list_number": "I782",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -90,13 +92,13 @@
     "as_of": "1960"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -184,6 +186,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/486982481",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14532",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1045",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Huron",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw768-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -196,7 +218,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -218,6 +239,39 @@
       "part": "wikidata:Q14875388",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14532",
+      "part": "wikidata:Q14875388",
+      "fields": [
+        "agency",
+        "ownership"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1045",
+      "part": "wikidata:Q14875388",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I782",
+      "part": "wikidata:Q14875388",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:point-clark",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

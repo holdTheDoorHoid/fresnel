@@ -7,7 +7,7 @@
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 48.523652,
     "lon": -123.291896,
@@ -34,17 +34,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 8.0,
+    "focal_height_m": 8.5,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P223",
+    "nga": "13632",
+    "admiralty": "G5336"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,11 +58,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +76,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1676049297",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Haro Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2228-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,16 +94,33 @@
       "key": "osm:node/1676049297",
       "part": "osm:node/1676049297",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P223",
+      "part": "osm:node/1676049297",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:zero-rock",
+      "part": "station",
+      "fields": [
+        "aton",
+        "kind",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

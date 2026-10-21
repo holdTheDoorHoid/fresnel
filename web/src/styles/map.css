@@ -246,3 +246,33 @@ p.panel-stay { margin: 14px 0; }
   .maplibregl-ctrl-bottom-left { bottom: 34px; }
   .maplibregl-ctrl-bottom-left .maplibregl-ctrl { margin-left: var(--gutter); }
 }
+
+/* ---------- Light ranges (the light at night's rings) ---------- */
+.fr-reach { position: static; } /* the panel is placed against the status bar, like the key */
+.fr-reach-btn { gap: 6px; }
+.fr-reach-btn.is-on { border-color: var(--lamp); box-shadow: inset 0 0 0 1px var(--lamp), var(--shadow-sm); }
+.fr-reach-btn[aria-expanded='true'] { background: var(--primary-bg); color: var(--primary-ink); border-color: var(--primary-bg); }
+.fr-reach-on { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 999px; background: var(--lamp); color: #0b1622; }
+.fr-reach-panel {
+  position: absolute; left: 0; top: calc(100% + 6px); z-index: 6;
+  width: min(360px, calc(100vw - 32px)); max-height: min(70vh, 560px); overflow-y: auto; overscroll-behavior: contain;
+  padding: 4px 16px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow);
+}
+.fr-reach-panel h2 { margin: 4px 0; font-size: 1.15rem; }
+.fr-reach-panel p { margin: 8px 0 0; }
+.fr-reach-toggle { display: flex; align-items: center; gap: 10px; margin: 8px 0 10px; font-weight: 650; cursor: pointer; }
+.fr-reach-toggle input { width: 20px; height: 20px; accent-color: var(--accent); }
+.fr-reach-eye { display: block; font: 750 0.78rem/1.3 var(--font-sans); letter-spacing: 0.075em; text-transform: uppercase; color: var(--ink-2); }
+.fr-reach-eye select {
+  display: block; width: 100%; margin-top: 4px; min-height: 42px; padding: 8px 10px; text-transform: none; letter-spacing: 0;
+  border: 1px solid var(--line-strong); border-radius: 9px; background: var(--bg); color: var(--ink); font: 500 0.95rem var(--font-sans);
+}
+.fr-reach-eye select:disabled { opacity: 0.6; }
+.fr-reach-key { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 6px; }
+.fr-reach-key li { display: flex; gap: 8px; align-items: flex-start; }
+.fr-reach-key .sw { flex: none; width: 22px; height: 14px; margin-top: 2px; border-radius: 999px; }
+.fr-reach-key .sw-lit { background: color-mix(in srgb, var(--lamp) 22%, transparent); border: 2px solid var(--lamp); }
+.fr-reach-key .sw-past { background: color-mix(in srgb, var(--mk-ghost) 14%, transparent); border: 2px dashed var(--mk-ghost); }
+@media (max-width: 899px) {
+  .fr-reach-panel { position: fixed; left: var(--gutter); right: var(--gutter); top: auto; bottom: 250px; width: auto; max-height: calc(100dvh - 330px); }
+}

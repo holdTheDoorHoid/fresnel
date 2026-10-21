@@ -1,0 +1,219 @@
+{
+  "id": "ca-nl-belle-isle-south-end-lower-2",
+  "name": "Belle Isle South End Lower Lighthouse",
+  "other_names": [
+    "Belle Isle South End Lower",
+    "Belle Isle, South End Lower Light"
+  ],
+  "country": "CA",
+  "region": "NL",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 51.877222,
+    "lon": -55.384167,
+    "precision": "exact",
+    "from": "ccg_list_of_lights"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1908,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl"
+    }
+  ],
+  "light": {
+    "first_lit": 1879,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 20s",
+    "focal_height_m": 49.7,
+    "range_nm": 18.0,
+    "fog_signal": null,
+    "from": "ccg_list_of_lights"
+  },
+  "registers": [
+    {
+      "register": "Heritage Lighthouse (Canada)",
+      "number": "14933",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14933"
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN747",
+    "ccg_list_number": "N234",
+    "nga": "0992",
+    "admiralty": "H104"
+  },
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1879,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2015,
+      "event": "heritage_designated",
+      "note": "Heritage lighthouse of Canada (Heritage Lighthouse Protection Act), designated 2015-05-29",
+      "from": "parks_canada_hl"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14933",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1570",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Strait of Belle Isle",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl211-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/lab.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14933",
+      "part": "lighthousefriends:1570",
+      "fields": [
+        "agency",
+        "events",
+        "kind",
+        "name",
+        "ownership",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1570",
+      "part": "lighthousefriends:1570",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N234",
+      "part": "lighthousefriends:1570",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:lab:belle-isle-south-end-lower",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1879
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1908
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "parks_canada_hl",
+          "value": [
+            51.88669,
+            -55.39501
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            51.87722,
+            -55.38417
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            51.87722,
+            -55.38417
+          ]
+        }
+      ],
+      "distance_m": 1289,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

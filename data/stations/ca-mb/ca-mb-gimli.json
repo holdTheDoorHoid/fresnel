@@ -2,7 +2,8 @@
   "id": "ca-mb-gimli",
   "name": "Gimli Light",
   "other_names": [
-    "Gimli"
+    "Gimli",
+    "Gimli Harbour"
   ],
   "country": "CA",
   "region": "MB",
@@ -11,35 +12,50 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 50.629169,
-    "lon": -96.980839,
+    "lat": 50.629306,
+    "lon": -96.981861,
     "precision": "exact",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Gimli Light",
       "type": null,
       "material": null,
       "built": 1973,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 50.629169,
+        "lon": -96.980839
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Gimli Harbour",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 1.2,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1910,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
     "focal_height_m": 7.7,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -59,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -69,6 +85,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1910,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1973,
       "event": "built",
@@ -89,6 +111,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5772187427",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2165",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Winnipeg",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw15631-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -109,28 +146,43 @@
       "source": "osm",
       "key": "osm:node/5772187427",
       "part": "wikidata:Q115237065",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2165",
+      "part": "wikidata:Q115237065",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1569",
+      "part": "wikidata:Q115237065",
       "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1570",
+      "part": "ccg_list_of_lights:I1570",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:gimli",
+      "part": "station",
+      "fields": [
+        "events",
         "light",
-        "location"
+        "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.focal_height_m",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 12.8
-        },
-        {
-          "source": "osm",
-          "value": 7.7
-        }
-      ],
-      "note": "Sources differ by more than 3 m."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

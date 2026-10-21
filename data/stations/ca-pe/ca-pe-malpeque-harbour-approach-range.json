@@ -2,7 +2,9 @@
   "id": "ca-pe-malpeque-harbour-approach-range",
   "name": "Malpeque Harbour Approach Range Lights",
   "other_names": [
-    "phare du port de Malpeque"
+    "phare du port de Malpeque",
+    "Malpeque Harbour Approach Range Rear",
+    "Hog Island"
   ],
   "country": "CA",
   "region": "PE",
@@ -46,12 +48,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN298",
     "ccg_list_number": "A1067",
-    "nga": "110-7924"
+    "nga": "110-7924",
+    "admiralty": "H1106.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -59,16 +62,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": false,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1961,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1961,
       "event": "first_lit",
@@ -110,6 +119,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1918121163",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,6 +149,18 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:malpeque-harbour-approach-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

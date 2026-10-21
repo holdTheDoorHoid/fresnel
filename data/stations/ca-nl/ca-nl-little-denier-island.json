@@ -2,7 +2,9 @@
   "id": "ca-nl-little-denier-island",
   "name": "Little Denier Island Lighthouse",
   "other_names": [
-    "phare de Little Denier Island"
+    "phare de Little Denier Island",
+    "Little Denier Island",
+    "Little Denier Island Light"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 48.684483,
-    "lon": -53.591995,
+    "lat": 48.684722,
+    "lon": -53.59,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,21 +27,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 7.6,
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 90.8,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,14 +57,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN663",
+    "ccg_list_number": "N441",
+    "nga": "1608",
+    "admiralty": "H543"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,16 +73,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1888,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1990,
       "event": "heritage_designated",
@@ -95,6 +104,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q47378005",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1291",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Bonavista Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl396-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,15 +129,74 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1291",
+      "part": "wikidata:Q47378005",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N441",
+      "part": "wikidata:Q47378005",
+      "fields": [
+        "aton",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:little-denier-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            48.68448,
+            -53.59199
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            48.68472,
+            -53.57333
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            48.68472,
+            -53.59
+          ]
+        }
+      ],
+      "distance_m": 1224,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

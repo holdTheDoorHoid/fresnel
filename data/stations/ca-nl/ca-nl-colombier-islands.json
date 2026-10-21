@@ -2,7 +2,9 @@
   "id": "ca-nl-colombier-islands",
   "name": "Colombier Islands Lighthouse",
   "other_names": [
-    "Colombier Island Lighthouse"
+    "Colombier Island Lighthouse",
+    "Colombier Islands",
+    "Colombier Islands Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -36,17 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 18.0,
+    "focal_height_m": 18.3,
     "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN837",
     "ccg_list_number": "N156",
-    "nga": "110-2436"
+    "nga": "110-2436",
+    "admiralty": "H238"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -63,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -100,6 +103,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/526231911",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1260",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,6 +143,30 @@
       "part": "wikidata:Q106190829",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1260",
+      "part": "wikidata:Q106190829",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N156",
+      "part": "wikidata:Q106190829",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:colombier-islands",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
       ]
     }
   ],

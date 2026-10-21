@@ -1,7 +1,9 @@
 {
   "id": "ca-on-pelee-island-lighthouse-c-1833",
   "name": "Pelee Island Lighthouse c. 1833",
-  "other_names": [],
+  "other_names": [
+    "Pelee Island"
+  ],
   "country": "CA",
   "region": "ON",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -31,23 +33,23 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1909,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN370",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Ontario Parks (Lighthouse Point Provincial Park)",
+  "ownership": "provincial",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +59,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1833,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1909,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1411683333",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1544",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +113,29 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1544",
+      "part": "osm:node/1411683333",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:pelee-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,9 @@
 {
   "id": "ca-ns-cape-dor",
   "name": "Cape D'Or Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Cape d'Or"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
@@ -30,24 +32,25 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1874,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 9s",
+    "characteristic": "LFl W 6s",
     "focal_height_m": 20.3,
-    "range_nm": 13.0,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN095",
     "ccg_list_number": "A167",
-    "nga": "110-10980"
+    "nga": "110-10980",
+    "admiralty": "H3938"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Cumberland County",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,16 +60,36 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
-  "events": [],
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
+  "events": [
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1965,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -109,6 +132,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/712168786",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1018",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,7 +157,6 @@
       "fields": [
         "aton",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -133,9 +170,54 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1018",
+      "part": "wikidata:Q28375752",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A167",
+      "part": "wikidata:Q28375752",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:cape-d-or",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 9s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

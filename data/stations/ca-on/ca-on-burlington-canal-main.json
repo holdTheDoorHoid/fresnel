@@ -4,7 +4,9 @@
   "other_names": [
     "phare du canal de Burlington",
     "Lighthouse and Keeper's Dwelling",
-    "Burlington Rear Light"
+    "Burlington Rear Light",
+    "Burlington Canal Main",
+    "Burlington Canal Range Rear"
   ],
   "country": "CA",
   "region": "ON",
@@ -27,21 +29,21 @@
       "type": "conical_masonry",
       "material": "stone",
       "built": 1858,
-      "height_m": null,
+      "height_m": 16.7,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1837,
+    "deactivated": 1961,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -67,11 +69,11 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN63",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Hamilton Oshawa Port Authority",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -93,10 +95,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1961,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 1990,
@@ -145,6 +159,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1680938014",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=16432",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1066",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,9 +198,53 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:16432",
+      "part": "wikidata:Q28375505",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1066",
+      "part": "wikidata:Q28375505",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:burlington-canal-main",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "rowlett",
+          "value": 1837
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1857
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

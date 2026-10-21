@@ -1,13 +1,15 @@
 {
   "id": "ca-bc-brotchie-ledge",
   "name": "Brotchie Ledge Light",
-  "other_names": [],
+  "other_names": [
+    "Brotchie Ledge"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 48.406415,
     "lon": -123.387983,
@@ -30,21 +32,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl G",
-    "focal_height_m": 12.0,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 11.8,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P205",
+    "nga": "13704",
+    "admiralty": "G5310"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,16 +60,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1989,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +91,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1665491987",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,16 +109,50 @@
       "key": "osm:node/1665491987",
       "part": "osm:node/1665491987",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P205",
+      "part": "osm:node/1665491987",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:brotchie-ledge",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl G 4s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl G"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,7 @@
   "name": "Burntcoat Head lighthouse",
   "other_names": [
     "Burntcoat Head Lighthouse",
-    "Burntcoat Head Lighthouse, Museum and Gift Shop"
+    "Burntcoat Head"
   ],
   "country": "CA",
   "region": "NS",
@@ -44,26 +44,26 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1859,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN64",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of East Hants (Burntcoat Head Park )",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,16 +71,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1859,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1995,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -114,6 +127,16 @@
       "label": "Website",
       "url": "https://www.burntcoatheadpark.ca/",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1325",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,6 +158,25 @@
       "part": "osm:way/1523750076",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1325",
+      "part": "wikidata:Q28375750",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:burntcoat-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

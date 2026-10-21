@@ -3,7 +3,9 @@
   "name": "Summerside Outer Range rear light",
   "other_names": [
     "Summerside Outer Range Lights",
-    "feux extérieurs de Summerside"
+    "feux extérieurs de Summerside",
+    "Summerside Outer Range Rear",
+    "Summerside Outer rear range light"
   ],
   "country": "CA",
   "region": "PE",
@@ -52,17 +54,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 14.8,
-    "range_nm": null,
+    "focal_height_m": 14.9,
+    "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN487",
     "ccg_list_number": "A1018.2",
-    "nga": "110-8831"
+    "nga": "110-8831",
+    "admiralty": "H1049.1"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -75,8 +78,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -149,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1247058335",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=979",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,7 +178,6 @@
         "agency",
         "aton",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -185,6 +202,30 @@
       "part": "wikidata:Q107170734",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:979",
+      "part": "wikidata:Q107170734",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1018.2",
+      "part": "wikidata:Q107170734",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:summerside-outer-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
       ]
     }
   ],

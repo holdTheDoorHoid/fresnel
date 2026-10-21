@@ -1,7 +1,12 @@
 {
   "id": "ca-nb-grand-harbour",
   "name": "Grand Harbour Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Grand Harbour (Ross Island)",
+    "Grand Harbour",
+    "Ross Island",
+    "Fish Fluke Island"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -14,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "ruins",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,14 +29,14 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "ruins",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1963,
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": null,
@@ -49,7 +54,7 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +62,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": false,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1963,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -100,6 +118,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1299556807",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1211",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,6 +150,22 @@
       "part": "wikidata:Q56290521",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1211",
+      "part": "wikidata:Q56290521",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:grand-harbour",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

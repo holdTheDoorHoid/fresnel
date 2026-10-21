@@ -28,21 +28,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 12.8,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 107.0,
+    "focal_height_m": 106.9,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,12 +58,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN87",
+    "ccg_list_number": "A1426",
+    "nga": "6944",
+    "admiralty": "H1762"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -73,8 +74,8 @@
     "as_of": "1972"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -83,6 +84,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1950,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1972,
       "event": "automated",
@@ -134,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1409573981",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1578",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,7 +184,6 @@
       "key": "osm:node/878547660",
       "part": "wikidata:Q28570355",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -165,6 +192,35 @@
       "key": "osm:way/1409573981",
       "part": "wikidata:Q28570355",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1578",
+      "part": "wikidata:Q28570355",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1426",
+      "part": "wikidata:Q28570355",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:cap-gasp",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

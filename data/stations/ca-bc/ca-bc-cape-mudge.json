@@ -3,7 +3,10 @@
   "name": "Cape Mudge Lighthouse",
   "other_names": [
     "phare de Cape Mudge",
-    "Cape Mudge"
+    "Cape Mudge",
+    "Cape Mudge (Quadra Island)",
+    "Cape Mudge Sector Light",
+    "Quadra Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -33,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": 1916,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 18.0,
+    "focal_height_m": 17.7,
     "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,20 +61,35 @@
     "uscg_llnr": null,
     "arlhs": "CAN100",
     "ccg_list_number": "P511",
-    "nga": "111-12560"
+    "nga": "111-12560",
+    "admiralty": "G5580"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fisheries and Oceans Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024",
+    "basis": "Named only in the Coast Guard's April 2010 list; the Coast Guard's 31 July 2024 release counts 25 other staffed stations in British Columbia without naming them. Check before saying it is staffed today.",
+    "check": true,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -86,6 +104,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1916,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1916,
@@ -148,6 +178,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1199796630",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1188",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Discovery Passage",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac511-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,7 +215,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -173,8 +227,50 @@
       "key": "osm:node/1199796630",
       "part": "wikidata:Q18398276",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14714",
+      "part": "wikidata:Q18398276",
+      "fields": [
+        "agency",
+        "ownership"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1188",
+      "part": "wikidata:Q18398276",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P511",
+      "part": "wikidata:Q18398276",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:cape-mudge",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-cape-mudge",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
       ]
     }
   ],
@@ -183,7 +279,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Fl W 5s"
         },
         {
@@ -192,6 +288,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1916
+        },
+        {
+          "source": "rowlett",
+          "value": 1898
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1916
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

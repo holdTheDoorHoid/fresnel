@@ -1,7 +1,10 @@
 {
   "id": "ca-nb-stonehaven",
   "name": "Stonehaven Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Stonehaven",
+    "Salmon Beach"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -9,13 +12,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.753431,
-    "lon": -65.361678,
+    "lat": 47.753417,
+    "lon": -65.36175,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "inactive",
-  "status_note": null,
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A1328), a modern aid that took its place.",
   "structures": [
     {
       "role": "tower",
@@ -24,27 +27,28 @@
       "material": null,
       "built": 1885,
       "height_m": 8.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": 1922,
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 21.0,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN945",
-    "ccg_list_number": null,
-    "nga": "110-7240"
+    "ccg_list_number": "A1328",
+    "nga": "110-7240",
+    "admiralty": "H1596"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -72,6 +76,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1922,
@@ -93,6 +103,21 @@
       "label": "ARLHS World List of Lights CAN945",
       "url": "https://wlol.arlhs.com/lighthouse/CAN945.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2156",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,15 +130,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2156",
+      "part": "wikidata:Q106890962",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1328",
+      "part": "wikidata:Q106890962",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:stonehaven",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -5,7 +5,8 @@
     "phare de Lucy Islands",
     "Lucy Islands Light",
     "Lucy Islands lighthouse",
-    "Lucy Islands Lighthouse"
+    "Lucy Islands Lighthouse",
+    "Lucy Islands"
   ],
   "country": "CA",
   "region": "BC",
@@ -35,26 +36,27 @@
     }
   ],
   "light": {
-    "first_lit": 1960,
+    "first_lit": 1907,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 21.5,
-    "range_nm": null,
+    "focal_height_m": 21.6,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN290",
     "ccg_list_number": "P719",
-    "nga": "111-11604"
+    "nga": "111-11604",
+    "admiralty": "G5807"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -62,13 +64,13 @@
     "as_of": "1987"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -77,6 +79,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1907,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1960,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1960,
@@ -134,6 +148,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3772706527",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1424",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Pacific Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac719-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,7 +175,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -166,9 +194,53 @@
       "key": "osm:node/3772706527",
       "part": "wikidata:Q28375877",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1424",
+      "part": "wikidata:Q28375877",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P719",
+      "part": "wikidata:Q28375877",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:lucy-islands",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1960
+        },
+        {
+          "source": "rowlett",
+          "value": 1907
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

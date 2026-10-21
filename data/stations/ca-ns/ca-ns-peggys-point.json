@@ -5,7 +5,10 @@
     "phare de Peggy's Cove",
     "Peggy Coves Lighthouse",
     "Peggys Point Lighthouse",
-    "Peggys Point"
+    "Peggys Point",
+    "Peggy’s Point (Peggy’s Cove)",
+    "Peggy's Point",
+    "Peggy's Cove"
   ],
   "country": "CA",
   "region": "NS",
@@ -28,21 +31,21 @@
       "type": "concrete",
       "material": "concrete",
       "built": 1868,
-      "height_m": null,
+      "height_m": 13.2,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1915,
+    "first_lit": 1868,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F G",
+    "characteristic": "Fl R 5s",
     "focal_height_m": 22.0,
-    "range_nm": 11.0,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,12 +63,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN369",
     "ccg_list_number": "A487",
-    "nga": "110-10040"
+    "nga": "110-10040",
+    "admiralty": "H3660"
   },
   "agency": "Government of Canada",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -73,13 +77,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -88,6 +92,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1915,
@@ -140,6 +156,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/358581448",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1034",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -153,7 +184,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -167,8 +197,34 @@
       "key": "osm:way/358581448",
       "part": "wikidata:Q1821453",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1034",
+      "part": "wikidata:Q1821453",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A487",
+      "part": "wikidata:Q1821453",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:peggy-s-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
@@ -177,15 +233,29 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
-          "value": "F G"
+          "source": "ccg_list_of_lights",
+          "value": "Fl R 5s"
         },
         {
-          "source": "wikidata",
-          "value": "Fl R 5s"
+          "source": "osm",
+          "value": "F G"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1915
+        },
+        {
+          "source": "rowlett",
+          "value": 1868
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

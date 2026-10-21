@@ -1,7 +1,9 @@
 {
   "id": "ca-bc-beaver-point",
   "name": "Beaver Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Beaver Point"
+  ],
   "country": "CA",
   "region": "BC",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,18 +35,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 9.4,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P257",
+    "nga": null,
+    "admiralty": "G5355"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/973813067",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Haro Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2228-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +96,19 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P257",
+      "part": "osm:node/973813067",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

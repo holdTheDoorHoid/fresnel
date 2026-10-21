@@ -35,18 +35,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 3s",
+    "characteristic": "Fl W 4s",
     "focal_height_m": 20.0,
-    "range_nm": 5.0,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N9",
+    "nga": null,
+    "admiralty": "H434"
   },
   "agency": null,
   "ownership": "unknown",
@@ -77,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1837790906",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - St. Mary's Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl75-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -86,16 +92,39 @@
       "part": "osm:node/1837790906",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N9",
+      "part": "osm:node/1837790906",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 4s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl W 3s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

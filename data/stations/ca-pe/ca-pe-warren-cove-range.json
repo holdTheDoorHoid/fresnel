@@ -7,7 +7,12 @@
     "Warren Cove Range Front Lighthouse",
     "phare avant de Warren Cove",
     "Warren Cove Back Range Lighthouse",
-    "Warren Cove Front Range Light"
+    "Warren Cove Front Range Light",
+    "Warren Cove Range Front",
+    "Warren Cove Range Rear",
+    "Warren Cove front range light",
+    "Warren Cove rear range light",
+    "Warren Farm"
   ],
   "country": "CA",
   "region": "PE",
@@ -56,17 +61,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F Y",
-    "focal_height_m": 23.0,
+    "focal_height_m": 17.3,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN131",
     "ccg_list_number": "A997",
-    "nga": "110-8252"
+    "nga": "110-8252",
+    "admiralty": "H1016"
   },
   "agency": "Parks Canada",
   "ownership": "federal",
@@ -79,8 +85,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -183,6 +189,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6436068844",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=967",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=968",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -196,7 +222,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "ownership",
         "photos",
         "region",
@@ -232,6 +257,53 @@
       "part": "wikidata:Q47001406",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:967",
+      "part": "wikidata:Q47001406",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:968",
+      "part": "wikidata:Q47001151",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A996",
+      "part": "wikidata:Q47001406",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A997",
+      "part": "wikidata:Q47001151",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:warren-cove-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:warren-cove-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
       ]
     }
   ],

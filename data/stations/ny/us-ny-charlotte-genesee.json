@@ -22,7 +22,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Charlotte-Genesee Lighthouse",
       "type": "conical_masonry",
       "material": "stone",
       "built": 1822,
@@ -30,6 +30,17 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "dwelling",
+      "name": "Keeper's House",
+      "type": null,
+      "material": null,
+      "built": 1863,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
@@ -81,6 +92,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1863,
+      "event": "built",
+      "note": null,
+      "from": "osm"
     },
     {
       "year": 1881,
@@ -144,6 +161,11 @@
       "label": "Website",
       "url": "https://geneseelighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/543434159",
+      "kind": "osm"
     }
   ],
   "sources": [
@@ -173,24 +195,18 @@
         "light",
         "location"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 2014
-        },
-        {
-          "source": "osm",
-          "value": 1822
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "source": "osm",
+      "key": "osm:way/543434159",
+      "part": "osm:way/543434159",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

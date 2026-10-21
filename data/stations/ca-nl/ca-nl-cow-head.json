@@ -2,7 +2,8 @@
   "id": "ca-nl-cow-head",
   "name": "Cow Head Light",
   "other_names": [
-    "Cow Head Lighthouse"
+    "Cow Head Lighthouse",
+    "Cow Head"
   ],
   "country": "CA",
   "region": "NL",
@@ -16,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -33,7 +34,7 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1988,
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": null,
@@ -59,10 +60,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Cow Head",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -70,16 +71,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1905,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1988,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 2003,
       "event": "heritage_designated",
@@ -120,6 +133,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4209161895",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1273",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,10 +168,43 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1273",
+      "part": "wikidata:Q28375892",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:cow-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

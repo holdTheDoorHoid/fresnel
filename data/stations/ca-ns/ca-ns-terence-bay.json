@@ -4,7 +4,10 @@
   "other_names": [
     "phare de Terence Bay",
     "Terence Bay lighthouse",
-    "Terence Bay Lighthouse"
+    "Terence Bay Lighthouse",
+    "Terence Bay Light",
+    "Terence Bay",
+    "Tennant Point"
   ],
   "country": "CA",
   "region": "NS",
@@ -18,30 +21,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
       "built": 1903,
       "height_m": 8.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 14.5,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +60,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN495",
+    "ccg_list_number": "A498",
+    "nga": "10004",
+    "admiralty": "H3650"
   },
   "agency": "Canadian Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +76,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -82,6 +86,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1903,
       "event": "built",
@@ -128,6 +138,21 @@
       "label": "Website",
       "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14875",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1036",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,9 +180,63 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14875",
+      "part": "wikidata:Q28375827",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1036",
+      "part": "wikidata:Q28375827",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A498",
+      "part": "wikidata:Q28375827",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:terence-bay",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1903
+        },
+        {
+          "source": "rowlett",
+          "value": 1885
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -5,7 +5,13 @@
     "phare du Pilier-de-Pierre",
     "Phare de Pilier-de-Pierre",
     "Phare du Pilier-de-Pierre",
-    "Fl 6s25m10M"
+    "Fl 6s25m10M",
+    "Pilier de Pierre Lighthouse",
+    "Pilier de Pierre (Stone Pillar)",
+    "Pilier de Pierre",
+    "Stone Pillar",
+    "Roche à Veillon",
+    "Algernon Rock"
   ],
   "country": "CA",
   "region": "QC",
@@ -27,22 +33,22 @@
       "name": null,
       "type": "conical_masonry",
       "material": "stone",
-      "built": null,
-      "height_m": null,
+      "built": 1843,
+      "height_m": 18.3,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1880,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 25.0,
+    "focal_height_m": 25.3,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -73,14 +79,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN979",
+    "ccg_list_number": "A1876",
+    "nga": "6584",
+    "admiralty": "H2228"
   },
-  "agency": null,
+  "agency": "Les Amis du Port-Joli",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -88,21 +95,45 @@
     "as_of": "1960"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1843,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1947,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1960,
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1960,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2013,
@@ -115,6 +146,12 @@
       "event": "heritage_designated",
       "note": "recognized heritage immovable",
       "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "destroyed",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -162,6 +199,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1207658069",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14775",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1589",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence River, Rivière du Loup - Sorel",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl18238-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -185,8 +242,53 @@
       "key": "osm:node/1207658069",
       "part": "wikidata:Q16320827",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14775",
+      "part": "wikidata:Q16320827",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1589",
+      "part": "wikidata:Q16320827",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1876",
+      "part": "wikidata:Q16320827",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcs:pilier-de-pierre",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcs:roche-veillon",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

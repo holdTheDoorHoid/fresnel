@@ -3,7 +3,8 @@
   "name": "Pointer Island Light",
   "other_names": [
     "phare de Pointer Island",
-    "Pointer Island Lighthouse"
+    "Pointer Island Lighthouse",
+    "Pointer Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -17,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,24 +34,25 @@
     }
   ],
   "light": {
-    "first_lit": 1989,
-    "deactivated": 1989,
+    "first_lit": 1899,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 6s",
-    "focal_height_m": 13.0,
+    "focal_height_m": 12.9,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN400",
     "ccg_list_number": "P592",
-    "nga": "111-12168"
+    "nga": "111-12168",
+    "admiralty": "G5680"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -60,11 +62,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1989,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1989,
@@ -112,6 +126,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3772706530",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1714",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Inside Channels",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac587-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -123,7 +152,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -136,10 +164,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1714",
+      "part": "wikidata:Q45319560",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P592",
+      "part": "wikidata:Q45319560",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:pointer-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1989
+        },
+        {
+          "source": "rowlett",
+          "value": 1899
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

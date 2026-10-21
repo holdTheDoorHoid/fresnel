@@ -1,7 +1,9 @@
 {
   "id": "ca-on-gibraltar-point",
   "name": "Gibraltar Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Gibraltar Point"
+  ],
   "country": "CA",
   "region": "ON",
   "county": null,
@@ -34,7 +36,7 @@
     "deactivated": 1956,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 20.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -46,8 +48,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Toronto (Toronto Island Park)",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +59,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -124,6 +126,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/892934946",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1090",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -148,6 +160,23 @@
       "part": "wikidata:Q5559191",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1090",
+      "part": "wikidata:Q5559191",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:gibraltar-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

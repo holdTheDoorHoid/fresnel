@@ -4,7 +4,12 @@
   "other_names": [
     "Pendlebury Lighthouse",
     "St. Andrews Lighthouse",
-    "Indian Point Lighthouse"
+    "Indian Point Lighthouse",
+    "St. Andrews (Pendlebury)",
+    "St. Andrews (North Point)",
+    "St. Andrews",
+    "Pendlebury",
+    "North Point"
   ],
   "country": "CA",
   "region": "NB",
@@ -18,7 +23,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -35,22 +40,23 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": 1938,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
     "focal_height_m": 7.0,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN714",
     "ccg_list_number": "A64",
-    "nga": "110-11230"
+    "nga": "110-11230",
+    "admiralty": "H4127"
   },
-  "agency": null,
+  "agency": "St",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -61,8 +67,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -122,6 +128,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/518939724",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1131",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,7 +154,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -148,10 +168,54 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1131",
+      "part": "wikidata:Q96406323",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A64",
+      "part": "wikidata:Q96406323",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:st-andrews",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

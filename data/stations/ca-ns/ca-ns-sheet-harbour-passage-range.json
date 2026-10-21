@@ -3,7 +3,9 @@
   "name": "Sheet Harbour Passage range lights",
   "other_names": [
     "Sheet Harbour Front Range Lighthouse",
-    "Sheet Harbor Passage"
+    "Sheet Harbor Passage",
+    "Sheet Harbour Passage Range Front",
+    "Sheet Harbour Passage Range Rear"
   ],
   "country": "CA",
   "region": "NS",
@@ -22,7 +24,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Sheet Harbour Passage range lights",
       "type": null,
       "material": "wood",
       "built": null,
@@ -30,6 +32,21 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Sheet Harbour Passage Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 44.860056,
+        "lon": -62.449639
+      }
     }
   ],
   "light": {
@@ -45,12 +62,13 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN456",
+    "ccg_list_number": "A598",
+    "nga": "9784",
+    "admiralty": "H3542"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -60,8 +78,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -69,7 +87,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2024,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -98,6 +129,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1820917267",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1420",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1421",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,10 +168,62 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1420",
+      "part": "wikidata:Q28375815",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1421",
+      "part": "lighthousefriends:1421",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:sheet-harbour-passage-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:sheet-harbour-passage-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

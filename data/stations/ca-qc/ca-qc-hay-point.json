@@ -1,7 +1,9 @@
 {
   "id": "ca-qc-hay-point",
   "name": "Hay Point",
-  "other_names": [],
+  "other_names": [
+    "Pointe au Foin Downstream front range light"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -23,10 +25,10 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 10.1,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
@@ -34,17 +36,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F G",
-    "focal_height_m": 11.0,
+    "focal_height_m": 10.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "I94",
+    "nga": null,
+    "admiralty": "H2543"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1377279116",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Lawrence Seaway, Canal de Beauharnois to Kingston",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw33-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +92,24 @@
       "part": "osm:node/1377279116",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I94",
+      "part": "osm:node/1377279116",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

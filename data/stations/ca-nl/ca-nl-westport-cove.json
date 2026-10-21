@@ -1,7 +1,10 @@
 {
   "id": "ca-nl-westport-cove",
   "name": "Westport Cove Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Westport Cove",
+    "Westport Cove Light"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 49.786347,
-    "lon": -56.645903,
+    "lat": 49.786056,
+    "lon": -56.644944,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -34,17 +37,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 10.0,
+    "focal_height_m": 10.1,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN702",
     "ccg_list_number": "N260",
-    "nga": "110-1140"
+    "nga": "110-1140",
+    "admiralty": "H704"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -57,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,6 +91,21 @@
       "label": "ARLHS World List of Lights CAN702",
       "url": "https://wlol.arlhs.com/lighthouse/CAN702.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1263",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - White Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl235-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -99,17 +118,40 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1263",
+      "part": "wikidata:Q106903149",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N260",
+      "part": "wikidata:Q106903149",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:westport-cove",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

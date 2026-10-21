@@ -14,7 +14,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,18 +33,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 5.3,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P726.2",
+    "nga": null,
+    "admiralty": "G5819.4"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "unknown",
@@ -75,6 +76,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11740245720",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Pacific Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac719-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -90,10 +96,19 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P726.2",
+      "part": "osm:node/11740245720",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

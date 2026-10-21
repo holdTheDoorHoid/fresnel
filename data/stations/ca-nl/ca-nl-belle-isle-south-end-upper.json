@@ -2,7 +2,9 @@
   "id": "ca-nl-belle-isle-south-end-upper",
   "name": "Belle Isle South End Upper Lighthouse",
   "other_names": [
-    "phare supérieur de l’extrémité sud de Belle Isle"
+    "phare supérieur de l’extrémité sud de Belle Isle",
+    "Belle Isle South End Upper",
+    "Belle Isle South End Upper Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 51.880014,
-    "lon": -55.381705,
+    "lat": 51.880028,
+    "lon": -55.381778,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +28,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +37,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl W 20s",
+    "focal_height_m": 137.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,12 +57,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN675",
+    "ccg_list_number": "N233",
+    "nga": "0988",
+    "admiralty": "H102"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,21 +73,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1858,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1990,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2017,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -95,6 +110,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q47377845",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1571",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Strait of Belle Isle",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl211-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/lab.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,14 +135,58 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1571",
+      "part": "wikidata:Q47377845",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N233",
+      "part": "wikidata:Q47377845",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:lab:belle-isle-south-end-upper",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,9 @@
   "id": "ca-on-gros-cap-reefs",
   "name": "Gros Cap Reefs Light",
   "other_names": [
-    "Gros Cap Reefs Lighthouse"
+    "Gros Cap Reefs Lighthouse",
+    "Gros Cap Reef",
+    "Gros Cap Reefs"
   ],
   "country": "CA",
   "region": "ON",
@@ -25,21 +27,21 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 18.3,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": 1953,
+    "first_lit": 1923,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 5s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 19.7,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -48,8 +50,8 @@
     "ccg_list_number": "I1081",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -63,12 +65,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1923,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1953,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1953,
       "event": "first_lit",
@@ -109,6 +123,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2709873287",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1114",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Marys River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw10596-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onno.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,7 +149,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region"
@@ -133,9 +161,67 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1114",
+      "part": "wikidata:Q5610427",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1081",
+      "part": "wikidata:Q5610427",
+      "fields": [
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onno:gros-cap-reef",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 10s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl R 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1953
+        },
+        {
+          "source": "rowlett",
+          "value": 1923
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

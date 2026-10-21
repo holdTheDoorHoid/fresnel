@@ -2,7 +2,8 @@
   "id": "ca-qc-heath-point",
   "name": "Phare de Heath Point",
   "other_names": [
-    "phare de Heath Point"
+    "phare de Heath Point",
+    "Pointe Heath"
   ],
   "country": "CA",
   "region": "QC",
@@ -44,11 +45,11 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN986",
+    "ccg_list_number": "A1513.1",
+    "nga": "3130"
   },
-  "agency": null,
+  "agency": "Environnement Québec",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -59,16 +60,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1835,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1965,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -82,6 +96,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/879228078",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1761",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -104,10 +128,42 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1761",
+      "part": "wikidata:Q114733573",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:pointe-heath",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

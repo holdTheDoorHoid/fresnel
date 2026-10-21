@@ -6,7 +6,12 @@
     "phare d'alignement antérieur de Saugeen River",
     "Saugeen River Rear Range Lighthouse",
     "phare d'alignement postérieur de Saugeen River",
-    "Southampton Front Range Light"
+    "Southampton Front Range Light",
+    "Saugeen River Range Front",
+    "Saugeen River Range Rear",
+    "Saugeen front range light",
+    "Saugeen rear range light",
+    "Saugeen River South Breakwater"
   ],
   "country": "CA",
   "region": "ON",
@@ -20,45 +25,60 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
       "name": "Saugeen River Front Range Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1903,
+      "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     },
     {
       "role": "rear_range",
       "name": "Saugeen River Rear Range Lighthouse",
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1903,
+      "height_m": 10.2,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl",
+      "location": {
+        "lat": 44.500944,
+        "lon": -81.366278
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Saugeen River South Breakwater",
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 6.4,
+      "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "ccg_list_of_lights",
       "location": {
-        "lat": 44.50095,
-        "lon": -81.366272
+        "lat": 44.500778,
+        "lon": -81.37525
       }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1883,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": null
+    "characteristic": "F G",
+    "focal_height_m": 10.4,
+    "range_nm": 13.0,
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -84,12 +104,12 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN626",
+    "ccg_list_number": "I790",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of Saugeen Shores",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -99,8 +119,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -109,6 +129,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2012,
       "event": "heritage_designated",
@@ -149,6 +181,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4207128051",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14592",
+      "kind": "register"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14593",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1052",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1053",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Huron",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw768-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -179,6 +241,81 @@
       "part": "wikidata:Q45324503",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14592",
+      "part": "wikidata:Q45324503",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14593",
+      "part": "wikidata:Q45324536",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1052",
+      "part": "wikidata:Q45324503",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1053",
+      "part": "wikidata:Q45324536",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I790",
+      "part": "wikidata:Q45324503",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I791",
+      "part": "wikidata:Q45324536",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I791.5",
+      "part": "ccg_list_of_lights:I791.5",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:saugeen-river-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:saugeen-river-range-rear",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

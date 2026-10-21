@@ -36,11 +36,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "LFl W 5s",
-    "focal_height_m": 20.0,
-    "range_nm": 12.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 19.9,
+    "range_nm": 11.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -73,10 +73,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN114",
     "ccg_list_number": "A1024",
-    "nga": "110-8328"
+    "nga": "110-8328",
+    "admiralty": "H1056"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -86,8 +87,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -153,6 +154,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1808235183",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=984",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -177,8 +193,33 @@
       "key": "osm:node/1808235183",
       "part": "wikidata:Q30575081",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:984",
+      "part": "wikidata:Q30575081",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1024",
+      "part": "wikidata:Q30575081",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:cape-egmont",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -187,12 +228,12 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
-          "value": "LFl W 5s"
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 5s"
         },
         {
-          "source": "wikidata",
-          "value": "Fl W 5s"
+          "source": "osm",
+          "value": "LFl W 5s"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."

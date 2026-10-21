@@ -2,7 +2,10 @@
   "id": "ca-on-lions-head",
   "name": "Lion's Head Light",
   "other_names": [
-    "Lion's Head Lighthouse"
+    "Lion's Head Lighthouse",
+    "Lion’s Head Harbour",
+    "Lion's Head Harbour",
+    "replica 2"
   ],
   "country": "CA",
   "region": "ON",
@@ -32,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1983,
+    "first_lit": 1903,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso R 2s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso W 4s",
+    "focal_height_m": 8.4,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
@@ -48,8 +51,8 @@
     "ccg_list_number": "I825",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Lion's Head",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,7 +62,7 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -76,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1983,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2020,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -120,6 +135,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/66794294",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1057",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,7 +161,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -145,9 +174,64 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1057",
+      "part": "wikidata:Q6555325",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I825",
+      "part": "wikidata:Q6555325",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:lion-s-head-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Iso W 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Iso R 2s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1983
+        },
+        {
+          "source": "rowlett",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -1,8 +1,8 @@
 {
   "id": "ca-nb-q135261059",
-  "name": "Q135261059",
+  "name": "Anderson Hollow Lighthouse",
   "other_names": [
-    "Anderson Hollow Lighthouse"
+    "Anderson Hollow"
   ],
   "country": "CA",
   "region": "NB",
@@ -16,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -32,24 +32,24 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1889,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN704",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Albert County Heritage Trust",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +59,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -97,6 +110,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1131703027",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1144",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -107,7 +130,6 @@
       "fields": [
         "county",
         "kind",
-        "name",
         "photos",
         "region"
       ]
@@ -117,7 +139,27 @@
       "key": "osm:way/1131703027",
       "part": "wikidata:Q135261059",
       "fields": [
-        "location"
+        "location",
+        "name"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1144",
+      "part": "wikidata:Q135261059",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:anderson-hollow",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

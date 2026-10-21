@@ -1,7 +1,16 @@
 {
   "id": "ca-mb-warren-landing-lower-range",
   "name": "Warren Landing Lower Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Warren Landing Lower Range Front Light",
+    "Warren Landing Lower Range Rear Light",
+    "Warren Landing Lower Range",
+    "Warren Landing Lower front range light",
+    "Warren Landing Lower rear range light",
+    "Warren Landing Wharf",
+    "Warren Landing Lower Range Front",
+    "Warren Landing Lower Range Rear"
+  ],
   "country": "CA",
   "region": "MB",
   "county": null,
@@ -9,17 +18,17 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 53.6963,
-    "lon": -97.8698,
+    "lat": 53.700249,
+    "lon": -97.849883,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Warren Landing Lower Range Front Light",
       "type": null,
       "material": null,
       "built": 1908,
@@ -27,27 +36,72 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "front_range",
+      "name": "Warren Landing Lower Range Lights",
+      "type": null,
+      "material": null,
+      "built": 1908,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 53.700417,
+        "lon": -97.849444
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Warren Landing Lower Range Rear Light",
+      "type": null,
+      "material": null,
+      "built": 1908,
+      "height_m": 13.8,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 53.70625,
+        "lon": -97.842917
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Warren Landing Wharf",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights",
+      "location": {
+        "lat": 53.697222,
+        "lon": -97.869167
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1908,
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 13.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN849",
-    "ccg_list_number": "I1620",
+    "ccg_list_number": "1620",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,11 +111,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,12 +126,28 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
   "related": [],
   "photos": [],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q115237069",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q115237070",
+      "kind": "wikidata"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q7970338",
@@ -92,27 +162,130 @@
       "label": "ARLHS World List of Lights CAN849",
       "url": "https://wlol.arlhs.com/lighthouse/CAN849.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2160",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Winnipeg",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw15631-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q115237069",
+      "part": "wikidata:Q115237069",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q115237070",
+      "part": "wikidata:Q115237070",
+      "fields": [
+        "structures"
+      ]
+    },
     {
       "source": "wikidata",
       "key": "wikidata:Q7970338",
       "part": "wikidata:Q7970338",
       "fields": [
         "aton",
-        "events",
-        "kind",
-        "light",
-        "location",
         "name",
-        "region",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2160",
+      "part": "wikidata:Q115237069",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1620",
+      "part": "wikidata:Q7970338",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1621",
+      "part": "wikidata:Q115237070",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1621.5",
+      "part": "ccg_list_of_lights:I1621.5",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:warren-landing-lower-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:warren-landing-lower-range-rear",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            53.6963,
+            -97.8698
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            53.70042,
+            -97.84944
+          ]
+        }
+      ],
+      "distance_m": 1416,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,9 @@
   "id": "ca-bc-sisters-islets",
   "name": "Sisters Islets Light",
   "other_names": [
-    "phare de Sisters Islets"
+    "phare de Sisters Islets",
+    "Sisters Islets Lighthouse",
+    "Sisters Islets"
   ],
   "country": "CA",
   "region": "BC",
@@ -11,47 +13,63 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 49.486667,
-    "lon": -124.577778,
+    "lat": 49.486427,
+    "lon": -124.434939,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Sisters Islets Light",
       "type": null,
       "material": null,
       "built": 1898,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 49.486667,
+        "lon": -124.577778
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Sisters Islets Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1967,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 15s",
-    "focal_height_m": 21.0,
+    "focal_height_m": 24.3,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN462",
     "ccg_list_number": "P493",
-    "nga": "111-12852"
+    "nga": "111-12852",
+    "admiralty": "G5529"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -59,13 +77,13 @@
     "as_of": "1996"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -74,6 +92,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1967,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1967,
@@ -121,6 +151,26 @@
       "label": "ARLHS World List of Lights CAN462",
       "url": "https://wlol.arlhs.com/lighthouse/CAN462.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1689418361",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1186",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac4475-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,17 +183,52 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1689418361",
+      "part": "osm:node/1689418361",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1186",
+      "part": "osm:node/1689418361",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P493",
+      "part": "osm:node/1689418361",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcs:sisters-islets",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

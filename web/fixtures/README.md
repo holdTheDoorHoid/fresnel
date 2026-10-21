@@ -13,7 +13,7 @@ site built from them shows a "Sample data" banner.
   Samoa), an Aleutian light west of the 180th meridian on closed Coast Guard land, tribal land,
   a range with two structures, a moved pier light (British Columbia), a replica with a place to
   stay, a lightship station at sea, a characteristic in a form the site does not read
-  (`Q(6)+LFl W 15s`), one record merged into another (`merged_into`, so the site writes a
+  (`Al W 10s`: alternating, but only one colour given), one record merged into another (`merged_into`, so the site writes a
   redirect) and one hidden decorative record to test the out-of-scope rule.
 - `stories/us-me-example-head.md`: a story in chapters with footnotes.
 - `research/us-me-example-head.json`: its research, with a keepers roster (DESIGN.md 3.6).

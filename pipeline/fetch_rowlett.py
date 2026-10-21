@@ -1,157 +1,148 @@
 #!/usr/bin/env python3
-"""Russ Rowlett's Lighthouse Directory, US pages -> data/sources/rowlett.json (DESIGN.md 2.3).
+"""Russ Rowlett's Lighthouse Directory, the Canadian pages; adds them to data/sources/rowlett.json
+(DESIGN.md 2.3, 3.8). The source id is `rowlett`, shared with any US fetcher: this module is the
+Canadian function, `fetch_canada()`, and its writer keeps the non-Canadian records the file already
+holds.
 
-The Lighthouse Directory (University of North Carolina at Chapel Hill, hosted at ibiblio.org/lighthouse/)
-describes lights worldwide in hand-written paragraphs, one per tower. Its text is copyrighted ("copying
-portions for personal use and study; all other rights reserved"), so this fetcher takes **facts only**:
-the years, the status word, the ARLHS, USCG and Admiralty numbers, the cross-reference to
-LighthouseFriends, and a link to the page. Nothing of the prose is kept. It is a **second opinion**, not
-a position source: the pages give no coordinates (only Google Maps links), so every record has no
-position and joins a station by number (ARLHS, USCG Light List, the LighthouseFriends id Rowlett links
-to) or, failing that, by name within its state.
+Source: https://www.ibiblio.org/lighthouse/<page>.htm, 39 regional pages for Canada (ab sk mb bcn
+bcs bcv nbe nbn nbs lab nfln nfle nflw nscbe nscbw nse nsnw nss nsbf pei peiw ongb onno onnw onso
+onse onsw onlh qcc qce qcn qcs qcsw qcw nwt nvt), static UTF-8 HTML, 50-120 KB each. robots.txt:
+`Crawl-delay: 2`, disallows only unrelated project directories. The survey's copies
+(RAW_ROOT/survey/canada/ibiblio/) are read in place of fetching again.
 
-One `<dt>` (the name, with markers: `#` a light lost since 2000, `*` and `**` Rowlett's marks, `[ ]` a
-fog signal or other building, `(2)` the second tower of a station) and one `<dd>` per tower. Readings of
-the dd, which opens "1859 (station established 1834). Active; focal plane ...":
+Licence: (c) 2026 Russ Rowlett and the University of North Carolina at Chapel Hill. Facts only
+(years, status, identifiers, a few numbers), never the text; the credit line and a link to the
+region's page go on every station that uses it.
 
-- the year in front is the tower's (`structure.built`); "Date unknown" is none; "station established N"
-  is the station's first year (`light.first_lit`);
-- the first status words: "Active" / "Reactivated" -> `active`; "Inactive since N", "Decommissioned N",
-  "Deactivated in N" -> `inactive` with `light.deactivated`; "Removed / Demolished / Destroyed /
-  Collapsed / Burned / Replaced" -> `lost` (the year, when given, an event); "a decorative light" ->
-  noted, no status;
-- "ARLHS USA-513", "USCG 1-1390" (a buoy's number is not taken), "Admiralty J0028".
+An entry is a `<dt>` (the name, usually an anchor to Lighthouse Friends' page for the light) followed
+by a `<dd>` (the description). What is read, and nothing of the prose:
 
-The years go to the timeline as events (a tower's `built`, the station's `first_lit`, `deactivated`,
-`removed`), so a second opinion shows beside the first and never replaces it.
+- name: the `<dt>` text without Rowlett's marks. `*` marks a notable light, `#` a light that no longer
+  exists, `[...]` a minor light, and `(n)` after the name is the number of the tower now (or last)
+  standing there ("Quaker Island (3)" is the third tower). Other parentheses are other names or
+  "relocated to X". These become `extra.notable`, `extra.gone`, `extra.minor_marker`,
+  `extra.tower_number`.
+- years: the opening clause, "1981 (station established 1883)", "Date unknown (station established
+  1874)", "2012 replica of 1867 lighthouse". An exact tower year is `structure.built` and a `built`
+  event; the station's year is `light.first_lit` and a `first_lit` event. "Around 1900", "1950s" and
+  a "?" are kept in `extra` as text, not as a year.
+- status: `active` ("Active", "Reactivated"), `inactive` ("Inactive since 1984", "Apparently
+  inactive"), `lost` (a `#` mark, or "Demolished / Destroyed / Removed / Replaced in 2015. This was a
+  tower..."), `replica`. Years in "since 1984", "Demolished in 2003" become `deactivated`, `removed`
+  and `destroyed` events.
+- focal plane and the tower's height in metres, its material.
+- the identifiers that join the other sources: ARLHS (`CAN-422`), the Canadian Coast Guard List of
+  Lights number (`CCG A-456`: the volume's letter, then the number), the Admiralty number
+  (`H3680`), the NGA number, and the Lighthouse Friends id in the anchor. They are written in
+  `aton`/`registers` and as `extra.join_keys`, which the merge reads.
+- `extra.lantern`: the sentence on the structure names a lantern, gallery, cupola or keeper's house
+  (the Coast Guard List of Lights keeps an aid that Rowlett lists with one, see fetch_ccg_list_of_lights.py).
+- access, as Rowlett states it ("Accessible only by boat", "Site open, tower closed"): `extra.access`.
+- owner / site manager text (`agency`).
+
+The Directory has no coordinates, so a record carries none: it can only join a station that
+another source has placed, by an identifier or a name. (A station-level record: `extra.station_level`.)
 
 Usage: python3 pipeline/fetch_rowlett.py [--refresh]
 """
 from __future__ import annotations
 
 import argparse
-import html
+import json
 import re
-import shutil
 import sys
-from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _ca_common as cc  # noqa: E402
 import _common as c  # noqa: E402
-import _records as rx  # noqa: E402
 
-REPO = Path(__file__).resolve().parent.parent
-OUT_PATH = REPO / "data" / "sources" / "rowlett.json"
 SOURCE = "rowlett"
-BASE = "https://www.ibiblio.org/lighthouse/"
-SURVEY_CACHE = "survey/us/rowlett"
-
-# page -> (region, label). The directory's US and territory pages (2026-10-21 index).
-PAGES: dict[str, tuple[str, str]] = {
-    "ak.htm": ("AK", "Alaska"), "al.htm": ("AL", "Alabama"), "ar.htm": ("AR", "Arkansas"),
-    "asm.htm": ("AS", "American Samoa"), "az.htm": ("AZ", "Arizona"),
-    "ca.htm": ("CA", "California: North"), "ca2.htm": ("CA", "California: South"), "co.htm": ("CO", "Colorado"),
-    "ct.htm": ("CT", "Connecticut"), "de.htm": ("DE", "Delaware"),
-    "fl.htm": ("FL", "Florida: East Coast"), "flkey.htm": ("FL", "Florida: Keys"), "flw.htm": ("FL", "Florida: West Coast"),
-    "ga.htm": ("GA", "Georgia"), "gu.htm": ("GU", "Guam"), "hi.htm": ("HI", "Hawaii"), "ia.htm": ("IA", "Iowa"),
-    "id.htm": ("ID", "Idaho"), "il.htm": ("IL", "Illinois"), "in.htm": ("IN", "Indiana"), "ks.htm": ("KS", "Kansas"),
-    "ky.htm": ("KY", "Kentucky"), "la.htm": ("LA", "Louisiana"),
-    "macape.htm": ("MA", "Massachusetts: Cape Cod"), "ma.htm": ("MA", "Massachusetts: North"),
-    "maso.htm": ("MA", "Massachusetts: South"), "mde.htm": ("MD", "Maryland: Eastern Shore"), "md.htm": ("MD", "Maryland"),
-    "me.htm": ("ME", "Maine: East"), "me2.htm": ("ME", "Maine: South"),
-    "minel.htm": ("MI", "Michigan"), "minwl.htm": ("MI", "Michigan"), "misel.htm": ("MI", "Michigan"),
-    "misu.htm": ("MI", "Michigan"), "miup.htm": ("MI", "Michigan"), "miwl.htm": ("MI", "Michigan"),
-    "miwu.htm": ("MI", "Michigan"), "mn.htm": ("MN", "Minnesota"), "mnp.htm": ("MP", "Northern Mariana Islands"),
-    "mo.htm": ("MO", "Missouri"), "ms.htm": ("MS", "Mississippi"), "nc.htm": ("NC", "North Carolina"),
-    "ne.htm": ("NE", "Nebraska"), "nh.htm": ("NH", "New Hampshire"), "nj.htm": ("NJ", "New Jersey"),
-    "nv.htm": ("NV", "Nevada"), "nvi.htm": ("UM", "Navassa Island"),
-    "nydn.htm": ("NY", "New York: City and Hudson River"), "nyli.htm": ("NY", "New York: Long Island"),
-    "nyup.htm": ("NY", "New York: Central and Northern"), "nyw.htm": ("NY", "New York: Western"),
-    "oh.htm": ("OH", "Ohio"), "ok.htm": ("OK", "Oklahoma"), "or.htm": ("OR", "Oregon"),
-    "pa.htm": ("PA", "Pennsylvania: Northwest"), "pase.htm": ("PA", "Pennsylvania: Southeast"),
-    "pr.htm": ("PR", "Puerto Rico"), "ri.htm": ("RI", "Rhode Island"), "sc.htm": ("SC", "South Carolina"),
-    "tn.htm": ("TN", "Tennessee"), "tx.htm": ("TX", "Texas: Southeast"), "txs.htm": ("TX", "Texas: South"),
-    "umi.htm": ("UM", "U.S. Minor Outlying Islands"), "ut.htm": ("UT", "Utah"), "va.htm": ("VA", "Virginia"),
-    "vi.htm": ("VI", "U.S. Virgin Islands"), "vt.htm": ("VT", "Vermont"),
-    "wa.htm": ("WA", "Washington"), "waps.htm": ("WA", "Washington: Puget Sound"),
-    "wi.htm": ("WI", "Wisconsin"), "wi2.htm": ("WI", "Wisconsin"), "widp.htm": ("WI", "Wisconsin: Door Peninsula"),
-    "wv.htm": ("WV", "West Virginia"),
+OUT_PATH = c.REPO / "data" / "sources" / f"{SOURCE}.json"
+PAGE_URL = "https://www.ibiblio.org/lighthouse/{page}.htm"
+LICENSE = ("(c) 2026 Russ Rowlett and the University of North Carolina at Chapel Hill. Facts only (years, status, "
+           "identifiers), with credit and a link to the Directory page.")
+PAGES = {
+    "ab": ("AB", "Alberta"), "sk": ("SK", "Saskatchewan"), "mb": ("MB", "Manitoba"),
+    "bcn": ("BC", "British Columbia: north coast"), "bcs": ("BC", "British Columbia: south, interior"),
+    "bcv": ("BC", "British Columbia: Vancouver Island"),
+    "nbe": ("NB", "New Brunswick: east"), "nbn": ("NB", "New Brunswick: north"), "nbs": ("NB", "New Brunswick: south"),
+    "lab": ("NL", "Labrador"), "nfln": ("NL", "Newfoundland: north"), "nfle": ("NL", "Newfoundland: east"),
+    "nflw": ("NL", "Newfoundland: west and south"),
+    "nscbe": ("NS", "Nova Scotia: Cape Breton east"), "nscbw": ("NS", "Nova Scotia: Cape Breton west"),
+    "nse": ("NS", "Nova Scotia: eastern shore"), "nsnw": ("NS", "Nova Scotia: northwest"),
+    "nss": ("NS", "Nova Scotia: south"), "nsbf": ("NS", "Nova Scotia: Bay of Fundy"),
+    "pei": ("PE", "Prince Edward Island"), "peiw": ("PE", "Prince Edward Island: west"),
+    "ongb": ("ON", "Ontario: Georgian Bay"), "onno": ("ON", "Ontario: north"), "onnw": ("ON", "Ontario: northwest"),
+    "onso": ("ON", "Ontario: southern Ontario"), "onse": ("ON", "Ontario: southeast"), "onsw": ("ON", "Ontario: southwest"),
+    "onlh": ("ON", "Ontario: Lake Huron"),
+    "qcc": ("QC", "Quebec: centre"), "qce": ("QC", "Quebec: east"), "qcn": ("QC", "Quebec: north shore"),
+    "qcs": ("QC", "Quebec: south"), "qcsw": ("QC", "Quebec: southwest"), "qcw": ("QC", "Quebec: west"),
+    "nwt": ("NT", "Northwest Territories"), "nvt": (None, "Nunavut and northern Quebec"),
 }
-
+SURVEY_DIR = cc.SURVEY / "ibiblio"
 
 # ---------------------------------------------------------------------------------------------
-# Walking the page
+# Reading a page into (name block, description block) pairs
 # ---------------------------------------------------------------------------------------------
+
 
 class EntryParser(HTMLParser):
-    """Collects (name, dd text, dd links) in page order. A dt's name is its last bold text outside the
-    red section headings; a dd belongs to the nearest dt before it."""
+    """Pairs each <dd> with the <dt> before it. Rowlett's pages leave tags open and put section
+    headings in <dt> without a <dd>, so the entry's name is the last <dt> before its <dd>."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.entries: list[dict] = []
-        self._in_dt = self._in_dd = False
-        self._bold = 0
-        self._red = 0
-        self._seg: list[str] = []
-        self._segments: list[str] = []
-        self._dd: list[str] = []
-        self._links: list[str] = []
-        self.name: str | None = None
-        self._font_stack: list[bool] = []
+        self._cur: str | None = None
+        self._buf: list[str] = []
+        self._hrefs: list[str] = []
+        self._last_dt: dict | None = None
+        self._last_dt_used = False
+
+    def _flush(self) -> None:
+        if self._cur is None:
+            return
+        text = re.sub(r"\s+", " ", "".join(self._buf).replace("\xa0", " ")).strip()
+        block = {"text": text, "hrefs": list(self._hrefs)}
+        if self._cur == "dt":
+            self._last_dt, self._last_dt_used = block, False
+        elif self._last_dt is not None and not self._last_dt_used:
+            self._last_dt_used = True
+            self.entries.append({"dt": self._last_dt, "dd": block})
+        self._cur, self._buf, self._hrefs = None, [], []
 
     def handle_starttag(self, tag: str, attrs: list) -> None:
-        a = dict(attrs)
-        if tag == "dt":
-            self._in_dt, self._segments, self._seg, self._bold, self._red = True, [], [], 0, 0
-        elif tag == "dd":
-            self._in_dd, self._dd, self._links = True, [], []
-        elif tag in ("b", "strong") and self._in_dt:
-            self._bold += 1
-            self._seg = []
-        elif tag == "font" and self._in_dt:
-            red = (a.get("color") or "").lower().lstrip("#") in ("ff0000", "red")
-            self._font_stack.append(red)
-            self._red += 1 if red else 0
-        elif tag == "a" and self._in_dd and a.get("href"):
-            self._links.append(a["href"])
-        elif tag == "br" and self._in_dd:
-            self._dd.append(" ")
+        if tag in ("dt", "dd"):
+            self._flush()
+            self._cur = tag
+        elif tag in ("br", "p") and self._cur:
+            self._buf.append(" ")
+        elif tag == "a" and self._cur:
+            href = dict(attrs).get("href")
+            if href:
+                self._hrefs.append(href)
+        elif tag in ("dl", "table", "tr", "td") and self._cur:
+            self._flush()
 
     def handle_endtag(self, tag: str) -> None:
-        if tag in ("b", "strong") and self._in_dt and self._bold:
-            self._bold -= 1
-            if not self._bold and not self._red:
-                seg = " ".join("".join(self._seg).split())
-                if seg:
-                    self._segments.append(seg)
-            if not self._bold:
-                self._seg = []
-        elif tag == "font" and self._in_dt and self._font_stack:
-            if self._font_stack.pop():
-                self._red -= 1
-        elif tag == "dt" and self._in_dt:
-            self._in_dt = False
-            self.name = self._segments[-1] if self._segments else None
-        elif tag == "dd" and self._in_dd:
-            self._in_dd = False
-            text = " ".join("".join(self._dd).split())
-            if self.name and text:
-                self.entries.append({"name": self.name, "text": text, "links": list(self._links)})
-            self.name = None
+        if tag in ("dt", "dd"):
+            self._flush()
 
     def handle_data(self, data: str) -> None:
-        if self._in_dt and self._bold and not self._red:
-            self._seg.append(data)
-        elif self._in_dd:
-            self._dd.append(data)
+        if self._cur:
+            self._buf.append(data)
+
+    def close(self) -> None:
+        self._flush()
+        super().close()
 
 
-def parse_page(page_html: str) -> list[dict]:
+def read_entries(page_html: str) -> list[dict]:
     p = EntryParser()
-    p.feed(page_html)
+    p.feed(page_html.lstrip("﻿"))
+    p.close()
     return p.entries
 
 
@@ -159,204 +150,388 @@ def parse_page(page_html: str) -> list[dict]:
 # Reading an entry
 # ---------------------------------------------------------------------------------------------
 
-YEAR = r"(1[5-9]\d\d|20\d\d)"
-LOST_RE = re.compile(r"^(removed|demolished|destroyed|collapsed|burned|razed|dismantled|lost|washed away|replaced|"
-                     r"deactivated and removed|decommissioned and removed|swept away|sank|vanished)\b", re.I)
+LEAD_RE = re.compile(r"^(?:\d{4}|Date unknown|Around|About|Late|Early|After|Before|Circa|c\.)")
+LHF_RE = re.compile(r"lighthousefriends\.com/light\.asp\?ID=(\d+)", re.I)
+ARLHS_RE = re.compile(r"\bCAN-?(\d{1,4})\b")
+CCG_RE = re.compile(r"\bCCG\s+((?:[A-Z]-?\d+(?:\.\d+)?)(?:\s*[;,/]\s*[A-Z]-?\d+(?:\.\d+)?)*)")
+ADM_RE = re.compile(r"\bAdmiralty\s+(H\d+(?:\.\d+)?)")
+NGA_RE = re.compile(r"\bNGA\s+(\d{1,5}(?:-\d+)?)")
+EXACT_YEAR_RE = re.compile(r"^(\d{4})(?![\ds?(])(?!\s*\(\?\))")
+GONE_RE = re.compile(r"^(?:demolished|destroyed|removed|replaced|burned|burnt|collapsed|dismantled|washed away|"
+                     r"lighthouse destroyed|lost|gone|sank)\b", re.I)
+INACTIVE_RE = re.compile(r"^(?:inactive|apparently inactive|officially inactive|deactivated|recently deactivated|"
+                         r"light discontinued|discontinued|inaactive)\b", re.I)
+ACTIVE_RE = re.compile(r"^(?:active|activ|reactivated|currently active)\b", re.I)
+RANGE_WORDS_RE = re.compile(r"(?:(?:upper|lower|inner|outer|main|secondary)\s+)?(?:range(?:\s+(?:front|rear|lights?))?|front(?:\s+range)?|rear(?:\s+range)?)", re.I)
+WORD_YEAR = r"(?:the\s+)?(?:early\s+|mid\s+|late\s+|around\s+|about\s+|ca\.?\s+)?(\d{4})(s?)"
 
 
-def read_name(raw: str) -> dict:
-    name = html.unescape(raw).strip()
-    marks = re.match(r"^([#*]+)\s*", name)
-    lost_mark = bool(marks and "#" in marks.group(1))
-    name = re.sub(r"^[#*\s]+", "", name).strip()
-    bracket = bool(re.match(r"^\[.*\]$", name))
-    name = name.strip("[]").strip()
-    tower, alts = None, []
+def good_alt_name(x: str) -> bool:
+    """An other name worth keeping: not punctuation, a generic word, a range half or "ex-..."."""
+    return bool(re.search(r"[A-Za-zÀ-ÿ]{3}", x)) and not RANGE_WORDS_RE.fullmatch(x) \
+        and not re.fullmatch(r"(?:lantern|lights?|tower|old|new|replica|relocated.*|ex-.*)", x, re.I)
+
+
+def clean_name(dt_text: str) -> tuple[str, dict]:
+    """(the light's name, its marks and parentheses) from a <dt> text."""
+    marks: dict = {"notable": False, "gone": False, "minor_marker": False, "tower_number": None,
+                   "alt_names": [], "notes": []}
+    s = dt_text.strip()
+    # A name sometimes follows a section heading in the same <dt>; the marks come just before it.
+    if "#" in s:
+        marks["gone"] = True
+    if "*" in s:
+        marks["notable"] = True
+    s = s.replace("*", "").replace("#", "").strip()
+    if s.startswith("[") and "]" in s:
+        marks["minor_marker"] = True
+        s = s.replace("[", "", 1)
+        s = s[::-1].replace("]", "", 1)[::-1]
+    # Parentheses, innermost first ("Red River Mouth (Red River Range Rear (2))").
     while True:
-        m = re.search(r"\s*\(([^()]*)\)\s*$", name)
+        m = re.search(r"\(([^()]*)\)", s)
         if not m:
             break
         inner = m.group(1).strip()
-        name = name[:m.start()].strip()
-        if re.fullmatch(r"\d\??", inner):
-            tower = int(inner[0])
-        elif inner and not re.match(r"(relocated|replica|moved|formerly|now|see|ruins|lost|demolished)", inner, re.I):
-            alts.append(inner)
-    return {"name": name, "alts": alts, "tower": tower, "lost_mark": lost_mark, "bracket": bracket}
+        n = re.fullmatch(r"(\d+)\s*\??", inner)
+        if n:
+            marks["tower_number"] = int(n.group(1))
+        elif re.match(r"(relocated|moved)\b", inner, re.I):
+            marks["notes"].append(inner)
+        elif inner.lower() in ("replica", "replicas"):
+            marks["notes"].append("replica")
+        elif re.fullmatch(r"[A-Za-z]{0,3}\d+\s*\??", inner):
+            pass
+        elif RANGE_WORDS_RE.fullmatch(inner):
+            # "Cole Shoal (Range Front)": the words name which half of a range this is
+            s = (s[:m.start()] + " " + inner + " " + s[m.end():]).strip()
+            continue
+        else:
+            marks["alt_names"] += [x.strip() for x in re.split(r",\s*", inner) if good_alt_name(x.strip())]
+        s = (s[:m.start()] + " " + s[m.end():]).strip()
+    if "(" in s:  # an unclosed parenthesis in the page: the rest is another name
+        s, _, rest = s.partition("(")
+        marks["alt_names"] += [x.strip() for x in re.split(r",\s*", rest.strip(" )")) if good_alt_name(x.strip())]
+    base = re.sub(r"\s+", " ", s).strip(" .;,")
+    return base, marks
 
 
-def read_text(text: str) -> dict:
-    """The facts in a dd's paragraph (never its prose)."""
-    out: dict = {"built": None, "established": None, "status": None, "deactivated": None, "lost_year": None,
-                 "replica": False, "decorative": False, "arlhs": None, "uscg": None, "admiralty": None,
-                 "relocated": None, "status_text": None}
-    head, _, rest = text.partition(". ")
-    # "1859 (station established 1834)"; "Date unknown (station established 1873)"; "1873"
-    m = re.match(rf"^(?:About |Approx\.? |c\.? |Before |After )?{YEAR}", head)
-    if m:
-        out["built"] = int(m.group(1))
-    em = re.search(rf"station (?:was )?established (?:in )?(?:about )?{YEAR}", head)
-    if em:
-        out["established"] = int(em.group(1))
-    if re.search(r"replica of", head, re.I):
-        out["replica"] = True
-    rm = re.search(rf"relocated.*?{YEAR}", head)
-    if rm:
-        out["relocated"] = int(rm.group(1))
-    # the status sentence is the first one after the date; it may be the "head" when there is no date sentence
-    status_s = rest.strip() if (m or head.lower().startswith("date unknown") or head.lower().startswith("about")) else text
-    status_s = re.split(r"(?<=[.;])\s", status_s)[0] if status_s else ""
-    out["status_text"] = status_s[:80] if status_s else None
-    sy = re.search(YEAR, status_s)
-    if re.match(r"^(active|reactivated|relit|lit)\b", status_s, re.I):
-        out["status"] = "active"
-    elif re.match(r"^(inactive|decommissioned|deactivated|discontinued|retired)\b", status_s, re.I):
-        out["status"] = "inactive"
-        if re.match(r"^(inactive since|decommissioned|deactivated|discontinued)", status_s, re.I) and sy and \
-                not re.search(rf"{YEAR}\s*-\s*{YEAR}", status_s):
-            out["deactivated"] = int(sy.group(1))
-        if re.search(r"\band (later )?(removed|demolished|destroyed)\b", status_s, re.I):
-            out["status"] = "lost"
-            out["lost_year"] = None
-    elif LOST_RE.match(status_s):
-        out["status"] = "lost"
-        out["lost_year"] = int(sy.group(1)) if sy else None
-    if re.search(r"\ba decorative (?:light|lighthouse|beacon|tower)\b|\bnot an aid to navigation\b", text[:400], re.I):
-        out["decorative"] = True
-    a = re.search(r"ARLHS ([A-Z]{3}-\d{2,3})", text)
-    if a:
-        out["arlhs"] = a.group(1)
-    for u in re.finditer(r"(.{0,30})USCG (\d)-(\d+)", text):
-        if not re.search(r"buoy|bell|whistle|gong", u.group(1), re.I):
-            out["uscg"] = f"{u.group(2)}-{u.group(3)}"
-            break
-    j = re.search(r"Admiralty\s+(J\d{4}(?:\.\d+)?)", text)
-    if j:
-        out["admiralty"] = j.group(1)
+def parse_years(dd: str) -> dict:
+    """The opening clause of a description."""
+    m = re.match(r"(.*?)(?:\.\s|\.$)", dd)
+    head = m.group(1) if m else dd[:120]
+    out: dict = {"head": head, "built": None, "built_text": None, "established": None, "established_uncertain": False,
+                 "replica_of": None}
+    lead = head.split("(")[0].strip() if not head.startswith("(") else head
+    ex = EXACT_YEAR_RE.match(lead)
+    if ex:
+        out["built"] = int(ex.group(1))
+    elif lead:
+        out["built_text"] = lead
+    est = re.search(r"station established\s+(?:in\s+)?(?:around\s+|about\s+)?(\d{4})(\s*\?)?", dd[:max(len(head), 1) + 90], re.I)
+    if est:
+        out["established"] = int(est.group(1))
+        out["established_uncertain"] = bool(est.group(2))
+    rep = re.search(r"replica of (\d{4})", head, re.I)
+    if rep:
+        out["replica_of"] = int(rep.group(1))
     return out
 
 
-def slug(s: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", rx_fold(s).lower()).strip("-")
+def status_of(dd: str, gone_mark: bool, head: str) -> tuple[str | None, str | None]:
+    """(status, the words it rests on) from the sentence after the opening clause."""
+    rest = dd[len(head):].lstrip(" .")
+    first = rest[:160]
+    if re.search(r"replica of \d{4}", head, re.I) and not gone_mark and not GONE_RE.match(first):
+        return "replica", head
+    if gone_mark or GONE_RE.match(first):
+        return "lost", first[:60] if first else None
+    if INACTIVE_RE.match(first):
+        return "inactive", first[:60]
+    if ACTIVE_RE.match(first):
+        # "Active (inactive officially since 1958)", "Reactivated ... but now unofficial": a light is
+        # shown, but the aid is not official: no claim either way.
+        paren = re.match(r"\w+\s*\(([^)]*)\)", first)
+        if paren and re.search(r"\b(?:inactive|unofficial|not official|officially|decorative)\b", paren.group(1), re.I) \
+                and not first.lower().startswith("reactivated (inactive"):
+            return None, first[:60]
+        if re.match(r"reactivated.{0,60}\bunofficial\b", first, re.I):
+            return None, first[:60]
+        return "active", first[:30]
+    return None, None
 
 
-def rx_fold(s: str) -> str:
-    import unicodedata
-    return "".join(ch for ch in unicodedata.normalize("NFKD", s) if not unicodedata.combining(ch))
+def year_after(pattern: str, text: str) -> int | None:
+    m = re.search(pattern, text, re.I)
+    return int(m.group(1)) if m and not m.group(2 if m.lastindex and m.lastindex >= 2 else 0) == "s" else None
 
 
-def build_record(page: str, region: str, label: str, entry: dict, used: Counter) -> dict | None:
-    nm = read_name(entry["name"])
-    if not nm["name"] or len(nm["name"]) > 90:
+def exact_year(pattern: str, text: str) -> int | None:
+    m = re.search(pattern + r"(?!\d)(?!s\b)", text, re.I)
+    return int(m.group(1)) if m else None
+
+
+MATERIAL_WORDS = [(re.compile(r"\bcast[- ]iron\b", re.I), "cast_iron", "cast_iron"),
+                  (re.compile(r"\bfiberglass\b", re.I), "fiberglass", None),
+                  (re.compile(r"\bconcrete\b", re.I), "concrete", "concrete"),
+                  (re.compile(r"\bwood(?:en)?\b", re.I), "wood", "wood_frame"),
+                  (re.compile(r"\bbrick\b", re.I), "brick", "conical_masonry"),
+                  (re.compile(r"\b(?:stone|granite|limestone|sandstone|masonry)\b", re.I), "stone", "conical_masonry"),
+                  (re.compile(r"\b(?:steel|iron)\b", re.I), "steel", None),
+                  (re.compile(r"\baluminum|aluminium\b", re.I), "aluminium", None)]
+HEIGHT_RE = re.compile(r"(?<![\w.])(\d+(?:\.\d+)?)\s*m\s*\((?:approx\.\s*)?\d+(?:-\d+)?\s*ft\)\s*([^.;]{0,90}?)\b"
+                       r"(tower|lighthouse|mast|post|pole|cylinder|building|house|column|pyramid|structure|light)\b", re.I)
+
+
+def structure_facts(dd: str, head: str) -> dict:
+    """Height and material of the tower the description names (not the focal plane)."""
+    rest = dd[len(head):]
+    height, material, stype = None, None, None
+    for m in HEIGHT_RE.finditer(rest):
+        before = rest[max(0, m.start() - 14):m.start()].lower()
+        if "plane" in before or "(?)" in before:
+            continue
+        height = float(m.group(1))
+        desc = m.group(2) + " " + m.group(3)
+        best = None
+        for rx, mat, typ in MATERIAL_WORDS:
+            mm = rx.search(desc)
+            if mm and (best is None or mm.start() < best[0]):
+                best = (mm.start(), mat, typ)
+        if best:
+            material, stype = best[1], best[2]
+        if re.search(r"\bskelet(?:al|on)\b", desc, re.I):
+            stype = "skeletal"
+        break
+    return {"height_m": height, "material": material, "type": stype}
+
+
+def has_lantern(dd: str, head: str) -> bool:
+    """The first sentence about the structure (from its height in metres on) names a lantern, gallery
+    or keeper's house ("No lantern" and later sentences about the lighthouse do not count)."""
+    rest = dd[len(head):]
+    for m in HEIGHT_RE.finditer(rest):
+        if "plane" in rest[max(0, m.start() - 14):m.start()].lower():
+            continue
+        sentence = re.split(r"(?<=[a-z\)])\.\s+(?=[A-Z])", rest[m.start():m.start() + 300])[0]
+        return bool(re.search(r"\blantern\b|\bgallery\b|keeper'?s'? (?:house|dwelling)|\bcupola\b", sentence, re.I)
+                    and not re.search(r"\bno lantern\b", sentence, re.I))
+    return False
+
+
+ACCESS_PATTERNS = [
+    ("boat_only", re.compile(r"accessible only by (?:boat|air|boat or (?:air|plane|helicopter)|helicopter|water)|"
+                             r"reachable only by (?:boat|air)", re.I)),
+    ("site_open", re.compile(r"\bsite (?:and (?:tower|lighthouse) )?open\b|\bsite open\b|\bgrounds open\b", re.I)),
+    ("site_closed", re.compile(r"\bsite(?: and (?:tower|lighthouse|lantern))? closed\b|\bsite and (?:tower|lighthouse) closed\b", re.I)),
+    ("tower_open", re.compile(r"\b(?:tower|lighthouse) open\b|site and (?:tower|lighthouse) open|tower and lantern room open", re.I)),
+    ("tower_closed", re.compile(r"\b(?:tower|lighthouse|interior)(?: and lantern)? closed\b|site and tower closed", re.I)),
+    ("site_unknown", re.compile(r"\bsite status unknown\b", re.I)),
+]
+
+
+def access_of(dd: str) -> dict:
+    found = {k: True for k, rx in ACCESS_PATTERNS if rx.search(dd)}
+    out: dict = {}
+    if found.get("boat_only"):
+        out["boat_only"] = True
+    if found.get("site_open") and not found.get("site_closed"):
+        out["site"] = "open"
+    elif found.get("site_closed") and not found.get("site_open"):
+        out["site"] = "closed"
+    elif found.get("site_unknown"):
+        out["site"] = "unknown"
+    if found.get("tower_closed") and not found.get("tower_open"):
+        out["tower"] = "closed"
+    elif found.get("tower_open") and not found.get("tower_closed"):
+        out["tower"] = "open"
+    return out
+
+
+def owner_of(dd: str) -> str | None:
+    m = re.search(r"(?:Owner/site manager|Owner and site manager|Owner/manager|Owner|Site manager)\s*:\s*([^.;]{2,90}?)(?:[.;]|\s\(\?\)|\sSite\b|$)", dd)
+    if not m:
         return None
-    fa = read_text(entry["text"])
-    if fa["built"] is None and fa["status"] is None and not fa["arlhs"] and not re.match(r"^Date unknown", entry["text"]):
-        return None   # not a light's entry (a section blurb, a map credit)
-    base = f"{page[:-4]}:{slug(nm['name'])}" + (f"-{nm['tower']}" if nm["tower"] else "")
-    used[base] += 1
-    ident = base if used[base] == 1 else f"{base}-{used[base]}"
-    url = BASE + page
-    status = fa["status"]
-    if nm["lost_mark"] and status != "active":
-        status = "lost"
-    shown = f"{nm['name']} (Replica)" if fa["replica"] else nm["name"]   # a copy keeps the word: it is its own station
-    rec = rx.new_record(SOURCE, ident, shown, url=url, region=region, lat=None, lon=None, precision="approximate",
-                        kind="lighthouse", status=status)
-    rec["other_names"] = nm["alts"]
-    rec["kind_raw"] = entry["name"]
-    rec["status_raw"] = fa["status_text"]
-    rec["structure"]["built"] = fa["built"]
-    if fa["replica"]:
-        rec["status"] = "replica"
-    rec["light"]["first_lit"] = fa["established"]
-    if fa["status"] in ("inactive", "lost") and fa["deactivated"]:
-        rec["light"]["deactivated"] = fa["deactivated"]
-    ev = []
-    note = f"Tower {nm['tower']}" if nm["tower"] else None
-    if fa["built"]:
-        ev.append({"year": fa["built"], "event": "built", "note": (note + " (Rowlett's Lighthouse Directory)") if note else
-                   "Rowlett's Lighthouse Directory", "from": SOURCE})
-    if fa["established"]:
-        ev.append({"year": fa["established"], "event": "first_lit", "note": "Station established (Rowlett's Lighthouse Directory)", "from": SOURCE})
-    if fa["deactivated"] and fa["status"] == "inactive":
-        ev.append({"year": fa["deactivated"], "event": "deactivated", "note": "Rowlett's Lighthouse Directory", "from": SOURCE})
-    if fa["lost_year"] and fa["status"] == "lost":
-        ev.append({"year": fa["lost_year"], "event": "removed", "note": "Rowlett's Lighthouse Directory", "from": SOURCE})
-    rec["events"] = ev
-    rec["aton"]["arlhs"] = fa["arlhs"]
-    rec["aton"]["uscg_llnr"] = fa["uscg"]
-    rec["links"] = [{"label": f"Lighthouse Directory: {label}", "url": url, "kind": "reference"}]
-    xref = []
-    for href in entry["links"]:
-        m = re.search(r"lighthousefriends\.com/light\.asp\?ID=(\d+)", href, re.I)
-        if m:
-            xref.append(f"lhf:{m.group(1)}")
-    extra: dict = {"page": page, "tower": nm["tower"], "admiralty": fa["admiralty"], "decorative": fa["decorative"] or None,
-                   "xref": sorted(set(xref)) or None, "relocated": fa["relocated"]}
-    rec["extra"] = {k: v for k, v in extra.items() if v is not None}
-    # An active light the other sources lack is a modern aid with no history to start a station for; the
-    # merge report counts it instead of listing it. A lost, inactive or undated entry stays on the list.
-    if status in ("active", None):
-        rec["extra"]["quiet_unmatched"] = True
-    if nm["bracket"]:
-        # Rowlett puts a fog signal building, a minor light or a post in square brackets: it may add to a
-        # station the other sources have, never start one
-        rec["extra"]["enrich_only"] = True
-        rec["extra"]["bracket"] = True
-    return rec
+    v = re.sub(r"\s*\(\?\)\s*$", "", m.group(1)).strip(" ,")
+    return v or None
 
 
-# ---------------------------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------------------------
+def ownership_of(owner: str | None) -> str | None:
+    if not owner:
+        return None
+    o = owner.lower()
+    if re.search(r"coast guard|fisheries and oceans|parks canada|transport canada|department of|public works|federal|canadian wildlife", o):
+        return "federal"
+    if re.search(r"province|provincial|bc parks|ontario parks|parcs|sépaq|sepaq|crown", o):
+        return "provincial"
+    if re.search(r"\b(town|city|village|municipality|county|municipal|township|regional)\b", o):
+        return "local"
+    if re.search(r"private|individual", o):
+        return "private"
+    if re.search(r"society|association|foundation|friends|museum|trust|heritage|historical|committee", o):
+        return "nonprofit"
+    return None
 
-def get_pages(refresh: bool) -> dict[str, Path]:
-    cache = c.raw_dir(SOURCE)
-    survey = c.RAW_ROOT / SURVEY_CACHE
-    out = {}
+
+def norm_ccg(value: str) -> str:
+    """"A-456" -> "A456", "I-0563" -> "I563", "N-049" -> "N49", "I-0114.1" -> "I114.1"."""
+    m = re.fullmatch(r"([A-Z])-?0*(\d+(?:\.\d+)?)", value.strip())
+    if not m:
+        return value.strip()
+    num = m.group(2)
+    return f"{m.group(1)}{num}"
+
+
+def norm_arlhs(digits: str) -> str:
+    return f"CAN{int(digits)}"
+
+
+def slug(name: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", name.lower().replace("&", " and ")).strip("-")
+    return s[:80] or "light"
+
+
+def build_record(page: str, entry: dict, seen: dict[str, int]) -> dict | None:
+    dd = entry["dd"]["text"]
+    if not LEAD_RE.match(dd):
+        return None
+    name, marks = clean_name(entry["dt"]["text"])
+    if not name or len(name) > 90:
+        return None
+    region, _label = PAGES[page]
+    years = parse_years(dd)
+    status, status_words = status_of(dd, marks["gone"], years["head"])
+    facts = structure_facts(dd, years["head"])
+    focal = re.search(r"focal plane\s+(\d+(?:\.\d+)?)\s*m", dd)
+    arlhs = sorted({norm_arlhs(m) for m in ARLHS_RE.findall(dd[dd.find("ARLHS"):])}) if "ARLHS" in dd else []
+    ccg = []
+    for m in CCG_RE.finditer(dd):
+        ccg += [norm_ccg(v) for v in re.split(r"\s*[;,/]\s*", m.group(1))]
+    adm = ADM_RE.findall(dd)
+    nga = NGA_RE.findall(dd)
+    lhf = sorted({m for h in entry["dt"]["hrefs"] + entry["dd"]["hrefs"] for m in LHF_RE.findall(h)})
+    owner = owner_of(dd)
+    k = slug(name)
+    seen[k] = seen.get(k, 0) + 1
+    key = f"{SOURCE}:{page}:{k}" + (f"-{seen[k]}" if seen[k] > 1 else "")
+    events = []
+    if years["built"]:
+        events.append({"year": years["built"], "event": "built", "note": "Year of the tower described by the Lighthouse Directory",
+                       "from": SOURCE})
+    if years["established"] and not years["established_uncertain"]:
+        events.append({"year": years["established"], "event": "first_lit", "note": "Station established", "from": SOURCE})
+    tail = re.split(r"(?<=[a-z0-9\)])\.\s", dd[len(years["head"]):].lstrip(" ."), maxsplit=1)[0]  # the status sentence
+    d_year = exact_year(r"(?:inactive|deactivated|discontinued)\s+(?:since|in)\s+(?:the\s+)?(\d{4})", tail)
+    if d_year:
+        events.append({"year": d_year, "event": "deactivated", "note": None, "from": SOURCE})
+    r_year = exact_year(r"(?:demolished|removed|dismantled|replaced)\s+(?:in|by .{0,20}? in)\s+(\d{4})", tail)
+    if r_year:
+        events.append({"year": r_year, "event": "removed", "note": None, "from": SOURCE})
+    x_year = exact_year(r"destroyed\s+(?:by [a-z ]{0,20}?)?in\s+(\d{4})", tail)
+    if x_year:
+        events.append({"year": x_year, "event": "destroyed", "note": None, "from": SOURCE})
+    kind = "range_lights" if re.search(r"\brange\b", name, re.I) else "lighthouse"
+    if re.search(r"\b(pier|breakwater|jetty|mole)\b", name, re.I):
+        kind = "pier_light"
+    role = "front_range" if re.search(r"\bfront\b", name, re.I) else "rear_range" if re.search(r"\brear\b", name, re.I) else None
+    if kind == "range_lights" and role is None and not re.search(r"\brange\b", name, re.I):
+        kind = "lighthouse"
+    join_keys = [f"lhf:{i}" for i in lhf] + [f"arlhs:{a}" for a in arlhs] + [f"ccg:{x}" for x in ccg] + [f"adm:{a}" for a in adm]
+    return {
+        "key": key,
+        "url": PAGE_URL.format(page=page),
+        "name": name,
+        "other_names": marks["alt_names"],
+        "country": "CA",
+        "region": region,
+        "county": None,
+        "lat": None,
+        "lon": None,
+        "precision": None,
+        "kind": kind,
+        "kind_raw": None,
+        "role": role,
+        "status": status,
+        "status_raw": status_words,
+        "structure": {"type": facts["type"], "material": facts["material"], "built": years["built"],
+                      "height_m": facts["height_m"], "status": None},
+        "light": {"first_lit": years["established"] if not years["established_uncertain"] else None,
+                  "deactivated": d_year, "characteristic": None,
+                  "focal_height_m": float(focal.group(1)) if focal else None,
+                  "range_nm": None, "fog_signal": None, "lens": None},
+        "setting": None,
+        "registers": [],
+        "aton": {"uscg_llnr": None, "arlhs": arlhs[0] if arlhs else None, "ccg_list_number": ccg[0] if ccg else None,
+                 "nga": nga[0] if nga else None, "admiralty": adm[0] if adm else None},
+        "agency": owner,
+        "ownership": ownership_of(owner),
+        "events": events,
+        "photos": [],
+        "links": [{"label": "Lighthouse Directory (Rowlett)", "url": PAGE_URL.format(page=page), "kind": "reference"}],
+        "relations": {},
+        "extra": {
+            "station_level": True,
+            "page": page,
+            "gone": marks["gone"] or status == "lost",
+            "notable": marks["notable"],
+            "minor_marker": marks["minor_marker"],
+            "tower_number": marks["tower_number"],
+            "notes": marks["notes"],
+            "built_text": years["built_text"],
+            "established": years["established"],
+            "established_uncertain": years["established_uncertain"],
+            "replica_of": years["replica_of"],
+            "lantern": has_lantern(dd, years["head"]),
+            "access": access_of(dd),
+            "lhf_ids": lhf,
+            "ccg_numbers": ccg,
+            "all_arlhs": arlhs,
+            "join_keys": join_keys,
+        },
+    }
+
+
+def fetch_canada(refresh: bool = False) -> tuple[list[dict], dict, list[Path]]:
+    cache = c.raw_dir(SOURCE) / "ca"
+    records, paths, notes = [], [], {"by_page": {}, "skipped_entries": 0}
     for page in PAGES:
-        p = cache / page
-        old = survey / page
-        if not p.exists() and not refresh and old.exists():
-            shutil.copyfile(old, p)
-        if not p.exists() or refresh:
-            rx.polite_get(BASE + page, p, force=refresh)
-        out[page] = p
-    return out
-
-
-def extract(pages: dict[str, Path]) -> tuple[list[dict], dict]:
-    records, stats = [], Counter()
-    for page, path in pages.items():
-        region, label = PAGES[page]
-        used: Counter = Counter()
-        text = path.read_bytes().decode("latin-1")
-        for entry in parse_page(text):
-            rec = build_record(page, region, label, entry, used)
+        p = cache / f"{page}.htm"
+        body = cc.cached_get(PAGE_URL.format(page=page), p, SURVEY_DIR / f"{page}.htm", refresh=refresh)
+        paths.append(p)
+        seen: dict[str, int] = {}
+        n = 0
+        for entry in read_entries(cc.decode(body, "utf-8-sig", "cp1252")):
+            rec = build_record(page, entry, seen)
             if rec is None:
-                stats["skipped"] += 1
+                notes["skipped_entries"] += 1
                 continue
             records.append(rec)
-            stats[rec["status"] or "no status"] += 1
-    return records, dict(stats)
+            n += 1
+        notes["by_page"][page] = n
+    return records, notes, paths
+
+
+def write_union(records: list[dict], notes: dict, retrieved: str) -> int:
+    kept, header_notes = [], {}
+    if OUT_PATH.exists():
+        old = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+        kept = [r for r in old.get("records", []) if r.get("country") != "CA"]
+        header_notes = dict(old.get("notes") or {})
+    header_notes["canada"] = notes
+    c.write_source_json(OUT_PATH, source=SOURCE, title="Lighthouse Directory (Russ Rowlett)",
+                        url="https://www.ibiblio.org/lighthouse/", license_text=LICENSE, records=kept + records,
+                        notes=header_notes, retrieved=retrieved)
+    return len(kept)
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Fetch Fresnel's Lighthouse Directory extract")
-    ap.add_argument("--refresh", action="store_true")
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("--refresh", action="store_true", help="fetch again instead of using the cache")
     args = ap.parse_args(argv)
-    pages = get_pages(args.refresh)
-    records, stats = extract(pages)
-    rx.write_extract(
-        OUT_PATH, source=SOURCE,
-        title="Russ Rowlett's Lighthouse Directory: United States and territories",
-        url=BASE,
-        license_text="Copyright Russ Rowlett and the University of North Carolina at Chapel Hill; all other rights reserved. "
-                     "Facts only (years, status, ARLHS / USCG / Admiralty numbers) with a link to the page; no text is copied.",
-        credit="Russ Rowlett, The Lighthouse Directory (UNC Chapel Hill), used for facts with a link",
-        records=records, notes={"pages": len(pages), "records_by_status": stats},
-        retrieved=c.retrieved_date(*pages.values()))
-    c.log(f"rowlett: wrote {len(records)} records from {len(pages)} pages; {stats}")
+    records, notes, paths = fetch_canada(args.refresh)
+    kept = write_union(records, notes, c.retrieved_date(*paths))
+    c.log(f"rowlett: {len(records)} Canadian records written, {kept} other records kept; "
+          f"{notes['skipped_entries']} entries skipped")
     return 0
 
 

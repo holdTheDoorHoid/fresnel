@@ -2,7 +2,8 @@
   "id": "ca-on-long-point",
   "name": "Long Point Lighthouse",
   "other_names": [
-    "Long Point Light"
+    "Long Point Light",
+    "Long Point"
   ],
   "country": "CA",
   "region": "ON",
@@ -25,31 +26,31 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 31.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 8s",
+    "characteristic": "LFl W 8s",
     "focal_height_m": 29.6,
-    "range_nm": 18.0,
+    "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN759",
+    "ccg_list_number": "I579",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,16 +60,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1916,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -102,6 +110,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1539",
       "kind": "website"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Erie",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw552-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -121,12 +139,56 @@
       "key": "osm:node/1666222303",
       "part": "wikidata:Q123501280",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1539",
+      "part": "wikidata:Q123501280",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I579",
+      "part": "wikidata:Q123501280",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:long-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 8s"
+        },
+        {
+          "source": "osm",
+          "value": "Fl W 8s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

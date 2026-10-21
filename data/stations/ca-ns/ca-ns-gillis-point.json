@@ -2,7 +2,8 @@
   "id": "ca-ns-gillis-point",
   "name": "Gillis Point Lighthouse",
   "other_names": [
-    "phare de Gillis Point"
+    "phare de Gillis Point",
+    "Gillis Point"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1895,
+      "height_m": 11.3,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2011,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -50,12 +51,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN201",
+    "ccg_list_number": "A832",
+    "nga": "9044",
+    "admiralty": "H812"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Society for the Preservation of the Gillis Point Lighthouse",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -65,8 +67,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +77,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1895,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2011,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 2017,
       "event": "heritage_designated",
@@ -105,6 +119,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2328817830",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15352",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1641",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,6 +157,33 @@
       "part": "wikidata:Q46145563",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15352",
+      "part": "wikidata:Q46145563",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1641",
+      "part": "wikidata:Q46145563",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:gillis-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

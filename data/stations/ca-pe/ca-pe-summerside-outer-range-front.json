@@ -1,7 +1,10 @@
 {
   "id": "ca-pe-summerside-outer-range-front",
   "name": "Summerside Outer Range front light",
-  "other_names": [],
+  "other_names": [
+    "Summerside Outer Range Front",
+    "Summerside Outer front range light"
+  ],
   "country": "CA",
   "region": "PE",
   "county": null,
@@ -35,16 +38,17 @@
     "lens": null,
     "characteristic": "F R",
     "focal_height_m": 9.3,
-    "range_nm": 18.0,
+    "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN486",
     "ccg_list_number": "A1018.1",
-    "nga": "110-8830"
+    "nga": "110-8830",
+    "admiralty": "H1049"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -57,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1991,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -95,6 +106,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1247058336",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=978",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,7 +132,6 @@
         "agency",
         "aton",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -120,6 +145,31 @@
       "part": "wikidata:Q107170693",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:978",
+      "part": "wikidata:Q107170693",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1018.1",
+      "part": "wikidata:Q107170693",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:summerside-outer-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],

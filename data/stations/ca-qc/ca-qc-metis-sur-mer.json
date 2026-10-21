@@ -6,7 +6,11 @@
     "site patrimonial du phare de Pointe Mitis",
     "site patrimonial du phare de la Pointe-Mitis",
     "Phare de la Pointe-Mitis",
-    "Pointe Mitis"
+    "Pointe Mitis",
+    "Pointe Mitis Lighthouse",
+    "Mitis Lighthouse",
+    "Pointe Mitis (Petit Mitis)",
+    "Métis-sur-Mer"
   ],
   "country": "CA",
   "region": "QC",
@@ -36,14 +40,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1874,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(3) W 7.5s",
     "focal_height_m": 21.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -74,11 +78,12 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN376",
+    "ccg_list_number": "A1707",
+    "nga": "6800",
+    "admiralty": "H2048"
   },
-  "agency": null,
+  "agency": "Métis Lighthouse",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -89,8 +94,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -100,10 +105,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1900,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1909,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1988,
@@ -177,6 +194,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/666331864",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15072",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1140",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence Estuary, Gulf of St. Lawrence - Rivière du Loup",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1620-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -222,12 +259,62 @@
       "source": "osm",
       "key": "osm:way/666331864",
       "part": "wikidata:Q15647701",
+      "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15072",
+      "part": "wikidata:Q15647701",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1140",
+      "part": "wikidata:Q15647701",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1707",
+      "part": "wikidata:Q15647701",
       "fields": [
+        "aton",
         "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:pointe-mitis",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1900
+        },
+        {
+          "source": "rowlett",
+          "value": 1874
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1909
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

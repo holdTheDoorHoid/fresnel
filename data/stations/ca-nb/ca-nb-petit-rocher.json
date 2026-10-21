@@ -1,7 +1,12 @@
 {
   "id": "ca-nb-petit-rocher",
   "name": "Petit-Rocher Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Petit Rocher (Elmr Tree)",
+    "Petit-Rocher",
+    "Petit-Rocher Breakwater Light",
+    "Petit Rocher"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -9,42 +14,58 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.781892,
-    "lon": -65.707553,
+    "lat": 47.782,
+    "lon": -65.70825,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Petit-Rocher Lighthouse",
       "type": null,
       "material": "steel",
       "built": 1929,
       "height_m": 7.0,
+      "status": "lost",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 47.781833,
+        "lon": -65.707556
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Petit-Rocher Breakwater Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1929,
+    "first_lit": 1879,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "L Fl W 6s",
-    "focal_height_m": 7.6,
-    "range_nm": 15.0,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 7.5,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN933",
     "ccg_list_number": "A1339",
-    "nga": "110-7196"
+    "nga": "110-7196",
+    "admiralty": "H1606"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -57,8 +78,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -72,6 +93,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1879,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1929,
@@ -104,6 +131,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q106498665",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2147",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,8 +158,6 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
@@ -129,8 +169,41 @@
       "key": "wikidata:Q106498665",
       "part": "wikidata:Q106498634",
       "fields": [
-        "events",
+        "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2147",
+      "part": "wikidata:Q106498634",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1339",
+      "part": "wikidata:Q106498634",
+      "fields": [
+        "aton",
         "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1339.2",
+      "part": "ccg_list_of_lights:A1339.2",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:petit-rocher",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
@@ -138,6 +211,18 @@
     {
       "field": "status",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
         {
           "source": "wikidata",
           "value": "active"

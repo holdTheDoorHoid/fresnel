@@ -1,7 +1,12 @@
 {
   "id": "ca-nl-dawson-point",
   "name": "Dawson Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Dawson’s Point",
+    "Dawson Point Light Station",
+    "Dawson Point",
+    "Pushthrough"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.6435,
-    "lon": -56.149472,
+    "lat": 47.643306,
+    "lon": -56.149333,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -30,21 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1916,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 17.0,
+    "characteristic": "LFl W 8s",
+    "focal_height_m": 16.8,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN838",
     "ccg_list_number": "N134",
-    "nga": "110-2352"
+    "nga": "110-2352",
+    "admiralty": "H276"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -61,7 +67,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,6 +78,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1916,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -87,6 +99,21 @@
       "label": "ARLHS World List of Lights CAN838",
       "url": "https://wlol.arlhs.com/lighthouse/CAN838.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1318",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -99,17 +126,59 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "ownership",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1318",
+      "part": "wikidata:Q106875479",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N134",
+      "part": "wikidata:Q106875479",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:dawson-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 8s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -65,16 +65,34 @@ def new_record(source: str, ident: str, name: str | None, *, url: str | None = N
 
 
 def write_extract(path: Path, *, source: str, title: str, url: str, license_text: str, credit: str,
-                  records: list[dict], notes: dict | None = None, retrieved: str | None = None) -> None:
-    """data/sources/<source>.json with the credit line the site's Credits page prints."""
-    c.write_source_json(path, source=source, title=title, url=url, license_text=license_text,
-                        records=records, notes=notes, retrieved=retrieved)
+                  records: list[dict], notes: dict | None = None, retrieved: str | None = None,
+                  country: str | None = None) -> None:
+    """data/sources/<source>.json with the credit line the site's Credits page prints.
+
+    A source two fetchers share (LighthouseFriends and Rowlett: this one for the US, fetch_*_ca.py for Canada)
+    passes `country`: the file keeps the other country's records and header, this country's records are
+    replaced, and its notes go under `notes[<country>]`, so either fetcher can run first and the union is the
+    same."""
+    kept: list[dict] = []
+    header: dict = {}
+    if country and path.exists():
+        old = json.loads(path.read_text(encoding="utf-8"))
+        kept = [r for r in old.get("records", []) if r.get("country") != country]
+        header = {k: old.get(k) for k in ("title", "url", "license", "credit") if old.get(k)}
+        merged = dict(old.get("notes") or {})
+        merged[country.lower()] = notes or {}
+        notes = merged
+    elif country:
+        notes = {country.lower(): notes or {}}
+    c.write_source_json(path, source=source, title=header.get("title") or title, url=header.get("url") or url,
+                        license_text=header.get("license") or license_text, records=kept + records, notes=notes,
+                        retrieved=retrieved)
     data = json.loads(path.read_text(encoding="utf-8"))
     out = {}
     for k, v in data.items():
         out[k] = v
         if k == "license":
-            out["credit"] = credit
+            out["credit"] = header.get("credit") or credit
     path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 

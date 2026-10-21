@@ -3,7 +3,9 @@
   "name": "Souris East Lighthouse",
   "other_names": [
     "phare de Souris",
-    "Souris Historic Lighthouse"
+    "Souris Historic Lighthouse",
+    "Souris East",
+    "Knight Point"
   ],
   "country": "CA",
   "region": "PE",
@@ -37,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 4s",
-    "focal_height_m": 27.0,
+    "focal_height_m": 27.2,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -68,12 +70,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN465",
     "ccg_list_number": "A947",
-    "nga": "110-8084"
+    "nga": "110-8084",
+    "admiralty": "H922"
   },
-  "agency": null,
+  "agency": "Souris Harbour Authority (Souris Historic Lighthouse )",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -81,13 +84,13 @@
     "as_of": "1991"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
@@ -160,6 +163,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2105031552",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=949",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,7 +190,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -187,6 +204,33 @@
       "fields": [
         "events",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:949",
+      "part": "wikidata:Q30575125",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A947",
+      "part": "wikidata:Q30575125",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:souris-east",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "visit"
       ]
     }
   ],

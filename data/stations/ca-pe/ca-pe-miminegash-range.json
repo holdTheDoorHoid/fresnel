@@ -2,7 +2,9 @@
   "id": "ca-pe-miminegash-range",
   "name": "Miminegash Range Lights",
   "other_names": [
-    "Miminegash"
+    "Miminegash",
+    "Miminegash North Breakwater Light",
+    "Miminegash North Breakwater Range Front"
   ],
   "country": "CA",
   "region": "PE",
@@ -32,24 +34,25 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
+    "characteristic": "Fl G 4s",
     "focal_height_m": 5.0,
-    "range_nm": null,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN318",
     "ccg_list_number": "A1033",
-    "nga": "110-8384"
+    "nga": "110-8384",
+    "admiralty": "H1072"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -69,6 +72,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1972,
       "event": "deactivated",
@@ -99,6 +108,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1806628417",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,6 +141,28 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1033.5",
+      "part": "wikidata:Q6862255",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:miminegash-north-breakwater-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -129,7 +170,15 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
           "value": "active"
         },
         {
@@ -138,6 +187,20 @@
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl G 4s"
+        },
+        {
+          "source": "osm",
+          "value": "F R"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     }
   ],
   "verification": "unverified",

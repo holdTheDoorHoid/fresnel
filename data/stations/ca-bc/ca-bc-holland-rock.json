@@ -3,7 +3,8 @@
   "name": "Holland Rock Light",
   "other_names": [
     "phare d'Holland Rock",
-    "Holland Rock Lighthouse"
+    "Holland Rock Lighthouse",
+    "Holland Rock"
   ],
   "country": "CA",
   "region": "BC",
@@ -17,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,40 +34,41 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1946,
+    "first_lit": 1908,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl(3) W 12s",
-    "focal_height_m": 7.0,
-    "range_nm": 6.0,
+    "focal_height_m": 9.1,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN229",
     "ccg_list_number": "P690",
-    "nga": null
+    "nga": "11704",
+    "admiralty": "G5772"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1949"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -77,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1946,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1949,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1949,
@@ -118,6 +132,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3772706525",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1433",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Inside Channels",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac587-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,7 +158,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -142,25 +170,67 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1433",
+      "part": "wikidata:Q45265779",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P690",
+      "part": "wikidata:Q45265779",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:holland-rock",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1949
         },
         {
-          "source": "wikidata",
-          "value": 1946
+          "source": "rowlett",
+          "value": 1908
         }
       ],
-      "note": "A source gives the light's service entry (1949) after its retirement (1946); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -6,7 +6,8 @@
     "Ballenas Island Lighthouse",
     "Ballenas Islands",
     "Ballenas Islands Light",
-    "Ballenas Island"
+    "Ballenas Island",
+    "Parksville"
   ],
   "country": "CA",
   "region": "BC",
@@ -36,26 +37,27 @@
     }
   ],
   "light": {
-    "first_lit": 1917,
+    "first_lit": 1900,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 21.0,
+    "focal_height_m": 21.3,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN018",
     "ccg_list_number": "P490",
-    "nga": "111-12868"
+    "nga": "111-12868",
+    "admiralty": "G5508"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -63,13 +65,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -78,6 +80,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1917,
@@ -129,6 +143,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/872948587",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1185",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Northern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac4475-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,7 +170,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -154,7 +182,6 @@
       "key": "osm:node/1689457904",
       "part": "wikidata:Q4851585",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -163,9 +190,51 @@
       "key": "osm:way/872948587",
       "part": "wikidata:Q4851585",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1185",
+      "part": "wikidata:Q4851585",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P490",
+      "part": "wikidata:Q4851585",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:ballenas-islands",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1917
+        },
+        {
+          "source": "rowlett",
+          "value": 1900
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

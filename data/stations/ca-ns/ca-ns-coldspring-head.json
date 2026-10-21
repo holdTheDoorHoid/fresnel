@@ -3,7 +3,8 @@
   "name": "Coldspring Head lighthouse",
   "other_names": [
     "phare de Coldspring Head",
-    "Coldspring Head Lighthouse"
+    "Coldspring Head Lighthouse",
+    "Coldspring Head"
   ],
   "country": "CA",
   "region": "NS",
@@ -17,30 +18,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
-      "built": null,
-      "height_m": null,
+      "built": 1889,
+      "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2013,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -66,12 +67,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN144",
+    "ccg_list_number": "A941",
+    "nga": "8504",
+    "admiralty": "H1302"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -81,8 +83,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -92,10 +94,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1890,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1991,
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2013,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -132,6 +146,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2487441763",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14996",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=999",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsnw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,6 +185,33 @@
       "part": "wikidata:Q28375777",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14996",
+      "part": "wikidata:Q28375777",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:999",
+      "part": "wikidata:Q28375777",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsnw:coldspring-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -4,7 +4,12 @@
   "other_names": [
     "Murray Harbour Front Range Light",
     "phare avant de Murray Harbour",
-    "Murray Harbour Range Front Lighthouse"
+    "Murray Harbour Range Front Lighthouse",
+    "Murray Harbour Range Front",
+    "Murray Harbour Range Rear",
+    "Murray Harbour front range light",
+    "Murray Head",
+    "Beach Point"
   ],
   "country": "CA",
   "region": "PE",
@@ -23,7 +28,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Murray Harbour Front Range Light",
       "type": null,
       "material": null,
       "built": 1869,
@@ -31,17 +36,32 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Murray Harbour Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 46.01444,
+        "lon": -62.4928
+      }
     }
   ],
   "light": {
-    "first_lit": 1879,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 6.0,
+    "focal_height_m": 6.3,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,8 +78,9 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN328",
-    "ccg_list_number": null,
-    "nga": "110-8140"
+    "ccg_list_number": "A964",
+    "nga": "110-8140",
+    "admiralty": "H954"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -72,8 +93,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,6 +108,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1879,
@@ -149,6 +182,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2186385783",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=955",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=956",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,7 +225,6 @@
         "aton",
         "county",
         "events",
-        "light",
         "ownership",
         "photos",
         "registers",
@@ -191,6 +243,38 @@
       "part": "wikidata:Q69729998",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:955",
+      "part": "wikidata:Q69729998",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:956",
+      "part": "lighthousefriends:956",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A964",
+      "part": "wikidata:Q69729998",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:murray-harbour-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

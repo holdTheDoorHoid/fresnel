@@ -2,7 +2,9 @@
   "id": "ca-ns-river-bourgeois",
   "name": "River Bourgeois light",
   "other_names": [
-    "River Bourgeois lighthouse"
+    "River Bourgeois lighthouse",
+    "River Bourgeois",
+    "Bourgeois Inlet"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,31 +27,32 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 7.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Iso R 4s",
+    "focal_height_m": 7.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN56",
+    "ccg_list_number": "A732",
+    "nga": "9396",
+    "admiralty": "H3386"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "River Bourgeois Community Services Society",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,16 +62,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2003,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -97,6 +107,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2330957643",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1657",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,6 +142,36 @@
       "part": "wikidata:Q28375847",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1657",
+      "part": "wikidata:Q28375847",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A732",
+      "part": "wikidata:Q28375847",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:river-bourgeois",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

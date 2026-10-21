@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Point Atkinson",
     "phare de la Pointe-Atkinson",
-    "Port Atkinson"
+    "Port Atkinson",
+    "Point Atkinson"
   ],
   "country": "CA",
   "region": "BC",
@@ -34,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1912,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 5s",
-    "focal_height_m": 33.0,
+    "focal_height_m": 32.9,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -69,12 +70,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN387",
     "ccg_list_number": "P386",
-    "nga": "111-12972"
+    "nga": "111-12972",
+    "admiralty": "G5426"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -82,13 +84,13 @@
     "as_of": "1996"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -97,6 +99,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1912,
@@ -172,6 +180,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/406020994",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1606",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Vancouver Harbour",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac3853-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -184,7 +207,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -198,12 +220,57 @@
       "part": "wikidata:Q15267226",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1606",
+      "part": "wikidata:Q15267226",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P386",
+      "part": "wikidata:Q15267226",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcs:point-atkinson",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1912
+        },
+        {
+          "source": "osm",
+          "value": 1912
+        },
+        {
+          "source": "rowlett",
+          "value": 1875
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

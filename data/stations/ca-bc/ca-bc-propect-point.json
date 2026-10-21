@@ -3,7 +3,8 @@
   "name": "Propect Point Light",
   "other_names": [
     "phare de Prospect Point",
-    "Prospect Point Lighthouse"
+    "Prospect Point Lighthouse",
+    "Prospect Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -33,24 +34,25 @@
     }
   ],
   "light": {
-    "first_lit": 1948,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 2s",
     "focal_height_m": 11.5,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN1308",
     "ccg_list_number": "P392",
-    "nga": "111-12998"
+    "nga": "111-12998",
+    "admiralty": "G5434"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -60,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1948,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1948,
@@ -121,6 +135,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1001586109",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1106",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Vancouver Harbour",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac3853-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,7 +162,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -145,12 +173,53 @@
       "key": "osm:way/1001586109",
       "part": "wikidata:Q46910645",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1106",
+      "part": "wikidata:Q46910645",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P392",
+      "part": "wikidata:Q46910645",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcs:prospect-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1948
+        },
+        {
+          "source": "rowlett",
+          "value": 1898
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

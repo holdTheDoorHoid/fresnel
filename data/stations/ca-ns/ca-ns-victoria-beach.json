@@ -2,7 +2,8 @@
   "id": "ca-ns-victoria-beach",
   "name": "Victoria Beach Lighthouse",
   "other_names": [
-    "phare de Victoria Beach"
+    "phare de Victoria Beach",
+    "Victoria Beach"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,24 +17,24 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
       "built": 1901,
       "height_m": 7.9,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": 1901,
-    "deactivated": null,
+    "deactivated": 2015,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 18.3,
@@ -56,22 +57,23 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN511",
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "A203",
+    "nga": "10920",
+    "admiralty": "H3894"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1993"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -97,6 +99,12 @@
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -143,6 +151,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2511040484",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14852",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1337",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,6 +192,33 @@
       "part": "wikidata:Q28376385",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14852",
+      "part": "wikidata:Q28376385",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1337",
+      "part": "wikidata:Q28376385",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:victoria-beach",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -3,7 +3,9 @@
   "name": "Goderich Main Lighthouse",
   "other_names": [
     "Goderich Lighthouse",
-    "Port of Goderich Lighthouse"
+    "Port of Goderich Lighthouse",
+    "Goderich",
+    "Goderich Main"
   ],
   "country": "CA",
   "region": "ON",
@@ -40,7 +42,7 @@
     "focal_height_m": 42.7,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -55,8 +57,8 @@
     "ccg_list_number": "I777",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Goderich",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -66,8 +68,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -122,6 +124,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5092393507",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1043",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Huron",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw768-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,7 +151,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -148,6 +164,30 @@
       "part": "wikidata:Q33127566",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1043",
+      "part": "wikidata:Q33127566",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I777",
+      "part": "wikidata:Q33127566",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:goderich-main",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

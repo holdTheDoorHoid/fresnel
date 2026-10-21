@@ -3,7 +3,8 @@
   "name": "Point Abino Light Tower",
   "other_names": [
     "phare de la pointe Abino",
-    "Point Abino Lighthouse"
+    "Point Abino Lighthouse",
+    "Point Abino"
   ],
   "country": "CA",
   "region": "ON",
@@ -65,10 +66,10 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Fort Erie",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": "OpenStreetMap tags the structure access=private."
   },
   "staffing": {
@@ -76,13 +77,13 @@
     "as_of": "1988"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -161,6 +162,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1411510668",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1089",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -187,6 +198,22 @@
       "part": "wikidata:Q23643153",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1089",
+      "part": "wikidata:Q23643153",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:point-abino",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

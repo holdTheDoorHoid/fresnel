@@ -1,7 +1,11 @@
 {
   "id": "ca-nb-saint-john-harbour",
   "name": "Saint John Harbour",
-  "other_names": [],
+  "other_names": [
+    "Saint John Coast Guard Base",
+    "Grindstone Island lantern and lens",
+    "Saint John Harbour Range Front"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -43,13 +47,14 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "A100.5",
+    "nga": "11104",
+    "admiralty": "H4089"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Saint John",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +62,23 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1985,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,6 +92,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/756753716",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1129",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,9 +122,50 @@
       "key": "osm:way/756753716",
       "part": "osm:node/1721124533",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1129",
+      "part": "osm:node/1721124533",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:saint-john-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:saint-john-harbour-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

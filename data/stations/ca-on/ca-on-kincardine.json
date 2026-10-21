@@ -2,14 +2,16 @@
   "id": "ca-on-kincardine",
   "name": "Kincardine Lighthouse",
   "other_names": [
-    "phare de Kincardine"
+    "phare de Kincardine",
+    "Kincardine",
+    "Kincardine Range Rear"
   ],
   "country": "CA",
   "region": "ON",
   "county": "Bruce County",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 44.1771,
     "lon": -81.6381,
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
-    "focal_height_m": 24.0,
+    "focal_height_m": 24.4,
     "range_nm": 22.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -64,10 +66,10 @@
     "ccg_list_number": "I784",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of Kincardine",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -75,16 +77,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1881,
       "event": "first_lit",
@@ -152,6 +160,21 @@
       "label": "Website",
       "url": "https://www.kyc.ca/",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1046",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lake Huron",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw768-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -163,7 +186,6 @@
         "aton",
         "county",
         "events",
-        "kind",
         "light",
         "name",
         "photos",
@@ -178,6 +200,32 @@
       "part": "wikidata:Q5670249",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1046",
+      "part": "wikidata:Q5670249",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I784",
+      "part": "wikidata:Q5670249",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:kincardine-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "kind",
+        "ownership",
+        "visit"
       ]
     }
   ],

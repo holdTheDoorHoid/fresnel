@@ -1,36 +1,58 @@
 {
   "id": "ca-nb-inch-arran-point",
-  "name": "Inch Arran Point Lighthouse",
+  "name": "Inch Arran Point Range Lights",
   "other_names": [
+    "Inch Arran Point Lighthouse",
     "phare Inch Arran",
     "Inch Arran Point Range Front",
-    "Phare Inch Arran"
+    "Phare Inch Arran",
+    "Inch Arran Point Front Range Lighthouse",
+    "Bon Ami Point",
+    "Inch Arran Point Range Rear",
+    "Inch Arran Point front range light",
+    "Inch Arran Point rear range light",
+    "Inch Arran"
   ],
   "country": "CA",
   "region": "NB",
   "county": "Restigouche County",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
-    "lat": 48.06092,
-    "lon": -66.35129,
+    "lat": 48.060944,
+    "lon": -66.350972,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Inch Arran Point Lighthouse",
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1871,
+      "height_m": 11.0,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl"
+    },
+    {
+      "role": "rear_range",
+      "name": "Inch Arran Point Range Rear",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 48.061889,
+        "lon": -66.355639
+      }
     }
   ],
   "light": {
@@ -38,10 +60,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 14.0,
-    "range_nm": 11.0,
+    "focal_height_m": 13.7,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -68,11 +90,12 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN246",
-    "ccg_list_number": null,
-    "nga": "110-7164"
+    "ccg_list_number": "A1343",
+    "nga": "110-7164",
+    "admiralty": "H1616"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -82,8 +105,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -92,6 +115,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1991,
       "event": "heritage_designated",
@@ -133,6 +162,31 @@
       "label": "ARLHS World List of Lights CAN246",
       "url": "https://wlol.arlhs.com/lighthouse/CAN246.html",
       "kind": "register"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15293",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1122",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1123",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,18 +198,74 @@
         "aton",
         "county",
         "events",
-        "kind",
-        "light",
-        "location",
-        "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15293",
+      "part": "wikidata:Q29001023",
+      "fields": [
+        "kind",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1122",
+      "part": "wikidata:Q29001023",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1123",
+      "part": "lighthousefriends:1123",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1343",
+      "part": "wikidata:Q29001023",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1343.1",
+      "part": "lighthousefriends:1123",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:inch-arran-point-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:inch-arran-point-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

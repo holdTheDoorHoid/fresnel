@@ -38,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 12s",
-    "focal_height_m": 20.0,
+    "focal_height_m": 20.1,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -64,12 +64,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN524",
     "ccg_list_number": "A1029",
-    "nga": "110-8360"
+    "nga": "110-8360",
+    "admiralty": "H1062"
   },
-  "agency": null,
+  "agency": "West Point Development Corporation",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -77,15 +78,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks overnight lodging here (an inn, bed and breakfast or rental). Check with the operator before planning a stay.",
+    "checked": null
+  },
   "events": [
     {
       "year": 1876,
@@ -152,6 +160,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1806823788",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=946",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,8 +199,34 @@
       "key": "osm:node/1806823788",
       "part": "wikidata:Q30575123",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:946",
+      "part": "wikidata:Q30575123",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1029",
+      "part": "wikidata:Q30575123",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:west-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "visit"
       ]
     }
   ],

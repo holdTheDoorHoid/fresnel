@@ -26,7 +26,7 @@
       "name": null,
       "type": "concrete",
       "material": "concrete",
-      "built": null,
+      "built": 1910,
       "height_m": 30.0,
       "status": "standing",
       "note": null,
@@ -38,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 15s",
-    "focal_height_m": 37.0,
+    "focal_height_m": 37.5,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -63,25 +63,45 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN173",
-    "ccg_list_number": null,
-    "nga": "111-14084"
+    "ccg_list_number": "P114",
+    "nga": "111-14084",
+    "admiralty": "G5224"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2023",
+    "basis": "Named in the Coast Guard's April 2010 list, and a newer source speaks of this station.",
+    "check": false,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      },
+      {
+        "label": "Impact Assessment Agency of Canada, Estevan Point Lightstation Renewable Power Generation System (project 84166, 2022-23): 'staffed by two lightkeepers 24/7'",
+        "url": "https://iaac-aeic.gc.ca/050/evaluations/proj/84166",
+        "date": "2023-11-08"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -92,6 +112,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1991,
@@ -154,6 +180,41 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Estevan_Point_lighthouse",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14515",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1197",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - West Coast, Vancouver Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac66-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Impact Assessment Agency of Canada, Estevan Point Lightstation Renewable Power Generation System (project 84166, 2022-23): 'staffed by two lightkeepers 24/7'",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/proj/84166",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -182,6 +243,49 @@
       "part": "wikidata:Q2856097",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14515",
+      "part": "wikidata:Q2856097",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1197",
+      "part": "wikidata:Q2856097",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P114",
+      "part": "wikidata:Q2856097",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:estevan-point",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-estevan-point",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
       ]
     }
   ],

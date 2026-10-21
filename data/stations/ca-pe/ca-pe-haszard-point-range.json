@@ -5,7 +5,10 @@
     "Haszard Point Range Rear Light",
     "phare arrière d'Haszard Point",
     "Haszard Point Range Front",
-    "phare avant d'Haszard Point"
+    "phare avant d'Haszard Point",
+    "Haszard Point Range Rear",
+    "Haszard Point front range light",
+    "Haszard Point rear range light"
   ],
   "country": "CA",
   "region": "PE",
@@ -53,23 +56,24 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F Y",
-    "focal_height_m": 46.3,
-    "range_nm": 13.0,
+    "characteristic": "F W",
+    "focal_height_m": 18.3,
+    "range_nm": 15.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN129",
     "ccg_list_number": "A992",
-    "nga": "110-8232"
+    "nga": "110-8232",
+    "admiralty": "H1006"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -77,13 +81,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
@@ -161,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/923793731",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=963",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=964",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,7 +196,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "photos",
         "region",
         "structures"
@@ -200,9 +223,77 @@
       "key": "osm:way/923793731",
       "part": "wikidata:Q46996667",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:963",
+      "part": "wikidata:Q5680754",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:964",
+      "part": "wikidata:Q46996667",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A991",
+      "part": "wikidata:Q5680754",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A992",
+      "part": "wikidata:Q46996667",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:haszard-point-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:haszard-point-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "F W"
+        },
+        {
+          "source": "wikidata",
+          "value": "F Y"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

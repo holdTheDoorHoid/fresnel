@@ -3,7 +3,8 @@
   "name": "Cape Enrage Lighthouse",
   "other_names": [
     "phare de Cap Enragé",
-    "Cape Enrage"
+    "Cape Enrage",
+    "Cape Enragé"
   ],
   "country": "CA",
   "region": "NB",
@@ -33,26 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": 1840,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 38.0,
-    "range_nm": 11.0,
+    "focal_height_m": 40.7,
+    "range_nm": 10.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN096",
     "ccg_list_number": "A157",
-    "nga": "110-11064"
+    "nga": "110-11064",
+    "admiralty": "H4060"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -60,13 +62,13 @@
     "as_of": "1980"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -75,6 +77,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1840,
@@ -87,6 +95,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1870,
@@ -150,6 +164,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1375082132",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1379",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - East",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl145-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,7 +190,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -183,8 +211,37 @@
       "key": "osm:way/1375082132",
       "part": "wikidata:Q106241238",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1379",
+      "part": "wikidata:Q106241238",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A157",
+      "part": "wikidata:Q106241238",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:cape-enrag",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -193,7 +250,15 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
           "value": "active"
         },
         {
@@ -211,7 +276,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Fl G 6s"
         },
         {
@@ -235,9 +300,27 @@
         {
           "source": "osm",
           "value": 38.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 40.7
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1840
+        },
+        {
+          "source": "rowlett",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

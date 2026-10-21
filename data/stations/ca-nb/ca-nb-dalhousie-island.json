@@ -1,7 +1,11 @@
 {
   "id": "ca-nb-dalhousie-island",
   "name": "Dalhousie Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Douglas Island",
+    "Dalhousie (Douglas) Island",
+    "Dalhousie Island"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
@@ -9,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 48.072322,
-    "lon": -66.364281,
+    "lat": 48.072278,
+    "lon": -66.364306,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "active",
-  "status_note": null,
+  "status": "lost",
+  "status_note": "The historic structure is gone, but the Coast Guard's List of Lights still shows a light here (list no. A1344), a modern aid that took its place.",
   "structures": [
     {
       "role": "tower",
@@ -24,32 +28,33 @@
       "material": null,
       "built": 1974,
       "height_m": 19.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
+    "characteristic": "Iso G 4s",
     "focal_height_m": 21.0,
-    "range_nm": 15.0,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN909",
     "ccg_list_number": "A1344",
-    "nga": "110-7152"
+    "nga": "110-7152",
+    "admiralty": "H1620"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +62,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1974,
       "event": "built",
@@ -97,6 +108,21 @@
       "label": "ARLHS World List of Lights CAN909",
       "url": "https://wlol.arlhs.com/lighthouse/CAN909.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2157",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gaspé - Chaleur Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -110,17 +136,72 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2157",
+      "part": "wikidata:Q106245350",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1344",
+      "part": "wikidata:Q106245350",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:dalhousie-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Iso G 4s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 5s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1974
+        },
+        {
+          "source": "rowlett",
+          "value": 1886
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

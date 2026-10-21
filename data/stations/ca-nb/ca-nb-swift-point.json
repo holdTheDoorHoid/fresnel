@@ -3,7 +3,10 @@
   "name": "Swift Point Light",
   "other_names": [
     "Green Head Lighthouse",
-    "Swift Point Lighthouse"
+    "Swift Point Lighthouse",
+    "Swift Point (Green Head)",
+    "Swift Point",
+    "Green Head"
   ],
   "country": "CA",
   "region": "NB",
@@ -33,21 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 4s",
     "focal_height_m": 28.1,
-    "range_nm": null,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN492",
     "ccg_list_number": "A116",
-    "nga": "110-11132"
+    "nga": "110-11132",
+    "admiralty": "H4090"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
@@ -60,8 +64,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +79,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -115,6 +131,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/206099207",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1146",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Saint John River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1145-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,7 +159,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "photos",
@@ -142,6 +172,32 @@
       "part": "wikidata:Q125916086",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1146",
+      "part": "wikidata:Q125916086",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A116",
+      "part": "wikidata:Q125916086",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:swift-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
