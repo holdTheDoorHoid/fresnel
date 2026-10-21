@@ -427,6 +427,8 @@ class Rec:
         for reg in self.raw.get("registers") or []:
             if reg.get("register") == "NRHP" and reg.get("number"):
                 keys.append("nrhp:" + str(reg["number"]).strip())
+        for x in self.extra.get("xref") or []:     # another source's own id for the same station (lhf:765)
+            keys.append("xref:" + str(x))
         aton = self.raw.get("aton") or {}
         if aton.get("arlhs"):
             keys.append("arlhs:" + re.sub(r"[^A-Z0-9]", "", str(aton["arlhs"]).upper()))
@@ -1009,13 +1011,17 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
                 {"source": n.split(" says ")[0], "value": n.split(" says ")[1]} for n in notes],
                 "note": "A source says this structure is gone, but OpenStreetMap maps it today."})
     kinds = [s for s, _ in states]
+    # A source with no position settles "gone" only when nothing else says whether a tower stands.
+    unplaced = [r.status for r in st.station_recs if not r.has_point and r.status in ("active", "inactive", "lost", "ruins")]
+    if kinds and all(k == "unknown" for k in kinds) and unplaced and all(u in ("lost", "ruins") for u in unplaced):
+        return ("ruins" if "ruins" in unplaced else "lost"), None, conflicts
     if kinds and all(k == "lost" for k in kinds):
         return "lost", None, conflicts
     if kinds and all(k in ("lost", "ruins") for k in kinds):
         return "ruins", None, conflicts
     standing = any(k == "standing" for k in kinds)
     light_claims = sorted(((LIGHT_RANK[r.status_claim], source_rank("charted", r.source), r.key, r)
-                           for r in recs if r.status_claim in LIGHT_RANK
+                           for r in recs if r.status_claim in LIGHT_RANK and r.has_point
                            and (r.status_claim != "inactive_if_standing" or standing)), key=lambda x: x[:3])
     claimed = {c[3].status_claim.replace("_weak", "").replace("_if_standing", "") for c in light_claims}
     if {"active", "inactive"} <= claimed:
@@ -1036,6 +1042,9 @@ def station_status(st: Station) -> tuple[str, str | None, list[dict]]:
         when = f" ({end})" if isinstance(end, int) else ""
         return "unknown", (f"Wikidata gives an end date{when} without saying whether the light was discontinued or the "
                            "tower taken down, and no current map shows a structure here. It may be gone."), conflicts
+    # No other source says: a source with no position (Rowlett's directory) may, when all its entries agree.
+    if len(set(unplaced)) == 1 and unplaced[0] in ("active", "inactive"):
+        return unplaced[0], "Only a source with no position (Rowlett's Lighthouse Directory) gives this status.", conflicts
     return "unknown", None, conflicts
 
 
@@ -1287,16 +1296,27 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
             events.append({"year": e["year"], "event": e["event"], "note": e.get("note"), "from": e.get("from") or r.source})
             use(r, "events")
     events.sort(key=lambda e: (e["year"], EVENT_ORDER.index(e["event"]) if e["event"] in EVENT_ORDER else 99, e["event"]))
-    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit")})
+    built_years = sorted({e["year"] for e in events if e["event"] in ("built", "first_lit") and e.get("from") != "rowlett"})
     if len(built_years) > 1 and built_years[-1] - built_years[0] >= 2 and len(parts) <= 1:
         firsts = {}
-        for r in main_recs:
+        for r in (x for x in main_recs if x.has_point):
             fl = r.light.get("first_lit") or r.structure.get("built")
             if isinstance(fl, int):
                 firsts.setdefault(r.source, fl)
         if len(set(firsts.values())) > 1:
             conflicts.append({"field": "first_year", "values": [{"source": s, "value": y} for s, y in sorted(firsts.items(), key=lambda x: source_rank("light_dates", x[0]))],
                               "note": "Sources give different first years (often the first tower against the present one)."})
+
+    if light is not None:
+        ends = {}
+        for r in sorted(main_recs, key=lambda r: (source_rank("light_dates", r.source), r.key)):
+            y = r.light.get("deactivated")
+            if isinstance(y, int) and r.source not in ends:
+                ends[r.source] = y
+        if len(ends) > 1 and max(ends.values()) - min(ends.values()) >= 2:
+            conflicts.append({"field": "light.deactivated", "values": [{"source": s_, "value": y} for s_, y in ends.items()],
+                              "note": "Sources give different years for the light going out (a retirement against a later removal, "
+                                      "or the first against the last of several towers)."})
 
     automated = [e for e in events if e["event"] == "automated"]
     staffing = {"status": "automated", "as_of": str(automated[-1]["year"])} if automated and status in ("active", "inactive") else {"status": "unknown", "as_of": None}
@@ -1679,6 +1699,7 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
             "wikidata_and_osm_by_tag": tag_confirmed,
             "conflicts": dict(sorted(conflicts.items())),
             "not_shown": dict(sorted(Counter(u["reason"].split(" (")[0] for u in unshown).items())),
+            "unmatched_not_listed": dict(sorted(m.quiet_unmatched.items())),
         },
         "hidden": [{"id": r["id"], "name": r["name"], "reason": r["hidden_reason"]} for r in sorted(hidden, key=lambda r: r["id"])],
         "range_lights": ranges,

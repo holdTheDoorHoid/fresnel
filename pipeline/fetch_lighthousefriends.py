@@ -190,7 +190,7 @@ def build_record(state: str, light: dict, flags: set[str], destroyed: bool) -> d
     region = rx.state_of(light["place"]) or state
     status = "lost" if destroyed else ("replica" if nm["replica"] else None)
     status_raw = "destroyed" if destroyed else ("replica" if nm["replica"] else None)
-    extra: dict = {"lhf_id": lid, "place": light["place"], "flags": sorted(flags)}
+    extra: dict = {"lhf_id": lid, "xref": [f"lhf:{lid}"], "place": light["place"], "flags": sorted(flags)}
     if nm["hull"]:
         extra["hull"] = nm["hull"]
     if nm["minor"]:
