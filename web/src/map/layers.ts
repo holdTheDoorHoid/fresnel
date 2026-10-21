@@ -32,7 +32,7 @@ const L_SELECTED = 'fr-selected-ring';
 const ICON_PX = 26;
 
 /** The marker image of a point: its status's glyph on its kind's silhouette (lib/icons.ts). */
-const ICON_EXPR: ExpressionSpecification = [
+export const ICON_EXPR: ExpressionSpecification = [
   'concat',
   'fr-',
   ['match', ['get', 's'], 'active', 'lit', 'inactive', 'dark', 'ruins', 'broken', 'lost', 'ghost', 'relocated', 'moved', 'replica', 'copy', 'unknown'],
@@ -41,7 +41,7 @@ const ICON_EXPR: ExpressionSpecification = [
 ];
 
 /** Lost lights drawn under everything, active lights on top (GLYPH_ORDER). */
-const SORT_EXPR: ExpressionSpecification = [
+export const SORT_EXPR: ExpressionSpecification = [
   'match',
   ['get', 's'],
   'active', GLYPH_ORDER.lit,
