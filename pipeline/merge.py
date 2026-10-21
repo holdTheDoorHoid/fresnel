@@ -774,7 +774,17 @@ class Matcher:
     # -- joins a human has decided (record_joins.py) and joins on a shared identifier ---------
 
     def pinned_station(self, target: str) -> Station | None:
-        """The station a RECORD_JOINS target names: a station id, or the key of a record it holds."""
+        """The station a RECORD_JOINS target names: a station id, the key of a record it holds, or "new:<id>", a
+        station of that id which this pin starts (two stations from one: Old and New Point Loma); once it is a file
+        the id finds it."""
+        if target.startswith("new:"):
+            sid = target[4:]
+            st = self.by_id.get(sid)
+            if st is None:
+                st = self.new_station()
+                st.id = sid
+                self.by_id[sid] = st
+            return st
         st = self.by_id.get(target) or self.station_of_key.get(target)
         if st is None and target in self.memory:
             st = self.memory[target][0]
@@ -876,7 +886,7 @@ class Matcher:
                     self.attach(rec, st, "override")
                     self.overrides.append({"key": rec.key, "to": pin})
                     continue
-                if ":" in pin:           # the key of a record of a source matched later: wait for it
+                if ":" in pin and not pin.startswith("new:"):   # the key of a record of a source matched later: wait for it
                     self.deferred.append((rec, pin))
                     continue
             if rec.key in self.memory:

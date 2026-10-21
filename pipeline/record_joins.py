@@ -29,6 +29,7 @@ from __future__ import annotations
 
 
 
+
 RECORD_JOINS: dict[str, str] = {}
 NO_POSITION: set[str] = set()
 KEEP_APART_PAIRS: set[frozenset] = set()
@@ -354,6 +355,27 @@ _join('us-nj-finns-point-range',
       'uslhs:3379',
       'uslhs:8778')
 
+# RULING (DESIGN 3.2): Old Point Loma (1855, on the ridge, now a museum in Cabrillo National Monument) and
+# New Point Loma (1891, at the shore) are two stations, each with its own established name, 0.8 km apart.
+# The published station keeps the active light; the ridge tower's records start the Old Point Loma station,
+# and the two are linked as successive lights. Nothing is retired.
+_join('new:us-ca-old-point-loma', 'wikidata:Q7084751')
+
+# Old Point Loma Lighthouse, OpenStreetMap's way for the 1855 tower.
+_join('new:us-ca-old-point-loma', 'osm:way/90687227')
+
+# NRHP 74000350 is the Old Point Loma Lighthouse.
+_join('new:us-ca-old-point-loma', 'nrhp:74000350')
+
+# LighthouseFriends's second 'Point Loma' entry, on the ridge.
+_join('new:us-ca-old-point-loma', 'lighthousefriends:29')
+
+# Rowlett's first Point Loma entry: 1855, inactive since 1891.
+_join('new:us-ca-old-point-loma', 'rowlett:ca2:point-loma-1')
+
+# The Passport Club keeps separate stamps for 'Point Loma (Old)' and '(New)'.
+_join('new:us-ca-old-point-loma', 'uslhs_passport:stamp:ca:point-loma-old')
+
 # LighthouseFriends's 'Ship Shoal' (28.915 N, 91.071 W) and the Light List's 'Ship Shoal Obstruction Lights'
 # 4-730 are Ship Shoal Light, the offshore tower of 1859-1965. Wikidata's item for it (Q7497938) carries
 # South Pass Range's coordinates, which is why the first build put it 80 km from the shoal.
@@ -552,6 +574,13 @@ _not_duplicates('us-va-stingray-point', 'us-va-stingray-point-replica')
 _not_duplicates('us-md-blakistone-island', 'us-md-blackistone-island-replica')
 
 # ---- Names ----
+# The ridge tower of 1855 (Cabrillo National Monument).
+NAME_PICKS['us-ca-old-point-loma'] = 'Old Point Loma Lighthouse'
+
+# Twin lights, one station (DESIGN 3.2): the east tower (1874, active) and the west tower (1874, retired
+# 1924); Wikidata's item for the west tower won the name.
+NAME_PICKS['us-me-cape-elizabeth-light-western'] = 'Cape Elizabeth Light'
+
 # One station, two towers: the name the NRHP, Wikidata and the state park use. The id keeps the first
 # build's 'north'.
 NAME_PICKS['us-nj-navesink-north'] = 'Navesink Twin Lights'
@@ -766,6 +795,9 @@ REPLICA_OF['us-ct-mystic-seaport'] = 'us-ma-brant-point'
 REPLICA_OF['us-ca-trinidad-memorial'] = 'us-ca-trinidad-head'
 
 # ---- Successive lights that are two stations (preceded_by / succeeded_by) ----
+# RULING (DESIGN 3.2): Old Point Loma (1855-1891) and New Point Loma (1891-) are two stations, linked.
+SUCCESSION.append(('us-ca-old-point-loma', 'us-ca-point-loma'))
+
 # Fort Tompkins Light (1828, relit 1873) and Fort Wadsworth Light (1903) stand within 13 m on Staten Island
 # under different names; the fort changed its name. Linked, not joined: the sources do not say the first
 # tower was replaced by the second.
