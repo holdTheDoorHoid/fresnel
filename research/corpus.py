@@ -896,7 +896,10 @@ def cmd_grep(a):
 # --------------------------------------------------------------------------------------------------
 
 def inside_search(identifier, phrase):
-    """IA's in-item search -> parsed JSON (cached on disk)."""
+    """IA's in-item search for the exact phrase -> parsed JSON (cached on disk). Without quotes the search matches
+    any of the words."""
+    if '"' not in phrase:
+        phrase = '"%s"' % phrase.strip()
     key = hashlib.sha1(("%s|%s" % (identifier, phrase)).encode()).hexdigest()
     path = os.path.join(corpus_dir(), "_inside", key + ".json")
     if os.path.exists(path):
@@ -929,7 +932,7 @@ def parse_inside(d):
 
 
 def ia_page_url(identifier, leaf, phrase):
-    return "%s/details/%s/page/n%s/mode/2up?q=%s" % (IA, identifier, leaf, urllib.parse.quote_plus(phrase))
+    return "%s/details/%s/page/n%s/mode/2up?q=%s" % (IA, identifier, leaf, urllib.parse.quote_plus(phrase.strip('"')))
 
 
 def cmd_page(a):
