@@ -234,8 +234,8 @@ order, and stop when you have an honest story; a thin station needs only the fir
    volume's range. `corpus.py status` shows what the corpus holds and what is missing.
    **Pages:** the plain text has none, but for most Internet Archive volumes the tool reads archive.org's OCR
    page index, so each grep line carries `[scan p.229, printed p.57]`. *Scan p.* is the image number in the Internet
-   Archive viewer (the URL tail `/page/n229/`); *printed p.* is the number on the page, taken from the scan data when
-   the archive has it and otherwise guessed from the OCR, in which case it is marked `?`: look at the page image
+   Archive viewer (the URL tail `/page/n229/`); *printed p.* is the number on the page, read from the page's OCR head and
+   checked against the archive's scan data; it is marked `?` unless the two agree: look at the page image
    (open the URL `corpus.py page` prints) before you write "p. 57". The Bulletin's `p.N` is the PDF page.
    `corpus.py page <series> <year> "<phrase>"` lists every page holding a phrase, with a URL for each (a bound
    volume lists the pages of all its reports; use the printed page and the report's year to pick). Volumes without

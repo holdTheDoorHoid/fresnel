@@ -721,19 +721,32 @@ class PageMap:
         s, e = self.index[leaf][0], self.index[leaf][1]
         return self.text[s:e]
 
-    def folio(self, leaf):
-        """(printed page, certain): from the scan data when it has one, else a guess from a bare number at the head or
-        foot of the page's OCR text (certain=False)."""
-        if leaf in self.printed:
-            return self.printed[leaf], True
+    def _ocr_folio(self, leaf):
+        """A page number read from the head of the page's OCR text ("... BOARD. 43" or "42 REPORT OF ..."), or from a
+        lone number on the last line."""
         if not self.ok:
-            return None, False
+            return None
         lines = [l.strip() for l in self.page_text(leaf).splitlines() if l.strip()]
-        for cand in (lines[:2] + lines[-2:]):
+        for cand in lines[:2]:
             m = (re.fullmatch(r"(\d{1,4})\.?", cand) or re.match(r"^(\d{1,4})\s+\S", cand)
                  or re.search(r"\S\s+(\d{1,4})\.?$", cand))
             if m and int(m.group(1)) < 1500:
-                return m.group(1), False
+                return m.group(1)
+        if lines and re.fullmatch(r"\d{1,4}\.?", lines[-1]) and int(lines[-1].rstrip(".")) < 1500:
+            return lines[-1].rstrip(".")
+        return None
+
+    def folio(self, leaf):
+        """(printed page, confirmed): the number in the archive's scan data and the number read from the page's OCR must
+        agree to be confirmed; when they differ the OCR's (what is printed on the page) is returned, unconfirmed
+        (the scan data of Google-scanned volumes is sometimes a page out)."""
+        sd, ocr = self.printed.get(leaf), self._ocr_folio(leaf)
+        if sd and ocr and sd == ocr:
+            return sd, True
+        if ocr:
+            return ocr, False
+        if sd:
+            return sd, False
         return None, False
 
 
@@ -1231,8 +1244,8 @@ def cmd_page(a):
                 print("  %s | %s" % (page_label(v, leaf), snip))
                 print("    %s" % ia_page_url(ident, leaf, a.phrase))
             if found:
-                print("  (scan p. = the image number in the Internet Archive viewer; printed p. is the number on the"
-                      " page: from the scan data when marked without '?', else guessed from the OCR; check the image)")
+                print("  (scan p. = the image number in the Internet Archive viewer; printed p. is read from the page's OCR head,"
+                      " and '?' means the archive's scan data does not confirm it: check the image before citing it)")
             continue
         try:
             d = inside_search(ident, a.phrase)

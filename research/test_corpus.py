@@ -443,8 +443,10 @@ class PageData(unittest.TestCase):
         self.assertTrue(pm.ok)
         self.assertEqual(pm.leaf_at(self.text.index("Bodega")), 1)
         self.assertEqual(pm.leaf_at(self.text.index("Third")), 3)  # the empty leaf 2 owns no characters
-        self.assertEqual(pm.folio(0), ("12", True))  # from the scan data
-        self.assertEqual(pm.folio(1), ("13", False))  # guessed from the page head
+        self.assertEqual(pm.folio(0), ("12", True))  # scan data and the page's own head agree
+        self.assertEqual(pm.folio(1), ("13", False))  # read from the page head only
+        pm.printed[1] = "12"  # the scan data is a page out: the page's own number wins, unconfirmed
+        self.assertEqual(pm.folio(1), ("13", False))
         self.assertEqual(pm.folio(3), (None, False))
 
     def test_the_kth_occurrence_in_one_text_is_the_kth_in_the_other(self):
