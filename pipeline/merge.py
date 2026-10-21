@@ -193,6 +193,7 @@ def clean_name(name: str | None) -> str | None:
 def name_tokens(s: str) -> list[str]:
     s = ascii_fold(s).lower()
     s = re.sub(r"\bu\.\s?s\.", " us ", s)
+    s = re.sub(r"(\w)'s\b", r"\1s", s)   # Owl's Head and Owls Head are one name
     s = s.replace("'", " ")
     s = re.sub(r"[^a-z0-9]+", " ", s)
     return [ABBREVIATIONS.get(t, t) for t in s.split()]
@@ -1080,7 +1081,10 @@ def visit_stay_access(recs: list["Rec"], visit: dict, stay: dict | None, access_
             use(r, "visit")
     if notes:
         visit["note"] = " ".join(notes)
-    got, s_rec = pick(recs, "stay", lambda r: r.stay)
+    # Among the Society's entries for one station a place to sleep outranks a volunteer program.
+    stay_order = {"inn": 0, "rental": 1, "hostel": 2, "keeper_program": 3}
+    cands = sorted((r for r in recs if r.stay), key=lambda r: (source_rank("stay", r.source), stay_order.get(r.stay.get("type"), 9), r.key))
+    got, s_rec = (cands[0].stay, cands[0]) if cands else (None, None)
     if got:
         stay = dict(got)
         use(s_rec, "stay")
