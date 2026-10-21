@@ -382,6 +382,8 @@ def apply(rec: dict, recs) -> dict:
     """Fill staffing, access, visit and stay of a canonical record from the Canadian sources.
     Returns what it did (for the report)."""
     did: dict = {}
+    if rec.get("country") != "CA":
+        return did
     by_source = defaultdict(list)
     for r in recs:
         by_source[r.source].append(r)
