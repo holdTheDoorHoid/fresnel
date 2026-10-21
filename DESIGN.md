@@ -184,6 +184,30 @@ alphabetically); give it its place in `merge.SOURCE_ORDER` and `merge.PRECEDENCE
 outrank them for some field (NOAA ENC for the charted light, the USCG and CCG lists for the light
 list numbers, a staffed-lightstation list for `staffing`).
 
+### 2.3 Canadian sources (2026-10-21, branch `agent/sources-ca`)
+
+Six more extracts, each from its own fetcher in `pipeline/` with tests (`pipeline/test_fetch_*.py`). The
+fetchers share `pipeline/_ca_common.py`: robots.txt is read and obeyed for every host (a host that
+names Anthropic's crawlers is skipped, `Skipped`; a disallowed path raises `Blocked`), requests keep one
+clock per host **across processes** (the lock files `data/raw/_locks/web-<host>`, the same ones
+`research/fetch_text.py` uses, so two agents on one site still send one request every 2 s), and the
+survey's cached pages (`data/raw/survey/canada/`) are read in place of fetching again. The extracts are
+committed; none runs in CI. Order is the survey's; each source is a row.
+
+| Source id | Fetcher | Licence and use | What it supplies |
+|---|---|---|---|
+| `parks_canada_hl` | `fetch_parks_canada_hl.py` | Open Government Licence - Canada (the Directory of Federal Heritage Designations CSV, open.canada.ca, 20 s crawl delay); Parks Canada's page: facts only | 115 designated heritage lighthouses (114 with a position from the page's map markup): designation date (a `heritage_designated` event), Heritage Lighthouse register entry and link to the statement of significance, custodian, build year, height, material. `extra.standing`: the Act protects standing lighthouses only |
+| `ccg_list_of_lights` | `fetch_ccg_list_of_lights.py` | (c) His Majesty the King in Right of Canada, Canadian Coast Guard, 2026; no open licence: facts only, credit and link | The List of Lights, Buoys and Fog Signals (114 HTML sections, 5 volumes): characteristic, focal height, range, fog signal, structure height, list number (letter of the volume + number: `N1`, `A456`, `I563`, `P435`, `T50`) and Admiralty number, position to 0.1". Of 4,482 lit fixed aids only the 60 clear lighthouses (light stations; major lights), 7 the Lighthouse Directory lists with a lantern and no Lighthouse Friends page, and the 844 within 150 m of a station in the other extracts are kept (911 records); buoys and the 3,571 small beacons with no station near are counted in the header and dropped. Only a clear lighthouse may start a station |
+| `lighthousefriends` | `fetch_lighthousefriends_ca.py` (`fetch_canada()`; the US fetcher shares the source id and the file: the writer keeps records of the other country) | All rights reserved: facts only (names, positions, flags), credit and link | The eight provincial index pages: 1,148 lights (744 standing, 404 destroyed), each with its GPS position, community and the site's visit flags (boat required, private, open for climbing, interior open, lodging, keeper programme). No station page is read; the URL on every record is the citation |
+| `rowlett` | `fetch_rowlett.py` (same arrangement as above for the file) | (c) 2026 Russ Rowlett and UNC: facts only | 39 regional pages, 1,278 entries: years (tower, station established), status (active, inactive, lost `#`, replica), focal plane, structure height and material, owner, access wording ("Site open, tower closed", "Accessible only by boat"), and the numbers that join the others (ARLHS, CCG list, Admiralty, NGA, the Lighthouse Friends id in the anchor). No positions: a record joins a station by an identifier or a unique name |
+| `ca_staffed_lightstations` | `fetch_ca_staffed_lightstations.py` (curated) | Facts from Senate, Coast Guard and DFO publications and news reports, each linked on the record | The 51 lightstations the sources name as staffed (BC 27, NL 23, Machias Seal Island) with `staffing`, the access label and note, and evidence. 49 staffed; Carmanah Point and Pachena Point `automated` since 31 July 2024 (the newer source wins). 44 stations rest only on the Coast Guard's April 2010 list (`check`) |
+| `ca_lightships_lifesaving` | `fetch_ca_lightships_lifesaving.py` (curated) | Facts compiled from open and public-domain sources, each linked | Canadian lightship stations and life-saving stations the sources name: Lower Traverse, Lurcher Shoal, Red Island Reef, Manicouagan Shoal; the lightship years of White Island Reef and Prince Shoal; the Sable Island Humane Establishment; the federal lifeboat stations of 1882-89. Positions only where a source gives one (3 of 21); the others are written without one and are the leads list |
+
+Findings from the build: the Directory has no coordinates and the CCG list has no names that match the
+other sources, so **identifiers do the joining** (3.9). Wikidata's coordinates are sometimes kilometres out
+(Cape St. James 18.8 km, Sisters Islets 10.3 km): the same light then appeared twice, and curation merges
+them. There is no Sambro lightship (Sambro is a lighthouse).
+
 ---
 
 ## 3. Data model
@@ -206,6 +230,7 @@ data/
   photos_manifest.json      mirror output (as in Firefinder); files served from fresnel-photos
   raw/                      crawl cache, git-ignored
   vocab.json                controlled vocabularies (3.4)
+  curation_ca.json          Canada's explicit review decisions, each with a reason (3.9)
   merge_report.json         pipeline/merge.py's review file (3.9); committed
 ```
 
@@ -308,8 +333,18 @@ As built (2026-10-21), the merge also writes:
 - `related[]`: `{id, relation, name}`, relations from `vocab.relation`: `preceded_by` /
   `succeeded_by` (Wikidata's replaces / replaced by between two stations), and
   `life_saving_station_nearby` / `light_station_nearby` (within 1.5 km, both ways).
-- `staffing`: `automated` with `as_of` when a source dates the automation; otherwise `unknown`
-  (the staffed Canadian lightstations need their own list: a later source, 2.2).
+- `staffing`: `automated` with `as_of` when a source dates the automation; otherwise `unknown`. A
+  Canadian lightstation on the staffed list (2.3) is `staffed` with `as_of` the year of its newest
+  evidence, plus `basis` (what it rests on), `check` (true when only the April 2010 list names it: a
+  research agent must confirm it before a page says "staffed" now) and `evidence` (label, url, date). Its
+  `access` is `restricted` with the note "Staffed lightstation: the keepers' home and workplace. Visit
+  only where the station welcomes visitors, and never land uninvited."; Carmanah Point and Pachena Point
+  (`automated`, 2024) carry the Coast Guard's safety note instead.
+- `aton.admiralty` (Canada): the Admiralty number (`H3680`), from the Coast Guard list, the Directory or
+  an OpenStreetMap `seamark:light:reference`. `visit` and `stay` take Lighthouse Friends' flags (boat only,
+  climbable, lodging, keeper programme) and the Directory's wording; `access.level` is `private` for a
+  private flag, `closed` for "site closed" with nothing open, `public` only where the Directory says the
+  site and tower are open or Lighthouse Friends says it is climbable.
 - `visit.museum`: true when Wikidata classes the item as a museum; `stay`: an inn when it classes it
   as a bed and breakfast. Every other `visit` and `access` value stays null / unknown until a source
   says so (OpenStreetMap's `access=*` describes the structure, not the grounds, so it is kept only
@@ -534,10 +569,48 @@ file describes the merged state, not the run). The module docstring has every ru
   or an OSM-only light sharing its name with a registered station elsewhere: Lake Havasu's replicas);
   `possible_duplicates` (two stations of one kind group within 150 m); `related`; `not_shown`.
 
+- **Canada (`pipeline/merge_ca.py`, called from a few marked places in `merge.py`).**
+  - *Identifiers join records.* A record that shares a Heritage Lighthouse id, Coast Guard list number,
+    Admiralty number, ARLHS number or Lighthouse Friends id with a station already built joins it (within
+    5 km when it has a position). Keys that point at two stations are left alone and listed in the run's
+    output. A record with no position (the Directory, the staffed list) joins by an identifier, else by a
+    unique name in its province; the rest are listed as not shown. After both passes, and again after
+    curation, every record that joined nothing gets one more try, so the order of two records of one pass
+    never decides a join (a second run changes no file).
+  - *Who may start a station.* A record needs a name and a position. A Coast Guard List aid that is not a
+    clear lighthouse never starts one. Everything else follows the rules above.
+  - *Names and ranges.* For a Canadian record only real opposites (North / South, Front / Rear) keep two
+    lights apart on name; a name with nothing in common within 60 m still joins (the Coast Guard's "Toronto
+    East Entrance Outer" is Mimico's lighthouse). A possessive `'s` is not the abbreviation of South. A
+    rear light joins the station that holds its front even when the same source supplied the front.
+    A Wikidata item with no label (`Q135261059`) has no name.
+  - *Precedence* (`PRECEDENCE`, ranks inserted by `merge_ca.register`): the Coast Guard list leads the
+    charted light (characteristic, heights, range, fog signal); position is OpenStreetMap, the Coast Guard
+    list, the heritage lighthouses, Lighthouse Friends, then Wikidata; names Wikidata, OpenStreetMap, the
+    heritage designation, Lighthouse Friends, the Coast Guard list, the Directory.
+  - *Status.* A designated heritage lighthouse counts as standing. Where the historic structure is gone
+    (Lighthouse Friends) and the Coast Guard list still shows a light, the status is `lost` with a note that
+    a modern aid took its place.
+  - *Curation* (`data/curation_ca.json`; every entry needs a reason; the decisions are in
+    `docs/sources/review_2026-10-ca.md`): `rekind`, `join`, `apart`, `hide` (by id, or by record key before
+    the station has an id), `rename` (display name only) and `merge_stations` (retires one id with
+    `merged_into`; the file stays).
+  - *The review file* has a `canada` section (counts by province, status, kind, staffing and access; the
+    staffed list and the stations that rest only on the 2010 list; unplaced Directory entries; stations the
+    Coast Guard list started; curation entries). What a run did (joins by kind, ambiguous identifiers) is
+    printed, not saved.
+
 First run (2026-10-21): 1,779 stations shown (1,127 US, 652 Canada), 3 hidden (decorative), 1,017
 held by both sources (760 joined through an OSM `wikidata=` tag), 376 Wikidata only, 390 OSM only;
 1,099 records not shown (701 likely minor beacons, 327 with no name, 39 station buildings with no
 station near, 32 seamark lights).
+
+Canada run (2026-10-21, the first build merged again with the six sources of 2.3 and `data/curation_ca.json`):
+1,193 Canadian stations shown (652 before; 628 new, 617 of them started by Lighthouse Friends), 74 hidden
+(67 of them small modern harbor lights that only OpenStreetMap or the Coast Guard list mention), 16
+Canadian ids retired with `merged_into`. By province BC 75, MB 18, NB 137, NL 149, NS 256, NU 10, ON 237,
+PE 59, QC 252; by status 697 active, 133 inactive, 301 lost, 16 replica, 1 ruins, 45 unknown. 49 stations
+are staffed (44 of them resting only on the 2010 list), 2 destaffed in 2024. A second run changes no file.
 
 ### 3.10 What the site loads (`pipeline/build_site_data.py` → `web/public/data/`)
 

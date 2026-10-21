@@ -75,6 +75,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import merge_ca  # noqa: E402  (Canada's rules: identifiers, curation, staffing)
 import regions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -91,6 +92,7 @@ PRECEDENCE = {
     "light_dates": ["wikidata", "osm"],
     "other": ["wikidata", "osm"],
 }
+merge_ca.register(PRECEDENCE)  # ranks the Canadian sources in the tables above
 KIND_GROUP = {"lighthouse": "light", "range_lights": "light", "pier_light": "light", "harbor_light": "light",
               "lightship_station": "lightship_station", "lightship": "lightship",
               "life_saving_station": "life_saving_station"}
@@ -169,7 +171,7 @@ def clean_name(name: str | None) -> str | None:
     if name is None:
         return None
     s = re.sub(r"\s+", " ", str(name)).strip().strip(".").strip()
-    if not s or ascii_fold(s).lower() in PLACEHOLDER_NAMES:
+    if not s or ascii_fold(s).lower() in PLACEHOLDER_NAMES or re.fullmatch(r"[Qq]\d+", s):  # a Wikidata item with no label
         return None
     letters = [ch for ch in s if ch.isalpha()]
     if letters and all(ch.isupper() for ch in letters) and len(letters) > 3 and " " in s:
@@ -180,6 +182,7 @@ def clean_name(name: str | None) -> str | None:
 def name_tokens(s: str) -> list[str]:
     s = ascii_fold(s).lower()
     s = re.sub(r"\bu\.\s?s\.", " us ", s)
+    s = re.sub(r"(?<=\w)'s\b", "s", s)  # "Shott's" is Shotts, not "Shott South" (S is the abbreviation of South)
     s = s.replace("'", " ")
     s = re.sub(r"[^a-z0-9]+", " ", s)
     return [ABBREVIATIONS.get(t, t) for t in s.split()]
@@ -364,6 +367,9 @@ class Rec:
         classes = " ".join(ex.get("wikidata_classes") or []) + " "
         self.group_listing = bool(self.name and GROUP_NAME_RE.search(self.name)) or any(g in classes for g in GROUP_CLASSES)
         self.forms = name_forms(self.name, self.other_names)
+        self.join_keys = merge_ca.identifiers(raw)       # Canadian identifiers that name one structure
+        self.start_blocked = merge_ca.start_blocker(source, raw)
+        self.name_join_ok = bool(ex.get("station_level")) and source == "rowlett"
         bare = re.sub(r"\s*\([^)]*\)", "", self.name or "").strip()
         self.ancillary = bool(bare and is_ancillary_name(bare) and self.role not in ("front_range", "rear_range")
                               and self.kind != "life_saving_station")
@@ -395,12 +401,14 @@ class Rec:
 
     @property
     def can_start(self) -> bool:
-        return (bool(self.name) and not self.enrich_only and not self.suspect and not self.group_listing
+        return (bool(self.name) and self.has_point and not self.start_blocked and not self.enrich_only and not self.suspect and not self.group_listing
                 and not (self.ancillary and self.source != "wikidata"))
 
     @property
     def standing_evidence(self) -> bool:
         """An OpenStreetMap element mapping the structure today (not a lifecycle 'gone' form)."""
+        if self.extra.get("standing"):  # a designated heritage lighthouse stands (Heritage Lighthouse Protection Act)
+            return True
         return self.source == "osm" and not self.enrich_only and self.status not in ("lost", "ruins")
 
     def dist(self, lat: float, lon: float) -> float:
@@ -537,6 +545,11 @@ class Matcher:
         self.same_source_joins: list[dict] = []
         self.wikidata_tag_far: list[dict] = []
         self.retired: list[tuple[Station, Station]] = []
+        self.ca_curation = merge_ca.Curation()
+        self.unshown_recs: list[Rec] = []
+        self.ca_far: list[dict] = []
+        self.ca_ambiguous: list[dict] = []
+        self.kind_group = KIND_GROUP
 
     def add_existing(self, path: Path, rec: dict) -> None:
         st = Station(rec, path)
@@ -571,6 +584,7 @@ class Matcher:
     def attach(self, rec: Rec, st: Station, how: str, anchor: str | None = None) -> None:
         self.how[how] += 1
         self.station_of_key[rec.key] = st
+        merge_ca.index_record(self, rec, st)
         if anchor == "station" or (anchor is None and rec.station_level and st.parts):
             st.station_recs.append(rec)
         else:
@@ -639,9 +653,15 @@ class Matcher:
             if d > r_strong:
                 continue
             s = name_score(rec.forms, st.forms(starting_only=limited))
-            if s is not None and s <= 0.2:
+            if s is not None and s <= 0.2 and merge_ca.names_exclude(rec, s):
                 continue
-            same = any(r.source == rec.source and not r.station_level and (r.can_start or not limited) for r in st.recs())
+            if self.ca_curation.kept_apart(rec.key, merge_ca.station_keys(st)) or self.ca_curation.barred(rec.key, st):
+                continue  # curation (data/curation_ca.json): not the same structure
+            # A second record of one source in a station must be the same structure (a strong name), unless it
+            # is the other half of a range: a front and a rear light are two structures by definition.
+            same = any(r.source == rec.source and not r.station_level and (r.can_start or not limited)
+                       and not (rec.role in ("front_range", "rear_range") and r.role in ("front_range", "rear_range") and r.role != rec.role)
+                       for r in st.recs())
             if rec.ancillary:
                 # A station building joins the nearest light station within 300 m, whatever its name.
                 if d <= R_ENRICH_STRONG and g in (None, "light"):
@@ -679,7 +699,20 @@ class Matcher:
                         continue
                     self.wikidata_tag_far.append({"key": rec.key, "name": rec.name, "wikidata": rec.wikidata_tag,
                                                   "distance_m": round(d), "station_name": (st.recs() or [rec])[0].name})
+            hit = merge_ca.curated_join(self, rec)
+            if hit is not None:
+                self.attach(rec, hit, "curated_join")
+                continue
+            hit = merge_ca.identifier_join(self, rec)
+            if hit is not None:
+                self.attach(rec, hit[0], "identifier", hit[1])
+                continue
             cands = self.candidates(rec)
+            if not cands and not rec.has_point:
+                hit = merge_ca.name_join(self, rec, name_forms, name_score)
+                if hit is not None:
+                    self.attach(rec, hit, "name_only")
+                    continue
             if cands:
                 _k, st, d, s = cands[0]
                 if any(r.source == rec.source and not r.station_level for r in st.recs()) and not rec.enrich_only and not rec.ancillary:
@@ -691,13 +724,15 @@ class Matcher:
                 st = self.new_station()
                 self.attach(rec, st, "new")
                 continue
-            reason = ("seamark light with no lighthouse tag" if rec.enrich_only else
+            reason = merge_ca.unshown_reason(rec) or (
+                      "seamark light with no lighthouse tag" if rec.enrich_only else
                       "a station building (keeper's house, fog signal, visitor centre) with no light station near" if rec.ancillary else
                       f"OpenStreetMap suggests a minor beacon ({rec.suspect})" if rec.suspect else
                       "a register listing that covers several stations" if rec.group_listing else
                       "no name in any source" if not rec.name else "no position")
             self.unshown.append({"key": rec.key, "name": rec.name, "region": rec.region, "kind": rec.kind,
                                  "lat": rec.lat, "lon": rec.lon, "reason": reason})
+            self.unshown_recs.append(rec)
 
     # -- after matching ---------------------------------------------------------------------
 
@@ -730,7 +765,7 @@ class Matcher:
             if not fronts and not rears:
                 continue
             entry = {"region": key[1], "base": key[2],
-                     "front": [best_name(s) for s in fronts], "rear": [best_name(s) for s in rears]}
+                     "front": sorted(best_name(s) or "" for s in fronts), "rear": sorted(best_name(s) or "" for s in rears)}
             if len(wholes) == 1 and len(fronts) <= 1 and len(rears) <= 1:
                 whole = wholes[0]
                 halves = fronts + rears
@@ -994,6 +1029,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     use(county_rec, "county")
 
     status, status_note, conflicts = station_status(st)
+    status_note = merge_ca.status_note(recs, status, status_note)
 
     # Structures
     structures = []
@@ -1062,6 +1098,9 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
             conflicts.append({"field": "light.focal_height_m", "values": [{"source": r.source, "value": r.light["focal_height_m"]}
                               for r in main_recs if isinstance(r.light.get("focal_height_m"), (int, float)) and (pin_part is None or r in pin_part.recs)],
                               "note": "Sources differ by more than 3 m."})
+
+    for k_, f_ in merge_ca.fields_used(recs).items():
+        used[k_] |= f_
 
     # Registers, numbers, agency
     registers, seen_reg = [], set()
@@ -1182,6 +1221,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         "hidden": hidden, "hidden_reason": hidden_reason,
         "updated": today,
     }
+    merge_ca.apply(rec, recs)  # staffing, access, visit and stay from the Canadian sources; the Admiralty number
     facts = {"pin_part": pin_part.anchor if pin_part else None}
     return rec, facts
 
@@ -1308,8 +1348,11 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     headers, by_source = load_sources(sources_dir)
     existing = load_stations(stations_dir)
     m = Matcher()
+    m.ca_curation = merge_ca.Curation(merge_ca.load_curation(sources_dir.parent / "curation_ca.json"))
+    merge_ca.prepare(by_source, m.ca_curation)
     for path, rec in existing:
         m.add_existing(path, rec)
+    merge_ca.detach(m, m.ca_curation)
     # Records that may start a station first (every source in order), then the ones that may only
     # join one, so those always see every station; with the memory of an earlier run this makes a
     # second run identical to the first.
@@ -1318,6 +1361,9 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
         m.match_source([r for r in by_source[sid] if r.can_start or r.key in m.memory])
     for sid in order:
         m.match_source([r for r in by_source[sid] if not (r.can_start or r.key in m.memory)])
+    merge_ca.retry_unshown(m)
+    merge_ca.merge_stations(m, m.ca_curation)
+    merge_ca.retry_unshown(m)  # records tied to both of two stations that curation has just made one
     ranges = m.pair_ranges()
 
     resolved: list[tuple[Station, dict]] = []
@@ -1330,6 +1376,7 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     assign_ids([(st, rec) for st, rec in resolved if not st.id], taken)
     for st, rec in resolved:
         rec["id"] = st.id
+        merge_ca.curate(rec, m.ca_curation, [r.key for r in st.recs()])
     links = link_related(resolved, m)
 
     written = unchanged = 0
@@ -1354,8 +1401,10 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
             written += 1
 
     report = build_report(m, resolved, headers, ranges, links)
+    report["canada"], ca_run = merge_ca.report(m, resolved, by_source)
     report["_run"] = {"files_changed": len(outputs), "files_unchanged": unchanged,
-                      "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"])}
+                      "record_matches": dict(sorted(m.how.items())), "range_pairs_made": len(ranges["pairs"]),
+                      "canada": ca_run}
     if write and report_path is not None:
         report_path.parent.mkdir(parents=True, exist_ok=True)
         saved = {k: v for k, v in report.items() if k != "_run"}
@@ -1470,7 +1519,7 @@ def build_report(m: Matcher, resolved: list[tuple[Station, dict]], headers: dict
         "counts": {
             "stations": len(visible),
             "hidden": len(hidden),
-            "merged_away": len(m.retired),
+            "merged_away": len({st.id for st in m.stations if (st.existing or {}).get("merged_into")} | {gone.id for gone, _keep in m.retired}),
             "by_country": counts(visible, lambda r: r["country"]),
             "by_region": counts(visible, lambda r: r["region"]),
             "by_kind": counts(visible, lambda r: r["kind"]),
@@ -1514,6 +1563,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  by status {c['by_status']}; wikidata+osm {c['wikidata_and_osm']} ({c['wikidata_and_osm_by_tag']} confirmed by an OSM wikidata tag)")
     print(f"  this run: matches {run_['record_matches']}; range pairs made {run_['range_pairs_made']}")
     print(f"  not shown {c['not_shown']}; conflicts {c['conflicts']}")
+    ca_run = run_.get("canada") or {}
+    if ca_run.get("joined_by"):
+        print(f"  Canada: joined by {ca_run['joined_by']}; {len(ca_run['identifier_ambiguous'])} identifiers point at two stations, "
+              f"{len(ca_run['identifier_far'])} at one too far away; curation applied {ca_run['curation_applied']}")
     return 0
 
 
