@@ -2,7 +2,11 @@
   "id": "ca-on-big-tub",
   "name": "Big Tub Lighthouse",
   "other_names": [
-    "Tobermory Lighthouse"
+    "Tobermory Lighthouse",
+    "Tobermory (Big Tub)",
+    "Lighthouse Point",
+    "Big Tub",
+    "Tobermory"
   ],
   "country": "CA",
   "region": "ON",
@@ -36,10 +40,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 13.0,
-    "range_nm": 11.0,
+    "focal_height_m": 13.2,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -59,8 +63,8 @@
     "ccg_list_number": "I815",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -70,8 +74,8 @@
     "as_of": "1952"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -157,6 +161,21 @@
       "label": "Website",
       "url": "http://www.brucecoastlighthouses.com/lighthouses/big-tub-lighthouse/",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1055",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -183,6 +202,30 @@
       "part": "wikidata:Q59315832",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1055",
+      "part": "wikidata:Q59315832",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I815",
+      "part": "wikidata:Q59315832",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:big-tub",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -1,7 +1,9 @@
 {
   "id": "ca-on-prescott-breakwater",
   "name": "Prescott Breakwater Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Prescott Heritage Harbour"
+  ],
   "country": "CA",
   "region": "ON",
   "county": "United Counties of Leeds and Grenville",
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,21 +35,22 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": 7.5,
-    "range_nm": null,
+    "characteristic": "Iso G 4s",
+    "focal_height_m": 8.4,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN767",
+    "ccg_list_number": "I312.5",
+    "nga": null,
+    "admiralty": "H2727"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -95,6 +98,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9664700359",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1098",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Lawrence Seaway, Canal de Beauharnois to Kingston",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw33-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,7 +123,6 @@
       "fields": [
         "county",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -118,6 +135,31 @@
       "part": "wikidata:Q111515621",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1098",
+      "part": "wikidata:Q111515621",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I312.5",
+      "part": "wikidata:Q111515621",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onse:prescott-heritage-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership"
       ]
     }
   ],

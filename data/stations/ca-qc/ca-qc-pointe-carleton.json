@@ -3,9 +3,12 @@
   "name": "Phare de Pointe-Carleton",
   "other_names": [
     "phare de Pointe-Carleton",
+    "Pointe Carleton Lighthouse",
+    "phare de la pointe Carleton",
     "Phare Carleton",
     "Carleton Lighthouse",
-    "Carleton Point"
+    "Carleton Point",
+    "Pointe Carleton"
   ],
   "country": "CA",
   "region": "QC",
@@ -24,7 +27,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Phare de Pointe-Carleton",
       "type": null,
       "material": null,
       "built": null,
@@ -32,6 +35,21 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "Pointe Carleton Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 49.72,
+        "lon": -62.93
+      }
     }
   ],
   "light": {
@@ -39,17 +57,29 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 38.0,
+    "focal_height_m": 38.4,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "10893",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=10893"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3953",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3953"
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN395",
+    "ccg_list_number": "A1514.2",
+    "nga": "3168",
+    "admiralty": "H1884"
   },
   "agency": null,
   "ownership": "unknown",
@@ -62,8 +92,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -71,7 +101,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -82,9 +125,29 @@
       "kind": "wikidata"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q32757088",
+      "kind": "wikidata"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/896074423",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1616",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gulf of St. Lawrence",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl14775-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,12 +163,45 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q32757088",
+      "part": "wikidata:Q32757088",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/896074423",
       "part": "wikidata:Q114733574",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1616",
+      "part": "wikidata:Q114733574",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1514.2",
+      "part": "wikidata:Q114733574",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:pointe-carleton",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],

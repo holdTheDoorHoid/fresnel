@@ -4,7 +4,8 @@
   "other_names": [
     "phare de l'île Sambro",
     "Sambro Island Lighthouse",
-    "Sambro"
+    "Sambro",
+    "Sambro Island"
   ],
   "country": "CA",
   "region": "NS",
@@ -27,7 +28,7 @@
       "type": "conical_masonry",
       "material": "stone",
       "built": 1759,
-      "height_m": null,
+      "height_m": 20.7,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -38,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 43.0,
+    "focal_height_m": 42.7,
     "range_nm": 23.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -59,12 +60,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN442",
     "ccg_list_number": "A507",
-    "nga": "110-9968"
+    "nga": "110-9968",
+    "admiralty": "H3632"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -72,16 +74,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1758,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1758,
       "event": "first_lit",
@@ -149,6 +157,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/737147718",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1031",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -183,6 +206,36 @@
       "key": "osm:way/737147718",
       "part": "wikidata:Q7409095",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1031",
+      "part": "wikidata:Q7409095",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A507",
+      "part": "wikidata:Q7409095",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:sambro",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

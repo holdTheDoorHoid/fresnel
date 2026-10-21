@@ -2,7 +2,9 @@
   "id": "ca-ns-abbotts-harbour",
   "name": "Abbott's Harbour lighthouse",
   "other_names": [
-    "Abbott's Harbour Lighthouse"
+    "Abbott's Harbour Lighthouse",
+    "Abbott’s Harbour",
+    "Abbott's Harbour"
   ],
   "country": "CA",
   "region": "NS",
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1884,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
@@ -48,8 +50,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Le Village historique acadien de la Nouvelle-Écosse",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,7 +70,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1884,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -102,6 +117,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1146073663",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1351",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -124,6 +149,24 @@
       "part": "wikidata:Q28375731",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1351",
+      "part": "wikidata:Q28375731",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:abbott-s-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

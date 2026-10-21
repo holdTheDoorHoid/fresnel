@@ -37,14 +37,15 @@
     "focal_height_m": 7.0,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "P266",
+    "nga": null,
+    "admiralty": "G5373"
   },
   "agency": null,
   "ownership": "unknown",
@@ -75,6 +76,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1682463867",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Southern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2652-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,10 +95,19 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P266",
+      "part": "osm:node/1682463867",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

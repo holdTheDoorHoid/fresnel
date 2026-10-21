@@ -1,7 +1,12 @@
 {
   "id": "ca-qc-dixie",
   "name": "Dixie",
-  "other_names": [],
+  "other_names": [
+    "Dixie Range",
+    "Dixie Sector Light",
+    "Dixie Range Rear",
+    "Dixie Sector"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -23,28 +28,29 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 3.4,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1915,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q G",
-    "focal_height_m": 9.0,
-    "range_nm": null,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 7.5,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN1407",
+    "ccg_list_number": "I1201.5",
+    "nga": "5703",
+    "admiralty": "H2518.4"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,16 +63,41 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1915,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2019,
+      "event": "removed",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +106,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1420642817",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1420643616",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1464",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Lac Saint-Louis - Secondary Channels",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw1193-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +135,74 @@
       "part": "osm:node/1420642817",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1420643616",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1464",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I1201.5",
+      "part": "osm:node/1420642817",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:dixie-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:dixie-sector",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Iso R 6s"
+        },
+        {
+          "source": "osm",
+          "value": "Q G"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

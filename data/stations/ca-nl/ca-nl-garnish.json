@@ -1,7 +1,11 @@
 {
   "id": "ca-nl-garnish",
   "name": "Garnish Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Garnish",
+    "Garnish Light",
+    "Garnish Inner Breakwater Light"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -9,45 +13,61 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.2365,
-    "lon": -55.358306,
+    "lat": 47.236306,
+    "lon": -55.357861,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Garnish Lighthouse",
       "type": null,
       "material": null,
       "built": 1885,
       "height_m": 3.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 47.236472,
+        "lon": -55.358278
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Garnish Inner Breakwater Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 2.2,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": 1991,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q R",
-    "focal_height_m": 8.0,
+    "characteristic": "Q R 1s",
+    "focal_height_m": 8.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN685",
     "ccg_list_number": "N112",
-    "nga": "110-2264"
+    "nga": "110-2264",
+    "admiralty": "H318"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Garnish Heritage Society",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +77,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -78,6 +98,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -93,6 +119,21 @@
       "label": "ARLHS World List of Lights CAN685",
       "url": "https://wlol.arlhs.com/lighthouse/CAN685.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1300",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Fortune Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl100-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,14 +146,73 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1300",
+      "part": "wikidata:Q33126608",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N112",
+      "part": "wikidata:Q33126608",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N112.1",
+      "part": "ccg_list_of_lights:N112.1",
+      "fields": [
+        "aton",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:garnish",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -178,6 +178,8 @@ class StructuresTest(MergeCase):
         roles = sorted(s["role"] for s in files["us-ma-west-chop"]["structures"])
         self.assertEqual(roles, ["dwelling", "other", "tower"])
         self.assertEqual([u["key"] for u in report["not_shown"]], ["osm:way/11"])  # far from any light station
+        # a building's own name is not another name for the station
+        self.assertEqual(files["us-ma-west-chop"]["other_names"], [])
 
 
 class StatusTest(MergeCase):

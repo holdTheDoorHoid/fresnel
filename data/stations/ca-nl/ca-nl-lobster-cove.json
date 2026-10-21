@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Lobster Cove Head",
     "Lobster Cove Head Lighthouse",
-    "Lobster Cove Head"
+    "Lobster Cove Head",
+    "Lobster Cove Head Light"
   ],
   "country": "CA",
   "region": "NL",
@@ -41,7 +42,7 @@
     "focal_height_m": 35.0,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -59,12 +60,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN646",
     "ccg_list_number": "N201",
-    "nga": "110-2640"
+    "nga": "110-2640",
+    "admiralty": "H164"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -72,13 +74,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -133,6 +135,21 @@
       "label": "Website",
       "url": "https://parks.canada.ca/pn-np/nl/grosmorne/activ/decouverte-tours/lch",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1272",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - West Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl173-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,8 +173,35 @@
       "key": "osm:node/491406196",
       "part": "wikidata:Q30106230",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1272",
+      "part": "wikidata:Q30106230",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N201",
+      "part": "wikidata:Q30106230",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:lobster-cove-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -166,7 +210,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Iso W 4s"
         },
         {

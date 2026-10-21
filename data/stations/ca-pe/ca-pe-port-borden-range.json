@@ -6,7 +6,9 @@
     "phare arrière de Port Borden",
     "Port Borden Range Front Light",
     "phare avant de Port Borden",
-    "Point Borden Range Rear Lighthouse"
+    "Point Borden Range Rear Lighthouse",
+    "Port Borden Range Rear",
+    "Port Borden Range Front"
   ],
   "country": "CA",
   "region": "PE",
@@ -65,10 +67,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN054",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H1040"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Borden-Carleton",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -78,8 +81,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -163,6 +166,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/520004934",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=974",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=975",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -203,6 +221,38 @@
       "key": "osm:way/520004934",
       "part": "wikidata:Q47012806",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:974",
+      "part": "wikidata:Q47012806",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:975",
+      "part": "wikidata:Q47012845",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:port-borden-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:port-borden-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

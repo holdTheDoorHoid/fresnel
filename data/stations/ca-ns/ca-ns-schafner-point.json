@@ -4,7 +4,10 @@
   "other_names": [
     "phare de Schafner Point",
     "Schafners Point Light",
-    "Schafner Point"
+    "Schafner Point",
+    "Port Royal Ligthouse",
+    "Schafners Point",
+    "Port Royal"
   ],
   "country": "CA",
   "region": "NS",
@@ -24,13 +27,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
-      "built": null,
-      "height_m": null,
+      "built": 1885,
+      "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -38,10 +41,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": 13.0,
-    "range_nm": 6.0,
+    "focal_height_m": 13.3,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +60,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN452",
+    "ccg_list_number": "A210",
+    "nga": "10940",
+    "admiralty": "H3906"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Port Royal Lighthouse Association",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +76,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -82,6 +86,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1885,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -122,6 +132,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1353742108",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14873",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1331",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,8 +175,42 @@
       "key": "osm:node/1353742108",
       "part": "wikidata:Q28376380",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14873",
+      "part": "wikidata:Q28376380",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1331",
+      "part": "wikidata:Q28376380",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A210",
+      "part": "wikidata:Q28376380",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:schafner-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

@@ -1,13 +1,18 @@
 {
   "id": "ca-ns-georges-island",
   "name": "Georges Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Georges Island",
+    "Halifax Harbour Inner front range light",
+    "George's Island",
+    "Halifax Harbour Inner Range Front"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 44.640615,
     "lon": -63.560343,
@@ -18,38 +23,39 @@
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "front_range",
       "name": null,
       "type": null,
       "material": null,
       "built": 1876,
-      "height_m": null,
+      "height_m": 16.4,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1919,
+    "first_lit": 1876,
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": 18.0,
-    "range_nm": null,
+    "range_nm": 15.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN193",
     "ccg_list_number": "A538",
-    "nga": "110-9944"
+    "nga": "110-9944",
+    "admiralty": "H3618"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada (George's Island National Historic",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,13 +63,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -72,6 +78,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1919,
@@ -118,6 +136,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/850026052",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1028",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,8 +161,6 @@
       "fields": [
         "aton",
         "events",
-        "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -144,9 +175,54 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1028",
+      "part": "wikidata:Q15221545",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A538",
+      "part": "wikidata:Q15221545",
+      "fields": [
+        "aton",
+        "kind",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:george-s-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1919
+        },
+        {
+          "source": "rowlett",
+          "value": 1876
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

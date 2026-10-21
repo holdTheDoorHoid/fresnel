@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Triple Island",
     "phare de l'île Triple",
-    "Triple Islands Lighthouse"
+    "Triple Islands Lighthouse",
+    "Triple Islands",
+    "Triple Island"
   ],
   "country": "CA",
   "region": "BC",
@@ -24,13 +26,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1920,
       "height_m": 31.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -41,7 +43,7 @@
     "focal_height_m": 28.0,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -79,26 +81,46 @@
     "uscg_llnr": null,
     "arlhs": "CAN508",
     "ccg_list_number": "P752",
-    "nga": "111-11460"
+    "nga": "111-11460",
+    "admiralty": "G5812"
   },
   "agency": "CCG",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed lightstation: the keepers' home and workplace. Visit only where the station welcomes visitors, and never land uninvited."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2025",
+    "basis": "Named in the Coast Guard's April 2010 list, and a newer source speaks of this station.",
+    "check": false,
+    "evidence": [
+      {
+        "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+        "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+        "date": "2010-04"
+      },
+      {
+        "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+        "date": "2024-07-31"
+      },
+      {
+        "label": "CTV News (15 May 2025): a keeper dies at Triple Island; the station is staffed by a principal and an assistant lightkeeper",
+        "url": "https://www.ctvnews.ca/vancouver/article/lighthouse-keeper-dies-alone-on-northwestern-bc-island",
+        "date": "2025-05-15"
+      }
+    ]
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -176,6 +198,41 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1343925531",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14794",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1436",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Pacific Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac719-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Senate of Canada, 'Seeing the Light' (Oct 2011), Appendix 4 (Pacific) and Appendix 5 (Newfoundland and Labrador): Coast Guard data, April 2010",
+      "url": "https://sencanada.ca/content/sen/committee/411/pofo/rep/rep02oct11-e.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard news release, 31 July 2024: keeper functions end at Carmanah Point and Pachena Point; 25 other staffed stations in British Columbia",
+      "url": "https://www.canada.ca/en/canadian-coast-guard/news/2024/07/canadian-coast-guard-to-cease-light-keeper-functions-at-carmanah-point-and-pachena-point-light-stations-due-to-safety-concerns.html",
+      "kind": "reference"
+    },
+    {
+      "label": "CTV News (15 May 2025): a keeper dies at Triple Island; the station is staffed by a principal and an assistant lightkeeper",
+      "url": "https://www.ctvnews.ca/vancouver/article/lighthouse-keeper-dies-alone-on-northwestern-bc-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -210,6 +267,49 @@
       "fields": [
         "agency",
         "structures"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14794",
+      "part": "wikidata:Q14949628",
+      "fields": [
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1436",
+      "part": "wikidata:Q14949628",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P752",
+      "part": "wikidata:Q14949628",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcn:triple-islands",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_staffed_lightstations",
+      "key": "ca_staffed_lightstations:bc-triple-island",
+      "part": "station",
+      "fields": [
+        "access",
+        "staffing"
       ]
     }
   ],

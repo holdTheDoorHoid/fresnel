@@ -4,7 +4,10 @@
   "other_names": [
     "Porlier Pass Range Front",
     "Race Point",
-    "Porlier Pass Range Rear"
+    "Porlier Pass Range Rear",
+    "Porlier Pass front range light",
+    "Porlier Pass rear range light",
+    "Virago Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -49,24 +52,25 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1902,
     "deactivated": null,
     "lens": null,
     "characteristic": "F Y",
-    "focal_height_m": 7.0,
-    "range_nm": 9.0,
+    "focal_height_m": 6.8,
+    "range_nm": 10.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN1130",
+    "ccg_list_number": "P288",
+    "nga": "13408",
+    "admiralty": "G5394"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -85,7 +89,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1996,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -99,6 +116,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1686578997",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1182",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Southern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2652-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,10 +150,51 @@
       "key": "osm:node/1686578997",
       "part": "osm:node/1686578997",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1182",
+      "part": "osm:node/1686578997",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P288",
+      "part": "osm:node/1207349481",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P289",
+      "part": "osm:node/1686578997",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:porlier-pass-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:porlier-pass-range-rear",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

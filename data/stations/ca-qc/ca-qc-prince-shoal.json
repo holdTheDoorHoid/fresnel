@@ -5,7 +5,10 @@
     "phare du haut-fond Prince",
     "Phare du Haut-Fond Prince",
     "Prince Shoal Lighthouse",
-    "Phare du Haut-fond Prince"
+    "Phare du Haut-fond Prince",
+    "Haut-fond Prince (Prince Shoal)",
+    "Haut-fond Prince",
+    "Prince Shoal"
   ],
   "country": "CA",
   "region": "QC",
@@ -35,14 +38,14 @@
     }
   ],
   "light": {
-    "first_lit": 1964,
+    "first_lit": 1905,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 25.0,
+    "focal_height_m": 24.6,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,12 +63,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN223",
     "ccg_list_number": "A1773",
-    "nga": "110-3436"
+    "nga": "110-3436",
+    "admiralty": "H2106"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -73,13 +77,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -90,10 +94,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1905,
+      "event": "other",
+      "note": "Iron Lightship No. 7 replaced a gas buoy at the opening of navigation (Cloutier says 1906)",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1956,
+      "event": "other",
+      "note": "Lightship No. 20 came from White Island Reef and No. 7 was withdrawn",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1964,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "other",
+      "note": "The pillar lighthouse replaced the last lightship of the St. Lawrence at this station",
+      "from": "ca_lightships_lifesaving"
     },
     {
       "year": 2008,
@@ -150,6 +184,26 @@
       "label": "Wikipedia (fr)",
       "url": "https://fr.wikipedia.org/wiki/Phare_du_haut-fond_Prince",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1626",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Saguenay River",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1773-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Jean Cloutier, 'Des phares flottants sur le Saint-Laurent' (Sémaphore, UQAR): the lightships of the St. Lawrence, 1830-1964",
+      "url": "https://semaphore.uqar.ca/2868/1/Des%20phares%20flottants%20sur%20le%20Saint-Laurent.pdf",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,7 +216,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -177,9 +230,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1626",
+      "part": "wikidata:Q2085048",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1773",
+      "part": "wikidata:Q2085048",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcc:haut-fond-prince",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "ca_lightships_lifesaving",
+      "key": "ca_lightships_lifesaving:prince-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1964
+        },
+        {
+          "source": "rowlett",
+          "value": 1905
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

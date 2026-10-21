@@ -1,7 +1,11 @@
 {
   "id": "ca-qc-lile-du-grand-caoui",
   "name": "phare de l'île du Grand-Caoui",
-  "other_names": [],
+  "other_names": [
+    "Ile du Grand Caouis",
+    "Île du Grand Caouis",
+    "Great Cawee Island"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -9,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 49.82,
-    "lon": -67.0,
+    "lat": 49.82489,
+    "lon": -67.006004,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -24,30 +28,31 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1927,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 45.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "osm"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN240",
+    "ccg_list_number": "A1686",
+    "nga": "3280",
+    "admiralty": "H2010"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,12 +66,25 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1927,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1955,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +93,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q32754866",
       "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/912816161",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1621",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,14 +117,72 @@
       "part": "wikidata:Q32754866",
       "fields": [
         "kind",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/912816161",
+      "part": "wikidata:Q32754866",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1621",
+      "part": "wikidata:Q32754866",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:le-du-grand-caouis",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            49.82,
+            -67.0
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            49.82489,
+            -67.006
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            49.82774,
+            -67.00675
+          ]
+        }
+      ],
+      "distance_m": 694,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

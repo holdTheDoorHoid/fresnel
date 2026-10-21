@@ -2,7 +2,8 @@
   "id": "ca-ns-five-islands",
   "name": "Five Islands lighthouse",
   "other_names": [
-    "Five Islands Lighthouse"
+    "Five Islands Lighthouse",
+    "Five Islands"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -33,7 +34,7 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1993,
     "lens": null,
     "characteristic": "Fl R",
     "focal_height_m": null,
@@ -50,14 +51,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN179",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H4028"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of the County of Colchester (Five Islands Lighthouse Park )",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -65,21 +67,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1913,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1914,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1993,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 2013,
@@ -116,6 +130,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/743629610",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1013",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,10 +165,46 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1013",
+      "part": "wikidata:Q28375779",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:five-islands",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

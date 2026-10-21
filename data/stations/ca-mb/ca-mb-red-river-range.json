@@ -1,7 +1,10 @@
 {
   "id": "ca-mb-red-river-range",
   "name": "Red River Range Light",
-  "other_names": [],
+  "other_names": [
+    "Red River",
+    "Red River Range Front"
+  ],
   "country": "CA",
   "region": "MB",
   "county": null,
@@ -14,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -30,8 +33,8 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1895,
+    "deactivated": 1992,
     "lens": null,
     "characteristic": "inactive",
     "focal_height_m": null,
@@ -46,8 +49,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Marine Museum of Manitoba",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,10 +71,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1914,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1992,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -102,6 +117,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1103661898",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1709",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,10 +152,57 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1709",
+      "part": "wikidata:Q115237068",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:red-river-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1914
+        },
+        {
+          "source": "rowlett",
+          "value": 1895
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

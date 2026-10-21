@@ -3,7 +3,9 @@
   "name": "Phare de Bon-Désir",
   "other_names": [
     "phare de Bon-Désir",
-    "Bon Desir"
+    "Bon Desir",
+    "Bon Désir",
+    "Bon-Désir"
   ],
   "country": "CA",
   "region": "QC",
@@ -33,26 +35,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1941,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 46.0,
+    "focal_height_m": 46.4,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN80",
+    "ccg_list_number": "A1755",
+    "nga": "3396",
+    "admiralty": "H2093"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -60,16 +63,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1941,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -83,6 +99,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1294429925",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1624",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - St. Lawrence Estuary, Gulf of St. Lawrence - Rivière du Loup",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1620-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -102,9 +133,38 @@
       "key": "osm:node/1294429925",
       "part": "wikidata:Q114733580",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1624",
+      "part": "wikidata:Q114733580",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1755",
+      "part": "wikidata:Q114733580",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:bon-d-sir",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

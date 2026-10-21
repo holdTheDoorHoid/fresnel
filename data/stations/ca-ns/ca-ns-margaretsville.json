@@ -3,7 +3,9 @@
   "name": "Margaretsville lighthouse",
   "other_names": [
     "phare de Margaretsville",
-    "Margaretsville Lighthouse"
+    "Margaretsville Lighthouse",
+    "Margaretsville",
+    "Margaretville"
   ],
   "country": "CA",
   "region": "NS",
@@ -17,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +28,7 @@
       "type": null,
       "material": "wood",
       "built": 1859,
-      "height_m": null,
+      "height_m": 9.7,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -36,11 +38,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Oc(2) W 20s",
+    "focal_height_m": 11.2,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,12 +58,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN306",
+    "ccg_list_number": "A195",
+    "nga": "10964",
+    "admiralty": "H3926"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,8 +74,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -127,6 +130,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/538730976",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=16712",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1328",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -158,6 +181,39 @@
       "key": "osm:way/538730976",
       "part": "wikidata:Q28375808",
       "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:16712",
+      "part": "wikidata:Q28375808",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1328",
+      "part": "wikidata:Q28375808",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A195",
+      "part": "wikidata:Q28375808",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:margaretsville",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

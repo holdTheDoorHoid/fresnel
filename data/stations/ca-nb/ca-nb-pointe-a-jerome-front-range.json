@@ -1,9 +1,12 @@
 {
   "id": "ca-nb-pointe-a-jerome-front-range",
-  "name": "Pointe à Jérôme Front Range Lighthouse",
+  "name": "Pointe à Jérôme Range Lights",
   "other_names": [
     "Lighthouses of Pointe à Jérôme",
-    "phare d'alignement antérieur de la pointe à Jérôme"
+    "Pointe à Jérôme Front Range Lighthouse",
+    "phare d'alignement antérieur de la pointe à Jérôme",
+    "Pointe à Jérôme Range Front",
+    "Pointe à Jérôme Range Rear"
   ],
   "country": "CA",
   "region": "NB",
@@ -12,35 +15,50 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.486608,
-    "lon": -64.679309,
+    "lat": 46.489167,
+    "lon": -64.682671,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
-      "name": null,
-      "type": null,
-      "material": null,
+      "name": "Pointe à Jérôme Front Range Lighthouse",
+      "type": "wood_frame",
+      "material": "wood",
       "built": 1916,
       "height_m": 6.3,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
+    },
+    {
+      "role": "rear_range",
+      "name": "Pointe à Jérôme Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 46.489101,
+        "lon": -64.682329
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1883,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "F W",
+    "focal_height_m": 6.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "osm"
   },
   "registers": [
     {
@@ -56,14 +74,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN729",
+    "ccg_list_number": "A1124",
+    "nga": "7692",
+    "admiralty": "H1368"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -71,16 +90,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1916,
       "event": "built",
@@ -88,10 +113,22 @@
       "from": "wikidata"
     },
     {
+      "year": 2014,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
       "year": 2022,
       "event": "heritage_designated",
       "note": "heritage lighthouse",
       "from": "wikidata"
+    },
+    {
+      "year": 2022,
+      "event": "removed",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -122,6 +159,31 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q112627408",
       "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1658333305",
+      "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=16733",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1239",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1240",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -142,14 +204,81 @@
         "county",
         "events",
         "kind",
-        "location",
-        "name",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1658333305",
+      "part": "wikidata:Q112627408",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:16733",
+      "part": "wikidata:Q112627408",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1239",
+      "part": "wikidata:Q112627408",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1240",
+      "part": "lighthousefriends:1240",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:pointe-j-r-me-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:pointe-j-r-me-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

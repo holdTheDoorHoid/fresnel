@@ -3,7 +3,10 @@
   "name": "Heart's Content Lighthouse",
   "other_names": [
     "phare de Heart's Content",
-    "Heart's Content Harbor"
+    "Heart's Content Harbor",
+    "Heart’s Content",
+    "Heart’s Content Light",
+    "Heart's Content"
   ],
   "country": "CA",
   "region": "NL",
@@ -23,24 +26,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "cast_iron",
+      "material": "cast_iron",
+      "built": 1901,
+      "height_m": 9.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc W 6s",
-    "focal_height_m": 25.0,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 25.2,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +61,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN543",
     "ccg_list_number": "N468",
-    "nga": "110-1716"
+    "nga": "110-1716",
+    "admiralty": "H510"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Hearts Content",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -81,6 +85,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -121,6 +131,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1435086942",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15052",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1245",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,9 +176,59 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15052",
+      "part": "wikidata:Q44452402",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1245",
+      "part": "wikidata:Q44452402",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N468",
+      "part": "wikidata:Q44452402",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:heart-s-content",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Fl W 4s"
+        },
+        {
+          "source": "osm",
+          "value": "Oc W 6s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

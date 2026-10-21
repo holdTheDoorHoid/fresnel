@@ -3,7 +3,9 @@
   "name": "Bacalhao Island Lighthouse",
   "other_names": [
     "phare de Bacalhao Island",
-    "Bacalhao Lighthouse"
+    "Bacalhao Lighthouse",
+    "Bacalhao Island",
+    "Bacalhao Island Light"
   ],
   "country": "CA",
   "region": "NL",
@@ -15,7 +17,7 @@
     "lat": 49.686889,
     "lon": -54.556833,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -37,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 106.1,
+    "focal_height_m": 106.0,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +60,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN647",
     "ccg_list_number": "N363",
-    "nga": "110-1300"
+    "nga": "110-1300",
+    "admiralty": "H636"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,11 +74,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -107,6 +110,21 @@
       "label": "ARLHS World List of Lights CAN647",
       "url": "https://wlol.arlhs.com/lighthouse/CAN647.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1285",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Notre Dame Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl326-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfln.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,16 +136,62 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1285",
+      "part": "wikidata:Q29651026",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N363",
+      "part": "wikidata:Q29651026",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfln:bacalhao-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

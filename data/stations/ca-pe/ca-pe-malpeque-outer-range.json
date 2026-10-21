@@ -1,7 +1,10 @@
 {
   "id": "ca-pe-malpeque-outer-range",
   "name": "Malpeque Outer Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Darnley Point",
+    "Malpeque Outer Range Rear"
+  ],
   "country": "CA",
   "region": "PE",
   "county": null,
@@ -9,47 +12,63 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.5665,
-    "lon": -63.6649,
+    "lat": 46.561379,
+    "lon": -63.656666,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Darnley Point",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "role": "rear_range",
+      "name": "Malpeque Outer Range Lights",
       "type": null,
       "material": "wood",
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 46.56172,
+        "lon": -63.65653
+      }
     }
   ],
   "light": {
-    "first_lit": 1961,
+    "first_lit": 1889,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "F R",
+    "focal_height_m": 14.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "osm"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN770",
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "A1063",
+    "nga": "7916",
+    "admiralty": "H1116"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -57,21 +76,39 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1961,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2018,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -107,6 +144,21 @@
       "label": "ARLHS World List of Lights CAN770",
       "url": "https://wlol.arlhs.com/lighthouse/CAN770.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1918120419",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=934",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,16 +170,80 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1918120419",
+      "part": "osm:node/1918120419",
+      "fields": [
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:934",
+      "part": "wikidata:Q6744592",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:malpeque-outer-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            46.5665,
+            -63.6649
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.56172,
+            -63.65653
+          ]
+        }
+      ],
+      "distance_m": 832,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

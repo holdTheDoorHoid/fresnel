@@ -3,7 +3,10 @@
   "name": "Wallace Harbour front range light",
   "other_names": [
     "phare de Wallace Harbour, Feu à secteurs",
-    "Wallace Harbour Sector Lighthouse"
+    "Wallace Harbour Sector Lighthouse",
+    "Wallace Harbour Sector (Range Front)",
+    "Wallace Harbour Sector",
+    "Wallace Harbor Range Front"
   ],
   "country": "CA",
   "region": "NS",
@@ -17,30 +20,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
-      "built": null,
-      "height_m": null,
+      "built": 1904,
+      "height_m": 8.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F R",
+    "focal_height_m": 12.4,
+    "range_nm": 21.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -56,12 +59,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN518",
+    "ccg_list_number": "A924",
+    "nga": "8554",
+    "admiralty": "H1283"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wallace Area Development Association",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,8 +75,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -81,6 +85,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1904,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -116,6 +126,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2482985967",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14973",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1004",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - East",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl8832-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsnw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,6 +170,41 @@
       "part": "wikidata:Q28375865",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14973",
+      "part": "wikidata:Q28375865",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1004",
+      "part": "wikidata:Q28375865",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A924",
+      "part": "wikidata:Q28375865",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsnw:wallace-harbour-sector",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

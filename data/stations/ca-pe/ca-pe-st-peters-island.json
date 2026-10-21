@@ -2,7 +2,9 @@
   "id": "ca-pe-st-peters-island",
   "name": "St. Peters Island Lighthouse",
   "other_names": [
-    "phare de l'île St. Peters"
+    "phare de l'île St. Peters",
+    "St. Peters Island",
+    "St. Peter's Island"
   ],
   "country": "CA",
   "region": "PE",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -32,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1866,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
@@ -46,10 +48,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN481",
     "ccg_list_number": "A1007",
-    "nga": "110-8216"
+    "nga": "110-8216",
+    "admiralty": "H996"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,16 +62,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1866,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1881,
       "event": "built",
@@ -104,6 +113,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2186519275",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=962",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,10 +148,60 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:962",
+      "part": "wikidata:Q47002727",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:st-peter-s-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1881
+        },
+        {
+          "source": "rowlett",
+          "value": 1866
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

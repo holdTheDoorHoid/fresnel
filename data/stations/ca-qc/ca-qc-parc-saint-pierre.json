@@ -1,24 +1,26 @@
 {
   "id": "ca-qc-parc-saint-pierre",
   "name": "Phare du Parc Saint-Pierre",
-  "other_names": [],
+  "other_names": [
+    "Soulanges Canal Lower Entrance Range Rear"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 45.330871,
     "lon": -73.968485,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": null,
@@ -31,23 +33,23 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1960,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN1199",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Village de Pointe-des-Cascades",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +59,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1902,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1960,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9528503593",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1463",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,15 +108,35 @@
       "key": "osm:node/9528503593",
       "part": "osm:node/9528503593",
       "fields": [
-        "kind",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1463",
+      "part": "osm:node/9528503593",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:soulanges-canal-lower-entrance-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

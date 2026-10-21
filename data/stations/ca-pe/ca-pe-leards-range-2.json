@@ -4,7 +4,10 @@
   "other_names": [
     "Leards Range Front Lighthouse",
     "Victoria Range Light",
-    "Leard's Front Range Light"
+    "Leard's Front Range Light",
+    "Leards Range Front",
+    "Victoria Harbour",
+    "Leards Range Front/Palmer Range Rear"
   ],
   "country": "CA",
   "region": "PE",
@@ -13,10 +16,10 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.21407,
-    "lon": -63.48896,
+    "lat": 46.21405,
+    "lon": -63.48827,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -41,11 +44,15 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "osm",
+      "location": {
+        "lat": 46.214185,
+        "lon": -63.488843
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": null,
     "lens": null,
     "characteristic": "F R",
@@ -73,14 +80,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN512",
+    "ccg_list_number": "A1008.1",
+    "nga": "8264",
+    "admiralty": "H1029.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Village of Victoria",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -88,21 +96,39 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2012,
       "event": "heritage_designated",
       "note": "designated heritage place",
       "from": "wikidata"
+    },
+    {
+      "year": 2020,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -138,6 +164,16 @@
       "label": "Website",
       "url": "https://www.peilighthousesociety.ca/lighthouse.php?id=37",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=970",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,7 +185,6 @@
         "county",
         "events",
         "kind",
-        "location",
         "photos",
         "region",
         "registers"
@@ -162,10 +197,47 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:970",
+      "part": "wikidata:Q30575042",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:victoria-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

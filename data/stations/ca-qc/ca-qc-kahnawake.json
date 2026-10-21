@@ -1,7 +1,10 @@
 {
   "id": "ca-qc-kahnawake",
   "name": "Kahnawake",
-  "other_names": [],
+  "other_names": [
+    "Kahnawake front range light",
+    "Kahnawake Range Front"
+  ],
   "country": "CA",
   "region": "QC",
   "county": null,
@@ -23,28 +26,29 @@
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 4.9,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": 12.0,
-    "range_nm": null,
+    "characteristic": "F G",
+    "focal_height_m": 9.9,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "I16.1",
+    "nga": "5692",
+    "admiralty": "H2517.2"
   },
   "agency": null,
   "ownership": "unknown",
@@ -57,11 +61,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +79,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1420641916",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - St. Lawrence Seaway, Lac Saint-Louis",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw4-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +98,48 @@
       "part": "osm:node/1420641916",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I16.1",
+      "part": "osm:node/1420641916",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcw:kahnawake-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "F G"
+        },
+        {
+          "source": "osm",
+          "value": "F W"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

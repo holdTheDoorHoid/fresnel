@@ -2,7 +2,11 @@
   "id": "ca-nl-rocky-point",
   "name": "Rocky Point Lighthouse",
   "other_names": [
-    "phare de Rocky Point"
+    "phare de Rocky Point",
+    "Rocky Point (Harbour Breton)",
+    "Rocky Point Light (Harbour Breton)",
+    "Rocky Point",
+    "Harbour Breton"
   ],
   "country": "CA",
   "region": "NL",
@@ -11,35 +15,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.479504,
-    "lon": -55.79296,
+    "lat": 47.479528,
+    "lon": -55.792889,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "cast_iron",
+      "material": "cast_iron",
+      "built": 1881,
+      "height_m": 9.1,
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 16.2,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -65,12 +69,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN699",
+    "ccg_list_number": "N124",
+    "nga": "2316",
+    "admiralty": "H294"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Harbour Breton",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -80,8 +85,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -90,6 +95,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2009,
       "event": "heritage_designated",
@@ -121,6 +138,26 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q44452509",
       "kind": "wikidata"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15133",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1315",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,16 +168,67 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15133",
+      "part": "wikidata:Q44452509",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1315",
+      "part": "wikidata:Q44452509",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N124",
+      "part": "wikidata:Q44452509",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:rocky-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1873
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1881
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

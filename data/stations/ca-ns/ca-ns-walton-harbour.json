@@ -3,7 +3,8 @@
   "name": "Walton Harbour Lighthouse",
   "other_names": [
     "Walton Lighthouse",
-    "Walton Harbour Lighthouse and Museum"
+    "Walton Harbour Lighthouse and Museum",
+    "Walton Harbour"
   ],
   "country": "CA",
   "region": "NS",
@@ -51,14 +52,14 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN519",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Municipality of East Hants (Walton Lighthouse)",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -66,21 +67,33 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1872,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1873,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1978,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 1986,
@@ -128,6 +141,11 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1324",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -153,6 +171,26 @@
       "part": "wikidata:Q32512721",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1324",
+      "part": "wikidata:Q32512721",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:walton-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],

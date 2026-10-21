@@ -3,7 +3,10 @@
   "name": "Belle Isle Northeast Light",
   "other_names": [
     "phare de Belle Isle Nord-Est",
-    "Belle Isle Northeast Lighthouse"
+    "Belle Isle Northeast Lighthouse",
+    "Belle Isle North End",
+    "Belle Isle North End Light Station",
+    "Belle Isle Northeast"
   ],
   "country": "CA",
   "region": "NL",
@@ -37,10 +40,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 39.0,
+    "focal_height_m": 39.1,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +61,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN648",
     "ccg_list_number": "N232",
-    "nga": "110-0984"
+    "nga": "110-0984",
+    "admiralty": "H96"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,11 +75,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -92,6 +96,12 @@
       "event": "heritage_designated",
       "note": "recognized federal heritage building of Canada",
       "from": "wikidata"
+    },
+    {
+      "year": 2017,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -117,6 +127,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/476050017",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1484",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Strait of Belle Isle",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl211-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/lab.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,7 +153,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "registers",
@@ -142,10 +166,58 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1484",
+      "part": "wikidata:Q4883648",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N232",
+      "part": "wikidata:Q4883648",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:lab:belle-isle-northeast",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

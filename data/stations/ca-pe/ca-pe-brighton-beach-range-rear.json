@@ -4,7 +4,9 @@
   "other_names": [
     "phare arrière de Brighton Beach",
     "Brighton Beach Range Lights",
-    "phares d'alignement de Brighton Beach"
+    "phares d'alignement de Brighton Beach",
+    "Brighton Beach Range Rear",
+    "Brighton Beach rear range light"
   ],
   "country": "CA",
   "region": "PE",
@@ -49,26 +51,27 @@
     }
   ],
   "light": {
-    "first_lit": 1968,
+    "first_lit": 1890,
     "deactivated": null,
     "lens": null,
     "characteristic": "F Y",
-    "focal_height_m": 26.5,
-    "range_nm": 13.0,
+    "focal_height_m": 26.3,
+    "range_nm": 19.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN127",
     "ccg_list_number": "A995",
-    "nga": "110-8244"
+    "nga": "110-8244",
+    "admiralty": "H1012.1"
   },
   "agency": "Charlottetown City Council",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -76,13 +79,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -93,10 +96,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1968,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1969,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -152,6 +167,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6548334650",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=966",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -165,7 +195,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,6 +215,33 @@
       "part": "wikidata:Q46996993",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:966",
+      "part": "wikidata:Q46996993",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A995",
+      "part": "wikidata:Q46996993",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:brighton-beach-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

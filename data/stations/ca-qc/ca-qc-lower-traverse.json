@@ -1,0 +1,146 @@
+{
+  "id": "ca-qc-lower-traverse",
+  "name": "Lower Traverse",
+  "other_names": [
+    "Lower Traverse Lightship",
+    "Traverse Saint-Roch inférieure"
+  ],
+  "country": "CA",
+  "region": "QC",
+  "county": null,
+  "water": null,
+  "setting": "offshore",
+  "kind": "lightship_station",
+  "location": {
+    "lat": 47.363826,
+    "lon": -70.246253,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [],
+  "light": {
+    "first_lit": 1830,
+    "deactivated": 1940,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "ca_lightships_lifesaving"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1830,
+      "event": "other",
+      "note": "First lightship moored at the lower end of the Saint-Roch traverse (Cloutier gives 1830; Lighthouse Friends says the schooner Brilliant was anchored in 1831)",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1875,
+      "event": "other",
+      "note": "An iron lightship, found unsuited to Halifax Harbour, moored here",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1887,
+      "event": "damaged",
+      "note": "The lightship was run down and sunk by the ship Loyal on 16 October; raised and back on station 8 July 1888",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1904,
+      "event": "other",
+      "note": "A lighthouse on a pier replaced the lightship (the pier failed and the station was abandoned in 1907)",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1921,
+      "event": "other",
+      "note": "A new steel, self-propelled lightship placed on the station",
+      "from": "ca_lightships_lifesaving"
+    },
+    {
+      "year": 1940,
+      "event": "deactivated",
+      "note": "On the Light List for 1939; by the 1940 edition only a buoy marks the place",
+      "from": "ca_lightships_lifesaving"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2354",
+      "kind": "reference"
+    },
+    {
+      "label": "Jean Cloutier, 'Des phares flottants sur le Saint-Laurent' (Sémaphore, UQAR): the lightships of the St. Lawrence, 1830-1964",
+      "url": "https://semaphore.uqar.ca/2868/1/Des%20phares%20flottants%20sur%20le%20Saint-Laurent.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Report of the Department of Marine and Fisheries (Marine) for 1900-01, Internet Archive: lightships, their repairs and their masters",
+      "url": "https://archive.org/details/1901v35i9p21_0025",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2354",
+      "part": "ca_lightships_lifesaving:lower-traverse",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "ca_lightships_lifesaving",
+      "key": "ca_lightships_lifesaving:lower-traverse",
+      "part": "ca_lightships_lifesaving:lower-traverse",
+      "fields": [
+        "events",
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -3,7 +3,8 @@
   "name": "Port Borden Pier Light",
   "other_names": [
     "phare de Port Borden",
-    "Port Borden"
+    "Port Borden",
+    "Port Borden Pier"
   ],
   "country": "CA",
   "region": "PE",
@@ -37,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso G 4s",
-    "focal_height_m": 10.0,
-    "range_nm": 5.0,
+    "focal_height_m": 10.1,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,10 +59,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN052",
     "ccg_list_number": "A1017.1",
-    "nga": "110-8292"
+    "nga": "110-8292",
+    "admiralty": "H1039"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,7 +74,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -127,6 +129,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1635912801",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=976",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,8 +168,33 @@
       "key": "osm:node/1635912801",
       "part": "wikidata:Q47016759",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:976",
+      "part": "wikidata:Q47016759",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1017.5",
+      "part": "wikidata:Q47016759",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:port-borden-pier",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

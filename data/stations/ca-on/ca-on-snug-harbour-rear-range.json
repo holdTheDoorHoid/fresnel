@@ -1,8 +1,13 @@
 {
   "id": "ca-on-snug-harbour-rear-range",
-  "name": "Snug Harbour Rear Range Lighthouse",
+  "name": "Snug Harbour range Lights",
   "other_names": [
-    "phare d’alignement postérieur de Snug Harbour"
+    "Snug Harbour Rear Range Lighthouse",
+    "phare d’alignement postérieur de Snug Harbour",
+    "Snug Harbour Range Rear",
+    "Snug Harbour front range light",
+    "Snug Harbour rear range light",
+    "Snug Harbour Range Front"
   ],
   "country": "CA",
   "region": "ON",
@@ -11,35 +16,50 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 45.373788,
-    "lon": -80.311379,
+    "lat": 45.370913,
+    "lon": -80.322486,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "rear_range",
-      "name": null,
+      "name": "Snug Harbour Rear Range Lighthouse",
+      "type": null,
+      "material": null,
+      "built": 1893,
+      "height_m": 14.7,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl",
+      "location": {
+        "lat": 45.373788,
+        "lon": -80.311379
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Snug Harbour front range light",
       "type": null,
       "material": null,
       "built": null,
-      "height_m": null,
+      "height_m": 7.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "ccg_list_of_lights"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1894,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F G",
+    "focal_height_m": 11.8,
+    "range_nm": 21.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -50,12 +70,12 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN463",
+    "ccg_list_number": "I909",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -66,15 +86,27 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1894,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 2016,
       "event": "heritage_designated",
@@ -103,8 +135,33 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1364011215",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1364608079",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15092",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1546",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/ongb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,7 +173,6 @@
         "county",
         "events",
         "kind",
-        "name",
         "photos",
         "region",
         "registers"
@@ -124,14 +180,119 @@
     },
     {
       "source": "osm",
-      "key": "osm:node/1364608079",
-      "part": "wikidata:Q45324461",
+      "key": "osm:node/1364011215",
+      "part": "osm:node/1364011215",
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1364608079",
+      "part": "wikidata:Q45324461",
+      "fields": []
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15092",
+      "part": "wikidata:Q45324461",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1546",
+      "part": "wikidata:Q45324461",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I909",
+      "part": "osm:node/1364011215",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I910",
+      "part": "wikidata:Q45324461",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:snug-harbour-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:snug-harbour-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            45.37366,
+            -80.31116
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            45.37379,
+            -80.31138
+          ]
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": [
+            45.37083,
+            -80.32194
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            45.37378,
+            -80.31126
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            45.37364,
+            -80.31119
+          ]
+        }
+      ],
+      "distance_m": 888,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

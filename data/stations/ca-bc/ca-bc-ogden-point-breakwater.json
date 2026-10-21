@@ -38,17 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Q R 1s",
-    "focal_height_m": 12.2,
+    "focal_height_m": 13.2,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
     "ccg_list_number": "P204",
-    "nga": "111-13708"
+    "nga": "111-13708",
+    "admiralty": "G5312"
   },
   "agency": null,
   "ownership": "unknown",
@@ -61,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -76,6 +77,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1917,
@@ -117,6 +124,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4291664940",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1202",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,8 +162,31 @@
       "key": "osm:node/4291664940",
       "part": "wikidata:Q109799478",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1202",
+      "part": "wikidata:Q109799478",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P204",
+      "part": "wikidata:Q109799478",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:ogden-point-breakwater",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
       ]
     }
   ],
@@ -150,7 +195,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Q R 1s"
         },
         {

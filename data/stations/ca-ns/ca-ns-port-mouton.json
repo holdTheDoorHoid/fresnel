@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Port Mouton",
     "Spectacle Island Lighthouse",
-    "Port Mouton"
+    "Port Mouton",
+    "Spectacle Island Light",
+    "Spectacle Island"
   ],
   "country": "CA",
   "region": "NS",
@@ -23,6 +25,17 @@
   "structures": [
     {
       "role": "tower",
+      "name": "Port Mouton Lighthouse",
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1937,
+      "height_m": 7.5,
+      "status": "standing",
+      "note": null,
+      "from": "parks_canada_hl"
+    },
+    {
+      "role": "tower",
       "name": null,
       "type": null,
       "material": null,
@@ -35,28 +48,17 @@
         "lat": 43.91791,
         "lon": -64.804119
       }
-    },
-    {
-      "role": "tower",
-      "name": "Port Mouton Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": null,
     "lens": null,
     "characteristic": "LFl W 12s",
-    "focal_height_m": 17.0,
-    "range_nm": 7.0,
+    "focal_height_m": 16.8,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -72,12 +74,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN410",
+    "ccg_list_number": "A396",
+    "nga": "10268",
+    "admiralty": "H3742"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Spectacle Lighthouse Society",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -87,16 +90,28 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2015,
       "event": "heritage_designated",
@@ -122,6 +137,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/763361151",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14892",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1599",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,8 +184,43 @@
       "key": "osm:node/763361151",
       "part": "wikidata:Q45324371",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14892",
+      "part": "wikidata:Q45324371",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1599",
+      "part": "wikidata:Q45324371",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A396",
+      "part": "wikidata:Q45324371",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:port-mouton",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

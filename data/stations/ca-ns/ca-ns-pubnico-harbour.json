@@ -2,7 +2,9 @@
   "id": "ca-ns-pubnico-harbour",
   "name": "Pubnico Harbour light",
   "other_names": [
-    "Pubnico Harbour lighthouse"
+    "Pubnico Harbour lighthouse",
+    "Pubnico Harbour",
+    "East Pubnico"
   ],
   "country": "CA",
   "region": "NS",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -25,30 +27,31 @@
       "type": null,
       "material": "wood",
       "built": null,
-      "height_m": null,
+      "height_m": 11.5,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1854,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 3s",
+    "focal_height_m": 7.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN417",
+    "ccg_list_number": "A299",
+    "nga": null,
+    "admiralty": "H3798"
   },
-  "agency": null,
+  "agency": "unknown",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -59,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -68,7 +71,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1984,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -97,6 +113,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1145163715",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1353",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia Southwest Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl271-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nss.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,6 +149,34 @@
       "part": "wikidata:Q28375841",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1353",
+      "part": "wikidata:Q28375841",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A299",
+      "part": "wikidata:Q28375841",
+      "fields": [
+        "aton",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nss:pubnico-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

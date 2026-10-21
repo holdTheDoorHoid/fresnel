@@ -1,7 +1,10 @@
 {
   "id": "ca-qc-la-pointe-duthie",
   "name": "phare de la Pointe Duthie",
-  "other_names": [],
+  "other_names": [
+    "Pointe Duthie",
+    "reconstructed"
+  ],
   "country": "CA",
   "region": "QC",
   "county": "Bonaventure",
@@ -14,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -31,13 +34,13 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1914,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -48,11 +51,11 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN985",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Ville de New Richmond",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -72,7 +75,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1914,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -91,6 +107,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549671354",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1581",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qce.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,6 +138,23 @@
       "part": "wikidata:Q28659562",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1581",
+      "part": "wikidata:Q28659562",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qce:pointe-duthie",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light"
       ]
     }
   ],

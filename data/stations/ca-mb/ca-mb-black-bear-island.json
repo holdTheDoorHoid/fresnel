@@ -1,7 +1,9 @@
 {
   "id": "ca-mb-black-bear-island",
   "name": "Black Bear Island Light",
-  "other_names": [],
+  "other_names": [
+    "Black Bear Island"
+  ],
   "country": "CA",
   "region": "MB",
   "county": null,
@@ -34,7 +36,7 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "inactive",
-    "focal_height_m": null,
+    "focal_height_m": 13.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -43,11 +45,11 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN736M",
-    "ccg_list_number": null,
+    "ccg_list_number": "I1592",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Marine Museum of Manitoba",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,11 +59,11 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -102,6 +104,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1103661899",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1710",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/mb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,10 +139,55 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1710",
+      "part": "wikidata:Q115237063",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:black-bear-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mb:black-bear-island-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

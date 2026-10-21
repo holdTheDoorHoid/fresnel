@@ -2,7 +2,9 @@
   "id": "ca-nb-bouctouche-bar",
   "name": "Bouctouche Bar Lighthouse",
   "other_names": [
-    "Buctouche Bar"
+    "Buctouche Bar",
+    "Bouctouche Bar",
+    "Bouctouche Dune"
   ],
   "country": "CA",
   "region": "NB",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -37,19 +39,20 @@
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 11.0,
-    "range_nm": 8.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN055",
     "ccg_list_number": "A1122",
-    "nga": "110-7680"
+    "nga": "110-7680",
+    "admiralty": "H1362"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -63,12 +66,19 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2020,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -87,6 +97,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1658325032",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1242",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl1085-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -107,8 +132,35 @@
       "key": "osm:node/1658325032",
       "part": "wikidata:Q106165877",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1242",
+      "part": "wikidata:Q106165877",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1122",
+      "part": "wikidata:Q106165877",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:bouctouche-bar",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership"
       ]
     }
   ],

@@ -36,17 +36,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 5.0,
+    "focal_height_m": 5.5,
     "range_nm": 6.0,
     "fog_signal": "whistle",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "N4",
+    "nga": null,
+    "admiralty": "H443"
   },
   "agency": null,
   "ownership": "unknown",
@@ -77,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1834890149",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Cape Race to St. Shott’s",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl1-en.php",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -92,10 +98,19 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N4",
+      "part": "osm:node/1834890149",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

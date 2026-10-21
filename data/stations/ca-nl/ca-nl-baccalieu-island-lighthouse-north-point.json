@@ -3,7 +3,9 @@
   "name": "Baccalieu Island Lighthouse North Point",
   "other_names": [
     "Baccalieu Island Lighthouse Northeast End",
-    "Baccalieu Island Lighthouse North Point (old)"
+    "Baccalieu Island Lighthouse North Point (old)",
+    "Baccalieu Island",
+    "Baccalieu Island Light"
   ],
   "country": "CA",
   "region": "NL",
@@ -15,9 +17,9 @@
     "lat": 48.149917,
     "lon": -52.798139,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -45,25 +47,26 @@
   ],
   "light": {
     "first_lit": 1858,
-    "deactivated": 1990,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 176.0,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN647",
     "ccg_list_number": "N472",
-    "nga": "110-1736"
+    "nga": "110-1736",
+    "admiralty": "H498"
   },
-  "agency": null,
+  "agency": "Baccalieu Island Ecological Reserve",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -71,13 +74,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -92,6 +95,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1990,
@@ -129,6 +138,21 @@
       "label": "ARLHS World List of Lights CAN671",
       "url": "https://wlol.arlhs.com/lighthouse/CAN671.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1247",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,8 +164,6 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
@@ -156,6 +178,42 @@
         "light",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1247",
+      "part": "wikidata:Q29869493",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N472",
+      "part": "wikidata:Q29869493",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:baccalieu-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:baccalieu-island-2",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
     }
   ],
   "conflicts": [
@@ -163,11 +221,23 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
           "value": "active"
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
           "value": "inactive"
         }
       ],

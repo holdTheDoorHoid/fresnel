@@ -1,7 +1,11 @@
 {
   "id": "ca-nl-hants-harbour",
   "name": "Hant's Harbour Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Hant’s Harbour",
+    "Hant’s Harbour Light",
+    "Hant's Harbour"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -30,24 +34,25 @@
     }
   ],
   "light": {
-    "first_lit": 1957,
+    "first_lit": 1881,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 4.0,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 19.8,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN688",
     "ccg_list_number": "N470",
-    "nga": "110-1728"
+    "nga": "110-1728",
+    "admiralty": "H504"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -72,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1957,
@@ -98,6 +115,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1435062802",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1246",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -109,7 +141,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -120,8 +151,35 @@
       "key": "osm:node/1435062802",
       "part": "wikidata:Q106088228",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1246",
+      "part": "wikidata:Q106088228",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N470",
+      "part": "wikidata:Q106088228",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:hant-s-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -130,12 +188,12 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
-          "value": "Fl R 4s"
+          "source": "ccg_list_of_lights",
+          "value": "Iso W 6s"
         },
         {
-          "source": "wikidata",
-          "value": "Iso W 6s"
+          "source": "osm",
+          "value": "Fl R 4s"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
@@ -150,9 +208,27 @@
         {
           "source": "osm",
           "value": 4.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 19.8
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1957
+        },
+        {
+          "source": "rowlett",
+          "value": 1881
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

@@ -5,7 +5,8 @@
     "phare de Race Rocks",
     "Race Rocks Lighthouse",
     "Race Rocks Lightstation",
-    "Race Rocks"
+    "Race Rocks",
+    "Great Race Rock"
   ],
   "country": "CA",
   "region": "BC",
@@ -40,9 +41,9 @@
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 36.0,
-    "range_nm": 18.0,
+    "range_nm": 19.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,12 +61,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN426",
     "ccg_list_number": "P189",
-    "nga": "111-13760"
+    "nga": "111-13760",
+    "admiralty": "G5300"
   },
   "agency": "Meteorological Service of Canada",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -73,13 +75,13 @@
     "as_of": "1997"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -94,6 +96,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1861,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1984,
@@ -171,6 +179,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/325826139",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1102",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -206,12 +229,53 @@
       "key": "osm:way/325826139",
       "part": "wikidata:Q2856140",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1102",
+      "part": "wikidata:Q2856140",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P189",
+      "part": "wikidata:Q2856140",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:race-rocks",
+      "part": "station",
+      "fields": [
+        "events",
+        "ownership",
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1860
+        },
+        {
+          "source": "rowlett",
+          "value": 1861
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

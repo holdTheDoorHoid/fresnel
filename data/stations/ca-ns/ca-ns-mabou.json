@@ -2,7 +2,9 @@
   "id": "ca-ns-mabou",
   "name": "Mabou Lighthouse",
   "other_names": [
-    "Mabou Harbour Lighthouse"
+    "Mabou Harbour Lighthouse",
+    "Mabou Harbor",
+    "Mabou Harbour"
   ],
   "country": "CA",
   "region": "NS",
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1884,
     "deactivated": null,
     "lens": null,
     "characteristic": "F G",
     "focal_height_m": 13.9,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -57,12 +59,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN291",
     "ccg_list_number": "A876",
-    "nga": "110-8748"
+    "nga": "110-8748",
+    "admiralty": "H1216.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -70,16 +73,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1884,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1908,
       "event": "built",
@@ -126,6 +135,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1324111529",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1324115934",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1393",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Cape Breton Island, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl70485-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nscbw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,7 +167,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -153,9 +181,100 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1324115934",
+      "part": "wikidata:Q30014299",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1393",
+      "part": "wikidata:Q30014299",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A876",
+      "part": "wikidata:Q30014299",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbw:mabou-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1908
+        },
+        {
+          "source": "rowlett",
+          "value": 1884
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            46.08589,
+            -61.46533
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            46.08589,
+            -61.46532
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            46.08739,
+            -61.47313
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.08589,
+            -61.46533
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            46.08589,
+            -61.46533
+          ]
+        }
+      ],
+      "distance_m": 625,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

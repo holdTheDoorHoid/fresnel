@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Fisgard",
     "Fisgard Lighthouse National Historic Site",
-    "Fisgard"
+    "Fisgard",
+    "Fisgard Sector Light"
   ],
   "country": "CA",
   "region": "BC",
@@ -37,11 +38,11 @@
     "first_lit": 1860,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso R 2s",
-    "focal_height_m": 22.0,
+    "characteristic": "Iso W 2s",
+    "focal_height_m": 21.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -79,12 +80,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN176",
     "ccg_list_number": "P197",
-    "nga": "111-13740"
+    "nga": "111-13740",
+    "admiralty": "G5306"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -92,13 +94,13 @@
     "as_of": "1929"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -107,6 +109,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1860,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1860,
@@ -196,6 +204,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1657150458",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14432",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1101",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Juan de Fuca Strait",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac180-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -221,8 +249,42 @@
       "key": "osm:node/1657150458",
       "part": "wikidata:Q1420045",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14432",
+      "part": "wikidata:Q1420045",
+      "fields": [
+        "agency",
+        "ownership"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1101",
+      "part": "wikidata:Q1420045",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P197",
+      "part": "wikidata:Q1420045",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:fisgard",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
       ]
     }
   ],
@@ -230,6 +292,10 @@
     {
       "field": "light.characteristic",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Iso W 2s"
+        },
         {
           "source": "osm",
           "value": "Iso R 2s"

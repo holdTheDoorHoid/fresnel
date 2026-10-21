@@ -3,7 +3,8 @@
   "name": "Swallowtail Lighthouse",
   "other_names": [
     "Swallow Tail Lighthouse",
-    "Swallow Tail"
+    "Swallow Tail",
+    "Swallowtail"
   ],
   "country": "CA",
   "region": "NB",
@@ -37,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 6s",
-    "focal_height_m": 37.0,
+    "focal_height_m": 37.1,
     "range_nm": 12.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -58,12 +59,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN491",
     "ccg_list_number": "A33",
-    "nga": "110-11364"
+    "nga": "110-11364",
+    "admiralty": "H4168"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Village of Grand Manan (Swallowtail Lighthouse )",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -71,15 +73,22 @@
     "as_of": "1986"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "note": "Lighthouse Friends marks a volunteer keeper programme here. Check with the operator.",
+    "checked": null
+  },
   "events": [
     {
       "year": 1859,
@@ -150,6 +159,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/203479098",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1213",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.B. - West",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,8 +200,35 @@
       "part": "wikidata:Q28375027",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1213",
+      "part": "wikidata:Q28375027",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A33",
+      "part": "wikidata:Q28375027",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:swallowtail",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -186,7 +237,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Oc W 6s"
         },
         {

@@ -1,10 +1,15 @@
 {
   "id": "ca-ns-sambro-harbour",
-  "name": "Sambro Harbour Lighthouse",
-  "other_names": [],
+  "name": "Sambro Harbour light",
+  "other_names": [
+    "Sambro Harbour lighthouse",
+    "Sambro Harbour Lighthouse",
+    "Sambro Harbour",
+    "Bull Point"
+  ],
   "country": "CA",
   "region": "NS",
-  "county": null,
+  "county": "Halifax",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -14,12 +19,12 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Sambro Harbour Lighthouse",
       "type": null,
       "material": null,
       "built": null,
@@ -27,27 +32,43 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": "Sambro Harbour light",
+      "type": null,
+      "material": "wood",
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 44.438261,
+        "lon": -63.562672
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1899,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F G",
+    "focal_height_m": 10.5,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN441",
+    "ccg_list_number": "A505",
+    "nga": "9980",
+    "admiralty": "H3644"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +78,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,11 +87,44 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2016,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sambro_Harbour_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sambro_Harbour_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sambro_Harbour_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28375825",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Sambro_Harbour_light",
+      "kind": "commons"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/741115038",
@@ -80,24 +134,77 @@
       "label": "Website",
       "url": "https://www.nslps.com/about-ns-lighthouses/lighthouse-lists?c=sambro-harbour-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1032",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Nova Scotia, Southeast Coast",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl327-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q28375825",
+      "part": "wikidata:Q28375825",
+      "fields": [
+        "county",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
     {
       "source": "osm",
       "key": "osm:way/741115038",
       "part": "osm:way/741115038",
       "fields": [
-        "kind",
         "location",
-        "name",
-        "region",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1032",
+      "part": "osm:way/741115038",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A505",
+      "part": "osm:way/741115038",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nse:sambro-harbour",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

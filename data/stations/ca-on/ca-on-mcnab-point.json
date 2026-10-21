@@ -2,7 +2,9 @@
   "id": "ca-on-mcnab-point",
   "name": "McNab Point Lighthouse",
   "other_names": [
-    "phare de McNab Point"
+    "phare de McNab Point",
+    "McNab Point",
+    "Southampton Harbour Range Rear"
   ],
   "country": "CA",
   "region": "ON",
@@ -11,24 +13,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.47237,
-    "lon": -81.392641,
+    "lat": 44.4719,
+    "lon": -81.3924,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "parks_canada_hl"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1877,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -55,14 +57,14 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN643",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Saugeen Shores",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -70,16 +72,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1877,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 2012,
       "event": "heritage_designated",
@@ -95,6 +103,21 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q45324544",
       "kind": "wikidata"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14552",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1047",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onlh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,15 +129,41 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14552",
+      "part": "wikidata:Q45324544",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1047",
+      "part": "wikidata:Q45324544",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:mcnab-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

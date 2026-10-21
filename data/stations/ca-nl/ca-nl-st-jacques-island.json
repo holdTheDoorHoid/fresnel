@@ -2,7 +2,10 @@
   "id": "ca-nl-st-jacques-island",
   "name": "St. Jacques Island Lighthouse",
   "other_names": [
-    "phare de St. Jacques Island"
+    "phare de St. Jacques Island",
+    "Fortune Bay Lighthouse",
+    "St. Jacques Island",
+    "St. Jacques Island Light Station"
   ],
   "country": "CA",
   "region": "NL",
@@ -16,30 +19,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "cast_iron",
+      "material": "cast_iron",
+      "built": 1908,
+      "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": null
+    "characteristic": "LFl W 6s",
+    "focal_height_m": 39.9,
+    "range_nm": 16.0,
+    "fog_signal": "horn",
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -60,11 +63,12 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN669",
+    "ccg_list_number": "N118",
+    "nga": "2292",
+    "admiralty": "H304"
   },
-  "agency": null,
+  "agency": "St",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -75,16 +79,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1989,
       "event": "heritage_designated",
@@ -111,6 +121,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549644647",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15153",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1317",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Fortune Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl100-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nflw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,6 +162,42 @@
       "part": "wikidata:Q44452420",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15153",
+      "part": "wikidata:Q44452420",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1317",
+      "part": "wikidata:Q44452420",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N118",
+      "part": "wikidata:Q44452420",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nflw:st-jacques-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
       ]
     }
   ],

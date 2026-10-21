@@ -1,7 +1,9 @@
 {
   "id": "ca-nl-old-lighthouse-site",
-  "name": "Old Lighthouse Site",
-  "other_names": [],
+  "name": "Cupids Cove",
+  "other_names": [
+    "Old Lighthouse Site"
+  ],
   "country": "CA",
   "region": "NL",
   "county": null,
@@ -19,7 +21,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cupids Cove",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 47.55633,
+        "lon": -53.228326
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Old Lighthouse Site",
       "type": null,
       "material": null,
       "built": null,
@@ -108,6 +125,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Old_Lighthouse_Site_%28Cupids%2C_Newfoundland_and_Labrador%29",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2219",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,15 +141,22 @@
         "events",
         "kind",
         "location",
-        "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2219",
+      "part": "lighthousefriends:2219",
+      "fields": [
+        "name"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

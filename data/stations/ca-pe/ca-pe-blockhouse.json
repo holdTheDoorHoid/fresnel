@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Blockhouse Point",
     "Blockhouse Point Light",
-    "Blockhouse Point Lighthouse"
+    "Blockhouse Point Lighthouse",
+    "Blockhouse Point"
   ],
   "country": "CA",
   "region": "PE",
@@ -24,24 +25,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "wood_frame",
+      "material": "wood",
       "built": 1876,
       "height_m": 12.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1846,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc W 4s",
+    "characteristic": "LFl W 6s",
     "focal_height_m": 18.3,
-    "range_nm": 12.0,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -79,10 +80,11 @@
     "uscg_llnr": null,
     "arlhs": "CAN046",
     "ccg_list_number": "A993",
-    "nga": "110-8236"
+    "nga": "110-8236",
+    "admiralty": "H1008"
   },
   "agency": "Government of Canada",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -92,8 +94,8 @@
     "as_of": "1962"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -102,6 +104,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1846,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
     {
       "year": 1876,
       "event": "built",
@@ -176,6 +184,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6436147903",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=17532",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=969",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -188,7 +216,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -204,9 +231,77 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:17532",
+      "part": "wikidata:Q30575034",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:969",
+      "part": "wikidata:Q30575034",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A993",
+      "part": "wikidata:Q30575034",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:blockhouse-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl W 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "Oc W 4s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1876
+        },
+        {
+          "source": "rowlett",
+          "value": 1846
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1876
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

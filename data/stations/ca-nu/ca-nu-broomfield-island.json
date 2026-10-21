@@ -1,7 +1,10 @@
 {
   "id": "ca-nu-broomfield-island",
   "name": "Broomfield Island",
-  "other_names": [],
+  "other_names": [
+    "Broomfield Island Light and",
+    "Sainsbury Point"
+  ],
   "country": "CA",
   "region": "NU",
   "county": null,
@@ -35,16 +38,17 @@
     "lens": null,
     "characteristic": "Fl R 6s",
     "focal_height_m": 44.0,
-    "range_nm": 8.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "ccg_list_number": "T1090",
+    "nga": "0714",
+    "admiralty": "H36.4"
   },
   "agency": null,
   "ownership": "unknown",
@@ -61,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +79,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/12737088225",
       "kind": "osm"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Arctic Coast: Arctic Coast - Hudson Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/arc/arc1060-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nvt.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,15 +98,32 @@
       "part": "osm:node/12737088225",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:T1090",
+      "part": "osm:node/12737088225",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nvt:broomfield-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

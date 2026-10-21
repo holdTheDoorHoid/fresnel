@@ -4,7 +4,8 @@
   "other_names": [
     "phare de Naufrage",
     "Naufrage Lighthouse",
-    "Naufrage"
+    "Naufrage",
+    "Shipwreck Point"
   ],
   "country": "CA",
   "region": "PE",
@@ -34,26 +35,27 @@
     }
   ],
   "light": {
-    "first_lit": 1968,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 5.0,
-    "range_nm": 12.0,
+    "characteristic": "Oc W 5s",
+    "focal_height_m": 25.6,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN459",
     "ccg_list_number": "A1042",
-    "nga": "110-8036"
+    "nga": "110-8036",
+    "admiralty": "H1168"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -61,13 +63,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -76,6 +78,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1968,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1968,
@@ -133,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/752608907",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=944",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,7 +174,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,7 +185,6 @@
       "key": "osm:node/1045711207",
       "part": "wikidata:Q47088755",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -166,6 +193,42 @@
       "key": "osm:way/752608907",
       "part": "wikidata:Q47088755",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:944",
+      "part": "wikidata:Q47088755",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1042",
+      "part": "wikidata:Q47088755",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:shipwreck-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:shipwreck-point-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -173,11 +236,23 @@
       "field": "status",
       "values": [
         {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
           "source": "osm",
           "value": "active"
         },
         {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
           "value": "inactive"
         }
       ],
@@ -187,12 +262,12 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
-          "value": "Fl R 4s"
+          "source": "ccg_list_of_lights",
+          "value": "Oc W 5s"
         },
         {
-          "source": "wikidata",
-          "value": "Oc W 5s"
+          "source": "osm",
+          "value": "Fl R 4s"
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
@@ -207,9 +282,27 @@
         {
           "source": "osm",
           "value": 5.0
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": 25.6
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1968
+        },
+        {
+          "source": "rowlett",
+          "value": 1913
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

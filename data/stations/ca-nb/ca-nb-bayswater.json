@@ -2,7 +2,8 @@
   "id": "ca-nb-bayswater",
   "name": "Bayswater Lighthouse",
   "other_names": [
-    "phare de Bayswater"
+    "phare de Bayswater",
+    "Bayswater"
   ],
   "country": "CA",
   "region": "NB",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "wood_frame",
+      "material": "wood",
+      "built": 1913,
+      "height_m": 8.8,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2005,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -50,11 +51,11 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN25",
+    "ccg_list_number": "A120",
     "nga": null
   },
-  "agency": null,
+  "agency": "Bayswater Lighthouse Non Profit Group",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -65,7 +66,7 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -75,6 +76,18 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2005,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
     {
       "year": 2018,
       "event": "heritage_designated",
@@ -95,6 +108,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1247391906",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=15492",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1148",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,6 +145,32 @@
       "part": "wikidata:Q84330169",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:15492",
+      "part": "wikidata:Q84330169",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1148",
+      "part": "wikidata:Q84330169",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbs:bayswater",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

@@ -3,7 +3,8 @@
   "name": "Portlock Point Lighthouse",
   "other_names": [
     "phare de Portlock Point",
-    "Portlock Point Light"
+    "Portlock Point Light",
+    "Portlock Point"
   ],
   "country": "CA",
   "region": "BC",
@@ -33,26 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": 1987,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q W",
+    "characteristic": "Q W 1s",
     "focal_height_m": 15.5,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN411",
     "ccg_list_number": "P267",
-    "nga": "111-13504"
+    "nga": "111-13504",
+    "admiralty": "G5368"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Parks Canada (Gulf Islands National Park Reserve)",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -60,13 +62,13 @@
     "as_of": "1964"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -77,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1964,
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1987,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1987,
@@ -127,6 +141,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3772706531",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1179",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Pacific Coast: Pacific Coast - Southern Strait of Georgia",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/pac/pac2652-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/bcv.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,7 +167,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -150,8 +178,34 @@
       "key": "osm:node/3772706531",
       "part": "wikidata:Q28374800",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1179",
+      "part": "wikidata:Q28374800",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:P267",
+      "part": "wikidata:Q28374800",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:bcv:portlock-point",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],
@@ -159,6 +213,10 @@
     {
       "field": "light.characteristic",
       "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "Q W 1s"
+        },
         {
           "source": "osm",
           "value": "Q W"
@@ -169,6 +227,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1987
+        },
+        {
+          "source": "rowlett",
+          "value": 1895
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

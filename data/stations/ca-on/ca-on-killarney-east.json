@@ -4,7 +4,9 @@
   "other_names": [
     "phare de Killarney East",
     "Killarney Lightstation",
-    "Killarney"
+    "Killarney",
+    "Killarney East",
+    "Red Rock Point"
   ],
   "country": "CA",
   "region": "ON",
@@ -34,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1866,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 4s",
     "focal_height_m": 17.1,
-    "range_nm": null,
+    "range_nm": 12.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -61,8 +63,8 @@
     "ccg_list_number": "I974",
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,8 +74,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,6 +89,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1866,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1909,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1991,
@@ -128,6 +142,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/528952355",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1381",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Inland Waters: Inland Waters - Georgian Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/inland-waters/iw814-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/ongb.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,8 +181,33 @@
       "key": "osm:node/528952355",
       "part": "wikidata:Q30301458",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1381",
+      "part": "wikidata:Q30301458",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:I974",
+      "part": "wikidata:Q30301458",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ongb:killarney-east",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

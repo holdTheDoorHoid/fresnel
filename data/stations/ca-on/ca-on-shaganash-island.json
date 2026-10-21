@@ -2,7 +2,10 @@
   "id": "ca-on-shaganash-island",
   "name": "Shaganash Island Lighthouse",
   "other_names": [
-    "phare de Shaganash Island"
+    "phare de Shaganash Island",
+    "Shaganash (Island No. 10)",
+    "Shaganash Island",
+    "\"Island Number 10\""
   ],
   "country": "CA",
   "region": "ON",
@@ -16,19 +19,19 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "wood_frame",
       "material": "wood",
       "built": 1922,
       "height_m": 9.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "parks_canada_hl"
     }
   ],
   "light": {
@@ -36,10 +39,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -55,11 +58,11 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
+    "arlhs": "CAN587",
+    "ccg_list_number": "I1127",
     "nga": null
   },
-  "agency": null,
+  "agency": "Canadian Lighthouses of Lake Superior",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -70,16 +73,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1922,
       "event": "built",
@@ -106,6 +115,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/853516675",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=17433",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1563",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onnw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -130,9 +154,56 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:17433",
+      "part": "wikidata:Q124101323",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1563",
+      "part": "wikidata:Q124101323",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onnw:shaganash-island",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1922
+        },
+        {
+          "source": "rowlett",
+          "value": 1910
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1922
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

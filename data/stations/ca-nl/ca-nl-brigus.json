@@ -2,7 +2,11 @@
   "id": "ca-nl-brigus",
   "name": "Brigus Lighthouse",
   "other_names": [
-    "Brigus"
+    "North Head Lighthouse",
+    "phare de North Head",
+    "Brigus",
+    "Brigus Light",
+    "North Head"
   ],
   "country": "CA",
   "region": "NL",
@@ -21,11 +25,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Brigus Lighthouse",
       "type": null,
       "material": null,
       "built": 1885,
       "height_m": 9.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "North Head Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -39,17 +54,29 @@
     "focal_height_m": 34.4,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "3992",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=3992"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "4072",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=4072"
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN832",
     "ccg_list_number": "N488",
-    "nga": "110-1788"
+    "nga": "110-1788",
+    "admiralty": "H478"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,8 +86,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -74,11 +101,36 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
     }
   ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Head_Lighthouse_%285061241880%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Head_Lighthouse_%285061241880%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:North_Head_Lighthouse_%285061241880%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Head_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Head_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:North_Head_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
     {
       "label": "Wikidata",
@@ -91,9 +143,29 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q47377924",
+      "kind": "wikidata"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1832274207",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1244",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Conception Bay",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,12 +183,47 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q47377924",
+      "part": "wikidata:Q47377924",
+      "fields": [
+        "events",
+        "photos",
+        "registers"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/1832274207",
       "part": "wikidata:Q106190252",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1244",
+      "part": "wikidata:Q106190252",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:N488",
+      "part": "wikidata:Q106190252",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nfle:brigus",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
       ]
     }
   ],

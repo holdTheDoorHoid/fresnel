@@ -3,7 +3,8 @@
   "name": "Port Dalhousie Range Rear Lighthouse",
   "other_names": [
     "Port Dalhousie Inner Range Lighthouse",
-    "Rear Range Lighthouse, Port Dalhousie"
+    "Rear Range Lighthouse, Port Dalhousie",
+    "Port Dalhousie Range Rear"
   ],
   "country": "CA",
   "region": "ON",
@@ -17,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -33,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1852,
+    "deactivated": 1988,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -65,8 +66,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of St",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -76,8 +77,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,10 +88,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1852,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
       "year": 1898,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1988,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     },
     {
       "year": 1990,
@@ -138,6 +157,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6549644884",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1068",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -164,9 +193,42 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1068",
+      "part": "wikidata:Q28919186",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:port-dalhousie-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1898
+        },
+        {
+          "source": "rowlett",
+          "value": 1852
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,10 @@
   "name": "Indian Head Lighthouse",
   "other_names": [
     "phare d'Indian Head",
-    "Indian Head Light"
+    "Indian Head Light",
+    "Indian Head",
+    "Summerside Harbour Wharf Light",
+    "Indian Spit"
   ],
   "country": "CA",
   "region": "PE",
@@ -12,10 +15,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.37214,
-    "lon": -63.81038,
+    "lat": 46.37975,
+    "lon": -63.816994,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
@@ -40,7 +43,7 @@
     "focal_height_m": 14.0,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -68,12 +71,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN248",
     "ccg_list_number": "A1020",
-    "nga": "110-8316"
+    "nga": "110-8316",
+    "admiralty": "H1048"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -81,13 +85,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -148,6 +152,26 @@
       "label": "ARLHS World List of Lights CAN248",
       "url": "https://wlol.arlhs.com/lighthouse/CAN248.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1247058230",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=980",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl942-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,17 +185,86 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1247058230",
+      "part": "wikidata:Q30575029",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:980",
+      "part": "wikidata:Q30575029",
+      "fields": []
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1020",
+      "part": "wikidata:Q30575029",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:indian-head",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            46.37214,
+            -63.81038
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            46.37975,
+            -63.81699
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.3794,
+            -63.8169
+          ]
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": [
+            46.37972,
+            -63.81697
+          ]
+        }
+      ],
+      "distance_m": 987,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

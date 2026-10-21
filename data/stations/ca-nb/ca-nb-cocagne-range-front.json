@@ -3,7 +3,8 @@
   "name": "Cocagne Range Front Lighthouse",
   "other_names": [
     "Cocagne Lighthouse",
-    "Cocagne River"
+    "Cocagne River",
+    "Cocagne Range Front"
   ],
   "country": "CA",
   "region": "NB",
@@ -47,9 +48,10 @@
     "uscg_llnr": null,
     "arlhs": "CAN141",
     "ccg_list_number": "A1116",
-    "nga": "110-7708"
+    "nga": "110-7708",
+    "admiralty": "H1354"
   },
-  "agency": null,
+  "agency": "Cocagne Marina",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -60,8 +62,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -75,6 +77,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2018,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -95,6 +103,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1659450444",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1386",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,10 +138,74 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1386",
+      "part": "wikidata:Q106239473",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:cocagne-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            46.33528,
+            -64.61493
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            46.33559,
+            -64.61421
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.33364,
+            -64.62568
+          ]
+        }
+      ],
+      "distance_m": 907,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

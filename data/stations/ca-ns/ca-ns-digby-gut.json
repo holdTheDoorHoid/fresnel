@@ -1,7 +1,9 @@
 {
   "id": "ca-ns-digby-gut",
   "name": "Digby Gut Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Digby Gut"
+  ],
   "country": "CA",
   "region": "NS",
   "county": null,
@@ -9,10 +11,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.68579,
-    "lon": -65.75862,
+    "lat": 44.688167,
+    "lon": -65.75975,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "status": "active",
   "status_note": null,
@@ -33,23 +35,24 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
+    "characteristic": "LFl G 6s",
+    "focal_height_m": 20.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "ccg_list_of_lights"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN159",
-    "ccg_list_number": null,
-    "nga": "110-10916"
+    "ccg_list_number": "A202",
+    "nga": "110-10916",
+    "admiralty": "H3892"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -57,16 +60,29 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": false,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2014,
+      "event": "removed",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -95,6 +111,21 @@
       "label": "ARLHS World List of Lights CAN159",
       "url": "https://wlol.arlhs.com/lighthouse/CAN159.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1336",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Bay of Fundy, N.S.",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl163-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nsbf.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,16 +136,59 @@
       "fields": [
         "aton",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1336",
+      "part": "wikidata:Q28376437",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A202",
+      "part": "wikidata:Q28376437",
+      "fields": [
+        "aton",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsbf:digby-gut-fog-signal",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "LFl G 6s"
+        },
+        {
+          "source": "wikidata",
+          "value": "F W"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

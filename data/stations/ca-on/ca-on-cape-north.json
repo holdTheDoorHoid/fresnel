@@ -1,7 +1,10 @@
 {
   "id": "ca-on-cape-north",
   "name": "Cape North Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Cape Race/Cape North",
+    "Cape Race / Cape North"
+  ],
   "country": "CA",
   "region": "ON",
   "county": "Ottawa",
@@ -14,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -31,7 +34,7 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1980,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 34.0,
@@ -42,11 +45,11 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "CAN865",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Ingenium",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -57,8 +60,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -72,6 +75,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1980,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -102,6 +111,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/493679185",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1455",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onse.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,6 +145,24 @@
       "part": "wikidata:Q5034977",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1455",
+      "part": "wikidata:Q5034977",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onse:cape-race-cape-north",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],

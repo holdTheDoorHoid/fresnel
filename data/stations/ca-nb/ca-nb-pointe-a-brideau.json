@@ -1,24 +1,27 @@
 {
   "id": "ca-nb-pointe-a-brideau",
   "name": "Pointe à Brideau Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Pointe à Brideau Range Rear",
+    "Caraquet"
+  ],
   "country": "CA",
   "region": "NB",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 47.795105,
     "lon": -64.941556,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": null,
@@ -31,23 +34,24 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2020,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
+    "arlhs": "CAN895",
+    "ccg_list_number": "A1319.3",
+    "nga": "7306",
+    "admiralty": "H1585.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -57,8 +61,8 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -66,7 +70,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1978,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2020,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -95,6 +112,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5476603970",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1222",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -103,7 +130,6 @@
       "key": "wikidata:Q111631444",
       "part": "wikidata:Q111631444",
       "fields": [
-        "kind",
         "name",
         "photos",
         "region"
@@ -115,6 +141,27 @@
       "part": "wikidata:Q111631444",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1222",
+      "part": "wikidata:Q111631444",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:pointe-brideau-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

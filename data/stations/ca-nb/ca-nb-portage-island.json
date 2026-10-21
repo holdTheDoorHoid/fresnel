@@ -3,25 +3,26 @@
   "name": "Portage Island light",
   "other_names": [
     "Portage Island lighthouse",
-    "Phare de Shippagan"
+    "Phare de Shippagan",
+    "Portage Island Range Rear"
   ],
   "country": "CA",
   "region": "NB",
   "county": "Gloucester County",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 47.748109,
     "lon": -64.709043,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
       "type": null,
       "material": "wood",
@@ -33,26 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1869,
+    "deactivated": 1986,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN733",
     "ccg_list_number": null,
-    "nga": null
+    "nga": null,
+    "admiralty": "H1444.1"
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "New Brunswick Department of Tourism and Parks",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -60,16 +62,35 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is open and the tower open."
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1986,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -103,6 +124,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5341586805",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1237",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -113,7 +144,6 @@
       "fields": [
         "aton",
         "county",
-        "kind",
         "name",
         "photos",
         "region",
@@ -126,6 +156,27 @@
       "part": "wikidata:Q28375880",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1237",
+      "part": "wikidata:Q28375880",
+      "fields": [
+        "kind"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbn:portage-island-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "light",
+        "ownership",
+        "visit"
       ]
     }
   ],

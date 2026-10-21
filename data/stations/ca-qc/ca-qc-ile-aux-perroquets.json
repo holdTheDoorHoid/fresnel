@@ -6,7 +6,8 @@
     "phare de l'Île-aux-Perroquets",
     "Île aux Perroquets",
     "Phare de l'Île-aux-Perroquets",
-    "Iles aux Perroquets"
+    "Iles aux Perroquets",
+    "Îles aux Perroquets"
   ],
   "country": "CA",
   "region": "QC",
@@ -36,14 +37,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1888,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 24.0,
-    "range_nm": 15.0,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "ccg_list_of_lights"
   },
   "registers": [
     {
@@ -66,12 +67,13 @@
     "uscg_llnr": null,
     "arlhs": "CAN236",
     "ccg_list_number": "A1608",
-    "nga": "110-3124"
+    "nga": "110-3124",
+    "admiralty": "H1958"
   },
   "agency": "Mingan Archipelago National Park Reserve",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -79,13 +81,13 @@
     "as_of": "1981"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
@@ -94,6 +96,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1888,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
     },
     {
       "year": 1950,
@@ -188,6 +196,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1920674788",
       "kind": "osm"
+    },
+    {
+      "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14553",
+      "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1619",
+      "kind": "reference"
+    },
+    {
+      "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Gulf of St. Lawrence",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl14775-en.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/qcn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -224,8 +252,41 @@
       "key": "osm:node/1920674788",
       "part": "wikidata:Q109324551",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "parks_canada_hl",
+      "key": "parks_canada_hl:14553",
+      "part": "wikidata:Q109324551",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1619",
+      "part": "wikidata:Q109324551",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A1608",
+      "part": "wikidata:Q109324551",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:qcn:le-aux-perroquets",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "visit"
       ]
     }
   ],
@@ -234,7 +295,7 @@
       "field": "light.characteristic",
       "values": [
         {
-          "source": "osm",
+          "source": "ccg_list_of_lights",
           "value": "Fl W 5s"
         },
         {
@@ -243,6 +304,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1888
+        },
+        {
+          "source": "rowlett",
+          "value": 1888
+        },
+        {
+          "source": "parks_canada_hl",
+          "value": 1952
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",
