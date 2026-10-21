@@ -316,7 +316,7 @@ class BuildBulletins(unittest.TestCase):
         text = polite.read_text(os.path.join(raw, "corpus", v["path"]))
         self.assertEqual(text.count("\f"), 2)
         self.assertIn("Point Reyes", text.split("\f")[0])
-        self.assertIn("bulletin/1932", " ".join(idx.get("not_found", {})) or "bulletin/1932")
+        self.assertIn("bulletin/LighthouseServiceBulletin_1932", idx["not_found"])
 
 
 if __name__ == "__main__":
