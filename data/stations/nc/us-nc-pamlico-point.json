@@ -1,0 +1,147 @@
+{
+  "id": "us-nc-pamlico-point",
+  "name": "Pamlico Point",
+  "other_names": [],
+  "country": "US",
+  "region": "NC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 35.313274,
+    "lon": -76.45579,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "brick",
+      "built": 1828,
+      "height_m": 10.4,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1828,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 11.3,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "2-32813",
+    "arlhs": "USA-579",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1891,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1950,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Pamlico Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1919",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pamlico Point",
+      "url": "https://archives.uslhs.org/places/pamlico-point",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1919",
+      "part": "lighthousefriends:1919",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:pamlico-point-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15329",
+      "part": "lighthousefriends:1919",
+      "fields": [
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

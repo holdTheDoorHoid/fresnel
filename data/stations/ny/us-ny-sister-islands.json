@@ -1,0 +1,176 @@
+{
+  "id": "us-ny-sister-islands",
+  "name": "Sister Islands",
+  "other_names": [
+    "Sisters Island",
+    "Verona Beach",
+    "Sylvan Beach"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": "St. Lawrence",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 44.414149,
+    "lon": -75.844417,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "brick",
+      "built": 1870,
+      "height_m": 12.7,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1870,
+    "deactivated": 1959,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 14.3,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-1280",
+    "arlhs": "USA-105",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1959,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Sister Islands",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=319",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sisters Island",
+      "url": "https://archives.uslhs.org/places/sisters-island",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:319",
+      "part": "lighthousefriends:319",
+      "fields": [
+        "access",
+        "kind",
+        "location",
+        "name",
+        "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:sisters-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:verona-beach",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3446",
+      "part": "lighthousefriends:319",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

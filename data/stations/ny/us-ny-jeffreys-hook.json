@@ -3,7 +3,12 @@
   "name": "Jeffrey's Hook Light",
   "other_names": [
     "Little Red Lighthouse",
-    "Jeffery's Hook Light"
+    "Jeffery's Hook Light",
+    "Jeffreys Hook",
+    "Jeffrey's Hook",
+    "\"Little Red Lighthouse\"",
+    "Jeffrey's Hook Lighthouse",
+    "The Little Red Lighthouse"
   ],
   "country": "US",
   "region": "NY",
@@ -33,20 +38,22 @@
     }
   ],
   "light": {
-    "first_lit": 1921,
+    "first_lit": 1889,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 3s",
     "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79003130",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003130"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003130",
+      "listed": "1979-05-29",
+      "nomination": "https://catalog.archives.gov/id/75313865"
     },
     {
       "register": "New York City Landmark",
@@ -64,7 +71,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -72,15 +79,33 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1880,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1921,
       "event": "built",
@@ -96,13 +121,13 @@
     {
       "year": 1947,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +174,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/397678729",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Jeffreys Hook",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=393",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Jeffreys Hook",
+      "url": "https://archives.uslhs.org/places/jeffreys-hook",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75313865",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +206,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -174,8 +218,70 @@
       "key": "osm:way/397678729",
       "part": "wikidata:Q3739789",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:393",
+      "part": "wikidata:Q3739789",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:jeffrey-s-hook",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-37668",
+      "part": "wikidata:Q3739789",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:10252",
+      "part": "wikidata:Q3739789",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79003130",
+      "part": "wikidata:Q3739789",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.85021,-73.94697",
+      "part": "wikidata:Q3739789",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.85060,-73.94648",
+      "part": "wikidata:Q3739789",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:jeffrey-s-hook",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,9 +296,31 @@
         {
           "source": "wikidata",
           "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1921
+        },
+        {
+          "source": "osm",
+          "value": 1921
+        },
+        {
+          "source": "uslhs",
+          "value": 1889
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

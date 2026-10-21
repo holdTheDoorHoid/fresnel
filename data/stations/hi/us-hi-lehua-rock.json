@@ -1,7 +1,10 @@
 {
   "id": "us-hi-lehua-rock",
   "name": "Lehua Rock Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Lehua Rock",
+    "Lehua Rock Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": "Kauai",
@@ -35,9 +38,9 @@
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 215.0,
-    "range_nm": null,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -100,6 +103,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4693005997",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lehua Rock",
+      "url": "https://archives.uslhs.org/places/lehua-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,6 +138,26 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:lehua-rock",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-29935",
+      "part": "wikidata:Q42509433",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97102",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

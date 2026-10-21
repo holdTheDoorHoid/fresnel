@@ -4,7 +4,8 @@
   "other_names": [
     "Old Scituate Light",
     "Old Scituate Lighthouse",
-    "Scituate Lighthouse"
+    "Scituate Lighthouse",
+    "Scituate"
   ],
   "country": "US",
   "region": "MA",
@@ -18,36 +19,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1811,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1860,
+    "first_lit": 1811,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
     "focal_height_m": 15.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001490",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001490"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001490",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63792734"
     }
   ],
   "aton": {
@@ -56,23 +59,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "SCITUATE HISTORICAL SOCIETY",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,19 +83,25 @@
     {
       "year": 1811,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1811,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1860,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -150,6 +159,26 @@
       "label": "Website",
       "url": "http://oldscituatelight.blogspot.com/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Scituate",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=469",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Scituate",
+      "url": "https://archives.uslhs.org/places/scituate",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792734",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,23 +206,68 @@
         "location",
         "name"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:469",
+      "part": "wikidata:Q7084940",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:scituate",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-12275",
+      "part": "wikidata:Q7084940",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2857",
+      "part": "wikidata:Q7084940",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001490",
+      "part": "wikidata:Q7084940",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.20478,-70.71575",
+      "part": "wikidata:Q7084940",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:scituate",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1994
-        },
-        {
-          "source": "wikidata",
-          "value": 1860
-        }
-      ],
-      "note": "A source gives the light's service entry (1994) after its retirement (1860); it may have been relit. Neither is shown as the first lighting."
-    },
     {
       "field": "first_year",
       "values": [
@@ -203,6 +277,10 @@
         },
         {
           "source": "osm",
+          "value": 1811
+        },
+        {
+          "source": "uslhs",
           "value": 1811
         }
       ],

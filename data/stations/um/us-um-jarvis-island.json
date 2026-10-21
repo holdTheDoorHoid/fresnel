@@ -2,7 +2,8 @@
   "id": "us-um-jarvis-island",
   "name": "Jarvis Island Lighthouse",
   "other_names": [
-    "Jarvis Island Light"
+    "Jarvis Island Light",
+    "Jarvis Island"
   ],
   "country": "US",
   "region": "UM",
@@ -72,13 +73,13 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1942,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -110,6 +111,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3256884469",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: U.S. Minor Outlying Islands",
+      "url": "https://www.ibiblio.org/lighthouse/umi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +140,14 @@
       "part": "wikidata:Q33417143",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:umi:jarvis-island",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

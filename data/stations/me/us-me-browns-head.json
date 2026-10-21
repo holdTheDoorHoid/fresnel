@@ -2,7 +2,10 @@
   "id": "us-me-browns-head",
   "name": "Browns Head Light",
   "other_names": [
-    "Browns Head Lighthouse"
+    "Browns Head Lighthouse",
+    "Browns Head",
+    "Browns Head Light Station",
+    "Brown's Head"
   ],
   "country": "US",
   "region": "ME",
@@ -23,29 +26,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1832,
       "height_m": 6.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1832,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "FF R",
-    "focal_height_m": 12.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "F W",
+    "focal_height_m": 11.8,
     "range_nm": 14.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83000460",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000460"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000460",
+      "listed": "1983-01-27",
+      "nomination": "https://catalog.archives.gov/id/88686448"
     }
   ],
   "aton": {
@@ -54,15 +64,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "American Lighthouse Foundation",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1967"
+    "as_of": "1987"
   },
   "visit": {
     "grounds_open": null,
@@ -70,7 +80,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,10 +92,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1967,
@@ -96,8 +124,14 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 1987,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -143,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/903155310",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Browns Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=540",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Browns Head",
+      "url": "https://archives.uslhs.org/places/browns-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686448",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +209,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,9 +223,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:540",
+      "part": "wikidata:Q4976654",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:browns-head-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3965",
+      "part": "wikidata:Q4976654",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2891",
+      "part": "wikidata:Q4976654",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000460",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.11174,-68.90947",
+      "part": "wikidata:Q4976654",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:brown-s-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1832
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

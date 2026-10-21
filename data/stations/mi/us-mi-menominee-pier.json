@@ -6,7 +6,16 @@
     "Menominee North Pier Lighthouse",
     "Menominee Pierhead Lighthouse",
     "Menominee Pierhead Light Station",
-    "Menominee Pierhead Light 4"
+    "Menominee Pierhead Light 4",
+    "Menominee North Pier",
+    "Menominee (Marinette) North Pier",
+    "Light 6",
+    "Menominee (Marinette) North Pierhead",
+    "Menominee North Pier Light",
+    "Menominee Pierhead Light",
+    "Menominee Pier Light 4",
+    "Marinette Pierhead Light 3",
+    "Menominee Pier Light 6"
   ],
   "country": "US",
   "region": "MI",
@@ -41,15 +50,17 @@
     "lens": null,
     "characteristic": "Oc R 4s",
     "focal_height_m": 14.0,
-    "range_nm": 9.0,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000738",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000738"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000738",
+      "listed": "2005-07-27",
+      "nomination": "https://catalog.archives.gov/id/75325107"
     }
   ],
   "aton": {
@@ -74,7 +85,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -87,6 +98,12 @@
     },
     {
       "year": 1927,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1927,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -94,8 +111,14 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2018,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -141,6 +164,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1339043781",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Menominee North Pier",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=558",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325107",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -168,9 +206,73 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:558",
+      "part": "wikidata:Q6817255",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:menominee-marinette-north-pier-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:menominee-marinette-north-pierhead",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21930",
+      "part": "wikidata:Q6817255",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21935",
+      "part": "wikidata:Q6817255",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21940",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000738",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.09725,-87.58603",
+      "part": "wikidata:Q6817255",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:menominee-north-pier",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

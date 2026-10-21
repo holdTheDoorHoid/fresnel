@@ -1,9 +1,13 @@
 {
   "id": "us-me-cape-elizabeth-light-western",
-  "name": "Cape Elizabeth Light (western tower)",
+  "name": "Cape Elizabeth Light",
   "other_names": [
-    "Cape Elizabeth Light",
-    "Two Lights"
+    "Cape Elizabeth Light (western tower)",
+    "Two Lights",
+    "Cape Elizabeth West",
+    "Cape Elizabeth",
+    "Cape Elizabeth East",
+    "West Tower"
   ],
   "country": "US",
   "region": "ME",
@@ -23,13 +27,13 @@
     {
       "role": "tower",
       "name": "Cape Elizabeth Light",
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "cast_iron",
       "built": 1828,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "tower",
@@ -42,26 +46,28 @@
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 43.564222,
-        "lon": -70.202528
+        "lat": 43.564231,
+        "lon": -70.202583
       }
     }
   ],
   "light": {
-    "first_lit": 1874,
+    "first_lit": 1828,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(4) W 15s",
     "focal_height_m": 39.3,
     "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "osm"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000167",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000167"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000167",
+      "listed": "1974-12-27",
+      "nomination": "https://catalog.archives.gov/id/88685906"
     }
   ],
   "aton": {
@@ -70,11 +76,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "American Lighthouse Foundation",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -86,7 +92,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -98,9 +104,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -110,21 +122,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1924,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1963,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -185,6 +203,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1907079334",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Elizabeth West",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1338",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Cape Elizabeth",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=547",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Elizabeth",
+      "url": "https://archives.uslhs.org/places/cape-elizabeth",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Elizabeth (West Tower)",
+      "url": "https://archives.uslhs.org/places/cape-elizabeth-west-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685906",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -196,7 +244,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -220,8 +267,98 @@
       "part": "wikidata:Q5034765",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1338",
+      "part": "wikidata:Q108910168",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:547",
+      "part": "wikidata:Q5034765",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:cape-elizabeth-east-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:cape-elizabeth-west-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-60",
+      "part": "wikidata:Q5034765",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-7520",
+      "part": "wikidata:Q5034765",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2894",
+      "part": "wikidata:Q5034765",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:33313",
+      "part": "wikidata:Q5034765",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000167",
+      "part": "wikidata:Q5034765",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.56607,-70.20006",
+      "part": "wikidata:Q5034765",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:cape-elizabeth-two-lights",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -234,11 +371,19 @@
           "value": "active"
         },
         {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
           "value": "active"
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
           "value": "inactive"
         }
       ],

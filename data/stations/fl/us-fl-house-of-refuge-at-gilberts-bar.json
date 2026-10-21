@@ -1,10 +1,14 @@
 {
   "id": "us-fl-house-of-refuge-at-gilberts-bar",
   "name": "House of Refuge at Gilbert's Bar",
-  "other_names": [],
+  "other_names": [
+    "Gilbert's Bar - House of Refuge",
+    "Gilbert`s Bar House of Refuge",
+    "Gilbert's Bar House of Refuge"
+  ],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Martin",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -14,7 +18,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -24,7 +28,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -34,7 +38,9 @@
     {
       "register": "NRHP",
       "number": "74000651",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000651"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000651",
+      "listed": "1974-05-03",
+      "nomination": "https://catalog.archives.gov/id/77843124"
     }
   ],
   "aton": {
@@ -43,31 +49,37 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Martin County",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": true,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1876,
+      "event": "built",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -99,6 +111,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:House_of_Refuge_at_Gilbert%27s_Bar",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gilbert's Bar - House of Refuge",
+      "url": "https://archives.uslhs.org/places/gilberts-bar-house-refuge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77843124",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -115,10 +137,40 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:41954",
+      "part": "wikidata:Q5915283",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000651",
+      "part": "wikidata:Q5915283",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:gilbert-s-bar-house-of-refuge",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

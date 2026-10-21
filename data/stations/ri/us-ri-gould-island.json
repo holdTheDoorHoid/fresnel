@@ -2,7 +2,9 @@
   "id": "us-ri-gould-island",
   "name": "Gould Island Light",
   "other_names": [
-    "Gould Island Lighthouse"
+    "Gould Island Lighthouse",
+    "Gould Island",
+    "Gould Island South Light"
   ],
   "country": "US",
   "region": "RI",
@@ -23,27 +25,27 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1889,
+      "height_m": 9.1,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1889,
     "deactivated": 1947,
     "lens": null,
-    "characteristic": "Fl W 30s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 10.4,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-17960",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -72,13 +74,19 @@
     {
       "year": 1889,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1947,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -100,6 +108,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6183087005",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Gould Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1966",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gould Island",
+      "url": "https://archives.uslhs.org/places/gould-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -121,6 +139,37 @@
       "part": "wikidata:Q5588280",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1966",
+      "part": "wikidata:Q5588280",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-17960",
+      "part": "wikidata:Q5588280",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8900",
+      "part": "wikidata:Q5588280",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.52947,-71.34397",
+      "part": "wikidata:Q5588280",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -2,7 +2,10 @@
   "id": "us-la-chandeleur-island",
   "name": "Chandeleur Island Light",
   "other_names": [
-    "Chandeleur Island Lighthouse"
+    "Chandeleur Island Lighthouse",
+    "Chandeleur Island",
+    "Chandeleur",
+    "Chandeleur Light"
   ],
   "country": "US",
   "region": "LA",
@@ -11,32 +14,32 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.047222,
-    "lon": -88.878056,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.04799,
+    "lon": -88.87187,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (2005) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1848,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 17.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1896,
+    "first_lit": 1848,
     "deactivated": 2005,
     "lens": null,
     "characteristic": "Fl W",
-    "focal_height_m": null,
+    "focal_height_m": 30.2,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +48,9 @@
     {
       "register": "NRHP",
       "number": "86001404",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86001404"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86001404",
+      "listed": "1986-06-25",
+      "nomination": "https://catalog.archives.gov/id/73974648"
     }
   ],
   "aton": {
@@ -54,11 +59,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard, 8th District",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -82,16 +87,52 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1896,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1896,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1896,
+      "event": "lens_installed",
+      "note": "Original lens: order 3.5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1966,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1986,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2001,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2001,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2005,
@@ -101,9 +142,27 @@
     },
     {
       "year": 2005,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2005,
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 2006,
+      "event": "built",
+      "note": "Tower 5 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2009,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -158,6 +217,26 @@
       "label": "ARLHS World List of Lights USA151",
       "url": "https://wlol.arlhs.com/lighthouse/USA151.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Chandeleur Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=810",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Chandeleur Island",
+      "url": "https://archives.uslhs.org/places/chandeleur-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/73974648",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,17 +250,100 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:810",
+      "part": "wikidata:Q5070995",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:chandeleur-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:chandeleur-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:chandeleur-5",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2806",
+      "part": "wikidata:Q5070995",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:86001404",
+      "part": "wikidata:Q5070995",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1848
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2005
+        },
+        {
+          "source": "rowlett",
+          "value": 2001
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

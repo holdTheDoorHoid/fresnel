@@ -1,11 +1,16 @@
 {
   "id": "us-ma-hospital-point-range",
-  "name": "Hospital Point Range Lights",
+  "name": "Hospital Point Range Front",
   "other_names": [
     "Hospital Point Range Front Light",
     "Hiospital Point Light Station",
     "Hospital Point Light Station",
-    "Hospital Point Range Rear Light"
+    "Hospital Point Range Rear Light",
+    "Hospital Point Range Rear",
+    "Hospital Point",
+    "Range Front",
+    "Front Range Light",
+    "Hospital Point Range"
   ],
   "country": "US",
   "region": "MA",
@@ -26,12 +31,12 @@
       "role": "front_range",
       "name": "Hospital Point Range Front Light",
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1871,
       "height_m": 13.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "rear_range",
@@ -44,26 +49,33 @@
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 42.5483,
-        "lon": -70.8785
+        "lat": 42.54833,
+        "lon": -70.87846
       }
     }
   ],
   "light": {
-    "first_lit": 1872,
+    "first_lit": 1871,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
     "focal_height_m": 21.0,
-    "range_nm": null,
+    "range_nm": 45.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002031",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002031"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002031",
+      "listed": "1987-09-28",
+      "nomination": "https://catalog.archives.gov/id/63790238"
     }
   ],
   "aton": {
@@ -73,10 +85,10 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -88,7 +100,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -100,27 +112,51 @@
       "from": "wikidata"
     },
     {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1872,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1927,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1927,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1947,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -210,6 +246,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/212039682",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hospital Point Range Front",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=480",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Hospital Point Range Rear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=607",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hospital Point (Range Front)",
+      "url": "https://archives.uslhs.org/places/hospital-point-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hospital Point Range Rear",
+      "url": "https://archives.uslhs.org/places/hospital-point-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790238",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -222,7 +288,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "photos",
         "region",
         "registers",
@@ -244,8 +309,102 @@
       "part": "wikidata:Q15225715",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:480",
+      "part": "wikidata:Q15225715",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:607",
+      "part": "wikidata:Q5908548",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:hospital-point-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:hospital-point-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10000",
+      "part": "wikidata:Q15225715",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10005",
+      "part": "wikidata:Q5908548",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2840",
+      "part": "wikidata:Q15225715",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9351",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002031",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.54649,-70.85597",
+      "part": "wikidata:Q15225715",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.54832,-70.87845",
+      "part": "wikidata:Q5908548",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:hospital-point-range",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

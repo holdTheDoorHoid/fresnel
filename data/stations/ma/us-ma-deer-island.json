@@ -2,7 +2,8 @@
   "id": "us-ma-deer-island",
   "name": "Deer Island Light",
   "other_names": [
-    "Deer Island Lighthouse"
+    "Deer Island Lighthouse",
+    "Deer Island"
   ],
   "country": "US",
   "region": "MA",
@@ -22,24 +23,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "caisson",
       "material": "steel",
       "built": 1890,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 2015,
+    "first_lit": 1890,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Alt WR 10s",
-    "focal_height_m": 16.0,
+    "characteristic": "Al W R 10s",
+    "focal_height_m": 16.2,
     "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -76,10 +77,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1960,
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -131,6 +150,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496036",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Deer Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=472",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Deer Island",
+      "url": "https://archives.uslhs.org/places/deer-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +177,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,10 +190,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:472",
+      "part": "wikidata:Q5250767",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:deer-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10795",
+      "part": "wikidata:Q5250767",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8490",
+      "part": "wikidata:Q5250767",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.33956,-70.95452",
+      "part": "wikidata:Q5250767",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2015
+        },
+        {
+          "source": "uslhs",
+          "value": 1890
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

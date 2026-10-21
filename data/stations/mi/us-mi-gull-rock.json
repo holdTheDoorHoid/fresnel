@@ -2,7 +2,9 @@
   "id": "us-mi-gull-rock",
   "name": "Gull Rock Light Station",
   "other_names": [
-    "Gull Rock Lighthouse"
+    "Gull Rock Lighthouse",
+    "Gull Rock",
+    "Gull Rock Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "brick",
+      "built": 1867,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 5s",
-    "focal_height_m": 15.0,
-    "range_nm": 6.0,
+    "focal_height_m": 15.2,
+    "range_nm": 6.9,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001751",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001751"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001751",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891206"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,25 @@
     {
       "year": 1867,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1867,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1332597163",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gull Rock",
+      "url": "https://archives.uslhs.org/places/gull-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891206",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,6 +200,63 @@
       "key": "osm:way/1332597163",
       "part": "wikidata:Q5617748",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:730",
+      "part": "wikidata:Q5617748",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:gull-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15165",
+      "part": "wikidata:Q5617748",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2979",
+      "part": "wikidata:Q5617748",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001751",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.41750,-87.66389",
+      "part": "wikidata:Q5617748",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:gull-rock",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

@@ -3,7 +3,8 @@
   "name": "Southampton Shoal Light",
   "other_names": [
     "Southampton Shoal Lighthouse",
-    "Southhampton Shoal Light"
+    "Southhampton Shoal Light",
+    "Southampton Shoal"
   ],
   "country": "US",
   "region": "CA",
@@ -33,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1960,
+    "first_lit": 1905,
     "deactivated": 1960,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 10.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 9.8,
+    "range_nm": 6.0,
+    "fog_signal": "bell",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -73,8 +74,26 @@
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1905,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1960,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1960,
@@ -85,7 +104,7 @@
     {
       "year": 1960,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -127,6 +146,16 @@
       "label": "ARLHS World List of Lights USA777",
       "url": "https://wlol.arlhs.com/lighthouse/USA777.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Southampton Shoal",
+      "url": "https://archives.uslhs.org/places/southampton-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,10 +175,81 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:southampton-shoal-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:southampton-shoal-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-5480",
+      "part": "wikidata:Q7570818",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2729",
+      "part": "wikidata:Q7570818",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.88194,-122.40023",
+      "part": "wikidata:Q7570818",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 10.0
+        },
+        {
+          "source": "uslhs",
+          "value": 16.0
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1960
+        },
+        {
+          "source": "uslhs",
+          "value": 1905
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

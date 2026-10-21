@@ -2,7 +2,9 @@
   "id": "us-ri-block-island-north",
   "name": "Block Island North Light",
   "other_names": [
-    "Block Island North Lighthouse"
+    "Block Island North Lighthouse",
+    "Block Island North",
+    "Sandy Point Light"
   ],
   "country": "US",
   "region": "RI",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1829,
     "deactivated": 1973,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 19.0,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000008",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000008"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000008",
+      "listed": "1974-05-23",
+      "nomination": "https://catalog.archives.gov/id/41374687"
     }
   ],
   "aton": {
@@ -70,11 +74,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1829,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1867,
       "event": "built",
@@ -88,6 +98,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1868,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1973,
       "event": "deactivated",
       "note": null,
@@ -96,7 +112,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +164,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/59877164",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Block Island North",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=40",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374687",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,6 +212,46 @@
       "key": "osm:way/59877164",
       "part": "wikidata:Q4927145",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:40",
+      "part": "wikidata:Q4927145",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:block-island-north-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19481",
+      "part": "wikidata:Q4927145",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000008",
+      "part": "wikidata:Q4927145",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:block-island-north",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

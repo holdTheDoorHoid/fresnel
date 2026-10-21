@@ -3,7 +3,9 @@
   "name": "Fuller Rock Light",
   "other_names": [
     "Fuller Rock Lighthouse",
-    "Fuller Rock Skeletal Tower Light"
+    "Fuller Rock Skeletal Tower Light",
+    "Fuller Rock",
+    "Providence River Channel Light 42"
   ],
   "country": "US",
   "region": "RI",
@@ -17,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -26,21 +28,21 @@
       "type": null,
       "material": null,
       "built": 1872,
-      "height_m": null,
+      "height_m": 4.3,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1872,
     "deactivated": 1923,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 9.5,
-    "range_nm": null,
+    "focal_height_m": 9.4,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -77,10 +79,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1923,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1997,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1997,
@@ -132,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6183087008",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fuller Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1964",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fuller Rock",
+      "url": "https://archives.uslhs.org/places/fuller-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -158,25 +193,78 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1964",
+      "part": "wikidata:Q5508260",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:fuller-rock-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18580",
+      "part": "wikidata:Q5508260",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8899",
+      "part": "wikidata:Q5508260",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.79408,-71.37967",
+      "part": "wikidata:Q5508260",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1997
         },
         {
-          "source": "wikidata",
-          "value": 1923
+          "source": "uslhs",
+          "value": 1872
         }
       ],
-      "note": "A source gives the light's service entry (1997) after its retirement (1923); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

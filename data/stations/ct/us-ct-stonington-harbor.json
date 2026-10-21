@@ -2,7 +2,9 @@
   "id": "us-ct-stonington-harbor",
   "name": "Stonington Harbor Light",
   "other_names": [
-    "Stonington Harbor Lighthouse"
+    "Stonington Harbor Lighthouse",
+    "Stonington Harbor",
+    "Old Lighthouse Museum"
   ],
   "country": "US",
   "region": "CT",
@@ -32,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": 1840,
+    "first_lit": 1823,
     "deactivated": 1889,
     "lens": null,
     "characteristic": "Fl G 5s",
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "76002000",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002000"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002000",
+      "listed": "1976-01-01",
+      "nomination": "https://catalog.archives.gov/id/132355920"
     }
   ],
   "aton": {
@@ -57,16 +61,16 @@
   "agency": "Stonington Historical Society",
   "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": true,
     "tours": null,
     "boat_only": null,
@@ -82,21 +86,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1840,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1840,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1889,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/948795068",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stonington Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=804",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stonington Harbor",
+      "url": "https://archives.uslhs.org/places/stonington-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132355920",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -172,9 +214,60 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:804",
+      "part": "wikidata:Q7619461",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:stonington-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2751",
+      "part": "wikidata:Q7619461",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76002000",
+      "part": "wikidata:Q7619461",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1840
+        },
+        {
+          "source": "uslhs",
+          "value": 1823
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

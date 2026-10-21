@@ -1,7 +1,9 @@
 {
   "id": "us-me-whitehead-lifesaving-station",
   "name": "Whitehead Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "White Head Life-Saving Station"
+  ],
   "country": "US",
   "region": "ME",
   "county": "Knox",
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "88001839",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88001839"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88001839",
+      "listed": "1988-10-12",
+      "nomination": "https://catalog.archives.gov/id/88686570"
     }
   ],
   "aton": {
@@ -73,7 +77,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -96,6 +100,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Whitehead_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: White Head Life Saving Station",
+      "url": "https://archives.uslhs.org/places/white-head-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686570",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -113,10 +127,25 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:124318",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88001839",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

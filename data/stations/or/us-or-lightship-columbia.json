@@ -3,7 +3,10 @@
   "name": "United States lightship Columbia",
   "other_names": [
     "Columbia Lightship",
-    "Lightship Columbia"
+    "Lightship Columbia",
+    "Columbia",
+    "Lightship Columbia WLV 604",
+    "Lightship WAL-604, COLUMBIA"
   ],
   "country": "US",
   "region": "OR",
@@ -13,9 +16,9 @@
   "kind": "lightship",
   "location": {
     "lat": 46.1904,
-    "lon": -123.824,
+    "lon": -123.8242,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -34,7 +37,10 @@
     {
       "register": "NRHP",
       "number": "89002463",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002463"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002463",
+      "listed": "1989-12-20",
+      "nhl": "1989-12-20",
+      "nomination": "https://catalog.archives.gov/id/77848606"
     },
     {
       "register": "National Historic Landmark",
@@ -64,7 +70,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +86,18 @@
       "event": "nrhp_listed",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places and National Historic Landmark",
+      "from": "nrhp"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -115,6 +133,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Lightship_Columbia_%28ship%2C_1950%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Columbia WLV 604",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=554",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77848606",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -128,17 +156,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:554",
+      "part": "wikidata:Q7892541",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89002463",
+      "part": "wikidata:Q7892541",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:columbia-ls-lv-604",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

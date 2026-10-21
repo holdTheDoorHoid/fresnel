@@ -1,9 +1,13 @@
 {
   "id": "us-mi-old-presque-isle",
-  "name": "Old Presque Isle Light",
+  "name": "Presque Isle",
   "other_names": [
+    "Old Presque Isle Light",
     "Old Presque Isle Lighthouse",
-    "Old Presque Isle Light (Michigan)"
+    "Old Presque Isle Light (Michigan)",
+    "Old",
+    "Old Presque Isle",
+    "Presque Isle Lighthouse"
   ],
   "country": "US",
   "region": "MI",
@@ -46,7 +50,9 @@
     {
       "register": "NRHP",
       "number": "73000957",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000957"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000957",
+      "listed": "1973-04-11",
+      "nomination": "https://catalog.archives.gov/id/25340410"
     },
     {
       "register": "Michigan State Historic Site",
@@ -72,7 +78,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -84,7 +90,7 @@
     {
       "year": 1840,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -96,18 +102,24 @@
     {
       "year": 1871,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-mi-new-presque-isle",
+      "relation": "succeeded_by",
+      "name": "Presque Isle"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Presque_Isle_Light_house.JPG",
@@ -149,6 +161,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/925868224",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Presque Isle (Old)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=180",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340410",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +189,6 @@
         "events",
         "kind",
         "light",
-        "name",
         "photos",
         "region",
         "registers",
@@ -175,6 +201,32 @@
       "part": "wikidata:Q7084781",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:180",
+      "part": "wikidata:Q7084781",
+      "fields": [
+        "name",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:presque-isle-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000957",
+      "part": "wikidata:Q7084781",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

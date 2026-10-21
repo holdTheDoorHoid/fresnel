@@ -3,7 +3,10 @@
   "name": "Cape Fear Light",
   "other_names": [
     "Cape Fear Lighthouse",
-    "Cape Fear Lighthouse Complex"
+    "Cape Fear Lighthouse Complex",
+    "Cape Fear",
+    "Cap'n Charlie's Cottages",
+    "Ruins"
   ],
   "country": "US",
   "region": "NC",
@@ -12,24 +15,69 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 33.8927,
-    "lon": -78.0348,
+    "lat": 33.845991,
+    "lon": -77.967113,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cape Fear",
+      "type": "skeletal",
+      "material": null,
+      "built": 1903,
+      "height_m": 45.7,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 33.846014,
+        "lon": -77.966829
+      }
+    },
+    {
+      "role": "other",
+      "name": "Cape Fear Lighthouse Foundation",
+      "type": "conical_masonry",
+      "material": "brick",
+      "built": 1903,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 33.846633,
+        "lon": -77.965887
+      }
+    },
+    {
+      "role": "other",
+      "name": "Captain Charlie’s III",
       "type": null,
       "material": null,
       "built": 1903,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "osm",
+      "location": {
+        "lat": 33.84556,
+        "lon": -77.966544
+      }
+    },
+    {
+      "role": "other",
+      "name": "Captain Charlie’s I",
+      "type": null,
+      "material": null,
+      "built": 1903,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
@@ -37,7 +85,7 @@
     "deactivated": 1958,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": null,
+    "focal_height_m": 48.5,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -46,7 +94,9 @@
     {
       "register": "NRHP",
       "number": "78001931",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001931"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001931",
+      "listed": "1978-08-29",
+      "nomination": "https://catalog.archives.gov/id/47719119"
     }
   ],
   "aton": {
@@ -55,7 +105,7 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Destroyed",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -71,10 +121,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1903,
@@ -85,30 +142,30 @@
     {
       "year": 1903,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1903,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1958,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [
-    {
-      "id": "us-nc-oak-island-life-saving-station",
-      "relation": "life_saving_station_nearby",
-      "name": "Oak Island Life Saving Station"
-    }
-  ],
+  "related": [],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Captain_Charlie%27s_Station%2C_Bald_Head_Island_%28Brunswick_County%2C_North_Carolina%29.jpg",
@@ -145,25 +202,157 @@
       "label": "ARLHS World List of Lights USA1028",
       "url": "https://wlol.arlhs.com/lighthouse/USA1028.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1184260752",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1503346349",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/369283151",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/369283162",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.ourstate.com/captain-charlies-cottages/",
+      "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/369283164",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/369283171",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Fear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=350",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Fear",
+      "url": "https://archives.uslhs.org/places/cape-fear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719119",
+      "kind": "register"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q5034789",
-      "part": "wikidata:Q5034789",
+      "part": "station",
       "fields": [
         "aton",
         "county",
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
-        "registers",
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1184260752",
+      "part": "osm:way/1184260752",
+      "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1503346349",
+      "part": "osm:way/1503346349",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/369283151",
+      "part": "osm:way/369283151",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/369283162",
+      "part": "osm:way/369283151",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/369283164",
+      "part": "osm:way/369283164",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/369283171",
+      "part": "osm:way/1184260752",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:350",
+      "part": "osm:way/1503346349",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8846",
+      "part": "osm:way/1503346349",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78001931",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:cape-fear-ruins",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

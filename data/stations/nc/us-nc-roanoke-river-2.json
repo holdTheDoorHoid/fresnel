@@ -1,7 +1,9 @@
 {
   "id": "us-nc-roanoke-river-2",
   "name": "Roanoke River Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Roanoke River (Replica)"
+  ],
   "country": "US",
   "region": "NC",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -30,34 +32,34 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1867,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-694",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Plymouth",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1867,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 2003,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/610104470",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Roanoke River (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=879",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Roanoke River (Replica)",
+      "url": "https://archives.uslhs.org/places/roanoke-river-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +118,38 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:879",
+      "part": "osm:way/610104470",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:roanoke-river-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:57433",
+      "part": "osm:way/610104470",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,8 +2,12 @@
   "id": "us-in-old-michigan-city",
   "name": "Old Michigan City Light",
   "other_names": [
+    "Oil Shed",
     "Old Michigan City Lighthouse",
-    "Old Lighthouse Museum"
+    "Old Lighthouse Museum",
+    "Old Michigan City",
+    "Michigan City",
+    "Michigan City Lighthouse"
   ],
   "country": "US",
   "region": "IN",
@@ -12,8 +16,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.722723,
-    "lon": -86.906333,
+    "lat": 41.722469,
+    "lon": -86.906014,
     "precision": "exact",
     "from": "osm"
   },
@@ -22,7 +26,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Old Michigan City Light",
+      "type": null,
+      "material": null,
+      "built": 1858,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.722723,
+        "lon": -86.906333
+      }
+    },
+    {
+      "role": "other",
+      "name": "Oil Shed",
       "type": null,
       "material": null,
       "built": 1858,
@@ -33,20 +52,22 @@
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1835,
     "deactivated": 1904,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000023",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000023"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000023",
+      "listed": "1974-11-05",
+      "nomination": "https://catalog.archives.gov/id/132003561"
     }
   ],
   "aton": {
@@ -67,7 +88,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -77,9 +98,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -91,13 +118,13 @@
     {
       "year": 1904,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -147,6 +174,11 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1330126777",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/494078911",
       "kind": "osm"
     },
@@ -154,6 +186,26 @@
       "label": "Website",
       "url": "https://www.mchistorical.org/",
       "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/601183895",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Old Michigan City",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=231",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132003561",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,7 +219,6 @@
         "events",
         "kind",
         "light",
-        "name",
         "photos",
         "region",
         "registers"
@@ -179,7 +230,16 @@
       "part": "wikidata:Q7084510",
       "fields": [
         "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1330126777",
+      "part": "osm:way/1330126777",
+      "fields": [
         "location",
+        "name",
         "structures"
       ]
     },
@@ -188,6 +248,38 @@
       "key": "osm:way/494078911",
       "part": "wikidata:Q7084510",
       "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/601183895",
+      "part": "osm:way/1330126777",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:231",
+      "part": "wikidata:Q7084510",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:michigan-city-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000023",
+      "part": "wikidata:Q7084510",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],

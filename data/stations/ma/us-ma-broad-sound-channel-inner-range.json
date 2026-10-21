@@ -1,7 +1,9 @@
 {
   "id": "us-ma-broad-sound-channel-inner-range",
   "name": "Broad Sound Channel Inner Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Broad Sound Channel"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Suffolk",
@@ -10,12 +12,12 @@
   "kind": "range_lights",
   "location": {
     "lat": 42.3275,
-    "lon": -70.9853,
-    "precision": "exact",
-    "from": "wikidata"
+    "lon": -70.985278,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1950) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -24,7 +26,7 @@
       "material": null,
       "built": 1903,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -113,6 +115,11 @@
       "label": "ARLHS World List of Lights USA953",
       "url": "https://wlol.arlhs.com/lighthouse/USA953.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Broad Sound Channel",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1978",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,16 +132,23 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1978",
+      "part": "wikidata:Q4971939",
+      "fields": [
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

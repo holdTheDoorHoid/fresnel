@@ -2,7 +2,13 @@
   "id": "us-mi-charlevoix-south-pier",
   "name": "Charlevoix South Pier Light Station",
   "other_names": [
-    "Charlevoix South Pier Light"
+    "Charlevoix South Pier Light",
+    "Charlevoix South Pier",
+    "Charlevoix South Pierhead",
+    "Charlevoiz South Pierhead Light",
+    "Charlevoix Pier Light",
+    "Charlevoix North Pierhead Light",
+    "Charlevoix South Pierhead Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +29,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1948,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
-    "focal_height_m": 13.0,
+    "focal_height_m": 12.5,
     "range_nm": 8.7,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000346",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000346"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000346",
+      "listed": "2005-04-28",
+      "nomination": "https://catalog.archives.gov/id/75324987"
     }
   ],
   "aton": {
@@ -58,7 +66,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,21 +78,33 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1948,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +151,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1112475080",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Charlevoix South Pier",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=201",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Charlevoix South Pierhead",
+      "url": "https://archives.uslhs.org/places/charlevoix-south-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324987",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,14 +195,102 @@
       "part": "wikidata:Q5084261",
       "fields": [
         "agency",
-        "light",
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:201",
+      "part": "wikidata:Q5084261",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:charlevoix-south-pierhead-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17920",
+      "part": "wikidata:Q5084261",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17925",
+      "part": "wikidata:Q5084261",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:6784",
+      "part": "wikidata:Q5084261",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000346",
+      "part": "wikidata:Q5084261",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.32026,-85.26493",
+      "part": "wikidata:Q5084261",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.32080,-85.26494",
+      "part": "wikidata:Q5084261",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:charlevoix-south-pierhead",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

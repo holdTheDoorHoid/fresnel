@@ -1,0 +1,141 @@
+{
+  "id": "us-mi-rouleau-point-ranges",
+  "name": "Rouleau Point Ranges",
+  "other_names": [
+    "Rouleau Point Range Rear",
+    "Rouleau Point Range Rear Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 47.19555,
+    "lon": -88.61609,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uscg_light_list"
+    }
+  ],
+  "light": {
+    "first_lit": 1897,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F W",
+    "focal_height_m": 16.8,
+    "range_nm": 3.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-15045",
+    "arlhs": "USA-705",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rouleau Point Ranges",
+      "url": "https://archives.uslhs.org/places/rouleau-point-ranges",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:rouleau-point-range-rear-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15045",
+      "part": "uslhs:80384",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:80384",
+      "part": "uslhs:80384",
+      "fields": [
+        "access",
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.19549,-88.61601",
+      "part": "uslhs:80384",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

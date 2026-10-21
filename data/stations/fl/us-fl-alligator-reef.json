@@ -2,7 +2,9 @@
   "id": "us-fl-alligator-reef",
   "name": "Alligator Reef Light",
   "other_names": [
-    "Alligator Reef Lighthouse"
+    "Alligator Reef Lighthouse",
+    "Alligator Reef",
+    "Alligator Reef Light Station"
   ],
   "country": "US",
   "region": "FL",
@@ -23,9 +25,9 @@
       "role": "tower",
       "name": null,
       "type": "screwpile",
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "iron",
+      "built": 1873,
+      "height_m": 41.5,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(4) W 60s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 4.9,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "11000860",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000860"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000860",
+      "listed": "2011-12-01",
+      "nomination": "https://catalog.archives.gov/id/75325119"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,23 +73,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1873,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -131,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5077477871",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Alligator Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=702",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Alligator Reef",
+      "url": "https://archives.uslhs.org/places/alligator-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325119",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -157,6 +199,71 @@
       "part": "wikidata:Q4732658",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:702",
+      "part": "wikidata:Q4732658",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:alligator-reef-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:alligator-reef-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-981",
+      "part": "wikidata:Q4732658",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2763",
+      "part": "wikidata:Q4732658",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:11000860",
+      "part": "wikidata:Q4732658",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:24.85132,-80.61771",
+      "part": "wikidata:Q4732658",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:alligator-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

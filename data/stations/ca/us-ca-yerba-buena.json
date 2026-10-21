@@ -4,11 +4,16 @@
   "other_names": [
     "Yerba Buena Island Light",
     "Yerba Buena Lighthouse",
-    "Yerba Buena Island Lighthouse"
+    "Yerba Buena Island Lighthouse",
+    "Yerba Buena",
+    "Yerba Buena Island",
+    "Goat Island",
+    "Goat Island Lighthouse",
+    "Yerba Buena Island Wharf Light"
   ],
   "country": "US",
   "region": "CA",
-  "county": null,
+  "county": "San Francisco",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -49,20 +54,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1875,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc W 4s",
     "focal_height_m": 29.0,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001096",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001096"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001096",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857780"
     }
   ],
   "aton": {
@@ -75,7 +87,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -86,7 +98,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -101,8 +113,20 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1907,
@@ -113,7 +137,7 @@
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -175,6 +199,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/291189057",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Yerba Buena",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=71",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Yerba Buena Island (Goat Island)",
+      "url": "https://archives.uslhs.org/places/yerba-buena-island-goat-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857780",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -223,9 +267,78 @@
       "key": "osm:way/291189057",
       "part": "wikidata:Q8052543",
       "fields": [
-        "agency",
+        "agency"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:71",
+      "part": "wikidata:Q8052543",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:yerba-buena-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4595",
+      "part": "wikidata:Q8052543",
+      "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4600",
+      "part": "wikidata:Q8052543",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2733",
+      "part": "wikidata:Q8052543",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001096",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.80728,-122.36225",
+      "part": "wikidata:Q8052543",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.80750,-122.35972",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.80811,-122.36106",
+      "part": "wikidata:Q8052543",
+      "fields": []
     }
   ],
   "conflicts": [],

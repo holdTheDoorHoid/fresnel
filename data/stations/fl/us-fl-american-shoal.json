@@ -2,7 +2,9 @@
   "id": "us-fl-american-shoal",
   "name": "American Shoal Light",
   "other_names": [
-    "American Shoal Lighthouse"
+    "American Shoal Lighthouse",
+    "American Shoal",
+    "American Shoal Light Station"
   ],
   "country": "US",
   "region": "FL",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1880,
+    "deactivated": 2015,
     "lens": null,
     "characteristic": "Fl(4) W 60s",
     "focal_height_m": 33.5,
-    "range_nm": null,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "10001189",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10001189"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10001189",
+      "listed": "2011-01-25",
+      "nomination": "https://catalog.archives.gov/id/75325117"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,14 +82,38 @@
     {
       "year": 1880,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1880,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -131,6 +159,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525332698",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: American Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=700",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: American Shoal",
+      "url": "https://archives.uslhs.org/places/american-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325117",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,10 +206,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:700",
+      "part": "wikidata:Q4744980",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:american-shoal",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:american-shoal-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1016",
+      "part": "wikidata:Q4744980",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2765",
+      "part": "wikidata:Q4744980",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:10001189",
+      "part": "wikidata:Q4744980",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:american-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

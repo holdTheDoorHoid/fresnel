@@ -2,7 +2,9 @@
   "id": "us-la-southwest-reef",
   "name": "Southwest Reef Light",
   "other_names": [
-    "Southwest Reef Lighthouse"
+    "Southwest Reef Lighthouse",
+    "Southwest Reef",
+    "Berwick"
   ],
   "country": "US",
   "region": "LA",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1848,
-      "height_m": null,
+      "height_m": 16.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1858,
     "deactivated": 1916,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 13.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001152",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001152"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001152",
+      "listed": "1991-09-12",
+      "nomination": "https://catalog.archives.gov/id/73974820"
     }
   ],
   "aton": {
@@ -57,20 +61,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,25 +87,49 @@
     },
     {
       "year": 1858,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1859,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1916,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-berwick",
+      "relation": "replica",
+      "name": "Berwick Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Southwest_Reef_Lighthouse%2C_relocated_to_Berwick%2C_Louisiana%2C_1990s_01_%284391329788%29.jpg",
@@ -148,6 +176,26 @@
       "label": "Website",
       "url": "https://cajuncoast.com/?attractions=southwest-reef-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Southwest Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=341",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Southwest Reef",
+      "url": "https://archives.uslhs.org/places/southwest-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/73974820",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,9 +223,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:341",
+      "part": "wikidata:Q7571347",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:southwest-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2816",
+      "part": "wikidata:Q7571347",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001152",
+      "part": "wikidata:Q7571347",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.69413,-91.21755",
+      "part": "wikidata:Q7571347",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:la:southwest-reef-berwick",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1859
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

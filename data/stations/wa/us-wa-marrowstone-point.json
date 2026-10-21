@@ -3,7 +3,9 @@
   "name": "Marrowstone Point Light",
   "other_names": [
     "Marrowstone Light",
-    "Marrowstone Point Lighthouse"
+    "Marrowstone Point Lighthouse",
+    "Marrowstone Point",
+    "Indian Island"
   ],
   "country": "US",
   "region": "WA",
@@ -26,21 +28,21 @@
       "type": null,
       "material": null,
       "built": 1888,
-      "height_m": null,
+      "height_m": 8.5,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1912,
+    "first_lit": 1888,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 8.5,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,15 +54,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -77,10 +79,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1888,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1902,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1912,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -126,6 +146,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/337464053",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Marrowstone Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=109",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Marrowstone Point (Indian Island)",
+      "url": "https://archives.uslhs.org/places/marrowstone-point-indian-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,7 +173,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -150,12 +184,75 @@
       "key": "osm:way/337464053",
       "part": "wikidata:Q6773039",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:109",
+      "part": "wikidata:Q6773039",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:marrowstone-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:marrowstone-point-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16500",
+      "part": "wikidata:Q6773039",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3548",
+      "part": "wikidata:Q6773039",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.10161,-122.68791",
+      "part": "wikidata:Q6773039",
+      "fields": [
+        "light"
       ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "light.characteristic",
       "values": [
@@ -169,9 +266,23 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1912
+        },
+        {
+          "source": "uslhs",
+          "value": 1888
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

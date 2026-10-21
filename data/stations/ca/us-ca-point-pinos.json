@@ -2,7 +2,9 @@
   "id": "us-ca-point-pinos",
   "name": "Point Pinos Lighthouse",
   "other_names": [
-    "Pt.Pinos"
+    "Pt.Pinos",
+    "Point Pinos",
+    "Point Pinos Light"
   ],
   "country": "US",
   "region": "CA",
@@ -32,20 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1855,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc W 4s",
     "focal_height_m": 27.1,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000312",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000312"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000312",
+      "listed": "1977-07-14",
+      "nomination": "https://catalog.archives.gov/id/123859952"
     }
   ],
   "aton": {
@@ -57,20 +66,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +87,25 @@
     {
       "year": 1855,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -141,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/559348816",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Pinos",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=30",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Pinos",
+      "url": "https://archives.uslhs.org/places/point-pinos",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123859952",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,7 +206,6 @@
       "key": "osm:node/664318913",
       "part": "wikidata:Q7208119",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -174,6 +214,62 @@
       "key": "osm:way/559348816",
       "part": "wikidata:Q7208119",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:30",
+      "part": "wikidata:Q7208119",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-pinos",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-290",
+      "part": "wikidata:Q7208119",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2723",
+      "part": "wikidata:Q7208119",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000312",
+      "part": "wikidata:Q7208119",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.63338,-121.93372",
+      "part": "wikidata:Q7208119",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-pinos",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

@@ -172,12 +172,24 @@ function realCharacteristics(): Map<string, number> {
 describe('every characteristic in data/stations', () => {
   const real = realCharacteristics();
 
+  it('reads the Light List compact forms and drops a stray trailing number', () => {
+    for (const [raw, type, colour] of [['FG', 'F', 'G'], ['QR', 'Q', 'R'], ['FY', 'F', 'Y'], ['QW', 'Q', 'W']] as const) {
+      const c = parseCharacteristic(raw);
+      expect(c?.type).toBe(type);
+      expect(c?.colours).toEqual([colour]);
+    }
+    const iso = readLight('Iso W 6s 70');
+    expect(iso.lights[0]?.c.type).toBe('Iso');
+    expect(iso.lights[0]?.c.period).toBe(6);
+    expect(iso.lights[0]?.c.notes.join(' ')).toMatch(/not part of a light's pattern/);
+  });
+
   it('reads them all except the few that are not light patterns', () => {
     const unread = [...real.keys()].filter((c) => !readLight(c).lights.length).sort();
-    expect(unread).toEqual(['Al W 10s', 'R', 'current decorative light', 'decorative light', 'inactive']);
+    expect(unread).toEqual(['Al Fl W 20s', 'R', 'current decorative light', 'decorative light', 'inactive']);
     const stations = [...real.values()].reduce((a, b) => a + b, 0);
     const read = [...real].filter(([c]) => readLight(c).lights.length).reduce((a, [, n]) => a + n, 0);
-    expect(stations - read).toBe(7);
+    expect(stations - read).toBe(6); // stations whose record holds one of the unread strings above
   });
 
   it('leaves nothing of a read record unexplained', () => {

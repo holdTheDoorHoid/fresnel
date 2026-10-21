@@ -3,7 +3,13 @@
   "name": "Hudson–Athens lighthouse",
   "other_names": [
     "Hudson-Athens Light",
-    "Hudson–Athens Lighthouse"
+    "Hudson–Athens Lighthouse",
+    "Hudson",
+    "Hudson-Athens",
+    "Hudson City",
+    "Hudson - Athens",
+    "Hudson/Athens Lighthouse",
+    "Hudson City Light"
   ],
   "country": "US",
   "region": "NY",
@@ -23,13 +29,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "brick",
       "built": 1874,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +43,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 2.5s",
-    "focal_height_m": 15.0,
+    "focal_height_m": 14.0,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79003796",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003796"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003796",
+      "listed": "1979-05-29",
+      "nomination": "https://catalog.archives.gov/id/75312417"
     }
   ],
   "aton": {
@@ -59,19 +67,19 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1949"
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +87,31 @@
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1874,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1949,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/696518034",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hudson (Hudson-Athens)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=677",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hudson - Athens (Hudson City)",
+      "url": "https://archives.uslhs.org/places/hudson-athens-hudson-city",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75312417",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,8 +203,64 @@
       "key": "osm:way/696518034",
       "part": "wikidata:Q5929090",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:677",
+      "part": "wikidata:Q5929090",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:hudson-city",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-38560",
+      "part": "wikidata:Q5929090",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3415",
+      "part": "wikidata:Q5929090",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79003796",
+      "part": "wikidata:Q5929090",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.25220,-73.80884",
+      "part": "wikidata:Q5929090",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:hudson-athens",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -1,7 +1,10 @@
 {
   "id": "us-va-bay-creek",
-  "name": "Bay Creek Lighthouse",
-  "other_names": [],
+  "name": "Old Plantation Flats (Replica)",
+  "other_names": [
+    "Bay Creek Lighthouse",
+    "Old Plantation Flats (Replica) VA (Replica)"
+  ],
   "country": "US",
   "region": "VA",
   "county": null,
@@ -14,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -30,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 2004,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -66,15 +69,49 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2004,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2004,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-va-old-plantation-flats",
+      "relation": "replica_of",
+      "name": "Old Plantation Flats Light"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/652149943",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Old Plantation Flats (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1692",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Old Plantation Flats (Replica) VA",
+      "url": "https://archives.uslhs.org/places/old-plantation-flats-replica-va",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +125,33 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1692",
+      "part": "osm:way/652149943",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:old-plantation-flats",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7084",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

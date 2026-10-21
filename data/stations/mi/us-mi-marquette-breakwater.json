@@ -1,0 +1,146 @@
+{
+  "id": "us-mi-marquette-breakwater",
+  "name": "Marquette Breakwater",
+  "other_names": [
+    "Marquette Breakwater Outer",
+    "Marquette Breakwater Outer Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 46.53357,
+    "lon": -87.37477,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 11.0,
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-14635",
+    "arlhs": "USA-476",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Marquette Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=571",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:571",
+      "part": "lighthousefriends:571",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:marquette-breakwater-outer-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14635",
+      "part": "lighthousefriends:571",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.53369,-87.37484",
+      "part": "lighthousefriends:571",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

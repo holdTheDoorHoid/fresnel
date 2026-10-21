@@ -1,7 +1,13 @@
 {
   "id": "us-md-craighill-channel-upper-range-rear",
   "name": "Craighill Channel Upper Range Rear Light",
-  "other_names": [],
+  "other_names": [
+    "Craighill Channel Upper Rear",
+    "Craighill Channel Upper Range Rear",
+    "Cutoff Channel Range Rear",
+    "Cut-off Channel Range Rear Light Station",
+    "New Cut-off Channel and Craighill Channel Upper Rear Range L"
+  ],
   "country": "US",
   "region": "MD",
   "county": "Baltimore",
@@ -21,29 +27,31 @@
       "role": "rear_range",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "brick",
+      "built": 1886,
       "height_m": 27.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1886,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 22.5,
-    "range_nm": null,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 22.6,
+    "range_nm": 80.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001423",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001423"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001423",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75324951"
     }
   ],
   "aton": {
@@ -56,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,12 +75,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1886,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1886,
       "event": "first_lit",
@@ -82,7 +96,7 @@
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -124,6 +138,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2289561687",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Craighill Channel Upper Rear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=418",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Craighill Channel Upper Rear",
+      "url": "https://archives.uslhs.org/places/craighill-channel-upper-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324951",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -151,9 +185,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:418",
+      "part": "wikidata:Q5181680",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:craighill-channel-upper-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8095",
+      "part": "wikidata:Q5181680",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:47753",
+      "part": "wikidata:Q5181680",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001423",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.21617,-76.46274",
+      "part": "wikidata:Q5181680",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 22.5
+        },
+        {
+          "source": "uslhs",
+          "value": 18.59
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

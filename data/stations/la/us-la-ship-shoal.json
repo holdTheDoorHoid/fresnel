@@ -2,7 +2,9 @@
   "id": "us-la-ship-shoal",
   "name": "Ship Shoal Light",
   "other_names": [
-    "Ship Shoal Lighthouse"
+    "Ship Shoal Lighthouse",
+    "Ship Shoal",
+    "Ship Shoal Obstruction Lights"
   ],
   "country": "US",
   "region": "LA",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.015278,
-    "lon": -89.166944,
+    "lat": 28.914536,
+    "lon": -91.071133,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -22,24 +24,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "screwpile",
+      "material": "cast_iron",
+      "built": 1859,
+      "height_m": 32.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1859,
     "deactivated": 1965,
     "lens": null,
-    "characteristic": "QF W",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Q W",
+    "focal_height_m": 32.0,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -71,14 +73,26 @@
   "events": [
     {
       "year": 1859,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1859,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -120,23 +134,79 @@
       "label": "ARLHS World List of Lights USA759",
       "url": "https://wlol.arlhs.com/lighthouse/USA759.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Ship Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=816",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ship Shoal",
+      "url": "https://archives.uslhs.org/places/ship-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q7497938",
-      "part": "wikidata:Q7497938",
+      "part": "station",
       "fields": [
         "aton",
         "county",
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:816",
+      "part": "lighthousefriends:816",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:ship-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-730",
+      "part": "lighthousefriends:816",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2813",
+      "part": "lighthousefriends:816",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:28.91455,-91.07117",
+      "part": "lighthousefriends:816",
+      "fields": [
+        "light"
       ]
     }
   ],

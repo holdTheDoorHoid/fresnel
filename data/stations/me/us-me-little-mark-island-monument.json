@@ -1,7 +1,9 @@
 {
   "id": "us-me-little-mark-island-monument",
   "name": "Little Mark Island Monument",
-  "other_names": [],
+  "other_names": [
+    "Little Mark Island Monument Light"
+  ],
   "country": "US",
   "region": "ME",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -24,31 +26,32 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2019,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "16000338",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000338"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000338",
+      "listed": "2016-06-07"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "1-6700",
+    "arlhs": "USA-117",
     "ccg_list_number": null,
     "nga": null
   },
@@ -76,8 +79,14 @@
     {
       "year": 2016,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -103,6 +112,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Little_Mark_Island_Monument",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Little Mark Island Monument",
+      "url": "https://archives.uslhs.org/places/little-mark-island-monument",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,6 +136,31 @@
         "name",
         "photos",
         "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:little-mark-island-monument",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34044",
+      "part": "wikidata:Q28124807",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:16000338",
+      "part": "wikidata:Q28124807",
+      "fields": [
+        "events",
         "registers"
       ]
     }

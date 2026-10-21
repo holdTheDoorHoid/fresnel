@@ -1,7 +1,10 @@
 {
   "id": "us-fl-amelia-island-north-range",
   "name": "Amelia Island North Range Light",
-  "other_names": [],
+  "other_names": [
+    "Amelia Island North Range",
+    "Amelia Island North Range Rear"
+  ],
   "country": "US",
   "region": "FL",
   "county": "Nassau",
@@ -9,24 +12,24 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 30.7034,
-    "lon": -81.4383,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.704015,
+    "lon": -81.446048,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
-      "type": null,
+      "type": "integral",
       "material": null,
       "built": 1858,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -34,7 +37,7 @@
     "deactivated": 1899,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": null,
+    "focal_height_m": 16.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -76,13 +79,19 @@
     {
       "year": 1872,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1899,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -114,6 +123,16 @@
       "label": "ARLHS World List of Lights USA1054",
       "url": "https://wlol.arlhs.com/lighthouse/USA1054.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Amelia Island North Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1838",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Amelia Island North Range Rear",
+      "url": "https://archives.uslhs.org/places/amelia-island-north-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,10 +146,27 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1838",
+      "part": "wikidata:Q4742269",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8403",
+      "part": "wikidata:Q4742269",
+      "fields": [
+        "events",
+        "light",
         "structures"
       ]
     }

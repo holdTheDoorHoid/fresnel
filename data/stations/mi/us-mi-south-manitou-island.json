@@ -1,10 +1,15 @@
 {
   "id": "us-mi-south-manitou-island",
   "name": "South Manitou Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "South Manitou Island",
+    "South Fox Island",
+    "State Street Pier",
+    "Harbor Springs"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Leelanau",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -21,12 +26,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1840,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -35,9 +40,9 @@
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": 16.5,
-    "range_nm": null,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -60,20 +65,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1935"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -87,14 +92,68 @@
     {
       "year": 1840,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1872,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1905,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1935,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1958,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1959,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1983,
@@ -104,7 +163,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-mi-south-manitou-island-lighthouse-complex-and-life-saving-station",
+      "relation": "life_saving_station_nearby",
+      "name": "South Manitou Island Lighthouse Complex and Life Saving Station Historical District"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Southmanitoulighthouse.jpg",
@@ -146,6 +211,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/399248715",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: South Manitou Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=715",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Manitou Island",
+      "url": "https://archives.uslhs.org/places/south-manitou-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -170,8 +250,83 @@
       "key": "osm:way/399248715",
       "part": "wikidata:Q14716282",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:715",
+      "part": "wikidata:Q14716282",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:south-fox-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:south-manitou-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:south-manitou-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:state-street-pier",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18357",
+      "part": "wikidata:Q14716282",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3338",
+      "part": "wikidata:Q14716282",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.00757,-86.09382",
+      "part": "wikidata:Q14716282",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:south-manitou-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -186,6 +341,10 @@
         {
           "source": "osm",
           "value": 16.5
+        },
+        {
+          "source": "uslhs",
+          "value": 31.7
         }
       ],
       "note": "Sources differ by more than 3 m."

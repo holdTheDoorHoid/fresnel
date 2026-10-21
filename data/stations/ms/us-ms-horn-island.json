@@ -2,7 +2,8 @@
   "id": "us-ms-horn-island",
   "name": "Horn Island Light",
   "other_names": [
-    "Horn Island Lighthouse"
+    "Horn Island Lighthouse",
+    "Horn Island"
   ],
   "country": "US",
   "region": "MS",
@@ -11,32 +12,32 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.224,
-    "lon": -88.485,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.21965,
+    "lon": -88.552827,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1874,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 12.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1908,
+    "first_lit": 1874,
     "deactivated": 1961,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": null,
+    "focal_height_m": 13.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -76,6 +77,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1908,
       "event": "first_lit",
       "note": null,
@@ -86,6 +99,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +140,16 @@
       "label": "ARLHS World List of Lights USA379",
       "url": "https://wlol.arlhs.com/lighthouse/USA379.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Horn Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1822",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Horn Island",
+      "url": "https://archives.uslhs.org/places/horn-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,15 +163,61 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1822",
+      "part": "wikidata:Q23074234",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8542",
+      "part": "wikidata:Q23074234",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1908
+        },
+        {
+          "source": "uslhs",
+          "value": 1874
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1961
+        },
+        {
+          "source": "uslhs",
+          "value": 1964
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

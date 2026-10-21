@@ -2,7 +2,10 @@
   "id": "us-me-portland-head",
   "name": "Portland Head Light",
   "other_names": [
-    "Portland Head Lighthouse"
+    "Portland Head Lighthouse",
+    "Portland Head",
+    "Portland Headlight",
+    "Portland Head Directional Light"
   ],
   "country": "US",
   "region": "ME",
@@ -36,16 +39,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 31.0,
-    "range_nm": 19.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 30.8,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000121",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000121"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000121",
+      "listed": "1973-04-24",
+      "nomination": "https://catalog.archives.gov/id/88685813"
     },
     {
       "register": "Historic Civil Engineering Landmark",
@@ -59,23 +64,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Cape Elizabeth",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1989"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,30 +88,42 @@
     {
       "year": 1791,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1791,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1989,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ca-portland-head",
+      "relation": "replica",
+      "name": "Portland Head Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portland_Headlight_1.JPG",
@@ -148,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/329793373",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Portland Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=546",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Portland Head",
+      "url": "https://archives.uslhs.org/places/portland-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685813",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -173,8 +210,74 @@
       "key": "osm:way/329793373",
       "part": "wikidata:Q2105159",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:546",
+      "part": "wikidata:Q2105159",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:portland-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-7565",
+      "part": "wikidata:Q2105159",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-7570",
+      "part": "wikidata:Q2105159",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2931",
+      "part": "wikidata:Q2105159",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000121",
+      "part": "wikidata:Q2105159",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.62310,-70.20786",
+      "part": "wikidata:Q2105159",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:portland-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

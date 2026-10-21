@@ -2,7 +2,8 @@
   "id": "us-il-chicago-harbor",
   "name": "Chicago Harbor Light",
   "other_names": [
-    "Chicago Harbor Lighthouse"
+    "Chicago Harbor Lighthouse",
+    "Chicago Harbor"
   ],
   "country": "US",
   "region": "IL",
@@ -23,29 +24,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1893,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1893,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 15s",
+    "characteristic": "Fl R 5s",
     "focal_height_m": 25.0,
-    "range_nm": 15.0,
+    "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84000986",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000986"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000986",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28890966"
     },
     {
       "register": "Chicago Landmark",
@@ -63,7 +66,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -74,7 +77,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -83,14 +86,20 @@
     {
       "year": 1893,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1893,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1893,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1979,
@@ -101,12 +110,18 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-il-chicago-harbor-2",
+      "relation": "preceded_by",
+      "name": "Chicago Harbor"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago-lighthouse.jpg",
@@ -158,6 +173,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/200507316",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Chicago Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=234",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: CHICAGO HARBOR",
+      "url": "https://archives.uslhs.org/places/chicago-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28890966",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -191,8 +226,7 @@
       "key": "osm:way/1188397898",
       "part": "wikidata:Q5095636",
       "fields": [
-        "agency",
-        "light"
+        "agency"
       ]
     },
     {
@@ -200,6 +234,57 @@
       "key": "osm:way/200507316",
       "part": "wikidata:Q5095636",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:234",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:chicago-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19960",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2803",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84000986",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.88932,-87.59048",
+      "part": "wikidata:Q5095636",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
@@ -216,6 +301,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 25.0
+        },
+        {
+          "source": "osm",
+          "value": 25.0
+        },
+        {
+          "source": "uslhs",
+          "value": 20.52
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
     }
   ],
   "verification": "facts",

@@ -2,7 +2,8 @@
   "id": "us-sc-bulls-bay",
   "name": "Bulls Bay Light",
   "other_names": [
-    "Bulls Bay Lighthouse"
+    "Bulls Bay Lighthouse",
+    "Bulls Bay"
   ],
   "country": "US",
   "region": "SC",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 32.9262,
-    "lon": -79.5665,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.927375,
+    "lon": -79.567188,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": null,
       "built": 1852,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -100,6 +101,11 @@
       "label": "ARLHS World List of Lights USA1168",
       "url": "https://wlol.arlhs.com/lighthouse/USA1168.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bulls Bay",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1858",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,15 +118,22 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1858",
+      "part": "wikidata:Q4997032",
+      "fields": [
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -4,7 +4,10 @@
   "other_names": [
     "Cedar Island Lighthouse",
     "Cedar Point Lighthouse (Northwest Harbor, New York)",
-    "Cedar Island Light House"
+    "Cedar Island Light House",
+    "Cedar Island",
+    "Cedar Island Light Station",
+    "Cedar Island Light 3CI"
   ],
   "country": "US",
   "region": "NY",
@@ -25,12 +28,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1839,
-      "height_m": null,
+      "height_m": 10.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -38,16 +41,18 @@
     "deactivated": 1934,
     "lens": null,
     "characteristic": "Fl G 4s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 7.6,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "03000248",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000248"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000248",
+      "listed": "2003-04-18",
+      "nomination": "https://catalog.archives.gov/id/75322061"
     }
   ],
   "aton": {
@@ -60,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -72,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -86,13 +91,25 @@
     {
       "year": 1839,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1868,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1934,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -104,7 +121,7 @@
     {
       "year": 2003,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -156,6 +173,26 @@
       "label": "Website",
       "url": "https://www.cedarislandlighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cedar Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=737",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cedar Island",
+      "url": "https://archives.uslhs.org/places/cedar-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75322061",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -182,6 +219,61 @@
       "part": "wikidata:Q15208218",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:737",
+      "part": "wikidata:Q15208218",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:cedar-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-28245",
+      "part": "wikidata:Q15208218",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3397",
+      "part": "wikidata:Q15208218",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03000248",
+      "part": "wikidata:Q15208218",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.04033,-72.26194",
+      "part": "wikidata:Q15208218",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:cedar-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

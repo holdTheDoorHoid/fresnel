@@ -2,7 +2,9 @@
   "id": "us-me-heron-neck",
   "name": "Heron Neck Light",
   "other_names": [
-    "Heron Neck Lighthouse"
+    "Heron Neck Lighthouse",
+    "Heron Neck",
+    "Heron Neck Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1854,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1854,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R avec F W (secteur)",
+    "characteristic": "F R",
     "focal_height_m": 28.0,
-    "range_nm": 13.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 7.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002266",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002266"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002266",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88684966"
     }
   ],
   "aton": {
@@ -54,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +82,25 @@
     {
       "year": 1854,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1854,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1982,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/706671309",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Heron Neck",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=534",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Heron Neck",
+      "url": "https://archives.uslhs.org/places/heron-neck",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684966",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,6 +193,68 @@
       "part": "wikidata:Q15223733",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:534",
+      "part": "wikidata:Q15223733",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:heron-neck",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3760",
+      "part": "wikidata:Q15223733",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2912",
+      "part": "wikidata:Q15223733",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002266",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.02511,-68.86217",
+      "part": "wikidata:Q15223733",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:heron-neck",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

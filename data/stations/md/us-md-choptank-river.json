@@ -2,7 +2,8 @@
   "id": "us-md-choptank-river",
   "name": "Choptank River Light",
   "other_names": [
-    "Choptank River Lighthouse"
+    "Choptank River Lighthouse",
+    "Choptank River"
   ],
   "country": "US",
   "region": "MD",
@@ -16,19 +17,19 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1871,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +37,10 @@
     "deactivated": 1964,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 11.0,
-    "range_nm": null,
+    "focal_height_m": 10.7,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,10 +77,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1871,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1918,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1964,
@@ -121,6 +152,16 @@
       "label": "ARLHS World List of Lights USA984",
       "url": "https://wlol.arlhs.com/lighthouse/USA984.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland: Eastern Shore",
+      "url": "https://www.ibiblio.org/lighthouse/mde.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Choptank River",
+      "url": "https://archives.uslhs.org/places/choptank-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,9 +181,69 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mde:choptank-river-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-24915",
+      "part": "wikidata:Q5104887",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8458",
+      "part": "wikidata:Q5104887",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.65575,-76.18456",
+      "part": "wikidata:Q5104887",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1864
+        },
+        {
+          "source": "uslhs",
+          "value": 1870
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1964
+        },
+        {
+          "source": "uslhs",
+          "value": 1918
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

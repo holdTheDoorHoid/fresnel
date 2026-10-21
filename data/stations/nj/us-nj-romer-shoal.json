@@ -3,7 +3,9 @@
   "name": "Romer Shoal Light",
   "other_names": [
     "Romer Shoal lighthouse",
-    "Romer Shoal Lighthouse"
+    "Romer Shoal Lighthouse",
+    "Romer Shoal",
+    "Romer Shoal Light Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -23,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1838,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1898,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 15s",
     "focal_height_m": 16.5,
     "range_nm": 15.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06001304",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001304"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001304",
+      "listed": "2007-01-24",
+      "nomination": "https://catalog.archives.gov/id/75325115"
     }
   ],
   "aton": {
@@ -58,8 +62,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,6 +85,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1886,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1898,
@@ -93,6 +115,12 @@
       "event": "nrhp_listed",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2007,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -138,6 +166,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2576304642",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Romer Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=655",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Romer Shoal",
+      "url": "https://archives.uslhs.org/places/romer-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325115",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -150,7 +198,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -163,12 +210,87 @@
       "key": "osm:node/2576304642",
       "part": "wikidata:Q7363153",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:655",
+      "part": "wikidata:Q7363153",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:romer-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-35070",
+      "part": "wikidata:Q7363153",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3386",
+      "part": "wikidata:Q7363153",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06001304",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.51301,-74.01352",
+      "part": "wikidata:Q7363153",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:romer-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1898
+        },
+        {
+          "source": "uslhs",
+          "value": 1886
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -1,10 +1,13 @@
 {
   "id": "us-nj-squan-beach-life-saving-station",
   "name": "Squan Beach Life-Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Squan Beach Life-Saving Station #9",
+    "Squan Beach Station"
+  ],
   "country": "US",
   "region": "NJ",
-  "county": null,
+  "county": "Monmouth",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "other",
@@ -24,7 +27,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -34,7 +37,8 @@
     {
       "register": "NRHP",
       "number": "08000135",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000135"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000135",
+      "listed": "2008-03-05"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 2008,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +98,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Squan_Beach_Life-Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Squan Beach Life Saving Station",
+      "url": "https://archives.uslhs.org/places/squan-beach-life-saving-station",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -110,10 +119,26 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97839",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:08000135",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

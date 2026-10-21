@@ -5,7 +5,10 @@
     "Duluth Harbor North Breakwater Light",
     "Duluth North Pierhead Light",
     "Duluth North Pier Light",
-    "Duluth North Pier Lighthouse"
+    "Duluth North Pier Lighthouse",
+    "Duluth Harbor North Breakwater",
+    "Duluth Harbor North Pier",
+    "Duluth North Pier"
   ],
   "country": "US",
   "region": "MN",
@@ -42,13 +45,14 @@
     "focal_height_m": 13.1,
     "range_nm": 10.4,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "16000340",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000340"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000340",
+      "listed": "2016-06-07"
     }
   ],
   "aton": {
@@ -73,11 +77,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1910,
       "event": "first_lit",
@@ -87,7 +97,7 @@
     {
       "year": 2016,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -134,6 +144,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1075242725",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Duluth Harbor North Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=266",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,8 +180,52 @@
       "part": "wikidata:Q14692599",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:266",
+      "part": "wikidata:Q14692599",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:duluth-harbor-north-pier",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15855",
+      "part": "wikidata:Q14692599",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:16000340",
+      "part": "wikidata:Q14692599",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.78091,-92.08822",
+      "part": "wikidata:Q14692599",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:duluth-north-pier",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

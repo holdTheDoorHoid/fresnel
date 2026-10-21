@@ -2,7 +2,8 @@
   "id": "us-nj-sea-girt",
   "name": "Sea Girt Light",
   "other_names": [
-    "Sea Girt Lighthouse"
+    "Sea Girt Lighthouse",
+    "Sea Girt"
   ],
   "country": "US",
   "region": "NJ",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1896,
     "deactivated": 1977,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 18.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -51,20 +52,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,13 +73,31 @@
     {
       "year": 1896,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1896,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1896,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1955,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1977,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -125,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1047098792",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sea Girt",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=375",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sea Girt",
+      "url": "https://archives.uslhs.org/places/sea-girt",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,9 +185,59 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:375",
+      "part": "wikidata:Q7439903",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:sea-girt",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3388",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:sea-girt",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1977
+        },
+        {
+          "source": "rowlett",
+          "value": 1955
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,12 @@
   "id": "us-mi-pointe-aux-barques",
   "name": "Pointe aux Barques Light",
   "other_names": [
-    "Pointe aux Barques Lighthouse"
+    "Pointe aux Barques Lighthouse",
+    "Pointe Aux Barques",
+    "Pointe aux Barques",
+    "Pointe Aux Barques Lighthouse",
+    "Point Aux Barques Light",
+    "Point aux Barques"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1848,
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1847,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 20s",
-    "focal_height_m": 28.0,
-    "range_nm": 28.0,
+    "focal_height_m": 28.3,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000949",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000949"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000949",
+      "listed": "1973-03-20",
+      "nomination": "https://catalog.archives.gov/id/25339471"
     }
   ],
   "aton": {
@@ -57,24 +64,37 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1958"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "https://pabmm.org/asst-keepers-program",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a stay as a keeper for a fee. Confirm availability and rules with the operator."
+  },
   "events": [
+    {
+      "year": 1847,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1848,
       "event": "built",
@@ -82,9 +102,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "osm"
     },
     {
@@ -94,9 +120,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1958,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +192,31 @@
       "label": "Website",
       "url": "https://pointeauxbarqueslighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Pointe Aux Barques",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=171",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: POINTE AUX BARQUES",
+      "url": "https://archives.uslhs.org/places/pointe-aux-barques",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339471",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,7 +229,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,9 +244,95 @@
         "events",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:171",
+      "part": "wikidata:Q7208336",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:pointe-aux-barques-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10210",
+      "part": "wikidata:Q7208336",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3009",
+      "part": "wikidata:Q7208336",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000949",
+      "part": "wikidata:Q7208336",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.02280,-82.79372",
+      "part": "wikidata:Q7208336",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:pointe-aux-barques",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:point-aux-barques",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "osm",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1847
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

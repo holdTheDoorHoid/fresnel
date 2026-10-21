@@ -2,7 +2,11 @@
   "id": "us-nc-currituck-beach",
   "name": "Currituck Beach Lighthouse",
   "other_names": [
-    "Currituck Beach Light"
+    "Currituck Beach Light",
+    "Currituck Beach",
+    "Corolla",
+    "Whaleshead Lighthouse",
+    "Currituck Beach Lighthouse Complex (Boundary Increase)"
   ],
   "country": "US",
   "region": "NC",
@@ -22,30 +26,44 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1875,
       "height_m": 49.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1875,
+    "first_lit": 1873,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 20s",
-    "focal_height_m": 48.1,
+    "focal_height_m": 48.2,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73001333",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001333"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001333",
+      "listed": "1973-10-15",
+      "nomination": "https://catalog.archives.gov/id/47719864"
+    },
+    {
+      "register": "NRHP",
+      "number": "99000911",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000911",
+      "listed": "2000-01-12",
+      "nomination": "https://catalog.archives.gov/id/47719866"
     }
   ],
   "aton": {
@@ -57,28 +75,34 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1939"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -86,6 +110,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1939,
@@ -96,12 +126,24 @@
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2000,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-currituck-beach",
+      "relation": "replica",
+      "name": "Currituck Beach Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/99000911_currituck.jpg",
@@ -148,6 +190,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/295320588",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Currituck Beach",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=358",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Currituck Beach",
+      "url": "https://archives.uslhs.org/places/currituck-beach",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719864",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719866",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +227,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -173,8 +239,75 @@
       "key": "osm:way/295320588",
       "part": "wikidata:Q3308122",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:358",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:currituck-beach",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-555",
+      "part": "wikidata:Q3308122",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3365",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73001333",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:99000911",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.37682,-75.82964",
+      "part": "wikidata:Q3308122",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:currituck-beach",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -189,9 +322,27 @@
         {
           "source": "osm",
           "value": 48.1
+        },
+        {
+          "source": "uslhs",
+          "value": 48.16
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1875
+        },
+        {
+          "source": "uslhs",
+          "value": 1873
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

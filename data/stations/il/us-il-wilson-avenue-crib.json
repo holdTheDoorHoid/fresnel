@@ -2,7 +2,9 @@
   "id": "us-il-wilson-avenue-crib",
   "name": "Wilson Avenue Crib Light",
   "other_names": [
-    "Wilson Avenue Crib Lighthouse"
+    "Wilson Avenue Crib Lighthouse",
+    "Wilson Avenue Crib",
+    "Wilson Avenue Intake Crib Light"
   ],
   "country": "US",
   "region": "IL",
@@ -35,11 +37,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "QFI W",
-    "focal_height_m": 21.0,
+    "characteristic": "Q W",
+    "focal_height_m": 20.7,
     "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,7 +74,7 @@
     {
       "year": 1918,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -114,6 +116,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3598873462",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Wilson Avenue Crib",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=867",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Wilson Avenue Crib",
+      "url": "https://archives.uslhs.org/places/wilson-avenue-crib",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,7 +143,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -139,6 +155,44 @@
       "part": "wikidata:Q81993353",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:867",
+      "part": "wikidata:Q81993353",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:wilson-avenue-crib",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20135",
+      "part": "wikidata:Q81993353",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9609",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.96615,-87.59109",
+      "part": "wikidata:Q81993353",
+      "fields": [
+        "light"
       ]
     }
   ],

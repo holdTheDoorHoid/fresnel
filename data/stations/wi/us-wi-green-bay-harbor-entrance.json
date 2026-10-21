@@ -3,7 +3,8 @@
   "name": "Green Bay Harbor Entrance Light",
   "other_names": [
     "Green Bay Harbor Entrance Lighthouse",
-    "Green Bay harbor Entrance Lighthouse"
+    "Green Bay harbor Entrance Lighthouse",
+    "Green Bay Harbor Entrance"
   ],
   "country": "US",
   "region": "WI",
@@ -36,17 +37,19 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc R 4s",
-    "focal_height_m": 22.0,
-    "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 21.9,
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "08000248",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000248"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000248",
+      "listed": "2008-03-28",
+      "nomination": "https://catalog.archives.gov/id/75324981"
     }
   ],
   "aton": {
@@ -59,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +73,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -79,13 +82,13 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2008,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +135,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582444779",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Green Bay Harbor Entrance",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=635",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Green Bay Harbor Entrance",
+      "url": "https://archives.uslhs.org/places/green-bay-harbor-entrance",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324981",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -144,7 +167,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -158,6 +180,63 @@
       "part": "wikidata:Q5602333",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:635",
+      "part": "wikidata:Q5602333",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:green-bay-harbor-entrance",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-22130",
+      "part": "wikidata:Q5602333",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:4713",
+      "part": "station",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:08000248",
+      "part": "wikidata:Q5602333",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.65214,-87.89911",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.65309,-87.90126",
+      "part": "wikidata:Q5602333",
+      "fields": [
+        "light"
       ]
     }
   ],

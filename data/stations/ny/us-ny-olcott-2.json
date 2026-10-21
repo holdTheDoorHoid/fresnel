@@ -1,0 +1,132 @@
+{
+  "id": "us-ny-olcott-2",
+  "name": "Olcott",
+  "other_names": [
+    "Olcott Light"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.34083,
+    "lon": -78.72167,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1873,
+      "height_m": 8.4,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1873,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 7.9,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-2400",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-ny-olcott",
+      "relation": "replica",
+      "name": "Olcott Light"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Olcott",
+      "url": "https://archives.uslhs.org/places/olcott",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2400",
+      "part": "uslhs:10268",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:10268",
+      "part": "uslhs:10268",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "location",
+        "name",
+        "region",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

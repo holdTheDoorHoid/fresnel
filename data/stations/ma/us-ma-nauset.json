@@ -3,7 +3,10 @@
   "name": "Nauset Light",
   "other_names": [
     "Nauset Lighthouse",
-    "Nauset Beach Light"
+    "Nauset Beach Light",
+    "Nauset",
+    "Nauset Beach",
+    "Nauset Beach Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -41,23 +44,40 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "oil_house",
+      "name": "Oil House",
+      "type": null,
+      "material": null,
+      "built": 1892,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.860384,
+        "lon": -69.952886
+      }
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Al WR 10s",
-    "focal_height_m": 36.5,
+    "characteristic": "Al Fl W R 10s",
+    "focal_height_m": 36.6,
     "range_nm": 24.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001484",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001484"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001484",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789149"
     }
   ],
   "aton": {
@@ -67,31 +87,44 @@
     "nga": null
   },
   "agency": "Nauset Light Preservation Society",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1838,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1873,
@@ -107,14 +140,32 @@
     },
     {
       "year": 1877,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1877,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1892,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1923,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -183,6 +234,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/421853944",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/713402647",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Nauset",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=488",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Nauset",
+      "url": "https://archives.uslhs.org/places/nauset",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789149",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/massachusetts",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -219,8 +300,83 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/713402647",
+      "part": "osm:way/713402647",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:488",
+      "part": "wikidata:Q6981401",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:nauset-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-510.1",
+      "part": "wikidata:Q6981401",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2847",
+      "part": "wikidata:Q6981401",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001484",
+      "part": "wikidata:Q6981401",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.86000,-69.95334",
+      "part": "wikidata:Q6981401",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:nauset",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ma:nauset-beach-light-station",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -230,6 +386,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {
@@ -254,6 +414,24 @@
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     },
     {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 37.0
+        },
+        {
+          "source": "osm",
+          "value": 36.5
+        },
+        {
+          "source": "uslhs",
+          "value": 31.09
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
       "field": "location",
       "values": [
         {
@@ -267,6 +445,13 @@
           "source": "osm",
           "value": [
             41.86015,
+            -69.95297
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            41.86014,
             -69.95297
           ]
         }

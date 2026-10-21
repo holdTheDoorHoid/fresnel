@@ -1,7 +1,9 @@
 {
   "id": "us-mn-boom-island",
   "name": "Boom Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Boom Island"
+  ],
   "country": "US",
   "region": "MN",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/948785865",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,6 +95,12 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:boom-island",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

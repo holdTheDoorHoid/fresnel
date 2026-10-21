@@ -1,7 +1,10 @@
 {
   "id": "us-as-breakers-point",
   "name": "Breakers Point",
-  "other_names": [],
+  "other_names": [
+    "Breaker Point",
+    "Breakers Point Light"
+  ],
   "country": "US",
   "region": "AS",
   "county": null,
@@ -33,15 +36,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 58.0,
-    "range_nm": 6.0,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 57.9,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-30185",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +78,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9222828416",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: American Samoa",
+      "url": "https://www.ibiblio.org/lighthouse/asm.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Breaker Point",
+      "url": "https://archives.uslhs.org/places/breaker-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,11 +97,38 @@
       "part": "osm:node/9222828416",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:asm:breakers-point-2",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-30185",
+      "part": "osm:node/9222828416",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:98628",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:-14.28977,-170.66362",
+      "part": "osm:node/9222828416",
+      "fields": [
+        "light"
       ]
     }
   ],

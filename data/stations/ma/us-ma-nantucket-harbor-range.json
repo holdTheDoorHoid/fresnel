@@ -2,7 +2,14 @@
   "id": "us-ma-nantucket-harbor-range",
   "name": "Nantucket Harbor Range Lights",
   "other_names": [
-    "Nantucket Range Lights"
+    "Nantucket Range Rear Light",
+    "Nantucket Reef Range Front Light",
+    "Nantucket Range Lights",
+    "Rear Range",
+    "Nantucket Harbor Range Front",
+    "Nantucket Harbor Range Rear",
+    "Nantucket Harbor Range Front Light",
+    "Nantucket Harbor Range Rear Light"
   ],
   "country": "US",
   "region": "MA",
@@ -11,39 +18,69 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 41.289167,
-    "lon": -70.091667,
+    "lat": 41.289889,
+    "lon": -70.09222,
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
-      "type": null,
+      "role": "rear_range",
+      "name": "Nantucket Harbor Range Lights",
+      "type": "skeletal",
       "material": null,
-      "built": null,
+      "built": 1908,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.289167,
+        "lon": -70.091667
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Nantucket Reef Range Front Light",
+      "type": null,
+      "material": "wood",
+      "built": null,
+      "height_m": 9.1,
+      "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Nantucket Range Rear Light",
+      "type": null,
+      "material": "wood",
+      "built": null,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 41.2893,
+        "lon": -70.0919
+      }
     }
   ],
   "light": {
     "first_lit": 1908,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "QW",
+    "focal_height_m": 51.0,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-15165",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -71,6 +108,12 @@
   "events": [
     {
       "year": 1908,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "osm"
+    },
+    {
+      "year": 1908,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -92,6 +135,21 @@
   "links": [
     {
       "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q108751326",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Nantucket_Harbor_range_lights",
+      "kind": "commons"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q108751334",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q14715742",
       "kind": "wikidata"
     },
@@ -106,25 +164,96 @@
       "kind": "wikipedia"
     },
     {
-      "label": "Wikimedia Commons category",
-      "url": "https://commons.wikimedia.org/wiki/Category:Nantucket_Harbor_range_lights",
-      "kind": "commons"
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3445730777",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3445730778",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
-      "key": "wikidata:Q14715742",
-      "part": "wikidata:Q14715742",
+      "key": "wikidata:Q108751326",
+      "part": "wikidata:Q108751326",
       "fields": [
+        "aton",
         "events",
         "kind",
         "light",
-        "location",
-        "name",
-        "photos",
-        "region"
+        "region",
+        "structures"
       ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q108751334",
+      "part": "wikidata:Q108751334",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q14715742",
+      "part": "wikidata:Q14715742",
+      "fields": [
+        "name",
+        "photos"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/3445730777",
+      "part": "wikidata:Q14715742",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/3445730778",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:nantucket-harbor-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:nantucket-harbor-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15160",
+      "part": "wikidata:Q14715742",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15165",
+      "part": "wikidata:Q14715742",
+      "fields": []
     }
   ],
   "conflicts": [],

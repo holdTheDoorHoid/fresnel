@@ -36,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "98000297",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98000297"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98000297",
+      "listed": "1998-04-01",
+      "nomination": "https://catalog.archives.gov/id/93208446"
     }
   ],
   "aton": {
@@ -69,7 +71,7 @@
     {
       "year": 1998,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -101,6 +103,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:US_Coast_Guard_Station_%28St._Simons_Island%29",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/93208446",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -118,10 +125,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:98000297",
+      "part": "wikidata:Q5327837",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

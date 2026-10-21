@@ -2,11 +2,13 @@
   "id": "us-ma-great-point",
   "name": "Great Point Light",
   "other_names": [
-    "Great Point Lighthouse"
+    "Great Point Lighthouse",
+    "Great Point",
+    "Nantucket (Great Point) Light"
   ],
   "country": "US",
   "region": "MA",
-  "county": null,
+  "county": "Nantucket",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -16,30 +18,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1769,
       "height_m": 21.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1984,
+    "first_lit": 1784,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 22.0,
+    "focal_height_m": 21.6,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
@@ -54,23 +56,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Trustees of Reservations",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +82,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1784,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1982,
@@ -92,6 +100,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1986,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1986,
@@ -143,6 +157,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/213821136",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Great Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=628",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Great Point",
+      "url": "https://archives.uslhs.org/places/great-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -154,7 +183,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -169,22 +197,80 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:628",
+      "part": "wikidata:Q5599792",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:great-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-13650",
+      "part": "wikidata:Q5599792",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-545",
+      "part": "wikidata:Q5599792",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8495",
+      "part": "wikidata:Q5599792",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.39017,-70.04828",
+      "part": "wikidata:Q5599792",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:great-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1986
         },
         {
-          "source": "wikidata",
-          "value": 1984
+          "source": "uslhs",
+          "value": 1784
         }
       ],
-      "note": "A source gives the light's service entry (1986) after its retirement (1984); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

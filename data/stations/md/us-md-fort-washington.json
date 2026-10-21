@@ -2,7 +2,9 @@
   "id": "us-md-fort-washington",
   "name": "Fort Washington Light",
   "other_names": [
-    "Fort Washington Lighthouse"
+    "Fort Washington Lighthouse",
+    "Fort Washington",
+    "Upper Potomac River Light 80"
   ],
   "country": "US",
   "region": "MD",
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1901,
+    "first_lit": 1857,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 28.5,
+    "focal_height_m": 5.5,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -64,15 +66,27 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1882,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -86,6 +100,12 @@
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2020,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -140,6 +160,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/166622911",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fort Washington",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=438",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Washington",
+      "url": "https://archives.uslhs.org/places/fort-washington",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,7 +187,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,12 +198,86 @@
       "key": "osm:way/166622911",
       "part": "wikidata:Q5472260",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:438",
+      "part": "wikidata:Q5472260",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:fort-washington-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-18560",
+      "part": "wikidata:Q5472260",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7097",
+      "part": "wikidata:Q5472260",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.71133,-77.03791",
+      "part": "wikidata:Q5472260",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:fort-washington",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 28.5
+        },
+        {
+          "source": "uslhs",
+          "value": 5.18
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1901
+        },
+        {
+          "source": "uslhs",
+          "value": 1857
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

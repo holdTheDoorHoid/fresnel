@@ -3,7 +3,8 @@
   "name": "Halfway Rock Light",
   "other_names": [
     "Halfway Rock Lighthouse",
-    "Halfway Rock Light Station"
+    "Halfway Rock Light Station",
+    "Halfway Rock"
   ],
   "country": "US",
   "region": "ME",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1871,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
-    "focal_height_m": 23.1,
+    "focal_height_m": 23.2,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000150",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000150"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000150",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684883"
     }
   ],
   "aton": {
@@ -55,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately Owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1975"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +82,31 @@
     {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1871,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1975,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11282419401",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Halfway Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=779",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Halfway Rock",
+      "url": "https://archives.uslhs.org/places/halfway-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684883",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,8 +198,75 @@
       "key": "osm:node/11282419401",
       "part": "wikidata:Q5641964",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:779",
+      "part": "wikidata:Q5641964",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:halfway-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-40",
+      "part": "wikidata:Q5641964",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6675",
+      "part": "wikidata:Q5641964",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2910",
+      "part": "wikidata:Q5641964",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000150",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.65599,-70.03684",
+      "part": "wikidata:Q5641964",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:halfway-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

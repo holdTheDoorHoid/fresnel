@@ -2,7 +2,8 @@
   "id": "us-de-christiana",
   "name": "Christiana Light",
   "other_names": [
-    "Christiana Lighthouse"
+    "Christiana Lighthouse",
+    "Christiana"
   ],
   "country": "US",
   "region": "DE",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 39.7217,
-    "lon": -75.5208,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.721667,
+    "lon": -75.520833,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "type": "integral",
+      "material": "wood",
+      "built": 1835,
+      "height_m": 12.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -72,13 +73,19 @@
     {
       "year": 1835,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1909,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -110,6 +117,16 @@
       "label": "ARLHS World List of Lights USA1150",
       "url": "https://wlol.arlhs.com/lighthouse/USA1150.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Christiana",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1887",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Christiana",
+      "url": "https://archives.uslhs.org/places/christiana",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,15 +139,31 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1887",
+      "part": "wikidata:Q16890341",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8395",
+      "part": "wikidata:Q16890341",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,9 +2,18 @@
   "id": "us-mi-st-clair-flats-front-and-rear-range",
   "name": "St. Clair Flats Front and Rear Range Light",
   "other_names": [
+    "St. Clair Flats Range Front Light",
     "St. Clair Flats Rear Range Light",
     "Saint Clair Flats Rear Range Light",
-    "Saint Clair Flats Front Range Light"
+    "Saint Clair Flats Front Range Light",
+    "St. Clair Flats Range",
+    "St. Clair Flats Old Channel",
+    "St. Clair Flats South Channel Range Front",
+    "St. Clair Flats South Channel Range Rear",
+    "Saint Clair Flats South Channel Range Front",
+    "St. Clair Flats South Channel Range Lights",
+    "St. Clair Flats Old Channel Light",
+    "St. Clair Flats S Channel"
   ],
   "country": "US",
   "region": "MI",
@@ -22,6 +31,17 @@
   "status_note": null,
   "structures": [
     {
+      "role": "front_range",
+      "name": "St. Clair Flats Range Front Light",
+      "type": null,
+      "material": null,
+      "built": 1859,
+      "height_m": 7.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
       "role": "rear_range",
       "name": "St. Clair Flats Rear Range Light",
       "type": null,
@@ -30,22 +50,7 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 42.539445,
-        "lon": -82.69
-      }
-    },
-    {
-      "role": "front_range",
-      "name": "Saint Clair Flats Front Range Light",
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "osm"
+      "from": "wikidata"
     },
     {
       "role": "rear_range",
@@ -67,17 +72,19 @@
     "first_lit": null,
     "deactivated": 1934,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.5,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90000853",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000853"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000853",
+      "listed": "1990-05-24",
+      "nomination": "https://catalog.archives.gov/id/25340525"
     },
     {
       "register": "National Register of Historic Places contributing property",
@@ -86,8 +93,8 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": "USA791",
+    "uscg_llnr": "4-9550",
+    "arlhs": "USA790",
     "ccg_list_number": null,
     "nga": null
   },
@@ -106,8 +113,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -115,7 +122,7 @@
     {
       "year": 1859,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -127,7 +134,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +145,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_clair_1904r_300.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_clair_1904r_300.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:St_clair_1904r_300.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_clair_1904f_300.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_clair_1904f_300.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:St_clair_1904f_300.jpg",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -159,6 +175,21 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:St._Clair_Flats_Front_and_Rear_Range_Light",
       "kind": "commons"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q89911087",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_avant_de_St._Clair_Flats",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA790",
+      "url": "https://wlol.arlhs.com/lighthouse/USA790.html",
+      "kind": "register"
     },
     {
       "label": "Wikidata",
@@ -184,6 +215,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4782133850",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Clair Flats Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=706",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saint Clair Flats South Channel Range Front",
+      "url": "https://archives.uslhs.org/places/saint-clair-flats-south-channel-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340525",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -203,13 +254,23 @@
     },
     {
       "source": "wikidata",
-      "key": "wikidata:Q90016470",
-      "part": "wikidata:Q90016470",
+      "key": "wikidata:Q89911087",
+      "part": "osm:node/4782133850",
       "fields": [
         "aton",
         "events",
-        "light",
+        "photos",
         "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q90016470",
+      "part": "wikidata:Q90016470",
+      "fields": [
+        "events",
+        "light",
         "structures"
       ]
     },
@@ -226,10 +287,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:706",
+      "part": "wikidata:Q90016470",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:st-clair-flats-old-channel",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:st-clair-flats-south-channel-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-9550",
+      "part": "wikidata:Q90016470",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:83192",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000853",
+      "part": "osm:node/4782133850",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.53789,-82.69329",
+      "part": "wikidata:Q90016470",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:st-clair-flats-s-channel",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

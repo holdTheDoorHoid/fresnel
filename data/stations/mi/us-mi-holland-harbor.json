@@ -3,7 +3,14 @@
   "name": "Holland Harbor Light",
   "other_names": [
     "Holland Harbor Lighthouse",
-    "Big Red"
+    "Big Red",
+    "Holland Harbor",
+    "Holland Harbor South Pierhead",
+    "\"Big Red\"",
+    "South Pierhead",
+    "Holland Lighthouse",
+    "Holland Harbor North Pierhead Light",
+    "Holland Harbor South Pierhead Light"
   ],
   "country": "US",
   "region": "MI",
@@ -24,29 +31,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1872,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1936,
+    "first_lit": 1872,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Alt WR 10s",
-    "focal_height_m": 15.0,
-    "range_nm": 16.0,
+    "characteristic": "Al Fl W R 10s",
+    "focal_height_m": 15.8,
+    "range_nm": 14.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78001509",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001509"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001509",
+      "listed": "1978-07-20",
+      "nomination": "https://catalog.archives.gov/id/25340360"
     },
     {
       "register": "Michigan State Historic Site",
@@ -63,20 +72,20 @@
   "agency": "Holland Historic Lighthouse Commission",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,6 +97,30 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1907,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1936,
       "event": "first_lit",
       "note": null,
@@ -96,7 +129,7 @@
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/224699872",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Holland Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=188",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: HOLLAND HARBOR (SOUTH PIERHEAD)",
+      "url": "https://archives.uslhs.org/places/holland-harbor-south-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340360",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +208,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -171,9 +223,93 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:188",
+      "part": "wikidata:Q5880958",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:holland-harbor-south-pierhead-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19290",
+      "part": "wikidata:Q5880958",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19295",
+      "part": "wikidata:Q5880958",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2981",
+      "part": "wikidata:Q5880958",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78001509",
+      "part": "wikidata:Q5880958",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.77265,-86.21251",
+      "part": "wikidata:Q5880958",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.77330,-86.21272",
+      "part": "wikidata:Q5880958",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:holland-harbor-big-red",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1936
+        },
+        {
+          "source": "uslhs",
+          "value": 1873
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

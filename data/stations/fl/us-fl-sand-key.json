@@ -33,20 +33,22 @@
     }
   ],
   "light": {
-    "first_lit": 1853,
+    "first_lit": 1827,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 15s",
     "focal_height_m": 12.2,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000589",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000589"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000589",
+      "listed": "1973-04-11",
+      "nomination": "https://catalog.archives.gov/id/77843304"
     }
   ],
   "aton": {
@@ -59,7 +61,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +72,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +85,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1853,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -95,10 +103,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 2014,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2015,
@@ -150,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6813439499",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sand Key",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=699",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sand Key",
+      "url": "https://archives.uslhs.org/places/sand-key",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77843304",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +208,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -177,9 +222,73 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:699",
+      "part": "wikidata:Q7415820",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:sand-key-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:sand-key-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1055.1",
+      "part": "wikidata:Q7415820",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2783",
+      "part": "wikidata:Q7415820",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000589",
+      "part": "wikidata:Q7415820",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:24.45582,-81.87731",
+      "part": "wikidata:Q7415820",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:sand-key",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -193,6 +302,10 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
           "value": "inactive"
         }
       ],
@@ -222,9 +335,45 @@
         {
           "source": "osm",
           "value": 12.2
+        },
+        {
+          "source": "uslhs",
+          "value": 33.22
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1853
+        },
+        {
+          "source": "osm",
+          "value": 1853
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2015
+        },
+        {
+          "source": "uslhs",
+          "value": 1989
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
     },
     {
       "field": "location",
@@ -241,6 +390,13 @@
           "value": [
             24.45554,
             -81.87769
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            24.45394,
+            -81.8775
           ]
         }
       ],

@@ -1,7 +1,12 @@
 {
   "id": "us-ga-tybee-island-range-front",
-  "name": "Tybee Island Range Front Light",
-  "other_names": [],
+  "name": "Tybee Knoll Cut Range",
+  "other_names": [
+    "Tybee Island Range Front Light",
+    "Tybee Knoll Cut Range Front",
+    "Tybee Knoll Cut Range Rear",
+    "Tybee Knoll Cut Range Rear Light"
+  ],
   "country": "US",
   "region": "GA",
   "county": "Chatham",
@@ -9,39 +14,69 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 32.032,
-    "lon": -80.905,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.02617,
+    "lon": -80.90433,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Tybee Knoll Cut Range Front",
+      "type": "integral",
+      "material": "wood",
+      "built": 1878,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Tybee Knoll Cut Range Rear",
+      "type": null,
+      "material": null,
+      "built": 1878,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 32.02617,
+        "lon": -80.90833
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Tybee Island Range Front Light",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 32.032827,
+        "lon": -80.905529
+      }
     }
   ],
   "light": {
     "first_lit": 1878,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
+    "characteristic": "Iso W 6s 70",
+    "focal_height_m": 14.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "3-4715",
     "arlhs": "USA863",
     "ccg_list_number": null,
     "nga": null
@@ -70,8 +105,14 @@
     {
       "year": 1878,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1878,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -107,6 +148,26 @@
       "label": "ARLHS World List of Lights USA863",
       "url": "https://wlol.arlhs.com/lighthouse/USA863.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Tybee Knoll Cut Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1856",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Georgia",
+      "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tybee Knoll Cut Range Rear",
+      "url": "https://archives.uslhs.org/places/tybee-knoll-cut-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tybee Knoll Cut Range Front",
+      "url": "https://archives.uslhs.org/places/tybee-knoll-cut-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,10 +181,59 @@
         "events",
         "kind",
         "light",
-        "location",
-        "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1856",
+      "part": "wikidata:Q7859695",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:tybee-knoll-cut-range-front-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:tybee-knoll-cut-range-rear-3",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4715",
+      "part": "uslhs:15259",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15259",
+      "part": "uslhs:15259",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8414",
+      "part": "uslhs:8414",
+      "fields": [
+        "location",
+        "structures"
       ]
     }
   ],

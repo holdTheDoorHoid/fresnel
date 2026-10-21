@@ -1,0 +1,134 @@
+{
+  "id": "us-mi-brush-point-range",
+  "name": "Brush Point Range",
+  "other_names": [
+    "Brush Point Range Rear",
+    "Brush Point Range Rear Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.464312,
+    "lon": -84.455521,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "FR",
+    "focal_height_m": 18.3,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-14395",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Brush Point Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2009",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brush Point Range",
+      "url": "https://archives.uslhs.org/places/brush-point-range",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2009",
+      "part": "lighthousefriends:2009",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:brush-point-range-rear",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14395",
+      "part": "lighthousefriends:2009",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:22250",
+      "part": "station",
+      "fields": []
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

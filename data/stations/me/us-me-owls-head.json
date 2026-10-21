@@ -3,7 +3,10 @@
   "name": "Owls Head Light",
   "other_names": [
     "Owl's Head Lighthouse",
-    "Owls Head Lighthouse"
+    "Owls Head Lighthouse",
+    "Owls Head",
+    "Owl's Head",
+    "Owls Head Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -33,20 +36,27 @@
     }
   ],
   "light": {
-    "first_lit": 1852,
+    "first_lit": 1825,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
-    "focal_height_m": 100.0,
+    "focal_height_m": 30.5,
     "range_nm": 16.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78000183",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000183"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000183",
+      "listed": "1978-01-18",
+      "nomination": "https://catalog.archives.gov/id/88686508"
     }
   ],
   "aton": {
@@ -55,23 +65,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "American Lighthouse Foundation",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1989"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,21 +93,45 @@
       "from": "wikidata"
     },
     {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1826,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1852,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1852,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1989,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -162,6 +196,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/426617214",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Owls Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=527",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Owl's Head",
+      "url": "https://archives.uslhs.org/places/owls-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686508",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,7 +228,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -187,8 +240,69 @@
       "key": "osm:way/426617214",
       "part": "wikidata:Q7114904",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:527",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:owl-s-head-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4105",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2925",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78000183",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.09224,-69.04403",
+      "part": "wikidata:Q7114904",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:owl-s-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -203,9 +317,27 @@
         {
           "source": "osm",
           "value": 100.0
+        },
+        {
+          "source": "uslhs",
+          "value": 30.48
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1852
+        },
+        {
+          "source": "uslhs",
+          "value": 1825
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

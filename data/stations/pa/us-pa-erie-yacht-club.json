@@ -1,7 +1,11 @@
 {
   "id": "us-pa-erie-yacht-club",
   "name": "Erie Yacht Club Light",
-  "other_names": [],
+  "other_names": [
+    "Erie Yacht Club",
+    "Erie Yacht Club Breakwater Light",
+    "Erie Yacht Club Entrance Light 1"
+  ],
   "country": "US",
   "region": "PA",
   "county": "Erie",
@@ -34,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2s",
-    "focal_height_m": 10.0,
+    "focal_height_m": 9.8,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -95,6 +99,11 @@
       "label": "ARLHS World List of Lights USA1313",
       "url": "https://wlol.arlhs.com/lighthouse/USA1313.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Pennsylvania: Northwest",
+      "url": "https://www.ibiblio.org/lighthouse/pa.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,12 +115,37 @@
         "aton",
         "county",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pa:erie-yacht-club",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-3660",
+      "part": "wikidata:Q84563073",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-3665",
+      "part": "wikidata:Q84563073",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.12372,-80.13019",
+      "part": "wikidata:Q84563073",
+      "fields": [
+        "light"
       ]
     }
   ],

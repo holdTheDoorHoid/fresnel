@@ -3,7 +3,8 @@
   "name": "Ambrose Light",
   "other_names": [
     "Ambrose Lighthouse",
-    "Ambrose Tower"
+    "Ambrose Tower",
+    "Ambrose"
   ],
   "country": "US",
   "region": "NY",
@@ -12,22 +13,22 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 40.45,
-    "lon": -73.8,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 40.484757,
+    "lon": -73.917787,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "texas_tower",
-      "material": null,
-      "built": null,
+      "material": "steel",
+      "built": 1967,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -73,14 +74,26 @@
     {
       "year": 1967,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1999,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2008,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2008,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -121,6 +134,21 @@
       "label": "ARLHS World List of Lights USA009",
       "url": "https://wlol.arlhs.com/lighthouse/USA009.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Ambrose",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2415",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ambrose",
+      "url": "https://archives.uslhs.org/places/ambrose",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,10 +161,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2415",
+      "part": "wikidata:Q3378154",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:ambrose-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8555",
+      "part": "wikidata:Q3378154",
+      "fields": [
         "structures"
       ]
     }

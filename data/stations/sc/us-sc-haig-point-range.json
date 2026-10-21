@@ -4,7 +4,11 @@
   "other_names": [
     "Haig Point Range front light",
     "Haig Point Range rear light",
-    "Haig Point range lights"
+    "Haig Point range lights",
+    "Daufuskie Island",
+    "Haig Point",
+    "Range Rear",
+    "Haig Point Light"
   ],
   "country": "US",
   "region": "SC",
@@ -43,8 +47,8 @@
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 32.145278,
-        "lon": -80.836444
+        "lat": 32.1451,
+        "lon": -80.8366
       }
     }
   ],
@@ -56,7 +60,7 @@
     "focal_height_m": 5.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
@@ -86,12 +90,25 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
+    {
+      "year": 1872,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1873,
       "event": "built",
@@ -174,6 +191,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Haig_Point_range_lights",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Daufuskie Island (Haig Point)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=653",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -211,6 +238,37 @@
       "part": "station",
       "fields": [
         "name"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:653",
+      "part": "wikidata:Q107267459",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:haig-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4370",
+      "part": "wikidata:Q107267459",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.14525,-80.83648",
+      "part": "wikidata:Q107267459",
+      "fields": [
+        "light"
       ]
     }
   ],

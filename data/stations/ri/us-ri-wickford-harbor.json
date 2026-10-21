@@ -3,7 +3,11 @@
   "name": "Wickford Harbor Light",
   "other_names": [
     "Wickford Harbor Lighthouse",
-    "Wickford Lighthouse"
+    "Wickford Lighthouse",
+    "Wickford Harbor",
+    "Wickford Harbor North Breakwater",
+    "Wickford Harbor Light 1",
+    "Wickford Harbor North Breakwater Light 4"
   ],
   "country": "US",
   "region": "RI",
@@ -24,15 +28,15 @@
       "role": "tower",
       "name": "Wickford Harbor Light",
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1882,
       "height_m": 4.5,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
-        "lat": 41.5734,
-        "lon": -71.4362
+        "lat": 41.572653,
+        "lon": -71.436869
       }
     },
     {
@@ -48,14 +52,14 @@
     }
   ],
   "light": {
-    "first_lit": 1930,
+    "first_lit": 1882,
     "deactivated": 1930,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 6.0,
+    "focal_height_m": 12.2,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -88,8 +92,20 @@
     {
       "year": 1882,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1882,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1930,
@@ -100,7 +116,7 @@
     {
       "year": 1930,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -142,6 +158,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/12953207947",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Wickford Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1971",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Wickford Harbor",
+      "url": "https://archives.uslhs.org/places/wickford-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -168,6 +199,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1971",
+      "part": "wikidata:Q7998367",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:wickford-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:wickford-harbor-north-breakwater",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19135",
+      "part": "wikidata:Q7998367",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19145",
+      "part": "osm:node/12953207947",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8908",
+      "part": "wikidata:Q7998367",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.57262,-71.43682",
+      "part": "wikidata:Q7998367",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.57437,-71.43772",
+      "part": "osm:node/12953207947",
+      "fields": []
     }
   ],
   "conflicts": [],

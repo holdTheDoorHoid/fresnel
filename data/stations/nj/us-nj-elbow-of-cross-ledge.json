@@ -2,7 +2,8 @@
   "id": "us-nj-elbow-of-cross-ledge",
   "name": "Elbow of Cross Ledge Light",
   "other_names": [
-    "Elbow of Cross Ledge Lighthouse"
+    "Elbow of Cross Ledge Lighthouse",
+    "Elbow of Cross Ledge"
   ],
   "country": "US",
   "region": "NJ",
@@ -37,24 +38,24 @@
     {
       "role": "tower",
       "name": "Elbow of Cross Ledge Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "caisson",
+      "material": "brick",
+      "built": 1953,
       "height_m": 19.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1910,
     "deactivated": 1953,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 18.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 18.6,
+    "range_nm": 16.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -67,19 +68,19 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1951"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -89,6 +90,30 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1910,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1951,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1953,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1953,
@@ -101,6 +126,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1954,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1954,
@@ -166,6 +197,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1211354436",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Elbow of Cross Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=384",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Elbow of Cross Ledge",
+      "url": "https://archives.uslhs.org/places/elbow-cross-ledge",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -200,23 +246,60 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:384",
+      "part": "osm:way/1211354436",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:elbow-of-cross-ledge-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1600",
+      "part": "osm:way/1211354436",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8777",
+      "part": "osm:way/1211354436",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.18223,-75.26844",
+      "part": "osm:way/1211354436",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:elbow-of-cross-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1954
-        },
-        {
-          "source": "wikidata",
-          "value": 1953
-        }
-      ],
-      "note": "A source gives the light's service entry (1954) after its retirement (1953); it may have been relit. Neither is shown as the first lighting."
-    },
     {
       "field": "location",
       "values": [

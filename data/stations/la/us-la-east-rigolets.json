@@ -1,7 +1,9 @@
 {
   "id": "us-la-east-rigolets",
   "name": "East Rigolets Light",
-  "other_names": [],
+  "other_names": [
+    "East Rigolets"
+  ],
   "country": "US",
   "region": "LA",
   "county": null,
@@ -9,13 +11,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.155,
-    "lon": -89.65,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.15486,
+    "lon": -89.639728,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1923) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -103,6 +105,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/East_Rigolets_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: East Rigolets",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1808",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -114,10 +121,17 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1808",
+      "part": "wikidata:Q39060433",
+      "fields": [
+        "location"
       ]
     }
   ],

@@ -2,7 +2,10 @@
   "id": "us-me-whaleback",
   "name": "Whaleback Light",
   "other_names": [
-    "Whaleback Lighthouse"
+    "Whaleback Lighthouse",
+    "Whaleback Ledge",
+    "Whaleback",
+    "Whaleback Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1872,
+    "first_lit": 1830,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 10s",
-    "focal_height_m": 17.9,
-    "range_nm": 11.0,
+    "focal_height_m": 18.0,
+    "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002278",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002278"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002278",
+      "listed": "1988-03-23",
+      "nomination": "https://catalog.archives.gov/id/88685165"
     }
   ],
   "aton": {
@@ -54,11 +59,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "American Lighthouse Foundation",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +87,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -96,13 +119,13 @@
     {
       "year": 1963,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1217716097",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Whaleback Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=552",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Whaleback",
+      "url": "https://archives.uslhs.org/places/whaleback",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685165",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +204,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,12 +217,109 @@
       "part": "wikidata:Q2566433",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:552",
+      "part": "wikidata:Q2566433",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:whaleback-ledge-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-200",
+      "part": "wikidata:Q2566433",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2944",
+      "part": "wikidata:Q2566433",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002278",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.05876,-70.69631",
+      "part": "wikidata:Q2566433",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:whaleback-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 18.0
+        },
+        {
+          "source": "osm",
+          "value": 17.9
+        },
+        {
+          "source": "uslhs",
+          "value": 21.03
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1872
+        },
+        {
+          "source": "osm",
+          "value": 1872
+        },
+        {
+          "source": "uslhs",
+          "value": 1830
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

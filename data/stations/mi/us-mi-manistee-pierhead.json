@@ -4,7 +4,10 @@
   "other_names": [
     "Manistee Pierhead Lights",
     "North Pierhead Light",
-    "Manistee North Pierhead Light"
+    "Manistee North Pierhead Light",
+    "Manistee North Pierhead",
+    "Manistee North Pier",
+    "North Pier"
   ],
   "country": "US",
   "region": "MI",
@@ -24,13 +27,43 @@
     {
       "role": "tower",
       "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1854,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 44.250968,
+        "lon": -86.344335
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Manistee North Pier",
       "type": null,
       "material": null,
+      "built": 1926,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 44.251329,
+        "lon": -86.345485
+      }
+    },
+    {
+      "role": "tower",
+      "name": "North Pierhead Light",
+      "type": null,
+      "material": "cast_iron",
       "built": 1926,
       "height_m": 11.6,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -38,16 +71,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 17.0,
-    "range_nm": 12.0,
+    "focal_height_m": 16.8,
+    "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90000718",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000718"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000718",
+      "listed": "1990-05-17",
+      "nomination": "https://catalog.archives.gov/id/25340035"
     }
   ],
   "aton": {
@@ -59,24 +94,30 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "OpenStreetMap tags the structure access=no/yes. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1854,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
     {
       "year": 1870,
       "event": "built",
@@ -90,15 +131,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1926,
       "event": "built",
       "note": null,
       "from": "osm"
     },
     {
+      "year": 1927,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1927,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +208,16 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/132570063",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1341010659",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1535977894",
       "kind": "osm"
     },
@@ -150,6 +225,26 @@
       "label": "Website",
       "url": "https://lakeshorekeepers.org/manistee-north-pierhead/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Manistee North Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=197",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: MANISTEE NORTH PIERHEAD",
+      "url": "https://archives.uslhs.org/places/manistee-north-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340035",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,14 +266,88 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/132570063",
+      "part": "osm:way/132570063",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1341010659",
+      "part": "osm:way/1341010659",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/1535977894",
       "part": "wikidata:Q12061470",
       "fields": [
         "agency",
-        "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:197",
+      "part": "wikidata:Q12061470",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:manistee-north-pierhead-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18450",
+      "part": "wikidata:Q12061470",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2989",
+      "part": "wikidata:Q12061470",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000718",
+      "part": "osm:way/1341010659",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.25181,-86.34687",
+      "part": "wikidata:Q12061470",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:manistee-north-pierhead",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -196,20 +365,6 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1870
-        },
-        {
-          "source": "osm",
-          "value": 1926
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

@@ -2,7 +2,9 @@
   "id": "us-ma-billingsgate-island",
   "name": "Billingsgate Island Light",
   "other_names": [
-    "Billingsgate Island Lighthouse"
+    "Billingsgate Island Lighthouse",
+    "Billingsgate",
+    "Billingsgate Island"
   ],
   "country": "US",
   "region": "MA",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.871667,
-    "lon": -70.068986,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.871688,
+    "lon": -70.069366,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,13 +28,13 @@
       "material": "brick",
       "built": 1822,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1822,
     "deactivated": 1915,
     "lens": null,
     "characteristic": "F W",
@@ -76,6 +78,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1822,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1858,
       "event": "first_lit",
       "note": null,
@@ -86,6 +100,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1922,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +141,16 @@
       "label": "ARLHS World List of Lights USA055",
       "url": "https://wlol.arlhs.com/lighthouse/USA055.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Billingsgate",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1972",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Billingsgate Island",
+      "url": "https://archives.uslhs.org/places/billingsgate-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +164,61 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1972",
+      "part": "wikidata:Q4911967",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8484",
+      "part": "wikidata:Q4911967",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1822
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1915
+        },
+        {
+          "source": "uslhs",
+          "value": 1922
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

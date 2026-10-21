@@ -2,7 +2,10 @@
   "id": "us-ca-anacapa-island",
   "name": "Anacapa Island Light",
   "other_names": [
-    "Anacapa Island Lighthouse"
+    "Anacapa Island Lighthouse",
+    "Anacapa Island",
+    "Anacapa Island Light Station (Boundary Increase)",
+    "Anacapa Island Light Station (Additional Documentation)"
   ],
   "country": "US",
   "region": "CA",
@@ -32,20 +35,29 @@
     }
   ],
   "light": {
-    "first_lit": 1932,
+    "first_lit": 1912,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 60s",
     "focal_height_m": 84.4,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
+      "number": "100010729",
+      "url": "https://catalog.archives.gov/id/123857871",
+      "listed": "2024-08-22",
+      "nomination": "https://catalog.archives.gov/id/123857871"
+    },
+    {
+      "register": "NRHP",
       "number": "91001101",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001101"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001101",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857871"
     }
   ],
   "aton": {
@@ -57,20 +69,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,16 +94,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1912,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1932,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1932,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2024,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -137,6 +173,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/267491966",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Anacapa Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=93",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Anacapa Island",
+      "url": "https://archives.uslhs.org/places/anacapa-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857871",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +205,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -165,9 +220,91 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:93",
+      "part": "wikidata:Q4750635",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:anacapa-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-185",
+      "part": "wikidata:Q4750635",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2701",
+      "part": "wikidata:Q4750635",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100010729",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001101",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.01584,-119.35957",
+      "part": "wikidata:Q4750635",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:anacapa-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1932
+        },
+        {
+          "source": "uslhs",
+          "value": 1912
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

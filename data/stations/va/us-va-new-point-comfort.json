@@ -2,7 +2,8 @@
   "id": "us-va-new-point-comfort",
   "name": "New Point Comfort Light",
   "other_names": [
-    "New Point Comfort Lighthouse"
+    "New Point Comfort Lighthouse",
+    "New Point Comfort"
   ],
   "country": "US",
   "region": "VA",
@@ -23,29 +24,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1804,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1806,
+    "first_lit": 1804,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 17.6,
+    "focal_height_m": 17.7,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73002037",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002037"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002037",
+      "listed": "1973-03-01",
+      "nomination": "https://catalog.archives.gov/id/41681891"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -54,27 +57,27 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-14077",
     "arlhs": "USA543",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Mathews County Historical Society",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -87,21 +90,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1804,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1806,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1806,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1963,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +169,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6101360321",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: New Point Comfort",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=442",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Point Comfort",
+      "url": "https://archives.uslhs.org/places/new-point-comfort",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41681891",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -173,8 +214,61 @@
       "key": "osm:node/6101360321",
       "part": "wikidata:Q7011017",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:442",
+      "part": "wikidata:Q7011017",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:new-point-comfort",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-14077",
+      "part": "wikidata:Q7011017",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3528",
+      "part": "wikidata:Q7011017",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73002037",
+      "part": "wikidata:Q7011017",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.30102,-76.27775",
+      "part": "wikidata:Q7011017",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -188,6 +282,10 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
           "value": "inactive"
         }
       ],
@@ -206,6 +304,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1806
+        },
+        {
+          "source": "uslhs",
+          "value": 1804
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

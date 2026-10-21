@@ -2,7 +2,8 @@
   "id": "us-hi-cape-kumukahi",
   "name": "Cape Kumukahi Light",
   "other_names": [
-    "Cape Kumukahi Lighthouse"
+    "Cape Kumukahi Lighthouse",
+    "Cape Kumukahi"
   ],
   "country": "US",
   "region": "HI",
@@ -22,17 +23,17 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "skeletal",
       "material": "steel",
       "built": 1929,
       "height_m": 38.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1934,
+    "first_lit": 1929,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,7 +65,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,10 +77,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1929,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1934,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -125,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5618528899",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Kumukahi",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=144",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Kumukahi",
+      "url": "https://archives.uslhs.org/places/cape-kumukahi",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,9 +185,56 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:144",
+      "part": "wikidata:Q3378558",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:cape-kumukahi-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2797",
+      "part": "wikidata:Q3378558",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:cape-kumukahi",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1934
+        },
+        {
+          "source": "uslhs",
+          "value": 1929
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

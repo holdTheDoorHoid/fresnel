@@ -2,7 +2,9 @@
   "id": "us-ma-stage-harbor",
   "name": "Stage Harbor Light",
   "other_names": [
-    "Stage Harbor Lighthouse"
+    "Stage Harbor Lighthouse",
+    "Stage Harbor",
+    "Hardings Beach"
   ],
   "country": "US",
   "region": "MA",
@@ -25,21 +27,21 @@
       "type": "cast_iron",
       "material": "cast_iron",
       "built": 1880,
-      "height_m": null,
+      "height_m": 11.0,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1880,
     "deactivated": 1933,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 12.8,
+    "focal_height_m": 8.5,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -48,11 +50,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -72,8 +74,14 @@
     {
       "year": 1880,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1933,
@@ -84,7 +92,7 @@
     {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -136,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1424811474",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stage Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=520",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stage Harbor",
+      "url": "https://archives.uslhs.org/places/stage-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,8 +184,7 @@
       "part": "wikidata:Q109352353",
       "fields": [
         "aton",
-        "events",
-        "light"
+        "events"
       ]
     },
     {
@@ -171,6 +193,56 @@
       "part": "wikidata:Q109352353",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:520",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:stage-harbor-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:stage-harbor-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-13860",
+      "part": "wikidata:Q109352353",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2858",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.65841,-69.98447",
+      "part": "wikidata:Q109352353",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -188,6 +260,10 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
           "value": "inactive"
         }
       ],

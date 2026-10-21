@@ -1,7 +1,9 @@
 {
   "id": "us-nc-roanoke-marshes",
   "name": "Roanoke Marshes Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Roanoke Marshes (Replica)"
+  ],
   "country": "US",
   "region": "NC",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -30,19 +32,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 2004,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "2-31975",
+    "arlhs": "USA-103",
     "ccg_list_number": null,
     "nga": null
   },
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2004,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2004,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2411343600",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Roanoke Marshes (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=880",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Roanoke Marshes (Replica)",
+      "url": "https://archives.uslhs.org/places/roanoke-marshes-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +118,34 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:880",
+      "part": "osm:node/2411343600",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:roanoke-marshes-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15330",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

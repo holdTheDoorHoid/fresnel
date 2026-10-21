@@ -1,19 +1,25 @@
 {
   "id": "us-mi-st-joseph-north-pier-inner",
-  "name": "St. Joseph North Pier Inner Light",
+  "name": "St. Joseph North Pier Outer Light",
   "other_names": [
     "St. Joseph North Pier Inner and Outer Lights",
+    "St. Joseph North Pier Inner Light",
     "St. Joseph North Pier Lighthouse",
     "St. Joseph North Pierhead Inner Light",
     "North Pierhead Light",
-    "St. Joseph North Pierhead Light"
+    "St. Joseph North Pierhead Light",
+    "St. Joseph Pier",
+    "St. Joseph (Benton Harbor) North Pierhead Inner",
+    "St. Joseph (Benton Harbor) North Pierhead Outer",
+    "Saint JOSEPH NORTH PIERHEAD RANGE",
+    "St. Joseph South Pierhead Light"
   ],
   "country": "US",
   "region": "MI",
   "county": "Berrien",
   "water": null,
-  "setting": "pier",
-  "kind": "pier_light",
+  "setting": null,
+  "kind": "range_lights",
   "location": {
     "lat": 42.116103,
     "lon": -86.493455,
@@ -25,17 +31,32 @@
   "structures": [
     {
       "role": "tower",
-      "name": "North Pierhead Light",
+      "name": "St. Joseph North Pier Outer Light",
+      "type": null,
+      "material": "cast_iron",
+      "built": 1906,
+      "height_m": 9.0,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 42.11629,
+        "lon": -86.494299
+      }
+    },
+    {
+      "role": "tower",
+      "name": null,
       "type": null,
       "material": null,
       "built": 1907,
-      "height_m": 9.0,
+      "height_m": null,
       "status": "standing",
       "note": null,
       "from": "osm",
       "location": {
-        "lat": 42.11629,
-        "lon": -86.494299
+        "lat": 42.115475,
+        "lon": -86.490891
       }
     },
     {
@@ -51,20 +72,22 @@
     }
   ],
   "light": {
-    "first_lit": 1906,
+    "first_lit": 1846,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso W 2s",
-    "focal_height_m": 16.0,
-    "range_nm": 7.0,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 7.6,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05001211",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001211"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001211",
+      "listed": "2005-11-09",
+      "nomination": "https://catalog.archives.gov/id/75324955"
     },
     {
       "register": "National Register of Historic Places contributing property",
@@ -73,24 +96,24 @@
     }
   ],
   "aton": {
-    "uscg_llnr": "7-19520",
-    "arlhs": "USA797",
+    "uscg_llnr": "7-19515",
+    "arlhs": "USA798",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -100,10 +123,16 @@
   "stay": null,
   "events": [
     {
+      "year": 1846,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1906,
       "event": "built",
-      "note": null,
-      "from": "osm"
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
     },
     {
       "year": 1906,
@@ -114,13 +143,13 @@
     {
       "year": 1907,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +160,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_North_Pier_Lights.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_North_Pier_Lights.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:St_Joseph_North_Pier_Lights.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_North_Pier_Lights_%2811876813613%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Joseph_North_Pier_Lights_%2811876813613%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:St_Joseph_North_Pier_Lights_%2811876813613%29.jpg",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -161,6 +199,21 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:St._Joseph_North_Pier_Lights",
       "kind": "commons"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q88349781",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_d%27entr%C3%A9e_de_Saint-Joseph",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA798",
+      "url": "https://wlol.arlhs.com/lighthouse/USA798.html",
+      "kind": "register"
     },
     {
       "label": "Wikidata",
@@ -196,6 +249,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1082679814",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/48333771",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Joseph Pier",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=186",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saint JOSEPH NORTH PIERHEAD RANGE",
+      "url": "https://archives.uslhs.org/places/saint-joseph-north-pierhead-range",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324955",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -206,8 +284,6 @@
       "fields": [
         "county",
         "events",
-        "kind",
-        "light",
         "photos",
         "region",
         "registers"
@@ -215,8 +291,8 @@
     },
     {
       "source": "wikidata",
-      "key": "wikidata:Q88350919",
-      "part": "wikidata:Q88350919",
+      "key": "wikidata:Q88349781",
+      "part": "osm:way/1082679814",
       "fields": [
         "aton",
         "events",
@@ -227,12 +303,21 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q88350919",
+      "part": "wikidata:Q88350919",
+      "fields": [
+        "events",
+        "photos",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/1082679812",
       "part": "osm:way/1082679814",
       "fields": [
-        "agency",
-        "structures"
+        "agency"
       ]
     },
     {
@@ -240,7 +325,6 @@
       "key": "osm:way/1082679813",
       "part": "wikidata:Q88350919",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -248,13 +332,128 @@
       "source": "osm",
       "key": "osm:way/1082679814",
       "part": "osm:way/1082679814",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/48333771",
+      "part": "osm:way/48333771",
       "fields": [
-        "events",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:186",
+      "part": "wikidata:Q88350919",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:st-joseph-benton-harbor-north-pierhead-inner",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:st-joseph-benton-harbor-north-pierhead-outer",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19515",
+      "part": "osm:way/1082679814",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19520",
+      "part": "wikidata:Q88350919",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19525",
+      "part": "wikidata:Q88350919",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3345",
+      "part": "osm:way/1082679814",
+      "fields": [
+        "access",
+        "events",
+        "kind",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05001211",
+      "part": "wikidata:Q88350919",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.11527,-86.49428",
+      "part": "osm:way/1082679814",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.11606,-86.49345",
+      "part": "wikidata:Q88350919",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.11641,-86.49453",
+      "part": "osm:way/1082679814",
+      "fields": []
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "light.characteristic",
       "values": [
@@ -270,7 +469,7 @@
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

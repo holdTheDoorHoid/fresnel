@@ -2,19 +2,23 @@
   "id": "us-me-whitlocks-mill",
   "name": "Whitlocks Mill Light",
   "other_names": [
-    "Whitlocks Mill Lighthouse"
+    "Whitlocks Mill Lighthouse",
+    "Whitlocks Mill",
+    "Whitlock's Mill",
+    "Whitlocks Mill Light Station",
+    "Whitlocks Mill Light 25"
   ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "Washington",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.1626,
-    "lon": -67.2274,
+    "lat": 45.162603,
+    "lon": -67.227379,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -23,12 +27,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1892,
       "height_m": 7.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,15 +41,17 @@
     "lens": null,
     "characteristic": "Iso G 6s",
     "focal_height_m": 9.8,
-    "range_nm": 6.0,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002276",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002276"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002276",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88685111"
     }
   ],
   "aton": {
@@ -54,11 +60,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Tower owned by St. Croix Historical Society; dwelling is privately owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,21 +88,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1906,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1909,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1969,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -133,6 +151,26 @@
       "label": "ARLHS World List of Lights USA890",
       "url": "https://wlol.arlhs.com/lighthouse/USA890.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Whitlocks Mill",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=505",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Whitlocks Mill",
+      "url": "https://archives.uslhs.org/places/whitlocks-mill",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685111",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -145,17 +183,72 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:505",
+      "part": "wikidata:Q2567161",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:whitlock-s-mill",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-985",
+      "part": "wikidata:Q2567161",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2946",
+      "part": "wikidata:Q2567161",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002276",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:whitlock-s-mill",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

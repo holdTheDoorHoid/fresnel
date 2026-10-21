@@ -2,7 +2,9 @@
   "id": "us-md-seven-foot-knoll",
   "name": "Seven Foot Knoll Light",
   "other_names": [
-    "Seven Foot Knoll Lighthouse"
+    "Seven Foot Knoll Lighthouse",
+    "Seven Foot Knoll",
+    "Seven-Foot Knoll Lighthouse"
   ],
   "country": "US",
   "region": "MD",
@@ -32,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": 1987,
+    "first_lit": 1856,
     "deactivated": 1987,
     "lens": null,
     "characteristic": "Fl WR 6s",
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "89001096",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001096"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001096",
+      "listed": "1989-08-22",
+      "nomination": "https://catalog.archives.gov/id/106776792"
     }
   ],
   "aton": {
@@ -82,6 +86,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1987,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1987,
       "event": "first_lit",
       "note": null,
@@ -90,13 +112,13 @@
     {
       "year": 1987,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +165,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/178328407",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Seven Foot Knoll",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=419",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106776792",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,6 +206,38 @@
       "part": "wikidata:Q7457261",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:419",
+      "part": "wikidata:Q7457261",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:seven-foot-knoll-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:seven-foot-knoll-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001096",
+      "part": "wikidata:Q7457261",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

@@ -1,7 +1,9 @@
 {
   "id": "us-wa-dimick",
   "name": "Dimick Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Dimick"
+  ],
   "country": "US",
   "region": "WA",
   "county": null,
@@ -82,6 +84,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/562727181",
       "kind": "osm"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Dimick",
+      "url": "https://archives.uslhs.org/places/dimick",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,12 +104,18 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:85102",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A private (faux) lighthouse built in 1990 at Dimick: not an aid to navigation",
   "updated": "2026-10-21"
 }

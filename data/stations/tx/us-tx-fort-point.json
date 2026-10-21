@@ -2,7 +2,10 @@
   "id": "us-tx-fort-point",
   "name": "Fort Point Light",
   "other_names": [
-    "Fort Point Lighthouse"
+    "Fort Point Lighthouse",
+    "Fort Point",
+    "Galveston Harbor",
+    "Fort Point TX"
   ],
   "country": "US",
   "region": "TX",
@@ -11,24 +14,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.337,
-    "lon": -94.77,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 29.337364,
+    "lon": -94.767194,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1881,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +39,7 @@
     "deactivated": 1909,
     "lens": null,
     "characteristic": "F W with several R and dark sectors",
-    "focal_height_m": null,
+    "focal_height_m": 14.5,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -76,15 +79,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1882,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1909,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -111,6 +120,21 @@
       "label": "ARLHS World List of Lights USA297",
       "url": "https://wlol.arlhs.com/lighthouse/USA297.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Fort Point (Galveston Harbor)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1793",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Galveston Harbor",
+      "url": "https://archives.uslhs.org/places/galveston-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Point TX",
+      "url": "https://archives.uslhs.org/places/fort-point-tx",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -124,15 +148,38 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1793",
+      "part": "wikidata:Q5471862",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:57205",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8930",
+      "part": "wikidata:Q5471862",
+      "fields": [
+        "events",
+        "light",
         "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

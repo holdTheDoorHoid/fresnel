@@ -2,7 +2,9 @@
   "id": "us-me-saddleback-ledge",
   "name": "Saddleback Ledge Light",
   "other_names": [
-    "Saddleback Ledge Lighthouse"
+    "Saddleback Ledge Lighthouse",
+    "Saddleback Ledge",
+    "Saddleback Ledge Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1839,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1839,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 15.8,
     "range_nm": 9.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000158",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000158"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000158",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684978"
     }
   ],
   "aton": {
@@ -55,10 +59,10 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,31 @@
     {
       "year": 1839,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
+    },
+    {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1954,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1054398239",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Saddleback Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=536",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saddleback Ledge",
+      "url": "https://archives.uslhs.org/places/saddleback-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684978",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,9 +199,69 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:536",
+      "part": "wikidata:Q7397748",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:saddleback-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3325",
+      "part": "wikidata:Q7397748",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2937",
+      "part": "wikidata:Q7397748",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000158",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.01434,-68.72643",
+      "part": "wikidata:Q7397748",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:saddleback-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

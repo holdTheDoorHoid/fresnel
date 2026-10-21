@@ -3,7 +3,11 @@
   "name": "St. George Reef Light",
   "other_names": [
     "St George Reef Lighthouse",
-    "St. George Reef Lighthouse"
+    "St. George Reef Lighthouse",
+    "Saint George Reef",
+    "St. George Reef",
+    "St. George Reef Light Station",
+    "Saint George Reef Light"
   ],
   "country": "US",
   "region": "CA",
@@ -17,7 +21,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,20 +37,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1975,
+    "first_lit": 1891,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 12s",
-    "focal_height_m": 45.0,
+    "focal_height_m": 44.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "93001373",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93001373"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93001373",
+      "listed": "1993-12-09",
+      "nomination": "https://catalog.archives.gov/id/123857370"
     }
   ],
   "aton": {
@@ -59,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,28 +76,40 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1892,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1892,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1975,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1993,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -149,6 +167,26 @@
       "label": "Website",
       "url": "http://stgeorgereeflighthouse.us/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Saint George Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=26",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: St. George Reef",
+      "url": "https://archives.uslhs.org/places/st-george-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857370",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +199,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,22 +213,79 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:26",
+      "part": "wikidata:Q7588222",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:st-george-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-561",
+      "part": "wikidata:Q7588222",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2730",
+      "part": "wikidata:Q7588222",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:93001373",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.83722,-124.37556",
+      "part": "wikidata:Q7588222",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:st-george-reef",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 2012
         },
         {
-          "source": "wikidata",
-          "value": 1975
+          "source": "uslhs",
+          "value": 1891
         }
       ],
-      "note": "A source gives the light's service entry (2012) after its retirement (1975); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

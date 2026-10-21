@@ -1,0 +1,147 @@
+{
+  "id": "us-oh-moseley-channel-range-front",
+  "name": "Moseley Channel Range Front",
+  "other_names": [
+    "Sandusky Bay Outer Range Front",
+    "Moseley Channel Range Front Light"
+  ],
+  "country": "US",
+  "region": "OH",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 41.48722,
+    "lon": -82.70417,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1900,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1900,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Q G",
+    "focal_height_m": 10.1,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-4570",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1900,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sandusky Bay Outer Range Front",
+      "url": "https://archives.uslhs.org/places/sandusky-bay-outer-range-front",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:moseley-channel-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4570",
+      "part": "uslhs:8878",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8878",
+      "part": "uslhs:8878",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.48642,-82.70348",
+      "part": "uslhs:8878",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

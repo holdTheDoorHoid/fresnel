@@ -36,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "78001942",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001942"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001942",
+      "listed": "1978-01-30",
+      "nomination": "https://catalog.archives.gov/id/47719891"
     }
   ],
   "aton": {
@@ -75,7 +77,7 @@
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -102,6 +104,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Caffeys_Inlet_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719891",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -120,10 +127,19 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78001942",
+      "part": "wikidata:Q18205749",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

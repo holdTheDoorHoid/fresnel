@@ -3,7 +3,8 @@
   "name": "Yaquina Bay Light",
   "other_names": [
     "Old Yaquina Bay Lighthouse",
-    "Yaquina Bay Lighthouse"
+    "Yaquina Bay Lighthouse",
+    "Yaquina Bay"
   ],
   "country": "US",
   "region": "OR",
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": 50.0,
+    "focal_height_m": 50.3,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74001692",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001692"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001692",
+      "listed": "1974-05-01",
+      "nomination": "https://catalog.archives.gov/id/77849904"
     }
   ],
   "aton": {
@@ -67,14 +70,21 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1870,
@@ -85,7 +95,7 @@
     {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -97,7 +107,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -150,6 +160,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/405053767",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Yaquina Bay",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=132",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77849904",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,8 +202,47 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:132",
+      "part": "wikidata:Q1555757",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:yaquina-bay",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-9613",
+      "part": "wikidata:Q1555757",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74001692",
+      "part": "wikidata:Q1555757",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.62417,-124.06303",
+      "part": "wikidata:Q1555757",
+      "fields": [
+        "light"
       ]
     }
   ],

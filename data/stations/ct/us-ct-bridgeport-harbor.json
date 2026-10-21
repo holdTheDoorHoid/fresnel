@@ -2,7 +2,9 @@
   "id": "us-ct-bridgeport-harbor",
   "name": "Bridgeport Harbor Light",
   "other_names": [
-    "Bridgeport Harbor Lighthouse"
+    "Bridgeport Harbor Lighthouse",
+    "Bridgeport Harbor",
+    "Bridgeport Harbor Light 7"
   ],
   "country": "US",
   "region": "CT",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.156667,
-    "lon": -73.18,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.156736,
+    "lon": -73.179948,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,20 +28,20 @@
       "material": "wood",
       "built": 1851,
       "height_m": 15.8,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1871,
+    "first_lit": 1851,
     "deactivated": 1871,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 17.4,
-    "range_nm": null,
+    "characteristic": "Q G",
+    "focal_height_m": 15.2,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,6 +78,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1851,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1871,
       "event": "built",
       "note": null,
@@ -94,6 +102,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1953,
       "event": "built",
       "note": null,
@@ -104,6 +118,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1954,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -172,6 +192,21 @@
       "label": "ARLHS World List of Lights USA086",
       "url": "https://wlol.arlhs.com/lighthouse/USA086.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bridgeport Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1961",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bridgeport Harbor",
+      "url": "https://archives.uslhs.org/places/bridgeport-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -184,7 +219,6 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
@@ -197,7 +231,6 @@
       "part": "wikidata:Q106264833",
       "fields": [
         "events",
-        "light",
         "photos"
       ]
     },
@@ -209,32 +242,52 @@
         "agency",
         "aton",
         "events",
-        "light",
         "ownership",
         "photos",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1961",
+      "part": "wikidata:Q106264833",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:bridgeport-harbor-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-24605",
+      "part": "wikidata:Q106264833",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8383",
+      "part": "wikidata:Q106264833",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.15673,-73.17981",
+      "part": "wikidata:Q106264833",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
-    {
-      "field": "status",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": "active"
-        },
-        {
-          "source": "wikidata",
-          "value": "inactive"
-        },
-        {
-          "source": "wikidata",
-          "value": "inactive"
-        }
-      ],
-      "note": "Sources differ on whether the light is still lit."
-    },
     {
       "field": "light.characteristic",
       "values": [
@@ -248,9 +301,23 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1871
+        },
+        {
+          "source": "uslhs",
+          "value": 1954
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

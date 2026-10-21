@@ -2,7 +2,8 @@
   "id": "us-ct-new-london-ledge",
   "name": "New London Ledge Light",
   "other_names": [
-    "New London Ledge Lighthouse"
+    "New London Ledge Lighthouse",
+    "New London Ledge"
   ],
   "country": "US",
   "region": "CT",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1909,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1909,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(4) WR 30s",
-    "focal_height_m": 18.0,
-    "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl(3+1) W R 30s",
+    "focal_height_m": 17.7,
+    "range_nm": 17.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001471",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001471"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001471",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353544"
     }
   ],
   "aton": {
@@ -57,20 +60,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1987"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +81,31 @@
     {
       "year": 1909,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1909,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1910,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1987,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +157,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1066214335",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: New London Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=800",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New London Ledge",
+      "url": "https://archives.uslhs.org/places/new-london-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353544",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -148,7 +189,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -162,6 +202,67 @@
       "part": "wikidata:Q12063850",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:800",
+      "part": "wikidata:Q12063850",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:new-london-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21825",
+      "part": "wikidata:Q12063850",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2744",
+      "part": "wikidata:Q12063850",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001471",
+      "part": "wikidata:Q12063850",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.30587,-72.07744",
+      "part": "wikidata:Q12063850",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:new-london-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

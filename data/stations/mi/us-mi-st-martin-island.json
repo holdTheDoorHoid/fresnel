@@ -3,7 +3,9 @@
   "name": "St. Martin Island Light",
   "other_names": [
     "St. Martin Island Lighthouse",
-    "Saint Martin Island Lighthouse"
+    "Saint Martin Island Lighthouse",
+    "St. Martin Island",
+    "St. Martin Island Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -17,36 +19,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "steel",
       "built": 1905,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1905,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Alt W 5s, R 5s",
-    "focal_height_m": 25.0,
-    "range_nm": 18.0,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 25.6,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001387",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001387"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001387",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891066"
     },
     {
       "register": "Michigan State Historic Site",
@@ -64,7 +68,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -75,7 +79,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -84,19 +88,19 @@
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/495244464",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Martin Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=833",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: St. Martin Island",
+      "url": "https://archives.uslhs.org/places/st-martin-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891066",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,10 +194,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:833",
+      "part": "wikidata:Q7590030",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:st-martin-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21450",
+      "part": "wikidata:Q7590030",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3346",
+      "part": "wikidata:Q7590030",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001387",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.50443,-86.75778",
+      "part": "wikidata:Q7590030",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

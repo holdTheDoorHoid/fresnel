@@ -3,7 +3,9 @@
   "name": "Grand Lake St. Marys Lighthouse",
   "other_names": [
     "Grand Lake Saint Marys Lighthouse",
-    "Northwoods Lighthouse"
+    "Northwoods Lighthouse",
+    "Northwood",
+    "Grand Lake Saint Marys"
   ],
   "country": "US",
   "region": "OH",
@@ -17,8 +19,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -46,20 +48,22 @@
     {
       "register": "NRHP",
       "number": "82003614",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82003614"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82003614",
+      "listed": "1982-06-02",
+      "nomination": "https://catalog.archives.gov/id/71990275"
     }
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-928",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -79,13 +83,13 @@
     {
       "year": 1923,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1982,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -122,6 +126,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1998330231",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Northwood",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=849",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Lake Saint Marys",
+      "url": "https://archives.uslhs.org/places/grand-lake-saint-marys",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71990275",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -146,6 +170,39 @@
       "part": "wikidata:Q5594736",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:849",
+      "part": "wikidata:Q5594736",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:northwood",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34243",
+      "part": "wikidata:Q5594736",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:82003614",
+      "part": "wikidata:Q5594736",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

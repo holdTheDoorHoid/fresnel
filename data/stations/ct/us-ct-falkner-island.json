@@ -2,7 +2,14 @@
   "id": "us-ct-falkner-island",
   "name": "Falkner Island Light",
   "other_names": [
-    "Falkner Island Lighthouse"
+    "Falkner Island Lighthouse",
+    "Faulkners (Falkners) Island",
+    "Faulkner's (Falkner's) Island",
+    "Faulkner's Island",
+    "Falkner's Island Lighthouse",
+    "Faulkner's Island Lighthouse",
+    "Falkners Island Lighthouse",
+    "Falk"
   ],
   "country": "US",
   "region": "CT",
@@ -32,20 +39,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1802,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 29.0,
+    "focal_height_m": 28.7,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001467",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001467"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001467",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353472"
     }
   ],
   "aton": {
@@ -57,20 +66,20 @@
   "agency": "Stewart B. McKinney National Wildlife Refuge",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1978"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +87,14 @@
     {
       "year": 1802,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1802,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1978,
@@ -90,7 +105,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/716910426",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Faulkners (Falkners) Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=796",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Faulkner's Island",
+      "url": "https://archives.uslhs.org/places/faulkners-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353472",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -150,7 +185,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,6 +198,64 @@
       "part": "wikidata:Q3378217",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:796",
+      "part": "wikidata:Q3378217",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:faulkner-s-falkner-s-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21170",
+      "part": "wikidata:Q3378217",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2737",
+      "part": "wikidata:Q3378217",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001467",
+      "part": "wikidata:Q3378217",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.21206,-72.65361",
+      "part": "wikidata:Q3378217",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:faulkner-s-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

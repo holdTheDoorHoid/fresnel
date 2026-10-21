@@ -2,7 +2,9 @@
   "id": "us-me-ram-island-ledge",
   "name": "Ram Island Ledge Light",
   "other_names": [
-    "Ram Island Ledge Lighthouse"
+    "Ram Island Ledge Lighthouse",
+    "Ram Island Ledge",
+    "Ram Island Ledge Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -23,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1905,
       "height_m": 22.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,15 +39,17 @@
     "lens": null,
     "characteristic": "Fl(2) W 6s",
     "focal_height_m": 23.5,
-    "range_nm": 8.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 9.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000157",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000157"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000157",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684885"
     }
   ],
   "aton": {
@@ -54,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +82,31 @@
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1959,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4996257038",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ram Island Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=780",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ram Island Ledge",
+      "url": "https://archives.uslhs.org/places/ram-island-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684885",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,6 +199,68 @@
       "part": "wikidata:Q7288480",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:780",
+      "part": "wikidata:Q7288480",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:ram-island-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-7575",
+      "part": "wikidata:Q7288480",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2935",
+      "part": "wikidata:Q7288480",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000157",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.63147,-70.18738",
+      "part": "wikidata:Q7288480",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:ram-island-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

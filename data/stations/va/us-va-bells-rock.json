@@ -2,7 +2,8 @@
   "id": "us-va-bells-rock",
   "name": "Bells Rock Light",
   "other_names": [
-    "Bells Rock Lighthouse"
+    "Bells Rock Lighthouse",
+    "Bells Rock"
   ],
   "country": "US",
   "region": "VA",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.4839,
-    "lon": -76.7498,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.483962,
+    "lon": -76.749856,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1881,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1928,
+    "first_lit": 1881,
     "deactivated": 1928,
     "lens": null,
-    "characteristic": "Fl W 4 s, R sector",
-    "focal_height_m": 12.0,
-    "range_nm": 4.3,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -55,8 +56,8 @@
     "note": null
   },
   "staffing": {
-    "status": "automated",
-    "as_of": "1928"
+    "status": "unknown",
+    "as_of": null
   },
   "visit": {
     "grounds_open": null,
@@ -76,6 +77,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1881,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1928,
       "event": "first_lit",
       "note": null,
@@ -90,7 +103,7 @@
     {
       "year": 1928,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -127,6 +140,21 @@
       "label": "ARLHS World List of Lights USA051",
       "url": "https://wlol.arlhs.com/lighthouse/USA051.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bells Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1923",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bells Rock",
+      "url": "https://archives.uslhs.org/places/bells-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,16 +168,64 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1923",
+      "part": "wikidata:Q4884153",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:bells-rock-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-13995",
+      "part": "wikidata:Q4884153",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8949",
+      "part": "wikidata:Q4884153",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1928
+        },
+        {
+          "source": "uslhs",
+          "value": 1881
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-ak-cape-st-elias",
   "name": "Cape St. Elias Light",
   "other_names": [
-    "Cape St. Elias Lighthouse"
+    "Cape St. Elias Lighthouse",
+    "Cape St. Elias"
   ],
   "country": "US",
   "region": "AK",
@@ -28,6 +29,21 @@
       "height_m": null,
       "status": "standing",
       "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 59.798863,
+        "lon": -144.599671
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Cape St. Elias Light",
+      "type": null,
+      "material": null,
+      "built": 1816,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
       "from": "osm"
     }
   ],
@@ -36,16 +52,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 26.0,
+    "focal_height_m": 25.9,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "75002157",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75002157"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75002157",
+      "listed": "1975-12-18",
+      "nomination": "https://catalog.archives.gov/id/75325812"
     }
   ],
   "aton": {
@@ -69,17 +87,30 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1816,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1916,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1916,
@@ -96,7 +127,7 @@
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -156,6 +187,11 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/469651436",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/469651437",
       "kind": "osm"
     },
@@ -173,6 +209,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/656554855",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape St. Elias",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=830",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325812",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -207,8 +258,15 @@
       "key": "osm:way/469651435",
       "part": "wikidata:Q1840489",
       "fields": [
-        "agency",
-        "light"
+        "agency"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/469651436",
+      "part": "osm:way/469651436",
+      "fields": [
+        "structures"
       ]
     },
     {
@@ -234,6 +292,46 @@
       "key": "osm:way/656554855",
       "part": "wikidata:Q1840489",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:830",
+      "part": "wikidata:Q1840489",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:cape-st-elias",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1100",
+      "part": "wikidata:Q1840489",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75002157",
+      "part": "wikidata:Q1840489",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:59.79836,-144.59884",
+      "part": "wikidata:Q1840489",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
@@ -250,20 +348,6 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1916
-        },
-        {
-          "source": "osm",
-          "value": 1816
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

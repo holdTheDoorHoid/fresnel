@@ -1,10 +1,12 @@
 {
   "id": "us-mi-new-buffalo",
   "name": "New Buffalo Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "New Buffalo"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Barrien",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,20 +26,20 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "osm"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1840,
+    "deactivated": 1859,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 10.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1840,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/322155290",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: New Buffalo",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2014",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Buffalo (Faux)",
+      "url": "https://archives.uslhs.org/places/new-buffalo-faux",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Buffalo",
+      "url": "https://archives.uslhs.org/places/new-buffalo",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +117,28 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2014",
+      "part": "osm:way/322155290",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:82347",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8538",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "light"
       ]
     }
   ],

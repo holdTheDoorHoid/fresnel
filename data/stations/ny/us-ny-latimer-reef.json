@@ -2,11 +2,13 @@
   "id": "us-ny-latimer-reef",
   "name": "Latimer Reef Light",
   "other_names": [
-    "Latimer Reef Lighthouse"
+    "Latimer Reef Lighthouse",
+    "Latimer Reef",
+    "Latimer Reef Light Station"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Suffolk",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -22,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1804,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 17.0,
+    "focal_height_m": 16.8,
     "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "bell",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000635",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000635"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000635",
+      "listed": "2006-07-19",
+      "nomination": "https://catalog.archives.gov/id/75325199"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,14 +87,26 @@
     },
     {
       "year": 1884,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1884,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/962325560",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Latimer Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=739",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Latimer Reef",
+      "url": "https://archives.uslhs.org/places/latimer-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325199",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,6 +198,67 @@
       "part": "wikidata:Q6496156",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:739",
+      "part": "wikidata:Q6496156",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:latimer-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-20085",
+      "part": "wikidata:Q6496156",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3417",
+      "part": "wikidata:Q6496156",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000635",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.30451,-71.93332",
+      "part": "wikidata:Q6496156",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:latimer-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

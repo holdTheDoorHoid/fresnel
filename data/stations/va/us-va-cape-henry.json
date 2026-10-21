@@ -5,7 +5,15 @@
     "new Cape Henry Lighthouse",
     "Old Cape Henry Lighthouse",
     "Cape Henry Lighthouse",
-    "New Cape Henry Lighthouse"
+    "New Cape Henry Lighthouse",
+    "Cape Henry",
+    "Old",
+    "New",
+    "Cape Henry New",
+    "Cape Henry Old",
+    "CApe Henry (Second Tower) Light Station",
+    "Cape Henry (New)",
+    "Cape Henry (Old)"
   ],
   "country": "US",
   "region": "VA",
@@ -26,12 +34,12 @@
       "role": "tower",
       "name": "Old Cape Henry Lighthouse",
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1792,
       "height_m": 15.5,
       "status": "standing",
       "note": null,
-      "from": "osm",
+      "from": "uslhs",
       "location": {
         "lat": 36.925796,
         "lon": -76.008124
@@ -41,34 +49,39 @@
       "role": "tower",
       "name": "Cape Henry Light",
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1950,
-      "height_m": null,
+      "height_m": 25.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1791,
     "deactivated": null,
     "lens": null,
     "characteristic": "Mo(U) W 20s",
-    "focal_height_m": 49.9,
+    "focal_height_m": 50.0,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001439",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001439"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001439",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325223"
     },
     {
       "register": "NRHP",
       "number": "66000910",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000910"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000910",
+      "listed": "1966-10-15",
+      "nhl": "1964-01-29",
+      "nomination": "https://catalog.archives.gov/id/41679165"
     },
     {
       "register": "National Historic Landmark",
@@ -83,36 +96,66 @@
   ],
   "aton": {
     "uscg_llnr": "2-370",
-    "arlhs": null,
+    "arlhs": "USA-122",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Preservation VA",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1983"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1791,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1792,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "osm"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1881,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1950,
@@ -121,20 +164,38 @@
       "from": "osm"
     },
     {
+      "year": 1964,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
+    },
+    {
       "year": 1966,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-cape-henry",
+      "relation": "replica",
+      "name": "Cape Henry Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Henry_Lighthouse_%281881%2C_new%29.jpg",
@@ -190,6 +251,41 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/402305719",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Henry (Old)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=448",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Cape Henry (New)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=449",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Henry New",
+      "url": "https://archives.uslhs.org/places/cape-henry-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Henry Old",
+      "url": "https://archives.uslhs.org/places/cape-henry-old",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325223",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41679165",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -224,7 +320,6 @@
       "part": "wikidata:Q1034445",
       "fields": [
         "events",
-        "light",
         "location",
         "structures"
       ]
@@ -237,10 +332,143 @@
         "events",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:448",
+      "part": "wikidata:Q1034445",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:449",
+      "part": "wikidata:Q1034445",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:cape-henry-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:cape-henry-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-370",
+      "part": "wikidata:Q1034445",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3525",
+      "part": "wikidata:Q79273554",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7063",
+      "part": "wikidata:Q1034445",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001439",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:66000910",
+      "part": "wikidata:Q1034445",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.92635,-76.00720",
+      "part": "wikidata:Q1034445",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:cape-henry-new",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:cape-henry-old",
+      "part": "station",
+      "fields": []
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "osm",
+          "value": 49.9
+        },
+        {
+          "source": "uslhs",
+          "value": 39.32
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

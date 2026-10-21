@@ -1,7 +1,10 @@
 {
   "id": "us-vi-savana-island",
   "name": "Savana Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Savana Island",
+    "Savana Island Light"
+  ],
   "country": "US",
   "region": "VI",
   "county": null,
@@ -34,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 91.0,
-    "range_nm": 7.0,
+    "focal_height_m": 91.4,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -75,6 +78,11 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q106869107",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Directory: U.S. Virgin Islands",
+      "url": "https://www.ibiblio.org/lighthouse/vi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -85,10 +93,29 @@
       "fields": [
         "aton",
         "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vi:savana-island",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-31690",
+      "part": "wikidata:Q106869107",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.33765,-65.08265",
+      "part": "wikidata:Q106869107",
+      "fields": [
+        "light"
       ]
     }
   ],

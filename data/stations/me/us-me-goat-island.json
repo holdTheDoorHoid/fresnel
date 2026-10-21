@@ -3,7 +3,8 @@
   "name": "Goat Island Light",
   "other_names": [
     "Goat Island Lighthouse",
-    "Goat Island Light Station"
+    "Goat Island Light Station",
+    "Goat Island"
   ],
   "country": "US",
   "region": "ME",
@@ -24,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1835,
       "height_m": 7.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1859,
+    "first_lit": 1834,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 12.0,
+    "focal_height_m": 11.6,
     "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002268",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002268"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002268",
+      "listed": "1988-03-23",
+      "nomination": "https://catalog.archives.gov/id/88685129"
     }
   ],
   "aton": {
@@ -55,27 +58,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kennebunkport Conservation Trust",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1990"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1834,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1835,
       "event": "built",
@@ -83,9 +92,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1859,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -95,10 +110,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -144,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/223804119",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Goat Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=551",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Goat Island",
+      "url": "https://archives.uslhs.org/places/goat-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685129",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -172,9 +218,97 @@
         "events",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:551",
+      "part": "wikidata:Q5575302",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:goat-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-105",
+      "part": "wikidata:Q5575302",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-8100",
+      "part": "wikidata:Q5575302",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2906",
+      "part": "wikidata:Q5575302",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002268",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.35786,-70.42508",
+      "part": "wikidata:Q5575302",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:goat-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1859
+        },
+        {
+          "source": "osm",
+          "value": 1859
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

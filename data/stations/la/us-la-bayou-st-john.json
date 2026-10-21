@@ -1,0 +1,133 @@
+{
+  "id": "us-la-bayou-st-john",
+  "name": "Bayou St. John",
+  "other_names": [],
+  "country": "US",
+  "region": "LA",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 30.028396,
+    "lon": -90.082419,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "screwpile",
+      "material": null,
+      "built": 1882,
+      "height_m": 8.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1811,
+    "deactivated": 1878,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 10.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1811,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1878,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1882,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Bayou St. John",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1805",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bayou St. John",
+      "url": "https://archives.uslhs.org/places/bayou-st-john",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1805",
+      "part": "lighthousefriends:1805",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8436",
+      "part": "lighthousefriends:1805",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -1,7 +1,10 @@
 {
   "id": "us-wi-boyer-bluff",
   "name": "Boyer Bluff Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Boyer Bluff",
+    "Boyer Bluff Light"
+  ],
   "country": "US",
   "region": "WI",
   "county": null,
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,19 +33,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1933,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 67.1,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-21770",
+    "arlhs": "USA-131",
     "ccg_list_number": null,
     "nga": null
   },
@@ -61,12 +64,19 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1933,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582699340",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Boyer Bluff",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=835",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +108,42 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:835",
+      "part": "osm:node/582699340",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:boyer-bluff-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21770",
+      "part": "osm:node/582699340",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.42015,-86.93647",
+      "part": "osm:node/582699340",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

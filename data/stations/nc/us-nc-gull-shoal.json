@@ -1,0 +1,175 @@
+{
+  "id": "us-nc-gull-shoal",
+  "name": "Gull Shoal",
+  "other_names": [
+    "Cape Fear",
+    "Captain Charlie's Station",
+    "Gull Shoal Light GS"
+  ],
+  "country": "US",
+  "region": "NC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 35.366138,
+    "lon": -75.957323,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1891,
+      "height_m": 14.6,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1891,
+    "deactivated": 1958,
+    "lens": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 14.6,
+    "range_nm": 6.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "2-32145",
+    "arlhs": "USA-102",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1891,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1958,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Gull Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1909",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gull Shoal",
+      "url": "https://archives.uslhs.org/places/gull-shoal",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1909",
+      "part": "lighthousefriends:1909",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:cape-fear",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:gull-shoal-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-32145",
+      "part": "lighthousefriends:1909",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8851",
+      "part": "lighthousefriends:1909",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

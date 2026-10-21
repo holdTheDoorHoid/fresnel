@@ -3,7 +3,11 @@
   "name": "Matinicus Rock Light",
   "other_names": [
     "Matinicus Rock Lighthouse",
-    "Matinicus Rock Light Station"
+    "Matinicus Rock Light Station",
+    "Matinicus Rock",
+    "South Tower",
+    "North Tower",
+    "Twin Towers"
   ],
   "country": "US",
   "region": "ME",
@@ -22,7 +26,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Matinicus Rock Light",
       "type": "conical_masonry",
       "material": "stone",
       "built": 1827,
@@ -30,23 +34,55 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1857,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 43.784022,
+        "lon": -68.855328
+      }
+    },
+    {
+      "role": "dwelling",
+      "name": "Keepers Quarters",
+      "type": null,
+      "material": null,
+      "built": 1857,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 43.783734,
+        "lon": -68.855029
+      }
     }
   ],
   "light": {
-    "first_lit": 1846,
+    "first_lit": 1827,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 27.4,
     "range_nm": 20.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000149",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000149"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000149",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684974"
     }
   ],
   "aton": {
@@ -56,10 +92,10 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,8 +106,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,6 +119,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1846,
       "event": "first_lit",
       "note": null,
@@ -91,19 +133,31 @@
     {
       "year": 1857,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1924,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1983,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -159,6 +213,51 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11282250693",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1054363327",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1054363328",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/518063861",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/518063862",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/518063863",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Matinicus Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=535",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Matinicus Rock (Twin Towers)",
+      "url": "https://archives.uslhs.org/places/matinicus-rock-twin-towers",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684974",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,7 +270,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,28 +284,120 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1846
-        },
-        {
-          "source": "osm",
-          "value": 1857
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "source": "osm",
+      "key": "osm:way/1054363327",
+      "part": "osm:way/1054363327",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1054363328",
+      "part": "osm:way/1054363327",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/518063861",
+      "part": "osm:way/1054363327",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/518063862",
+      "part": "osm:way/1054363327",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/518063863",
+      "part": "osm:way/518063863",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:535",
+      "part": "wikidata:Q6787581",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:matinicus-rock-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:matinicus-rock-3-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10",
+      "part": "wikidata:Q6787581",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3195",
+      "part": "wikidata:Q6787581",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2919",
+      "part": "wikidata:Q6787581",
+      "fields": [
+        "access",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000149",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.78347,-68.85503",
+      "part": "wikidata:Q6787581",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:matinicus-rock",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

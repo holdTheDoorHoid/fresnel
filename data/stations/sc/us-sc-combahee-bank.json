@@ -2,48 +2,49 @@
   "id": "us-sc-combahee-bank",
   "name": "Combahee Bank Light",
   "other_names": [
-    "Combahee Bank Lighthouse"
+    "Combahee Bank Lighthouse",
+    "Combahee Bank"
   ],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Beaufort/Colleton",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 32.466667,
-    "lon": -80.433333,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.467747,
+    "lon": -80.434413,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "screwpile",
       "material": null,
       "built": 1868,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1868,
+    "deactivated": 1876,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl W 4s",
     "focal_height_m": null,
-    "range_nm": null,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "3-4040",
     "arlhs": "USA1162",
     "ccg_list_number": null,
     "nga": null
@@ -70,10 +71,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1859,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1868,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1876,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -94,6 +113,16 @@
       "label": "ARLHS World List of Lights USA1162",
       "url": "https://wlol.arlhs.com/lighthouse/USA1162.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Combahee Bank",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1860",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Combahee Bank",
+      "url": "https://archives.uslhs.org/places/combahee-bank-0",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,15 +134,42 @@
         "aton",
         "events",
         "kind",
-        "location",
         "name",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1860",
+      "part": "wikidata:Q5150588",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4040",
+      "part": "wikidata:Q5150588",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8913",
+      "part": "wikidata:Q5150588",
+      "fields": [
+        "county",
+        "events",
+        "light",
         "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

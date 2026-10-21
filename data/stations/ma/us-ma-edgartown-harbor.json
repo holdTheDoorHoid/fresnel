@@ -3,7 +3,8 @@
   "name": "Edgartown Harbor Light",
   "other_names": [
     "Edgartown Harbor Lighthouse",
-    "Edgartown Light"
+    "Edgartown Light",
+    "Edgartown Harbor"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1939,
+    "first_lit": 1828,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 5s",
-    "focal_height_m": 30.0,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 13.7,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001465",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001465"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001465",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789795"
     }
   ],
   "aton": {
@@ -55,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "MARTHA'S VINEYARD MUSEUM",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +86,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1939,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "osm"
     },
     {
@@ -97,7 +118,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1021436078",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Edgartown Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=624",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Edgartown Harbor",
+      "url": "https://archives.uslhs.org/places/edgartown-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789795",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,8 +210,67 @@
       "part": "wikidata:Q5337606",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:624",
+      "part": "wikidata:Q5337606",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:edgartown-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15420",
+      "part": "wikidata:Q5337606",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2836",
+      "part": "wikidata:Q5337606",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001465",
+      "part": "wikidata:Q5337606",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.39088,-70.50306",
+      "part": "wikidata:Q5337606",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:edgartown-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -200,9 +299,31 @@
         {
           "source": "osm",
           "value": 30.0
+        },
+        {
+          "source": "uslhs",
+          "value": 13.72
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1939
+        },
+        {
+          "source": "osm",
+          "value": 1939
+        },
+        {
+          "source": "uslhs",
+          "value": 1828
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

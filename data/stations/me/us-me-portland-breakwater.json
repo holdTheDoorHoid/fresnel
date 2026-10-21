@@ -4,7 +4,10 @@
   "other_names": [
     "Portland Breakwater Lighthouse",
     "Bug Light",
-    "South Portland Breakwater Light"
+    "South Portland Breakwater Light",
+    "Portland Breakwater",
+    "\"Bug Light\"",
+    "Bug"
   ],
   "country": "US",
   "region": "ME",
@@ -34,20 +37,22 @@
     }
   ],
   "light": {
-    "first_lit": 1875,
+    "first_lit": 1855,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 10.0,
+    "focal_height_m": 9.1,
     "range_nm": 3.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000238",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000238"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000238",
+      "listed": "1973-06-19",
+      "nomination": "https://catalog.archives.gov/id/88685805"
     }
   ],
   "aton": {
@@ -57,22 +62,22 @@
     "nga": null
   },
   "agency": "United States Coast Guard",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,6 +89,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1875,
       "event": "first_lit",
       "note": null,
@@ -92,13 +115,13 @@
     {
       "year": 1942,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -154,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/660606481",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Portland Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=544",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Portland Breakwater",
+      "url": "https://archives.uslhs.org/places/portland-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685805",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -166,7 +209,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -180,8 +222,66 @@
       "part": "wikidata:Q7231886",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:544",
+      "part": "wikidata:Q7231886",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:portland-breakwater-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-7699",
+      "part": "wikidata:Q7231886",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2930",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000238",
+      "part": "wikidata:Q7231886",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.65552,-70.23485",
+      "part": "wikidata:Q7231886",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:portland-breakwater-bug",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

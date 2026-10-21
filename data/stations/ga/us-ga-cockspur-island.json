@@ -2,11 +2,13 @@
   "id": "us-ga-cockspur-island",
   "name": "Cockspur Island Light",
   "other_names": [
-    "Cockspur Island Lighthouse"
+    "Cockspur Island Lighthouse",
+    "Cockspur Island",
+    "Cockspur Lighthouse"
   ],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Chatham",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -39,7 +41,7 @@
     "focal_height_m": 12.5,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,20 +53,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +84,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1909,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -131,6 +151,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/394526203",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cockspur Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=324",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Georgia",
+      "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cockspur Island",
+      "url": "https://archives.uslhs.org/places/cockspur-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,9 +191,87 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:324",
+      "part": "wikidata:Q5139685",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:cockspur-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4661",
+      "part": "wikidata:Q5139685",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2791",
+      "part": "wikidata:Q5139685",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.02269,-80.87999",
+      "part": "wikidata:Q5139685",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ga:cockspur-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 12.5
+        },
+        {
+          "source": "uslhs",
+          "value": 6.71
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1848
+        },
+        {
+          "source": "uslhs",
+          "value": 1849
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

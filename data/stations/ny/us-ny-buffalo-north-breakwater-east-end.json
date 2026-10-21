@@ -5,7 +5,9 @@
     "Buffalo North breakwater East end Lighthouse",
     "Buffalo North Breakwater South End Light",
     "Buffalo North Breakwater South End Lighthouse",
-    "Buffalo North breakwater East end Light"
+    "Buffalo North breakwater East end Light",
+    "Buffalo North Breakwater South Side",
+    "Buffalo Harbor North Entrance Light 6"
   ],
   "country": "US",
   "region": "NY",
@@ -14,10 +16,10 @@
   "setting": "pier",
   "kind": "pier_light",
   "location": {
-    "lat": 42.877668,
-    "lon": -78.890072,
+    "lat": 42.87765,
+    "lon": -78.89007,
     "precision": "exact",
-    "from": "osm"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -42,28 +44,26 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 42.880278,
-        "lon": -78.895833
-      }
+      "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": 1903,
     "deactivated": 1985,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 6.1,
+    "range_nm": 3.5,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83001669",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001669"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001669",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891088"
     }
   ],
   "aton": {
@@ -108,7 +108,7 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -190,6 +190,21 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Buffalo_North_breakwater_East_end_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo North Breakwater South Side",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=297",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buffalo North Breakwater South Side",
+      "url": "https://archives.uslhs.org/places/buffalo-north-breakwater-south-side",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891088",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -223,12 +238,70 @@
       "key": "osm:node/6538045852",
       "part": "wikidata:Q4985801",
       "fields": [
-        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:297",
+      "part": "wikidata:Q4985802",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2710",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:120825",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83001669",
+      "part": "wikidata:Q4985802",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.87737,-78.89086",
+      "part": "wikidata:Q4985802",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            42.88028,
+            -78.89583
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            42.87765,
+            -78.89007
+          ]
+        }
+      ],
+      "distance_m": 553,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

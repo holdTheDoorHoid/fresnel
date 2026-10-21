@@ -2,7 +2,8 @@
   "id": "us-ri-gull-rocks",
   "name": "Gull Rocks Light",
   "other_names": [
-    "Gull Rocks Lighthouse Dr. Rock Positano"
+    "Gull Rocks Lighthouse Dr. Rock Positano",
+    "Gull Rocks"
   ],
   "country": "US",
   "region": "RI",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.502361,
-    "lon": -71.333056,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.502504,
+    "lon": -71.333182,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1969) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "material": "wood",
+      "built": 1887,
+      "height_m": 10.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1969,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.8,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -44,7 +45,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-362",
     "ccg_list_number": null,
     "nga": null
   },
@@ -71,9 +72,27 @@
   "events": [
     {
       "year": 1887,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1887,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1928,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1961,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1969,
@@ -101,6 +120,21 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Gull_Rocks_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Gull Rocks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1967",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gull Rocks",
+      "url": "https://archives.uslhs.org/places/gull-rocks",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -113,14 +147,55 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1967",
+      "part": "wikidata:Q5617750",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:gull-rocks-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8903",
+      "part": "wikidata:Q5617750",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1969
+        },
+        {
+          "source": "uslhs",
+          "value": 1928
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

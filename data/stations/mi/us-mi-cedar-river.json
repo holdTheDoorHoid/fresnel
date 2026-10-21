@@ -1,0 +1,135 @@
+{
+  "id": "us-mi-cedar-river",
+  "name": "Cedar River",
+  "other_names": [],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.41025,
+    "lon": -87.35328,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1889,
+      "height_m": 18.3,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1889,
+    "deactivated": 1921,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 20.1,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1921,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Cedar River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=559",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cedar River",
+      "url": "https://archives.uslhs.org/places/cedar-river",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:559",
+      "part": "lighthousefriends:559",
+      "fields": [
+        "access",
+        "kind",
+        "location",
+        "name",
+        "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8502",
+      "part": "lighthousefriends:559",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

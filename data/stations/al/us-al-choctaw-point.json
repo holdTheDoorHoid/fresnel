@@ -2,7 +2,8 @@
   "id": "us-al-choctaw-point",
   "name": "Choctaw Point Light",
   "other_names": [
-    "Choctaw Point Lighthouse"
+    "Choctaw Point Lighthouse",
+    "Choctaw Point"
   ],
   "country": "US",
   "region": "AL",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.6667,
-    "lon": -87.9833,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.669712,
+    "lon": -88.033389,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "brick",
+      "built": 1831,
+      "height_m": 13.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1862,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 13.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,7 +73,7 @@
     {
       "year": 1831,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -100,6 +101,16 @@
       "label": "ARLHS World List of Lights USA1007",
       "url": "https://wlol.arlhs.com/lighthouse/USA1007.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Choctaw Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1830",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Choctaw Point",
+      "url": "https://archives.uslhs.org/places/choctaw-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,9 +123,26 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1830",
+      "part": "wikidata:Q16890348",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:4714",
+      "part": "wikidata:Q16890348",
+      "fields": [
+        "events",
+        "light",
+        "structures"
       ]
     }
   ],

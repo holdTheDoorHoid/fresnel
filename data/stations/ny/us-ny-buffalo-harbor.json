@@ -1,7 +1,10 @@
 {
   "id": "us-ny-buffalo-harbor",
   "name": "Buffalo Harbor Light",
-  "other_names": [],
+  "other_names": [
+    "Buffalo Harbor",
+    "Outer Breakwater, North Entrance"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
@@ -30,19 +33,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1872,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 2.5s",
     "focal_height_m": 21.6,
-    "range_nm": 12.0,
+    "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-2680",
+    "arlhs": "USA-129",
     "ccg_list_number": null,
     "nga": null
   },
@@ -61,12 +64,25 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1961,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +91,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3774790802",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=908",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -85,16 +111,57 @@
       "fields": [
         "agency",
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:908",
+      "part": "osm:node/3774790802",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:buffalo-harbor-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2680",
+      "part": "osm:node/3774790802",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.87061,-78.90256",
+      "part": "osm:node/3774790802",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:buffalo-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

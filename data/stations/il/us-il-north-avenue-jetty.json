@@ -1,7 +1,10 @@
 {
   "id": "us-il-north-avenue-jetty",
   "name": "North Avenue Jetty Light",
-  "other_names": [],
+  "other_names": [
+    "North Avenue Jetty",
+    "North Avenue Beach, Photography Point"
+  ],
   "country": "US",
   "region": "IL",
   "county": null,
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,15 +36,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Q R",
+    "focal_height_m": 11.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20055",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/948870929",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,6 +96,28 @@
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:north-avenue-jetty",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20055",
+      "part": "osm:way/948870929",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.91460,-87.62028",
+      "part": "osm:way/948870929",
+      "fields": [
+        "light"
       ]
     }
   ],

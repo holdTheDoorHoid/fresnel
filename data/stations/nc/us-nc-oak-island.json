@@ -2,7 +2,9 @@
   "id": "us-nc-oak-island",
   "name": "Oak Island Light",
   "other_names": [
-    "Oak Island Lighthouse"
+    "Oak Island Lighthouse",
+    "Oak Island",
+    "Oak Island New"
   ],
   "country": "US",
   "region": "NC",
@@ -39,13 +41,15 @@
     "focal_height_m": 51.5,
     "range_nm": 22.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07000293",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000293"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000293",
+      "listed": "2007-04-05",
+      "nomination": "https://catalog.archives.gov/id/47719115"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,11 +70,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,19 +88,19 @@
     {
       "year": 1958,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1958,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/246964348",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Oak Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=352",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Oak Island New",
+      "url": "https://archives.uslhs.org/places/oak-island-new",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719115",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,8 +199,63 @@
       "part": "wikidata:Q4286387",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:352",
+      "part": "wikidata:Q4286387",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:oak-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-810",
+      "part": "wikidata:Q4286387",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3368",
+      "part": "wikidata:Q4286387",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07000293",
+      "part": "wikidata:Q4286387",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.89283,-78.03493",
+      "part": "wikidata:Q4286387",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:oak-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

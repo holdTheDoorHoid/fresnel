@@ -2,7 +2,8 @@
   "id": "us-mi-grand-island-east-channel",
   "name": "Grand Island East Channel Light",
   "other_names": [
-    "Grand Island East Channel Lighthouse"
+    "Grand Island East Channel Lighthouse",
+    "Grand Island East Channel"
   ],
   "country": "US",
   "region": "MI",
@@ -24,7 +25,7 @@
       "name": null,
       "type": "wood_frame",
       "material": "wood",
-      "built": null,
+      "built": 1870,
       "height_m": 13.7,
       "status": "standing",
       "note": null,
@@ -57,8 +58,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,7 +70,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,10 +83,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1870,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1908,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1980,
@@ -142,6 +161,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=726",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Island East Channel",
+      "url": "https://archives.uslhs.org/places/grand-island-east-channel",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,9 +198,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:726",
+      "part": "wikidata:Q5594684",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:grand-island-east-channel",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2971",
+      "part": "wikidata:Q5594684",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1868
+        },
+        {
+          "source": "uslhs",
+          "value": 1870
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1908
+        },
+        {
+          "source": "rowlett",
+          "value": 1913
+        },
+        {
+          "source": "uslhs",
+          "value": 1913
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

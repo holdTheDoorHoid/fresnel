@@ -2,7 +2,8 @@
   "id": "us-va-cherrystone-bar",
   "name": "Cherrystone Bar Light",
   "other_names": [
-    "Cherrystone Bar Lighthouse"
+    "Cherrystone Bar Lighthouse",
+    "Cherrystone Bar"
   ],
   "country": "US",
   "region": "VA",
@@ -16,19 +17,19 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "type": "caisson",
+      "material": "steel",
+      "built": 1859,
+      "height_m": 11.0,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1919,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,14 +73,32 @@
     {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1919,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -115,6 +134,11 @@
       "label": "ARLHS World List of Lights USA166",
       "url": "https://wlol.arlhs.com/lighthouse/USA166.html",
       "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cherrystone Bar",
+      "url": "https://archives.uslhs.org/places/cherrystone-bar",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,10 +157,35 @@
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8951",
+      "part": "wikidata:Q5092546",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1919
+        },
+        {
+          "source": "uslhs",
+          "value": 1964
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

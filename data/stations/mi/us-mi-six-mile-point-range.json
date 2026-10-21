@@ -1,7 +1,12 @@
 {
   "id": "us-mi-six-mile-point-range",
   "name": "Six Mile Point Range Light",
-  "other_names": [],
+  "other_names": [
+    "Six Mile Point Range Rear Lighthouse",
+    "Six Mile Point Range Rear",
+    "Six Mile Point Range Front",
+    "Six Mile Point Range Front Light"
+  ],
   "country": "US",
   "region": "MI",
   "county": null,
@@ -9,39 +14,50 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 45.99258,
-    "lon": -83.899228,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 46.43833,
+    "lon": -84.265,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Six Mile Point Range Front",
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "steel",
+      "built": 1895,
+      "height_m": 14.6,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Six Mile Point Range Rear",
+      "type": null,
+      "material": "steel",
+      "built": 1895,
+      "height_m": 21.9,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "FW",
+    "focal_height_m": 16.5,
+    "range_nm": 26.0,
     "fog_signal": null,
-    "from": null
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-14050",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -50,7 +66,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,7 +82,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,18 +109,104 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1560",
       "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1012232474",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1559",
+      "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Six Mile Point Range Front",
+      "url": "https://archives.uslhs.org/places/six-mile-point-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Six Mile Point Range Rear",
+      "url": "https://archives.uslhs.org/places/six-mile-point-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "osm",
       "key": "osm:node/1011891274",
-      "part": "osm:node/1011891274",
+      "part": "station",
       "fields": [
         "kind",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1012232474",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1559",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1560",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:six-mile-point-range-front-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:six-mile-point-range-rear-3",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14045",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9829",
+      "part": "uslhs:9829",
+      "fields": [
+        "access",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9830",
+      "part": "uslhs:9830",
+      "fields": [
+        "structures"
       ]
     }
   ],

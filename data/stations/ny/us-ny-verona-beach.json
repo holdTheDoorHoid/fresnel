@@ -1,7 +1,9 @@
 {
   "id": "us-ny-verona-beach",
   "name": "Verona Beach Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Verona Beach"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,11 +35,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 25.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -50,7 +52,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -62,11 +64,18 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/8795249457",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Verona Beach",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=877",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Verona Beach",
+      "url": "https://archives.uslhs.org/places/verona-beach",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,10 +108,41 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:877",
+      "part": "osm:node/8795249457",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:55799",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.18919,-75.73115",
+      "part": "osm:node/8795249457",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:verona-beach",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

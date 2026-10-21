@@ -3,11 +3,13 @@
   "name": "Ladies Delight Light",
   "other_names": [
     "Ladies Delight Lighthouse",
-    "The Ladies Delight Light"
+    "The Ladies Delight Light",
+    "Ladies Delight",
+    "Cobbossee Lighthouse"
   ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "Kennebec",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -17,8 +19,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -46,12 +48,14 @@
     {
       "register": "NRHP",
       "number": "84001369",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001369"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001369",
+      "listed": "1984-01-12",
+      "nomination": "https://catalog.archives.gov/id/88686274"
     }
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-112",
     "ccg_list_number": null,
     "nga": null
   },
@@ -70,16 +74,22 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1908,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -116,6 +126,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1245413663",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ladies Delight",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=861",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686274",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -139,6 +164,41 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:861",
+      "part": "wikidata:Q6469488",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:ladies-delight",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001369",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:ladies-delight",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

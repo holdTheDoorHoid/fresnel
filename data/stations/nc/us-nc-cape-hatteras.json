@@ -4,7 +4,10 @@
   "other_names": [
     "Cape Hatteras Lighthouse",
     "Cape Hatteras Lighth",
-    "Cape Hatteras Light Station"
+    "Cape Hatteras Light Station",
+    "Cape Hatteras",
+    "Cape Hatteras Beacon",
+    "Museum of the Sea"
   ],
   "country": "US",
   "region": "NC",
@@ -34,20 +37,23 @@
     }
   ],
   "light": {
-    "first_lit": 1871,
+    "first_lit": 1798,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 7.5s",
     "focal_height_m": 58.5,
-    "range_nm": 24.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78000266",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000266"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000266",
+      "listed": "1978-03-29",
+      "nhl": "1998-08-05",
+      "nomination": "https://catalog.archives.gov/id/47719909"
     },
     {
       "register": "Historic Civil Engineering Landmark",
@@ -70,7 +76,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -78,15 +84,28 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
+    {
+      "year": 1798,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1802,
       "event": "built",
@@ -94,10 +113,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1803,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1870,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1871,
@@ -112,6 +149,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1893,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1950,
       "event": "automated",
       "note": null,
@@ -120,8 +163,14 @@
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1998,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     },
     {
       "year": 1999,
@@ -131,7 +180,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-cape-hatteras",
+      "relation": "replica",
+      "name": "Cape Hatteras Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_hatteras_lighthouse_img_0529.jpg",
@@ -188,6 +243,31 @@
       "label": "Website",
       "url": "https://www.nps.gov/caha/planyourvisit/chls.htm",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cape Hatteras",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=356",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Hatteras",
+      "url": "https://archives.uslhs.org/places/cape-hatteras",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Hatteras Beacon",
+      "url": "https://archives.uslhs.org/places/cape-hatteras-beacon",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719909",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -211,7 +291,6 @@
       "fields": [
         "aton",
         "events",
-        "light",
         "photos",
         "registers",
         "structures"
@@ -223,8 +302,73 @@
       "part": "wikidata:Q109235124",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:356",
+      "part": "wikidata:Q109235124",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:cape-hatteras-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-625",
+      "part": "wikidata:Q109235124",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3363",
+      "part": "wikidata:Q109235124",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:39901",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78000266",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.25054,-75.52882",
+      "part": "wikidata:Q109235124",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:cape-hatteras",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -243,6 +387,10 @@
         {
           "source": "osm",
           "value": 58.5
+        },
+        {
+          "source": "uslhs",
+          "value": 58.22
         }
       ],
       "note": "Sources differ by more than 3 m."
@@ -257,6 +405,10 @@
         {
           "source": "osm",
           "value": 1870
+        },
+        {
+          "source": "uslhs",
+          "value": 1798
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

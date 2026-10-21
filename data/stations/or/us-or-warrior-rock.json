@@ -2,7 +2,8 @@
   "id": "us-or-warrior-rock",
   "name": "Warrior Rock Light",
   "other_names": [
-    "Warrior Rock Lighthouse"
+    "Warrior Rock Lighthouse",
+    "Warrior Rock"
   ],
   "country": "US",
   "region": "OR",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1931,
+    "first_lit": 1888,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl 4s",
-    "focal_height_m": 28.0,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.5,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,6 +75,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1888,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1931,
@@ -125,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/403789406",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Warrior Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=136",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Warrior Rock",
+      "url": "https://archives.uslhs.org/places/warrior-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +171,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -149,8 +182,45 @@
       "key": "osm:way/403789406",
       "part": "wikidata:Q7970786",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:136",
+      "part": "wikidata:Q7970786",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:warrior-rock-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-11060",
+      "part": "wikidata:Q7970786",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8885",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.84865,-122.78842",
+      "part": "wikidata:Q7970786",
+      "fields": [
+        "light"
       ]
     }
   ],

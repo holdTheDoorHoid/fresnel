@@ -1,7 +1,10 @@
 {
   "id": "us-nj-barnegat",
   "name": "Barnegat",
-  "other_names": [],
+  "other_names": [
+    "Lightship Barnegat LV 79/WAL 506",
+    "BARNEGAT (lightship)"
+  ],
   "country": "US",
   "region": "NJ",
   "county": "Camden",
@@ -9,10 +12,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 39.955833,
-    "lon": -75.112778,
+    "lat": 39.95738,
+    "lon": -75.11249,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -31,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "79002317",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79002317"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79002317",
+      "listed": "1979-11-29",
+      "nomination": "https://catalog.archives.gov/id/71997462"
     }
   ],
   "aton": {
@@ -43,8 +48,8 @@
   "agency": "United States Navy",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -64,7 +69,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -96,6 +101,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Barnegat_(LV-79)",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Barnegat LV 79/WAL 506",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=657",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71997462",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -108,17 +123,35 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:657",
+      "part": "wikidata:Q4861475",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79002317",
+      "part": "wikidata:Q4861475",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

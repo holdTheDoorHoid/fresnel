@@ -2,7 +2,9 @@
   "id": "us-wi-pilot-island",
   "name": "Pilot Island Light",
   "other_names": [
-    "Pilot Island Lighthouse"
+    "Pilot Island Lighthouse",
+    "Pilot Island",
+    "Porte des Morts Island"
   ],
   "country": "US",
   "region": "WI",
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 6s",
-    "focal_height_m": 15.0,
-    "range_nm": 12.0,
+    "focal_height_m": 14.6,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83004279",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83004279"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83004279",
+      "listed": "1983-11-21",
+      "nomination": "https://catalog.archives.gov/id/106780798"
     }
   ],
   "aton": {
@@ -58,19 +62,19 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1962"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,25 @@
     {
       "year": 1858,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/75043993",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Pilot Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=640",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pilot Island",
+      "url": "https://archives.uslhs.org/places/pilot-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106780798",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,6 +193,62 @@
       "part": "wikidata:Q7194423",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:640",
+      "part": "wikidata:Q7194423",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:pilot-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21325",
+      "part": "wikidata:Q7194423",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3576",
+      "part": "wikidata:Q7194423",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83004279",
+      "part": "wikidata:Q7194423",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.28444,-86.91973",
+      "part": "wikidata:Q7194423",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:pilot-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

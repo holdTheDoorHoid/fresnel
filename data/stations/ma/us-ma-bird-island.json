@@ -2,7 +2,8 @@
   "id": "us-ma-bird-island",
   "name": "Bird Island Light",
   "other_names": [
-    "Bird Island Lighthouse"
+    "Bird Island Lighthouse",
+    "Bird Island"
   ],
   "country": "US",
   "region": "MA",
@@ -16,36 +17,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1819,
       "height_m": 9.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1819,
-    "deactivated": 1933,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002030",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002030"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002030",
+      "listed": "1987-09-28",
+      "nomination": "https://catalog.archives.gov/id/63792738"
     }
   ],
   "aton": {
@@ -54,11 +57,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Marion",
+  "ownership": "local",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +72,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +81,31 @@
     {
       "year": 1819,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1819,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +157,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713409182",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bird Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=614",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bird Island",
+      "url": "https://archives.uslhs.org/places/bird-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792738",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,10 +210,84 @@
       "key": "osm:way/713409182",
       "part": "wikidata:Q4915874",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:614",
+      "part": "wikidata:Q4915874",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:bird-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-17105",
+      "part": "wikidata:Q4915874",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2822",
+      "part": "wikidata:Q4915874",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002030",
+      "part": "wikidata:Q4915874",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.66945,-70.71733",
+      "part": "wikidata:Q4915874",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:bird-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

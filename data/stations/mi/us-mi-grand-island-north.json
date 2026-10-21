@@ -9,7 +9,12 @@
     "North Lighthouse",
     "Old North Light",
     "Old North Lighthouse",
-    "Grand Island North lighthouse"
+    "Grand Island North lighthouse",
+    "Grand Island",
+    "Grand Island North",
+    "Old North",
+    "Grand Island North Light Station",
+    "Grand Island Light"
   ],
   "country": "US",
   "region": "MI",
@@ -30,29 +35,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1867,
-      "height_m": null,
+      "height_m": 22.2,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1856,
     "deactivated": 1961,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 22.2,
-    "range_nm": 16.7,
+    "focal_height_m": 57.9,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "85002149",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85002149"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85002149",
+      "listed": "1985-09-12",
+      "nomination": "https://catalog.archives.gov/id/25338815"
     }
   ],
   "aton": {
@@ -64,8 +71,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,16 +83,28 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1867,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -97,13 +116,13 @@
     {
       "year": 1961,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1985,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +169,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=725",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Island North",
+      "url": "https://archives.uslhs.org/places/grand-island-north",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25338815",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,9 +211,75 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:725",
+      "part": "wikidata:Q5594688",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:grand-island-north-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14570",
+      "part": "wikidata:Q5594688",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2973",
+      "part": "wikidata:Q5594688",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:85002149",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.55964,-86.68012",
+      "part": "wikidata:Q5594688",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 22.25
+        },
+        {
+          "source": "uslhs",
+          "value": 62.48
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

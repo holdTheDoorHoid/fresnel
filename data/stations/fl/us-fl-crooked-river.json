@@ -3,7 +3,11 @@
   "name": "Crooked River Light",
   "other_names": [
     "Carrabelle Light",
-    "Crooked River Lighthouse"
+    "Crooked River Lighthouse",
+    "Crooked River",
+    "Carrabelle",
+    "Crooked River Rear",
+    "Carrabelle Lighthouse"
   ],
   "country": "US",
   "region": "FL",
@@ -23,30 +27,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1895,
       "height_m": 30.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl Y 15s",
-    "focal_height_m": 35.0,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 35.1,
     "range_nm": 35.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78000941",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000941"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000941",
+      "listed": "1978-12-01",
+      "nomination": "https://catalog.archives.gov/id/77842451"
     }
   ],
   "aton": {
@@ -55,23 +61,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "CARRABELLE LIGHTHOUSE ASSOCIATION",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +85,31 @@
     {
       "year": 1895,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1895,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1995,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -144,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4742858863",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Crooked River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=593",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Crooked River Rear",
+      "url": "https://archives.uslhs.org/places/crooked-river-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842451",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,6 +209,73 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:593",
+      "part": "wikidata:Q5187851",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:crooked-river",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-2515",
+      "part": "wikidata:Q5187851",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-50",
+      "part": "wikidata:Q5187851",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2773",
+      "part": "wikidata:Q5187851",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78000941",
+      "part": "wikidata:Q5187851",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.82725,-84.70072",
+      "part": "wikidata:Q5187851",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:crooked-river",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -179,6 +284,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {

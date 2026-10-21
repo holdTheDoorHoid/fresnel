@@ -2,7 +2,9 @@
   "id": "us-ri-pomham-rocks",
   "name": "Pomham Rocks Light",
   "other_names": [
-    "Pomham Rocks Lighthouse"
+    "Pomham Rocks Lighthouse",
+    "Pomham Rocks",
+    "Pomham Rocks Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1871,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 2006,
+    "first_lit": 1871,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R",
+    "characteristic": "F R",
     "focal_height_m": 16.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79000001",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000001"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000001",
+      "listed": "1979-07-09",
+      "nomination": "https://catalog.archives.gov/id/41374512"
     }
   ],
   "aton": {
@@ -55,22 +59,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +82,20 @@
     {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1974,
@@ -90,7 +106,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -166,6 +182,26 @@
       "label": "Website",
       "url": "https://www.pomhamrockslighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Pomham Rocks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=683",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pomham Rocks",
+      "url": "https://archives.uslhs.org/places/pomham-rocks",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374512",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -178,7 +214,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -192,8 +227,67 @@
       "part": "wikidata:Q7227306",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:683",
+      "part": "wikidata:Q7227306",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:pomham-rocks",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18555",
+      "part": "wikidata:Q7227306",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3501",
+      "part": "wikidata:Q7227306",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000001",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.77752,-71.36955",
+      "part": "wikidata:Q7227306",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:pomham-rocks",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -213,6 +307,24 @@
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     },
     {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 16.5
+        },
+        {
+          "source": "osm",
+          "value": 16.5
+        },
+        {
+          "source": "uslhs",
+          "value": 20.42
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
       "field": "first_year",
       "values": [
         {
@@ -221,6 +333,10 @@
         },
         {
           "source": "osm",
+          "value": 1871
+        },
+        {
+          "source": "uslhs",
           "value": 1871
         }
       ],

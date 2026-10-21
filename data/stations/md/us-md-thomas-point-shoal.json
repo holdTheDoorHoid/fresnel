@@ -2,7 +2,9 @@
   "id": "us-md-thomas-point-shoal",
   "name": "Thomas Point Shoal Light",
   "other_names": [
-    "Thomas Point Shoal Lighthouse"
+    "Thomas Point Shoal Lighthouse",
+    "Thomas Point Shoal",
+    "Thomas Point Shoals Light Station"
   ],
   "country": "US",
   "region": "MD",
@@ -35,17 +37,20 @@
     "first_lit": 1875,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 5s",
+    "characteristic": "Fl W 5s",
     "focal_height_m": 13.1,
-    "range_nm": 11.0,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "75000864",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000864"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000864",
+      "listed": "1975-02-20",
+      "nhl": "1999-01-20",
+      "nomination": "https://catalog.archives.gov/id/106776214"
     },
     {
       "register": "National Historic Landmark",
@@ -59,11 +64,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Annapolis / Chesapeake Chapter of U.S. Lighthouse Society",
+  "ownership": "local",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -71,11 +76,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,26 +88,38 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1875,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
     },
     {
       "year": 1986,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
+    },
+    {
+      "year": 1999,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -148,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/444342990",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Thomas Point Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=425",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Thomas Point Shoal",
+      "url": "https://archives.uslhs.org/places/thomas-point-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106776214",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -173,8 +210,65 @@
       "key": "osm:way/444342990",
       "part": "wikidata:Q7793202",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:425",
+      "part": "wikidata:Q7793202",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:thomas-point-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7760",
+      "part": "wikidata:Q7793202",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2884",
+      "part": "wikidata:Q7793202",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75000864",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.89898,-76.43589",
+      "part": "wikidata:Q7793202",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:thomas-point-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-mi-presque-isle-harbor-breakwater",
   "name": "Presque Isle Harbor Breakwater Light",
   "other_names": [
-    "Breakwater Light"
+    "Breakwater Light",
+    "Presque Isle Harbor Breakwater",
+    "Gull Island"
   ],
   "country": "US",
   "region": "MI",
@@ -36,16 +38,17 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
-    "focal_height_m": 17.0,
-    "range_nm": 11.0,
+    "focal_height_m": 17.1,
+    "range_nm": 9.6,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "16000339",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000339"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000339",
+      "listed": "2016-06-07"
     }
   ],
   "aton": {
@@ -78,13 +81,19 @@
     {
       "year": 1941,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1980,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2016,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +140,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=573",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,8 +175,54 @@
       "part": "wikidata:Q29097076",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:573",
+      "part": "wikidata:Q29097076",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:gull-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:presque-isle-harbor-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14670",
+      "part": "wikidata:Q29097076",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:16000339",
+      "part": "wikidata:Q29097076",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.57410,-87.37458",
+      "part": "wikidata:Q29097076",
+      "fields": [
+        "light"
       ]
     }
   ],

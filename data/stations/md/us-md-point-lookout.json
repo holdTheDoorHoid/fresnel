@@ -2,7 +2,10 @@
   "id": "us-md-point-lookout",
   "name": "Point Lookout Light",
   "other_names": [
-    "Point Lookout Lighthouse"
+    "Point Lookout Lighthouse",
+    "Point Lookout",
+    "Fort McHenry Channel Range Rear",
+    "Locust Point"
   ],
   "country": "US",
   "region": "MD",
@@ -22,13 +25,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1830,
-      "height_m": null,
+      "height_m": 9.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +39,10 @@
     "deactivated": 1965,
     "lens": null,
     "characteristic": "Fl(2) W 5s",
-    "focal_height_m": 12.0,
-    "range_nm": null,
+    "focal_height_m": 6.1,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -51,20 +54,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,19 +75,37 @@
     {
       "year": 1830,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1830,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1965,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -131,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/128300747",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Lookout",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=436",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Lookout",
+      "url": "https://archives.uslhs.org/places/point-lookout",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,6 +192,63 @@
       "part": "wikidata:Q7208076",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:436",
+      "part": "wikidata:Q7208076",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:fort-mchenry-channel-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:point-lookout-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:point-lookout-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7525",
+      "part": "wikidata:Q7208076",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2877",
+      "part": "wikidata:Q7208076",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:point-lookout",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

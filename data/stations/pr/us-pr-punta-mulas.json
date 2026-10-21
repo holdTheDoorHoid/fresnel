@@ -4,7 +4,9 @@
   "other_names": [
     "Faro de Punta Mulas",
     "Punta Mulas Lighthouse",
-    "Vieques Lighthouse"
+    "Vieques Lighthouse",
+    "Punta Mulas",
+    "Faro de Vieques"
   ],
   "country": "US",
   "region": "PR",
@@ -38,16 +40,23 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc R 4s",
-    "focal_height_m": 68.0,
+    "focal_height_m": 20.7,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001551",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001551"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001551",
+      "listed": "1977-11-17",
+      "nomination": "https://catalog.archives.gov/id/131518243"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-34",
+      "url": "https://www.loc.gov/item/pr0034/"
     }
   ],
   "aton": {
@@ -98,7 +107,7 @@
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +154,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/204684218",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Punta Mulas",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1167",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-34, Faro de Punta Mulas",
+      "url": "https://www.loc.gov/item/pr0034/",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518243",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,6 +195,43 @@
       "part": "wikidata:Q7260548",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1167",
+      "part": "wikidata:Q7260548",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-31530",
+      "part": "wikidata:Q7260548",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-34",
+      "part": "wikidata:Q7260548",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001551",
+      "part": "wikidata:Q7260548",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.15442,-65.44382",
+      "part": "wikidata:Q7260548",
+      "fields": [
+        "light"
       ]
     }
   ],

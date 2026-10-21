@@ -2,7 +2,9 @@
   "id": "us-fl-cape-st-george",
   "name": "Cape St. George Light",
   "other_names": [
-    "Cape St. George Lighthouse"
+    "Cape St. George Lighthouse",
+    "Cape St. George",
+    "rebuilt"
   ],
   "country": "US",
   "region": "FL",
@@ -16,23 +18,23 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1833,
       "height_m": 21.5,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1833,
     "deactivated": 1994,
     "lens": null,
     "characteristic": "Fl W 6s",
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "74000625",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000625"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000625",
+      "listed": "1974-09-10",
+      "nomination": "https://catalog.archives.gov/id/77842449"
     }
   ],
   "aton": {
@@ -57,15 +61,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -82,15 +86,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1852,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1994,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -143,6 +165,21 @@
       "label": "ARLHS World List of Lights USA140",
       "url": "https://wlol.arlhs.com/lighthouse/USA140.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape St. George",
+      "url": "https://archives.uslhs.org/places/cape-st-george",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842449",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,25 +200,54 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:cape-st-george-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2770",
+      "part": "wikidata:Q5035066",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000625",
+      "part": "wikidata:Q5035066",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 2009
         },
         {
-          "source": "wikidata",
-          "value": 1994
+          "source": "uslhs",
+          "value": 1833
         }
       ],
-      "note": "A source gives the light's service entry (2009) after its retirement (1994); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

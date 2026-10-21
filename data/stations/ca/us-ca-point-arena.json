@@ -3,7 +3,8 @@
   "name": "Point Arena Light",
   "other_names": [
     "Point Arena Lighthouse",
-    "Point Arena Light Station"
+    "Point Arena Light Station",
+    "Point Arena"
   ],
   "country": "US",
   "region": "CA",
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1908,
+    "first_lit": 1870,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 47.0,
-    "range_nm": 25.0,
+    "focal_height_m": 47.2,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90002189",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90002189"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90002189",
+      "listed": "1991-07-16",
+      "nomination": "https://catalog.archives.gov/id/123857670"
     },
     {
       "register": "California Historical Landmark",
@@ -63,23 +66,30 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://pointarenalighthouse.com/lodging",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1870,
@@ -88,15 +98,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1908,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1908,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -162,6 +190,31 @@
       "label": "Website",
       "url": "https://www.pointarenalighthouse.com/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Point Arena",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=65",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Arena",
+      "url": "https://archives.uslhs.org/places/point-arena",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857670",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/california",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -174,7 +227,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -189,6 +241,72 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:65",
+      "part": "wikidata:Q7207938",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-arena-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-420",
+      "part": "wikidata:Q7207938",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2713",
+      "part": "wikidata:Q7207938",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90002189",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.95476,-123.74060",
+      "part": "wikidata:Q7207938",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-arena",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ca:point-arena-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [
@@ -201,6 +319,10 @@
         },
         {
           "source": "osm",
+          "value": 1870
+        },
+        {
+          "source": "uslhs",
           "value": 1870
         }
       ],

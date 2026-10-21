@@ -40,16 +40,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 20.0,
+    "focal_height_m": 20.4,
     "range_nm": 18.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "93001338",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93001338"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/93001338",
+      "listed": "1993-11-30",
+      "nomination": "https://catalog.archives.gov/id/75612054"
     }
   ],
   "aton": {
@@ -61,40 +63,53 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "http://www.newdungenesslighthouse.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a stay as a keeper for a fee. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1857,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1857,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1993,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -156,6 +171,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/60827471",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: New Dungeness",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=34",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Dungeness",
+      "url": "https://archives.uslhs.org/places/new-dungeness",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75612054",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/washington",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -197,9 +237,93 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:34",
+      "part": "wikidata:Q7007034",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:new-dungeness",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16335",
+      "part": "wikidata:Q7007034",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3550",
+      "part": "wikidata:Q7007034",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:93001338",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.18176,-123.11025",
+      "part": "wikidata:Q7007034",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:new-dungeness",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:wa:new-dungeness-light-station",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 20.0
+        },
+        {
+          "source": "osm",
+          "value": 20.0
+        },
+        {
+          "source": "uslhs",
+          "value": 27.66
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

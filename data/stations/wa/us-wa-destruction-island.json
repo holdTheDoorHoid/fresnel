@@ -2,7 +2,8 @@
   "id": "us-wa-destruction-island",
   "name": "Destruction Island Light",
   "other_names": [
-    "Destruction Island Lighthouse"
+    "Destruction Island Lighthouse",
+    "Destruction Island"
   ],
   "country": "US",
   "region": "WA",
@@ -16,24 +17,24 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "stone",
       "built": 1891,
       "height_m": 29.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1891,
-    "deactivated": 2008,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 45.0,
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,19 +73,25 @@
     {
       "year": 1891,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1891,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1891,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2008,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -131,6 +138,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1383615096",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Destruction Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=118",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Destruction Island",
+      "url": "https://archives.uslhs.org/places/destruction-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,10 +179,51 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:118",
+      "part": "wikidata:Q5265398",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:destruction-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3544",
+      "part": "wikidata:Q5265398",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

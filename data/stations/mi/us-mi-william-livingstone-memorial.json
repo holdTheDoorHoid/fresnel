@@ -2,7 +2,8 @@
   "id": "us-mi-william-livingstone-memorial",
   "name": "William Livingstone Memorial Light",
   "other_names": [
-    "William Livingstone Memorial Lighthouse"
+    "William Livingstone Memorial Lighthouse",
+    "William Livingstone Memorial"
   ],
   "country": "US",
   "region": "MI",
@@ -36,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 17.5,
-    "range_nm": 12.0,
+    "focal_height_m": 17.7,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,7 +73,7 @@
     {
       "year": 1930,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -119,6 +120,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/107208288",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: William Livingstone Memorial",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=163",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,7 +142,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -144,6 +154,36 @@
       "part": "wikidata:Q90145116",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:163",
+      "part": "wikidata:Q90145116",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:william-livingstone-memorial",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-8240",
+      "part": "wikidata:Q90145116",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.34699,-82.95440",
+      "part": "wikidata:Q90145116",
+      "fields": [
+        "light"
       ]
     }
   ],

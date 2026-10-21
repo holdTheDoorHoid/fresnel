@@ -1,0 +1,127 @@
+{
+  "id": "us-ny-silver-creek",
+  "name": "Silver Creek",
+  "other_names": [],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 42.551759,
+    "lon": -79.178661,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "wood",
+      "built": 1838,
+      "height_m": 13.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1838,
+    "deactivated": 1856,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 23.8,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Silver Creek",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2015",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Silver Creek",
+      "url": "https://archives.uslhs.org/places/silver-creek",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2015",
+      "part": "lighthousefriends:2015",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8827",
+      "part": "lighthousefriends:2015",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

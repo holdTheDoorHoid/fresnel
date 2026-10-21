@@ -2,7 +2,9 @@
   "id": "us-vt-windmill-point",
   "name": "Windmill Point Light",
   "other_names": [
-    "Windmill Point Lighthouse"
+    "Windmill Point Lighthouse",
+    "Windmill Point",
+    "Windmill Point VT"
   ],
   "country": "US",
   "region": "VT",
@@ -16,43 +18,43 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1830,
-      "height_m": null,
+      "height_m": 12.2,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1931,
+    "first_lit": 1830,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 24.4,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "1-39130",
+    "arlhs": "USA-895",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "PRIVATE OWNER",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,9 +78,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1931,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -86,6 +112,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2002,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -106,6 +138,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1474854907",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Windmill Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=668",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Vermont",
+      "url": "https://www.ibiblio.org/lighthouse/vt.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Windmill Point VT",
+      "url": "https://archives.uslhs.org/places/windmill-point-vt",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,7 +164,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -130,22 +176,83 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:668",
+      "part": "wikidata:Q8024299",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:windmill-point",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:windmill-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39130",
+      "part": "wikidata:Q8024299",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3537",
+      "part": "wikidata:Q8024299",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 2002
         },
         {
-          "source": "wikidata",
-          "value": 1931
+          "source": "uslhs",
+          "value": 1830
         }
       ],
-      "note": "A source gives the light's service entry (2002) after its retirement (1931); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1931
+        },
+        {
+          "source": "rowlett",
+          "value": 2002
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
     }
   ],
   "verification": "facts",

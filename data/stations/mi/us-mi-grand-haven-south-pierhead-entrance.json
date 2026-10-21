@@ -2,14 +2,17 @@
   "id": "us-mi-grand-haven-south-pierhead-entrance",
   "name": "Grand Haven South Pierhead Entrance Light",
   "other_names": [
-    "Grand Haven South Pierhead Entrance Lighthouse"
+    "Grand Haven South Pierhead Entrance Lighthouse",
+    "Grand Haven",
+    "Grand Haven South Pierhead Range",
+    "Grand Haven Old"
   ],
   "country": "US",
   "region": "MI",
   "county": "Ottawa",
   "water": null,
-  "setting": "pier",
-  "kind": "pier_light",
+  "setting": null,
+  "kind": "range_lights",
   "location": {
     "lat": 43.056945,
     "lon": -86.256005,
@@ -21,25 +24,40 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Grand Haven South Pierhead Entrance Light",
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1839,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Grand Haven Old",
+      "type": null,
+      "material": null,
+      "built": 1854,
+      "height_m": 7.3,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 43.05778,
+        "lon": -86.24667
+      }
     }
   ],
   "light": {
-    "first_lit": 1905,
+    "first_lit": 1839,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 10s",
-    "focal_height_m": 13.0,
-    "range_nm": 15.0,
+    "focal_height_m": 12.8,
+    "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,20 +69,20 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -74,6 +92,30 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1905,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1905,
@@ -125,6 +167,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1885500277",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Grand Haven",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=189",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Haven South Pierhead Range",
+      "url": "https://archives.uslhs.org/places/grand-haven-south-pierhead-range",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Haven Old",
+      "url": "https://archives.uslhs.org/places/grand-haven-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -136,8 +193,6 @@
         "aton",
         "county",
         "events",
-        "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -150,8 +205,59 @@
       "part": "wikidata:Q16840774",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:189",
+      "part": "wikidata:Q16840774",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18965",
+      "part": "wikidata:Q16840774",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2970",
+      "part": "wikidata:Q16840774",
+      "fields": [
+        "access",
+        "events",
+        "kind",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8508",
+      "part": "uslhs:8508",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.05693,-86.25596",
+      "part": "wikidata:Q16840774",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:grand-haven",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

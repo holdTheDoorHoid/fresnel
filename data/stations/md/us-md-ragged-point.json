@@ -2,7 +2,10 @@
   "id": "us-md-ragged-point",
   "name": "Ragged Point Light",
   "other_names": [
-    "Ragged Point Lighthouse"
+    "Ragged Point Lighthouse",
+    "Ragged Point",
+    "Ragged Point Warning Light",
+    "Ragged Point Obstruction Light"
   ],
   "country": "US",
   "region": "MD",
@@ -22,24 +25,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1910,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1962,
+    "first_lit": 1910,
     "deactivated": 1962,
     "lens": null,
-    "characteristic": "Fl W 6s",
-    "focal_height_m": 13.5,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 4.6,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,8 +75,20 @@
     {
       "year": 1910,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1910,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1962,
@@ -132,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9841380348",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ragged Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1957",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ragged Point",
+      "url": "https://archives.uslhs.org/places/ragged-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -158,10 +188,87 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1957",
+      "part": "wikidata:Q7282904",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:ragged-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-16940",
+      "part": "wikidata:Q7282904",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-16942",
+      "part": "wikidata:Q7282904",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8478",
+      "part": "wikidata:Q7282904",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.15455,-76.60112",
+      "part": "wikidata:Q7282904",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1962
+        },
+        {
+          "source": "uslhs",
+          "value": 1910
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

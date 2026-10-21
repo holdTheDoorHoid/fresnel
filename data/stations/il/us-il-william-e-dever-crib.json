@@ -1,7 +1,10 @@
 {
   "id": "us-il-william-e-dever-crib",
   "name": "William E. Dever Crib Light",
-  "other_names": [],
+  "other_names": [
+    "William E. Dever Crib Lighthouse",
+    "William E. Dever Crib"
+  ],
   "country": "US",
   "region": "IL",
   "county": "Cook",
@@ -9,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.929444,
-    "lon": -87.598889,
+    "lat": 41.916481,
+    "lon": -87.572113,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
@@ -20,24 +23,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "crib",
       "material": null,
       "built": 1935,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "QF W",
-    "focal_height_m": 22.0,
+    "characteristic": "Q W",
+    "focal_height_m": 21.9,
     "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -61,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -70,7 +73,7 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -102,6 +105,26 @@
       "label": "ARLHS World List of Lights USA1148",
       "url": "https://wlol.arlhs.com/lighthouse/USA1148.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/7042993335",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: William E. Dever Crib",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=866",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: William E. Dever Crib",
+      "url": "https://archives.uslhs.org/places/william-e-dever-crib",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -114,17 +137,92 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/7042993335",
+      "part": "wikidata:Q82002213",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:866",
+      "part": "wikidata:Q82002213",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:william-e-dever-crib",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20040",
+      "part": "wikidata:Q82002213",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:77019",
+      "part": "wikidata:Q82002213",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.91650,-87.57216",
+      "part": "wikidata:Q82002213",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            41.92944,
+            -87.59889
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            41.91648,
+            -87.57211
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            41.91651,
+            -87.57213
+          ]
+        }
+      ],
+      "distance_m": 2643,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

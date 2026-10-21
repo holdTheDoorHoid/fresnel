@@ -1,0 +1,132 @@
+{
+  "id": "us-um-amelia-earhart",
+  "name": "Amelia Earhart",
+  "other_names": [
+    "Howland Island",
+    "Earhart Light",
+    "Howland Island Day Beacon"
+  ],
+  "country": "US",
+  "region": "UM",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 0.805689,
+    "lon": -176.619042,
+    "precision": "approximate",
+    "from": "territories"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1937,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "territories"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": 1942,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "BAK-002",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1942,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: U.S. Minor Outlying Islands",
+      "url": "https://www.ibiblio.org/lighthouse/umi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wikipedia: Earhart Light",
+      "url": "https://en.wikipedia.org/wiki/Earhart_Light",
+      "kind": "wikipedia"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:umi:amelia-earhart",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "territories",
+      "key": "territories:earhart-light",
+      "part": "territories:earhart-light",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

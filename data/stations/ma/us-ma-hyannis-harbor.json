@@ -2,7 +2,9 @@
   "id": "us-ma-hyannis-harbor",
   "name": "Hyannis Harbor Lighthouse",
   "other_names": [
-    "Lewis Bay Lighthouse"
+    "Lewis Bay Lighthouse",
+    "Lewis Bay",
+    "Channel Point"
   ],
   "country": "US",
   "region": "MA",
@@ -77,6 +79,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1541332501",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lewis Bay",
+      "url": "https://archives.uslhs.org/places/lewis-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -90,12 +102,24 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:lewis-bay",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:60311",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A privately kept, unofficial light on Lewis Bay, not an aid to navigation",
   "updated": "2026-10-21"
 }

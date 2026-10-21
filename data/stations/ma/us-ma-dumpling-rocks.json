@@ -3,7 +3,9 @@
   "name": "Dumpling Rocks Light",
   "other_names": [
     "Dumpling Rocks Light 7",
-    "Dumpling Rocks Lighthouse"
+    "Dumpling Rocks Lighthouse",
+    "Dumpling Rock",
+    "Dumpling Rocks"
   ],
   "country": "US",
   "region": "MA",
@@ -24,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1942,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1889,
+    "first_lit": 1828,
     "deactivated": 1942,
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 15.8,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -71,9 +73,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1889,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -147,6 +155,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6710072744",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Dumpling Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1973",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Dumpling Rock",
+      "url": "https://archives.uslhs.org/places/dumpling-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -159,7 +182,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -185,9 +207,71 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1973",
+      "part": "wikidata:Q108941289",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:dumpling-rocks-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-16040",
+      "part": "wikidata:Q108941289",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-16731",
+      "part": "wikidata:Q108941289",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8491",
+      "part": "wikidata:Q108941289",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.53830,-70.92145",
+      "part": "wikidata:Q108941289",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
     {
       "field": "status",
       "values": [
@@ -215,6 +299,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1942
+        },
+        {
+          "source": "uslhs",
+          "value": 1828
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

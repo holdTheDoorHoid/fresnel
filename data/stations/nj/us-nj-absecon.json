@@ -3,7 +3,8 @@
   "name": "Absecon Light",
   "other_names": [
     "Absecon Lighthouse",
-    "Atlantic City Lighthouse"
+    "Atlantic City Lighthouse",
+    "Absecon"
   ],
   "country": "US",
   "region": "NJ",
@@ -17,25 +18,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1856,
       "height_m": 52.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1857,
-    "deactivated": 1933,
-    "lens": null,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
     "focal_height_m": 51.0,
     "range_nm": 19.5,
@@ -46,7 +52,8 @@
     {
       "register": "NRHP",
       "number": "71000492",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000492"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000492",
+      "listed": "1971-01-25"
     }
   ],
   "aton": {
@@ -55,23 +62,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Inlet Public/Private Association (IPPA) - Manager",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,20 +91,32 @@
     },
     {
       "year": 1857,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1971,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +168,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/230036850",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Absecon",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=379",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Absecon",
+      "url": "https://archives.uslhs.org/places/absecon",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,10 +210,72 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:379",
+      "part": "wikidata:Q4669685",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:absecon",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3373",
+      "part": "wikidata:Q4669685",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:71000492",
+      "part": "wikidata:Q4669685",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:absecon",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-fl-dames-point",
   "name": "Dames Point Light",
   "other_names": [
-    "Dames Point Lighthouse"
+    "Dames Point Lighthouse",
+    "Dames Point"
   ],
   "country": "US",
   "region": "FL",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.3833,
-    "lon": -81.5544,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.383057,
+    "lon": -81.555021,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1913) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1872,
+      "height_m": 10.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1857,
     "deactivated": 1893,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
+    "characteristic": "Q W",
+    "focal_height_m": 5.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,9 +77,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1893,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -106,6 +119,16 @@
       "label": "ARLHS World List of Lights USA1022",
       "url": "https://wlol.arlhs.com/lighthouse/USA1022.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Dames Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1839",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Dames Point",
+      "url": "https://archives.uslhs.org/places/dames-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,14 +141,53 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1839",
+      "part": "wikidata:Q5212182",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8405",
+      "part": "wikidata:Q5212182",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.38302,-81.55503",
+      "part": "wikidata:Q5212182",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1872
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,12 @@
 {
   "id": "us-nj-ocean-city-life-saving-station",
   "name": "Ocean City Life-Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Ocean City, NJ Life-Saving Station",
+    "U.S. Life Saving Station 30",
+    "Fourth Street Life Saving Station",
+    "Ocean City Life-Saving Station #30"
+  ],
   "country": "US",
   "region": "NJ",
   "county": "Cape May",
@@ -14,8 +19,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "other",
@@ -24,7 +29,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -34,7 +39,8 @@
     {
       "register": "NRHP",
       "number": "13000385",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/13000385"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/13000385",
+      "listed": "2013-06-14"
     }
   ],
   "aton": {
@@ -59,7 +65,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -67,7 +73,7 @@
     {
       "year": 2013,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +100,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Ocean_City_Life-Saving_Station_(New_Jersey)",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ocean City Life Saving Station",
+      "url": "https://archives.uslhs.org/places/ocean-city-life-saving-station",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,10 +122,33 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97818",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:13000385",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:ocean-city-lss-30",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,12 @@
 {
   "id": "us-nj-tuckers-beach",
   "name": "phare de Tucker's Beach",
-  "other_names": [],
+  "other_names": [
+    "Tuckers Beach (Replica)",
+    "Tucker's Island (Replica)",
+    "Tucker's Beach",
+    "Tuckers Beach NJ (Replica)"
+  ],
   "country": "US",
   "region": "NJ",
   "county": "Ocean",
@@ -9,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 39.604444,
-    "lon": -74.345278,
+    "lat": 39.601966,
+    "lon": -74.342687,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -24,20 +29,20 @@
       "material": null,
       "built": 1999,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 2000,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,12 +75,24 @@
     {
       "year": 1999,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 2000,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-nj-tuckers-island",
+      "relation": "replica_of",
+      "name": "Tucker's Island Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TuckertonSeaport.jpg",
@@ -97,6 +114,26 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_de_Tucker%27s_Beach",
       "kind": "wikipedia"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12287471638",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tuckers Beach (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=858",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tuckers Beach NJ (Replica)",
+      "url": "https://archives.uslhs.org/places/tuckers-beach-nj-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -108,16 +145,46 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/12287471638",
+      "part": "wikidata:Q80114927",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:858",
+      "part": "wikidata:Q80114927",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:tucker-s-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:33090",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

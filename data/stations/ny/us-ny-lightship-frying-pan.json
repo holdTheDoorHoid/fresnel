@@ -3,7 +3,10 @@
   "name": "United States lightship Frying Pan",
   "other_names": [
     "Frying Pan",
-    "Lightship Frying Pan"
+    "Lightship Frying Pan",
+    "Lightship Frying Pan LV 115/WAL 537",
+    "FRYING PAN SHOALS LIGHTSHIP NO. 115 (lightship)",
+    "Frying Pan Shoals"
   ],
   "country": "US",
   "region": "NY",
@@ -12,10 +15,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 40.749881,
-    "lon": -74.010194,
+    "lat": 40.75257,
+    "lon": -74.00946,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -34,7 +37,9 @@
     {
       "register": "NRHP",
       "number": "98001615",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98001615"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98001615",
+      "listed": "1999-01-28",
+      "nomination": "https://catalog.archives.gov/id/75319530"
     }
   ],
   "aton": {
@@ -46,8 +51,8 @@
   "agency": "United States Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -59,7 +64,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -73,7 +78,7 @@
     {
       "year": 1999,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -120,6 +125,16 @@
       "label": "ARLHS World List of Lights USA311",
       "url": "https://wlol.arlhs.com/lighthouse/USA311.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Frying Pan LV 115/WAL 537",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=759",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75319530",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -134,17 +149,43 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:759",
+      "part": "wikidata:Q588285",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:98001615",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:frying-pan-shoals-ls-lv115",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,14 @@
   "id": "us-mi-tawas-point",
   "name": "Tawas Point Light",
   "other_names": [
-    "Tawas Point Lighthouse"
+    "Tawas Point Lighthouse",
+    "Tawas Point",
+    "Tawas",
+    "Tawas Point, Ottawa Point",
+    "Tawas Point Fog Horn",
+    "Ottawa Point",
+    "Tawas Point Light Station",
+    "Tawas Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +30,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1853,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1853,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Oc W 4s, R sector 045° to 135°",
-    "focal_height_m": 21.0,
-    "range_nm": 16.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 12.2,
+    "range_nm": 11.0,
+    "fog_signal": "horn",
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001453",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001453"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001453",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891168"
     },
     {
       "register": "Michigan State Historic Site",
@@ -62,23 +76,30 @@
   "agency": "DNR",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1953"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "https://www.michigan.gov/mhc/museums/tawas/lighthouse-keepers",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a stay as a keeper for a fee. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1853,
@@ -87,16 +108,46 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1876,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1877,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1953,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2016,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -152,6 +203,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/362860355",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tawas Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=175",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tawas Point (Ottawa Point)",
+      "url": "https://archives.uslhs.org/places/tawas-point-ottawa-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891168",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -164,7 +240,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,9 +261,94 @@
       "key": "osm:way/362860355",
       "part": "wikidata:Q7689229",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:175",
+      "part": "wikidata:Q7689229",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:tawas-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:tawas-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11240",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3349",
+      "part": "wikidata:Q7689229",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001453",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:tawas-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:tawas-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1877
+        },
+        {
+          "source": "uslhs",
+          "value": 1853
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

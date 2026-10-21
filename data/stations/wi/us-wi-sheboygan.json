@@ -3,7 +3,8 @@
   "name": "Sheboygan Lighthouse",
   "other_names": [
     "Chippewagan",
-    "Sheboygan North Point"
+    "Sheboygan North Point",
+    "Sheboygan Old"
   ],
   "country": "US",
   "region": "WI",
@@ -34,7 +35,7 @@
   ],
   "light": {
     "first_lit": 1839,
-    "deactivated": null,
+    "deactivated": 1904,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
@@ -45,7 +46,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-124",
     "ccg_list_number": null,
     "nga": null
   },
@@ -73,8 +74,26 @@
     {
       "year": 1839,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1860,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1860,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1904,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -95,6 +114,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Sheboygan_Lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sheboygan Old",
+      "url": "https://archives.uslhs.org/places/sheboygan-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -109,6 +138,24 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:sheboygan-north-point-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9000",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

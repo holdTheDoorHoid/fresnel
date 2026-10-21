@@ -2,7 +2,9 @@
   "id": "us-ct-saybrook-breakwater",
   "name": "Saybrook Breakwater Light",
   "other_names": [
-    "Saybrook Breakwater Lighthouse"
+    "Saybrook Breakwater Lighthouse",
+    "Saybrook Breakwater",
+    "Saybrook Outer"
   ],
   "country": "US",
   "region": "CT",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1886,
       "height_m": 14.9,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 17.7,
-    "range_nm": 14.0,
+    "range_nm": 11.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001474",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001474"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001474",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353452"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +82,14 @@
     {
       "year": 1886,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1959,
@@ -90,7 +100,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1069791339",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Saybrook Breakwater (Saybrook Outer)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=797",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saybrook Breakwater",
+      "url": "https://archives.uslhs.org/places/saybrook-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353452",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,8 +205,74 @@
       "part": "wikidata:Q3378379",
       "fields": [
         "agency",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:797",
+      "part": "wikidata:Q3378379",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:saybrook-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21115",
+      "part": "wikidata:Q3378379",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-22495",
+      "part": "wikidata:Q3378379",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2747",
+      "part": "wikidata:Q3378379",
+      "fields": [
+        "access",
+        "events",
         "light",
         "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001474",
+      "part": "wikidata:Q3378379",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.26323,-72.34267",
+      "part": "wikidata:Q3378379",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:saybrook-bw",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -3,7 +3,9 @@
   "name": "Cleft of the Rock Light",
   "other_names": [
     "Cleft of the Rock lighthouse",
-    "Cleft of the Rock Lighthouse"
+    "Cleft of the Rock Lighthouse",
+    "Cleft of the Rock",
+    "Cape Perpetua"
   ],
   "country": "US",
   "region": "OR",
@@ -52,8 +54,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -72,9 +74,21 @@
   "events": [
     {
       "year": 1976,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1976,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2016,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -120,6 +134,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/843503695",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cleft of the Rock (Cape Perpetua)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=853",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleft of the Rock (Cape Perpetua)",
+      "url": "https://archives.uslhs.org/places/cleft-rock-cape-perpetua",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -147,6 +176,29 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:853",
+      "part": "wikidata:Q5131088",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:cleft-of-the-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:35217",
+      "part": "wikidata:Q5131088",
+      "fields": []
     }
   ],
   "conflicts": [

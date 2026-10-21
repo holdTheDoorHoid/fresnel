@@ -3,7 +3,8 @@
   "name": "Baker Island Day Beacon",
   "other_names": [
     "Baker Island Light",
-    "Baker Island Lighthouse"
+    "Baker Island Lighthouse",
+    "Baker Island"
   ],
   "country": "US",
   "region": "UM",
@@ -73,13 +74,13 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1942,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -129,6 +130,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/155296427",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: U.S. Minor Outlying Islands",
+      "url": "https://www.ibiblio.org/lighthouse/umi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -153,6 +159,14 @@
       "part": "wikidata:Q20933404",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:umi:baker-island",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

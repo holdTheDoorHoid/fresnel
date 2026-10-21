@@ -1,7 +1,9 @@
 {
   "id": "us-oh-cleveland-harbor-station-u-s-coast-guard",
   "name": "Cleveland Harbor Station, U.S. Coast Guard",
-  "other_names": [],
+  "other_names": [
+    "Cleveland Harbor Life-Saving Station"
+  ],
   "country": "US",
   "region": "OH",
   "county": "Cuyahoga",
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "other",
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -74,14 +76,34 @@
   "keepers_count": null,
   "related": [
     {
+      "id": "us-oh-cleveland-east-breakwater",
+      "relation": "light_station_nearby",
+      "name": "Cleveland East Breakwater"
+    },
+    {
       "id": "us-oh-cleveland-east-pierhead",
       "relation": "light_station_nearby",
       "name": "Cleveland East Pierhead Light"
     },
     {
+      "id": "us-oh-cleveland-main",
+      "relation": "light_station_nearby",
+      "name": "Cleveland Main"
+    },
+    {
+      "id": "us-oh-cleveland-west-breakwater-east-end",
+      "relation": "light_station_nearby",
+      "name": "Cleveland West Breakwater East End"
+    },
+    {
       "id": "us-oh-cleveland-west-pierhead",
       "relation": "light_station_nearby",
       "name": "Cleveland West Pierhead Light"
+    },
+    {
+      "id": "us-oh-cleveland-west-pierhead-inner",
+      "relation": "light_station_nearby",
+      "name": "Cleveland West Pierhead Inner"
     }
   ],
   "photos": [
@@ -105,6 +127,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Whiskey_Island_Coast_Guard_station",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleveland Harbor Life Saving Station",
+      "url": "https://archives.uslhs.org/places/cleveland-harbor-life-saving-station",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,6 +149,12 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97792",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

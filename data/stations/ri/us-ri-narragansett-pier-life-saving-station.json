@@ -1,7 +1,10 @@
 {
   "id": "us-ri-narragansett-pier-life-saving-station",
   "name": "Narragansett Pier Life Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Coast Guard House",
+    "Narragansett Pier Life-Saving Station"
+  ],
   "country": "US",
   "region": "RI",
   "county": "Washington",
@@ -34,7 +37,9 @@
     {
       "register": "NRHP",
       "number": "76000010",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000010"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000010",
+      "listed": "1976-06-30",
+      "nomination": "https://catalog.archives.gov/id/41375733"
     }
   ],
   "aton": {
@@ -59,7 +64,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -67,7 +72,7 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +99,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Narragansett_Pier_Life_Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41375733",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -111,10 +121,27 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000010",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:narragansett-pier-lss",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

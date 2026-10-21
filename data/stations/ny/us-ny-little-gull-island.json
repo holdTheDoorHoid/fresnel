@@ -2,7 +2,8 @@
   "id": "us-ny-little-gull-island",
   "name": "Little Gull Island Light",
   "other_names": [
-    "Little Gull Island Lighthouse"
+    "Little Gull Island Lighthouse",
+    "Little Gull Island"
   ],
   "country": "US",
   "region": "NY",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1869,
+    "first_lit": 1804,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(2) W 15s",
-    "focal_height_m": 28.0,
-    "range_nm": 18.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl W 15s",
+    "focal_height_m": 27.7,
+    "range_nm": 0.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,8 +52,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,12 +64,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1804,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1806,
       "event": "built",
@@ -76,10 +83,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1806,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1869,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1869,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -125,6 +150,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/610342372",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Little Gull Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=742",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Little Gull Island",
+      "url": "https://archives.uslhs.org/places/little-gull-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +177,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,9 +190,67 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:742",
+      "part": "wikidata:Q6650223",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:little-gull-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19830",
+      "part": "wikidata:Q6650223",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3418",
+      "part": "wikidata:Q6650223",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.20636,-72.10686",
+      "part": "wikidata:Q6650223",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1869
+        },
+        {
+          "source": "uslhs",
+          "value": 1806
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

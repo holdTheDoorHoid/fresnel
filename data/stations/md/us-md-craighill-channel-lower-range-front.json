@@ -1,7 +1,13 @@
 {
   "id": "us-md-craighill-channel-lower-range-front",
   "name": "Craighill Channel Lower Range Front Light",
-  "other_names": [],
+  "other_names": [
+    "Craighill Channel Lower Front",
+    "Craighill Channel Lower Range Front",
+    "\"Craighill Light,\" North Point Range",
+    "Craighill Channel Lower Range Front Light Station",
+    "Craighill Channel Range Front Light"
+  ],
   "country": "US",
   "region": "MD",
   "county": "Baltimore",
@@ -20,30 +26,32 @@
     {
       "role": "front_range",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "caisson",
+      "material": "cast_iron",
+      "built": 1873,
+      "height_m": 6.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1873,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W, 3 s with R sector",
-    "focal_height_m": 7.0,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 6.7,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001420",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001420"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001420",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75324949"
     }
   ],
   "aton": {
@@ -56,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,7 +75,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,14 +83,26 @@
   "events": [
     {
       "year": 1873,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -129,6 +149,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1027070452",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Craighill Channel Lower Front",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=416",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Craighill Channel Lower Range Front",
+      "url": "https://archives.uslhs.org/places/craighill-channel-lower-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324949",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,9 +196,73 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:416",
+      "part": "wikidata:Q5181676",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:craighill-channel-lower-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8040",
+      "part": "wikidata:Q5181676",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2870",
+      "part": "wikidata:Q5181676",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001420",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.18860,-76.39439",
+      "part": "wikidata:Q5181676",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 7.0
+        },
+        {
+          "source": "uslhs",
+          "value": 11.89
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

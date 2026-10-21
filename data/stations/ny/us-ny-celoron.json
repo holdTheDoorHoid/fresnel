@@ -1,7 +1,9 @@
 {
   "id": "us-ny-celoron",
   "name": "Celoron Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Celoron"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/900157321",
       "kind": "osm"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Celoron",
+      "url": "https://archives.uslhs.org/places/celoron",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +95,18 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:100205",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A private (faux) lighthouse at Celoron, Chautauqua Lake: not an aid to navigation",
   "updated": "2026-10-21"
 }

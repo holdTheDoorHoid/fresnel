@@ -1,7 +1,13 @@
 {
   "id": "us-ms-merrill-shell-bank",
   "name": "Merrill Shell Bank Light",
-  "other_names": [],
+  "other_names": [
+    "Merrills Shell Bank",
+    "Square Handkerchief Shoal",
+    "Merrill's Shell Bank, Pass Marianne",
+    "Merrill Shell Bank",
+    "Square Handkerchief Shoal Light SH"
+  ],
   "country": "US",
   "region": "MS",
   "county": null,
@@ -9,35 +15,35 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 30.2425,
-    "lon": -89.2489,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.248299,
+    "lon": -89.249126,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "screwpile",
-      "material": null,
+      "material": "wood",
       "built": 1860,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 15.5,
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1847,
     "deactivated": 1945,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl(2+1) G 6s",
+    "focal_height_m": 12.8,
+    "range_nm": 0.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -68,10 +74,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1847,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1860,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1944,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1945,
@@ -113,6 +137,21 @@
       "label": "ARLHS World List of Lights USA491",
       "url": "https://wlol.arlhs.com/lighthouse/USA491.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Merrills Shell Bank",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1825",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Merrill Shell Bank",
+      "url": "https://archives.uslhs.org/places/merrill-shell-bank",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,15 +164,63 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1825",
+      "part": "wikidata:Q23074258",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ms:square-handkerchief-shoal-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-10330",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8544",
+      "part": "wikidata:Q23074258",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1860
+        },
+        {
+          "source": "uslhs",
+          "value": 1847
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

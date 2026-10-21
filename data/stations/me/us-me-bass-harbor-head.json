@@ -2,7 +2,10 @@
   "id": "us-me-bass-harbor-head",
   "name": "Bass Harbor Head Light",
   "other_names": [
-    "Bass Harbor Head Lighthouse"
+    "Bass Harbor Head Lighthouse",
+    "Bass Harbor Head",
+    "Port Bass",
+    "Bass Harbor Head Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -11,8 +14,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.221966,
-    "lon": -68.337218,
+    "lat": 44.222457,
+    "lon": -68.33756,
     "precision": "exact",
     "from": "osm"
   },
@@ -21,31 +24,83 @@
   "structures": [
     {
       "role": "dwelling",
-      "name": null,
+      "name": "Bass Harbor Head Light",
       "type": null,
       "material": null,
       "built": 1858,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 44.221966,
+        "lon": -68.337218
+      }
+    },
+    {
+      "role": "fog_signal",
+      "name": "Bell House",
+      "type": null,
+      "material": null,
+      "built": 1876,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 44.221929,
+        "lon": -68.337078
+      }
+    },
+    {
+      "role": "oil_house",
+      "name": "Oil House",
+      "type": null,
+      "material": null,
+      "built": 1902,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 44.22232,
+        "lon": -68.33782
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Bass Harbor Head",
+      "type": null,
+      "material": "brick",
+      "built": 1905,
+      "height_m": 9.8,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1858,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc R 4s",
-    "focal_height_m": 17.0,
+    "focal_height_m": 17.1,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002273",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002273"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002273",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88684897"
     }
   ],
   "aton": {
@@ -55,22 +110,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1974"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +133,49 @@
     {
       "year": 1858,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1876,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1902,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1905,
+      "event": "built",
+      "note": null,
+      "from": "osm"
     },
     {
       "year": 1974,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -168,13 +247,48 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1055220186",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1056193780",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/162923159",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/162923161",
       "kind": "osm"
     },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/162923162",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bass Harbor Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=512",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bass Harbor Head",
+      "url": "https://archives.uslhs.org/places/bass-harbor-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684897",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -197,12 +311,38 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1055220186",
+      "part": "osm:way/1055220186",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/1056193780",
       "part": "wikidata:Q810448",
       "fields": [
-        "agency",
-        "light",
-        "location"
+        "agency"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/162923159",
+      "part": "osm:way/162923159",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/162923161",
+      "part": "lighthousefriends:512",
+      "fields": [
+        "events",
+        "location",
+        "structures"
       ]
     },
     {
@@ -210,6 +350,64 @@
       "key": "osm:way/162923162",
       "part": "wikidata:Q810448",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:512",
+      "part": "lighthousefriends:512",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:bass-harbor-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-2335",
+      "part": "lighthousefriends:512",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2887",
+      "part": "lighthousefriends:512",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002273",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.22190,-68.33729",
+      "part": "lighthousefriends:512",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:bass-harbor-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

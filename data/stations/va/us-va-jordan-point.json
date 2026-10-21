@@ -2,7 +2,9 @@
   "id": "us-va-jordan-point",
   "name": "Jordan Point Light",
   "other_names": [
-    "Jordan Point Lighthouse"
+    "Jordan Point Lighthouse",
+    "Jordan Point",
+    "Range Rear"
   ],
   "country": "US",
   "region": "VA",
@@ -11,28 +13,28 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.31304,
-    "lon": -77.22344,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.313045,
+    "lon": -77.223412,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1927) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1855,
       "height_m": 18.0,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1855,
     "deactivated": 1927,
     "lens": null,
     "characteristic": "Fl W 2s",
@@ -76,9 +78,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1927,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -89,9 +109,21 @@
     },
     {
       "year": 1941,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1941,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2021,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -132,6 +164,21 @@
       "label": "ARLHS World List of Lights USA995",
       "url": "https://wlol.arlhs.com/lighthouse/USA995.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Jordan Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1930",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Jordan Point",
+      "url": "https://archives.uslhs.org/places/jordan-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,31 +192,88 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1930",
+      "part": "wikidata:Q6276887",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:jordan-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8959",
+      "part": "wikidata:Q6276887",
+      "fields": [
+        "events",
         "structures"
       ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 20.0
+        },
+        {
+          "source": "uslhs",
+          "value": 10.06
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1941
         },
         {
+          "source": "uslhs",
+          "value": 1855
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
           "source": "wikidata",
+          "value": 1927
+        },
+        {
+          "source": "rowlett",
+          "value": 2021
+        },
+        {
+          "source": "uslhs",
           "value": 1927
         }
       ],
-      "note": "A source gives the light's service entry (1941) after its retirement (1927); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

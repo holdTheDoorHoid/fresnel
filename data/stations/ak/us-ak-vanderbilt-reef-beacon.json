@@ -1,7 +1,10 @@
 {
   "id": "us-ak-vanderbilt-reef-beacon",
   "name": "Vanderbilt Reef Beacon",
-  "other_names": [],
+  "other_names": [
+    "Vanderbilt Reef",
+    "Vanderbilt Reef Light"
+  ],
   "country": "US",
   "region": "AK",
   "county": null,
@@ -37,7 +40,7 @@
     "focal_height_m": 11.0,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -90,6 +93,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Vanderbilt_Reef_Beacon",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,11 +108,30 @@
       "fields": [
         "aton",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:vanderbilt-reef",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23860",
+      "part": "wikidata:Q28374640",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:58.59096,-135.01880",
+      "part": "wikidata:Q28374640",
+      "fields": [
+        "light"
       ]
     }
   ],

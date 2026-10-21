@@ -2,7 +2,9 @@
   "id": "us-ny-west-point",
   "name": "West Point Light",
   "other_names": [
-    "West Point Lighthouse"
+    "West Point Lighthouse",
+    "West Point",
+    "Hudson River Light 39"
   ],
   "country": "US",
   "region": "NY",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.3958,
-    "lon": -73.9508,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.395955,
+    "lon": -73.950828,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1853,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 6.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1853,
     "deactivated": 1946,
     "lens": null,
-    "characteristic": "QF G",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Q G",
+    "focal_height_m": 11.9,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,9 +78,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1853,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1946,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +135,21 @@
       "label": "ARLHS World List of Lights USA879",
       "url": "https://wlol.arlhs.com/lighthouse/USA879.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: West Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1847",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: West Point",
+      "url": "https://archives.uslhs.org/places/west-point-0",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +163,55 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1847",
+      "part": "wikidata:Q7986263",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:west-point-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-38005",
+      "part": "wikidata:Q7986263",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8837",
+      "part": "wikidata:Q7986263",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.39606,-73.95112",
+      "part": "wikidata:Q7986263",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

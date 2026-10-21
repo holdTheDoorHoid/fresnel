@@ -2,7 +2,10 @@
   "id": "us-ny-new-dorp",
   "name": "New Dorp Light",
   "other_names": [
-    "New Dorp Lighthouse"
+    "New Dorp Lighthouse",
+    "New Dorp",
+    "New Dorp (Swash Channel Range Rear (1))",
+    "Moravian Light"
   ],
   "country": "US",
   "region": "NY",
@@ -45,7 +48,9 @@
     {
       "register": "NRHP",
       "number": "73001260",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001260"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001260",
+      "listed": "1973-08-28",
+      "nomination": "https://catalog.archives.gov/id/75321377"
     },
     {
       "register": "New York City Landmark",
@@ -62,8 +67,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "private",
+    "note": "OpenStreetMap tags the structure access=private. LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -83,7 +88,7 @@
     {
       "year": 1856,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -95,13 +100,13 @@
     {
       "year": 1964,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +153,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/411861307",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: New Dorp",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=756",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75321377",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,6 +194,32 @@
       "part": "wikidata:Q1796230",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:756",
+      "part": "wikidata:Q1796230",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:new-dorp-swash-channel-range-rear-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73001260",
+      "part": "wikidata:Q1796230",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

@@ -3,7 +3,7 @@
   "name": "Blakistone Island Light",
   "other_names": [
     "Blakistone Island Lighthouse",
-    "Blackistone Lighthouse"
+    "Blakistone Island"
   ],
   "country": "US",
   "region": "MD",
@@ -12,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.207973,
-    "lon": -76.74484,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 38.20383,
+    "lon": -76.74067,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "wood",
+      "built": 1851,
+      "height_m": 12.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,7 +37,7 @@
     "deactivated": 1956,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -73,18 +73,30 @@
     {
       "year": 1851,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1932,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1956,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-md-blackistone",
+      "relation": "replica",
+      "name": "Blackistone Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rebuilt_Blackistone_Lighthouse_View_1_Sept_09.JPG",
@@ -123,16 +135,16 @@
       "kind": "register"
     },
     {
-      "label": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/way/718624721",
-      "kind": "osm"
+      "label": "US Lighthouse Society Digital Archive: Blakistone Island",
+      "url": "https://archives.uslhs.org/places/blakistone-island",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q4924664",
-      "part": "wikidata:Q4924664",
+      "part": "station",
       "fields": [
         "aton",
         "county",
@@ -141,21 +153,23 @@
         "light",
         "name",
         "photos",
-        "region",
-        "structures"
+        "region"
       ]
     },
     {
-      "source": "osm",
-      "key": "osm:way/718624721",
-      "part": "wikidata:Q4924664",
+      "source": "uslhs",
+      "key": "uslhs:15341",
+      "part": "uslhs:15341",
       "fields": [
-        "location"
+        "events",
+        "light",
+        "location",
+        "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

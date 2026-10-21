@@ -1,12 +1,19 @@
 {
   "id": "us-ny-plum-island",
-  "name": "Plum Island Light",
+  "name": "Plum Gut Lighthouse",
   "other_names": [
-    "Plum Island Lighthouse"
+    "Plum Island Light",
+    "Plum Island Lighthouse",
+    "Plum Island",
+    "Plum Gut",
+    "Plum Island, NY",
+    "Plum Island Light Station",
+    "Plum Gut light",
+    "Plum Gut Light"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Suffolk",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -16,36 +23,49 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Plum Island Light",
+      "type": null,
+      "material": "stone",
+      "built": 1869,
+      "height_m": 14.0,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Plum Gut Lighthouse",
       "type": null,
       "material": null,
-      "built": 1869,
+      "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": 1827,
-    "deactivated": null,
+    "deactivated": 1978,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 15.0,
+    "focal_height_m": 6.4,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "11000014",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000014"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000014",
+      "listed": "2011-02-11",
+      "nomination": "https://catalog.archives.gov/id/75325205"
     }
   ],
   "aton": {
@@ -58,7 +78,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +89,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +98,58 @@
     {
       "year": 1827,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1869,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "osm"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1978,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
   "related": [],
   "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plum_Island_Lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plum_Island_Lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plum_Island_Lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PlumislandNY.JPG",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PlumislandNY.JPG?width=640",
@@ -108,6 +161,16 @@
     }
   ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7205317",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Plum_Gut_Lighthouse",
+      "kind": "wikipedia"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q7205330",
@@ -137,9 +200,42 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/187401166",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Plum Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=743",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Plum Island, NY",
+      "url": "https://archives.uslhs.org/places/plum-island-ny",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325205",
+      "kind": "register"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7205317",
+      "part": "wikidata:Q7205317",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region"
+      ]
+    },
     {
       "source": "wikidata",
       "key": "wikidata:Q7205330",
@@ -147,11 +243,8 @@
       "fields": [
         "aton",
         "events",
-        "kind",
         "light",
-        "name",
         "photos",
-        "region",
         "registers"
       ]
     },
@@ -164,25 +257,104 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:743",
+      "part": "wikidata:Q7205330",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:plum-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21090",
+      "part": "wikidata:Q7205330",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-27695",
+      "part": "wikidata:Q7205330",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3427",
+      "part": "wikidata:Q7205330",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:11000014",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.17382,-72.21170",
+      "part": "wikidata:Q7205330",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:plum-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "first_year",
+      "field": "status",
       "values": [
         {
           "source": "wikidata",
-          "value": 1827
+          "value": "active"
         },
         {
-          "source": "osm",
-          "value": 1869
+          "source": "uslhs",
+          "value": "inactive"
         }
       ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 15.0
+        },
+        {
+          "source": "uslhs",
+          "value": 22.78
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

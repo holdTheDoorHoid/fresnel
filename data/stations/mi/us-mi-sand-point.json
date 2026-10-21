@@ -2,7 +2,12 @@
   "id": "us-mi-sand-point",
   "name": "Sand Point Light",
   "other_names": [
-    "Sand Point Lighthouse"
+    "Sand Point Lighthouse",
+    "Sand Point",
+    "Escanaba",
+    "Sand Point (Escanaba (1))",
+    "Escanaba Lighthouse",
+    "Escanaba Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1867,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1868,
+    "first_lit": 1867,
     "deactivated": 1939,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 13.7,
+    "range_nm": 11.0,
+    "fog_signal": "horn",
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "97001474",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97001474"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97001474",
+      "listed": "1997-12-01",
+      "nomination": "https://catalog.archives.gov/id/25339217"
     },
     {
       "register": "Michigan State Historic Site",
@@ -54,7 +61,7 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-21635",
     "arlhs": "USA726",
     "ccg_list_number": null,
     "nga": null
@@ -62,16 +69,16 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -87,16 +94,46 @@
       "from": "wikidata"
     },
     {
+      "year": 1867,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1868,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1868,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1868,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1939,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1997,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     },
     {
       "year": 1999,
@@ -148,6 +185,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/233580154",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sand Point (Escanaba)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=561",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sand Point (Escanaba)",
+      "url": "https://archives.uslhs.org/places/sand-point-escanaba",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339217",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,6 +231,60 @@
       "part": "wikidata:Q7415856",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:561",
+      "part": "wikidata:Q7415856",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:escanaba-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:sand-point-escanaba-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21635",
+      "part": "wikidata:Q7415856",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3333",
+      "part": "wikidata:Q7415856",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:97001474",
+      "part": "wikidata:Q7415856",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

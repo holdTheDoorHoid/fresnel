@@ -2,7 +2,8 @@
   "id": "us-ri-sabin-point",
   "name": "Sabin Point Light",
   "other_names": [
-    "Sabin Point Lighthouse"
+    "Sabin Point Lighthouse",
+    "Sabin Point"
   ],
   "country": "US",
   "region": "RI",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.761944,
-    "lon": -71.374167,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.762222,
+    "lon": -71.375833,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1968) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1872,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 11.0,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1872,
     "deactivated": 1968,
     "lens": null,
-    "characteristic": "F R",
+    "characteristic": "Q R",
     "focal_height_m": 11.0,
     "range_nm": 6.5,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,6 +77,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1956,
       "event": "automated",
       "note": null,
@@ -92,6 +105,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1969,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -127,6 +146,16 @@
       "label": "ARLHS World List of Lights USA715",
       "url": "https://wlol.arlhs.com/lighthouse/USA715.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Sabin Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1969",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sabin Point",
+      "url": "https://archives.uslhs.org/places/sabin-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,16 +168,56 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1969",
+      "part": "wikidata:Q7396104",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8905",
+      "part": "wikidata:Q7396104",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.76205,-71.37520",
+      "part": "wikidata:Q7396104",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 11.0
+        },
+        {
+          "source": "uslhs",
+          "value": 15.54
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

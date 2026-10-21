@@ -3,7 +3,13 @@
   "name": "Wisconsin Point Light",
   "other_names": [
     "Wisconsin Point Lighthouse",
-    "Superior Entry South Breakwater Light"
+    "Superior Entry South Breakwater Light",
+    "Superior Entry Breakwater",
+    "Superior Entry South Breakwater",
+    "Wisconsin Point",
+    "Superior Entry",
+    "Superior Entry Breakwater Lights",
+    "Superior Harbor Entry South Breakwater Light"
   ],
   "country": "US",
   "region": "WI",
@@ -24,12 +30,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1913,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -38,15 +44,17 @@
     "lens": null,
     "characteristic": "Fl G 5s",
     "focal_height_m": 21.3,
-    "range_nm": 15.0,
+    "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07000102",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000102"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000102",
+      "listed": "2007-03-01",
+      "nomination": "https://catalog.archives.gov/id/75325013"
     }
   ],
   "aton": {
@@ -59,11 +67,11 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1970"
   },
   "visit": {
     "grounds_open": null,
@@ -71,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +87,25 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1913,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1970,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +152,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1104395937",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Superior Entry Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=262",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Superior Entry (Wisconsin Point)",
+      "url": "https://archives.uslhs.org/places/superior-entry-wisconsin-point",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Superior Entry Breakwater Lights",
+      "url": "https://archives.uslhs.org/places/superior-entry-breakwater-lights",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325013",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,9 +203,77 @@
       "part": "wikidata:Q8027246",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:262",
+      "part": "wikidata:Q8027246",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:superior-entry-south-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15595",
+      "part": "wikidata:Q8027246",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3587",
+      "part": "wikidata:Q8027246",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:78603",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07000102",
+      "part": "wikidata:Q8027246",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.71016,-92.00636",
+      "part": "wikidata:Q8027246",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:superior-entry-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:wisconsin-point",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

@@ -4,7 +4,10 @@
   "other_names": [
     "Huntington Harbor Lighthouse",
     "Lloyd Harbor Lighthouse",
-    "Huntington Lighthouse"
+    "Huntington Lighthouse",
+    "Huntington Harbor",
+    "Lloyd Harbor",
+    "Lloyd's Harbor"
   ],
   "country": "US",
   "region": "NY",
@@ -34,20 +37,22 @@
     }
   ],
   "light": {
-    "first_lit": 1912,
+    "first_lit": 1857,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 12.0,
+    "focal_height_m": 12.8,
     "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89000501",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000501"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000501",
+      "listed": "1989-05-31",
+      "nomination": "https://catalog.archives.gov/id/75322164"
     }
   ],
   "aton": {
@@ -59,20 +64,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,15 +89,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1912,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1912,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1912,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +168,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/314428587",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Huntington Harbor (Lloyd Harbor)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=747",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lloyd's Harbor",
+      "url": "https://archives.uslhs.org/places/lloyds-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Huntington Harbor",
+      "url": "https://archives.uslhs.org/places/huntington-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75322164",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -151,7 +205,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -166,9 +219,98 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:747",
+      "part": "wikidata:Q5945338",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:huntington-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-26530",
+      "part": "wikidata:Q5945338",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:122282",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3416",
+      "part": "wikidata:Q5945338",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89000501",
+      "part": "wikidata:Q5945338",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.91075,-73.43111",
+      "part": "wikidata:Q5945338",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.91143,-73.43027",
+      "part": "wikidata:Q5945338",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:huntington-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1912
+        },
+        {
+          "source": "uslhs",
+          "value": 1857
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

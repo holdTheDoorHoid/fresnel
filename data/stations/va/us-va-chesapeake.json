@@ -2,7 +2,10 @@
   "id": "us-va-chesapeake",
   "name": "Chesapeake Light",
   "other_names": [
-    "Chesapeake Lighthouse"
+    "Chesapeake Lighthouse",
+    "Chesapeake",
+    "Chesapeake Lights (2)",
+    "Chesapeake Tower"
   ],
   "country": "US",
   "region": "VA",
@@ -11,10 +14,10 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 36.904639,
-    "lon": -75.712728,
+    "lat": 36.904638,
+    "lon": -75.712727,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -32,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1965,
+    "first_lit": 1930,
     "deactivated": 2016,
     "lens": null,
-    "characteristic": "Fl(2) W 10s",
-    "focal_height_m": 36.0,
-    "range_nm": 19.0,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 25.6,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,12 +66,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1930,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1965,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1965,
       "event": "first_lit",
@@ -120,6 +135,21 @@
       "label": "ARLHS World List of Lights USA168",
       "url": "https://wlol.arlhs.com/lighthouse/USA168.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Chesapeake",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1691",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Chesapeake",
+      "url": "https://archives.uslhs.org/places/chesapeake",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,16 +163,65 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1691",
+      "part": "wikidata:Q5092871",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:chesapeake",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-350",
+      "part": "wikidata:Q5092871",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3526",
+      "part": "station",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.90464,-75.71273",
+      "part": "wikidata:Q5092871",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:chesapeake-tower",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

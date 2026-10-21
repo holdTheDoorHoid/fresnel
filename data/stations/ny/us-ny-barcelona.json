@@ -2,7 +2,9 @@
   "id": "us-ny-barcelona",
   "name": "Barcelona Light",
   "other_names": [
-    "Barcelona Lighthouse"
+    "Barcelona Lighthouse",
+    "Barcelona",
+    "Portland Harbor"
   ],
   "country": "US",
   "region": "NY",
@@ -36,7 +38,7 @@
     "deactivated": 1859,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "72000825",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000825"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000825",
+      "listed": "1972-04-13",
+      "nomination": "https://catalog.archives.gov/id/75316751"
     }
   ],
   "aton": {
@@ -55,22 +59,22 @@
     "nga": null
   },
   "agency": "New York State Office of Parks, Recreation and Historic Preservation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +82,25 @@
     {
       "year": 1829,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1829,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1859,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1972,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525347836",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Barcelona (Portland Harbor)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=293",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Barcelona (Portland Harbor)",
+      "url": "https://archives.uslhs.org/places/barcelona-portland-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75316751",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,6 +194,49 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:293",
+      "part": "wikidata:Q4859853",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:barcelona",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3392",
+      "part": "wikidata:Q4859853",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:72000825",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:barcelona",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

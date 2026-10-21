@@ -4,7 +4,9 @@
   "other_names": [
     "Mark Abbott Memorial Lighthouse",
     "Santa Cruz Surfing Museum",
-    "Santa Cruz"
+    "Santa Cruz",
+    "Santa Cruz (Replica)",
+    "Santa Cruz Light"
   ],
   "country": "US",
   "region": "CA",
@@ -18,30 +20,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1869,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 18.2,
+    "focal_height_m": 18.3,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,7 +72,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1869,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1967,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -109,6 +130,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/479492430",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Santa Cruz",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=87",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Santa Cruz",
+      "url": "https://archives.uslhs.org/places/santa-cruz",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Santa Cruz (Replica)",
+      "url": "https://archives.uslhs.org/places/santa-cruz-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,6 +169,50 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:87",
+      "part": "wikidata:Q28374648",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-305",
+      "part": "wikidata:Q28374648",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4110",
+      "part": "wikidata:Q28374648",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8382",
+      "part": "wikidata:Q28374648",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:94358",
+      "part": "wikidata:Q28374648",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.95148,-122.02677",
+      "part": "wikidata:Q28374648",
+      "fields": [
+        "light"
       ]
     }
   ],

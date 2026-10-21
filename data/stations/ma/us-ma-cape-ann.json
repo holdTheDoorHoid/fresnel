@@ -1,12 +1,19 @@
 {
   "id": "us-ma-cape-ann",
-  "name": "Cape Ann Light",
+  "name": "Cape Ann Light Station",
   "other_names": [
-    "Cape Ann Light Station",
+    "Thacher Island North Light",
     "Cape Ann Lighthouse",
     "Twin Lights Historic District--Cape Ann Light Station",
+    "Cape Ann Light",
     "Cape Ann Light (Twin Lights)",
-    "Thacher Island North Light"
+    "Cape Ann",
+    "Thacher Island",
+    "Thacher Island South",
+    "Thacher Island North",
+    "Twin Lights Historic District-Cape Ann Light Station",
+    "Thatcher's Island Twin Lights",
+    "Cape Anne Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -15,14 +22,29 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 42.639153,
-    "lon": -70.574819,
+    "lat": 42.637122,
+    "lon": -70.575025,
     "precision": "exact",
     "from": "osm"
   },
   "status": "active",
   "status_note": null,
   "structures": [
+    {
+      "role": "tower",
+      "name": "Thacher Island North Light",
+      "type": null,
+      "material": null,
+      "built": 1771,
+      "height_m": 38.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 42.639169,
+        "lon": -70.574781
+      }
+    },
     {
       "role": "boathouse",
       "name": "Boathouse",
@@ -42,12 +64,16 @@
       "role": "tower",
       "name": "Cape Ann Light",
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1861,
       "height_m": 38.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs",
+      "location": {
+        "lat": 42.639153,
+        "lon": -70.574819
+      }
     },
     {
       "role": "other",
@@ -163,28 +189,27 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 42.637122,
-        "lon": -70.575025
-      }
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1861,
+    "first_lit": 1771,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
     "focal_height_m": 50.6,
     "range_nm": 17.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "71000355",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000355"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000355",
+      "listed": "1971-10-07",
+      "nhl": "2001-01-03",
+      "nomination": "https://catalog.archives.gov/id/63790218"
     },
     {
       "register": "National Historic Landmark",
@@ -198,28 +223,28 @@
     }
   ],
   "aton": {
-    "uscg_llnr": "1-295",
-    "arlhs": "USA105",
+    "uscg_llnr": "1-0305",
+    "arlhs": "USA1027",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1980"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -231,6 +256,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1771,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1843,
       "event": "built",
       "note": null,
@@ -239,7 +270,7 @@
     {
       "year": 1861,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -247,6 +278,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1861,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1876,
@@ -285,10 +322,28 @@
       "from": "osm"
     },
     {
-      "year": 1971,
-      "event": "nrhp_listed",
+      "year": 1939,
+      "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1971,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places and National Historic Landmark",
+      "from": "wikidata"
+    },
+    {
+      "year": 1980,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 2001,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -298,6 +353,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thacher_Island_twin_lighthouses.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thacher_Island_twin_lighthouses.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:Thacher_Island_twin_lighthouses.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thacher_Island_north_lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thacher_Island_north_lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thacher_Island_north_lighthouse.jpg",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -328,6 +392,21 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Cape_Ann_Light_Station",
       "kind": "commons"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q62075617",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_nord_de_Thacher_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA1027",
+      "url": "https://wlol.arlhs.com/lighthouse/USA1027.html",
+      "kind": "register"
     },
     {
       "label": "Wikidata",
@@ -423,6 +502,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/83415453",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Ann (Thacher Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=475",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Ann (Thacher Island)",
+      "url": "https://archives.uslhs.org/places/cape-ann-thacher-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790218",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -441,15 +540,23 @@
     },
     {
       "source": "wikidata",
-      "key": "wikidata:Q65951660",
-      "part": "wikidata:Q5034568",
+      "key": "wikidata:Q62075617",
+      "part": "wikidata:Q62075617",
       "fields": [
         "aton",
         "events",
-        "light",
         "name",
         "photos",
         "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q65951660",
+      "part": "wikidata:Q5034568",
+      "fields": [
+        "photos",
         "structures"
       ]
     },
@@ -472,7 +579,9 @@
       "source": "osm",
       "key": "osm:way/1034910511",
       "part": "osm:way/1034910511",
-      "fields": []
+      "fields": [
+        "location"
+      ]
     },
     {
       "source": "osm",
@@ -502,7 +611,6 @@
       "key": "osm:way/713671588",
       "part": "wikidata:Q5034568",
       "fields": [
-        "location",
         "structures"
       ]
     },
@@ -512,8 +620,7 @@
       "part": "wikidata:Q5034568",
       "fields": [
         "agency",
-        "events",
-        "light"
+        "events"
       ]
     },
     {
@@ -567,10 +674,107 @@
         "events",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:475",
+      "part": "wikidata:Q5034568",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:cape-ann-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:thacher-island-north-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-295",
+      "part": "wikidata:Q5034568",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-305",
+      "part": "wikidata:Q5034568",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2827",
+      "part": "wikidata:Q5034568",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:71000355",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.63686,-70.57492",
+      "part": "osm:way/1034910511",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:cape-ann-thacher-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,9 @@
   "id": "us-md-turkey-point",
   "name": "Turkey Point Light",
   "other_names": [
-    "Turkey Point Lighthouse"
+    "Turkey Point Lighthouse",
+    "Turkey Point",
+    "Turkey Point Light Station"
   ],
   "country": "US",
   "region": "MD",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1833,
       "height_m": 11.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1835,
+    "first_lit": 1832,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 39.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001421",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001421"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001421",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75324985"
     }
   ],
   "aton": {
@@ -54,31 +58,37 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Maryland Department of Natural Resources",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1833,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -94,15 +104,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2000,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/743256010",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Turkey Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=413",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland: Eastern Shore",
+      "url": "https://www.ibiblio.org/lighthouse/mde.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Turkey Point",
+      "url": "https://archives.uslhs.org/places/turkey-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324985",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,8 +210,68 @@
       "part": "wikidata:Q7855087",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:413",
+      "part": "wikidata:Q7855087",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mde:turkey-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8975",
+      "part": "wikidata:Q7855087",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2885",
+      "part": "wikidata:Q7855087",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001421",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.44988,-76.00842",
+      "part": "wikidata:Q7855087",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:turkey-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -189,11 +284,51 @@
           "value": "active"
         },
         {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
           "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 39.0
+        },
+        {
+          "source": "osm",
+          "value": 39.3
+        },
+        {
+          "source": "uslhs",
+          "value": 19.81
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1835
+        },
+        {
+          "source": "osm",
+          "value": 1835
+        },
+        {
+          "source": "uslhs",
+          "value": 1832
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

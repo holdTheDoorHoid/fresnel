@@ -2,7 +2,9 @@
   "id": "us-me-squirrel-point",
   "name": "Squirrel Point Light",
   "other_names": [
-    "Squirrel Point Lighthouse"
+    "Squirrel Point Lighthouse",
+    "Squirrel Point",
+    "Squirrel Point Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso R 6s",
+    "characteristic": "Iso W 6s",
     "focal_height_m": 7.6,
-    "range_nm": 7.0,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002281",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002281"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002281",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88685070"
     }
   ],
   "aton": {
@@ -58,11 +62,11 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1979"
+    "as_of": "1981"
   },
   "visit": {
     "grounds_open": null,
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +82,20 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1979,
@@ -88,9 +104,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1981,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +159,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1054422489",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Squirrel Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=496",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Squirrel Point",
+      "url": "https://archives.uslhs.org/places/squirrel-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685070",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,8 +204,62 @@
       "part": "wikidata:Q7582336",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:496",
+      "part": "wikidata:Q7582336",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:squirrel-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6100",
+      "part": "wikidata:Q7582336",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2940",
+      "part": "wikidata:Q7582336",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002281",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.81652,-69.80238",
+      "part": "wikidata:Q7582336",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:squirrel-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

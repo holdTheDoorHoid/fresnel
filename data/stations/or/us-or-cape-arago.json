@@ -2,7 +2,10 @@
   "id": "us-or-cape-arago",
   "name": "Cape Arago Lighthouse",
   "other_names": [
-    "Cape Arago Light"
+    "Cape Arago Light",
+    "Cape Arago",
+    "Cape Gregory",
+    "Cape Gregory Lighthouse"
   ],
   "country": "US",
   "region": "OR",
@@ -11,8 +14,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 43.341254,
-    "lon": -124.375277,
+    "lat": 43.340629,
+    "lon": -124.374449,
     "precision": "exact",
     "from": "osm"
   },
@@ -21,18 +24,33 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cape Arago Lighthouse",
       "type": "conical_masonry",
       "material": "brick",
       "built": 1866,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 43.341254,
+        "lon": -124.375277
+      }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1938,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1934,
+    "first_lit": 1866,
     "deactivated": 2006,
     "lens": null,
     "characteristic": "Fl(3) W 20s",
@@ -45,7 +63,9 @@
     {
       "register": "NRHP",
       "number": "73002338",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002338"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002338",
+      "listed": "1993-05-13",
+      "nomination": "https://catalog.archives.gov/id/77847807"
     }
   ],
   "aton": {
@@ -58,7 +78,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +90,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +100,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1866,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1866,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1934,
@@ -96,13 +134,13 @@
     {
       "year": 1993,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 2006,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -147,8 +185,58 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041798",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041799",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041800",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041801",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041802",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11360041803",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/405049966",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Arago",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=129",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Arago (Cape Gregory)",
+      "url": "https://archives.uslhs.org/places/cape-arago-cape-gregory",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77847807",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,31 +259,95 @@
     },
     {
       "source": "osm",
-      "key": "osm:way/405049966",
-      "part": "wikidata:Q5034573",
+      "key": "osm:node/11360041798",
+      "part": "osm:node/11360041798",
       "fields": [
         "events",
         "location",
         "structures"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1934
-        },
-        {
-          "source": "osm",
-          "value": 1938
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "source": "osm",
+      "key": "osm:node/11360041799",
+      "part": "osm:node/11360041798",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/11360041800",
+      "part": "osm:node/11360041798",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/11360041801",
+      "part": "osm:node/11360041798",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/11360041802",
+      "part": "osm:node/11360041798",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/11360041803",
+      "part": "osm:node/11360041798",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/405049966",
+      "part": "wikidata:Q5034573",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:129",
+      "part": "wikidata:Q5034573",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:cape-arago-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3460",
+      "part": "wikidata:Q5034573",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73002338",
+      "part": "wikidata:Q5034573",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:cape-arago",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

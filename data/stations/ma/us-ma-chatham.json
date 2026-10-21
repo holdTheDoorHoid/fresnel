@@ -3,7 +3,10 @@
   "name": "Chatham Light",
   "other_names": [
     "Chatham Lighthouse",
-    "Twin Lights"
+    "Twin Lights",
+    "Chatham",
+    "Chatham Light Station",
+    "Chatham Inlet Bar Guide Light"
   ],
   "country": "US",
   "region": "MA",
@@ -55,20 +58,22 @@
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1808,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s",
+    "characteristic": "Fl(2) W 10s",
     "focal_height_m": 24.4,
-    "range_nm": 24.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001501",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001501"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001501",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789157"
     }
   ],
   "aton": {
@@ -78,22 +83,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1982"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -105,9 +110,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1808,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -117,9 +134,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1982,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -181,6 +204,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713402256",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Chatham",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=487",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Chatham",
+      "url": "https://archives.uslhs.org/places/chatham",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789157",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -193,7 +236,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -231,8 +273,71 @@
       "source": "osm",
       "key": "osm:way/713402256",
       "part": "wikidata:Q5087672",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:487",
+      "part": "wikidata:Q5087672",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:chatham-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-13305",
+      "part": "wikidata:Q5087672",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-525",
+      "part": "wikidata:Q5087672",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2830",
+      "part": "wikidata:Q5087672",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001501",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.67146,-69.95009",
+      "part": "wikidata:Q5087672",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:chatham",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

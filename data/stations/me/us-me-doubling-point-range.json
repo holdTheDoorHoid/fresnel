@@ -8,7 +8,11 @@
     "Doubling Point Range Light (north)",
     "Kennebec River Light Station",
     "Double Point Front Range Light",
-    "Double Point Rear Range Light"
+    "Double Point Rear Range Light",
+    "Doubling Point Range",
+    "Doubling Point Range Front",
+    "Doubling Point Range Rear",
+    "Kennebec River"
   ],
   "country": "US",
   "region": "ME",
@@ -53,20 +57,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1898,
     "deactivated": null,
     "lens": null,
     "characteristic": "Q W",
-    "focal_height_m": 5.4,
-    "range_nm": null,
+    "focal_height_m": 5.5,
+    "range_nm": 0.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002263",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002263"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002263",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88685066"
     }
   ],
   "aton": {
@@ -79,11 +85,11 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1988"
+    "as_of": "1990"
   },
   "visit": {
     "grounds_open": null,
@@ -91,7 +97,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -99,8 +105,20 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1988,
@@ -111,8 +129,14 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -201,6 +225,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/763998274",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Doubling Point Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=498",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Doubling Point Range (Kennebec River)",
+      "url": "https://archives.uslhs.org/places/doubling-point-range-kennebec-river",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685066",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -246,7 +290,6 @@
       "key": "osm:node/7137499819",
       "part": "wikidata:Q108937084",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -263,6 +306,81 @@
       "key": "osm:way/763998274",
       "part": "wikidata:Q108937084",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:498",
+      "part": "wikidata:Q108937084",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:doubling-point-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:doubling-point-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6135",
+      "part": "wikidata:Q108937084",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6140",
+      "part": "wikidata:Q108937599",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2901",
+      "part": "wikidata:Q108937084",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002263",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.88286,-69.79565",
+      "part": "wikidata:Q108937084",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.88477,-69.79567",
+      "part": "wikidata:Q108937599",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:doubling-point-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

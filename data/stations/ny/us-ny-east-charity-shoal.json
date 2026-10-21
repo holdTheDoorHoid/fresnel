@@ -2,7 +2,9 @@
   "id": "us-ny-east-charity-shoal",
   "name": "East Charity Shoal Light",
   "other_names": [
-    "East Charity Shoal Lighthouse"
+    "East Charity Shoal Lighthouse",
+    "East Charity Shoal",
+    "East Charity Shoals"
   ],
   "country": "US",
   "region": "NY",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1877,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1929,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 16.0,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 17.1,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "08000231",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000231"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000231",
+      "listed": "2008-03-27",
+      "nomination": "https://catalog.archives.gov/id/75325039"
     }
   ],
   "aton": {
@@ -57,19 +61,19 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1939"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -78,8 +82,20 @@
     {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1929,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1935,
@@ -88,9 +104,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1935,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1939,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 2008,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5149457326",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: East Charity Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=316",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: East Charity Shoals",
+      "url": "https://archives.uslhs.org/places/east-charity-shoals",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325039",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -144,7 +192,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -159,9 +206,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:316",
+      "part": "wikidata:Q5328070",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:east-charity-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-1760",
+      "part": "wikidata:Q5328070",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3405",
+      "part": "wikidata:Q5328070",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:08000231",
+      "part": "wikidata:Q5328070",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1929
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -1,12 +1,14 @@
 {
   "id": "us-va-old-coast-guard-station-museum",
-  "name": "Old Coast Guard Station Museum",
+  "name": "U.S. Coast Guard Station",
   "other_names": [
-    "Virginia Beach Surf & Rescue Museum"
+    "Old Coast Guard Station Museum",
+    "Virginia Beach Surf & Rescue Museum",
+    "Seatack Life Saving Station"
   ],
   "country": "US",
   "region": "VA",
-  "county": null,
+  "county": "Virginia Beach",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -36,7 +38,9 @@
     {
       "register": "NRHP",
       "number": "79003304",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003304"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79003304",
+      "listed": "1979-07-11",
+      "nomination": "https://catalog.archives.gov/id/41684003"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -74,7 +78,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -106,6 +110,11 @@
       "label": "Official website",
       "url": "https://vbsurfrescuemuseum.org/",
       "kind": "website"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41684003",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -117,15 +126,25 @@
         "events",
         "kind",
         "location",
-        "name",
         "photos",
         "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79003304",
+      "part": "wikidata:Q7083708",
+      "fields": [
+        "county",
+        "events",
+        "name",
         "registers"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

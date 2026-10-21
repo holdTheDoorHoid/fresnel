@@ -5,7 +5,12 @@
     "Cape Neddick Lighthouse",
     "Nubble Light",
     "Nubble Lighthouse",
-    "Cape Neddick \"Nubble\" Lighthouse"
+    "Cape Neddick \"Nubble\" Lighthouse",
+    "Cape Neddick",
+    "Nubble",
+    "\"Nubble Light\"",
+    "Cape Neddick Light Station",
+    "The Nubble Light"
   ],
   "country": "US",
   "region": "ME",
@@ -26,29 +31,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1879,
       "height_m": 12.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1879,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Iso R 6s",
     "focal_height_m": 26.8,
     "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "85000844",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85000844"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85000844",
+      "listed": "1985-04-16",
+      "nomination": "https://catalog.archives.gov/id/88687654"
     }
   ],
   "aton": {
@@ -57,23 +69,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "TOWN OF YORK",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1987"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,19 +93,31 @@
     {
       "year": 1879,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1879,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1879,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1985,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -145,6 +169,26 @@
       "label": "Website",
       "url": "http://nubblelight.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cape Neddick (Nubble)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=548",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Neddick",
+      "url": "https://archives.uslhs.org/places/cape-neddick",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687654",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,8 +213,68 @@
       "key": "osm:way/177925803",
       "part": "wikidata:Q1034459",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:548",
+      "part": "wikidata:Q1034459",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:cape-neddick",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-125",
+      "part": "wikidata:Q1034459",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2895",
+      "part": "wikidata:Q1034459",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:85000844",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.16523,-70.59107",
+      "part": "wikidata:Q1034459",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:cape-neddick-nubble",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

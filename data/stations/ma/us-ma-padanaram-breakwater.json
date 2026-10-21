@@ -1,7 +1,9 @@
 {
   "id": "us-ma-padanaram-breakwater",
   "name": "Padanaram Breakwater",
-  "other_names": [],
+  "other_names": [
+    "Padanaram Breakwater Light 8"
+  ],
   "country": "US",
   "region": "MA",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 7.6,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-16765",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -88,6 +90,22 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-16765",
+      "part": "osm:node/358260354",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.57412,-70.93927",
+      "part": "osm:node/358260354",
+      "fields": [
+        "light"
       ]
     }
   ],

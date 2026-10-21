@@ -1,7 +1,11 @@
 {
   "id": "us-md-lightship-chesapeake",
   "name": "United States lightship Chesapeake",
-  "other_names": [],
+  "other_names": [
+    "Chesapeake",
+    "Lightship Chesapeake LV 116/WAL 538",
+    "CHESAPEAKE (lightship)"
+  ],
   "country": "US",
   "region": "MD",
   "county": "Baltimore",
@@ -9,10 +13,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 39.2857,
-    "lon": -76.6088,
+    "lat": 39.28567,
+    "lon": -76.60879,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -31,7 +35,10 @@
     {
       "register": "NRHP",
       "number": "80000349",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000349"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000349",
+      "listed": "1980-08-01",
+      "nhl": "1989-12-20",
+      "nomination": "https://catalog.archives.gov/id/106776476"
     },
     {
       "register": "National Historic Landmark",
@@ -75,8 +82,14 @@
     {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -112,6 +125,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Chesapeake_%28ship%2C_1930%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Chesapeake LV 116/WAL 538",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=420",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106776476",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -124,17 +147,33 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:420",
+      "part": "wikidata:Q7892539",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000349",
+      "part": "wikidata:Q7892539",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

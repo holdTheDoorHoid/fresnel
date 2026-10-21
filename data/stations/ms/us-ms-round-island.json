@@ -3,7 +3,8 @@
   "name": "Round Island Light",
   "other_names": [
     "Round Island Lighthouse",
-    "Round Island Light (Mississippi)"
+    "Round Island Light (Mississippi)",
+    "Round Island"
   ],
   "country": "US",
   "region": "MS",
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1859,
+    "first_lit": 1833,
     "deactivated": 1949,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl W 2.5s",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "86002815",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86002815"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86002815",
+      "listed": "1986-10-09",
+      "nomination": "https://catalog.archives.gov/id/73891431"
     },
     {
       "register": "Mississippi Landmark",
@@ -76,16 +79,34 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1859,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1859,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1944,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1949,
@@ -96,7 +117,7 @@
     {
       "year": 1986,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -153,6 +174,21 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Round_Island_Light%2C_Mississippi",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Round Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=339",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/73891431",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -180,9 +216,64 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:339",
+      "part": "wikidata:Q7371062",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ms:round-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:86002815",
+      "part": "wikidata:Q7371062",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.29242,-88.58726",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ms:round-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1949
+        },
+        {
+          "source": "rowlett",
+          "value": 1944
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

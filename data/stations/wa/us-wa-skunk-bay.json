@@ -2,7 +2,8 @@
   "id": "us-wa-skunk-bay",
   "name": "Skunk Bay Lighthouse",
   "other_names": [
-    "Skunk Bay Light"
+    "Skunk Bay Light",
+    "Skunk Bay"
   ],
   "country": "US",
   "region": "WA",
@@ -34,12 +35,17 @@
   "light": {
     "first_lit": null,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F R",
     "focal_height_m": 64.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,8 +57,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,11 +70,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1965,
       "event": "built",
@@ -99,6 +111,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5237331907",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Skunk Bay",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=111",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Skunk Bay",
+      "url": "https://archives.uslhs.org/places/skunk-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -123,6 +150,54 @@
       "part": "wikidata:Q32857564",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:111",
+      "part": "wikidata:Q32857564",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:skunk-bay",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16545",
+      "part": "wikidata:Q32857564",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8988",
+      "part": "wikidata:Q32857564",
+      "fields": [
+        "access",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.91925,-122.56981",
+      "part": "wikidata:Q32857564",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:skunk-bay",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

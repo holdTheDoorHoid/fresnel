@@ -1,7 +1,10 @@
 {
   "id": "us-wa-gig-harbor",
   "name": "Gig Harbor Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Gig Harbor",
+    "Gig Harbor Light"
+  ],
   "country": "US",
   "region": "WA",
   "county": null,
@@ -37,11 +40,11 @@
     "focal_height_m": 3.9,
     "range_nm": 3.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-17221",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/483347164",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Gig Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=857",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,10 +97,25 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:857",
+      "part": "osm:node/483347164",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-17221",
+      "part": "osm:node/483347164",
+      "fields": [
+        "aton",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

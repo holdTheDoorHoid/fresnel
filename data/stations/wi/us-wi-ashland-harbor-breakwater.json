@@ -2,7 +2,8 @@
   "id": "us-wi-ashland-harbor-breakwater",
   "name": "Ashland Harbor Breakwater Light",
   "other_names": [
-    "Ashland Harbor Breakwater Lighthouse"
+    "Ashland Harbor Breakwater Lighthouse",
+    "Ashland Breakwater"
   ],
   "country": "US",
   "region": "WI",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "concrete",
       "built": 1915,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1915,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 18.0,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07000103",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000103"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000103",
+      "listed": "2007-03-01",
+      "nomination": "https://catalog.archives.gov/id/75324943"
     }
   ],
   "aton": {
@@ -55,30 +58,36 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1980"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1915,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -88,9 +97,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1915,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1980,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1313800147",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ashland Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=261",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ashland Breakwater",
+      "url": "https://archives.uslhs.org/places/ashland-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324943",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +190,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -166,9 +206,81 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:261",
+      "part": "wikidata:Q4805246",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:ashland-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15310",
+      "part": "wikidata:Q4805246",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3559",
+      "part": "wikidata:Q4805246",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07000103",
+      "part": "wikidata:Q4805246",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:ashland-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1915
+        },
+        {
+          "source": "osm",
+          "value": 1915
+        },
+        {
+          "source": "uslhs",
+          "value": 1913
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,13 @@
   "name": "Finns Point Range Light",
   "other_names": [
     "Finn's Point Rear Range Light",
-    "Finns Point Lighthouse"
+    "Finns Point Lighthouse",
+    "Finns Point Range",
+    "Finns Point Range Rear",
+    "Fort Mott, Supawna Meadows",
+    "Finns Point Range Front",
+    "Finn's Point Light",
+    "Finn's Point Rear Range"
   ],
   "country": "US",
   "region": "NJ",
@@ -12,24 +18,54 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 39.6169,
-    "lon": -75.5347,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.58883,
+    "lon": -75.5365,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
     {
+      "role": "front_range",
+      "name": "Finns Point Range Front",
+      "type": null,
+      "material": null,
+      "built": 1877,
+      "height_m": 8.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
       "role": "rear_range",
-      "name": null,
+      "name": "Finns Point Range Rear",
+      "type": "skeletal",
+      "material": "iron",
+      "built": 1877,
+      "height_m": 29.0,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.6095,
+        "lon": -75.534
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Finn's Point Rear Range Light",
       "type": null,
       "material": null,
       "built": 1877,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 39.61711,
+        "lon": -75.5339
+      }
     }
   ],
   "light": {
@@ -37,7 +73,7 @@
     "deactivated": 1950,
     "lens": null,
     "characteristic": "Oc W 3s",
-    "focal_height_m": null,
+    "focal_height_m": 32.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -46,7 +82,8 @@
     {
       "register": "NRHP",
       "number": "78001792",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001792"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001792",
+      "listed": "1978-08-30"
     }
   ],
   "aton": {
@@ -58,20 +95,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,25 +116,25 @@
     {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1877,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1950,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -168,6 +205,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1302061684",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Finns Point Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=374",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Finns Point Range Rear",
+      "url": "https://archives.uslhs.org/places/finns-point-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Finns Point Range Front",
+      "url": "https://archives.uslhs.org/places/finns-point-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -193,7 +250,6 @@
         "aton",
         "events",
         "light",
-        "location",
         "photos",
         "registers",
         "structures"
@@ -210,10 +266,64 @@
       "key": "osm:way/1302061684",
       "part": "station",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:374",
+      "part": "wikidata:Q5450597",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:finns-point-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3379",
+      "part": "uslhs:3379",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8778",
+      "part": "uslhs:8778",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78001792",
+      "part": "wikidata:Q5450597",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:finn-s-point-rear-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

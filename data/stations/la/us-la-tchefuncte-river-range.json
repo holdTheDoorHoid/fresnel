@@ -4,7 +4,11 @@
   "other_names": [
     "Tchefuncte River Range Front Light",
     "Tchefuncte River Range Rear Light",
-    "Madisonville lighthouse"
+    "Madisonville lighthouse",
+    "Tchefuncte River",
+    "Tchefuncte River Range Rear",
+    "Madisonville",
+    "Town of Madisonville Tchefuncte River"
   ],
   "country": "US",
   "region": "LA",
@@ -25,12 +29,12 @@
       "role": "rear_range",
       "name": "Tchefuncte River Range Lights",
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1838,
-      "height_m": null,
+      "height_m": 13.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "front_range",
@@ -60,20 +64,22 @@
     }
   ],
   "light": {
-    "first_lit": 1868,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q W",
+    "characteristic": "Fl W 2.5s",
     "focal_height_m": 7.6,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "86001684",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86001684"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86001684",
+      "listed": "1986-07-14",
+      "nomination": "https://catalog.archives.gov/id/73974888"
     }
   ],
   "aton": {
@@ -86,7 +92,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -97,8 +103,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -108,6 +114,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1868,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1868,
@@ -124,7 +142,7 @@
     {
       "year": 1986,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -186,6 +204,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4065659413",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tchefuncte River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=808",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tchefuncte River",
+      "url": "https://archives.uslhs.org/places/tchefuncte-river",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/73974888",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -209,7 +247,6 @@
       "fields": [
         "aton",
         "events",
-        "light",
         "photos",
         "registers",
         "structures"
@@ -230,6 +267,71 @@
       "key": "osm:node/4065659413",
       "part": "wikidata:Q7690644",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:808",
+      "part": "wikidata:Q7690644",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:tchefuncte-river-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-11320",
+      "part": "wikidata:Q108764507",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-11322",
+      "part": "wikidata:Q66557137",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-11325",
+      "part": "wikidata:Q7690644",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:14192",
+      "part": "wikidata:Q7690644",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:86001684",
+      "part": "wikidata:Q66557137",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:la:tchefuncte-river",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

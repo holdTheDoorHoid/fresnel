@@ -1,7 +1,9 @@
 {
   "id": "us-ri-castle-island",
   "name": "Castle Island",
-  "other_names": [],
+  "other_names": [
+    "Castle Island Light 2"
+  ],
   "country": "US",
   "region": "RI",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 7.9,
+    "range_nm": 3.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-18180",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -89,6 +91,22 @@
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18180",
+      "part": "osm:node/6728049281",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.65383,-71.28623",
+      "part": "osm:node/6728049281",
+      "fields": [
+        "light"
       ]
     }
   ],

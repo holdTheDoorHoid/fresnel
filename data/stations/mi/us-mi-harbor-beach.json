@@ -3,7 +3,12 @@
   "name": "Harbor Beach Light",
   "other_names": [
     "Harbor Beach Lighthouse",
-    "Harbor Beach LIGHT"
+    "Harbor Beach LIGHT",
+    "Harbor Beach",
+    "Sand Beach",
+    "Sand Beach Lighthouse",
+    "Harbor Beach Light 2",
+    "Harbor Beach South Pier Light 1"
   ],
   "country": "US",
   "region": "MI",
@@ -23,30 +28,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "cast_iron",
       "built": 1858,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1885,
+    "first_lit": 1858,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 6s",
-    "focal_height_m": 16.0,
-    "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "osm"
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 11.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83000850",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000850"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000850",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891166"
     }
   ],
   "aton": {
@@ -59,7 +66,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,11 +74,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +90,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1885,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -97,7 +116,7 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +163,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1332500898",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Harbor Beach",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=170",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Harbor Beach",
+      "url": "https://archives.uslhs.org/places/harbor-beach",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891166",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +195,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -171,8 +209,91 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:170",
+      "part": "wikidata:Q5654559",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:harbor-beach-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10130",
+      "part": "wikidata:Q5654559",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10133",
+      "part": "wikidata:Q5654559",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10140",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2980",
+      "part": "wikidata:Q5654559",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000850",
+      "part": "wikidata:Q5654559",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.84381,-82.63110",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.84548,-82.63176",
+      "part": "wikidata:Q5654559",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.84562,-82.63121",
+      "part": "wikidata:Q5654559",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:harbor-beach",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,6 +311,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1885
+        },
+        {
+          "source": "osm",
+          "value": 1885
+        },
+        {
+          "source": "uslhs",
+          "value": 1858
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

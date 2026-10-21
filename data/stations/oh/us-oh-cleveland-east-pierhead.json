@@ -2,7 +2,12 @@
   "id": "us-oh-cleveland-east-pierhead",
   "name": "Cleveland East Pierhead Light",
   "other_names": [
-    "Cleveland Harbor MAIN ENTRANCE LIGHT 1"
+    "Cleveland Harbor MAIN ENTRANCE LIGHT 1",
+    "Cleveland Harbor East Breakwater",
+    "Cleveland Harbor Main Entrance",
+    "East Pierhead",
+    "Cleveland East Pierhead Beacon",
+    "Cleveland Harbor Main Entrance Light 1"
   ],
   "country": "US",
   "region": "OH",
@@ -23,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1911,
       "height_m": 9.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1831,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso G 6s",
-    "focal_height_m": 12.0,
-    "range_nm": 7.0,
+    "focal_height_m": 11.9,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001855",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001855"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001855",
+      "listed": "1991-12-19",
+      "nomination": "https://catalog.archives.gov/id/71984690"
     }
   ],
   "aton": {
@@ -57,8 +64,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -69,12 +76,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1910,
       "event": "built",
@@ -84,13 +103,13 @@
     {
       "year": 1911,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +157,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/414659021",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cleveland Harbor East Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=283",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleveland East Pierhead Beacon",
+      "url": "https://archives.uslhs.org/places/cleveland-east-pierhead-beacon",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71984690",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,13 +202,95 @@
       "part": "wikidata:Q33320700",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:283",
+      "part": "wikidata:Q33320700",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:cleveland-harbor-main-entrance",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4165",
+      "part": "wikidata:Q33320700",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9850",
+      "part": "wikidata:Q33320700",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001855",
+      "part": "wikidata:Q33320700",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.51015,-81.71548",
+      "part": "wikidata:Q33320700",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1911
+        },
+        {
+          "source": "osm",
+          "value": 1910
+        },
+        {
+          "source": "uslhs",
+          "value": 1831
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

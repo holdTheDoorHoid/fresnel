@@ -3,7 +3,8 @@
   "name": "Saugerties Light",
   "other_names": [
     "Saugerties lighthouse",
-    "Saugerties Lighthouse"
+    "Saugerties Lighthouse",
+    "Saugerties"
   ],
   "country": "US",
   "region": "NY",
@@ -23,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1869,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1990,
+    "first_lit": 1836,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc W 4s",
-    "focal_height_m": 12.5,
-    "range_nm": 6.0,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 8.5,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79001642",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001642"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001642",
+      "listed": "1979-05-29",
+      "nomination": "https://catalog.archives.gov/id/75315272"
     }
   ],
   "aton": {
@@ -58,40 +61,53 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": "https://www.saugertieslighthouse.com/accommodations",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a bed and breakfast. Confirm availability and rules with the operator."
+  },
   "events": [
+    {
+      "year": 1836,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1869,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1954,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -174,6 +190,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/264468493",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Saugerties",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=678",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saugerties",
+      "url": "https://archives.uslhs.org/places/saugerties",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75315272",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/new-york",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -186,7 +227,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -231,8 +271,80 @@
       "key": "osm:way/264468493",
       "part": "wikidata:Q7427213",
       "fields": [
-        "agency",
+        "agency"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:678",
+      "part": "wikidata:Q7427213",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:saugerties-2",
+      "part": "station",
+      "fields": [
+        "events",
         "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-38375",
+      "part": "wikidata:Q7427213",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3434",
+      "part": "wikidata:Q7427213",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79001642",
+      "part": "wikidata:Q7427213",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.07128,-73.92947",
+      "part": "wikidata:Q7427213",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.07199,-73.92966",
+      "part": "wikidata:Q7427213",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:saugerties",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ny:saugerties-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -247,6 +359,10 @@
         {
           "source": "osm",
           "value": 1869
+        },
+        {
+          "source": "uslhs",
+          "value": 1836
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

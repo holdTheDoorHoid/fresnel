@@ -4,7 +4,11 @@
   "other_names": [
     "Sturgeon Bay Canal North Pierhead Lighthouse",
     "North Pierhead Light",
-    "Sturgeon Bay Ship Canal NORTH PIERHEAD LIGHT"
+    "Sturgeon Bay Ship Canal NORTH PIERHEAD LIGHT",
+    "Sturgeon Bay Ship Canal Pierhead",
+    "Sturgeon Bay Ship Canal North Pierhead",
+    "Sturgeon Bay Ship Canal North Pierhead Light",
+    "Sturgeon Bay Ship Canal South Pierhead Light"
   ],
   "country": "US",
   "region": "WI",
@@ -34,14 +38,14 @@
     }
   ],
   "light": {
-    "first_lit": 1903,
+    "first_lit": 1882,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 2.5s",
-    "focal_height_m": 12.0,
-    "range_nm": 11.0,
+    "focal_height_m": 12.2,
+    "range_nm": 9.6,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,12 +57,12 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1972"
   },
   "visit": {
     "grounds_open": null,
@@ -78,10 +82,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1882,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1903,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1972,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -127,6 +155,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/838490533",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sturgeon Bay Ship Canal Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=256",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: STURGEON BAY SHIP CANAL NORTH PIERHEAD",
+      "url": "https://archives.uslhs.org/places/sturgeon-bay-ship-canal-north-pierhead",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,7 +182,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -152,12 +194,75 @@
       "part": "wikidata:Q7628988",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:256",
+      "part": "wikidata:Q7628988",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:sturgeon-bay-ship-canal-north-pierhead-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21005",
+      "part": "wikidata:Q7628988",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21025",
+      "part": "wikidata:Q7628988",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3586",
+      "part": "wikidata:Q7628988",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.79202,-87.30953",
+      "part": "wikidata:Q7628988",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1903
+        },
+        {
+          "source": "uslhs",
+          "value": 1882
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

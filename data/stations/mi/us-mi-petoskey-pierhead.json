@@ -1,0 +1,129 @@
+{
+  "id": "us-mi-petoskey-pierhead",
+  "name": "Petoskey Pierhead",
+  "other_names": [
+    "Petoskey Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 45.38017,
+    "lon": -84.961539,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 13.4,
+    "range_nm": 3.5,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-17915",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/509933694",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Petoskey Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=202",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:way/509933694",
+      "part": "lighthousefriends:202",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:202",
+      "part": "lighthousefriends:202",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17915",
+      "part": "lighthousefriends:202",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.38009,-84.96149",
+      "part": "lighthousefriends:202",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

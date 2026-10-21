@@ -3,7 +3,8 @@
   "name": "South Bass Island Light",
   "other_names": [
     "South Bass Island Lighthouse",
-    "Old South Bass Island Lighthouse"
+    "Old South Bass Island Lighthouse",
+    "South Bass Island"
   ],
   "country": "US",
   "region": "OH",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1895,
       "height_m": 21.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": 1962,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 22.5,
-    "range_nm": 11.0,
+    "focal_height_m": 29.0,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90000473",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000473"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000473",
+      "listed": "1990-04-05",
+      "nomination": "https://catalog.archives.gov/id/71985990"
     }
   ],
   "aton": {
@@ -59,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,11 +70,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,20 +87,32 @@
     },
     {
       "year": 1897,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1897,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1897,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1962,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +164,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1095291493",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: South Bass Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=276",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Bass Island",
+      "url": "https://archives.uslhs.org/places/south-bass-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71985990",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -182,9 +217,89 @@
       "key": "osm:way/1095291493",
       "part": "wikidata:Q429869",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:276",
+      "part": "wikidata:Q429869",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:south-bass-island-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:south-bass-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5530",
+      "part": "wikidata:Q429869",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3457",
+      "part": "wikidata:Q429869",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000473",
+      "part": "wikidata:Q429869",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.62892,-82.84153",
+      "part": "wikidata:Q429869",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:south-bass-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 22.5
+        },
+        {
+          "source": "uslhs",
+          "value": 18.44
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

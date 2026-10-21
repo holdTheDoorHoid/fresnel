@@ -2,7 +2,8 @@
   "id": "us-wa-browns-point",
   "name": "Browns Point Light",
   "other_names": [
-    "Browns Point Lighthouse"
+    "Browns Point Lighthouse",
+    "Browns Point"
   ],
   "country": "US",
   "region": "WA",
@@ -23,12 +24,12 @@
       "role": "tower",
       "name": "Browns Point Light",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1887,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "dwelling",
@@ -88,20 +89,22 @@
     }
   ],
   "light": {
-    "first_lit": 1933,
+    "first_lit": 1887,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl 5s",
+    "characteristic": "Fl W 5s",
     "focal_height_m": 11.6,
-    "range_nm": 12.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89000208",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000208"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000208",
+      "listed": "1989-03-29",
+      "nomination": "https://catalog.archives.gov/id/75613083"
     }
   ],
   "aton": {
@@ -113,29 +116,42 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "https://www.pointsnortheast.org/content.aspx?page_id=22&club_id=668809&module_id=667038",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a stay as a keeper for a fee. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1887,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1903,
@@ -146,7 +162,7 @@
     {
       "year": 1933,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -158,7 +174,7 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -230,6 +246,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/619855168",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Browns Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=121",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Browns Point",
+      "url": "https://archives.uslhs.org/places/browns-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75613083",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/washington",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -242,7 +283,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -256,7 +296,6 @@
       "part": "wikidata:Q432291",
       "fields": [
         "events",
-        "light",
         "location"
       ]
     },
@@ -291,6 +330,72 @@
       "part": "osm:way/619855168",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:121",
+      "part": "wikidata:Q432291",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:browns-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-17090",
+      "part": "wikidata:Q432291",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3540",
+      "part": "wikidata:Q432291",
+      "fields": [
+        "access",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89000208",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.30591,-122.44426",
+      "part": "wikidata:Q432291",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:browns-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:wa:browns-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

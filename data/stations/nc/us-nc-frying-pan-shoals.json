@@ -4,7 +4,8 @@
   "other_names": [
     "Frying Pan Shoals Lighthouse",
     "Frying Pan Shoals Light Station",
-    "Frying Pan Tower"
+    "Frying Pan Tower",
+    "Frying Pan Shoals"
   ],
   "country": "US",
   "region": "NC",
@@ -13,21 +14,21 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 33.483333,
-    "lon": -77.583333,
+    "lat": 33.484167,
+    "lon": -77.59194,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "texas_tower",
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "steel",
+      "built": 1964,
+      "height_m": 36.0,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -35,17 +36,17 @@
   ],
   "light": {
     "first_lit": 1964,
-    "deactivated": 2003,
+    "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 36.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-0820",
     "arlhs": "USA313",
     "ccg_list_number": null,
     "nga": null
@@ -53,8 +54,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -65,22 +66,35 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "http://www.fptower.org",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1964,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2003,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -127,6 +141,26 @@
       "label": "ARLHS World List of Lights USA313",
       "url": "https://wlol.arlhs.com/lighthouse/USA313.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Frying Pan Shoals",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1632",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Frying Pan Shoals",
+      "url": "https://archives.uslhs.org/places/frying-pan-shoals",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/north-carolina",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,15 +174,88 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1632",
+      "part": "wikidata:Q5506613",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:frying-pan-shoals",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3367",
+      "part": "wikidata:Q5506613",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:nc:frying-pan-shoals-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            33.48333,
+            -77.58333
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            33.48417,
+            -77.59194
+          ]
+        }
+      ],
+      "distance_m": 804,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

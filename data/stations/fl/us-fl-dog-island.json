@@ -3,7 +3,8 @@
   "name": "Dog Island Light",
   "other_names": [
     "Dog Island Lights",
-    "Dog Island Lighthouse"
+    "Dog Island Lighthouse",
+    "Dog Island"
   ],
   "country": "US",
   "region": "FL",
@@ -12,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.783333,
-    "lon": -84.666667,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 29.781067,
+    "lon": -84.643847,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -25,22 +26,22 @@
       "name": null,
       "type": "conical_masonry",
       "material": "brick",
-      "built": null,
+      "built": 1852,
       "height_m": 15.2,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1839,
+    "first_lit": 1838,
     "deactivated": 1843,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,6 +71,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1839,
       "event": "built",
@@ -107,10 +114,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1852,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1852,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1872,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -156,6 +181,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Dog_Island_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Dog Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1835",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Dog Island",
+      "url": "https://archives.uslhs.org/places/dog-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -168,7 +203,6 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
@@ -198,9 +232,84 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1835",
+      "part": "wikidata:Q110227813",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8406",
+      "part": "wikidata:Q110227813",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1839
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1843
+        },
+        {
+          "source": "uslhs",
+          "value": 1873
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            29.78333,
+            -84.66667
+          ]
+        },
+        {
+          "source": "wikidata",
+          "value": [
+            29.78333,
+            -84.66667
+          ]
+        },
+        {
+          "source": "wikidata",
+          "value": [
+            29.78333,
+            -84.66667
+          ]
+        }
+      ],
+      "distance_m": 2217,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

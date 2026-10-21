@@ -2,7 +2,9 @@
   "id": "us-me-petit-manan",
   "name": "Petit Manan Light",
   "other_names": [
-    "Petit Manan Lighthouse"
+    "Petit Manan Lighthouse",
+    "Petit Manan",
+    "Petit Manan Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1855,
+    "first_lit": 1817,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 37.4,
+    "focal_height_m": 37.5,
     "range_nm": 19.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001879",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001879"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001879",
+      "listed": "1987-10-30",
+      "nomination": "https://catalog.archives.gov/id/88687571"
     }
   ],
   "aton": {
@@ -54,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Fish and Wildlife Service (Maine Coastal Islands National Wildlife Refuge)",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1972"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,21 +86,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1817,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1855,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1972,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6540638438",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Petit Manan",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=766",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Petit Manan",
+      "url": "https://archives.uslhs.org/places/petit-manan",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687571",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -168,12 +209,88 @@
       "key": "osm:node/6540638438",
       "part": "wikidata:Q15266059",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:766",
+      "part": "wikidata:Q15266059",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:petit-manan-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1735",
+      "part": "wikidata:Q15266059",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2928",
+      "part": "wikidata:Q15266059",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001879",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.36758,-67.86436",
+      "part": "wikidata:Q15266059",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:petit-manan",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1855
+        },
+        {
+          "source": "uslhs",
+          "value": 1817
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

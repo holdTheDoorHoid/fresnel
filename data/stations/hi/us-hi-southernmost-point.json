@@ -1,7 +1,10 @@
 {
   "id": "us-hi-southernmost-point",
   "name": "Southernmost Point Light",
-  "other_names": [],
+  "other_names": [
+    "Kaho'olawe Southwest Point",
+    "Minor light of Kaho'olawe - Kaho'olawe Southwest Point"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -61,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5458687881",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Kaho'olawe - Kaho'olawe Southwest Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=928",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +96,18 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:928",
+      "part": "osm:node/5458687881",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

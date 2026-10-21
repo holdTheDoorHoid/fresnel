@@ -1,7 +1,9 @@
 {
   "id": "us-md-pooles-island-2",
   "name": "Pooles Island Light",
-  "other_names": [],
+  "other_names": [
+    "Pooles Island Bar Light"
+  ],
   "country": "US",
   "region": "MD",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 8.2,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-8663",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -88,12 +90,28 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8663",
+      "part": "osm:node/4425602684",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.26178,-76.27801",
+      "part": "osm:node/4425602684",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A modern light on the shoal south of Pooles Island (Light List 2-8663); the historic Pooles Island Light is us-md-pooles-island",
   "updated": "2026-10-21"
 }

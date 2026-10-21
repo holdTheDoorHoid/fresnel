@@ -3,7 +3,9 @@
   "name": "Fort Niagara Light",
   "other_names": [
     "Fort Niagara light",
-    "Fort Niagara Lighthouse"
+    "Fort Niagara Lighthouse",
+    "Fort Niagara",
+    "Fort Niagara Light 5"
   ],
   "country": "US",
   "region": "NY",
@@ -21,32 +23,45 @@
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "other",
+      "name": "Oil Shed",
       "type": null,
       "material": null,
-      "built": 1872,
+      "built": 1871,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": "Fort Niagara Light",
+      "type": null,
+      "material": "brick",
+      "built": 1872,
+      "height_m": 18.3,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1872,
+    "first_lit": 1781,
     "deactivated": 1993,
     "lens": null,
-    "characteristic": "Oc W 4s",
-    "focal_height_m": null,
-    "range_nm": 10.0,
+    "characteristic": "Oc G 4s",
+    "focal_height_m": 24.4,
+    "range_nm": 8.7,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84002809",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002809"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002809",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891391"
     }
   ],
   "aton": {
@@ -58,24 +73,42 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1781,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1871,
       "event": "built",
@@ -85,7 +118,7 @@
     {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -97,13 +130,19 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1993,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1993,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -157,8 +196,33 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1115341763",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/797539165",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fort Niagara",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=301",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Niagara",
+      "url": "https://archives.uslhs.org/places/fort-niagara",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891391",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,11 +245,86 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1115341763",
+      "part": "osm:way/1115341763",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/797539165",
       "part": "wikidata:Q5471754",
       "fields": [
-        "events",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:301",
+      "part": "wikidata:Q5471754",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:fort-niagara-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:fort-niagara-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2485",
+      "part": "wikidata:Q5471754",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3410",
+      "part": "wikidata:Q5471754",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84002809",
+      "part": "wikidata:Q5471754",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.26181,-79.06390",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:fort-niagara",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

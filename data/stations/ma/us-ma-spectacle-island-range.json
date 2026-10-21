@@ -1,7 +1,9 @@
 {
   "id": "us-ma-spectacle-island-range",
   "name": "Spectacle Island Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Spectacle Island Range"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Suffolk",
@@ -9,35 +11,35 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 42.3278,
-    "lon": -70.9847,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 42.3275,
+    "lon": -70.984444,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1897,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": 1913,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -74,9 +76,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1913,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -108,6 +116,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phares_de_Spectacle_Island",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Spectacle Island Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1977",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Spectacle Island Range",
+      "url": "https://archives.uslhs.org/places/spectacle-island-range",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,16 +138,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1977",
+      "part": "wikidata:Q7575092",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8499",
+      "part": "wikidata:Q7575092",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

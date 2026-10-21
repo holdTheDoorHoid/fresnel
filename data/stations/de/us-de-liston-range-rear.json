@@ -2,7 +2,9 @@
   "id": "us-de-liston-range-rear",
   "name": "Liston Range Rear Light",
   "other_names": [
-    "Liston Range Rear Light Station"
+    "Liston Range Rear Light Station",
+    "Liston Rear Range",
+    "Liston Range Rear"
   ],
   "country": "US",
   "region": "DE",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -24,28 +26,30 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
-      "height_m": null,
+      "built": 1904,
+      "height_m": 52.1,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1906,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F W",
+    "characteristic": "FW",
     "focal_height_m": 54.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78000905",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000905"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000905",
+      "listed": "1978-11-15",
+      "nomination": "https://catalog.archives.gov/id/75324342"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +82,14 @@
     {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1906,
@@ -90,7 +100,7 @@
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3730127122",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Liston Rear Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=463",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Liston Range Rear",
+      "url": "https://archives.uslhs.org/places/liston-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324342",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,10 +193,91 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:463",
+      "part": "wikidata:Q6646553",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:liston-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2450",
+      "part": "wikidata:Q6646553",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:24970",
+      "part": "wikidata:Q6646553",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78000905",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:de:liston-rear-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1906
+        },
+        {
+          "source": "uslhs",
+          "value": 1904
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

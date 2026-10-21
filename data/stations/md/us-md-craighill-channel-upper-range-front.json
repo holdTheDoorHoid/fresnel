@@ -1,7 +1,12 @@
 {
   "id": "us-md-craighill-channel-upper-range-front",
   "name": "Craighill Channel Upper Range Front Light",
-  "other_names": [],
+  "other_names": [
+    "Craighill Channel Upper Front",
+    "Craighill Channel Upper Range Front",
+    "Cutoff Channel Range Front, Fort Howard, North Point",
+    "Cut-Off Channel Range Front Light Station"
+  ],
   "country": "US",
   "region": "MD",
   "county": "Baltimore",
@@ -33,17 +38,19 @@
     "first_lit": 1886,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R (originally W)",
-    "focal_height_m": 4.5,
-    "range_nm": null,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 4.6,
+    "range_nm": 0.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001415",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001415"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001415",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75324945"
     }
   ],
   "aton": {
@@ -56,18 +63,18 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1914"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,14 +82,26 @@
   "events": [
     {
       "year": 1886,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1886,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1914,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -129,6 +148,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1075553559",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Craighill Channel Upper Front",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=417",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Craighill Channel Upper Front",
+      "url": "https://archives.uslhs.org/places/craighill-channel-upper-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324945",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,6 +194,56 @@
       "part": "wikidata:Q5181679",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:417",
+      "part": "wikidata:Q5181679",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:craighill-channel-upper-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8090",
+      "part": "wikidata:Q5181679",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:47744",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001415",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.19706,-76.44827",
+      "part": "wikidata:Q5181679",
+      "fields": [
+        "light"
       ]
     }
   ],

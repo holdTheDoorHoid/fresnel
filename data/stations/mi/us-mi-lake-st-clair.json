@@ -1,7 +1,12 @@
 {
   "id": "us-mi-lake-st-clair",
   "name": "Lake St. Clair light",
-  "other_names": [],
+  "other_names": [
+    "Lake St. Clair",
+    "Lake Saint Clair",
+    "Lake St. Clair Light",
+    "Lake St Clair Light"
+  ],
   "country": "US",
   "region": "MI",
   "county": "Macomb",
@@ -9,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 42.465278,
-    "lon": -82.754444,
+    "lat": 42.46539,
+    "lon": -82.75452,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -30,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1941,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso G 6s",
-    "focal_height_m": 16.0,
-    "range_nm": 7.0,
+    "focal_height_m": 15.8,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -50,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -61,12 +66,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1938,
       "event": "built",
@@ -75,8 +86,14 @@
     },
     {
       "year": 1941,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1941,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -117,6 +134,21 @@
       "label": "ARLHS World List of Lights USA426",
       "url": "https://wlol.arlhs.com/lighthouse/USA426.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Lake St. Clair",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=705",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lake Saint Clair",
+      "url": "https://archives.uslhs.org/places/lake-saint-clair",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,16 +161,78 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:705",
+      "part": "wikidata:Q90117409",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:lake-st-clair",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-8525",
+      "part": "wikidata:Q90117409",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9753",
+      "part": "wikidata:Q90117409",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.46532,-82.75430",
+      "part": "wikidata:Q90117409",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:lake-st-clair-light",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

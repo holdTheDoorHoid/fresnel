@@ -2,7 +2,9 @@
   "id": "us-ny-thirty-mile-point",
   "name": "Thirty Mile Point Light",
   "other_names": [
-    "Thirty Mile Point Lighthouse"
+    "Thirty Mile Point Lighthouse",
+    "Thirty Mile Point",
+    "Thirtymile Point Light"
   ],
   "country": "US",
   "region": "NY",
@@ -16,36 +18,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1876,
-      "height_m": null,
+      "height_m": 16.3,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1959,
+    "first_lit": 1876,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": null,
+    "focal_height_m": 21.8,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84003922",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003922"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003922",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891389"
     }
   ],
   "aton": {
@@ -57,24 +61,37 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://www.reserveamerica.com/explore/golden-hill-state-park/NY/317/260917/campsite-booking",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1876,
       "event": "built",
@@ -82,15 +99,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1876,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1958,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1959,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -98,6 +133,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1998,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -143,6 +184,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2550137763",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Thirty Mile Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=302",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Thirty Mile Point",
+      "url": "https://archives.uslhs.org/places/thirty-mile-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891389",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/new-york",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,7 +221,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,25 +235,122 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:302",
+      "part": "wikidata:Q7785223",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:thirty-mile-point-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:thirty-mile-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2395",
+      "part": "wikidata:Q7785223",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3445",
+      "part": "wikidata:Q7785223",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84003922",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:thirty-mile-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ny:thirty-mile-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1998
         },
         {
-          "source": "wikidata",
-          "value": 1959
+          "source": "uslhs",
+          "value": 1876
         }
       ],
-      "note": "A source gives the light's service entry (1998) after its retirement (1959); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1959
+        },
+        {
+          "source": "rowlett",
+          "value": 1998
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

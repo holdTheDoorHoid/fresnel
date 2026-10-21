@@ -4,7 +4,13 @@
   "other_names": [
     "Charleston Lighthouse",
     "Sullivan's Island Light",
-    "Sullivan's Island Lighthouse"
+    "Sullivan's Island Lighthouse",
+    "Charleston",
+    "Sullivans Island",
+    "Sullivan's Island, New Charleston",
+    "Morris Island",
+    "Old Charleston",
+    "Sullivan's Island"
   ],
   "country": "US",
   "region": "SC",
@@ -23,25 +29,40 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Morris Island",
       "type": null,
-      "material": null,
+      "material": "stone",
+      "built": 1876,
+      "height_m": 45.7,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 32.75833,
+        "lon": -79.84333
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Charleston Light",
+      "type": null,
+      "material": "steel",
       "built": 1960,
       "height_m": 43.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1962,
+    "first_lit": 1768,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 30s",
-    "focal_height_m": 49.6,
+    "focal_height_m": 49.7,
     "range_nm": 20.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -60,7 +81,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -72,11 +93,29 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1768,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1876,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1960,
       "event": "built",
@@ -85,9 +124,21 @@
     },
     {
       "year": 1962,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1962,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1975,
@@ -139,6 +190,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/922835996",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Charleston (Sullivans Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=334",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sullivans Island",
+      "url": "https://archives.uslhs.org/places/sullivans-island",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Morris Island (Old Charleston)",
+      "url": "https://archives.uslhs.org/places/morris-island-old-charleston",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,7 +222,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -163,14 +233,92 @@
       "key": "osm:way/922835996",
       "part": "wikidata:Q5084156",
       "fields": [
-        "light",
         "location",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:334",
+      "part": "wikidata:Q5084156",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:charleston",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-195",
+      "part": "wikidata:Q5084156",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3510",
+      "part": "wikidata:Q5084156",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3515",
+      "part": "uslhs:3515",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.75795,-79.84328",
+      "part": "wikidata:Q5084156",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:sullivan-s-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,10 @@
   "name": "Pottawatomie Light",
   "other_names": [
     "Pottawatomie Lighthouse",
-    "Potawatomi Lighthouse"
+    "Potawatomi Lighthouse",
+    "Pottawatomie",
+    "Rock Island",
+    "Rock Island Lighthouse"
   ],
   "country": "US",
   "region": "WI",
@@ -17,36 +20,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1836,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1858,
-    "deactivated": null,
+    "first_lit": 1837,
+    "deactivated": 1989,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 48.0,
-    "range_nm": 7.0,
+    "focal_height_m": 48.5,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79000074",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000074"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000074",
+      "listed": "1979-04-20",
+      "nomination": "https://catalog.archives.gov/id/106780803"
     }
   ],
   "aton": {
@@ -58,23 +63,30 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1966"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "http://fori.squarespace.com/pottawatomie-lighthouse-museum-docents",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1836,
@@ -83,16 +95,52 @@
       "from": "wikidata"
     },
     {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1966,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 1980,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1988,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1989,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -143,6 +191,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/39659357",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Pottawatomie (Rock Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=639",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pottawatomie (Rock Island)",
+      "url": "https://archives.uslhs.org/places/pottawatomie-rock-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106780803",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/wisconsin",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,7 +228,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,10 +248,143 @@
       "key": "osm:way/39659357",
       "part": "wikidata:Q7235206",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:639",
+      "part": "wikidata:Q7235206",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:pottawatomie-1",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:pottawatomie-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21425",
+      "part": "wikidata:Q7235206",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3579",
+      "part": "wikidata:Q7235206",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000074",
+      "part": "wikidata:Q7235206",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.42782,-86.82872",
+      "part": "wikidata:Q7235206",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:pottawatomie-rock-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:wi:pottawatomie-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 48.0
+        },
+        {
+          "source": "uslhs",
+          "value": 41.76
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1837
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1989
+        },
+        {
+          "source": "uslhs",
+          "value": 1980
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

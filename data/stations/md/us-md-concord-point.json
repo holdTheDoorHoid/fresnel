@@ -2,7 +2,11 @@
   "id": "us-md-concord-point",
   "name": "Concord Point Light",
   "other_names": [
-    "Concord Point Lighthouse"
+    "Concord Point Lighthouse",
+    "Concord Point",
+    "Havre de Grace",
+    "Havre de Grace Lighthouse",
+    "Concord Lighthouse"
   ],
   "country": "US",
   "region": "MD",
@@ -16,7 +20,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,8 +37,13 @@
   ],
   "light": {
     "first_lit": 1827,
-    "deactivated": 1975,
-    "lens": null,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
     "focal_height_m": 11.5,
     "range_nm": null,
@@ -45,7 +54,9 @@
     {
       "register": "NRHP",
       "number": "76000999",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000999"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000999",
+      "listed": "1976-04-02",
+      "nomination": "https://catalog.archives.gov/id/106777531"
     }
   ],
   "aton": {
@@ -57,20 +68,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1920"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,31 +89,31 @@
     {
       "year": 1827,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1827,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1920,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1975,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -154,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1098280974",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Concord Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=411",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Concord Point (Havre de Grace)",
+      "url": "https://archives.uslhs.org/places/concord-point-havre-de-grace",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106777531",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,10 +212,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:411",
+      "part": "wikidata:Q5158844",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:concord-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2868",
+      "part": "wikidata:Q5158844",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000999",
+      "part": "wikidata:Q5158844",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:concord-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

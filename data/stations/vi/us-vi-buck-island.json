@@ -1,7 +1,10 @@
 {
   "id": "us-vi-buck-island",
   "name": "Buck Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Buck Island",
+    "Buck Island Light (St Thomas)"
+  ],
   "country": "US",
   "region": "VI",
   "county": null,
@@ -30,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1913,
     "deactivated": 1990,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 42.0,
+    "focal_height_m": 42.4,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -50,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +73,14 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1990,
@@ -82,8 +91,14 @@
     {
       "year": 1990,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 2023,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -109,6 +124,16 @@
       "label": "ARLHS World List of Lights VIR002",
       "url": "https://wlol.arlhs.com/lighthouse/VIR002.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: U.S. Virgin Islands",
+      "url": "https://www.ibiblio.org/lighthouse/vi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buck Island",
+      "url": "https://archives.uslhs.org/places/buck-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,7 +145,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "region",
@@ -137,6 +161,46 @@
         "events",
         "light",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vi:buck-island-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vi:buck-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-32565",
+      "part": "wikidata:Q109324143",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8944",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.27822,-64.89264",
+      "part": "wikidata:Q109324143",
+      "fields": [
+        "light"
       ]
     }
   ],

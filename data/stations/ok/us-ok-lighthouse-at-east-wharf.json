@@ -1,7 +1,10 @@
 {
   "id": "us-ok-lighthouse-at-east-wharf",
   "name": "Lighthouse at East Wharf",
-  "other_names": [],
+  "other_names": [
+    "East Wharf",
+    "Lake Hefner"
+  ],
   "country": "US",
   "region": "OK",
   "county": null,
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -42,7 +45,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-123",
     "ccg_list_number": null,
     "nga": null
   },
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1999,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7132232350",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Oklahoma",
+      "url": "https://www.ibiblio.org/lighthouse/ok.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +102,15 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ok:east-wharf",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
       ]
     }
   ],

@@ -2,7 +2,10 @@
   "id": "us-me-narraguagus",
   "name": "Narraguagus Light",
   "other_names": [
-    "Narraguagus Lighthouse"
+    "Narraguagus Lighthouse",
+    "Narraguagus",
+    "Pond Island",
+    "Narraguagus Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -11,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.455972,
-    "lon": -67.831208,
+    "lat": 44.456,
+    "lon": -67.83122,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -22,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "stone",
       "built": 1853,
       "height_m": 9.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1853,
     "deactivated": 1934,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 16.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002022",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002022"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002022",
+      "listed": "1987-11-20",
+      "nomination": "https://catalog.archives.gov/id/88685106"
     }
   ],
   "aton": {
@@ -54,11 +59,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +83,25 @@
     {
       "year": 1853,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1934,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -127,6 +138,26 @@
       "label": "ARLHS World List of Lights USA526",
       "url": "https://wlol.arlhs.com/lighthouse/USA526.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Narraguagus (Pond Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=767",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Narraguagus",
+      "url": "https://archives.uslhs.org/places/narraguagus",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685106",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -140,17 +171,64 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:767",
+      "part": "wikidata:Q6966188",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:narraguagus",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2923",
+      "part": "wikidata:Q6966188",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002022",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:narraguagus",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

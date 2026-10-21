@@ -3,7 +3,8 @@
   "name": "Little Cumberland Island Light",
   "other_names": [
     "Little Cumberland Island Lighthouse",
-    "Little Cumberland Lighthouse (abandoned)"
+    "Little Cumberland Lighthouse (abandoned)",
+    "Little Cumberland Island"
   ],
   "country": "US",
   "region": "GA",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1838,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -46,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "89001407",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001407"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001407",
+      "listed": "1989-08-28",
+      "nomination": "https://catalog.archives.gov/id/93207200"
     }
   ],
   "aton": {
@@ -55,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately Owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,25 +82,25 @@
     {
       "year": 1838,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1838,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1915,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +142,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3230752499",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Little Cumberland Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=329",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Georgia",
+      "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: LITTLE CUMBERLAND ISLAND",
+      "url": "https://archives.uslhs.org/places/little-cumberland-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/93207200",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,6 +188,52 @@
       "part": "wikidata:Q6649701",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:329",
+      "part": "wikidata:Q6649701",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:little-cumberland-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2792",
+      "part": "wikidata:Q6649701",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001407",
+      "part": "wikidata:Q6649701",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ga:little-cumberland-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

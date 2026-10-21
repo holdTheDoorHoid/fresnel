@@ -1,0 +1,129 @@
+{
+  "id": "us-pa-fort-mifflin",
+  "name": "Fort Mifflin",
+  "other_names": [
+    "Fort Mifflin Range Rear"
+  ],
+  "country": "US",
+  "region": "PA",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 39.868043,
+    "lon": -75.211105,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "rear_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1880,
+      "height_m": 17.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1880,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 19.5,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1880,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Fort Mifflin",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1880",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Mifflin Range Rear",
+      "url": "https://archives.uslhs.org/places/fort-mifflin-range-rear",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1880",
+      "part": "lighthousefriends:1880",
+      "fields": [
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8779",
+      "part": "lighthousefriends:1880",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

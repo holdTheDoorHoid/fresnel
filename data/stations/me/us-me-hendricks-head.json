@@ -2,7 +2,9 @@
   "id": "us-me-hendricks-head",
   "name": "Hendricks Head Light",
   "other_names": [
-    "Hendricks Head Lighthouse"
+    "Hendricks Head Lighthouse",
+    "Hendricks Head",
+    "Hendricks Head Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1933,
+    "first_lit": 1829,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "FF W",
-    "focal_height_m": 13.5,
+    "characteristic": "F W",
+    "focal_height_m": 13.1,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002024",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002024"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002024",
+      "listed": "1987-11-20",
+      "nomination": "https://catalog.archives.gov/id/88684998"
     }
   ],
   "aton": {
@@ -54,15 +58,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately Owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1975"
   },
   "visit": {
     "grounds_open": null,
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +86,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1829,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -102,7 +124,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1198193040",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hendricks Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=500",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hendricks Head",
+      "url": "https://archives.uslhs.org/places/hendricks-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684998",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,22 +217,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:500",
+      "part": "wikidata:Q5713772",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:hendricks-head-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5665",
+      "part": "wikidata:Q5713772",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2911",
+      "part": "wikidata:Q5713772",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002024",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.82257,-69.68973",
+      "part": "wikidata:Q5713772",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:hendricks-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1975
         },
         {
-          "source": "wikidata",
-          "value": 1933
+          "source": "uslhs",
+          "value": 1829
         }
       ],
-      "note": "A source gives the light's service entry (1975) after its retirement (1933); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

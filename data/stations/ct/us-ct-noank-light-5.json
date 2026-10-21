@@ -34,10 +34,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Q G",
-    "focal_height_m": 17.0,
-    "range_nm": null,
+    "focal_height_m": 5.2,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -91,11 +91,24 @@
       "fields": [
         "aton",
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-20510",
+      "part": "wikidata:Q108649914",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.31633,-71.98717",
+      "part": "wikidata:Q108649914",
+      "fields": [
+        "light"
       ]
     }
   ],

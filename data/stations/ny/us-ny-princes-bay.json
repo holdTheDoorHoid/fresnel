@@ -4,7 +4,12 @@
   "other_names": [
     "Princes Bay Lighthouse",
     "Prince's Bay Light",
-    "John Cardinal O'Connor Lighthouse"
+    "John Cardinal O'Connor Lighthouse",
+    "Princes Bay",
+    "John Cardinal O'Connor",
+    "Princes Bay Range Front",
+    "Princes Bay Range Front Light",
+    "Princes Bay Range Rear Light"
   ],
   "country": "US",
   "region": "NY",
@@ -25,23 +30,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1864,
-      "height_m": null,
+      "height_m": 11.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1828,
     "deactivated": 1922,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Q G",
+    "focal_height_m": 27.1,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -54,7 +59,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,11 +71,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1864,
       "event": "built",
@@ -78,9 +89,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1868,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1922,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -128,6 +145,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/411871155",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Princes Bay",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=583",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Princes Bay",
+      "url": "https://archives.uslhs.org/places/princes-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,22 +187,96 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:583",
+      "part": "wikidata:Q1115642",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:princes-bay-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:princes-bay-range-front",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-36190",
+      "part": "wikidata:Q1115642",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-36195",
+      "part": "wikidata:Q1115642",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3429",
+      "part": "wikidata:Q1115642",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.50481,-74.20928",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.50766,-74.21300",
+      "part": "wikidata:Q1115642",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.50769,-74.21233",
+      "part": "wikidata:Q1115642",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:princes-bay",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 2006
         },
         {
-          "source": "wikidata",
-          "value": 1922
+          "source": "uslhs",
+          "value": 1828
         }
       ],
-      "note": "A source gives the light's service entry (2006) after its retirement (1922); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

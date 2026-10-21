@@ -3,7 +3,9 @@
   "name": "Mahon River Light",
   "other_names": [
     "Mahon River Lighthouse",
-    "Port Mahon Lighthouse"
+    "Port Mahon Lighthouse",
+    "Mahon River",
+    "Smyrna River"
   ],
   "country": "US",
   "region": "DE",
@@ -24,16 +26,16 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1903,
-      "height_m": null,
+      "height_m": 17.4,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1955,
+    "first_lit": 1831,
     "deactivated": 1955,
     "lens": null,
     "characteristic": "Fl W 4s",
@@ -46,7 +48,9 @@
     {
       "register": "NRHP",
       "number": "79000624",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000624"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000624",
+      "listed": "1979-10-25",
+      "nomination": "https://catalog.archives.gov/id/75324001"
     }
   ],
   "aton": {
@@ -77,10 +81,34 @@
   "stay": null,
   "events": [
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1903,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1949,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1955,
@@ -97,8 +125,14 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2016,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -144,6 +178,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697186444",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mahon River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1891",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mahon River (Smyrna River)",
+      "url": "https://archives.uslhs.org/places/mahon-river-smyrna-river",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324001",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,9 +225,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1891",
+      "part": "wikidata:Q6734755",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:mahon-river-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8398",
+      "part": "wikidata:Q6734755",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000624",
+      "part": "wikidata:Q6734755",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 11.0
+        },
+        {
+          "source": "uslhs",
+          "value": 17.37
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1955
+        },
+        {
+          "source": "uslhs",
+          "value": 1831
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1955
+        },
+        {
+          "source": "uslhs",
+          "value": 1949
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,8 @@
   "name": "Bear Island Light",
   "other_names": [
     "Bear Island Lighthouse",
-    "Bear Island Light Station"
+    "Bear Island Light Station",
+    "Bear Island"
   ],
   "country": "US",
   "region": "ME",
@@ -17,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1889,
-    "deactivated": 1981,
+    "first_lit": 1839,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 30.5,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 10.1,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000043",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000043"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000043",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684899"
     }
   ],
   "aton": {
@@ -55,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Park Service - Acadia NP",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,6 +86,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1889,
       "event": "first_lit",
       "note": null,
@@ -91,13 +112,13 @@
     {
       "year": 1981,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -150,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/367795292",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bear Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=511",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bear Island",
+      "url": "https://archives.uslhs.org/places/bear-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684899",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,10 +218,107 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:511",
+      "part": "wikidata:Q4876463",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:bear-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-2105",
+      "part": "wikidata:Q4876463",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2888",
+      "part": "wikidata:Q4876463",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000043",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.28120,-68.26943",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.28333,-68.26972",
+      "part": "wikidata:Q4876463",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:bear-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1889
+        },
+        {
+          "source": "uslhs",
+          "value": 1839
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

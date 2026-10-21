@@ -2,7 +2,8 @@
   "id": "us-ct-penfield-reef",
   "name": "Penfield Reef Light",
   "other_names": [
-    "Penfield Reef Lighthouse"
+    "Penfield Reef Lighthouse",
+    "Penfield Reef"
   ],
   "country": "US",
   "region": "CT",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "caisson",
       "material": "mixed",
       "built": 1874,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1874,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
     "focal_height_m": 15.5,
     "range_nm": 15.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001473",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001473"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001473",
+      "listed": "1990-09-27",
+      "nomination": "https://catalog.archives.gov/id/132353051"
     }
   ],
   "aton": {
@@ -57,8 +60,8 @@
   "agency": "United States Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,7 +72,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -78,8 +81,20 @@
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1971,
@@ -90,7 +105,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/229237747",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Penfield Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=788",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Penfield Reef",
+      "url": "https://archives.uslhs.org/places/penfield-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353051",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,8 +198,60 @@
       "key": "osm:way/229237747",
       "part": "wikidata:Q7162651",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:788",
+      "part": "wikidata:Q7162651",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:penfield-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21290",
+      "part": "wikidata:Q7162651",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2746",
+      "part": "wikidata:Q7162651",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001473",
+      "part": "wikidata:Q7162651",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.11709,-73.22209",
+      "part": "wikidata:Q7162651",
+      "fields": [
+        "light"
       ]
     }
   ],

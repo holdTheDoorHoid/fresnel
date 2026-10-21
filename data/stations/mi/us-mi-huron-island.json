@@ -2,7 +2,11 @@
   "id": "us-mi-huron-island",
   "name": "Huron Island Light",
   "other_names": [
-    "Huron Island Lighthouse"
+    "Huron Island Lighthouse",
+    "Huron Island",
+    "Huron Islands",
+    "Huron Islands Lighthouse",
+    "U.S. Coast Guard Lighthouse (Light List #1690)"
   ],
   "country": "US",
   "region": "MI",
@@ -32,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1868,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 60.0,
-    "range_nm": 15.0,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "75000955",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000955"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000955",
+      "listed": "1975-09-02",
+      "nomination": "https://catalog.archives.gov/id/25340089"
     }
   ],
   "aton": {
@@ -57,20 +63,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1972"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +84,14 @@
     {
       "year": 1868,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1877,
@@ -88,9 +100,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1972,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +160,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=729",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: HURON ISLAND",
+      "url": "https://archives.uslhs.org/places/huron-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340089",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +187,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -169,9 +201,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:729",
+      "part": "wikidata:Q5946903",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:huron-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14730",
+      "part": "wikidata:Q5946903",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2982",
+      "part": "wikidata:Q5946903",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75000955",
+      "part": "wikidata:Q5946903",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.96325,-87.99843",
+      "part": "wikidata:Q5946903",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:huron-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1877
+        },
+        {
+          "source": "uslhs",
+          "value": 1868
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

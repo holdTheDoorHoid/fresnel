@@ -3,7 +3,9 @@
   "name": "Stony Point Light",
   "other_names": [
     "Stony Point (Henderson) Light",
-    "Stony Point Lighthouse"
+    "Stony Point Lighthouse",
+    "Stony Point",
+    "Henderson"
   ],
   "country": "US",
   "region": "NY",
@@ -12,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 43.8394,
-    "lon": -76.2983,
+    "lat": 43.83936,
+    "lon": -76.29859,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -24,27 +26,27 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "brick",
+      "built": 1869,
       "height_m": 22.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1869,
+    "first_lit": 1830,
     "deactivated": 1945,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso R 6s",
+    "focal_height_m": 11.0,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-2010",
     "arlhs": "USA814",
     "ccg_list_number": null,
     "nga": null
@@ -52,8 +54,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,6 +73,24 @@
   "stay": null,
   "events": [
     {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1869,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1869,
       "event": "first_lit",
       "note": null,
@@ -79,8 +99,20 @@
     {
       "year": 1945,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1959,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1959,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -116,6 +148,21 @@
       "label": "ARLHS World List of Lights USA814",
       "url": "https://wlol.arlhs.com/lighthouse/USA814.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Stony Point (Henderson)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=310",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stony Point (Henderson)",
+      "url": "https://archives.uslhs.org/places/stony-point-henderson",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,16 +176,94 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:310",
+      "part": "wikidata:Q7619591",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:stony-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:stony-point-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2010",
+      "part": "wikidata:Q7619591",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3442",
+      "part": "wikidata:Q7619591",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1869
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1945
+        },
+        {
+          "source": "rowlett",
+          "value": 1959
+        },
+        {
+          "source": "uslhs",
+          "value": 1945
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

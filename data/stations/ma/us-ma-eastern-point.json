@@ -2,7 +2,9 @@
   "id": "us-ma-eastern-point",
   "name": "Eastern Point Light",
   "other_names": [
-    "Eastern Point Lighthouse"
+    "Eastern Point Lighthouse",
+    "Eastern Point",
+    "Eastern Point Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1833,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1890,
+    "first_lit": 1832,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 17.3,
+    "characteristic": "Q Y",
+    "focal_height_m": 17.4,
     "range_nm": 20.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002027",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002027"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002027",
+      "listed": "1987-09-30",
+      "nomination": "https://catalog.archives.gov/id/63790224"
     }
   ],
   "aton": {
@@ -55,10 +59,10 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,11 +74,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1833,
       "event": "built",
@@ -82,9 +92,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1890,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -92,6 +108,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1985,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1986,
@@ -102,7 +124,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1033568181",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Eastern Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=476",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Eastern Point",
+      "url": "https://archives.uslhs.org/places/eastern-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790224",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,12 +217,95 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:476",
+      "part": "wikidata:Q5330382",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:eastern-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-330",
+      "part": "wikidata:Q5330382",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2835",
+      "part": "wikidata:Q5330382",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002027",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.57778,-70.66417",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.58017,-70.66445",
+      "part": "wikidata:Q5330382",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:eastern-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1890
+        },
+        {
+          "source": "osm",
+          "value": 1890
+        },
+        {
+          "source": "uslhs",
+          "value": 1832
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

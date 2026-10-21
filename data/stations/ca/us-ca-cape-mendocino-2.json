@@ -1,7 +1,9 @@
 {
   "id": "us-ca-cape-mendocino-2",
   "name": "Cape Mendocino Light",
-  "other_names": [],
+  "other_names": [
+    "Cape Mendocino"
+  ],
   "country": "US",
   "region": "CA",
   "county": null,
@@ -80,6 +82,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Cape_Mendocino_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Cape Mendocino",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=25",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,10 +100,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:25",
+      "part": "osm:way/940995632",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

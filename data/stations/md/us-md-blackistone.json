@@ -1,0 +1,191 @@
+{
+  "id": "us-md-blackistone",
+  "name": "Blackistone Lighthouse",
+  "other_names": [
+    "Blackistone Island (Replica)",
+    "Blackistone (Blakistone) Island (Replica)",
+    "St. Clement's Island",
+    "Blakistone Island (Replica)",
+    "Blackistone"
+  ],
+  "country": "US",
+  "region": "MD",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 38.207973,
+    "lon": -76.74484,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "replica",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "brick",
+      "built": 1851,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 2008,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "USA-060",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": true,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": true,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1851,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 2008,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2008,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-md-blakistone-island",
+      "relation": "replica_of",
+      "name": "Blakistone Island Light"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/718624721",
+      "kind": "osm"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Blakistone_Island_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Blackistone Island (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1120",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Blakistone Island (Replica)",
+      "url": "https://archives.uslhs.org/places/blakistone-island-replica",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:way/718624721",
+      "part": "lighthousefriends:1120",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1120",
+      "part": "lighthousefriends:1120",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:blackistone-blakistone-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8455",
+      "part": "lighthousefriends:1120",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:blackistone",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

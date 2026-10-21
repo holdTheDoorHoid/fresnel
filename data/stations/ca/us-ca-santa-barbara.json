@@ -23,24 +23,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1856,
       "height_m": 7.3,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1856,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 43.2,
+    "focal_height_m": 43.3,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -77,10 +77,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1925,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1926,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1935,
@@ -137,6 +161,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/538588117",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Santa Barbara",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=184",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Santa Barbara",
+      "url": "https://archives.uslhs.org/places/santa-barbara",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,7 +188,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -161,13 +199,97 @@
       "key": "osm:node/538588117",
       "part": "wikidata:Q7419231",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:184",
+      "part": "wikidata:Q7419231",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:santa-barbara-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-195",
+      "part": "wikidata:Q7419231",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8381",
+      "part": "wikidata:Q7419231",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.39631,-119.72260",
+      "part": "wikidata:Q7419231",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 45.0
+        },
+        {
+          "source": "osm",
+          "value": 43.2
+        },
+        {
+          "source": "uslhs",
+          "value": 54.25
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1856
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

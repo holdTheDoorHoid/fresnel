@@ -2,7 +2,9 @@
   "id": "us-ca-trinidad-head",
   "name": "Trinidad Head Light",
   "other_names": [
-    "Trinidad Head Lighthouse"
+    "Trinidad Head Lighthouse",
+    "Trinidad Head",
+    "Trinidad Head Light Station"
   ],
   "country": "US",
   "region": "CA",
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 60.0,
+    "focal_height_m": 58.8,
     "range_nm": 14.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001098",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001098"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001098",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857376"
     }
   ],
   "aton": {
@@ -57,20 +61,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,19 +87,37 @@
     },
     {
       "year": 1871,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1871,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ca-trinidad-memorial",
+      "relation": "replica",
+      "name": "Trinidad Memorial Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinidad_Memorial_Lighthouse_2004.jpg",
@@ -137,6 +159,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4110698441",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Trinidad Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=61",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Trinidad Head",
+      "url": "https://archives.uslhs.org/places/trinidad-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857376",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,6 +206,63 @@
       "fields": [
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:61",
+      "part": "wikidata:Q7842389",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:trinidad-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-525",
+      "part": "wikidata:Q7842389",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2732",
+      "part": "wikidata:Q7842389",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001098",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.05191,-124.15146",
+      "part": "wikidata:Q7842389",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:trinidad-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

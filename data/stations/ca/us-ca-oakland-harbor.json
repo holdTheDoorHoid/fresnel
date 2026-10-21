@@ -2,7 +2,11 @@
   "id": "us-ca-oakland-harbor",
   "name": "Oakland Harbor Light",
   "other_names": [
-    "Oakland Harbor Lighthouse"
+    "Oakland Harbor Lighthouse",
+    "Oakland Harbor",
+    "Oakland Harbor CA",
+    "relocated and modified",
+    "Oakland Inner Harbor Light 8"
   ],
   "country": "US",
   "region": "CA",
@@ -11,45 +15,45 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.7813,
-    "lon": -122.244,
+    "lat": 37.78132,
+    "lon": -122.24382,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1890,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1903,
+    "first_lit": 1890,
     "deactivated": 1966,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 26.0,
-    "range_nm": 14.0,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-4675",
     "arlhs": "USA560",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private Owner",
+  "ownership": "private",
   "access": {
     "level": "unknown",
     "note": null
@@ -64,11 +68,29 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1903,
       "event": "first_lit",
@@ -78,7 +100,7 @@
     {
       "year": 1966,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -120,6 +142,21 @@
       "label": "ARLHS World List of Lights USA560",
       "url": "https://wlol.arlhs.com/lighthouse/USA560.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Oakland Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=72",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Oakland Harbor CA (relocated and modified)",
+      "url": "https://archives.uslhs.org/places/oakland-harbor-ca-relocated-and-modified",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,15 +170,81 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:72",
+      "part": "wikidata:Q7074007",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:oakland-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4675",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8378",
+      "part": "wikidata:Q7074007",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.79767,-122.33260",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:oakland-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 26.0
+        },
+        {
+          "source": "uslhs",
+          "value": 13.11
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

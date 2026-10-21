@@ -2,7 +2,8 @@
   "id": "us-oh-sandusky-harbor",
   "name": "phare de Sandusky Harbor",
   "other_names": [
-    "Sandusky Harbor Breakwater Light"
+    "Sandusky Harbor Breakwater Light",
+    "Sandusky Harbor Breakwater"
   ],
   "country": "US",
   "region": "OH",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1990,
+    "first_lit": 1925,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 9.1,
-    "range_nm": 12.0,
+    "range_nm": 9.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -74,6 +75,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1925,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1990,
@@ -115,6 +128,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/475652064",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sandusky Harbor Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=660",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,7 +150,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -139,8 +161,38 @@
       "key": "osm:node/475652064",
       "part": "wikidata:Q81154951",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:660",
+      "part": "wikidata:Q81154951",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:sandusky-harbor-breakwater-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4560",
+      "part": "wikidata:Q81154951",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.49921,-82.67469",
+      "part": "wikidata:Q81154951",
+      "fields": [
+        "light"
       ]
     }
   ],

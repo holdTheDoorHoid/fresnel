@@ -2,7 +2,8 @@
   "id": "us-md-sharps-island",
   "name": "Sharps Island Light",
   "other_names": [
-    "Sharps Island Lighthouse"
+    "Sharps Island Lighthouse",
+    "Sharps Island"
   ],
   "country": "US",
   "region": "MD",
@@ -16,27 +17,27 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1882,
-      "height_m": null,
+      "height_m": 10.7,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1838,
-    "deactivated": 2010,
+    "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 10.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,11 +46,13 @@
     {
       "register": "NRHP",
       "number": "82002821",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82002821"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82002821",
+      "listed": "1982-07-22",
+      "nomination": "https://catalog.archives.gov/id/106778377"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-24810",
     "arlhs": "USA751",
     "ccg_list_number": null,
     "nga": null
@@ -57,8 +60,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +72,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +81,31 @@
     {
       "year": 1838,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1866,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1882,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1982,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 2010,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -143,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4769080482",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sharps Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=430",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland: Eastern Shore",
+      "url": "https://www.ibiblio.org/lighthouse/mde.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sharps Island",
+      "url": "https://archives.uslhs.org/places/sharps-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106778377",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,9 +200,69 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:430",
+      "part": "wikidata:Q3378389",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mde:sharps-island-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2882",
+      "part": "wikidata:Q3378389",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:82002821",
+      "part": "wikidata:Q3378389",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:sharps-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "first_year",
       "values": [
@@ -184,12 +273,16 @@
         {
           "source": "osm",
           "value": 1882
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

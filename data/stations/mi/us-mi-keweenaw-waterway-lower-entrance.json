@@ -4,7 +4,12 @@
   "other_names": [
     "Keweenaw Waterway Lower Entrance Lighthouse",
     "Keweenaw Lower Entrance Light",
-    "keweenaw Waterway LOWER ENTRANCE LIGHT"
+    "keweenaw Waterway LOWER ENTRANCE LIGHT",
+    "Keweenaw Waterway Lower Entrance",
+    "Keweenaw Waterway (Portage Lake) Lower Entrance",
+    "Keweenaw Waterway (Portage River) Lower Entrance",
+    "Portage lake Lower Entry Light",
+    "Portage Entry Light"
   ],
   "country": "US",
   "region": "MI",
@@ -24,30 +29,36 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1919,
       "height_m": 19.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1920,
+    "first_lit": 1868,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl W 6s",
-    "focal_height_m": 21.0,
-    "range_nm": 9.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 20.7,
+    "range_nm": 7.8,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "14000426",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/14000426"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/14000426",
+      "listed": "2014-07-18"
     }
   ],
   "aton": {
@@ -60,7 +71,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,6 +89,18 @@
   "stay": null,
   "events": [
     {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1919,
       "event": "built",
       "note": null,
@@ -86,7 +109,7 @@
     {
       "year": 1920,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -98,7 +121,7 @@
     {
       "year": 2014,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +168,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1338866322",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Keweenaw Waterway Lower Entrance",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=229",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Keweenaw Waterway (Portage River) Lower Entrance",
+      "url": "https://archives.uslhs.org/places/keweenaw-waterway-portage-river-lower-entrance",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,7 +195,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -172,12 +209,88 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:229",
+      "part": "wikidata:Q29096978",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:keweenaw-waterway-portage-lake-lower-entrance-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14765",
+      "part": "wikidata:Q29096978",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2984",
+      "part": "wikidata:Q29096978",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:14000426",
+      "part": "wikidata:Q29096978",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.96819,-88.43322",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.96886,-88.43108",
+      "part": "wikidata:Q29096978",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1920
+        },
+        {
+          "source": "osm",
+          "value": 1920
+        },
+        {
+          "source": "uslhs",
+          "value": 1868
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,8 @@
   "name": "Point Montara Light",
   "other_names": [
     "Point Montara Lighthouse",
-    "Point Montara Light Station"
+    "Point Montara Light Station",
+    "Point Montara"
   ],
   "country": "US",
   "region": "CA",
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1928,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 21.0,
+    "focal_height_m": 21.3,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001094",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001094"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001094",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857790"
     },
     {
       "register": "California Point of Historical Interest",
@@ -63,29 +66,60 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://hiusa.org/montara",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1875,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1912,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1928,
@@ -96,7 +130,7 @@
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +182,31 @@
       "label": "Website",
       "url": "http://www.parks.ca.gov/?page_id=534",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Point Montara",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=78",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Montara",
+      "url": "https://archives.uslhs.org/places/point-montara",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857790",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/california",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,7 +219,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,9 +233,104 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:78",
+      "part": "wikidata:Q12066066",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-montara-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-335",
+      "part": "wikidata:Q12066066",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2722",
+      "part": "wikidata:Q12066066",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001094",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.53648,-122.51928",
+      "part": "wikidata:Q12066066",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-montara",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ca:point-montara-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 21.0
+        },
+        {
+          "source": "uslhs",
+          "value": 16.76
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1928
+        },
+        {
+          "source": "uslhs",
+          "value": 1875
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

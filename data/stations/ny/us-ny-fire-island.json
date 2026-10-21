@@ -3,7 +3,10 @@
   "name": "Fire Island Light",
   "other_names": [
     "Fire Island Lighthouse",
-    "Fire Island Lighthouse Visitors Center"
+    "Fire Island Lighthouse Visitors Center",
+    "Fire Island",
+    "Fire Island Light Station Historic District (Boundary Increase)",
+    "Fire Island Light Station"
   ],
   "country": "US",
   "region": "NY",
@@ -24,29 +27,38 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1826,
       "height_m": 51.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1826,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 7.5s",
-    "focal_height_m": 51.0,
+    "focal_height_m": 50.9,
     "range_nm": 24.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
+      "number": "09001288",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/09001288",
+      "listed": "2010-01-29",
+      "nomination": "https://catalog.archives.gov/id/75325195"
+    },
+    {
+      "register": "NRHP",
       "number": "81000082",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000082"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000082",
+      "listed": "1981-09-11",
+      "nomination": "https://catalog.archives.gov/id/75322102"
     }
   ],
   "aton": {
@@ -58,20 +70,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,26 +95,62 @@
       "from": "wikidata"
     },
     {
+      "year": 1826,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1974,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2010,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-fire-island",
+      "relation": "replica",
+      "name": "Fire Island Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_Island_Light_Station_1.jpg",
@@ -154,6 +202,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/368062706",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fire Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=390",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fire Island",
+      "url": "https://archives.uslhs.org/places/fire-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325195",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75322102",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -179,8 +247,75 @@
       "key": "osm:node/368062706",
       "part": "wikidata:Q5451374",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:390",
+      "part": "wikidata:Q5451374",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:fire-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-695",
+      "part": "wikidata:Q5451374",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3409",
+      "part": "wikidata:Q5451374",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:09001288",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000082",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.63245,-73.21858",
+      "part": "wikidata:Q5451374",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:fire-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,6 +325,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {
@@ -209,9 +348,27 @@
         {
           "source": "osm",
           "value": 51.0
+        },
+        {
+          "source": "uslhs",
+          "value": 50.9
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

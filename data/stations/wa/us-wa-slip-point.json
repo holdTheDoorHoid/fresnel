@@ -2,7 +2,9 @@
   "id": "us-wa-slip-point",
   "name": "Slip Point Light",
   "other_names": [
-    "Slip Point Lighthouse"
+    "Slip Point Lighthouse",
+    "Slip Point",
+    "Slip Point Light Station"
   ],
   "country": "US",
   "region": "WA",
@@ -13,10 +15,10 @@
   "location": {
     "lat": 48.2645,
     "lon": -124.251,
-    "precision": "exact",
-    "from": "wikidata"
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +28,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -45,7 +47,8 @@
     {
       "register": "NRHP",
       "number": "100009001",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100009001"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100009001",
+      "listed": "2023-05-16"
     }
   ],
   "aton": {
@@ -77,9 +80,33 @@
   "events": [
     {
       "year": 1905,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1916,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1916,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1950,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1951,
@@ -88,9 +115,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1990,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 2023,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +165,21 @@
       "label": "ARLHS World List of Lights USA762",
       "url": "https://wlol.arlhs.com/lighthouse/USA762.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Slip Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=124",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Slip Point",
+      "url": "https://archives.uslhs.org/places/slip-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,16 +193,48 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:124",
+      "part": "wikidata:Q16900268",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:slip-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8989",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100009001",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

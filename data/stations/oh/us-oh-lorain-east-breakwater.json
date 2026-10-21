@@ -1,7 +1,11 @@
 {
   "id": "us-oh-lorain-east-breakwater",
   "name": "Lorain East Breakwater Light",
-  "other_names": [],
+  "other_names": [
+    "Lorain Harbor",
+    "Lorain East Breakwater",
+    "Lorain Harbor Light"
+  ],
   "country": "US",
   "region": "OH",
   "county": "Lorain",
@@ -34,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 18.0,
-    "range_nm": 10.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 18.3,
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,7 +74,7 @@
     {
       "year": 1965,
       "event": "built",
-      "note": null,
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     }
   ],
@@ -102,6 +106,11 @@
       "label": "ARLHS World List of Lights USA1037",
       "url": "https://wlol.arlhs.com/lighthouse/USA1037.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -114,12 +123,35 @@
         "county",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:lorain-harbor-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4320",
+      "part": "wikidata:Q81311742",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.48104,-82.19523",
+      "part": "wikidata:Q81311742",
+      "fields": [
+        "light"
       ]
     }
   ],

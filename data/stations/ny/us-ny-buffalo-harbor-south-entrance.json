@@ -3,7 +3,15 @@
   "name": "Buffalo Harbor South Entrance Light",
   "other_names": [
     "Buffalo Harbor North and South entrance Lights",
-    "Buffalo Harbor South Entrance Lighthouse"
+    "Buffalo Harbor South Entrance Lighthouse",
+    "Buffalo South Entrance South Side",
+    "Buffalo Harbor South Entrance",
+    "South Buffalo",
+    "Buffalo South Entrance North Side",
+    "Buffalo Harbor South Entrance Light Station",
+    "Buffalo South Side Light Station",
+    "Buffalo Harbor South Entrance Light 3",
+    "Buffalo Harbor South Side Light 4"
   ],
   "country": "US",
   "region": "NY",
@@ -12,8 +20,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 42.833649,
-    "lon": -78.867404,
+    "lat": 42.833614,
+    "lon": -78.867375,
     "precision": "exact",
     "from": "osm"
   },
@@ -47,21 +55,23 @@
     "first_lit": 1903,
     "deactivated": 1993,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 12.2,
+    "range_nm": 4.3,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07001191",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07001191"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07001191",
+      "listed": "2007-11-16",
+      "nomination": "https://catalog.archives.gov/id/75325017"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-2905",
     "arlhs": "USA091",
     "ccg_list_number": null,
     "nga": null
@@ -81,7 +91,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -90,7 +100,7 @@
     {
       "year": 1903,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -102,13 +112,13 @@
     {
       "year": 1993,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -175,6 +185,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1359823055",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo South Entrance South Side",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=295",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buffalo South Entrance North Side",
+      "url": "https://archives.uslhs.org/places/buffalo-south-entrance-north-side",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325017",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -206,7 +236,9 @@
       "source": "osm",
       "key": "osm:way/1358993726",
       "part": "wikidata:Q4985744",
-      "fields": []
+      "fields": [
+        "location"
+      ]
     },
     {
       "source": "osm",
@@ -219,8 +251,59 @@
       "key": "osm:way/1359823055",
       "part": "osm:way/1359823055",
       "fields": [
-        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:295",
+      "part": "wikidata:Q4985744",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:buffalo-harbor-south-entrance-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2910",
+      "part": "wikidata:Q4985744",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2915",
+      "part": "wikidata:Q4985744",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:120822",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07001191",
+      "part": "wikidata:Q4985744",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.83370,-78.86747",
+      "part": "wikidata:Q4985744",
+      "fields": [
+        "light"
       ]
     }
   ],

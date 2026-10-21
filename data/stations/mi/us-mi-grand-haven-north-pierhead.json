@@ -1,7 +1,11 @@
 {
   "id": "us-mi-grand-haven-north-pierhead",
   "name": "Grand Haven North Pierhead Light",
-  "other_names": [],
+  "other_names": [
+    "Grand Haven North Pierhead",
+    "Grand Haven North Pier",
+    "Grand Haven North Pierhead Light 1"
+  ],
   "country": "US",
   "region": "MI",
   "county": null,
@@ -35,9 +39,9 @@
     "lens": null,
     "characteristic": "Fl G 4s",
     "focal_height_m": 11.0,
-    "range_nm": 6.0,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -97,6 +101,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Grand_Haven_North_Pierhead_Light",
       "kind": "commons"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Haven North Pier",
+      "url": "https://archives.uslhs.org/places/grand-haven-north-pier",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -108,12 +122,37 @@
         "aton",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:grand-haven-north-pierhead-1",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18980",
+      "part": "wikidata:Q108763887",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:80569",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.05818,-86.25590",
+      "part": "wikidata:Q108763887",
+      "fields": [
+        "light"
       ]
     }
   ],

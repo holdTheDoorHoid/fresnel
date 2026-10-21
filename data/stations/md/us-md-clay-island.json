@@ -2,7 +2,8 @@
   "id": "us-md-clay-island",
   "name": "Clay Island Light",
   "other_names": [
-    "Clay Island Lighthouse"
+    "Clay Island Lighthouse",
+    "Clay Island"
   ],
   "country": "US",
   "region": "MD",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.234,
-    "lon": -75.97,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.231111,
+    "lon": -75.980556,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1892,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 9.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1892,
-    "deactivated": null,
+    "first_lit": 1832,
+    "deactivated": 1892,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,6 +71,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1892,
       "event": "built",
       "note": null,
@@ -80,6 +87,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1892,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -100,6 +113,16 @@
       "label": "ARLHS World List of Lights USA985",
       "url": "https://wlol.arlhs.com/lighthouse/USA985.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Clay Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1942",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Clay Island",
+      "url": "https://archives.uslhs.org/places/clay-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,15 +134,46 @@
         "aton",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1942",
+      "part": "wikidata:Q5129928",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8459",
+      "part": "wikidata:Q5129928",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1892
+        },
+        {
+          "source": "uslhs",
+          "value": 1832
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

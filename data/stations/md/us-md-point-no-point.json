@@ -2,7 +2,10 @@
   "id": "us-md-point-no-point",
   "name": "Point No Point Light",
   "other_names": [
-    "Point No Point Lighthouse"
+    "Point No Point Lighthouse",
+    "Point No Point",
+    "Point No Point MD",
+    "Point No Point Light Station"
   ],
   "country": "US",
   "region": "MD",
@@ -22,13 +25,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "brick",
       "built": 1905,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -39,13 +42,15 @@
     "focal_height_m": 15.8,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001425",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001425"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001425",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325193"
     }
   ],
   "aton": {
@@ -58,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,19 +89,25 @@
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +159,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Point_No_Point_Light_%28Maryland%29",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Point No Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=434",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point No Point MD",
+      "url": "https://archives.uslhs.org/places/point-no-point-md",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325193",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,8 +205,64 @@
       "part": "wikidata:Q7208097",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:434",
+      "part": "wikidata:Q7208097",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:point-no-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7560",
+      "part": "wikidata:Q7208097",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2878",
+      "part": "wikidata:Q7208097",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001425",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.12813,-76.29027",
+      "part": "wikidata:Q7208097",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:point-no-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,6 +277,10 @@
         {
           "source": "osm",
           "value": 1901
+        },
+        {
+          "source": "uslhs",
+          "value": 1905
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

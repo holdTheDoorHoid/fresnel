@@ -2,7 +2,9 @@
   "id": "us-va-watts-island",
   "name": "Watts Island Light",
   "other_names": [
-    "Watts Island Lighthouse"
+    "Watts Island Lighthouse",
+    "Watts Island",
+    "Watts Island Rocks Warning Light"
   ],
   "country": "US",
   "region": "VA",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.782,
-    "lon": -75.894,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.779521,
+    "lon": -75.895352,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,22 +26,22 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "built": 1833,
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1833,
     "deactivated": 1944,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 13.4,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -72,13 +74,19 @@
     {
       "year": 1833,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1944,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +123,16 @@
       "label": "ARLHS World List of Lights USA873",
       "url": "https://wlol.arlhs.com/lighthouse/USA873.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Watts Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1937",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Watts Island Light",
+      "url": "https://archives.uslhs.org/places/watts-island-light",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +146,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1937",
+      "part": "wikidata:Q7975029",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-22115",
+      "part": "wikidata:Q7975029",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8975",
+      "part": "wikidata:Q7975029",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

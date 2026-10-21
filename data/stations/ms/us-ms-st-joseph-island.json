@@ -2,7 +2,11 @@
   "id": "us-ms-st-joseph-island",
   "name": "St. Joseph Island Light",
   "other_names": [
-    "St. Joseph Island Lighthouse"
+    "St. Joseph Island Lighthouse",
+    "St. Josephs Island",
+    "St. Joseph's Island",
+    "U.S.G.S. St. Joe Pass Monitoring Platform Light",
+    "St Joseph Island Light 22"
   ],
   "country": "US",
   "region": "MS",
@@ -11,12 +15,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.190833,
-    "lon": -89.422222,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.185881,
+    "lon": -89.425412,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +30,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,15 +39,15 @@
     "first_lit": 1861,
     "deactivated": 1888,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 5.2,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "4-10425",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -76,10 +80,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1865,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1888,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -95,6 +111,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/St._Joseph_Island_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: St. Josephs Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1824",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: St. Joseph's Island",
+      "url": "https://archives.uslhs.org/places/st-josephs-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,13 +132,71 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1824",
+      "part": "wikidata:Q23074299",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-10425",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-34615",
+      "part": "wikidata:Q23074299",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8550",
+      "part": "wikidata:Q23074299",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.18471,-89.42598",
+      "part": "wikidata:Q23074299",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.19083,-89.42222",
+      "part": "station",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1861
+        },
+        {
+          "source": "uslhs",
+          "value": 1865
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

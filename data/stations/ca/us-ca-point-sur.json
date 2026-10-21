@@ -2,7 +2,10 @@
   "id": "us-ca-point-sur",
   "name": "Point Sur Lighthouse",
   "other_names": [
-    "Pt.Sur"
+    "Pt.Sur",
+    "Point Sur",
+    "Point Sur Light Station",
+    "Point Sur Light"
   ],
   "country": "US",
   "region": "CA",
@@ -23,29 +26,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1889,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1889,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
+    "characteristic": "Fl W 15s",
     "focal_height_m": 76.2,
-    "range_nm": 25.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001097",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001097"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001097",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857682"
     }
   ],
   "aton": {
@@ -57,20 +62,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +83,25 @@
     {
       "year": 1889,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/255390082",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Sur",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=88",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Sur",
+      "url": "https://archives.uslhs.org/places/point-sur",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857682",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,8 +197,66 @@
       "key": "osm:way/255390082",
       "part": "wikidata:Q7208173",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:88",
+      "part": "wikidata:Q7208173",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-sur",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-280",
+      "part": "wikidata:Q7208173",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2725",
+      "part": "wikidata:Q7208173",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001097",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.30625,-121.90155",
+      "part": "wikidata:Q7208173",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-sur",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,6 +285,10 @@
         {
           "source": "osm",
           "value": 76.2
+        },
+        {
+          "source": "uslhs",
+          "value": 82.3
         }
       ],
       "note": "Sources differ by more than 3 m."

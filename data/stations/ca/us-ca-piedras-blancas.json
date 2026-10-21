@@ -3,7 +3,8 @@
   "name": "Piedras Blancas Light Station",
   "other_names": [
     "Piedras Blancas Lighthouse",
-    "Piedras Blancas"
+    "Piedras Blancas",
+    "Piedras Blancas Light"
   ],
   "country": "US",
   "region": "CA",
@@ -24,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1875,
+      "height_m": 27.4,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 43.2,
-    "range_nm": 21.0,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 43.3,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001095",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001095"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001095",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857782"
     }
   ],
   "aton": {
@@ -55,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "BLM",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +86,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +158,26 @@
       "label": "Website",
       "url": "https://www.blm.gov/ca/st/en/fo/bakersfield/Programs/pbls.html",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Piedras Blancas",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=89",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Piedras Blancas",
+      "url": "https://archives.uslhs.org/places/piedras-blancas",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857782",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,8 +201,69 @@
       "key": "osm:way/348453134",
       "part": "wikidata:Q7191571",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:89",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:piedras-blancas",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-265",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2711",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001095",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.66589,-121.28389",
+      "part": "wikidata:Q7191571",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:piedras-blancas",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -179,6 +281,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 43.0
+        },
+        {
+          "source": "osm",
+          "value": 43.2
+        },
+        {
+          "source": "uslhs",
+          "value": 51.21
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
     }
   ],
   "verification": "facts",

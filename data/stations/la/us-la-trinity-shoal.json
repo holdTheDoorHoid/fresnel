@@ -2,7 +2,9 @@
   "id": "us-la-trinity-shoal",
   "name": "Trinity Shoal Light",
   "other_names": [
-    "Trinity Shoal Lighthouse"
+    "Trinity Shoal Lighthouse",
+    "Trinity Shoal",
+    "Never Built"
   ],
   "country": "US",
   "region": "LA",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1873,
+    "deactivated": 1873,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -68,7 +70,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1873,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -92,6 +107,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Trinity_Shoal_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Trinity Shoal (Never Built)",
+      "url": "https://archives.uslhs.org/places/trinity-shoal-never-built",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,6 +125,15 @@
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:14273",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
       ]
     }
   ],

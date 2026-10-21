@@ -1,7 +1,9 @@
 {
   "id": "us-hi-waiakea",
   "name": "Waiākea Light",
-  "other_names": [],
+  "other_names": [
+    "Wailoa Basin Channel Light 1"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-28120",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -88,6 +90,28 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28120",
+      "part": "osm:node/2408527683",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:19.72419,-155.07120",
+      "part": "osm:node/2408527683",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:19.72434,-155.07178",
+      "part": "osm:node/2408527683",
+      "fields": []
     }
   ],
   "conflicts": [],

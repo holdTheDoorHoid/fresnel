@@ -2,7 +2,9 @@
   "id": "us-mi-north-manitou-island",
   "name": "North Manitou Island Light",
   "other_names": [
-    "North Manitou Island Lighthouse"
+    "North Manitou Island Lighthouse",
+    "North Manitou",
+    "North Manitou Island"
   ],
   "country": "US",
   "region": "MI",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.063,
-    "lon": -85.964,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 45.063333,
+    "lon": -85.963056,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1942) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "built": 1898,
+      "height_m": 18.3,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1899,
+    "first_lit": 1896,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 21.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,6 +72,24 @@
   "stay": null,
   "events": [
     {
+      "year": 1896,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1899,
       "event": "first_lit",
       "note": null,
@@ -95,6 +115,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/North_Manitou_Island_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: North Manitou",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2013",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: North Manitou Island",
+      "url": "https://archives.uslhs.org/places/north-manitou-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -105,15 +135,46 @@
       "fields": [
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2013",
+      "part": "wikidata:Q14716248",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8516",
+      "part": "wikidata:Q14716248",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1899
+        },
+        {
+          "source": "uslhs",
+          "value": 1896
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

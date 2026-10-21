@@ -3,7 +3,8 @@
   "name": "Asylum Light",
   "other_names": [
     "Asylum Lighthouse",
-    "Asylum Point Lighthouse"
+    "Asylum Point Lighthouse",
+    "Asylum Point"
   ],
   "country": "US",
   "region": "WI",
@@ -69,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -108,6 +116,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/705639786",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Asylum Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=576",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Asylum Point",
+      "url": "https://archives.uslhs.org/places/asylum-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,6 +156,26 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:576",
+      "part": "wikidata:Q4812042",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:asylum-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:77200",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

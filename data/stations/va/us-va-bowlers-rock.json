@@ -2,7 +2,9 @@
   "id": "us-va-bowlers-rock",
   "name": "Bowlers Rock Light",
   "other_names": [
-    "Bowlers Rock Lighthouse"
+    "Bowlers Rock Lighthouse",
+    "Bowlers Rock",
+    "Rappahannock River Light 19"
   ],
   "country": "US",
   "region": "VA",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.8245,
-    "lon": -76.7327,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.824503,
+    "lon": -76.732758,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "screwpile",
       "material": null,
       "built": 1868,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 10.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1868,
     "deactivated": 1920,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 6s",
+    "focal_height_m": 6.1,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -76,9 +78,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1868,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1920,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -121,6 +135,16 @@
       "label": "ARLHS World List of Lights USA074",
       "url": "https://wlol.arlhs.com/lighthouse/USA074.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bowlers Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1924",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bowlers Rock",
+      "url": "https://archives.uslhs.org/places/bowlers-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,31 +158,56 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1924",
+      "part": "wikidata:Q15204027",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-15445",
+      "part": "wikidata:Q15204027",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8950",
+      "part": "wikidata:Q15204027",
+      "fields": [
+        "events",
+        "light",
         "structures"
       ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1921
         },
         {
-          "source": "wikidata",
-          "value": 1920
+          "source": "uslhs",
+          "value": 1868
         }
       ],
-      "note": "A source gives the light's service entry (1921) after its retirement (1920); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

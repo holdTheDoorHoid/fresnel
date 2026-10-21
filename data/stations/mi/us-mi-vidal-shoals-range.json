@@ -1,0 +1,163 @@
+{
+  "id": "us-mi-vidal-shoals-range",
+  "name": "Vidal Shoals Range",
+  "other_names": [
+    "Vidal Shoals Channel Range Front",
+    "Vidal Shoals Channel Range Rear",
+    "Winter Point Range Front",
+    "Vidal Shoals Channel Range Front Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.502794,
+    "lon": -84.368107,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": 1892,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F R",
+    "focal_height_m": 6.1,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-14235",
+    "arlhs": "USA-128",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1892,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Vidal Shoals Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2006",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2006",
+      "part": "lighthousefriends:2006",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:vidal-shoals-channel-range-front-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:vidal-shoals-channel-range-rear-3",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:winter-point-range-front-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14230",
+      "part": "lighthousefriends:2006",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.50278,-84.36864",
+      "part": "lighthousefriends:2006",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

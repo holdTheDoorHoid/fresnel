@@ -2,7 +2,8 @@
   "id": "us-or-desdemona-sands",
   "name": "Desdemona Sands Light",
   "other_names": [
-    "Desdemona Sands Lighthouse"
+    "Desdemona Sands Lighthouse",
+    "Desdemona Sands"
   ],
   "country": "US",
   "region": "OR",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.22528,
-    "lon": -123.95361,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 46.225891,
+    "lon": -123.955168,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -23,23 +24,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1901,
       "height_m": null,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1965,
+    "first_lit": 1902,
     "deactivated": 1965,
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 7.0,
-    "range_nm": 12.0,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -74,6 +75,30 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1965,
@@ -121,6 +146,21 @@
       "label": "ARLHS World List of Lights USA982",
       "url": "https://wlol.arlhs.com/lighthouse/USA982.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Desdemona Sands",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1784",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Desdemona Sands Light",
+      "url": "https://archives.uslhs.org/places/desdemona-sands-light",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +174,84 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1784",
+      "part": "wikidata:Q5263839",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:desdemona-sands-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-9995",
+      "part": "wikidata:Q5263839",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8882",
+      "part": "wikidata:Q5263839",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.22569,-123.95514",
+      "part": "wikidata:Q5263839",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 7.0
+        },
+        {
+          "source": "uslhs",
+          "value": 14.1
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1965
+        },
+        {
+          "source": "uslhs",
+          "value": 1902
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

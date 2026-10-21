@@ -2,7 +2,8 @@
   "id": "us-oh-toledo-harbor",
   "name": "Toledo Harbor Light",
   "other_names": [
-    "Toledo Harbor Lighthouse"
+    "Toledo Harbor Lighthouse",
+    "Toledo Harbor"
   ],
   "country": "US",
   "region": "OH",
@@ -22,13 +23,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1901,
       "height_m": 21.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,15 +38,17 @@
     "lens": null,
     "characteristic": "Iso W 6s",
     "focal_height_m": 21.9,
-    "range_nm": 11.3,
+    "range_nm": 13.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83002005",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002005"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002005",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891337"
     }
   ],
   "aton": {
@@ -58,7 +61,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,11 +69,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,19 +87,25 @@
     {
       "year": 1904,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1904,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 3.5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/458437275",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Toledo Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=272",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Toledo Harbor",
+      "url": "https://archives.uslhs.org/places/toledo-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891337",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,8 +198,58 @@
       "part": "wikidata:Q14716827",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:272",
+      "part": "wikidata:Q14716827",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:toledo-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-6030",
+      "part": "wikidata:Q14716827",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3458",
+      "part": "wikidata:Q14716827",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83002005",
+      "part": "wikidata:Q14716827",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:toledo-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -191,13 +270,20 @@
             41.76192,
             -83.32896
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            41.76192,
+            -83.32906
+          ]
         }
       ],
       "distance_m": 9104,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

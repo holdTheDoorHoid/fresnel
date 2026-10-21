@@ -3,11 +3,13 @@
   "name": "Egg Rock Light",
   "other_names": [
     "Egg Rock Lighthouse",
-    "Egg Rock Light Station"
+    "Egg Rock Light Station",
+    "Egg Rock",
+    "Egg Rock ME"
   ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "Hancock",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -33,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
-    "focal_height_m": 20.0,
-    "range_nm": 18.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 19.5,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002270",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002270"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002270",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88684905"
     }
   ],
   "aton": {
@@ -55,23 +59,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Fish and Wildlife Service (Maine Coastal Islands National Wildlife Refuge)",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1976"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,13 +83,31 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1976,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +154,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/367794389",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Egg Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=510",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Egg Rock ME",
+      "url": "https://archives.uslhs.org/places/egg-rock-me",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684905",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -143,7 +185,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,6 +198,68 @@
       "part": "wikidata:Q5347828",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:510",
+      "part": "wikidata:Q5347828",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:egg-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1865",
+      "part": "wikidata:Q5347828",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2903",
+      "part": "wikidata:Q5347828",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002270",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.35396,-68.13832",
+      "part": "wikidata:Q5347828",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:egg-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -3,7 +3,8 @@
   "name": "Kissimmee Lighthouse",
   "other_names": [
     "Lighthouse at Kissimmee Lakefront Park",
-    "Tohopekaliga Lighthouse"
+    "Tohopekaliga Lighthouse",
+    "Kissimmee"
   ],
   "country": "US",
   "region": "FL",
@@ -17,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -69,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1999,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -112,6 +120,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5328460352",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +147,14 @@
       "part": "wikidata:Q64784405",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:kissimmee",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

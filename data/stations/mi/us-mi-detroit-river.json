@@ -3,7 +3,11 @@
   "name": "Detroit River Light",
   "other_names": [
     "Bar Point Shoal Light",
-    "Detroit River Lighthouse"
+    "Detroit River Lighthouse",
+    "Detroit River",
+    "Bar Point Shoal",
+    "Detroit River Light Station",
+    "Bar Point Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -23,30 +27,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "cast_iron",
       "built": 1875,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 6s",
-    "focal_height_m": 16.7,
+    "focal_height_m": 16.8,
     "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83000886",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000886"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000886",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891375"
     },
     {
       "register": "Michigan State Historic Site",
@@ -64,7 +70,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -75,8 +81,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,9 +94,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1885,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +161,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/529600880",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Detroit River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=160",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Detroit River (Bar Point Shoal)",
+      "url": "https://archives.uslhs.org/places/detroit-river-bar-point-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891375",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,12 +205,86 @@
       "key": "osm:node/529600880",
       "part": "wikidata:Q5266004",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:160",
+      "part": "wikidata:Q5266004",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:detroit-river",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-6885",
+      "part": "wikidata:Q5266004",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2962",
+      "part": "wikidata:Q5266004",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000886",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.00083,-83.14125",
+      "part": "wikidata:Q5266004",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:detroit-river",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1875
+        },
+        {
+          "source": "uslhs",
+          "value": 1885
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

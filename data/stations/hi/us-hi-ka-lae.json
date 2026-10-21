@@ -1,7 +1,11 @@
 {
   "id": "us-hi-ka-lae",
   "name": "Ka Lae Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Ka Lae",
+    "Minor light of Hawai'i - Ka Lae",
+    "Ka Lae Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -14,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,19 +34,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1909,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 18.3,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "6-28140",
+    "arlhs": "HAW-008",
     "ccg_list_number": null,
     "nga": null
   },
@@ -72,6 +76,18 @@
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1909,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1972,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -82,6 +98,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2253619208",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Hawai'i - Ka Lae",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=914",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ka Lae",
+      "url": "https://archives.uslhs.org/places/ka-lae",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,10 +128,46 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:914",
+      "part": "osm:node/2253619208",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:ka-lae-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28140",
+      "part": "osm:node/2253619208",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:18619",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.91214,-155.68181",
+      "part": "osm:node/2253619208",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

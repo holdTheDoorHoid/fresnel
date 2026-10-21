@@ -1,7 +1,12 @@
 {
   "id": "us-nc-bald-head",
   "name": "Bald Head Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Bald Head",
+    "Bald Head Island",
+    "Old Baldy",
+    "Bald Head Island Lighthouse"
+  ],
   "country": "US",
   "region": "NC",
   "county": "Brunswick",
@@ -41,7 +46,7 @@
     }
   ],
   "light": {
-    "first_lit": 1817,
+    "first_lit": 1794,
     "deactivated": 1935,
     "lens": null,
     "characteristic": "Fl R 30s",
@@ -54,7 +59,9 @@
     {
       "register": "NRHP",
       "number": "75001242",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75001242"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75001242",
+      "listed": "1975-04-28",
+      "nomination": "https://catalog.archives.gov/id/47719103"
     }
   ],
   "aton": {
@@ -75,15 +82,21 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1794,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1817,
       "event": "built",
@@ -97,6 +110,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1818,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1935,
       "event": "deactivated",
       "note": null,
@@ -105,7 +124,7 @@
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -162,6 +181,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/368084564",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bald Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=349",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719103",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -196,6 +230,40 @@
       "key": "osm:way/368084564",
       "part": "wikidata:Q4286356",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:349",
+      "part": "wikidata:Q4286356",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:bald-head-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75001242",
+      "part": "wikidata:Q4286356",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:bald-head-old-baldy",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

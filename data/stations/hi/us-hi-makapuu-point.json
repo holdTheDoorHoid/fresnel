@@ -4,7 +4,10 @@
   "other_names": [
     "Makapuu Point Lighthouse",
     "Makapu'u Point Lighthouse",
-    "Makapu'u Point Light"
+    "Makapu'u Point Light",
+    "Makapu`u",
+    "Makapu'u Point",
+    "U.S. Coast Guard Makapuu Point Light"
   ],
   "country": "US",
   "region": "HI",
@@ -38,16 +41,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 10s",
-    "focal_height_m": 420.0,
-    "range_nm": 19.0,
+    "focal_height_m": 128.0,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000447",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000447"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000447",
+      "listed": "1977-12-07",
+      "nomination": "https://catalog.archives.gov/id/63815892"
     }
   ],
   "aton": {
@@ -60,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -72,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,19 +85,19 @@
     {
       "year": 1909,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1909,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +144,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/158322483",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Makapu`u",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=141",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Makapu'u Point",
+      "url": "https://archives.uslhs.org/places/makapuu-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63815892",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,8 +189,61 @@
       "key": "osm:way/158322483",
       "part": "wikidata:Q6738723",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:141",
+      "part": "wikidata:Q6738723",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:makapu-u-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28925",
+      "part": "wikidata:Q6738723",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2800",
+      "part": "wikidata:Q6738723",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000447",
+      "part": "wikidata:Q6738723",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:21.30990,-157.64977",
+      "part": "wikidata:Q6738723",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:makapu-u-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -180,6 +258,10 @@
         {
           "source": "osm",
           "value": 420.0
+        },
+        {
+          "source": "uslhs",
+          "value": 128.02
         }
       ],
       "note": "Sources differ by more than 3 m."
@@ -200,13 +282,20 @@
             21.3099,
             -157.64976
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            21.30994,
+            -157.64978
+          ]
         }
       ],
       "distance_m": 607,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

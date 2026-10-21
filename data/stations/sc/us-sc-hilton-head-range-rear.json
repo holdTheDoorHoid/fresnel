@@ -1,7 +1,13 @@
 {
   "id": "us-sc-hilton-head-range-rear",
   "name": "Hilton Head Range Rear Light",
-  "other_names": [],
+  "other_names": [
+    "Hilton Head Rear Range",
+    "Hilton Head Range Rear",
+    "Leamington",
+    "Rear Lighthouse of Hilton Head Range Light Station",
+    "Leamington Lighthouse"
+  ],
   "country": "US",
   "region": "SC",
   "county": "Beaufort",
@@ -20,30 +26,32 @@
     {
       "role": "rear_range",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "cast_iron",
       "built": 1879,
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1880,
+    "first_lit": 1877,
     "deactivated": 1932,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 28.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "85003349",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85003349"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85003349",
+      "listed": "1985-12-12",
+      "nomination": "https://catalog.archives.gov/id/118997171"
     }
   ],
   "aton": {
@@ -55,24 +63,30 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1879,
       "event": "built",
@@ -81,20 +95,32 @@
     },
     {
       "year": 1880,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1880,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1881,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1932,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1985,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/844391372",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hilton Head Rear Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=331",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hilton Head Range Rear (Leamington)",
+      "url": "https://archives.uslhs.org/places/hilton-head-range-rear-leamington",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/118997171",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,9 +209,67 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:331",
+      "part": "wikidata:Q5764593",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:hilton-head-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3513",
+      "part": "wikidata:Q5764593",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:85003349",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:hilton-head-rear-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1880
+        },
+        {
+          "source": "uslhs",
+          "value": 1877
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,9 @@
   "name": "Umpqua River Light",
   "other_names": [
     "Umpqua River Lighthouse",
-    "Umpqua River Light House"
+    "Umpqua River Light House",
+    "Umpqua River",
+    "Umpqua River Lights"
   ],
   "country": "US",
   "region": "OR",
@@ -33,20 +35,27 @@
     }
   ],
   "light": {
-    "first_lit": 1894,
+    "first_lit": 1856,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Al.Fl(2+1) WR 15s",
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Al Fl(2+1) W R 15s",
     "focal_height_m": 50.0,
     "range_nm": 21.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001100",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001100"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001100",
+      "listed": "1977-10-21",
+      "nomination": "https://catalog.archives.gov/id/77849237"
     }
   ],
   "aton": {
@@ -58,28 +67,46 @@
   "agency": "Douglas County Museum Foundation",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1894,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -89,9 +116,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1911,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -101,6 +134,11 @@
       "id": "us-or-u-s-coast-guard-station-umpqua-river-administration-and-equipment",
       "relation": "life_saving_station_nearby",
       "name": "U.S. Coast Guard Station – Umpqua River, Administration and Equipment Buildings"
+    },
+    {
+      "id": "us-ca-umpqua-river",
+      "relation": "replica",
+      "name": "Umpqua River Lighthouse"
     }
   ],
   "photos": [
@@ -154,6 +192,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/relation/20018457",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Umpqua River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=130",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Umpqua River Lights",
+      "url": "https://archives.uslhs.org/places/umpqua-river-lights",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Umpqua River",
+      "url": "https://archives.uslhs.org/places/umpqua-river",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77849237",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -166,7 +229,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -191,6 +253,79 @@
       "key": "osm:relation/20018457",
       "part": "wikidata:Q7881779",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:130",
+      "part": "wikidata:Q7881779",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:umpqua-river-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-620",
+      "part": "wikidata:Q7881779",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-9260",
+      "part": "wikidata:Q7881779",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:102989",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3466",
+      "part": "wikidata:Q7881779",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001100",
+      "part": "wikidata:Q7881779",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.66229,-124.19853",
+      "part": "wikidata:Q7881779",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:umpqua-river",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -207,6 +342,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1894
+        },
+        {
+          "source": "osm",
+          "value": 1894
+        },
+        {
+          "source": "uslhs",
+          "value": 1856
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

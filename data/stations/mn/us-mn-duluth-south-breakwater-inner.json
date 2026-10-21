@@ -3,14 +3,18 @@
   "name": "Duluth South Breakwater Inner Light",
   "other_names": [
     "Duluth South Breakwater Inner Lighthouse",
-    "South Breakwater Inner Light"
+    "South Breakwater Inner Light",
+    "Duluth Harbor South Breakwater Inner",
+    "Duluth South Breakwater Inner (Duluth Range Rear) Lighthouse",
+    "Duluth Harbor South Breakwater Inner Light",
+    "Duluth South Breakwater Inner"
   ],
   "country": "US",
   "region": "MN",
   "county": "St. Louis",
   "water": null,
-  "setting": "pier",
-  "kind": "pier_light",
+  "setting": null,
+  "kind": "range_lights",
   "location": {
     "lat": 46.778714,
     "lon": -92.092016,
@@ -33,20 +37,22 @@
     }
   ],
   "light": {
-    "first_lit": 1901,
+    "first_lit": 1889,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 20.7,
-    "range_nm": 16.0,
+    "range_nm": 13.9,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83000945",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000945"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000945",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891448"
     }
   ],
   "aton": {
@@ -58,8 +64,8 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -71,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,10 +89,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1900,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1901,
@@ -97,7 +115,7 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +162,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9021121686",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Duluth Harbor South Breakwater Inner",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=264",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891448",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,8 +188,6 @@
         "aton",
         "county",
         "events",
-        "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -173,6 +204,56 @@
         "events",
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:264",
+      "part": "wikidata:Q5313522",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:duluth-harbor-south-breakwater-inner-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15860",
+      "part": "wikidata:Q5313522",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000945",
+      "part": "wikidata:Q5313522",
+      "fields": [
+        "events",
+        "kind",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.77877,-92.09181",
+      "part": "wikidata:Q5313522",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:duluth-south-breakwater-inner",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

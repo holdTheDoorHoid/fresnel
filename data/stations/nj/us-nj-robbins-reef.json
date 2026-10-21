@@ -3,7 +3,10 @@
   "name": "Robbins Reef Light",
   "other_names": [
     "Robbins Reef Lighthouse",
-    "Robbins Reef Light Station"
+    "Robbins Reef Light Station",
+    "Robbins Reef",
+    "Robbin's Reef",
+    "Kate's Light"
   ],
   "country": "US",
   "region": "NJ",
@@ -24,29 +27,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1839,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1883,
+    "first_lit": 1839,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 17.1,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000631",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000631"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000631",
+      "listed": "2006-07-19",
+      "nomination": "https://catalog.archives.gov/id/75325035"
     }
   ],
   "aton": {
@@ -55,11 +60,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Noble Maritime Collection",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +75,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +88,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1883,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -97,7 +108,7 @@
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +160,26 @@
       "label": "Website",
       "url": "https://noblemaritime.org/robbins-reef-lighthouse-a-home-in-the-harbor",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Robbins Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=582",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Robbins Reef",
+      "url": "https://archives.uslhs.org/places/robbins-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325035",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +192,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,12 +205,95 @@
       "part": "wikidata:Q425986",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:582",
+      "part": "wikidata:Q425986",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:robbin-s-reef-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-34975",
+      "part": "wikidata:Q425986",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3385",
+      "part": "wikidata:Q425986",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000631",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.65736,-74.06535",
+      "part": "wikidata:Q425986",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.65828,-74.06467",
+      "part": "wikidata:Q425986",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:robbins-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1883
+        },
+        {
+          "source": "osm",
+          "value": 1883
+        },
+        {
+          "source": "uslhs",
+          "value": 1839
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

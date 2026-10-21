@@ -2,7 +2,9 @@
   "id": "us-me-west-quoddy-head",
   "name": "West Quoddy Head Light",
   "other_names": [
-    "West Quoddy Head Lighthouse"
+    "West Quoddy Head Lighthouse",
+    "West Quoddy Head",
+    "West Quoddy Head Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.815111,
-    "lon": -66.950472,
+    "lat": 44.815108,
+    "lon": -66.950671,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -23,29 +25,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1808,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1808,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl(2) W 15s",
-    "focal_height_m": 25.0,
-    "range_nm": 18.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 25.2,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80004601",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80004601"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80004601",
+      "listed": "1980-07-04",
+      "nomination": "https://catalog.archives.gov/id/88687607"
     }
   ],
   "aton": {
@@ -54,23 +63,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Maine Department of Parks and Land",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1988"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,21 +91,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1808,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -106,6 +133,11 @@
       "id": "us-me-west-quoddy-lifesaving-station",
       "relation": "life_saving_station_nearby",
       "name": "West Quoddy Lifesaving Station"
+    },
+    {
+      "id": "us-az-west-quoddy",
+      "relation": "replica",
+      "name": "West Quoddy Lighthouse"
     }
   ],
   "photos": [
@@ -149,6 +181,26 @@
       "label": "ARLHS World List of Lights USA880",
       "url": "https://wlol.arlhs.com/lighthouse/USA880.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: West Quoddy Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=506",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: West Quoddy Head",
+      "url": "https://archives.uslhs.org/places/west-quoddy-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687607",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,18 +213,94 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:506",
+      "part": "wikidata:Q845154",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:west-quoddy-head-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1040",
+      "part": "wikidata:Q845154",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2943",
+      "part": "wikidata:Q845154",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80004601",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.81511,-66.95067",
+      "part": "wikidata:Q845154",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:west-quoddy-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1808
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

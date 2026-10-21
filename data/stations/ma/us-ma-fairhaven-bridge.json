@@ -2,7 +2,8 @@
   "id": "us-ma-fairhaven-bridge",
   "name": "Fairhaven Bridge Light",
   "other_names": [
-    "Fairhaven Bridge Lighthouse"
+    "Fairhaven Bridge Lighthouse",
+    "Fairhaven Bridge"
   ],
   "country": "US",
   "region": "MA",
@@ -16,8 +17,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,7 +27,7 @@
       "material": null,
       "built": 1888,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -105,6 +106,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Fairhaven_Bridge_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fairhaven Bridge",
+      "url": "https://archives.uslhs.org/places/fairhaven-bridge",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,6 +128,12 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:10041",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

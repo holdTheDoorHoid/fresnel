@@ -2,11 +2,14 @@
   "id": "us-ny-old-field-point",
   "name": "Old Field Point Light",
   "other_names": [
-    "Old Field Point Lighthouse"
+    "Old Field Point Lighthouse",
+    "Old Field Point",
+    "Old Field Point Light Station",
+    "Old Field Village Hall"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Suffolk",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -16,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -32,16 +35,23 @@
     }
   ],
   "light": {
-    "first_lit": 1868,
-    "deactivated": 1933,
+    "first_lit": 1824,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Alternating R and G 24 s (R 12s , G 12s)",
-    "focal_height_m": 23.0,
+    "characteristic": "Al R G 20s",
+    "focal_height_m": 22.6,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "100009784",
+      "url": null,
+      "listed": "2024-01-25"
+    }
+  ],
   "aton": {
     "uscg_llnr": "1-21275",
     "arlhs": "USA563",
@@ -51,20 +61,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,16 +86,52 @@
       "from": "wikidata"
     },
     {
+      "year": 1824,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1868,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1868,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1869,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 2024,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -131,6 +177,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/277751895",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Old Field Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=745",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Old Field Point",
+      "url": "https://archives.uslhs.org/places/old-field-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -142,7 +203,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -156,10 +216,96 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:745",
+      "part": "wikidata:Q7083974",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:old-field-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21275",
+      "part": "wikidata:Q7083974",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3423",
+      "part": "wikidata:Q7083974",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100009784",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.97700,-73.11856",
+      "part": "wikidata:Q7083974",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:old-field-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1868
+        },
+        {
+          "source": "uslhs",
+          "value": 1824
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

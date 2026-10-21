@@ -3,7 +3,8 @@
   "name": "Bois Blanc Light",
   "other_names": [
     "Bois Blanc Lighthouse",
-    "Bois Blanc Island Lighthouse"
+    "Bois Blanc Island Lighthouse",
+    "Bois Blanc Island"
   ],
   "country": "US",
   "region": "MI",
@@ -24,23 +25,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1867,
+      "height_m": 11.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1829,
     "deactivated": 1924,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": null,
-    "range_nm": 6.0,
+    "focal_height_m": 9.8,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,8 +53,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,12 +65,30 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1829,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1867,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1867,
       "event": "first_lit",
@@ -77,9 +96,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1924,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -126,6 +151,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=718",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bois Blanc Island",
+      "url": "https://archives.uslhs.org/places/bois-blanc-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,9 +186,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:718",
+      "part": "wikidata:Q4938415",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:bois-blanc-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12535",
+      "part": "wikidata:Q4938415",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2954",
+      "part": "wikidata:Q4938415",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.81132,-84.42073",
+      "part": "wikidata:Q4938415",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:bois-blanc-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1867
+        },
+        {
+          "source": "uslhs",
+          "value": 1829
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

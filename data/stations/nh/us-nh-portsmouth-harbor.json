@@ -3,7 +3,12 @@
   "name": "Portsmouth Harbor Light",
   "other_names": [
     "Portsmouth Harbor Lighthouse",
-    "New Castle Light"
+    "New Castle Light",
+    "Portsmouth Harbor",
+    "New Castle, Fort Point, Fort Constitution",
+    "Fort Point Light",
+    "Fort Constitution Light",
+    "Portsmouth Harbor (New Castle) Light"
   ],
   "country": "US",
   "region": "NH",
@@ -22,7 +27,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Portsmouth Harbor Light",
       "type": "cast_iron",
       "material": "cast_iron",
       "built": 1771,
@@ -30,23 +35,60 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "other",
+      "name": "Marine Safety Detachment",
+      "type": null,
+      "material": null,
+      "built": 1872,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 43.071275,
+        "lon": -70.70901
+      }
+    },
+    {
+      "role": "oil_house",
+      "name": "Oil House",
+      "type": null,
+      "material": null,
+      "built": 1903,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 43.07111,
+        "lon": -70.708991
+      }
     }
   ],
   "light": {
-    "first_lit": 1878,
+    "first_lit": 1771,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F G",
-    "focal_height_m": 52.0,
+    "focal_height_m": 15.8,
     "range_nm": 12.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "09000816",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/09000816"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/09000816",
+      "listed": "2009-10-08",
+      "nomination": "https://catalog.archives.gov/id/75325147"
     }
   ],
   "aton": {
@@ -55,23 +97,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Owned by U.S. Coast Guard; licensed to American Lighthouse Foundation",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "OpenStreetMap tags the structure access=permissive. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1960"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +125,27 @@
       "from": "wikidata"
     },
     {
-      "year": 1878,
+      "year": 1771,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
       "event": "built",
       "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1878,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -95,15 +155,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1903,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
       "year": 1960,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 2009,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -153,8 +219,38 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1058293629",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/47405349",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/856767263",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Portsmouth Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=553",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Hampshire",
+      "url": "https://www.ibiblio.org/lighthouse/nh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Portsmouth Harbor",
+      "url": "https://archives.uslhs.org/places/portsmouth-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325147",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,7 +263,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,10 +281,88 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1058293629",
+      "part": "osm:way/1058293629",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/47405349",
+      "part": "wikidata:Q2105290",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/856767263",
+      "part": "osm:way/856767263",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:553",
+      "part": "wikidata:Q2105290",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nh:portsmouth-harbor-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-8330",
       "part": "wikidata:Q2105290",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3372",
+      "part": "wikidata:Q2105290",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:09000816",
+      "part": "wikidata:Q2105290",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.07106,-70.70862",
+      "part": "wikidata:Q2105290",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nh:portsmouth-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -204,6 +377,10 @@
         {
           "source": "osm",
           "value": 52.0
+        },
+        {
+          "source": "uslhs",
+          "value": 15.85
         }
       ],
       "note": "Sources differ by more than 3 m."

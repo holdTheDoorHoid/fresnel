@@ -2,7 +2,11 @@
   "id": "us-in-indiana-harbor-east-breakwater",
   "name": "Indiana Harbor East Breakwater Light",
   "other_names": [
-    "Indiana Harbor East Breakwater Lighthouse"
+    "Indiana Harbor East Breakwater Lighthouse",
+    "Indiana Harbor East Breakwater",
+    "Indiana Harbor",
+    "Indiana Harbor East Breakwater Old",
+    "Indiana Harbor Light 5"
   ],
   "country": "US",
   "region": "IN",
@@ -16,30 +20,45 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Indiana Harbor East Breakwater Old",
       "type": null,
       "material": null,
-      "built": null,
+      "built": 1924,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 41.67517,
+        "lon": -87.438
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Indiana Harbor East Breakwater Light",
+      "type": "crib",
+      "material": "concrete",
+      "built": 1935,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1923,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso G 6s",
-    "focal_height_m": 24.0,
-    "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 14.6,
+    "range_nm": 5.2,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +71,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,17 +82,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1923,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1924,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1935,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1985,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -119,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/441590467",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Indiana Harbor East Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=663",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Indiana Harbor East Breakwater",
+      "url": "https://archives.uslhs.org/places/indiana-harbor-east-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Indiana Harbor East Breakwater Old",
+      "url": "https://archives.uslhs.org/places/indiana-harbor-east-breakwater-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -131,7 +194,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -145,10 +207,97 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:663",
+      "part": "wikidata:Q6023208",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:indiana-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:indiana-harbor-east-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19675",
+      "part": "wikidata:Q6023208",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19690",
+      "part": "uslhs:8430",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7085",
+      "part": "wikidata:Q6023208",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8430",
+      "part": "uslhs:8430",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.67435,-87.43885",
+      "part": "uslhs:8430",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.68084,-87.44112",
+      "part": "wikidata:Q6023208",
+      "fields": []
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

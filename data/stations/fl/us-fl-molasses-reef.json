@@ -1,7 +1,10 @@
 {
   "id": "us-fl-molasses-reef",
   "name": "Molasses Reef Light",
-  "other_names": [],
+  "other_names": [
+    "Molasses Reef",
+    "Molasses Reef Light 10"
+  ],
   "country": "US",
   "region": "FL",
   "county": "Monroe",
@@ -14,7 +17,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,20 +27,20 @@
       "material": null,
       "built": 1921,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1921,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 14.0,
-    "range_nm": 7.0,
+    "focal_height_m": 13.7,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -46,15 +49,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "NOAA",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "automated",
-    "as_of": "1921"
+    "status": "unknown",
+    "as_of": null
   },
   "visit": {
     "grounds_open": null,
@@ -70,8 +73,14 @@
     {
       "year": 1921,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1921,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1921,
@@ -108,6 +117,16 @@
       "label": "ARLHS World List of Lights USA507",
       "url": "https://wlol.arlhs.com/lighthouse/USA507.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Molasses Reef",
+      "url": "https://archives.uslhs.org/places/molasses-reef",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,12 +139,44 @@
         "county",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:molasses-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-960",
+      "part": "wikidata:Q69398401",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:40906",
+      "part": "wikidata:Q69398401",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:25.01184,-80.37651",
+      "part": "wikidata:Q69398401",
+      "fields": [
+        "light"
       ]
     }
   ],

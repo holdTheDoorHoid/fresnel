@@ -3,7 +3,10 @@
   "name": "Annisquam Harbor Light",
   "other_names": [
     "Annisquam Harbor Lighthouse",
-    "Wigwam Point Light"
+    "Wigwam Point Light",
+    "Annisquam",
+    "Annisquam Harbor",
+    "Annisquam Harbor Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 1898,
+    "first_lit": 1801,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
+    "characteristic": "Fl W 7.5s",
     "focal_height_m": 13.7,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001526",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001526"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001526",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790234"
     }
   ],
   "aton": {
@@ -56,10 +61,10 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -71,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +88,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1801,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1897,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -97,13 +108,13 @@
     {
       "year": 1974,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +161,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713444797",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Annisquam",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=604",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Annisquam Harbor",
+      "url": "https://archives.uslhs.org/places/annisquam-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790234",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +193,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -177,8 +207,65 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:604",
+      "part": "wikidata:Q4769525",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:annisquam-harbor-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-9615",
+      "part": "wikidata:Q4769525",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2819",
+      "part": "wikidata:Q4769525",
+      "fields": [
+        "access",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001526",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.66188,-70.68152",
+      "part": "wikidata:Q4769525",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:annisquam",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -207,6 +294,10 @@
         {
           "source": "osm",
           "value": 1897
+        },
+        {
+          "source": "uslhs",
+          "value": 1801
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

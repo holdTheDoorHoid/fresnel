@@ -3,7 +3,8 @@
   "name": "Cove Point Light",
   "other_names": [
     "Cove Point Lighthouse",
-    "US Coast Guard (Cove Pt Lighthouse)"
+    "US Coast Guard (Cove Pt Lighthouse)",
+    "Cove Point"
   ],
   "country": "US",
   "region": "MD",
@@ -24,29 +25,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1828,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1828,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 10s",
     "focal_height_m": 13.7,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000907",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000907"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000907",
+      "listed": "1973-04-11",
+      "nomination": "https://catalog.archives.gov/id/106776900"
     }
   ],
   "aton": {
@@ -56,48 +64,55 @@
     "nga": null
   },
   "agency": "United States Department of Defense",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1986"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://www.calvertmarinemuseum.com/218/Cove-Point-Lighthouse-Rental",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1828,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1828,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1986,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -149,6 +164,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/541622176",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cove Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=431",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cove Point",
+      "url": "https://archives.uslhs.org/places/cove-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106776900",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maryland",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -182,8 +222,74 @@
       "source": "osm",
       "key": "osm:way/541622176",
       "part": "wikidata:Q5178935",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:431",
+      "part": "wikidata:Q5178935",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:cove-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7630",
+      "part": "wikidata:Q5178935",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2869",
+      "part": "wikidata:Q5178935",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000907",
+      "part": "wikidata:Q5178935",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.38621,-76.38160",
+      "part": "wikidata:Q5178935",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:cove-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:md:cove-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

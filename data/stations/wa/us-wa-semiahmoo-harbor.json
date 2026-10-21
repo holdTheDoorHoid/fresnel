@@ -2,7 +2,9 @@
   "id": "us-wa-semiahmoo-harbor",
   "name": "Semiahmoo Harbor Light",
   "other_names": [
-    "Semiahmoo Harbor Lighthouse"
+    "Semiahmoo Harbor Lighthouse",
+    "Semiahmoo Harbor",
+    "Semiahmoo Bay Light 4"
   ],
   "country": "US",
   "region": "WA",
@@ -16,34 +18,34 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1905,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1905,
     "deactivated": 1944,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-19920",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -78,8 +80,14 @@
     {
       "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1944,
@@ -116,6 +124,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Semiahmoo_Harbor_Light",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Semiahmoo Harbor",
+      "url": "https://archives.uslhs.org/places/semiahmoo-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,10 +146,35 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-19920",
+      "part": "wikidata:Q7449346",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8986",
+      "part": "wikidata:Q7449346",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.99224,-122.78406",
+      "part": "wikidata:Q7449346",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

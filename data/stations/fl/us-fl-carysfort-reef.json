@@ -2,7 +2,9 @@
   "id": "us-fl-carysfort-reef",
   "name": "Carysfort Reef Light",
   "other_names": [
-    "Carysfort Reef Lighthouse"
+    "Carysfort Reef Lighthouse",
+    "Carysfort Reef",
+    "Carysfort Lighthouse"
   ],
   "country": "US",
   "region": "FL",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 25.221872,
-    "lon": -80.21142,
+    "lat": 25.22189,
+    "lon": -80.21149,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "iron",
       "built": 1825,
-      "height_m": null,
+      "height_m": 30.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1852,
+    "first_lit": 1825,
     "deactivated": 2014,
     "lens": null,
-    "characteristic": "Fl(3) W 60s",
-    "focal_height_m": null,
+    "characteristic": "Fl Y 4s",
+    "focal_height_m": 30.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84000199",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000199"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000199",
+      "listed": "1984-10-31",
+      "nomination": "https://catalog.archives.gov/id/77843302"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,16 +86,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1852,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1852,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1852,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2014,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2014,
@@ -138,6 +166,26 @@
       "label": "ARLHS World List of Lights USA143",
       "url": "https://wlol.arlhs.com/lighthouse/USA143.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Carysfort Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=703",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Carysfort Reef",
+      "url": "https://archives.uslhs.org/places/carysfort-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77843302",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -151,17 +199,92 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:703",
+      "part": "wikidata:Q5047751",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:carysfort-reef-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:carysfort-reef-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2771",
+      "part": "wikidata:Q5047751",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84000199",
+      "part": "wikidata:Q5047751",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:25.22238,-80.21010",
+      "part": "wikidata:Q5047751",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:carysfort-reef",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1852
+        },
+        {
+          "source": "uslhs",
+          "value": 1825
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

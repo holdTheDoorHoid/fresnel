@@ -1,7 +1,10 @@
 {
   "id": "us-ma-lovells-island-range",
   "name": "Lovells Island Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Lovells Range",
+    "Lovells Island Range"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Suffolk",
@@ -9,13 +12,13 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 42.332778,
-    "lon": -70.930556,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 42.331944,
+    "lon": -70.931111,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1939) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -24,20 +27,20 @@
       "material": null,
       "built": 1903,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1903,
     "deactivated": 1939,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,13 +73,19 @@
     {
       "year": 1903,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1939,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -119,6 +128,21 @@
       "label": "ARLHS World List of Lights USA1114",
       "url": "https://wlol.arlhs.com/lighthouse/USA1114.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Lovells Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1976",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lovells Island Range",
+      "url": "https://archives.uslhs.org/places/lovells-island-range",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,16 +156,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1976",
+      "part": "wikidata:Q6692232",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:lovells-island-range-lights",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8493",
+      "part": "wikidata:Q6692232",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

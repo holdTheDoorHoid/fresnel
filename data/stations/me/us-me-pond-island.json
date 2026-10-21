@@ -2,7 +2,8 @@
   "id": "us-me-pond-island",
   "name": "Pond Island Light",
   "other_names": [
-    "Pond Island Lighthouse"
+    "Pond Island Lighthouse",
+    "Pond Island"
   ],
   "country": "US",
   "region": "ME",
@@ -23,23 +24,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1821,
       "height_m": 6.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1855,
+    "first_lit": 1821,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 16.0,
+    "focal_height_m": 15.8,
     "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -48,22 +49,22 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Fish and Wildlife Service (Maine Coastal Islands National Wildlife Refuge)",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1959"
+    "as_of": "1960"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -76,16 +77,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1821,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1855,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1959,
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1960,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -131,6 +156,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1104534797",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Pond Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=493",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pond Island",
+      "url": "https://archives.uslhs.org/places/pond-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +183,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,9 +196,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:493",
+      "part": "wikidata:Q7227660",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:pond-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6025",
+      "part": "wikidata:Q7227660",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2929",
+      "part": "wikidata:Q7227660",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.74003,-69.77030",
+      "part": "wikidata:Q7227660",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1855
+        },
+        {
+          "source": "uslhs",
+          "value": 1821
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

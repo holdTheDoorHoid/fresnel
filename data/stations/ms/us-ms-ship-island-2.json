@@ -2,7 +2,8 @@
   "id": "us-ms-ship-island-2",
   "name": "Ship Island Light",
   "other_names": [
-    "Ship Island Lighthouse"
+    "Ship Island Lighthouse",
+    "Ship Island"
   ],
   "country": "US",
   "region": "MS",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.2127,
-    "lon": -88.9661,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.21257,
+    "lon": -88.9663,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": null,
       "built": 1853,
       "height_m": 24.0,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -36,10 +37,10 @@
     "deactivated": 1964,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 25.5,
-    "range_nm": null,
+    "focal_height_m": 25.0,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -126,6 +127,11 @@
       "label": "ARLHS World List of Lights USA1141",
       "url": "https://wlol.arlhs.com/lighthouse/USA1141.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Ship Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=648",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,11 +145,38 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:648",
+      "part": "wikidata:Q7497930",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-335",
+      "part": "wikidata:Q7497930",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-9580",
+      "part": "wikidata:Q7497930",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.21262,-88.96632",
+      "part": "wikidata:Q7497930",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -163,7 +196,7 @@
       "note": "A source gives the light's service entry (1971) after its retirement (1964); it may have been relit. Neither is shown as the first lighting."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

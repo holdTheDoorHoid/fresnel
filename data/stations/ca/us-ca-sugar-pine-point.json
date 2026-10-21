@@ -2,7 +2,8 @@
   "id": "us-ca-sugar-pine-point",
   "name": "Sugar Pine Point Light",
   "other_names": [
-    "Sugar Pine Point Lighthouse"
+    "Sugar Pine Point Lighthouse",
+    "Sugar Pine Point"
   ],
   "country": "US",
   "region": "CA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1985,
+    "first_lit": 1921,
     "deactivated": 1985,
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 4.5,
-    "range_nm": null,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -74,6 +75,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1921,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1985,
@@ -121,6 +128,11 @@
       "label": "ARLHS World List of Lights USA916",
       "url": "https://wlol.arlhs.com/lighthouse/USA916.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,6 +150,29 @@
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:sugar-pine-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-8405",
+      "part": "wikidata:Q7634886",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.06126,-120.11393",
+      "part": "wikidata:Q7634886",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -2,7 +2,10 @@
   "id": "us-ca-ballast-point",
   "name": "Ballast Point Light",
   "other_names": [
-    "Ballast Point Lighthouse"
+    "Ballast Point Lighthouse",
+    "Ballast Point",
+    "lantern",
+    "Ballast Point Light B"
   ],
   "country": "US",
   "region": "CA",
@@ -11,39 +14,39 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 32.686389,
-    "lon": -117.2325,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.752,
+    "lon": -117.195475,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1960) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
+      "material": "wood",
       "built": 1890,
       "height_m": 10.0,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1891,
+    "first_lit": 1890,
     "deactivated": 1960,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 4.9,
+    "range_nm": 9.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-1570",
     "arlhs": "USA033",
     "ccg_list_number": null,
     "nga": null
@@ -51,8 +54,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -72,14 +75,32 @@
     {
       "year": 1890,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1891,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1959,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1960,
@@ -92,6 +113,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1961,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -132,6 +159,21 @@
       "label": "ARLHS World List of Lights USA033",
       "url": "https://wlol.arlhs.com/lighthouse/USA033.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Ballast Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1585",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ballast Point",
+      "url": "https://archives.uslhs.org/places/ballast-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,12 +187,83 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1585",
+      "part": "wikidata:Q4851545",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:ballast-point-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:ballast-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:ballast-point-3",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1570",
+      "part": "wikidata:Q4851545",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8372",
+      "part": "wikidata:Q4851545",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.68633,-117.23277",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.68680,-117.23320",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.68735,-117.23305",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

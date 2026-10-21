@@ -1,11 +1,12 @@
 {
   "id": "us-ma-newburyport-harbor-range",
-  "name": "Newburyport Harbor Range Lights",
+  "name": "Newburyport Harbor Range Front",
   "other_names": [
     "Newburyport Harbor Front Range Light",
     "Newburyport Harbor Rear Range Light",
     "Rear Range Light",
-    "Front Range Light"
+    "Front Range Light",
+    "Newburyport Harbor Range Rear"
   ],
   "country": "US",
   "region": "MA",
@@ -37,12 +38,12 @@
       "role": "rear_range",
       "name": "Newburyport Harbor Rear Range Light",
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1873,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 42.811245,
         "lon": -70.866074
@@ -50,25 +51,29 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": 1961,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 17.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87000887",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000887"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000887",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790216"
     },
     {
       "register": "NRHP",
       "number": "87001486",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001486"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001486",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790232"
     }
   ],
   "aton": {
@@ -77,11 +82,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -89,7 +94,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -101,19 +106,25 @@
     {
       "year": 1873,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1961,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -194,6 +205,41 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/271953471",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Newburyport Harbor Range Rear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=600",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Newburyport Harbor Range Front",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=602",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Newburyport Harbor Range Front",
+      "url": "https://archives.uslhs.org/places/newburyport-harbor-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Newburyport Harbor Range Rear",
+      "url": "https://archives.uslhs.org/places/newburyport-harbor-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790216",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790232",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -235,6 +281,74 @@
       "part": "wikidata:Q14715767",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:600",
+      "part": "wikidata:Q7017274",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:602",
+      "part": "wikidata:Q14715767",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:newburyport-harbor-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:newburyport-harbor-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2850",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9417",
+      "part": "wikidata:Q7017274",
+      "fields": [
+        "agency",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87000887",
+      "part": "wikidata:Q7017274",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001486",
+      "part": "wikidata:Q14715767",
+      "fields": [
+        "registers"
       ]
     }
   ],

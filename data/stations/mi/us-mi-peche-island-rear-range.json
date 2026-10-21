@@ -2,7 +2,10 @@
   "id": "us-mi-peche-island-rear-range",
   "name": "Peche Island Rear Range Light",
   "other_names": [
-    "Peche Island Lighthouse Tower"
+    "Peche Island Lighthouse Tower",
+    "Peche Island",
+    "Lightship 103 Huron",
+    "Peche (Peach) Island Range Rear"
   ],
   "country": "US",
   "region": "MI",
@@ -32,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1908,
+    "first_lit": 1898,
     "deactivated": 1983,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
@@ -64,15 +67,21 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1908,
       "event": "built",
-      "note": null,
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -80,6 +89,18 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1970,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1983,
@@ -131,6 +152,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/466471322",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Peche Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=165",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,9 +188,55 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:165",
+      "part": "wikidata:Q7158664",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:lightship-103-huron",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:peche-peach-island-range-rear-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:peche-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1983
+        },
+        {
+          "source": "rowlett",
+          "value": 1970
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

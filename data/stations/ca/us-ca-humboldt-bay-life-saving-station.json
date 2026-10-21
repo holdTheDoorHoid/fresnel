@@ -1,10 +1,12 @@
 {
   "id": "us-ca-humboldt-bay-life-saving-station",
   "name": "Humboldt Bay Life-Saving Station",
-  "other_names": [],
+  "other_names": [
+    "United States Coast Guard Station Humbolt Bay"
+  ],
   "country": "US",
   "region": "CA",
-  "county": null,
+  "county": "Humboldt",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "79000477",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000477"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000477",
+      "listed": "1979-10-30",
+      "nomination": "https://catalog.archives.gov/id/123858762"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -100,6 +104,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Humboldt_Bay_Life-Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123858762",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -116,10 +125,20 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000477",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

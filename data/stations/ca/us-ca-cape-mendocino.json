@@ -2,7 +2,8 @@
   "id": "us-ca-cape-mendocino",
   "name": "Cape Mendocino Light",
   "other_names": [
-    "Cape Mendocino Lighthouse"
+    "Cape Mendocino Lighthouse",
+    "Cape Mendocino"
   ],
   "country": "US",
   "region": "CA",
@@ -32,7 +33,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1868,
     "deactivated": 2013,
     "lens": null,
     "characteristic": "Fl W 15s",
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,6 +75,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1951,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2013,
@@ -120,6 +133,11 @@
       "label": "ARLHS World List of Lights USA129H",
       "url": "https://wlol.arlhs.com/lighthouse/USA129H.html",
       "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Mendocino",
+      "url": "https://archives.uslhs.org/places/cape-mendocino",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,10 +157,35 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2703",
+      "part": "wikidata:Q5034946",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2013
+        },
+        {
+          "source": "uslhs",
+          "value": 1951
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

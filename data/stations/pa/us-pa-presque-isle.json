@@ -3,7 +3,9 @@
   "name": "Presque Isle Light",
   "other_names": [
     "Presque Isle Lighthouse",
-    "Presque Isle Light (Pennsylvania)"
+    "Presque Isle Light (Pennsylvania)",
+    "Presque Isle",
+    "Presque Isle PA"
   ],
   "country": "US",
   "region": "PA",
@@ -37,16 +39,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 22.0,
+    "focal_height_m": 22.3,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83002242",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002242"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002242",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891092"
     }
   ],
   "aton": {
@@ -58,16 +62,16 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1966"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -84,9 +88,21 @@
     },
     {
       "year": 1873,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1966,
@@ -97,7 +113,7 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/816997819",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Presque Isle",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=290",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Pennsylvania: Northwest",
+      "url": "https://www.ibiblio.org/lighthouse/pa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Presque Isle PA",
+      "url": "https://archives.uslhs.org/places/presque-isle-pa",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891092",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,8 +205,56 @@
       "key": "osm:way/816997819",
       "part": "wikidata:Q1845915",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:290",
+      "part": "wikidata:Q1845915",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pa:presque-isle",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-3690",
+      "part": "wikidata:Q1845915",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3470",
+      "part": "wikidata:Q1845915",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83002242",
+      "part": "wikidata:Q1845915",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.16579,-80.11542",
+      "part": "wikidata:Q1845915",
+      "fields": [
+        "light"
       ]
     }
   ],

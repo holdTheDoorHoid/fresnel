@@ -2,7 +2,8 @@
   "id": "us-ny-fort-tompkins",
   "name": "Fort Tompkins Light",
   "other_names": [
-    "Fort Tompkins Lighthouse"
+    "Fort Tompkins Lighthouse",
+    "Fort Tompkins"
   ],
   "country": "US",
   "region": "NY",
@@ -16,27 +17,27 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "wood",
       "built": 1828,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 14.0,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1873,
-    "deactivated": null,
+    "first_lit": 1828,
+    "deactivated": 1903,
     "lens": null,
     "characteristic": "Fl alternately R and W, interval between Fl 10s",
-    "focal_height_m": null,
+    "focal_height_m": 27.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -76,14 +77,38 @@
       "from": "wikidata"
     },
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1873,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1903,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ny-fort-wadsworth",
+      "relation": "succeeded_by",
+      "name": "Fort Wadsworth Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forttompkins.JPG",
@@ -110,6 +135,11 @@
       "label": "ARLHS World List of Lights USA300",
       "url": "https://wlol.arlhs.com/lighthouse/USA300.html",
       "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Tompkins",
+      "url": "https://archives.uslhs.org/places/fort-tompkins",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,9 +159,34 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8806",
+      "part": "wikidata:Q5472184",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1873
+        },
+        {
+          "source": "uslhs",
+          "value": 1828
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

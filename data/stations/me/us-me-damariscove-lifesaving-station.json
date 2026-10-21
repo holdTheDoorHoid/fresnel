@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "87000924",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000924"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000924",
+      "listed": "1987-06-25",
+      "nomination": "https://catalog.archives.gov/id/88686616"
     }
   ],
   "aton": {
@@ -67,7 +69,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -84,6 +86,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Damariscove_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686616",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -100,10 +107,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87000924",
+      "part": "wikidata:Q5212005",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

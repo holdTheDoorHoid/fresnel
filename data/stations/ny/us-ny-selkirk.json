@@ -3,7 +3,12 @@
   "name": "Selkirk Light",
   "other_names": [
     "Salmon River Lighthouse",
-    "Selkirk Lighthouse"
+    "Selkirk Lighthouse",
+    "Salmon River",
+    "Selkirk",
+    "Port Ontario, Salmon River",
+    "Port Ontario Light",
+    "Circa 1838"
   ],
   "country": "US",
   "region": "NY",
@@ -17,16 +22,16 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
+      "material": "stone",
       "built": 1838,
-      "height_m": null,
+      "height_m": 14.0,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -34,19 +39,21 @@
   ],
   "light": {
     "first_lit": 1838,
-    "deactivated": 1858,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2s",
-    "focal_height_m": null,
+    "focal_height_m": 14.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79001618",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001618"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001618",
+      "listed": "1979-03-30",
+      "nomination": "https://catalog.archives.gov/id/75320877"
     }
   ],
   "aton": {
@@ -58,34 +65,41 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://www.salmonriverlighthousemarina.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1838,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1838,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -95,9 +109,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1859,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +164,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/158644867",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Salmon River (Selkirk)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=309",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Selkirk",
+      "url": "https://archives.uslhs.org/places/selkirk",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75320877",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/new-york",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -171,10 +216,86 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:309",
+      "part": "wikidata:Q7448550",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:selkirk",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2015",
+      "part": "wikidata:Q7448550",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3435",
+      "part": "wikidata:Q7448550",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79001618",
+      "part": "wikidata:Q7448550",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:selkirk-salmon-river",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ny:selkirk-lighthouse-circa-1838",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

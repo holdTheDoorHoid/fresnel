@@ -2,7 +2,8 @@
   "id": "us-nc-roanoke-river",
   "name": "Roanoke River Light",
   "other_names": [
-    "Roanoke River Lighthouse"
+    "Roanoke River Lighthouse",
+    "Roanoke River"
   ],
   "country": "US",
   "region": "NC",
@@ -35,11 +36,11 @@
     "first_lit": 1867,
     "deactivated": 1941,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 3.7,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,9 +77,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1887,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1941,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -125,6 +132,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697208553",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Roanoke River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=359",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,6 +167,28 @@
       "part": "wikidata:Q7339803",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:359",
+      "part": "wikidata:Q7339803",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:roanoke-river-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.05581,-76.60977",
+      "part": "wikidata:Q7339803",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -1,7 +1,11 @@
 {
   "id": "us-ak-sitka",
   "name": "Sitka Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Rockwell",
+    "Sitka",
+    "Rockwell Light"
+  ],
   "country": "US",
   "region": "AK",
   "county": null,
@@ -33,16 +37,16 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "F R",
+    "focal_height_m": 15.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "6-24955",
+    "arlhs": "ALK-017",
     "ccg_list_number": null,
     "nga": null
   },
@@ -66,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1985,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,6 +91,16 @@
       "label": "Website",
       "url": "https://www.sitkalighthouse.com/",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sitka",
+      "url": "https://archives.uslhs.org/places/sitka",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -92,6 +113,35 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:rockwell",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-24955",
+      "part": "osm:node/2461153446",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:10147",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:57.03596,-135.33369",
+      "part": "osm:node/2461153446",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-ak-guard-island",
   "name": "Guard Island Light",
   "other_names": [
-    "Guard Island Lighthouse"
+    "Guard Island Lighthouse",
+    "Guard Island",
+    "Guard Island Light Station"
   ],
   "country": "US",
   "region": "AK",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "concrete",
+      "built": 1924,
+      "height_m": 7.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1924,
+    "first_lit": 1903,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s.<br> emergency light (Fl W 6s.) of Ruced intensity when main light is extinguished",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 22.6,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "03001378",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03001378"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03001378",
+      "listed": "2004-01-14",
+      "nomination": "https://catalog.archives.gov/id/75325057"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,17 +73,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1904,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1924,
@@ -96,7 +124,7 @@
     {
       "year": 2004,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525178540",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Guard Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=823",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Guard Island",
+      "url": "https://archives.uslhs.org/places/guard-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325057",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -169,9 +216,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:823",
+      "part": "wikidata:Q3274484",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:guard-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-22300",
+      "part": "wikidata:Q3274484",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2691",
+      "part": "wikidata:Q3274484",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03001378",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:55.44594,-131.88110",
+      "part": "wikidata:Q3274484",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ak:guard-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1924
+        },
+        {
+          "source": "uslhs",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

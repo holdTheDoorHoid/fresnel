@@ -3,7 +3,8 @@
   "name": "Clover Island Light",
   "other_names": [
     "Clover Island Lighthouse",
-    "Clover Island"
+    "Clover Island",
+    "Kennewick"
   ],
   "country": "US",
   "region": "WA",
@@ -40,7 +41,7 @@
     "focal_height_m": 19.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -65,7 +66,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -73,7 +74,7 @@
     {
       "year": 2010,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -115,6 +116,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1350820190",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,7 +133,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -141,6 +146,30 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:clover-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-13053",
+      "part": "wikidata:Q43213811",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:clover-island-kennewick",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

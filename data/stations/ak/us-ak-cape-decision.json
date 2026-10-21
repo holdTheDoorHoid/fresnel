@@ -3,11 +3,14 @@
   "name": "Cape Decision Light",
   "other_names": [
     "Cape Decision Lighthouse",
-    "Cape Decision Coast Guard Heliport"
+    "Cape Decision Coast Guard Heliport",
+    "Cape Decision",
+    "Cape Decision Light Station",
+    "AHRS Site No. XPA-00012"
   ],
   "country": "US",
   "region": "AK",
-  "county": null,
+  "county": "Wrangell/Petersburg",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -25,7 +28,7 @@
       "name": null,
       "type": "concrete",
       "material": "concrete",
-      "built": null,
+      "built": 1932,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
@@ -37,16 +40,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 23.0,
-    "range_nm": 18.0,
+    "focal_height_m": 18.3,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "04001568",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001568"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001568",
+      "listed": "2005-02-02",
+      "nomination": "https://catalog.archives.gov/id/75325225"
     }
   ],
   "aton": {
@@ -58,29 +63,41 @@
   "agency": "Cape Decision Lighthouse Society",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1974"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1932,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1932,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1932,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1974,
@@ -91,7 +108,7 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/694783964",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Decision",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1049",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Decision",
+      "url": "https://archives.uslhs.org/places/cape-decision",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325225",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -182,9 +219,89 @@
       "key": "osm:way/694783964",
       "part": "wikidata:Q2160324",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1049",
+      "part": "wikidata:Q2160324",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:cape-decision",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1020",
+      "part": "wikidata:Q2160324",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23440",
+      "part": "wikidata:Q2160324",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2685",
+      "part": "wikidata:Q2160324",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:04001568",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:56.00151,-134.13604",
+      "part": "wikidata:Q2160324",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ak:cape-decision",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 23.0
+        },
+        {
+          "source": "uslhs",
+          "value": 29.26
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

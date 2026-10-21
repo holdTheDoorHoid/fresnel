@@ -2,7 +2,9 @@
   "id": "us-wa-bush-point",
   "name": "Bush Point Light",
   "other_names": [
-    "Bush Point Lighthouse"
+    "Bush Point Lighthouse",
+    "Bush Point",
+    "Gig Harbor"
   ],
   "country": "US",
   "region": "WA",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 48.0274,
-    "lon": -122.5797,
+    "lat": 48.03087,
+    "lon": -122.60697,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1933,
+    "first_lit": 1894,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 7.5,
+    "focal_height_m": 7.6,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,10 +78,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1933,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -100,6 +120,21 @@
       "label": "ARLHS World List of Lights USA1063",
       "url": "https://wlol.arlhs.com/lighthouse/USA1063.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bush Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=860",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bush Point",
+      "url": "https://archives.uslhs.org/places/bush-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,15 +147,110 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:860",
+      "part": "wikidata:Q42792677",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:bush-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:gig-harbor-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16505",
+      "part": "wikidata:Q42792677",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8979",
+      "part": "wikidata:Q42792677",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.03086,-122.60705",
+      "part": "wikidata:Q42792677",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1933
+        },
+        {
+          "source": "uslhs",
+          "value": 1894
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            48.0274,
+            -122.5797
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            48.03087,
+            -122.60697
+          ]
+        }
+      ],
+      "distance_m": 2064,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

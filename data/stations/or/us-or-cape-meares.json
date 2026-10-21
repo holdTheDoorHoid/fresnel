@@ -2,7 +2,8 @@
   "id": "us-or-cape-meares",
   "name": "Cape Meares Lighthouse",
   "other_names": [
-    "Cape Meares light"
+    "Cape Meares light",
+    "Cape Meares"
   ],
   "country": "US",
   "region": "OR",
@@ -22,13 +23,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "integral",
       "material": "mixed",
-      "built": null,
+      "built": 1890,
       "height_m": 11.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 2014,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": null,
+    "focal_height_m": 67.1,
     "range_nm": 21.0,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +46,9 @@
     {
       "register": "NRHP",
       "number": "73002341",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002341"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002341",
+      "listed": "1993-04-21",
+      "nomination": "https://catalog.archives.gov/id/77848439"
     }
   ],
   "aton": {
@@ -54,32 +57,51 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Oregon Parks and Recreation Department",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1890,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1890,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1934,
@@ -88,15 +110,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1963,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1963,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1993,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 2014,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -148,6 +182,26 @@
       "label": "Website",
       "url": "https://friendsofcapemeareslighthouse.com/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cape Meares",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=134",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Meares",
+      "url": "https://archives.uslhs.org/places/cape-meares",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77848439",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,9 +229,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:134",
+      "part": "wikidata:Q5034941",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:cape-meares-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:cape-meares-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3462",
+      "part": "wikidata:Q5034941",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73002341",
+      "part": "wikidata:Q5034941",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:cape-meares",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2014
+        },
+        {
+          "source": "rowlett",
+          "value": 1963
+        },
+        {
+          "source": "uslhs",
+          "value": 1963
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

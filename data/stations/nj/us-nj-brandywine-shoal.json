@@ -2,7 +2,9 @@
   "id": "us-nj-brandywine-shoal",
   "name": "Brandywine Shoal Light",
   "other_names": [
-    "Brandywine Shoal Lighthouse"
+    "Brandywine Shoal Lighthouse",
+    "Brandywine Shoal",
+    "Brandywine Shoal Light Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1828,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1914,
+    "first_lit": 1823,
     "deactivated": null,
     "lens": null,
-    "characteristic": "FI W 10s, R sector",
-    "focal_height_m": 18.0,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 18.3,
     "range_nm": 19.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000943",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000943"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000943",
+      "listed": "2007-01-08",
+      "nomination": "https://catalog.archives.gov/id/75324983"
     }
   ],
   "aton": {
@@ -58,28 +62,46 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1974"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1828,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1914,
@@ -88,9 +110,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1974,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1211354437",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Brandywine Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=382",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brandywine Shoal",
+      "url": "https://archives.uslhs.org/places/brandywine-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324983",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,9 +211,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:382",
+      "part": "wikidata:Q4957291",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:brandywine-shoal-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1555",
+      "part": "wikidata:Q4957291",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3375",
+      "part": "wikidata:Q4957291",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000943",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.98623,-75.11318",
+      "part": "wikidata:Q4957291",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:brandywine-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1914
+        },
+        {
+          "source": "uslhs",
+          "value": 1823
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,8 @@
   "id": "us-wa-willapa-bay",
   "name": "Willapa Bay Light",
   "other_names": [
-    "Willapa Bay Lighthouse"
+    "Willapa Bay Lighthouse",
+    "Willapa Bay"
   ],
   "country": "US",
   "region": "WA",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.71,
-    "lon": -124.08,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 46.736021,
+    "lon": -124.07843,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,11 +25,11 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "built": 1858,
+      "height_m": 10.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1938,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 24.5,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,14 +73,26 @@
     {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1938,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1940,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -105,6 +118,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Willapa_Bay_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Willapa Bay",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1786",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Willapa Bay",
+      "url": "https://archives.uslhs.org/places/willapa-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,14 +139,46 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1786",
+      "part": "wikidata:Q8003343",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8991",
+      "part": "wikidata:Q8003343",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1938
+        },
+        {
+          "source": "uslhs",
+          "value": 1940
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,8 @@
   "id": "us-fl-northwest-passage",
   "name": "Northwest Passage Light",
   "other_names": [
-    "Northwest Passage Lighthouse"
+    "Northwest Passage Lighthouse",
+    "Northwest Passage"
   ],
   "country": "US",
   "region": "FL",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 24.618975,
-    "lon": -81.899086,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 24.618958,
+    "lon": -81.899128,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1971) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1838,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1855,
+    "first_lit": 1838,
     "deactivated": 1971,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,10 +71,34 @@
   "stay": null,
   "events": [
     {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1855,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1921,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1971,
@@ -116,6 +141,21 @@
       "label": "ARLHS World List of Lights USA557",
       "url": "https://wlol.arlhs.com/lighthouse/USA557.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Northwest Passage",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1836",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Northwest Passage",
+      "url": "https://archives.uslhs.org/places/northwest-passage",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -129,15 +169,69 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1836",
+      "part": "wikidata:Q7060159",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:northwest-passage",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8407",
+      "part": "wikidata:Q7060159",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1855
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1971
+        },
+        {
+          "source": "uslhs",
+          "value": 1921
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

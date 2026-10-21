@@ -2,7 +2,9 @@
   "id": "us-va-tangier-sound",
   "name": "Tangier Sound Light",
   "other_names": [
-    "Tangier Sound Lighthouse"
+    "Tangier Sound Lighthouse",
+    "Tangier Sound",
+    "1, 2"
   ],
   "country": "US",
   "region": "VA",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.7878,
-    "lon": -75.974,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.788079,
+    "lon": -75.973749,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1890,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1890,
     "deactivated": 1961,
     "lens": null,
-    "characteristic": "Fl W 6s (R sector)",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 13.7,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -71,14 +73,26 @@
   "events": [
     {
       "year": 1890,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1890,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1961,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +129,21 @@
       "label": "ARLHS World List of Lights USA834",
       "url": "https://wlol.arlhs.com/lighthouse/USA834.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Tangier Sound",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1935",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tangier Sound",
+      "url": "https://archives.uslhs.org/places/tangier-sound",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +157,65 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1935",
+      "part": "wikidata:Q7682973",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:tangier-sound",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:tangier-sound-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-22715",
+      "part": "wikidata:Q7682973",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7435",
+      "part": "wikidata:Q7682973",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8972",
+      "part": "wikidata:Q7682973",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.78802,-75.97345",
+      "part": "wikidata:Q7682973",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

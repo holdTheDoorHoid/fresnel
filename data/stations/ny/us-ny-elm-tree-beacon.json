@@ -2,7 +2,9 @@
   "id": "us-ny-elm-tree-beacon",
   "name": "Elm Tree Beacon Light",
   "other_names": [
-    "Elm Tree Beacon Lighthouse"
+    "Elm Tree Beacon Lighthouse",
+    "Elm Tree",
+    "Swash Channel Range Front"
   ],
   "country": "US",
   "region": "NY",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.5639,
-    "lon": -74.0953,
+    "lat": 40.56393,
+    "lon": -74.09518,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -78,13 +80,19 @@
     {
       "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1964,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -121,6 +129,16 @@
       "label": "ARLHS World List of Lights USA272",
       "url": "https://wlol.arlhs.com/lighthouse/USA272.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Elm Tree",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=755",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +152,31 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:755",
+      "part": "wikidata:Q5366353",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:elm-tree-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

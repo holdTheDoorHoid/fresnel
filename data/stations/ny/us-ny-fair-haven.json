@@ -1,0 +1,186 @@
+{
+  "id": "us-ny-fair-haven",
+  "name": "Fair Haven",
+  "other_names": [
+    "Fairhaven Range Front",
+    "Fair Haven Breakwater Light 2",
+    "Fair Haven Breakwater Light 1"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 43.35056,
+    "lon": -76.71167,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Fairhaven Range Front",
+      "type": "crib",
+      "material": "wood",
+      "built": 1872,
+      "height_m": 8.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Fair Haven",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 43.350197,
+        "lon": -76.708954
+      }
+    }
+  ],
+  "light": {
+    "first_lit": 1872,
+    "deactivated": 1943,
+    "lens": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 9.1,
+    "range_nm": 5.2,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-2135",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1943,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1943,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Fair Haven",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1981",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fairhaven Range Front",
+      "url": "https://archives.uslhs.org/places/fairhaven-range-front",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1981",
+      "part": "lighthousefriends:1981",
+      "fields": [
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2135",
+      "part": "lighthousefriends:1981",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2140",
+      "part": "lighthousefriends:1981",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8805",
+      "part": "uslhs:8805",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.35021,-76.70780",
+      "part": "lighthousefriends:1981",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.35023,-76.70886",
+      "part": "lighthousefriends:1981",
+      "fields": []
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

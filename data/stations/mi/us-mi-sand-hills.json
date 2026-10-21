@@ -2,7 +2,9 @@
   "id": "us-mi-sand-hills",
   "name": "Sand Hills Light",
   "other_names": [
-    "Sand Hills Lighthouse"
+    "Sand Hills Lighthouse",
+    "Sand Hills",
+    "Sand Hills Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -36,7 +38,7 @@
     "deactivated": 1954,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 27.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "94000746",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/94000746"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/94000746",
+      "listed": "1994-07-27",
+      "nomination": "https://catalog.archives.gov/id/25339761"
     }
   ],
   "aton": {
@@ -54,15 +58,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately owned. Closed for restoration.",
+  "ownership": "private",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1939"
   },
   "visit": {
     "grounds_open": null,
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,25 +82,37 @@
     {
       "year": 1919,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1919,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1919,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1939,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1954,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1994,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +164,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=222",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sand Hills",
+      "url": "https://archives.uslhs.org/places/sand-hills",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339761",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,6 +205,49 @@
       "part": "wikidata:Q7415811",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:222",
+      "part": "wikidata:Q7415811",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:sand-hills",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3331",
+      "part": "wikidata:Q7415811",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:94000746",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:sand-hills",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

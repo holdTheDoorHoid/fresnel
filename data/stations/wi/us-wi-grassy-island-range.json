@@ -4,7 +4,10 @@
   "other_names": [
     "Upper Grassy Island Range Light",
     "Grassy Island Range Light",
-    "Lower Grassy Island Range Light"
+    "Lower Grassy Island Range Light",
+    "Grassy Island Range",
+    "Grassy Island Range Front",
+    "Grassy Island Range Rear"
   ],
   "country": "US",
   "region": "WI",
@@ -13,41 +16,54 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 44.536143,
-    "lon": -88.005278,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 44.55433,
+    "lon": -87.98983,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
-      "type": "wood_frame",
-      "material": "wood",
-      "built": 1872,
-      "height_m": 10.7,
-      "status": "standing",
+      "role": "front_range",
+      "name": "Grassy Island Range Front",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Grassy Island Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1872,
     "deactivated": 1966,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "04001484",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001484"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001484",
+      "listed": "2005-01-12",
+      "nomination": "https://catalog.archives.gov/id/106780031"
     }
   ],
   "aton": {
@@ -59,8 +75,8 @@
   "agency": "Green Bay Yachting Club",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -72,7 +88,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,19 +96,25 @@
     {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1966,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,13 +171,38 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/899513853",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Grassy Island Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=556",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grassy Island Range Front",
+      "url": "https://archives.uslhs.org/places/grassy-island-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grassy Island Range Rear",
+      "url": "https://archives.uslhs.org/places/grassy-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106780031",
+      "kind": "register"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q5597610",
-      "part": "wikidata:Q5597610",
+      "part": "station",
       "fields": [
         "aton",
         "county",
@@ -165,29 +212,82 @@
         "name",
         "photos",
         "region",
-        "registers",
-        "structures"
+        "registers"
       ]
     },
     {
       "source": "osm",
       "key": "osm:way/899513852",
-      "part": "wikidata:Q5597610",
+      "part": "station",
       "fields": [
-        "agency",
-        "location",
-        "structures"
+        "agency"
       ]
     },
     {
       "source": "osm",
       "key": "osm:way/899513853",
-      "part": "wikidata:Q5597610",
+      "part": "station",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:556",
+      "part": "station",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:grassy-island-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:grassy-island-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8994",
+      "part": "uslhs:8994",
+      "fields": [
+        "events",
+        "light",
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8995",
+      "part": "uslhs:8995",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:04001484",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:grassy-island-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

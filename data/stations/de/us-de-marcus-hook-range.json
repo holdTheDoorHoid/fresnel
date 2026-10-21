@@ -1,10 +1,16 @@
 {
   "id": "us-de-marcus-hook-range",
-  "name": "Marcus Hook Range Lights",
+  "name": "Marcus Hook Range",
   "other_names": [
     "Marcus Hook Range Front Light",
     "Marcus Hook Range Rear Light",
-    "Marcus Hook Range Rear Lighthouse"
+    "Marcus Hook Range Rear Lighthouse",
+    "Marcus Hook Range Rear",
+    "Murderkill River",
+    "Range Rear",
+    "Marcus Hook Range Front",
+    "U.S. Coast Guard Light List #2255",
+    "Crs #n-12087"
   ],
   "country": "US",
   "region": "DE",
@@ -25,23 +31,23 @@
       "role": "front_range",
       "name": "Marcus Hook Range Front Light",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1915,
-      "height_m": null,
+      "height_m": 12.8,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "rear_range",
       "name": "Marcus Hook Range Rear Light",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1915,
       "height_m": 32.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 39.762244,
         "lon": -75.50318
@@ -49,20 +55,22 @@
     }
   ],
   "light": {
-    "first_lit": 1920,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R (initially F W)",
+    "characteristic": "QR",
     "focal_height_m": 87.0,
-    "range_nm": null,
+    "range_nm": 0.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89000287",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000287"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000287",
+      "listed": "1989-03-27",
+      "nomination": "https://catalog.archives.gov/id/75324544"
     }
   ],
   "aton": {
@@ -74,8 +82,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -93,28 +101,58 @@
   "stay": null,
   "events": [
     {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1915,
       "event": "built",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1915,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1920,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1920,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2019,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -185,6 +223,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/368217390",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Marcus Hook Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=468",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Marcus Hook Range Rear",
+      "url": "https://archives.uslhs.org/places/marcus-hook-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: MARCUS HOOK RANGE FRONT",
+      "url": "https://archives.uslhs.org/places/marcus-hook-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324544",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -226,9 +289,122 @@
       "key": "osm:way/368217390",
       "part": "wikidata:Q6758236",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:468",
+      "part": "wikidata:Q6758236",
+      "fields": [
+        "access",
+        "name",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:marcus-hook-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:marcus-hook-range-rear-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:murderkill-river",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-3135",
+      "part": "wikidata:Q6758235",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-3140",
+      "part": "wikidata:Q6758236",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:24993",
+      "part": "wikidata:Q6758236",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2760",
+      "part": "wikidata:Q6758235",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89000287",
+      "part": "wikidata:Q6758236",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 8.0
+        },
+        {
+          "source": "uslhs",
+          "value": 12.8
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

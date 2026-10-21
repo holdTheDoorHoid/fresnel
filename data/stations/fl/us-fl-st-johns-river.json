@@ -3,7 +3,10 @@
   "name": "St. Johns River Light",
   "other_names": [
     "St. Johns River Lighthouse",
-    "St. John's River Lighthouse"
+    "St. John's River Lighthouse",
+    "St. Johns River",
+    "Mayport",
+    "St. John's Lighthouse"
   ],
   "country": "US",
   "region": "FL",
@@ -33,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1830,
     "deactivated": 1929,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
@@ -51,7 +54,9 @@
     {
       "register": "NRHP",
       "number": "76002237",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002237"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002237",
+      "listed": "1976-06-03",
+      "nomination": "https://catalog.archives.gov/id/77842291"
     }
   ],
   "aton": {
@@ -82,6 +87,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1858,
       "event": "first_lit",
       "note": null,
@@ -90,24 +101,30 @@
     {
       "year": 1859,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1929,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-fl-st-johns",
+      "relation": "succeeded_by",
+      "name": "St. Johns Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mayport_FL_lighthouse01.jpg",
@@ -149,6 +166,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9828352721",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Johns River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=859",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842291",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -178,6 +210,30 @@
         "location",
         "registers",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:859",
+      "part": "wikidata:Q7589019",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:st-johns-river-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76002237",
+      "part": "wikidata:Q7589019",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

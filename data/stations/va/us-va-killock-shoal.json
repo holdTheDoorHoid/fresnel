@@ -2,7 +2,9 @@
   "id": "us-va-killock-shoal",
   "name": "Killock Shoal Light",
   "other_names": [
-    "Killock Shoal Lighthouse"
+    "Killock Shoal Lighthouse",
+    "Killick Shoal",
+    "Killick (Killock) Shoal"
   ],
   "country": "US",
   "region": "VA",
@@ -11,24 +13,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.934,
-    "lon": -75.38,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.946816,
+    "lon": -75.377538,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1939) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1886,
+      "height_m": 14.0,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -72,8 +74,20 @@
     {
       "year": 1886,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1939,
@@ -86,6 +100,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1940,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +141,21 @@
       "label": "ARLHS World List of Lights USA422",
       "url": "https://wlol.arlhs.com/lighthouse/USA422.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Killick Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1895",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Killick Shoal",
+      "url": "https://archives.uslhs.org/places/killick-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,10 +169,34 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1895",
+      "part": "wikidata:Q6407880",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:killick-killock-shoal-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8960",
+      "part": "wikidata:Q6407880",
+      "fields": [
+        "events",
+        "structures"
       ]
     }
   ],

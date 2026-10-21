@@ -2,7 +2,10 @@
   "id": "us-ma-gloucester-breakwater",
   "name": "Gloucester Breakwater Light",
   "other_names": [
-    "Dog Bar Breakwater Light"
+    "Dog Bar Breakwater Light",
+    "Dog Bar Breakwater",
+    "Gloucester (Dog Bar) Breakwater",
+    "Gloucester Breakwater"
   ],
   "country": "US",
   "region": "MA",
@@ -39,12 +42,12 @@
     "focal_height_m": 13.7,
     "range_nm": 6.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "1-9855",
+    "arlhs": "USA-969",
     "ccg_list_number": null,
     "nga": null
   },
@@ -64,11 +67,18 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1905,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -77,6 +87,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1033562176",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Dog Bar Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=477",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gloucester Breakwater",
+      "url": "https://archives.uslhs.org/places/gloucester-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,15 +112,59 @@
       "fields": [
         "agency",
         "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:477",
+      "part": "osm:way/1033562176",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:gloucester-dog-bar-breakwater",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-9855",
+      "part": "osm:way/1033562176",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9363",
+      "part": "osm:way/1033562176",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.58261,-70.67235",
+      "part": "osm:way/1033562176",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:dog-bar-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

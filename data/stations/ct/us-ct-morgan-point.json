@@ -2,7 +2,8 @@
   "id": "us-ct-morgan-point",
   "name": "Morgan Point Light",
   "other_names": [
-    "Morgan Point Lighthouse"
+    "Morgan Point Lighthouse",
+    "Morgan Point"
   ],
   "country": "US",
   "region": "CT",
@@ -32,18 +33,18 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1831,
     "deactivated": 1919,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 18.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-20510",
     "arlhs": "USA514",
     "ccg_list_number": null,
     "nga": null
@@ -51,8 +52,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,23 +64,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1868,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1919,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1921,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -131,6 +150,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/13322554210",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Morgan Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=802",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Morgan Point",
+      "url": "https://archives.uslhs.org/places/morgan-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,9 +191,64 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:802",
+      "part": "wikidata:Q3378317",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:morgan-point-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2742",
+      "part": "wikidata:Q3378317",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:morgan-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1919
+        },
+        {
+          "source": "rowlett",
+          "value": 1921
+        },
+        {
+          "source": "uslhs",
+          "value": 1919
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

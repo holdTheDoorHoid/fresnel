@@ -2,7 +2,9 @@
   "id": "us-mi-spectacle-reef",
   "name": "Spectacle Reef Light",
   "other_names": [
-    "Spectacle Reef Lighthouse"
+    "Spectacle Reef Lighthouse",
+    "Spectacle Reef",
+    "Spectacle Reef Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -23,7 +25,7 @@
       "role": "tower",
       "name": null,
       "type": "crib",
-      "material": null,
+      "material": "stone",
       "built": 1874,
       "height_m": 24.0,
       "status": "standing",
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
-    "focal_height_m": 26.0,
+    "focal_height_m": 26.2,
     "range_nm": 9.5,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000744",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000744"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000744",
+      "listed": "2005-07-27",
+      "nomination": "https://catalog.archives.gov/id/75324993"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,25 @@
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1874,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +152,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=708",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Spectacle Reef",
+      "url": "https://archives.uslhs.org/places/spectacle-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324993",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,8 +192,65 @@
       "key": "osm:node/1012228473",
       "part": "wikidata:Q7575096",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:708",
+      "part": "wikidata:Q7575096",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:spectacle-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11730",
+      "part": "wikidata:Q7575096",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3339",
+      "part": "wikidata:Q7575096",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000744",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.77303,-84.13800",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:spectacle-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

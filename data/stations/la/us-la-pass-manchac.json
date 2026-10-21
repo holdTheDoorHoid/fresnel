@@ -2,7 +2,9 @@
   "id": "us-la-pass-manchac",
   "name": "Pass Manchac Light",
   "other_names": [
-    "Pass Manchac Lighthouse"
+    "Pass Manchac Lighthouse",
+    "Pass Manchac",
+    "Pass Manchac Lighthouse Wreck"
   ],
   "country": "US",
   "region": "LA",
@@ -11,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.296694,
-    "lon": -90.29825,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.2967,
+    "lon": -90.2982,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (2012) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,20 +28,20 @@
       "material": "mixed",
       "built": 1837,
       "height_m": 12.2,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1839,
     "deactivated": 1987,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "QR",
+    "focal_height_m": 9.4,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
@@ -49,7 +51,7 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "4-11592",
     "arlhs": "USA582",
     "ccg_list_number": null,
     "nga": null
@@ -58,7 +60,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -82,10 +84,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1941,
@@ -102,7 +122,7 @@
     {
       "year": 1987,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -155,6 +175,21 @@
       "label": "ARLHS World List of Lights USA582",
       "url": "https://wlol.arlhs.com/lighthouse/USA582.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Pass Manchac",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=809",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pass Manchac",
+      "url": "https://archives.uslhs.org/places/pass-manchac",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -168,17 +203,67 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:809",
+      "part": "wikidata:Q7142399",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:pass-manchac-4",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-11592",
+      "part": "wikidata:Q7142399",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2809",
+      "part": "wikidata:Q7142399",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1839
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,11 @@
   "id": "us-ri-musselbed-shoals",
   "name": "Musselbed Shoals Light",
   "other_names": [
-    "Musselbed Shoals Lighthouse"
+    "Musselbed Shoals Lighthouse",
+    "Musselbed Shoals",
+    "Mussel Bed Shoals",
+    "Musselbed Shoals Light 6A",
+    "Musselbed Shoals Directional Light"
   ],
   "country": "US",
   "region": "RI",
@@ -16,30 +20,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1873,
       "height_m": 6.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1938,
+    "first_lit": 1873,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 8.0,
+    "focal_height_m": 7.9,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,6 +80,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1938,
       "event": "deactivated",
       "note": null,
@@ -83,9 +99,21 @@
     },
     {
       "year": 1939,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1939,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1939,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -126,6 +154,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6183087006",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Musselbed Shoals",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1968",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mussel Bed Shoals",
+      "url": "https://archives.uslhs.org/places/mussel-bed-shoals",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +180,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,25 +193,87 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1968",
+      "part": "wikidata:Q6943100",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:musselbed-shoals-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18150",
+      "part": "wikidata:Q6943100",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18160",
+      "part": "wikidata:Q6943100",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8904",
+      "part": "wikidata:Q6943100",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.63624,-71.26002",
+      "part": "wikidata:Q6943100",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1939
         },
         {
-          "source": "wikidata",
-          "value": 1938
+          "source": "uslhs",
+          "value": 1873
         }
       ],
-      "note": "A source gives the light's service entry (1939) after its retirement (1938); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

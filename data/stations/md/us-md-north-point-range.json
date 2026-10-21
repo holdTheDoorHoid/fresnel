@@ -1,7 +1,10 @@
 {
   "id": "us-md-north-point-range",
   "name": "North Point Range Lights",
-  "other_names": [],
+  "other_names": [
+    "North Point",
+    "North Point Range"
+  ],
   "country": "US",
   "region": "MD",
   "county": null,
@@ -9,24 +12,39 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 39.1971,
-    "lon": -76.4482,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.196086,
+    "lon": -76.443333,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "North Point Range",
+      "type": null,
+      "material": "stone",
+      "built": 1822,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.20211,
+        "lon": -76.44533
+      }
+    },
+    {
+      "role": "tower",
+      "name": "North Point",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
@@ -70,14 +88,26 @@
     {
       "year": 1822,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1873,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -93,24 +123,65 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/North_Point_Range_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: North Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1956",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: North Point Range",
+      "url": "https://archives.uslhs.org/places/north-point-range",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q14692309",
-      "part": "wikidata:Q14692309",
+      "part": "station",
       "fields": [
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1956",
+      "part": "lighthousefriends:1956",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8477",
+      "part": "uslhs:8477",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1873
+        },
+        {
+          "source": "uslhs",
+          "value": 1886
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

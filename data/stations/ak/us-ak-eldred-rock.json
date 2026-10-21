@@ -2,7 +2,8 @@
   "id": "us-ak-eldred-rock",
   "name": "Eldred Rock Light",
   "other_names": [
-    "Eldred Rock Lighthouse"
+    "Eldred Rock Lighthouse",
+    "Eldred Rock"
   ],
   "country": "US",
   "region": "AK",
@@ -23,12 +24,12 @@
       "role": "tower",
       "name": "Eldred Rock Light",
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1905,
       "height_m": 27.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "tower",
@@ -47,20 +48,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1905,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl 6s",
-    "focal_height_m": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 27.7,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "75000332",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000332"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75000332",
+      "listed": "1975-12-30",
+      "nomination": "https://catalog.archives.gov/id/75325496"
     }
   ],
   "aton": {
@@ -73,7 +76,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -84,8 +87,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -93,14 +96,26 @@
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1906,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1906,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1973,
@@ -111,7 +126,7 @@
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -188,6 +203,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/826508779",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Eldred Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=828",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Eldred Rock",
+      "url": "https://archives.uslhs.org/places/eldred-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325496",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -236,7 +271,6 @@
       "part": "wikidata:Q2753859",
       "fields": [
         "agency",
-        "light",
         "structures"
       ]
     },
@@ -257,6 +291,64 @@
       "key": "osm:way/826508779",
       "part": "wikidata:Q2753859",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:828",
+      "part": "wikidata:Q2753859",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:eldred-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23880",
+      "part": "wikidata:Q2753859",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2689",
+      "part": "wikidata:Q2753859",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75000332",
+      "part": "wikidata:Q2753859",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:58.97100,-135.22030",
+      "part": "wikidata:Q2753859",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ak:eldred-rock",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [

@@ -2,7 +2,9 @@
   "id": "us-ma-west-chop",
   "name": "West Chop Light",
   "other_names": [
-    "West Chop Lighthouse"
+    "West Chop Lighthouse",
+    "West Chop",
+    "West Chop Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -19,6 +21,36 @@
   "status": "active",
   "status_note": null,
   "structures": [
+    {
+      "role": "oil_house",
+      "name": "Oil House",
+      "type": null,
+      "material": null,
+      "built": 1847,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.480866,
+        "lon": -70.598885
+      }
+    },
+    {
+      "role": "fog_signal",
+      "name": "Fog Signal Building",
+      "type": null,
+      "material": null,
+      "built": 1847,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.480989,
+        "lon": -70.599484
+      }
+    },
     {
       "role": "dwelling",
       "name": "Keeper's House",
@@ -47,20 +79,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1817,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Oc R 4s",
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Oc W 4s",
     "focal_height_m": 25.6,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001506",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001506"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001506",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789801"
     }
   ],
   "aton": {
@@ -69,11 +108,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -85,11 +124,35 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1817,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1818,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1847,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1881,
       "event": "built",
@@ -99,13 +162,13 @@
     {
       "year": 1891,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -155,6 +218,16 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/216359735",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/216359798",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/216359810",
       "kind": "osm"
     },
@@ -162,6 +235,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/216359846",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: West Chop",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=626",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: West Chop",
+      "url": "https://archives.uslhs.org/places/west-chop",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789801",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -186,8 +279,24 @@
       "key": "osm:way/1062312141",
       "part": "wikidata:Q7984740",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/216359735",
+      "part": "osm:way/216359735",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/216359798",
+      "part": "osm:way/216359798",
+      "fields": [
+        "structures"
       ]
     },
     {
@@ -204,6 +313,66 @@
       "key": "osm:way/216359846",
       "part": "osm:way/216359810",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:626",
+      "part": "wikidata:Q7984740",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:west-chop-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-13775",
+      "part": "wikidata:Q7984740",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2863",
+      "part": "wikidata:Q7984740",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001506",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.48079,-70.59978",
+      "part": "wikidata:Q7984740",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:west-chop",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [

@@ -4,7 +4,11 @@
   "other_names": [
     "Ambrose",
     "Lightship Ambrose",
-    "United States lightship LV-87"
+    "United States lightship LV-87",
+    "Lightship Ambrose LV 87/WAL 512",
+    "AMBROSE (lightship)",
+    "U.S. Lightship No. 87",
+    "f-LS512"
   ],
   "country": "US",
   "region": "NY",
@@ -13,10 +17,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 40.704844,
-    "lon": -74.002467,
+    "lat": 40.70533,
+    "lon": -74.00243,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -35,7 +39,10 @@
     {
       "register": "NRHP",
       "number": "84002758",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002758"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002758",
+      "listed": "1984-09-07",
+      "nhl": "1989-04-11",
+      "nomination": "https://catalog.archives.gov/id/75315932"
     },
     {
       "register": "National Historic Landmark",
@@ -65,7 +72,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,8 +86,14 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -121,6 +134,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Ambrose_%28ship%2C_1907%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Ambrose LV 87/WAL 512",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=587",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75315932",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -133,16 +156,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:587",
+      "part": "wikidata:Q7890707",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84002758",
+      "part": "wikidata:Q7890707",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:ambrose-ls-lv-512",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

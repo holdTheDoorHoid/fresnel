@@ -1,10 +1,12 @@
 {
   "id": "us-mi-copper-harbor-range",
-  "name": "Copper Harbor Range Lights",
+  "name": "Copper Harbor Range",
   "other_names": [
+    "Copper Harbor Front Range Light",
     "Copper Harbor Rear Range Light",
     "Copper Harbor Range Front Light",
-    "Copper Harbor Front Range Light"
+    "Copper Harbor Range Rear",
+    "Copper Harbor Range Rear Light"
   ],
   "country": "US",
   "region": "MI",
@@ -22,6 +24,21 @@
   "status_note": null,
   "structures": [
     {
+      "role": "rear_range",
+      "name": "Copper Harbor Rear Range Light",
+      "type": null,
+      "material": null,
+      "built": 1865,
+      "height_m": 7.9,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 47.467595,
+        "lon": -87.866816
+      }
+    },
+    {
       "role": "front_range",
       "name": "Copper Harbor Front Range Light",
       "type": null,
@@ -30,38 +47,23 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
-    },
-    {
-      "role": "rear_range",
-      "name": "Copper Harbor Rear Range Light",
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 47.467595,
-        "lon": -87.866816
-      }
+      "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1865,
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": 12.1,
     "range_nm": 3.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-15175",
+    "arlhs": "USA193",
     "ccg_list_number": null,
     "nga": null
   },
@@ -69,7 +71,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -85,11 +87,39 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1865,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5168732",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Copper_Harbor_Front_Range_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA193",
+      "url": "https://wlol.arlhs.com/lighthouse/USA193.html",
+      "kind": "register"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1159188874",
@@ -104,18 +134,35 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1159188878",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Copper Harbor Range",
+      "url": "https://archives.uslhs.org/places/copper-harbor-range",
+      "kind": "reference"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5168732",
+      "part": "osm:way/1159188878",
+      "fields": [
+        "aton",
+        "kind",
+        "region"
+      ]
+    },
     {
       "source": "osm",
       "key": "osm:way/1159188874",
       "part": "osm:way/1159188874",
       "fields": [
-        "agency",
-        "kind",
-        "light",
-        "region"
+        "agency"
       ]
     },
     {
@@ -125,9 +172,103 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:225",
+      "part": "osm:way/1159188874",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:copper-harbor-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15185",
+      "part": "osm:way/1159188878",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15190",
+      "part": "osm:way/1159188874",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2959",
+      "part": "osm:way/1159188874",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.46761,-87.86676",
+      "part": "osm:way/1159188874",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.46872,-87.86646",
+      "part": "osm:way/1159188878",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            47.4811,
+            -87.8667
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            47.46872,
+            -87.86651
+          ]
+        }
+      ],
+      "distance_m": 1376,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

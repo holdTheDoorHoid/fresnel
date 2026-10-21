@@ -3,7 +3,9 @@
   "name": "Moose Peak Light Shalen’s New Home",
   "other_names": [
     "Moose Peak Lighthouse",
-    "Moose Peak Light"
+    "Moose Peak Light",
+    "Moose Peak",
+    "Mistake Island"
   ],
   "country": "US",
   "region": "ME",
@@ -24,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1827,
       "height_m": 17.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1851,
+    "first_lit": 1827,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 30s",
     "focal_height_m": 21.9,
     "range_nm": 20.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -49,11 +51,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -64,8 +66,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -77,9 +79,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1851,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -87,6 +95,18 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1972,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1974,
@@ -133,6 +153,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/477502693",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Moose Peak (Mistake Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=764",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Moose Peak",
+      "url": "https://archives.uslhs.org/places/moose-peak",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,7 +180,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -158,12 +192,84 @@
       "part": "wikidata:Q15256004",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:764",
+      "part": "wikidata:Q15256004",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:moose-peak-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1390",
+      "part": "wikidata:Q15256004",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2921",
+      "part": "wikidata:Q15256004",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.47457,-67.53200",
+      "part": "wikidata:Q15256004",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:moose-peak",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1851
+        },
+        {
+          "source": "osm",
+          "value": 1851
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

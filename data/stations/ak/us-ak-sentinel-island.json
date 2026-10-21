@@ -2,11 +2,13 @@
   "id": "us-ak-sentinel-island",
   "name": "Sentinel Island Light",
   "other_names": [
-    "Sentinel Island Lighthouse"
+    "Sentinel Island Lighthouse",
+    "Sentinel Island",
+    "Sentinel Island Light Station"
   ],
   "country": "US",
   "region": "AK",
-  "county": null,
+  "county": "Juneau Borough",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -25,27 +27,29 @@
       "type": "concrete",
       "material": "concrete",
       "built": 1902,
-      "height_m": null,
+      "height_m": 15.5,
       "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1902,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl 10s",
+    "characteristic": "Fl W 10s",
     "focal_height_m": 26.2,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001407",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001407"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001407",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325041"
     }
   ],
   "aton": {
@@ -57,29 +61,54 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1966"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1902,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1935,
@@ -96,7 +125,7 @@
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525189150",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sentinel Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=826",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sentinel Island",
+      "url": "https://archives.uslhs.org/places/sentinel-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325041",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +203,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -168,8 +216,68 @@
       "part": "wikidata:Q2856088",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:826",
+      "part": "wikidata:Q2856088",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:sentinel-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23850",
+      "part": "wikidata:Q2856088",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2695",
+      "part": "wikidata:Q2856088",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001407",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:58.54627,-134.92321",
+      "part": "wikidata:Q2856088",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ak:sentinel-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -187,6 +295,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1902
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

@@ -6,7 +6,14 @@
     "Castillo San Felipe del Morro Lighthouse",
     "El Morro or Port San Juan Lighthouse",
     "Faro Castillo del Morro",
-    "Castillo del Morro Lighthouse"
+    "Castillo del Morro Lighthouse",
+    "Puerto San Juan",
+    "El Morro",
+    "Port San Juan",
+    "Castillo de San Felipe del Morro Lighthouse",
+    "Faro de Morro",
+    "Faro del Castillo del Morro",
+    "Puerto San Juan Light"
   ],
   "country": "US",
   "region": "PR",
@@ -36,20 +43,32 @@
     }
   ],
   "light": {
-    "first_lit": 1908,
+    "first_lit": 1853,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl(3) W 40s",
-    "focal_height_m": 169.0,
+    "focal_height_m": 51.5,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000693",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000693"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000693",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518324"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-46",
+      "url": "https://www.loc.gov/item/pr0046/"
     }
   ],
   "aton": {
@@ -61,20 +80,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1962"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -86,10 +105,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1908,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1962,
@@ -100,7 +137,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -156,6 +193,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4124264489",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Puerto San Juan (El Morro)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1165",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-46, Castillo de San Felipe del Morro Lighthouse",
+      "url": "https://www.loc.gov/item/pr0046/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port San Juan (El Morro)",
+      "url": "https://archives.uslhs.org/places/port-san-juan-el-morro",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518324",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -168,7 +225,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -181,8 +237,65 @@
       "key": "osm:node/4124264489",
       "part": "wikidata:Q5351643",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1165",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-30735",
+      "part": "wikidata:Q5351643",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-46",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3485",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000693",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.47100,-66.12354",
+      "part": "wikidata:Q5351643",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:pr:puerto-san-juan-el-morro",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -197,9 +310,27 @@
         {
           "source": "osm",
           "value": 169.0
+        },
+        {
+          "source": "uslhs",
+          "value": 55.09
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1908
+        },
+        {
+          "source": "uslhs",
+          "value": 1853
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

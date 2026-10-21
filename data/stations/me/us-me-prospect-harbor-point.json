@@ -3,11 +3,13 @@
   "name": "Prospect Harbor Point Light",
   "other_names": [
     "Prospect Harbor Light Station",
-    "Prospect Harbor Point Lighthouse"
+    "Prospect Harbor Point Lighthouse",
+    "Prospect Harbor",
+    "Prospect Harbor Point"
   ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "Hancock",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -17,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1859,
+    "first_lit": 1850,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 13.0,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 12.8,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000151",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000151"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000151",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684913"
     }
   ],
   "aton": {
@@ -55,15 +59,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Navy (dwelling)",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1951"
   },
   "visit": {
     "grounds_open": null,
@@ -71,7 +75,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,16 +87,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1859,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1891,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1891,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1934,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1951,
@@ -103,7 +131,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -159,6 +187,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/536464959",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Prospect Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=508",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Prospect Harbor Point",
+      "url": "https://archives.uslhs.org/places/prospect-harbor-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684913",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,7 +218,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -185,22 +232,80 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:508",
+      "part": "wikidata:Q14715346",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:prospect-harbor-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1785",
+      "part": "wikidata:Q14715346",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2932",
+      "part": "wikidata:Q14715346",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000151",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.40336,-68.01300",
+      "part": "wikidata:Q14715346",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:prospect-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1891
         },
         {
-          "source": "wikidata",
-          "value": 1859
+          "source": "uslhs",
+          "value": 1850
         }
       ],
-      "note": "A source gives the light's service entry (1891) after its retirement (1859); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

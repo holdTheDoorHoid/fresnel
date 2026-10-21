@@ -2,7 +2,11 @@
   "id": "us-mi-wawatam",
   "name": "Wawatam Lighthouse",
   "other_names": [
-    "St. Ignace Lighthouse"
+    "St. Ignace Lighthouse",
+    "Wawatam",
+    "Gladstone",
+    "St. Ignace",
+    "St. Ignace Marina Entrance Light 2"
   ],
   "country": "US",
   "region": "MI",
@@ -36,10 +40,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 20.0,
-    "range_nm": 11.3,
+    "focal_height_m": 7.6,
+    "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -64,7 +68,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -77,9 +81,21 @@
     },
     {
       "year": 2006,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2006,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2010,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -130,6 +146,21 @@
       "label": "Website",
       "url": "https://stignace.com/lighthouses/wawatam-light/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Wawatam",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2423",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Wawatam",
+      "url": "https://archives.uslhs.org/places/wawatam",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,6 +187,72 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2423",
+      "part": "wikidata:Q29791570",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:gladstone-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:wawatam",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12608",
+      "part": "wikidata:Q29791570",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12609.5",
+      "part": "wikidata:Q29791570",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:83892",
+      "part": "wikidata:Q29791570",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.86594,-84.71543",
+      "part": "wikidata:Q29791570",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.86619,-84.71683",
+      "part": "wikidata:Q29791570",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:wawatam",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -1,10 +1,12 @@
 {
   "id": "us-nc-chicamacomico-life-saving-station",
   "name": "Chicamacomico Life-Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Chicamacomico Life Saving Station"
+  ],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Dare",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "other",
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "76000164",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000164"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000164",
+      "listed": "1976-12-12",
+      "nomination": "https://catalog.archives.gov/id/47719903"
     }
   ],
   "aton": {
@@ -46,20 +50,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": true,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -67,7 +71,7 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -99,6 +103,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Chicamacomico_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Chicamacomico Life Saving Station",
+      "url": "https://archives.uslhs.org/places/chicamacomico-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719903",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -115,10 +129,37 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97777",
+      "part": "station",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000164",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:chicamacomico-lss",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,9 @@
   "name": "Scotch Cap Light",
   "other_names": [
     "Scotch Cap Lighthouse",
-    "Llnr 1220"
+    "Llnr 1220",
+    "Lighthouse Ruins",
+    "Scotch Cap"
   ],
   "country": "US",
   "region": "AK",
@@ -33,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1903,
     "deactivated": 1946,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 33.5,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,7 +55,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1940,
@@ -91,7 +105,7 @@
     {
       "year": 1950,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -187,6 +201,26 @@
       "label": "Website",
       "url": "https://www.gi.alaska.edu/alaska-science-forum/demise-scotch-cap-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/540628059",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Scotch Cap",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1780",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Scotch Cap",
+      "url": "https://archives.uslhs.org/places/scotch-cap",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -238,8 +272,7 @@
       "part": "wikidata:Q112136897",
       "fields": [
         "aton",
-        "events",
-        "light"
+        "events"
       ]
     },
     {
@@ -249,9 +282,73 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/540628059",
+      "part": "wikidata:Q112136897",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1780",
+      "part": "wikidata:Q112136897",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:scotch-cap-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1220",
+      "part": "wikidata:Q112136897",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8369",
+      "part": "wikidata:Q112136897",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:54.39475,-164.74412",
+      "part": "wikidata:Q112136897",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "osm",
+          "value": "ruins"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
     {
       "field": "status",
       "values": [
@@ -261,6 +358,10 @@
         },
         {
           "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
           "value": "inactive"
         }
       ],

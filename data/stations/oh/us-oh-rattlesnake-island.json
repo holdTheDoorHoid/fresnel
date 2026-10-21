@@ -1,7 +1,9 @@
 {
   "id": "us-oh-rattlesnake-island",
   "name": "Rattlesnake Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Rattlesnake Island"
+  ],
   "country": "US",
   "region": "OH",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -66,7 +68,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1990,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11461407027",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rattlesnake Island (Faux)",
+      "url": "https://archives.uslhs.org/places/rattlesnake-island-faux",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +107,26 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:rattlesnake-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:75249",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A privately kept, unofficial light (1990): not an aid to navigation",
   "updated": "2026-10-21"
 }

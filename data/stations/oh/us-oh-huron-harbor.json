@@ -2,7 +2,12 @@
   "id": "us-oh-huron-harbor",
   "name": "Huron Harbor Light",
   "other_names": [
-    "Huron Harbor Lighthouse"
+    "Huron Harbor Lighthouse",
+    "Huron Harbor",
+    "Huron Harbor OH",
+    "Huron Harbor Light 5",
+    "Huron Harbor Light 8",
+    "Huron Harbor Light 7"
   ],
   "country": "US",
   "region": "OH",
@@ -23,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1939,
       "height_m": 22.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1936,
+    "first_lit": 1835,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 24.3,
-    "range_nm": 12.0,
+    "focal_height_m": 24.4,
+    "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91000971",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91000971"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91000971",
+      "listed": "1991-12-19",
+      "nomination": "https://catalog.archives.gov/id/71984692"
     }
   ],
   "aton": {
@@ -58,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,16 +77,28 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1935,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1936,
@@ -96,7 +115,7 @@
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +157,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/408518032",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Huron Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=279",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Huron Harbor OH",
+      "url": "https://archives.uslhs.org/places/huron-harbor-oh",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71984692",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -150,7 +189,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,8 +202,83 @@
       "part": "wikidata:Q5946880",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:279",
+      "part": "wikidata:Q5946880",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:huron-harbor-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4475",
+      "part": "wikidata:Q5946880",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4500",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4505",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4510",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3454",
+      "part": "wikidata:Q5946880",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91000971",
+      "part": "wikidata:Q5946880",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.40464,-82.54384",
+      "part": "wikidata:Q5946880",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:huron-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -185,6 +298,24 @@
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
     },
     {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 24.0
+        },
+        {
+          "source": "osm",
+          "value": 24.3
+        },
+        {
+          "source": "uslhs",
+          "value": 12.27
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
       "field": "first_year",
       "values": [
         {
@@ -194,6 +325,10 @@
         {
           "source": "osm",
           "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

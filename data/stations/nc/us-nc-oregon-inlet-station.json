@@ -1,7 +1,9 @@
 {
   "id": "us-nc-oregon-inlet-station",
   "name": "Oregon Inlet Station",
-  "other_names": [],
+  "other_names": [
+    "Oregon Inlet Life-Saving Station"
+  ],
   "country": "US",
   "region": "NC",
   "county": "Dare",
@@ -59,7 +61,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -115,6 +117,14 @@
         "photos",
         "region",
         "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:oregon-inlet-lss",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

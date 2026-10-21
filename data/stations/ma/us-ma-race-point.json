@@ -2,7 +2,9 @@
   "id": "us-ma-race-point",
   "name": "Race Point Light",
   "other_names": [
-    "Race Point Lighthouse"
+    "Race Point Lighthouse",
+    "Race Point",
+    "Race Point Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1876,
+    "first_lit": 1816,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 20.0,
-    "range_nm": 16.0,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 12.5,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001482",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001482"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001482",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789155"
     }
   ],
   "aton": {
@@ -54,26 +58,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard; licensed to American Lighthouse Foundation",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1972"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1816,
@@ -82,21 +93,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1816,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1876,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1876,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1876,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1972,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +172,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/161377452",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Race Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=523",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Race Point",
+      "url": "https://archives.uslhs.org/places/race-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789155",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/massachusetts",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,7 +209,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -168,8 +221,75 @@
       "key": "osm:way/161377452",
       "part": "wikidata:Q7278912",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:523",
+      "part": "wikidata:Q7278912",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:race-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-485",
+      "part": "wikidata:Q7278912",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2854",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001482",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.06230,-70.24302",
+      "part": "wikidata:Q7278912",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:race-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ma:race-point-light-station",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

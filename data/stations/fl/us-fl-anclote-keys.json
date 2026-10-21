@@ -3,11 +3,14 @@
   "name": "Anclote Keys Light",
   "other_names": [
     "Anclote Keys Lighthouse",
-    "Anclote Key Lighthouse"
+    "Anclote Key Lighthouse",
+    "Anclote Key",
+    "Anclote Key Light Station",
+    "Anclote Key Light"
   ],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Pinellas",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -17,7 +20,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -33,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1887,
     "deactivated": 1985,
     "lens": null,
     "characteristic": "Fl(4) W 30s",
     "focal_height_m": 34.0,
     "range_nm": 19.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "99000410",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000410"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000410",
+      "listed": "1999-04-01",
+      "nomination": "https://catalog.archives.gov/id/77843732"
     }
   ],
   "aton": {
@@ -56,22 +61,22 @@
     "nga": null
   },
   "agency": "Anclote Key Preserve State Park",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,8 +84,26 @@
     {
       "year": 1887,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1887,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1984,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1985,
@@ -91,7 +114,7 @@
     {
       "year": 1999,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -144,6 +167,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3205595797",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Anclote Key",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=596",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Anclote Key",
+      "url": "https://archives.uslhs.org/places/anclote-key",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77843732",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,22 +214,90 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:596",
+      "part": "wikidata:Q4753085",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:anclote-key",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1555",
+      "part": "wikidata:Q4753085",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2766",
+      "part": "wikidata:Q4753085",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:99000410",
+      "part": "wikidata:Q4753085",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:anclote-key",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 34.0
+        },
+        {
+          "source": "uslhs",
+          "value": 30.78
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 2003
         },
         {
-          "source": "wikidata",
-          "value": 1985
+          "source": "uslhs",
+          "value": 1887
         }
       ],
-      "note": "A source gives the light's service entry (2003) after its retirement (1985); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

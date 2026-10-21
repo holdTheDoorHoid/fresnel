@@ -2,7 +2,9 @@
   "id": "us-oh-turtle-island",
   "name": "Turtle Island Light",
   "other_names": [
-    "Turtle Island Lighthouse"
+    "Turtle Island Lighthouse",
+    "Turtle Island",
+    "ruins"
   ],
   "country": "US",
   "region": "OH",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.752483,
-    "lon": -83.39154,
+    "lat": 41.7525,
+    "lon": -83.391,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -23,23 +25,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1831,
-      "height_m": null,
+      "height_m": 13.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1866,
+    "first_lit": 1831,
     "deactivated": 1904,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 15.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -51,8 +53,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -76,6 +78,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1866,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1866,
       "event": "first_lit",
       "note": null,
@@ -84,7 +104,7 @@
     {
       "year": 1904,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -121,6 +141,21 @@
       "label": "ARLHS World List of Lights USA859",
       "url": "https://wlol.arlhs.com/lighthouse/USA859.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Turtle Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=271",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Turtle Island (ruins)",
+      "url": "https://archives.uslhs.org/places/turtle-island-ruins",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +169,59 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:271",
+      "part": "wikidata:Q7856413",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:turtle-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8880",
+      "part": "wikidata:Q7856413",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1866
+        },
+        {
+          "source": "uslhs",
+          "value": 1831
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

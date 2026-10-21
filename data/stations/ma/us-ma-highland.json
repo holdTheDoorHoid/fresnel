@@ -4,7 +4,10 @@
   "other_names": [
     "Highland Lighthouse",
     "Highland/Cape Cod Light",
-    "Cape Cod Light"
+    "Cape Cod Light",
+    "Cape Cod",
+    "Highland",
+    "Highland Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -25,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1797,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1797,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s,",
-    "focal_height_m": 52.0,
-    "range_nm": 18.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 51.8,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001463",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001463"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001463",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789153"
     }
   ],
   "aton": {
@@ -56,23 +61,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "CAPE COD NATIONAL SEASHORE",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,15 +89,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1797,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +167,26 @@
       "label": "Website",
       "url": "https://www.highlandlighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cape Cod (Highland)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=491",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Highland",
+      "url": "https://archives.uslhs.org/places/highland",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789153",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +199,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -171,9 +213,98 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:491",
+      "part": "wikidata:Q5758878",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:highland-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-500",
+      "part": "wikidata:Q5758878",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2828",
+      "part": "wikidata:Q5758878",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001463",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.03952,-70.06094",
+      "part": "wikidata:Q5758878",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:highland-cape-cod",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 52.0
+        },
+        {
+          "source": "uslhs",
+          "value": 55.78
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1797
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

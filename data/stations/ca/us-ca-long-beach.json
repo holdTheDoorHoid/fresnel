@@ -2,7 +2,10 @@
   "id": "us-ca-long-beach",
   "name": "Long Beach Light",
   "other_names": [
-    "Long Beach Lighthouse"
+    "Long Beach Lighthouse",
+    "Long Beach Harbor",
+    "Long Beach",
+    "Robot Light"
   ],
   "country": "US",
   "region": "CA",
@@ -37,9 +40,9 @@
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 15.2,
-    "range_nm": 20.0,
+    "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,12 +66,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1949,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1949,
       "event": "first_lit",
@@ -119,6 +128,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/566859523",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Long Beach Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=338",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -142,8 +161,45 @@
       "key": "osm:node/566859523",
       "part": "wikidata:Q6672305",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:338",
+      "part": "wikidata:Q6672305",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:long-beach-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-125",
+      "part": "wikidata:Q6672305",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-3012",
+      "part": "wikidata:Q6672305",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.72323,-118.18669",
+      "part": "wikidata:Q6672305",
+      "fields": [
+        "light"
       ]
     }
   ],

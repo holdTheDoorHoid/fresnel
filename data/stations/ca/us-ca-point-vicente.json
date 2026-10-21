@@ -3,7 +3,8 @@
   "name": "Point Vicente Light",
   "other_names": [
     "Point Vicente Lighthouse",
-    "Pt.Vicente"
+    "Pt.Vicente",
+    "Point Vicente"
   ],
   "country": "US",
   "region": "CA",
@@ -12,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 33.7419,
-    "lon": -118.4106,
+    "lat": 33.74193,
+    "lon": -118.41076,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -33,20 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1926,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl(2) W 20s",
-    "focal_height_m": 56.3,
-    "range_nm": 24.0,
+    "focal_height_m": 56.4,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80000808",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000808"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000808",
+      "listed": "1980-10-31",
+      "nomination": "https://catalog.archives.gov/id/123859422"
     }
   ],
   "aton": {
@@ -59,7 +67,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -85,13 +93,25 @@
     {
       "year": 1926,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1926,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1926,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +163,26 @@
       "label": "Website",
       "url": "https://www.palosverdes.com/pvlight/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Point Vicente",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=95",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Vicente",
+      "url": "https://archives.uslhs.org/places/point-vicente",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123859422",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +195,6 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
@@ -168,13 +207,69 @@
       "key": "osm:way/866888077",
       "part": "wikidata:Q7208183",
       "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:95",
+      "part": "wikidata:Q7208183",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:point-vicente",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-170",
+      "part": "wikidata:Q7208183",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2726",
+      "part": "wikidata:Q7208183",
+      "fields": [
+        "access",
         "events",
         "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000808",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.74196,-118.41063",
+      "part": "wikidata:Q7208183",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-vicente",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

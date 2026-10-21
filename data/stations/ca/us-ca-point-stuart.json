@@ -1,10 +1,13 @@
 {
   "id": "us-ca-point-stuart",
-  "name": "Point Stuart Lighthouse",
-  "other_names": [],
+  "name": "Point Stuart Light",
+  "other_names": [
+    "Point Stuart Lighthouse",
+    "Point Stuart"
+  ],
   "country": "US",
   "region": "CA",
-  "county": null,
+  "county": "Marin",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -31,18 +34,18 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1960,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl R 2.5s",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA1204",
     "ccg_list_number": null,
     "nga": null
   },
@@ -62,15 +65,53 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
+    },
+    {
+      "year": 1960,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angel_Island_-_panoramio.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angel_Island_-_panoramio.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Angel_Island_-_panoramio.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q44082465",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Point_Stuart",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA1204",
+      "url": "https://wlol.arlhs.com/lighthouse/USA1204.html",
+      "kind": "register"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1051744772",
@@ -80,18 +121,70 @@
       "label": "Website",
       "url": "https://www.us-lighthouses.com/point-stuart-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Stuart",
+      "url": "https://archives.uslhs.org/places/point-stuart",
+      "kind": "reference"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q44082465",
+      "part": "station",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region"
+      ]
+    },
     {
       "source": "osm",
       "key": "osm:way/1051744772",
       "part": "osm:way/1051744772",
       "fields": [
-        "kind",
-        "location",
-        "name",
-        "region"
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-stuart",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:92262",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.86128,-122.44727",
+      "part": "osm:way/1051744772",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-stuart",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

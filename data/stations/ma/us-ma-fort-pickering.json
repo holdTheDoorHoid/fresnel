@@ -3,7 +3,9 @@
   "name": "Fort Pickering Light",
   "other_names": [
     "Fort Pickering Lighthouse",
-    "Winter Island Light"
+    "Winter Island Light",
+    "Fort Pickering",
+    "Winter Island"
   ],
   "country": "US",
   "region": "MA",
@@ -24,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1871,
       "height_m": 8.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1983,
+    "first_lit": 1871,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 8.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -61,22 +63,22 @@
     "nga": null
   },
   "agency": "Privately Maintained",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1995"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,13 +86,25 @@
     {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1969,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -164,6 +178,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496086",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fort Pickering (Winter Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=481",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Pickering",
+      "url": "https://archives.uslhs.org/places/fort-pickering",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,7 +205,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -190,10 +218,58 @@
       "part": "wikidata:Q5471825",
       "fields": [
         "agency",
-        "light",
         "location",
         "registers",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:481",
+      "part": "wikidata:Q5471825",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:fort-pickering",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10090",
+      "part": "wikidata:Q5471825",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2837",
+      "part": "wikidata:Q5471825",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.52650,-70.86641",
+      "part": "wikidata:Q5471825",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:fort-pickering-winter-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -207,6 +283,10 @@
         },
         {
           "source": "osm",
+          "value": 1871
+        },
+        {
+          "source": "uslhs",
           "value": 1871
         }
       ],

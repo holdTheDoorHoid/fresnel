@@ -1,0 +1,130 @@
+{
+  "id": "us-ct-new-haven-long-wharf",
+  "name": "New Haven Long Wharf",
+  "other_names": [],
+  "country": "US",
+  "region": "CT",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.289,
+    "lon": -72.90933,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "cast_iron",
+      "built": 1854,
+      "height_m": 13.4,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1854,
+    "deactivated": 1859,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": 14.0,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "1-24205",
+    "arlhs": "USA-127",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1859,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Haven Long Wharf",
+      "url": "https://archives.uslhs.org/places/new-haven-long-wharf",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:new-haven-long-wharf-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "name"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8384",
+      "part": "uslhs:8384",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "location",
+        "region",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

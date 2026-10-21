@@ -2,7 +2,8 @@
   "id": "us-de-cape-henlopen",
   "name": "Cape Henlopen Light",
   "other_names": [
-    "Cape Henlopen Lighthouse"
+    "Cape Henlopen Lighthouse",
+    "Cape Henlopen"
   ],
   "country": "US",
   "region": "DE",
@@ -11,32 +12,32 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.7783,
-    "lon": -75.0845,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.777222,
+    "lon": -75.078611,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1926) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1767,
       "height_m": 21.0,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1769,
+    "first_lit": 1764,
     "deactivated": 1924,
     "lens": null,
     "characteristic": "Fl W with R sector",
-    "focal_height_m": null,
+    "focal_height_m": 50.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -70,6 +71,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1764,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1767,
       "event": "built",
       "note": null,
@@ -82,9 +89,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1924,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -132,6 +145,16 @@
       "label": "ARLHS World List of Lights USA120",
       "url": "https://wlol.arlhs.com/lighthouse/USA120.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Cape Henlopen",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1893",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Henlopen",
+      "url": "https://archives.uslhs.org/places/cape-henlopen",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,15 +168,47 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1893",
+      "part": "wikidata:Q5034856",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8392",
+      "part": "wikidata:Q5034856",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1769
+        },
+        {
+          "source": "uslhs",
+          "value": 1764
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

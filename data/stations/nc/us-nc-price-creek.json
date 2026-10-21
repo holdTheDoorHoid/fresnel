@@ -3,7 +3,10 @@
   "name": "Price Creek Light",
   "other_names": [
     "Price Creek Lighthouse",
-    "Price's Creek Lighthouse"
+    "Price's Creek Lighthouse",
+    "Prices Creek",
+    "Price's Creek Range Front",
+    "Price's Creek"
   ],
   "country": "US",
   "region": "NC",
@@ -65,7 +68,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -73,7 +76,7 @@
     {
       "year": 1849,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -81,6 +84,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1861,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -126,6 +135,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/364965510",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Prices Creek",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=351",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,6 +170,28 @@
       "part": "wikidata:Q7242575",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:351",
+      "part": "wikidata:Q7242575",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:price-s-creek-range-front",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:price-s-creek",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

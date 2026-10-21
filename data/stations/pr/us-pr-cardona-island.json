@@ -5,7 +5,11 @@
     "Faro de Isla Cardona",
     "Cardona Island Lighthouse",
     "Cardona's Island Lighthouse",
-    "Isla De Cardona Light"
+    "Isla De Cardona Light",
+    "Isla de Cardona",
+    "Cardona Island",
+    "Faro del Puerto de Ponce",
+    "Cayo Cardona Light"
   ],
   "country": "US",
   "region": "PR",
@@ -26,29 +30,41 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1889,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1889,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "6",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 4s",
     "focal_height_m": 14.0,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000691",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000691"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000691",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518300"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-35",
+      "url": "https://www.loc.gov/item/pr0035/"
     }
   ],
   "aton": {
@@ -61,7 +77,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -72,7 +88,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -85,6 +101,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1962,
       "event": "automated",
       "note": null,
@@ -93,7 +121,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -140,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1043844484",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isla de Cardona (Cardona Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1175",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-35, Faro del Puerto de Ponce",
+      "url": "https://www.loc.gov/item/pr0035/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cardona Island",
+      "url": "https://archives.uslhs.org/places/cardona-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518300",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,8 +213,57 @@
       "part": "wikidata:Q15207557",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1175",
+      "part": "wikidata:Q15207557",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-31950",
+      "part": "wikidata:Q15207557",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-35",
+      "part": "station",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3475",
+      "part": "wikidata:Q15207557",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000691",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:17.95673,-66.63508",
+      "part": "wikidata:Q15207557",
+      "fields": [
+        "light"
       ]
     }
   ],

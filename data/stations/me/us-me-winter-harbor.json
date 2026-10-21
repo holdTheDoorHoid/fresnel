@@ -1,12 +1,16 @@
 {
   "id": "us-me-winter-harbor",
-  "name": "Winter Harbor Lighthouse",
+  "name": "Winter Harbor Light",
   "other_names": [
-    "Tower (abandoned Lighthouse)"
+    "Winter Harbor Lighthouse",
+    "Winter Harbor Light Station",
+    "Tower (abandoned Lighthouse)",
+    "Winter Harbor",
+    "Mark Island"
   ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "Hancock",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -16,43 +20,51 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1856,
+      "height_m": 5.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1856,
+    "deactivated": 1933,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "87002538",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002538",
+      "listed": "1988-02-01",
+      "nomination": "https://catalog.archives.gov/id/88684923"
+    }
+  ],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "1-1915",
+    "arlhs": "USA900",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately Owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,37 +75,192 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1856,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1933,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "wikidata"
+    }
+  ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Harbor_Light_-_Winter_Harbor_ME.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Harbor_Light_-_Winter_Harbor_ME.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Winter_Harbor_Light_-_Winter_Harbor_ME.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Harbor_Light_Station_-_Winter_Harbor%2C_Maine_-_October_5%2C_2016.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Harbor_Light_Station_-_Winter_Harbor%2C_Maine_-_October_5%2C_2016.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Winter_Harbor_Light_Station_-_Winter_Harbor%2C_Maine_-_October_5%2C_2016.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q8026238",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Winter_Harbor_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Winter_Harbor",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Winter_Harbor_Light_Station",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA900",
+      "url": "https://wlol.arlhs.com/lighthouse/USA900.html",
+      "kind": "register"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4195108308",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Winter Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=509",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Winter Harbor",
+      "url": "https://archives.uslhs.org/places/winter-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684923",
+      "kind": "register"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q8026238",
+      "part": "station",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "photos",
+        "region",
+        "registers"
+      ]
+    },
     {
       "source": "osm",
       "key": "osm:node/4195108308",
       "part": "osm:node/4195108308",
       "fields": [
-        "kind",
-        "location",
-        "name",
-        "region"
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:509",
+      "part": "osm:node/4195108308",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:winter-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2947",
+      "part": "osm:node/4195108308",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002538",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:winter-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,9 @@
 {
   "id": "us-in-calumet-harbor-entrance-south-side",
   "name": "Calumet Harbor Entrance South Side",
-  "other_names": [],
+  "other_names": [
+    "Calumet Harbor Entrance South Side Light"
+  ],
   "country": "US",
   "region": "IN",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 9.1,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-19835",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -66,7 +68,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1995,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3885363465",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +101,29 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:calumet-harbor-entrance-south-side",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19835",
+      "part": "osm:node/3885363465",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.73560,-87.50631",
+      "part": "osm:node/3885363465",
+      "fields": [
+        "light"
       ]
     }
   ],

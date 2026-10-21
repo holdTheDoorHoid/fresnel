@@ -2,7 +2,9 @@
   "id": "us-wi-fond-du-lac",
   "name": "Fond du Lac Light",
   "other_names": [
-    "Fond du Lac Lighthouse"
+    "Fond du Lac Lighthouse",
+    "Fond du Lac",
+    "Lakeside Park"
   ],
   "country": "US",
   "region": "WI",
@@ -60,11 +62,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,7 +74,7 @@
     {
       "year": 1933,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -125,6 +127,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/823280765",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fond du Lac",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=578",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fond du Lac",
+      "url": "https://archives.uslhs.org/places/fond-du-lac",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,6 +167,36 @@
       "part": "wikidata:Q5464970",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:578",
+      "part": "wikidata:Q5464970",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:fond-du-lac",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9552",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:fond-du-lac",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

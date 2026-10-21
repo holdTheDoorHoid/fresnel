@@ -3,7 +3,9 @@
   "name": "Punta Gorda Light",
   "other_names": [
     "Punta Gorda Lighthouse",
-    "Punta Gorda Light House"
+    "Punta Gorda Light House",
+    "Punta Gorda",
+    "Punta Gorda Light Station"
   ],
   "country": "US",
   "region": "CA",
@@ -46,7 +48,9 @@
     {
       "register": "NRHP",
       "number": "76000483",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000483"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000483",
+      "listed": "1976-09-01",
+      "nomination": "https://catalog.archives.gov/id/123858784"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -79,19 +83,19 @@
     {
       "year": 1912,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1951,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +142,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/492004161",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Punta Gorda",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=63",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123858784",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,6 +183,31 @@
       "part": "wikidata:Q7260532",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:63",
+      "part": "wikidata:Q7260532",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:punta-gorda",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000483",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

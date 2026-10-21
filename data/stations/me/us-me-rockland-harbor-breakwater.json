@@ -3,7 +3,9 @@
   "name": "Rockland Harbor Breakwater Light",
   "other_names": [
     "Rockland Breakwater Lighthouse",
-    "Rockland Harbor Breakwater Lighthouse"
+    "Rockland Harbor Breakwater Lighthouse",
+    "Rockland Breakwater",
+    "Rockland Harbor Breakwater"
   ],
   "country": "US",
   "region": "ME",
@@ -33,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1902,
+    "first_lit": 1827,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 12.0,
+    "focal_height_m": 11.8,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000067",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000067"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000067",
+      "listed": "1981-03-20",
+      "nomination": "https://catalog.archives.gov/id/88686516"
     }
   ],
   "aton": {
@@ -56,26 +60,32 @@
     "nga": null
   },
   "agency": "United States Coast Guard",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1964"
+    "as_of": "1965"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1888,
       "event": "built",
@@ -85,7 +95,7 @@
     {
       "year": 1902,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
@@ -95,15 +105,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1964,
       "event": "automated",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1965,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -178,6 +200,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/421914968",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Rockland Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=528",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rockland Breakwater",
+      "url": "https://archives.uslhs.org/places/rockland-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686516",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -190,7 +232,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -205,7 +246,6 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
       ]
     },
@@ -214,9 +254,89 @@
       "key": "osm:way/421914968",
       "part": "wikidata:Q7355447",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:528",
+      "part": "wikidata:Q7355447",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:rockland-harbor-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4130",
+      "part": "wikidata:Q7355447",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2936",
+      "part": "wikidata:Q7355447",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000067",
+      "part": "wikidata:Q7355447",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.10404,-69.07755",
+      "part": "wikidata:Q7355447",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:rockland-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1902
+        },
+        {
+          "source": "osm",
+          "value": 1902
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,8 @@
   "id": "us-mi-windmill-point",
   "name": "Windmill Point Light",
   "other_names": [
-    "Windmill Point"
+    "Windmill Point",
+    "Windmill Point MI"
   ],
   "country": "US",
   "region": "MI",
@@ -47,14 +48,14 @@
     }
   ],
   "light": {
-    "first_lit": 1933,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
     "focal_height_m": 12.8,
-    "range_nm": 12.2,
+    "range_nm": 13.1,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -79,7 +80,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -91,9 +92,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1933,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -155,6 +168,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/537770587",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Windmill Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=164",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Windmill Point MI",
+      "url": "https://archives.uslhs.org/places/windmill-point-mi",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -179,7 +207,6 @@
       "fields": [
         "aton",
         "events",
-        "light",
         "photos",
         "structures"
       ]
@@ -189,13 +216,90 @@
       "key": "osm:node/537770587",
       "part": "wikidata:Q90140946",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:164",
+      "part": "wikidata:Q90140946",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:windmill-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-8260",
+      "part": "wikidata:Q90140946",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9696",
+      "part": "wikidata:Q90140946",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.35757,-82.92997",
+      "part": "wikidata:Q90140946",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:windmill-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 13.0
+        },
+        {
+          "source": "osm",
+          "value": 12.8
+        },
+        {
+          "source": "uslhs",
+          "value": 16.76
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

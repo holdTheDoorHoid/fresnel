@@ -1,7 +1,10 @@
 {
   "id": "us-mi-caseville-harbor",
   "name": "Caseville Harbor Light",
-  "other_names": [],
+  "other_names": [
+    "Caseville Harbor",
+    "Caseville Harbor Range Front Light"
+  ],
   "country": "US",
   "region": "MI",
   "county": "Huron",
@@ -33,11 +36,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s",
-    "focal_height_m": 20.0,
+    "characteristic": "F R",
+    "focal_height_m": 7.6,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,7 +73,7 @@
     {
       "year": 2001,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -102,6 +105,11 @@
       "label": "ARLHS World List of Lights USA1258",
       "url": "https://wlol.arlhs.com/lighthouse/USA1258.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,6 +128,34 @@
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:caseville-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10350",
+      "part": "wikidata:Q89274391",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10373",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.94532,-83.27871",
+      "part": "wikidata:Q89274391",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -1,7 +1,10 @@
 {
   "id": "us-mi-pentwater-north-pierhead",
   "name": "Pentwater North Pierhead Light",
-  "other_names": [],
+  "other_names": [
+    "Pentwater North Pierhead",
+    "Pentwater North Pierhead Light 3"
+  ],
   "country": "US",
   "region": "MI",
   "county": "Oceana",
@@ -35,9 +38,9 @@
     "lens": null,
     "characteristic": "Fl G 2.5s",
     "focal_height_m": 13.1,
-    "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 7.8,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -67,6 +70,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1987,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1997,
       "event": "built",
@@ -107,6 +116,11 @@
       "label": "ARLHS World List of Lights USA594",
       "url": "https://wlol.arlhs.com/lighthouse/USA594.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,12 +133,35 @@
         "county",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:pentwater-north-pierhead",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18620",
+      "part": "wikidata:Q87973361",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.78232,-86.44361",
+      "part": "wikidata:Q87973361",
+      "fields": [
+        "light"
       ]
     }
   ],

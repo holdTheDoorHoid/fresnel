@@ -5,7 +5,12 @@
     "Five Finger Islands Lighthouse",
     "Five Fingers Light",
     "Five Finger Lighthouse",
-    "Five Finger Light"
+    "Five Finger Light",
+    "Five Finger Islands",
+    "Five Finger Island",
+    "Five Finger Light Station",
+    "AHRS Site No. SUM-00009",
+    "Five Finger"
   ],
   "country": "US",
   "region": "AK",
@@ -26,12 +31,12 @@
       "role": "tower",
       "name": "Five Finger Islands Light",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1902,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "boathouse",
@@ -57,20 +62,22 @@
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1902,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 25.0,
+    "focal_height_m": 24.7,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "04000416",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04000416"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04000416",
+      "listed": "2004-05-12",
+      "nomination": "https://catalog.archives.gov/id/75325227"
     }
   ],
   "aton": {
@@ -83,7 +90,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -91,11 +98,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -107,9 +114,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -119,9 +138,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1998,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2004,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -193,6 +218,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/826480338",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Five Finger Islands",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=825",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Five Finger Island",
+      "url": "https://archives.uslhs.org/places/five-finger-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325227",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -205,7 +250,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -242,7 +286,6 @@
       "part": "wikidata:Q2790673",
       "fields": [
         "agency",
-        "light",
         "location",
         "structures"
       ]
@@ -252,6 +295,64 @@
       "key": "osm:way/826480338",
       "part": "wikidata:Q2790673",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:825",
+      "part": "wikidata:Q2790673",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:five-finger-islands-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23280",
+      "part": "wikidata:Q2790673",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2690",
+      "part": "wikidata:Q2790673",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:04000416",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:57.27046,-133.62997",
+      "part": "wikidata:Q2790673",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ak:five-finger",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

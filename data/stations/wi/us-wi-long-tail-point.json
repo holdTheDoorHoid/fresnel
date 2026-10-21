@@ -2,7 +2,13 @@
   "id": "us-wi-long-tail-point",
   "name": "Long Tail Point Light",
   "other_names": [
-    "Long Tail Point Lighthouse"
+    "Long Tail Point Lighthouse",
+    "Long Tail Point",
+    "Green Island WI",
+    "ruins",
+    "Tail Point Light",
+    "Tail Point Old",
+    "Tail Point New"
   ],
   "country": "US",
   "region": "WI",
@@ -23,12 +29,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1849,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -43,8 +49,8 @@
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-22205",
+    "arlhs": "USA-452",
     "ccg_list_number": null,
     "nga": null
   },
@@ -55,15 +61,15 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1936"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,19 +78,67 @@
     {
       "year": 1848,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1849,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "osm"
+    },
+    {
+      "year": 1859,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1863,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1863,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1933,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1936,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1956,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1973,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -122,6 +176,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582786291",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Long Tail Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=634",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Green Island WI (ruins)",
+      "url": "https://archives.uslhs.org/places/green-island-wi-ruins",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tail Point Light (ruins)",
+      "url": "https://archives.uslhs.org/places/tail-point-light-ruins",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tail Point Old",
+      "url": "https://archives.uslhs.org/places/tail-point-old",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tail Point New",
+      "url": "https://archives.uslhs.org/places/tail-point-new",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -147,10 +231,111 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:634",
+      "part": "wikidata:Q6673280",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:long-tail-point-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8996",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8997",
+      "part": "wikidata:Q6673280",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9568",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9569",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1848
+        },
+        {
+          "source": "osm",
+          "value": 1849
+        },
+        {
+          "source": "uslhs",
+          "value": 1848
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1973
+        },
+        {
+          "source": "rowlett",
+          "value": 1859
+        },
+        {
+          "source": "uslhs",
+          "value": 1956
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

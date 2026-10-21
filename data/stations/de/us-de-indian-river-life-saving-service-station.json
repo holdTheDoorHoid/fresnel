@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "76000582",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000582"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000582",
+      "listed": "1976-09-29",
+      "nomination": "https://catalog.archives.gov/id/75324784"
     }
   ],
   "aton": {
@@ -67,7 +69,7 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +96,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Indian_River_Life-Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324784",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -111,10 +118,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000582",
+      "part": "wikidata:Q6021479",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

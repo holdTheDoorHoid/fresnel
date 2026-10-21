@@ -1,10 +1,12 @@
 {
   "id": "us-mi-eagle-harbor-coast-guard-station-boathouse",
   "name": "Eagle Harbor Coast Guard Station Boathouse",
-  "other_names": [],
+  "other_names": [
+    "Keweenaw County Historical Society Coast Guard Museum"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Keweenaw",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "12000306",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000306"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000306",
+      "listed": "2012-08-16",
+      "nomination": "https://catalog.archives.gov/id/25339763"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -77,6 +81,11 @@
       "id": "us-mi-eagle-harbor",
       "relation": "light_station_nearby",
       "name": "Eagle Harbor Light"
+    },
+    {
+      "id": "us-mi-eagle-harbor-range",
+      "relation": "light_station_nearby",
+      "name": "Eagle Harbor Range"
     }
   ],
   "photos": [
@@ -105,6 +114,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Eagle_Harbor_Coast_Guard_Station_Boathouse",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339763",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -121,10 +135,20 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000306",
+      "part": "wikidata:Q5325103",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,12 @@
 {
   "id": "us-fl-smih-shoal",
   "name": "Smih Shoal Light",
-  "other_names": [],
+  "other_names": [
+    "Cosgrove Shoal",
+    "Smith Shoal",
+    "Twenty-eight Foot Shoal",
+    "Smith Shoal Light"
+  ],
   "country": "US",
   "region": "FL",
   "county": "Monroe",
@@ -14,7 +19,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,20 +29,20 @@
       "material": null,
       "built": 1933,
       "height_m": 16.5,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1933,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
     "focal_height_m": 16.5,
-    "range_nm": null,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -72,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1933,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1935,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -92,6 +109,16 @@
       "label": "ARLHS World List of Lights USA1056",
       "url": "https://wlol.arlhs.com/lighthouse/USA1056.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Smith Shoal",
+      "url": "https://archives.uslhs.org/places/smith-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -104,16 +131,52 @@
         "county",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:cosgrove-shoal-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:smith-shoal-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:twenty-eight-foot-shoal",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1200",
+      "part": "wikidata:Q69499946",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:42087",
+      "part": "wikidata:Q69499946",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

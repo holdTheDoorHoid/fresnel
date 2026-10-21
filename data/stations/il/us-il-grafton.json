@@ -1,7 +1,9 @@
 {
   "id": "us-il-grafton",
   "name": "Grafton Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Grafton"
+  ],
   "country": "US",
   "region": "IL",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -66,7 +68,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2007,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7185349920",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +101,14 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:grafton",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

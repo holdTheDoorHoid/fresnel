@@ -3,11 +3,12 @@
   "name": "Sands Point Light",
   "other_names": [
     "Sands Point Lighthouse",
-    "Mitchell Lighthouse"
+    "Mitchell Lighthouse",
+    "Sands Point"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Nassau",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1806,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,23 +38,23 @@
     "deactivated": 1922,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 19.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-21470",
     "arlhs": "USA727",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private Owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,8 +65,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,14 +79,26 @@
     },
     {
       "year": 1809,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1809,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1922,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -112,6 +125,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/696516094",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sands Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=750",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sands Point",
+      "url": "https://archives.uslhs.org/places/sands-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -136,6 +164,52 @@
       "fields": [
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:750",
+      "part": "wikidata:Q7416902",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:sands-point-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:sands-point-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3433",
+      "part": "wikidata:Q7416902",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:sands-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,8 @@
   "id": "us-ca-point-reyes-lifeboat-station",
   "name": "Point Reyes Lifeboat Station",
   "other_names": [
-    "Point Reyes Lifeboat Rescue Station"
+    "Point Reyes Lifeboat Rescue Station",
+    "Point Reyes Lifeboat Rescue Station, 1927"
   ],
   "country": "US",
   "region": "CA",
@@ -36,7 +37,10 @@
     {
       "register": "NRHP",
       "number": "85002756",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85002756"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85002756",
+      "listed": "1985-11-07",
+      "nhl": "1989-12-20",
+      "nomination": "https://catalog.archives.gov/id/123857956"
     },
     {
       "register": "National Historic Landmark",
@@ -74,8 +78,14 @@
     {
       "year": 1985,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -142,6 +152,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Point_Reyes_Lifeboat_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857956",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -157,6 +172,15 @@
         "name",
         "photos",
         "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:85002756",
+      "part": "station",
+      "fields": [
+        "events",
         "registers"
       ]
     }

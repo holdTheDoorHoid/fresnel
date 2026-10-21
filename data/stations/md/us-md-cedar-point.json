@@ -2,7 +2,11 @@
   "id": "us-md-cedar-point",
   "name": "Cedar Point Light",
   "other_names": [
-    "Cedar Point Lighthouse"
+    "Cedar Point Lighthouse",
+    "Cedar Point",
+    "lantern",
+    "Cedar Point MD",
+    "ruins"
   ],
   "country": "US",
   "region": "MD",
@@ -11,24 +15,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.299389,
-    "lon": -76.36775,
+    "lat": 38.27606,
+    "lon": -76.46296,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1996) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "material": "brick",
+      "built": 1896,
+      "height_m": 13.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +40,7 @@
     "deactivated": 1920,
     "lens": null,
     "characteristic": "5 s R flash",
-    "focal_height_m": null,
+    "focal_height_m": 13.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -71,15 +75,33 @@
   "events": [
     {
       "year": 1896,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1896,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1897,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1920,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1928,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1996,
@@ -126,6 +148,21 @@
       "label": "ARLHS World List of Lights USA1020",
       "url": "https://wlol.arlhs.com/lighthouse/USA1020.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Cedar Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1771",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cedar Point MD (ruins)",
+      "url": "https://archives.uslhs.org/places/cedar-point-md-ruins",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,14 +176,75 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1771",
+      "part": "wikidata:Q5056834",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:cedar-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8457",
+      "part": "wikidata:Q5056834",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1920
+        },
+        {
+          "source": "uslhs",
+          "value": 1928
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            38.29939,
+            -76.36775
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            38.27606,
+            -76.46296
+          ]
+        }
+      ],
+      "distance_m": 8705,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,9 @@
   "id": "us-nc-wade-point",
   "name": "Wade Point Light",
   "other_names": [
-    "Wade Point Lighthouse"
+    "Wade Point Lighthouse",
+    "Wade Point",
+    "Pasquotank River Entrance Light PR"
   ],
   "country": "US",
   "region": "NC",
@@ -11,39 +13,39 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 36.1561,
-    "lon": -75.9778,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 36.156308,
+    "lon": -75.97742,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1855,
+      "height_m": 11.0,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1855,
-    "deactivated": null,
+    "deactivated": 1955,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 7.0,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-31390",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -72,8 +74,20 @@
     {
       "year": 1855,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1955,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -104,6 +118,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Wade_Point_Light",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Wade Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1920",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Wade Point",
+      "url": "https://archives.uslhs.org/places/wade-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,15 +139,54 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1920",
+      "part": "wikidata:Q7959107",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-31390",
+      "part": "wikidata:Q7959107",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-37045",
+      "part": "wikidata:Q7959107",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8868",
+      "part": "wikidata:Q7959107",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.15631,-75.97735",
+      "part": "wikidata:Q7959107",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

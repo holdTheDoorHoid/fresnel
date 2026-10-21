@@ -2,7 +2,8 @@
   "id": "us-or-point-adams",
   "name": "Point Adams Light",
   "other_names": [
-    "Point Adams Lighthouse"
+    "Point Adams Lighthouse",
+    "Point Adams"
   ],
   "country": "US",
   "region": "OR",
@@ -11,13 +12,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 46.1883,
-    "lon": -123.978,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 46.19248,
+    "lon": -123.976971,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1912) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,7 +27,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -64,7 +65,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,13 +73,19 @@
     {
       "year": 1875,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1899,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -101,6 +108,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Point_Adams_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Point Adams",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1787",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Adams",
+      "url": "https://archives.uslhs.org/places/point-adams",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,14 +129,37 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1787",
+      "part": "wikidata:Q7207929",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8884",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:point-adams-lighthouse",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

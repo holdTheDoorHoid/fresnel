@@ -2,7 +2,8 @@
   "id": "us-wa-admiralty-head",
   "name": "Admiralty Head Light",
   "other_names": [
-    "Admiralty Head Lighthouse"
+    "Admiralty Head Lighthouse",
+    "Admiralty Head"
   ],
   "country": "US",
   "region": "WA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1903,
+    "first_lit": 1860,
     "deactivated": 1922,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 40.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -48,31 +49,43 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Fort Casey State Park",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1860,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1860,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1903,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -84,7 +97,7 @@
     {
       "year": 1922,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -131,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/837502022",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Admiralty Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=31",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Admiralty Head",
+      "url": "https://archives.uslhs.org/places/admiralty-head",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,9 +185,61 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:31",
+      "part": "wikidata:Q2288135",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:admiralty-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3538",
+      "part": "wikidata:Q2288135",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:admiralty-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1903
+        },
+        {
+          "source": "uslhs",
+          "value": 1860
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

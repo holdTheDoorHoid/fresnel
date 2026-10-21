@@ -2,7 +2,9 @@
   "id": "us-sc-hunting-island",
   "name": "Hunting Island Light",
   "other_names": [
-    "Hunting Island Lighthouse"
+    "Hunting Island Lighthouse",
+    "Hunting Island",
+    "Hunting Island State Park Lighthouse"
   ],
   "country": "US",
   "region": "SC",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1859,
       "height_m": 41.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1875,
+    "first_lit": 1859,
     "deactivated": 1933,
     "lens": null,
-    "characteristic": "FF W, FI W30s",
-    "focal_height_m": 40.0,
+    "characteristic": "FFl W 30s",
+    "focal_height_m": 40.2,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "70000561",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/70000561"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/70000561",
+      "listed": "1970-06-05",
+      "nomination": "https://catalog.archives.gov/id/118997157"
     }
   ],
   "aton": {
@@ -57,20 +61,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,21 +86,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1859,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1875,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1970,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +170,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Hunting_Island_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Hunting Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=332",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hunting Island",
+      "url": "https://archives.uslhs.org/places/hunting-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/118997157",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,9 +218,83 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:332",
+      "part": "wikidata:Q15226936",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:hunting-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4065",
+      "part": "wikidata:Q15226936",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3514",
+      "part": "wikidata:Q15226936",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:70000561",
+      "part": "wikidata:Q15226936",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.37556,-80.43752",
+      "part": "wikidata:Q15226936",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:hunting-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1875
+        },
+        {
+          "source": "uslhs",
+          "value": 1859
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

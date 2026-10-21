@@ -2,7 +2,8 @@
   "id": "us-nj-miah-maull-shoal",
   "name": "Miah Maull Shoal Light",
   "other_names": [
-    "Miah Maull Shoal Lighthouse"
+    "Miah Maull Shoal Lighthouse",
+    "Miah Maull Shoal"
   ],
   "country": "US",
   "region": "NJ",
@@ -22,30 +23,31 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1913,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc W 4s, R sector",
+    "characteristic": "Oc W 4s",
     "focal_height_m": 18.0,
-    "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 10.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90002188",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90002188"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90002188",
+      "listed": "1991-02-04"
     }
   ],
   "aton": {
@@ -57,8 +59,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,7 +71,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -78,13 +80,19 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +139,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697203108",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Miah Maull Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=385",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Miah Maull Shoal",
+      "url": "https://archives.uslhs.org/places/miah-maull-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +166,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,6 +179,59 @@
       "part": "wikidata:Q15253289",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:385",
+      "part": "wikidata:Q15253289",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:miah-maull-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1585",
+      "part": "wikidata:Q15253289",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3382",
+      "part": "wikidata:Q15253289",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90002188",
+      "part": "wikidata:Q15253289",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.12665,-75.20868",
+      "part": "wikidata:Q15253289",
+      "fields": [
+        "light"
       ]
     }
   ],

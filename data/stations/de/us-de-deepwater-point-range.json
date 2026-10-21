@@ -1,9 +1,12 @@
 {
   "id": "us-de-deepwater-point-range",
-  "name": "Deepwater Point Range Lights",
+  "name": "Deepwater Point Range",
   "other_names": [
     "Deepwater point Range Rear Light",
-    "Deepwater Point Range Front Light"
+    "Deepwater Point Range Front Light",
+    "Deepwater Point Range Front",
+    "Deepwater Point Range Rear",
+    "Deepwater Point Range Rear Light"
   ],
   "country": "US",
   "region": "DE",
@@ -17,45 +20,41 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
       "name": "Deepwater Point Range Front Light",
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "wood",
       "built": 1876,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 7.6,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "rear_range",
       "name": "Deepwater point Range Rear Light",
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1876,
       "height_m": 27.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 39.699167,
-        "lon": -75.496389
-      }
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1951,
-    "deactivated": null,
+    "first_lit": 1876,
+    "deactivated": 1952,
     "lens": null,
-    "characteristic": "Fl W 4s",
+    "characteristic": "FG",
     "focal_height_m": 27.0,
-    "range_nm": 6.0,
+    "range_nm": 55.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -92,10 +91,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1876,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1951,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1952,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -126,6 +143,26 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_avant_de_Deepwater_Point",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Deepwater Point Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1877",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Deepwater Point Range Front",
+      "url": "https://archives.uslhs.org/places/deepwater-point-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Deepwater Point Range Rear",
+      "url": "https://archives.uslhs.org/places/deepwater-point-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,10 +188,74 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1877",
+      "part": "wikidata:Q78607208",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:deepwater-point-range-front-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:deepwater-point-range-rear-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2910",
+      "part": "wikidata:Q78607208",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8560",
+      "part": "wikidata:Q78631296",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8561",
+      "part": "wikidata:Q78607208",
+      "fields": [
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 12.5
+        },
+        {
+          "source": "uslhs",
+          "value": 7.62
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

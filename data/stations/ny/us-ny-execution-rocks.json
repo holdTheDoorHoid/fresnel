@@ -3,7 +3,8 @@
   "name": "Execution Rocks Light",
   "other_names": [
     "Execution Rocks Lighthouse",
-    "Execution Rocks Light Station"
+    "Execution Rocks Light Station",
+    "Execution Rocks"
   ],
   "country": "US",
   "region": "NY",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1849,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 19.0,
-    "range_nm": 15.0,
+    "focal_height_m": 18.9,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07000094",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000094"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000094",
+      "listed": "2007-02-23",
+      "nomination": "https://catalog.archives.gov/id/75325127"
     }
   ],
   "aton": {
@@ -59,22 +62,29 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1979"
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1849,
@@ -85,19 +95,31 @@
     {
       "year": 1850,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1850,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1979,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +171,26 @@
       "label": "Website",
       "url": "https://executionrocks.wordpress.com/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Execution Rocks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=749",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Execution Rocks",
+      "url": "https://archives.uslhs.org/places/execution-rocks",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325127",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,6 +218,64 @@
       "fields": [
         "events",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:749",
+      "part": "wikidata:Q5419772",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:execution-rocks",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21440",
+      "part": "wikidata:Q5419772",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3408",
+      "part": "wikidata:Q5419772",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07000094",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.87808,-73.73772",
+      "part": "wikidata:Q5419772",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:execution-rocks",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

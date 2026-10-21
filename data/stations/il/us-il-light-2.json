@@ -6,7 +6,9 @@
     "Great Lakes LIGHT 2",
     "Light 1",
     "Beacon 2",
-    "Great Lakes LIGHT 1"
+    "Great Lakes LIGHT 1",
+    "Great Lakes Light 2",
+    "Great Lakes Light 1"
   ],
   "country": "US",
   "region": "IL",
@@ -54,11 +56,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 10.0,
-    "range_nm": 6.0,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 10.4,
+    "range_nm": 4.3,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -68,7 +70,7 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20285",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -125,7 +127,6 @@
         "agency",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "registers",
@@ -140,6 +141,34 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20285",
+      "part": "osm:node/12269037948",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20290",
+      "part": "osm:node/12269037949",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.30510,-87.82642",
+      "part": "osm:node/12269037949",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.30591,-87.82475",
+      "part": "osm:node/12269037948",
+      "fields": []
     }
   ],
   "conflicts": [],

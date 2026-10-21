@@ -2,7 +2,10 @@
   "id": "us-ma-lightship-nantucket",
   "name": "United States lightship Nantucket",
   "other_names": [
-    "United States lightship Nantucket (LV-112)"
+    "United States lightship Nantucket (LV-112)",
+    "Nantucket",
+    "Lightship Nantucket LV 112/WAL 534",
+    "Lightship No. 112, NANTUCKET"
   ],
   "country": "US",
   "region": "MA",
@@ -11,10 +14,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 42.361111,
-    "lon": -71.035278,
+    "lat": 42.36115,
+    "lon": -71.03523,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -33,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "89002464",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002464"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002464",
+      "listed": "1989-12-20",
+      "nhl": "1989-12-20"
     },
     {
       "register": "National Historic Landmark",
@@ -68,7 +73,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,8 +87,14 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -119,6 +130,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:United_States_lightship_Nantucket_%28LV-112%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Nantucket LV 112/WAL 534",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=805",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,17 +148,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:805",
+      "part": "wikidata:Q2270033",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89002464",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:nantucket-ls-lv112",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

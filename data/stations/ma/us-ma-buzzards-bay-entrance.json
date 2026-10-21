@@ -3,7 +3,8 @@
   "name": "Buzzards Bay Entrance Light",
   "other_names": [
     "Buzzards Bay Entrance Lighthouse",
-    "Buzzards Bay Entrance LIght"
+    "Buzzards Bay Entrance LIght",
+    "Buzzards Bay Entrance"
   ],
   "country": "US",
   "region": "MA",
@@ -24,8 +25,8 @@
       "role": "tower",
       "name": null,
       "type": "texas_tower",
-      "material": null,
-      "built": null,
+      "material": "steel",
+      "built": 1961,
       "height_m": null,
       "status": "standing",
       "note": null,
@@ -37,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 6.2,
-    "range_nm": 17.0,
+    "focal_height_m": 20.4,
+    "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -64,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -73,7 +74,7 @@
     {
       "year": 1961,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -81,6 +82,18 @@
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1994,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1997,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -126,6 +139,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496053",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buzzards Bay Entrance",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2416",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buzzards Bay Entrance Light",
+      "url": "https://archives.uslhs.org/places/buzzards-bay-entrance-light",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,12 +178,72 @@
       "key": "osm:node/257496053",
       "part": "wikidata:Q5003577",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2416",
+      "part": "wikidata:Q5003577",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:buzzards-bay-entrance-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15985",
+      "part": "wikidata:Q5003577",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-630",
+      "part": "wikidata:Q5003577",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8487",
+      "part": "wikidata:Q5003577",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.39698,-71.03468",
+      "part": "wikidata:Q5003577",
+      "fields": [
+        "light"
       ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
     {
       "field": "light.focal_height_m",
       "values": [
@@ -171,7 +259,7 @@
       "note": "Sources differ by more than 3 m."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

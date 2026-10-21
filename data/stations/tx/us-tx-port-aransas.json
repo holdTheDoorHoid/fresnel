@@ -3,7 +3,11 @@
   "name": "Port Aransas Light Station",
   "other_names": [
     "Lydia Ann Lighthouse",
-    "Aransas Pass Light Station"
+    "Aransas Pass Light Station",
+    "Aransas Pass",
+    "Lydia Ann",
+    "Lydia Ann Channel",
+    "Lydia Ann Channel Light"
   ],
   "country": "US",
   "region": "TX",
@@ -17,36 +21,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1855,
+      "height_m": 16.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1856,
-    "deactivated": 1952,
+    "first_lit": 1855,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "FF W",
-    "focal_height_m": 20.0,
+    "characteristic": "F W",
+    "focal_height_m": 19.8,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001423",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001423"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001423",
+      "listed": "1977-08-03",
+      "nomination": "https://catalog.archives.gov/id/40971003"
     }
   ],
   "aton": {
@@ -55,11 +61,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Charles C. Butt",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "private",
+    "note": "OpenStreetMap tags the structure access=private. LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +76,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,21 +89,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1856,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1952,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +163,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/760436819",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Aransas Pass (Lydia Ann)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=158",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Texas: South",
+      "url": "https://www.ibiblio.org/lighthouse/txs.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lydia Ann (Aransas Pass)",
+      "url": "https://archives.uslhs.org/places/lydia-ann-aransas-pass",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/40971003",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,10 +209,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:158",
+      "part": "wikidata:Q18619035",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:txs:lydia-ann-channel",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-39720",
+      "part": "wikidata:Q18619035",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3518",
+      "part": "wikidata:Q18619035",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001423",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:27.86412,-97.05637",
+      "part": "wikidata:Q18619035",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:tx:aransas-pass",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,9 @@
   "name": "Mystic Seaport Light",
   "other_names": [
     "Mystic Seaport Lighthouse",
-    "Brant Point Replica Lighthouse"
+    "Brant Point Replica Lighthouse",
+    "Mystic Seaport (Replica)",
+    "Brant Point Replica"
   ],
   "country": "US",
   "region": "CT",
@@ -17,7 +19,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -65,7 +67,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,7 +80,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ma-brant-point",
+      "relation": "replica_of",
+      "name": "Brant Point Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mystic_Seaport_Lighthouse.JPG",
@@ -115,6 +123,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1016394507",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mystic Seaport (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=803",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,6 +153,20 @@
       "part": "wikidata:Q6948971",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:803",
+      "part": "wikidata:Q6948971",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:brant-point-replica",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

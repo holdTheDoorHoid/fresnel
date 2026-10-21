@@ -2,7 +2,8 @@
   "id": "us-mi-round-island-passage",
   "name": "Round Island Passage Light",
   "other_names": [
-    "Round Island Passage Lighthouse"
+    "Round Island Passage Lighthouse",
+    "Round Island Passage"
   ],
   "country": "US",
   "region": "MI",
@@ -35,17 +36,18 @@
     "first_lit": 1948,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 22.0,
-    "range_nm": 14.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl R 5s",
+    "focal_height_m": 21.6,
+    "range_nm": 9.6,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "13000583",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/13000583"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/13000583",
+      "listed": "2013-08-07"
     }
   ],
   "aton": {
@@ -57,8 +59,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +71,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,8 +85,14 @@
     },
     {
       "year": 1948,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1948,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -96,7 +104,7 @@
     {
       "year": 2013,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +157,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/45759664",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Round Island Passage",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=838",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Round Island Passage",
+      "url": "https://archives.uslhs.org/places/round-island-passage",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -175,6 +198,71 @@
       "part": "wikidata:Q7371061",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:838",
+      "part": "wikidata:Q7371061",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:round-island-passage",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12580",
+      "part": "wikidata:Q7371061",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3329",
+      "part": "wikidata:Q7371061",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:13000583",
+      "part": "wikidata:Q7371061",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.84304,-84.61540",
+      "part": "wikidata:Q7371061",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.84428,-84.61439",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:round-island-passage",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

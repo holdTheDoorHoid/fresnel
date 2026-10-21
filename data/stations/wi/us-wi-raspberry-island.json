@@ -3,7 +3,8 @@
   "name": "Raspberry Island Light",
   "other_names": [
     "Raspberry Island Lighthouse",
-    "Raspberry Island Light Station"
+    "Raspberry Island Light Station",
+    "Raspberry Island"
   ],
   "country": "US",
   "region": "WI",
@@ -17,15 +18,15 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1862,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
@@ -34,13 +35,13 @@
   ],
   "light": {
     "first_lit": 1862,
-    "deactivated": null,
+    "deactivated": 1957,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 58.0,
-    "range_nm": 7.0,
+    "focal_height_m": 17.7,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
@@ -63,29 +64,66 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1947"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1862,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1862,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1863,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1947,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1957,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1977,
@@ -137,6 +175,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582730404",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Raspberry Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=690",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: RASPBERRY ISLAND",
+      "url": "https://archives.uslhs.org/places/raspberry-island",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/wisconsin",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,14 +220,85 @@
       "key": "osm:node/582730404",
       "part": "wikidata:Q7295189",
       "fields": [
-        "light",
         "location",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:690",
+      "part": "wikidata:Q7295189",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:raspberry-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15555",
+      "part": "wikidata:Q7295189",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3581",
+      "part": "wikidata:Q7295189",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.97026,-90.80464",
+      "part": "wikidata:Q7295189",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:raspberry-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:wi:raspberry-island",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "light.focal_height_m",
       "values": [
@@ -180,12 +309,16 @@
         {
           "source": "osm",
           "value": 58.0
+        },
+        {
+          "source": "uslhs",
+          "value": 23.47
         }
       ],
       "note": "Sources differ by more than 3 m."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-ca-carquinez-strait",
   "name": "Carquinez Strait Light",
   "other_names": [
-    "Carquinez Strait Lighthouse"
+    "Carquinez Strait Lighthouse",
+    "Carquinez Strait"
   ],
   "country": "US",
   "region": "CA",
@@ -11,13 +12,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.0682,
-    "lon": -122.213,
+    "lat": 38.06781,
+    "lon": -122.21372,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -26,7 +27,7 @@
       "material": null,
       "built": 1910,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -67,18 +68,25 @@
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1910,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1951,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -126,6 +134,16 @@
       "label": "ARLHS World List of Lights USA142",
       "url": "https://wlol.arlhs.com/lighthouse/USA142.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Carquinez Strait",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=69",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,11 +157,28 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:69",
+      "part": "wikidata:Q5045947",
+      "fields": [
+        "location",
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:carquinez-strait",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],
@@ -163,7 +198,7 @@
       "note": "A source gives the light's service entry (1963) after its retirement (1951); it may have been relit. Neither is shown as the first lighting."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-hi-kauhola-point",
   "name": "Kauhola Point Light",
   "other_names": [
-    "Kauhola Point Lighthouse"
+    "Kauhola Point Lighthouse",
+    "Kauhola Point"
   ],
   "country": "US",
   "region": "HI",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1933,
+    "first_lit": 1897,
     "deactivated": 2009,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 15s",
+    "focal_height_m": 32.9,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,6 +71,18 @@
   "stay": null,
   "events": [
     {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1933,
       "event": "first_lit",
       "note": null,
@@ -80,6 +93,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2009,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -120,6 +139,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2090617507",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Kauhola Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=145",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Kauhola Point",
+      "url": "https://archives.uslhs.org/places/kauhola-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,10 +180,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:145",
+      "part": "wikidata:Q6378704",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:kauhola-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28010",
+      "part": "wikidata:Q6378704",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8419",
+      "part": "wikidata:Q6378704",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.24628,-155.77142",
+      "part": "wikidata:Q6378704",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

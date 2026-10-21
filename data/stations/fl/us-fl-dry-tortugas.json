@@ -3,7 +3,8 @@
   "name": "Dry Tortugas Light",
   "other_names": [
     "Dry Tortugas Lighthouse",
-    "Dry Tortugas"
+    "Dry Tortugas",
+    "Loggerhead Key"
   ],
   "country": "US",
   "region": "FL",
@@ -33,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1826,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 20s",
@@ -52,29 +53,48 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
+    {
+      "year": 1826,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1858,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -120,6 +140,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/350556448",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Dry Tortugas (Loggerhead Key)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=697",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: DRY TORTUGAS (LOGGERHEAD KEY)",
+      "url": "https://archives.uslhs.org/places/dry-tortugas-loggerhead-key",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,9 +181,52 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:697",
+      "part": "wikidata:Q5309560",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:dry-tortugas",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2774",
+      "part": "wikidata:Q5309560",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1826
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

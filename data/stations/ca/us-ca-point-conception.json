@@ -3,7 +3,10 @@
   "name": "Point Conception Light",
   "other_names": [
     "Point Conception Lighthouse",
-    "Pt.Conception"
+    "Pt.Conception",
+    "Point Conception",
+    "Point Conception Light Station",
+    "Humqaq (Chumash Indian Nameplace)"
   ],
   "country": "US",
   "region": "CA",
@@ -23,30 +26,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1856,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1882,
+    "first_lit": 1855,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 30s",
     "focal_height_m": 40.5,
-    "range_nm": 20.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000176",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000176"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000176",
+      "listed": "1981-02-25",
+      "nomination": "https://catalog.archives.gov/id/123861609"
     }
   ],
   "aton": {
@@ -59,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,12 +75,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1856,
       "event": "built",
@@ -83,10 +100,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1881,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1882,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1882,
@@ -97,7 +126,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +173,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/538659370",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Conception",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=11",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Conception",
+      "url": "https://archives.uslhs.org/places/point-conception",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123861609",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +205,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,8 +218,57 @@
       "part": "wikidata:Q7207992",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:11",
+      "part": "wikidata:Q7207992",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:point-conception-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-200",
+      "part": "wikidata:Q7207992",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2717",
+      "part": "wikidata:Q7207992",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000176",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.44863,-120.47070",
+      "part": "wikidata:Q7207992",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -186,6 +283,10 @@
         {
           "source": "osm",
           "value": 1881
+        },
+        {
+          "source": "uslhs",
+          "value": 1855
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

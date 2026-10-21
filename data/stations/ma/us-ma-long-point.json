@@ -2,7 +2,9 @@
   "id": "us-ma-long-point",
   "name": "Long Point Light",
   "other_names": [
-    "Long Point Lighthouse"
+    "Long Point Lighthouse",
+    "Long Point",
+    "Long Point Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1827,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1875,
+    "first_lit": 1826,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc G 4s",
-    "focal_height_m": 10.9,
+    "focal_height_m": 11.0,
     "range_nm": 8.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002039",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002039"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002039",
+      "listed": "1987-09-28",
+      "nomination": "https://catalog.archives.gov/id/63789167"
     }
   ],
   "aton": {
@@ -54,32 +58,56 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard; licensed to American Lighthouse Foundation",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1952"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1826,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1827,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1875,
@@ -88,9 +116,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1952,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/215750957",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Long Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=490",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Long Point",
+      "url": "https://archives.uslhs.org/places/long-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789167",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -162,12 +215,88 @@
       "key": "osm:way/215750957",
       "part": "wikidata:Q6673081",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:490",
+      "part": "wikidata:Q6673081",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:long-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-13275",
+      "part": "wikidata:Q6673081",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2843",
+      "part": "wikidata:Q6673081",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002039",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.03312,-70.16865",
+      "part": "wikidata:Q6673081",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:long-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1875
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

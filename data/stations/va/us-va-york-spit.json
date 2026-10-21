@@ -2,7 +2,8 @@
   "id": "us-va-york-spit",
   "name": "York Spit Light",
   "other_names": [
-    "York Spit Lighthouse"
+    "York Spit Lighthouse",
+    "York Spit"
   ],
   "country": "US",
   "region": "VA",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.2096,
-    "lon": -76.2542,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.209741,
+    "lon": -76.25405,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1960) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1855,
+      "height_m": 13.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +37,10 @@
     "deactivated": 1960,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 9.0,
-    "range_nm": null,
+    "focal_height_m": 9.1,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,10 +71,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1855,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1870,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1876,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1960,
@@ -86,6 +99,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1965,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -126,6 +145,21 @@
       "label": "ARLHS World List of Lights USA909",
       "url": "https://wlol.arlhs.com/lighthouse/USA909.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: York Spit",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1940",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: York Spit",
+      "url": "https://archives.uslhs.org/places/york-spit",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,15 +173,83 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1940",
+      "part": "wikidata:Q16904108",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:york-spit-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-13455",
+      "part": "wikidata:Q16904108",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8978",
+      "part": "wikidata:Q16904108",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.20974,-76.25405",
+      "part": "wikidata:Q16904108",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 9.0
+        },
+        {
+          "source": "uslhs",
+          "value": 13.11
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1960
+        },
+        {
+          "source": "uslhs",
+          "value": 1965
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

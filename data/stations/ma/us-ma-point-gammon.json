@@ -2,11 +2,12 @@
   "id": "us-ma-point-gammon",
   "name": "Point Gammon Light",
   "other_names": [
-    "Point Gammon Lighthouse"
+    "Point Gammon Lighthouse",
+    "Point Gammon"
   ],
   "country": "US",
   "region": "MA",
-  "county": null,
+  "county": "Barnstable",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1816,
     "deactivated": 1858,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -48,11 +49,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -63,16 +64,34 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1816,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1816,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1858,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -114,6 +133,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/429961906",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Gammon",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=485",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Gammon",
+      "url": "https://archives.uslhs.org/places/point-gammon",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,9 +173,57 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:485",
+      "part": "wikidata:Q7208031",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:point-gammon",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8498",
+      "part": "station",
+      "fields": [
+        "agency",
+        "county",
+        "events",
+        "light",
+        "ownership"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "rowlett",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1855
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,10 @@
   "name": "Palmer Island Light",
   "other_names": [
     "Palmer Island Lighthouse",
-    "Palmers Island Light"
+    "Palmers Island Light",
+    "Palmer Island",
+    "Palmer (Palmers) Island",
+    "Palmer Island Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 1999,
+    "first_lit": 1849,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 13.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80000433",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000433"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000433",
+      "listed": "1980-03-26",
+      "nomination": "https://catalog.archives.gov/id/63789621"
     }
   ],
   "aton": {
@@ -56,22 +61,22 @@
     "nga": null
   },
   "agency": "United States Coast Guard",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1941"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,8 +84,14 @@
     {
       "year": 1849,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1941,
@@ -91,13 +102,13 @@
     {
       "year": 1962,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -150,6 +161,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713055704",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Palmer Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=618",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Palmer Island",
+      "url": "https://archives.uslhs.org/places/palmer-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789621",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,8 +207,64 @@
       "part": "wikidata:Q7128244",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:618",
+      "part": "wikidata:Q7128244",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:palmer-palmers-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-16898",
+      "part": "wikidata:Q7128244",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2852",
+      "part": "wikidata:Q7128244",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000433",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.62695,-70.90914",
+      "part": "wikidata:Q7128244",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:palmer-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -205,6 +292,10 @@
         },
         {
           "source": "osm",
+          "value": 1849
+        },
+        {
+          "source": "uslhs",
           "value": 1849
         }
       ],

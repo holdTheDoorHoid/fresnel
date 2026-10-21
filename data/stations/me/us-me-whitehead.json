@@ -3,7 +3,10 @@
   "name": "Whitehead Light",
   "other_names": [
     "Whitehead Lighthouse",
-    "Llnr 4580"
+    "Llnr 4580",
+    "Whitehead",
+    "Whitehead Island",
+    "Whitehead Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -23,30 +26,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "stone",
       "built": 1804,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1852,
+    "first_lit": 1804,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc G 4s",
-    "focal_height_m": 23.0,
+    "focal_height_m": 22.9,
     "range_nm": 6.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000154",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000154"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000154",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684984"
     }
   ],
   "aton": {
@@ -55,26 +60,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Pine Island Camp",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1982"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://whiteheadlightstation.org/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1804,
@@ -83,21 +95,45 @@
       "from": "wikidata"
     },
     {
+      "year": 1804,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1807,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1852,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1852,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1982,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +186,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/896162112",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Whitehead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=778",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Whitehead Island",
+      "url": "https://archives.uslhs.org/places/whitehead-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684984",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,7 +223,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -177,9 +237,94 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:778",
+      "part": "wikidata:Q1541848",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:whitehead-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4580",
+      "part": "wikidata:Q1541848",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2945",
+      "part": "wikidata:Q1541848",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000154",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.97871,-69.12427",
+      "part": "wikidata:Q1541848",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:whitehead-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:whitehead-light-station",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1852
+        },
+        {
+          "source": "uslhs",
+          "value": 1807
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,9 @@
   "id": "us-fl-pensacola",
   "name": "Pensacola Light",
   "other_names": [
-    "Pensacola Lighthouse"
+    "Pensacola Lighthouse",
+    "Pensacola",
+    "Fort Barrancas Range Rear Light"
   ],
   "country": "US",
   "region": "FL",
@@ -22,30 +24,37 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "integral",
       "material": "mixed",
       "built": 1858,
       "height_m": 45.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1825,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 57.9,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "F G",
+    "focal_height_m": 16.5,
     "range_nm": 27.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000622",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000622"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000622",
+      "listed": "1974-07-15",
+      "nomination": "https://catalog.archives.gov/id/77842401"
     }
   ],
   "aton": {
@@ -57,24 +66,30 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1965"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1858,
       "event": "built",
@@ -84,8 +99,14 @@
     {
       "year": 1859,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1965,
@@ -96,7 +117,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +169,26 @@
       "label": "Website",
       "url": "https://www.pensacolalighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Pensacola",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=589",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pensacola",
+      "url": "https://archives.uslhs.org/places/pensacola",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842401",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +201,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -173,8 +213,80 @@
       "key": "osm:way/697177942",
       "part": "wikidata:Q7164695",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:589",
+      "part": "wikidata:Q7164695",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:pensacola-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-140",
+      "part": "wikidata:Q7164695",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-4715",
+      "part": "wikidata:Q7164695",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-4785",
+      "part": "wikidata:Q7164695",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2781",
+      "part": "wikidata:Q7164695",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000622",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.34603,-87.30808",
+      "part": "wikidata:Q7164695",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:pensacola",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -192,6 +304,24 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "osm",
+          "value": 1859
+        },
+        {
+          "source": "uslhs",
+          "value": 1825
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

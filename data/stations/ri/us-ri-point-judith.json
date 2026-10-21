@@ -2,7 +2,9 @@
   "id": "us-ri-point-judith",
   "name": "Point Judith Light",
   "other_names": [
-    "Point Judith Lighthouse"
+    "Point Judith Lighthouse",
+    "Point Judith",
+    "Point Judith Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -32,20 +34,27 @@
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1810,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Oc W 15s",
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Oc(3) W 15s",
     "focal_height_m": 19.8,
     "range_nm": 16.0,
-    "fog_signal": null,
-    "from": "osm"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000279",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000279"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000279",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374701"
     }
   ],
   "aton": {
@@ -57,15 +66,15 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1954"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -82,10 +91,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1810,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1954,
@@ -96,7 +123,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -170,6 +197,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/714462917",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Judith",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=400",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Judith",
+      "url": "https://archives.uslhs.org/places/point-judith",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374701",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -182,7 +229,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -196,8 +242,58 @@
       "part": "wikidata:Q7208057",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:400",
+      "part": "wikidata:Q7208057",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:point-judith-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19450",
+      "part": "wikidata:Q7208057",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3500",
+      "part": "wikidata:Q7208057",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000279",
+      "part": "wikidata:Q7208057",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.36106,-71.48138",
+      "part": "wikidata:Q7208057",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -215,6 +311,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1810
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

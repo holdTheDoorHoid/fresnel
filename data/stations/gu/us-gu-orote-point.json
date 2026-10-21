@@ -1,0 +1,140 @@
+{
+  "id": "us-gu-orote-point",
+  "name": "Orote Point Light",
+  "other_names": [
+    "Orote Point",
+    "Point Udall",
+    "Point Udall Light"
+  ],
+  "country": "US",
+  "region": "GU",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 13.445833,
+    "lon": 144.619528,
+    "precision": "exact",
+    "from": "territories"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uscg_light_list"
+    }
+  ],
+  "light": {
+    "first_lit": 1929,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 68.9,
+    "range_nm": 14.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "6-30685",
+    "arlhs": "GUM-001",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1929,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: Guam",
+      "url": "https://www.ibiblio.org/lighthouse/gu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wikipedia: List of lighthouses in the United States territories",
+      "url": "https://en.wikipedia.org/wiki/List_of_lighthouses_in_the_United_States_territories",
+      "kind": "wikipedia"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:gu:orote-point-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-30685",
+      "part": "territories:orote-point-light",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "territories",
+      "key": "territories:orote-point-light",
+      "part": "territories:orote-point-light",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:13.44641,144.61971",
+      "part": "territories:orote-point-light",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

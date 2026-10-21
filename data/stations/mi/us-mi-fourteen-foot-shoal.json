@@ -2,7 +2,10 @@
   "id": "us-mi-fourteen-foot-shoal",
   "name": "Fourteen Foot Shoal Light",
   "other_names": [
-    "Fourteen Foot Shoal Lighthouse"
+    "Fourteen Foot Shoal Lighthouse",
+    "Fourteen Foot Shoal",
+    "Fourteen Foot Shoal Light Station",
+    "Fourteen-Foot Shoal"
   ],
   "country": "US",
   "region": "MI",
@@ -23,12 +26,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1929,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,16 +39,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 17.0,
+    "focal_height_m": 15.5,
     "range_nm": 11.3,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000742",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000742"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000742",
+      "listed": "2005-07-27",
+      "nomination": "https://catalog.archives.gov/id/75324991"
     }
   ],
   "aton": {
@@ -58,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,9 +93,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1930,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1930,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +159,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=710",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fourteen Foot Shoal",
+      "url": "https://archives.uslhs.org/places/fourteen-foot-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324991",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,12 +199,85 @@
       "key": "osm:node/1012228482",
       "part": "wikidata:Q5475901",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:710",
+      "part": "wikidata:Q5475901",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:fourteen-foot-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11765",
+      "part": "wikidata:Q5475901",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2968",
+      "part": "wikidata:Q5475901",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000742",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.67987,-84.43434",
+      "part": "wikidata:Q5475901",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:fourteen-foot-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1848
+        },
+        {
+          "source": "uslhs",
+          "value": 1930
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

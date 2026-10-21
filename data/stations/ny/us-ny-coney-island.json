@@ -4,11 +4,13 @@
   "other_names": [
     "Coney Island Lighthouse",
     "Coney Island (Nortons Point) Light",
-    "Nortons Point Light"
+    "Nortons Point Light",
+    "Coney Island",
+    "Norton Point"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Kings",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -24,24 +26,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "steel",
       "built": 1890,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1920,
+    "first_lit": 1890,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 5s",
     "focal_height_m": 22.9,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -54,7 +56,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=no."
+    "note": "OpenStreetMap tags the structure access=no. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -65,8 +67,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -74,8 +76,26 @@
     {
       "year": 1890,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1920,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1920,
@@ -86,7 +106,7 @@
     {
       "year": 1989,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -133,6 +153,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1185754230",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Coney Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=394",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Coney Island",
+      "url": "https://archives.uslhs.org/places/coney-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,7 +179,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,8 +191,57 @@
       "part": "wikidata:Q5159602",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:394",
+      "part": "wikidata:Q5159602",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:coney-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-34910",
+      "part": "wikidata:Q5159602",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3400",
+      "part": "wikidata:Q5159602",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.57660,-74.01179",
+      "part": "wikidata:Q5159602",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:coney-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -172,6 +255,10 @@
         },
         {
           "source": "osm",
+          "value": 1890
+        },
+        {
+          "source": "uslhs",
           "value": 1890
         }
       ],

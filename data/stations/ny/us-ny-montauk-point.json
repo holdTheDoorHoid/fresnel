@@ -2,7 +2,8 @@
   "id": "us-ny-montauk-point",
   "name": "Montauk Point Light",
   "other_names": [
-    "Montauk Point Lighthouse"
+    "Montauk Point Lighthouse",
+    "Montauk Point"
   ],
   "country": "US",
   "region": "NY",
@@ -23,29 +24,37 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1796,
       "height_m": 34.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1797,
+    "first_lit": 1796,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 5s",
-    "focal_height_m": 51.0,
+    "focal_height_m": 51.2,
     "range_nm": 18.0,
-    "fog_signal": null,
-    "from": "osm"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "69000142",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000142"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000142",
+      "listed": "1969-07-07",
+      "nhl": "2012-03-02",
+      "nomination": "https://catalog.archives.gov/id/75322190"
     },
     {
       "register": "National Historic Landmark",
@@ -67,20 +76,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1987"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -92,22 +101,46 @@
       "from": "osm"
     },
     {
+      "year": 1796,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1797,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1797,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1860,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1969,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -158,6 +191,26 @@
       "label": "Website",
       "url": "https://montauklighthouse.com/info/hours-admission/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Montauk Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=391",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Montauk Point",
+      "url": "https://archives.uslhs.org/places/montauk-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75322190",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,7 +223,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -184,9 +236,69 @@
       "part": "wikidata:Q6904488",
       "fields": [
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:391",
+      "part": "wikidata:Q6904488",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:montauk-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-660",
+      "part": "wikidata:Q6904488",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3419",
+      "part": "wikidata:Q6904488",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:69000142",
+      "part": "wikidata:Q6904488",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.07062,-71.85688",
+      "part": "wikidata:Q6904488",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:montauk-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

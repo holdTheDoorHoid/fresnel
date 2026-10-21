@@ -1,7 +1,11 @@
 {
   "id": "us-de-baker-shoal-range-front",
   "name": "Baker Shoal Range Front Light",
-  "other_names": [],
+  "other_names": [
+    "Baker Range Front",
+    "Cherry Island Range Front",
+    "Baker Range Front Light"
+  ],
   "country": "US",
   "region": "DE",
   "county": null,
@@ -30,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1880,
     "deactivated": 1924,
     "lens": null,
-    "characteristic": "F G (along range line)<br>Fl W 4s (passing light)",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 4.6,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -68,10 +72,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1902,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1924,
@@ -109,6 +131,11 @@
       "label": "ARLHS World List of Lights USA1146",
       "url": "https://wlol.arlhs.com/lighthouse/USA1146.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,24 +153,42 @@
         "region",
         "structures"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 2002
-        },
-        {
-          "source": "wikidata",
-          "value": 1924
-        }
-      ],
-      "note": "A source gives the light's service entry (2002) after its retirement (1924); it may have been relit. Neither is shown as the first lighting."
+      "source": "rowlett",
+      "key": "rowlett:de:baker-range-front-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:cherry-island-range-front-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2505",
+      "part": "wikidata:Q4849208",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.51175,-75.56662",
+      "part": "wikidata:Q4849208",
+      "fields": [
+        "light"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

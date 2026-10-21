@@ -1,7 +1,11 @@
 {
   "id": "us-ny-frenchman-island",
   "name": "Frenchman Island Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Frenchmans Island",
+    "Frenchman (Frenchman's) Island",
+    "Frenchman's Island"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
@@ -14,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -42,7 +46,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-104",
     "ccg_list_number": null,
     "nga": null
   },
@@ -61,12 +65,19 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -95,6 +106,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1211337057",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Frenchmans Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1569",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Frenchman's Island",
+      "url": "https://archives.uslhs.org/places/frenchmans-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,6 +141,37 @@
       "part": "wikidata:Q111605385",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1569",
+      "part": "wikidata:Q111605385",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:frenchman-frenchman-s-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:120444",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:frenchman-s-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

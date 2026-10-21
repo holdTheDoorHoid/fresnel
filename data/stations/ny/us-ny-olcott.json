@@ -2,7 +2,8 @@
   "id": "us-ny-olcott",
   "name": "Olcott Light",
   "other_names": [
-    "Olcott Lighthouse"
+    "Olcott Lighthouse",
+    "Olcott (Replica)"
   ],
   "country": "US",
   "region": "NY",
@@ -16,7 +17,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1932,
+    "first_lit": 2003,
+    "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -80,10 +81,28 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2003,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2003,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ny-olcott-2",
+      "relation": "replica_of",
+      "name": "Olcott"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olcott_beach_lighthouse_2.jpg",
@@ -125,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697184325",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Olcott (Replica)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=910",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Olcott (Replica)",
+      "url": "https://archives.uslhs.org/places/olcott-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +171,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,9 +184,47 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:910",
+      "part": "wikidata:Q7083329",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:olcott",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7367",
+      "part": "wikidata:Q7083329",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1873
+        },
+        {
+          "source": "uslhs",
+          "value": 2003
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

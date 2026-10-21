@@ -3,7 +3,10 @@
   "name": "Punta Borinquen Light",
   "other_names": [
     "Faro de Punta Borinquen",
-    "Punta Borinquen Lighthouse"
+    "Punta Borinquen Lighthouse",
+    "Punta Borinquen",
+    "Ruins",
+    "Faro di Punta Borinquen"
   ],
   "country": "US",
   "region": "PR",
@@ -22,11 +25,26 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Punta Borinquen Light",
       "type": "conical_masonry",
       "material": "stone",
       "built": 1889,
       "height_m": 18.0,
+      "status": "lost",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 18.48875,
+        "lon": -67.16154
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Punta Borinquen Light",
+      "type": null,
+      "material": null,
+      "built": 1922,
+      "height_m": null,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -40,30 +58,37 @@
     "focal_height_m": 89.0,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000559",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000559"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000559",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518146"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-37",
+      "url": "https://www.loc.gov/item/pr0037/"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": "PUR022",
+    "uscg_llnr": "3-30715",
+    "arlhs": "PUR013",
     "ccg_list_number": null,
-    "nga": null
+    "nga": "110-14420"
   },
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1976"
   },
   "visit": {
     "grounds_open": null,
@@ -85,8 +110,14 @@
     {
       "year": 1889,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1918,
@@ -95,27 +126,48 @@
       "from": "wikidata"
     },
     {
+      "year": 1920,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1922,
       "event": "built",
       "note": null,
-      "from": "osm"
+      "from": "wikidata"
+    },
+    {
+      "year": 1922,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1976,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [
-    {
-      "id": "us-pr-punta-borinquen-2",
-      "relation": "succeeded_by",
-      "name": "Punta Borinquen Light"
-    }
-  ],
+  "related": [],
   "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Punta_Borinquen_Lighthouse.JPG",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Punta_Borinquen_Lighthouse.JPG?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Punta_Borinquen_Lighthouse.JPG",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Punta_de_Boriquen.JPG",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Punta_de_Boriquen.JPG?width=640",
@@ -127,6 +179,21 @@
     }
   ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q109232559",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Punta_Borinquen_lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights PUR013",
+      "url": "https://wlol.arlhs.com/lighthouse/PUR013.html",
+      "kind": "register"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q7260508",
@@ -161,22 +228,57 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1071349499",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Punta Borinquen (Ruins)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1162",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Punta Borinquen",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1163",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-37, Faro de Punta Borinquen",
+      "url": "https://www.loc.gov/item/pr0037/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Punta Borinquen",
+      "url": "https://archives.uslhs.org/places/punta-borinquen",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518146",
+      "kind": "register"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
-      "key": "wikidata:Q7260508",
-      "part": "wikidata:Q7260508",
+      "key": "wikidata:Q109232559",
+      "part": "lighthousefriends:1163",
       "fields": [
         "aton",
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7260508",
+      "part": "wikidata:Q7260508",
+      "fields": [
+        "events",
+        "light",
+        "photos",
         "registers",
         "structures"
       ]
@@ -184,12 +286,62 @@
     {
       "source": "osm",
       "key": "osm:way/1071349499",
-      "part": "wikidata:Q7260508",
+      "part": "lighthousefriends:1163",
       "fields": [
         "agency",
-        "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1162",
+      "part": "wikidata:Q7260508",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1163",
+      "part": "lighthousefriends:1163",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-30715",
+      "part": "lighthousefriends:1163",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-37",
+      "part": "lighthousefriends:1163",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3480",
+      "part": "wikidata:Q7260508",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000559",
+      "part": "wikidata:Q7260508",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.49720,-67.14873",
+      "part": "station",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -202,46 +354,19 @@
           "value": "active"
         },
         {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
           "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1889
-        },
-        {
-          "source": "osm",
-          "value": 1922
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    },
-    {
-      "field": "location",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": [
-            18.48861,
-            -67.16167
-          ]
-        },
-        {
-          "source": "osm",
-          "value": [
-            18.49721,
-            -67.14876
-          ]
-        }
-      ],
-      "distance_m": 1663,
-      "note": "Sources place this structure more than 500 m apart."
     }
   ],
   "verification": "unverified",

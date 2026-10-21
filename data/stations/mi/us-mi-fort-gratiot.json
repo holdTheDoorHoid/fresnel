@@ -2,7 +2,9 @@
   "id": "us-mi-fort-gratiot",
   "name": "Fort Gratiot Light",
   "other_names": [
-    "Fort Gratiot Lighthouse"
+    "Fort Gratiot Lighthouse",
+    "Fort Gratiot",
+    "Port Huron"
   ],
   "country": "US",
   "region": "MI",
@@ -22,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1825,
       "height_m": 26.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,15 +39,17 @@
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 25.0,
-    "range_nm": 16.0,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "76001975",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76001975"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76001975",
+      "listed": "1976-07-30",
+      "nomination": "https://catalog.archives.gov/id/25340513"
     },
     {
       "register": "Michigan State Historic Site",
@@ -62,23 +66,30 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://www.phmuseum.org/overnight-at-the-light",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1825,
@@ -89,13 +100,13 @@
     {
       "year": 1825,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1829,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -107,7 +118,7 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -164,6 +175,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/50845155",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fort Gratiot",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=167",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Gratiot (Port Huron)",
+      "url": "https://archives.uslhs.org/places/fort-gratiot-port-huron",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340513",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -191,7 +227,6 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
       ]
     },
@@ -201,6 +236,71 @@
       "part": "wikidata:Q5471242",
       "fields": [
         "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:167",
+      "part": "wikidata:Q5471242",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:fort-gratiot-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10015",
+      "part": "wikidata:Q5471242",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2966",
+      "part": "wikidata:Q5471242",
+      "fields": [
+        "access",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76001975",
+      "part": "wikidata:Q5471242",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.00629,-82.42253",
+      "part": "wikidata:Q5471242",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:fort-gratiot",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:fort-gratiot-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -215,6 +315,10 @@
         {
           "source": "osm",
           "value": 1829
+        },
+        {
+          "source": "uslhs",
+          "value": 1825
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

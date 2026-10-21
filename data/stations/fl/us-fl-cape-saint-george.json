@@ -1,7 +1,10 @@
 {
   "id": "us-fl-cape-saint-george",
   "name": "Cape Saint George Light",
-  "other_names": [],
+  "other_names": [
+    "Cape St. George",
+    "St. George Lighthouse"
+  ],
   "country": "US",
   "region": "FL",
   "county": null,
@@ -33,11 +36,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl Y",
-    "focal_height_m": 23.1,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 23.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -47,7 +50,7 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "4-75",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -64,7 +67,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -91,6 +94,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Cape_St._George_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Cape St. George",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=592",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,17 +108,40 @@
       "part": "osm:way/319963532",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:592",
+      "part": "osm:way/319963532",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-75",
+      "part": "osm:way/319963532",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.66294,-84.86287",
+      "part": "osm:way/319963532",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

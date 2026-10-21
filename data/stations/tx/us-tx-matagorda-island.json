@@ -3,7 +3,11 @@
   "name": "Matagorda Island Lighthouse",
   "other_names": [
     "Matagorda Island Light",
-    "Matagorda Island lighthouse"
+    "Matagorda Island lighthouse",
+    "Matagorda Island",
+    "Matagorda",
+    "Matagorda Lighthouse",
+    "Matagorda Light House"
   ],
   "country": "US",
   "region": "TX",
@@ -17,7 +21,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -34,19 +38,21 @@
   ],
   "light": {
     "first_lit": 1852,
-    "deactivated": 1995,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 3s",
-    "focal_height_m": 27.5,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 27.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001624",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001624"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001624",
+      "listed": "1984-09-18",
+      "nomination": "https://catalog.archives.gov/id/40971435"
     }
   ],
   "aton": {
@@ -58,20 +64,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1956"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,14 +85,20 @@
     {
       "year": 1852,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1852,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1852,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1956,
@@ -97,13 +109,13 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1995,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -150,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/427136840",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Matagorda Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=156",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Texas: South",
+      "url": "https://www.ibiblio.org/lighthouse/txs.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Matagorda Island",
+      "url": "https://archives.uslhs.org/places/matagorda-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/40971435",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,10 +209,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:156",
+      "part": "wikidata:Q6785980",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:txs:matagorda",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-1395",
+      "part": "wikidata:Q6785980",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3519",
+      "part": "wikidata:Q6785980",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001624",
+      "part": "wikidata:Q6785980",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:28.33836,-96.42360",
+      "part": "wikidata:Q6785980",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:tx:matagorda-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

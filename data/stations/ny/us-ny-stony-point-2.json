@@ -2,7 +2,12 @@
   "id": "us-ny-stony-point-2",
   "name": "Stony Point Light",
   "other_names": [
-    "Stony Point Lighthouse"
+    "Stony Point Lighthouse",
+    "Stony Point",
+    "Hudson River",
+    "Upper",
+    "Stony Point Lower",
+    "Stony Point Light SP"
   ],
   "country": "US",
   "region": "NY",
@@ -16,7 +21,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -33,19 +38,26 @@
   ],
   "light": {
     "first_lit": 1826,
-    "deactivated": 1925,
-    "lens": null,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 4s",
     "focal_height_m": 54.0,
-    "range_nm": null,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79001626",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001626"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79001626",
+      "listed": "1979-05-29",
+      "nomination": "https://catalog.archives.gov/id/75314508"
     }
   ],
   "aton": {
@@ -57,15 +69,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -78,25 +90,37 @@
     {
       "year": 1826,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1826,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1925,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +167,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/505422612",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stony Point (Hudson River)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=681",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stony Point",
+      "url": "https://archives.uslhs.org/places/stony-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75314508",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,10 +214,75 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:681",
+      "part": "wikidata:Q7619598",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:stony-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:stony-point-lower-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-37895",
+      "part": "wikidata:Q7619598",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3441",
+      "part": "wikidata:Q7619598",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79001626",
+      "part": "wikidata:Q7619598",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

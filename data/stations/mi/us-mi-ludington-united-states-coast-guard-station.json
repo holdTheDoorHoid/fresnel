@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "10000264",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10000264"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10000264",
+      "listed": "2010-05-17",
+      "nomination": "https://catalog.archives.gov/id/25340105"
     }
   ],
   "aton": {
@@ -67,7 +69,7 @@
     {
       "year": 2010,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -100,6 +102,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Ludington_United_States_Coast_Guard_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340105",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -115,6 +122,15 @@
         "name",
         "photos",
         "region",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:10000264",
+      "part": "wikidata:Q16894367",
+      "fields": [
+        "events",
         "registers"
       ]
     }

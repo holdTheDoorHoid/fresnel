@@ -3,7 +3,15 @@
   "name": "Buffalo Main Light",
   "other_names": [
     "Buffalo Lighthouse",
-    "Buffalo Main Lighthouse"
+    "Buffalo Main Lighthouse",
+    "Buffalo Main",
+    "Buffalo",
+    "Main",
+    "Buffalo Main LIght",
+    "Buffalo Harbor North Entrance Light 7",
+    "Buffalo Coast Guard Slip Light",
+    "Buffalo River Light 2",
+    "South"
   ],
   "country": "US",
   "region": "NY",
@@ -17,40 +25,42 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1833,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1818,
     "deactivated": 1914,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": 23.0,
-    "range_nm": null,
+    "characteristic": "Oc R 4s",
+    "focal_height_m": 7.6,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84002383",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002383"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84002383",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891094"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-2730",
     "arlhs": "USA090",
     "ccg_list_number": null,
     "nga": null
@@ -58,40 +68,58 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1818,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1833,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1914,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -102,7 +130,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-buffalo-main",
+      "relation": "replica",
+      "name": "Buffalo Main Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo_and_Erie_Naval_Park%2C_New_York_%28470533%29_%289464095911%29.jpg",
@@ -158,6 +192,26 @@
       "label": "Website",
       "url": "http://www.buffalolight.org/#",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo Main",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=296",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buffalo (Main)",
+      "url": "https://archives.uslhs.org/places/buffalo-main",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891094",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -185,23 +239,93 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:296",
+      "part": "wikidata:Q4985783",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:buffalo-main-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2720",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2725",
+      "part": "wikidata:Q4985783",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2730",
+      "part": "wikidata:Q4985783",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3395",
+      "part": "wikidata:Q4985783",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84002383",
+      "part": "wikidata:Q4985783",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.87791,-78.88981",
+      "part": "wikidata:Q4985783",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.88045,-78.89578",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:buffalo-main",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:buffalo-south",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1987
-        },
-        {
-          "source": "wikidata",
-          "value": 1914
-        }
-      ],
-      "note": "A source gives the light's service entry (1987) after its retirement (1914); it may have been relit. Neither is shown as the first lighting."
-    },
     {
       "field": "first_year",
       "values": [
@@ -211,6 +335,10 @@
         },
         {
           "source": "osm",
+          "value": 1833
+        },
+        {
+          "source": "uslhs",
           "value": 1833
         }
       ],

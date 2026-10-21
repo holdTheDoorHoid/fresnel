@@ -4,7 +4,10 @@
   "other_names": [
     "Muskegon Pier Light",
     "Muskegon Pier Lighthouse",
-    "South Pierhead Light"
+    "South Pierhead Light",
+    "Muskegon South Pierhead",
+    "Muskegon North Breakwater Light",
+    "Muskegon North Pier Outer Light"
   ],
   "country": "US",
   "region": "MI",
@@ -25,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1851,
       "height_m": 14.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1903,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 4s",
-    "focal_height_m": 15.0,
-    "range_nm": 6.0,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 10.4,
+    "range_nm": 3.5,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000036",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000036"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000036",
+      "listed": "2006-02-14",
+      "nomination": "https://catalog.archives.gov/id/75325123"
     }
   ],
   "aton": {
@@ -60,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -68,7 +73,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -86,19 +91,19 @@
     {
       "year": 1903,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1903,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +150,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/344560064",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Muskegon South Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=191",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Muskegon South Pierhead",
+      "url": "https://archives.uslhs.org/places/muskegon-south-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325123",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -172,12 +197,113 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:191",
+      "part": "wikidata:Q6942767",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:muskegon-south-pierhead",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18710",
+      "part": "wikidata:Q6942767",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18720",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18725",
+      "part": "wikidata:Q6942767",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3001",
+      "part": "wikidata:Q6942767",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000036",
+      "part": "wikidata:Q6942767",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.22552,-86.34805",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.22666,-86.34127",
+      "part": "wikidata:Q6942767",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.22759,-86.34183",
+      "part": "wikidata:Q6942767",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            43.2267,
+            -86.3415
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            43.22667,
+            -86.34133
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            43.22412,
+            -86.34711
+          ]
+        }
+      ],
+      "distance_m": 548,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

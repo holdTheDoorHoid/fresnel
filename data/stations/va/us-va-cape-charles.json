@@ -2,7 +2,9 @@
   "id": "us-va-cape-charles",
   "name": "Cape Charles Light",
   "other_names": [
-    "Cape Charles Lighthouse"
+    "Cape Charles Lighthouse",
+    "Cape Charles",
+    "Cape Charles Light Station"
   ],
   "country": "US",
   "region": "VA",
@@ -16,23 +18,53 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
-      "type": null,
-      "material": null,
+      "name": "Cape Charles Light",
+      "type": "skeletal",
+      "material": "cast_iron",
       "built": 1828,
       "height_m": 55.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
+    },
+    {
+      "role": "other",
+      "name": "Workshiop",
+      "type": null,
+      "material": null,
+      "built": 1895,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 37.122683,
+        "lon": -75.906188
+      }
+    },
+    {
+      "role": "oil_house",
+      "name": "Oil House",
+      "type": null,
+      "material": null,
+      "built": 1895,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 37.12263,
+        "lon": -75.906274
+      }
     }
   ],
   "light": {
-    "first_lit": 1895,
+    "first_lit": 1827,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
@@ -45,7 +77,9 @@
     {
       "register": "NRHP",
       "number": "03000569",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000569"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000569",
+      "listed": "2003-06-23",
+      "nomination": "https://catalog.archives.gov/id/75325135"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -63,28 +97,52 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1963"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1828,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1864,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1864,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1894,
@@ -94,15 +152,39 @@
     },
     {
       "year": 1895,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "osm"
+    },
+    {
+      "year": 1895,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1895,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1963,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 2003,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2013,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -153,6 +235,36 @@
       "label": "Website",
       "url": "https://cheslights.org/cape-charles-lighthouse/",
       "kind": "website"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/696226136",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/696226137",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Charles",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=450",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Charles",
+      "url": "https://archives.uslhs.org/places/cape-charles",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325135",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,12 +293,85 @@
         "events",
         "location"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/696226136",
+      "part": "osm:way/696226136",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/696226137",
+      "part": "osm:way/696226137",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:450",
+      "part": "wikidata:Q5034646",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:cape-charles-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:cape-charles-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3524",
+      "part": "wikidata:Q5034646",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03000569",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:cape-charles",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
         {
           "source": "wikidata",
           "value": "active"
@@ -197,20 +382,6 @@
         }
       ],
       "note": "Sources differ on whether the light is still lit."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1895
-        },
-        {
-          "source": "osm",
-          "value": 1894
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

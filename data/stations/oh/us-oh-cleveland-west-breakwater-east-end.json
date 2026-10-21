@@ -1,0 +1,129 @@
+{
+  "id": "us-oh-cleveland-west-breakwater-east-end",
+  "name": "Cleveland West Breakwater East End",
+  "other_names": [],
+  "country": "US",
+  "region": "OH",
+  "county": null,
+  "water": null,
+  "setting": "pier",
+  "kind": "pier_light",
+  "location": {
+    "lat": 41.50722,
+    "lon": -81.71556,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1885,
+      "height_m": 8.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1885,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 8.8,
+    "range_nm": 5.2,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-oh-cleveland-harbor-station-u-s-coast-guard",
+      "relation": "life_saving_station_nearby",
+      "name": "Cleveland Harbor Station, U.S. Coast Guard"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleveland West Breakwater East End",
+      "url": "https://archives.uslhs.org/places/cleveland-west-breakwater-east-end",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:9854",
+      "part": "uslhs:9854",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "location",
+        "name",
+        "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.50650,-81.71577",
+      "part": "uslhs:9854",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -2,7 +2,8 @@
   "id": "us-ct-chester-rock",
   "name": "Chester Rock Light",
   "other_names": [
-    "Chester Rock Lighthouse"
+    "Chester Rock Lighthouse",
+    "Connecticut River Light 35"
   ],
   "country": "US",
   "region": "CT",
@@ -37,9 +38,9 @@
     "lens": null,
     "characteristic": "Fl G 4s",
     "focal_height_m": 7.9,
-    "range_nm": null,
+    "range_nm": 3.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -146,7 +147,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "location",
         "name",
         "region",
@@ -160,6 +160,20 @@
       "fields": [
         "aton",
         "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-22880",
+      "part": "wikidata:Q106333350",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.38949,-72.41403",
+      "part": "wikidata:Q106333350",
+      "fields": [
         "light"
       ]
     }

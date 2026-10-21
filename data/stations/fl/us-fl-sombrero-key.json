@@ -2,7 +2,11 @@
   "id": "us-fl-sombrero-key",
   "name": "Sombrero Key Light",
   "other_names": [
-    "Sombrero Key Lighthouse"
+    "Sombrero Key Lighthouse",
+    "Sombrero Key",
+    "Dry Banks",
+    "Dry Bank",
+    "Sombrero Key light Station, Dry Bank light"
   ],
   "country": "US",
   "region": "FL",
@@ -16,7 +20,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -24,8 +28,8 @@
       "name": null,
       "type": "cast_iron",
       "material": "cast_iron",
-      "built": null,
-      "height_m": null,
+      "built": 1858,
+      "height_m": 43.3,
       "status": "standing",
       "note": null,
       "from": "wikidata"
@@ -35,17 +39,19 @@
     "first_lit": 1858,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(5) W 60s",
-    "focal_height_m": null,
-    "range_nm": 15.0,
+    "characteristic": "Fl Y 4s",
+    "focal_height_m": 5.8,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "12000092",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000092"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000092",
+      "listed": "2012-03-09",
+      "nomination": "https://catalog.archives.gov/id/75325121"
     }
   ],
   "aton": {
@@ -58,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,23 +75,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1858,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -131,6 +155,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4885833174",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sombrero Key",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=701",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sombrero Key (Dry Bank)",
+      "url": "https://archives.uslhs.org/places/sombrero-key-dry-bank",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325121",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,10 +202,92 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:701",
+      "part": "wikidata:Q7559332",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:sombrero-key-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:sombrero-key-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1001",
+      "part": "wikidata:Q7559332",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2785",
+      "part": "wikidata:Q7559332",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000092",
+      "part": "wikidata:Q7559332",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:24.62667,-81.10895",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:sombrero-key",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

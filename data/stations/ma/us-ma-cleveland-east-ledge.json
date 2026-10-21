@@ -2,7 +2,9 @@
   "id": "us-ma-cleveland-east-ledge",
   "name": "Cleveland East Ledge Light",
   "other_names": [
-    "Cleveland East Ledge Lighthouse"
+    "Cleveland East Ledge Lighthouse",
+    "Cleveland Ledge",
+    "Cleveland Ledge Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "concrete",
       "built": 1943,
       "height_m": 21.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1943,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 23.0,
-    "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001462",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001462"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001462",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789147"
     }
   ],
   "aton": {
@@ -54,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1978"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +82,31 @@
     {
       "year": 1943,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1943,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1943,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1978,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -126,6 +148,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496091",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cleveland Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=615",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleveland Ledge",
+      "url": "https://archives.uslhs.org/places/cleveland-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789147",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -152,6 +194,69 @@
       "part": "wikidata:Q5132124",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:615",
+      "part": "wikidata:Q5132124",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:cleveland-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-16080",
+      "part": "wikidata:Q5132124",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2831",
+      "part": "wikidata:Q5132124",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001462",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.63096,-70.69418",
+      "part": "wikidata:Q5132124",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:cleveland-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

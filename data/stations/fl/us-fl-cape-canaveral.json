@@ -2,7 +2,8 @@
   "id": "us-fl-cape-canaveral",
   "name": "Cape Canaveral Light",
   "other_names": [
-    "Cape Canaveral Lighthouse"
+    "Cape Canaveral Lighthouse",
+    "Cape Canaveral"
   ],
   "country": "US",
   "region": "FL",
@@ -11,60 +12,71 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 28.460607,
-    "lon": -80.527306,
+    "lat": 28.460355,
+    "lon": -80.543455,
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "lost",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cape Canaveral Light",
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1848,
       "height_m": 19.8,
-      "status": "lost",
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Cape Canaveral Light",
+      "type": null,
+      "material": "mixed",
+      "built": 1859,
+      "height_m": 46.0,
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1849,
-    "deactivated": 1868,
+    "first_lit": 1848,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 60s",
-    "focal_height_m": 18.3,
-    "range_nm": 12.0,
+    "characteristic": "Fl(2) W 20s",
+    "focal_height_m": 41.8,
+    "range_nm": 24.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "3-0625",
+    "arlhs": "USA108",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": "United States Lighthouse Board",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1954"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,8 +88,20 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1849,
       "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "built",
       "note": null,
       "from": "wikidata"
     },
@@ -95,31 +119,116 @@
     },
     {
       "year": 1868,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1868,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1893,
       "event": "removed",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1894,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1931,
+      "event": "modified",
+      "note": "Electrified.",
+      "from": "wikidata"
+    },
+    {
+      "year": 1954,
+      "event": "automated",
+      "note": null,
+      "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [
+  "related": [],
+  "photos": [
     {
-      "id": "us-fl-cape-canaveral-2",
-      "relation": "succeeded_by",
-      "name": "Cape Canaveral Light"
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/45th_SW_supports_successful_Delta_IV_GPS_III_launch_from_CCAFS_%285691039%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/45th_SW_supports_successful_Delta_IV_GPS_III_launch_from_CCAFS_%285691039%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:45th_SW_supports_successful_Delta_IV_GPS_III_launch_from_CCAFS_%285691039%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
-  "photos": [],
   "links": [
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q111302670",
       "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q5034639",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Cap_Canaveral",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cape_Canaveral_Light",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights USA108",
+      "url": "https://wlol.arlhs.com/lighthouse/USA108.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1219644136",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Canaveral",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=364",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Canaveral",
+      "url": "https://archives.uslhs.org/places/cape-canaveral",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,15 +241,125 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5034639",
+      "part": "wikidata:Q5034639",
+      "fields": [
+        "aton",
+        "events",
+        "location",
+        "photos",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1219644136",
+      "part": "wikidata:Q111302670",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:364",
+      "part": "wikidata:Q111302670",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:cape-canaveral-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-625",
+      "part": "wikidata:Q111302670",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2767",
+      "part": "wikidata:Q111302670",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:28.46035,-80.54345",
+      "part": "wikidata:Q111302670",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:cape-canaveral",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "wikidata",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            28.46061,
+            -80.52731
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            28.46036,
+            -80.54345
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            28.46036,
+            -80.54341
+          ]
+        }
+      ],
+      "distance_m": 1579,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

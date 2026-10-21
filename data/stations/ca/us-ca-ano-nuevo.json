@@ -3,7 +3,9 @@
   "name": "Ano Nuevo light station",
   "other_names": [
     "Año Nuevo light station",
-    "Lighthouse station (abandoned)"
+    "Lighthouse station (abandoned)",
+    "Ano Nuevo",
+    "Año Nuevo"
   ],
   "country": "US",
   "region": "CA",
@@ -22,21 +24,6 @@
   "structures": [
     {
       "role": "tower",
-      "name": "Ano Nuevo light station",
-      "type": null,
-      "material": null,
-      "built": 1872,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 37.108333,
-        "lon": -122.337778
-      }
-    },
-    {
-      "role": "tower",
       "name": "Lighthouse station (abandoned)",
       "type": null,
       "material": null,
@@ -45,17 +32,32 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": "Ano Nuevo",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 37.1084,
+        "lon": -122.33676
+      }
     }
   ],
   "light": {
-    "first_lit": 1914,
+    "first_lit": 1872,
     "deactivated": 1948,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
@@ -80,7 +82,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -92,6 +94,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1914,
       "event": "first_lit",
       "note": null,
@@ -100,7 +114,7 @@
     {
       "year": 1948,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -148,6 +162,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3020977864",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ano Nuevo",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=79",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -163,8 +187,7 @@
         "light",
         "name",
         "photos",
-        "region",
-        "structures"
+        "region"
       ]
     },
     {
@@ -173,6 +196,29 @@
       "part": "osm:node/3020977864",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:79",
+      "part": "wikidata:Q28374612",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:ano-nuevo-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:ano-nuevo",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

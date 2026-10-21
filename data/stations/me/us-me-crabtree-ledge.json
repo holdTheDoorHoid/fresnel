@@ -2,7 +2,8 @@
   "id": "us-me-crabtree-ledge",
   "name": "Crabtree Ledge Light",
   "other_names": [
-    "Crabtree Ledge Lighthouse"
+    "Crabtree Ledge Lighthouse",
+    "Crabtree Ledge"
   ],
   "country": "US",
   "region": "ME",
@@ -11,28 +12,28 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.4718,
-    "lon": -68.2209,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 44.471886,
+    "lon": -68.221017,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1890,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 14.9,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1890,
     "deactivated": 1933,
     "lens": null,
     "characteristic": "F W with W Fl every 2 minutes",
@@ -76,9 +77,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -120,6 +133,16 @@
       "label": "ARLHS World List of Lights USA197",
       "url": "https://wlol.arlhs.com/lighthouse/USA197.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Crabtree Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1864",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Crabtree Ledge",
+      "url": "https://archives.uslhs.org/places/crabtree-ledge",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,16 +155,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1864",
+      "part": "wikidata:Q5180287",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8452",
+      "part": "wikidata:Q5180287",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

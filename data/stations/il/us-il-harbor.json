@@ -1,7 +1,12 @@
 {
   "id": "us-il-harbor",
   "name": "Harbor Light",
-  "other_names": [],
+  "other_names": [
+    "Montrose Harbor East Breakwater",
+    "Montrose Harbor West Breakwater",
+    "Montrose Harbor East Breakwater Light",
+    "Montrose Harbor West Breakwater Light"
+  ],
   "country": "US",
   "region": "IL",
   "county": null,
@@ -14,8 +19,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,15 +38,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl R 3s",
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20110",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -80,6 +85,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/950077741",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,6 +107,46 @@
     {
       "source": "osm",
       "key": "osm:way/950077741",
+      "part": "osm:way/949455891",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:montrose-harbor-east-breakwater-2",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:montrose-harbor-west-breakwater-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20110",
+      "part": "osm:way/949455891",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20115",
+      "part": "osm:way/949455891",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.95921,-87.64028",
+      "part": "osm:way/949455891",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.95933,-87.64104",
       "part": "osm:way/949455891",
       "fields": []
     }

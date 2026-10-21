@@ -1,7 +1,9 @@
 {
   "id": "us-me-west-quoddy-lifesaving-station",
   "name": "West Quoddy Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "West Quoddy Station"
+  ],
   "country": "US",
   "region": "ME",
   "county": "Washington",
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "90000581",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000581"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000581",
+      "listed": "1990-04-20",
+      "nomination": "https://catalog.archives.gov/id/88685109"
     }
   ],
   "aton": {
@@ -62,12 +66,19 @@
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://quoddyvacation.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -100,6 +111,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/West_Quoddy_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685109",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,10 +138,27 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000581",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:west-quoddy-station-former-life-saving-station-1-district-1",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

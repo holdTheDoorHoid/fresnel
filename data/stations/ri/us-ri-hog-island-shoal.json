@@ -2,7 +2,9 @@
   "id": "us-ri-hog-island-shoal",
   "name": "Hog Island Shoal Light",
   "other_names": [
-    "Hog Island Shoal Lighthouse"
+    "Hog Island Shoal Lighthouse",
+    "Hog Island Shoal",
+    "Hog Island Shoal Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1886,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1901,
+    "first_lit": 1886,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
     "focal_height_m": 16.5,
     "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000282",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000282"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000282",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374360"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,15 +86,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1901,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1901,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +164,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713488647",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hog Island Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=405",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hog Island Shoal",
+      "url": "https://archives.uslhs.org/places/hog-island-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374360",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +196,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,6 +216,67 @@
       "key": "osm:way/713488647",
       "part": "wikidata:Q5876983",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:405",
+      "part": "wikidata:Q5876983",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:hog-island-shoal",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18145",
+      "part": "wikidata:Q5876983",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3495",
+      "part": "wikidata:Q5876983",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000282",
+      "part": "wikidata:Q5876983",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.63241,-71.27325",
+      "part": "wikidata:Q5876983",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:hog-island-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

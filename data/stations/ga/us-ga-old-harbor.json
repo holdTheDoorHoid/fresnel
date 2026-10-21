@@ -1,10 +1,12 @@
 {
   "id": "us-ga-old-harbor",
-  "name": "Old Harbor Light",
+  "name": "Savannah Harbor Light",
   "other_names": [
+    "Old Harbor Light",
     "Beacon Range Light",
     "Old Harbor Lighthouse",
-    "Savannah Harbor Rear Range Light"
+    "Savannah Harbor Rear Range Light",
+    "The Bay"
   ],
   "country": "US",
   "region": "GA",
@@ -14,9 +16,9 @@
   "kind": "lighthouse",
   "location": {
     "lat": 32.0794,
-    "lon": -81.0842,
+    "lon": -81.0845,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -129,6 +131,16 @@
       "label": "ARLHS World List of Lights USA1387",
       "url": "https://wlol.arlhs.com/lighthouse/USA1387.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Savannah Harbor Light (The Bay)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=869",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Savannah Harbor Light (The Bay)",
+      "url": "https://archives.uslhs.org/places/savannah-harbor-light-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -142,17 +154,30 @@
         "events",
         "kind",
         "light",
-        "location",
-        "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:869",
+      "part": "wikidata:Q7084172",
+      "fields": [
+        "location",
+        "name"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:42207",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

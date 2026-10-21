@@ -2,7 +2,8 @@
   "id": "us-vt-colchester-reef",
   "name": "Colchester Reef Light",
   "other_names": [
-    "Colchester Reef Lighthouse"
+    "Colchester Reef Lighthouse",
+    "Colchester Reef"
   ],
   "country": "US",
   "region": "VT",
@@ -32,19 +33,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1871,
     "deactivated": 1933,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "1-39540",
+    "arlhs": "USA-182",
     "ccg_list_number": null,
     "nga": null
   },
@@ -72,14 +73,26 @@
     {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1952,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -110,6 +123,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/372184185",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Colchester Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=671",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Vermont",
+      "url": "https://www.ibiblio.org/lighthouse/vt.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +157,31 @@
       "part": "wikidata:Q5142102",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:671",
+      "part": "wikidata:Q5142102",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:colchester-reef-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:colchester-reef-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
       ]
     }
   ],

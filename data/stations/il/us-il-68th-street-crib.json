@@ -3,7 +3,10 @@
   "name": "68th Street Crib Light",
   "other_names": [
     "Crib Light",
-    "68th Street Crib Lighthouse"
+    "68th Street Crib Lighthouse",
+    "68th Street Crib",
+    "Dunne Crib",
+    "Sixty-Eighth Street Crib Light"
   ],
   "country": "US",
   "region": "IL",
@@ -12,8 +15,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.785653,
-    "lon": -87.531534,
+    "lat": 41.786289,
+    "lon": -87.531495,
     "precision": "exact",
     "from": "osm"
   },
@@ -29,22 +32,22 @@
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 41.785653,
+        "lon": -87.531534
+      }
     },
     {
       "role": "tower",
       "name": "68th Street Crib Lighthouse",
-      "type": null,
+      "type": "crib",
       "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 41.786289,
-        "lon": -87.531495
-      }
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -52,10 +55,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 3s",
-    "focal_height_m": 20.0,
+    "focal_height_m": 18.6,
     "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "bell",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -79,7 +82,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -88,7 +91,7 @@
     {
       "year": 1909,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -120,6 +123,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7043054561",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: 68th Street Crib (Dunne Crib)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=864",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: 68th Street Crib (Dunne Crib)",
+      "url": "https://archives.uslhs.org/places/68th-street-crib-dunne-crib",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,7 +150,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -142,15 +159,55 @@
       "source": "osm",
       "key": "osm:node/3598935311",
       "part": "wikidata:Q82292186",
-      "fields": [
-        "location"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
       "key": "osm:node/7043054561",
       "part": "osm:node/7043054561",
-      "fields": []
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:864",
+      "part": "osm:node/7043054561",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:68th-street-crib",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19870",
+      "part": "osm:node/7043054561",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9607",
+      "part": "osm:node/7043054561",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.78618,-87.53139",
+      "part": "osm:node/7043054561",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],

@@ -2,7 +2,9 @@
   "id": "us-me-two-bush-island",
   "name": "Two Bush Island Light",
   "other_names": [
-    "Two Bush Island Lighthouse"
+    "Two Bush Island Lighthouse",
+    "Two Bush",
+    "Two Bush Island"
   ],
   "country": "US",
   "region": "ME",
@@ -23,23 +25,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1897,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s with R sector",
-    "focal_height_m": 20.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 19.8,
     "range_nm": 21.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -63,8 +65,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,13 +74,25 @@
     {
       "year": 1897,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1897,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1964,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -125,6 +139,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1174579830",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Two Bush",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=775",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Two Bush Island",
+      "url": "https://archives.uslhs.org/places/two-bush-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +166,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,6 +185,57 @@
       "key": "osm:way/1174579830",
       "part": "wikidata:Q7858869",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:775",
+      "part": "wikidata:Q7858869",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:two-bush-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4540",
+      "part": "wikidata:Q7858869",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2942",
+      "part": "wikidata:Q7858869",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.96425,-69.07381",
+      "part": "wikidata:Q7858869",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:two-bush-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

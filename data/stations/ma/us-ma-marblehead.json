@@ -3,7 +3,9 @@
   "name": "Marblehead Light",
   "other_names": [
     "Marblehead Lighthouse",
-    "Marblehead Light (Massachusetts)"
+    "Marblehead Light (Massachusetts)",
+    "Marblehead",
+    "Marblehead, MA"
   ],
   "country": "US",
   "region": "MA",
@@ -23,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "cast_iron",
       "built": 1835,
       "height_m": 32.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1895,
+    "first_lit": 1835,
     "deactivated": null,
     "lens": null,
     "characteristic": "F G",
-    "focal_height_m": 40.0,
+    "focal_height_m": 39.6,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001479",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001479"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001479",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790228"
     }
   ],
   "aton": {
@@ -55,23 +59,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1960"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,15 +87,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1895,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1896,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1960,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -152,6 +174,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Marblehead_Light_%28Massachusetts%29",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Marblehead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=482",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Marblehead, MA",
+      "url": "https://archives.uslhs.org/places/marblehead-ma",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790228",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,7 +206,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -179,9 +220,83 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:482",
+      "part": "wikidata:Q6755250",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:marblehead-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10450",
+      "part": "wikidata:Q6755250",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2844",
+      "part": "wikidata:Q6755250",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001479",
+      "part": "wikidata:Q6755250",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.50540,-70.83374",
+      "part": "wikidata:Q6755250",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:marblehead",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1895
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

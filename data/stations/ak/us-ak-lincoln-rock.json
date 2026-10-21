@@ -2,7 +2,10 @@
   "id": "us-ak-lincoln-rock",
   "name": "Lincoln Rock Light",
   "other_names": [
-    "Lincoln Rock Lighthouse"
+    "Lincoln Rock Lighthouse",
+    "Lincoln Rock",
+    "Lincoln Rock West",
+    "Lincoln Rock West Light"
   ],
   "country": "US",
   "region": "AK",
@@ -23,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1903,
-      "height_m": null,
+      "height_m": 12.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1968,
+    "first_lit": 1903,
     "deactivated": 1968,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 17.7,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -76,6 +79,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1903,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1968,
       "event": "first_lit",
       "note": null,
@@ -84,7 +99,7 @@
     {
       "year": 1968,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -131,6 +146,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525289319",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Lincoln Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1782",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lincoln Rock",
+      "url": "https://archives.uslhs.org/places/lincoln-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,10 +186,83 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1782",
+      "part": "wikidata:Q3378305",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:lincoln-rock-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-22470",
+      "part": "wikidata:Q3378305",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8367",
+      "part": "wikidata:Q3378305",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:56.05664,-132.69721",
+      "part": "wikidata:Q3378305",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1968
+        },
+        {
+          "source": "uslhs",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

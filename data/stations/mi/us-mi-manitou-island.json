@@ -2,7 +2,10 @@
   "id": "us-mi-manitou-island",
   "name": "Manitou Island Light Station",
   "other_names": [
-    "Manitou Island Lighthouse"
+    "Manitou Island Lighthouse",
+    "Manitou Island",
+    "Manitou",
+    "Manitou Light"
   ],
   "country": "US",
   "region": "MI",
@@ -22,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1850,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1862,
+    "first_lit": 1849,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 25.0,
-    "range_nm": null,
+    "focal_height_m": 24.7,
+    "range_nm": 8.7,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001773",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001773"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001773",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891208"
     }
   ],
   "aton": {
@@ -58,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,17 +74,47 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1850,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1861,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1861,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1862,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1862,
@@ -90,7 +125,7 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +172,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=731",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Manitou Island",
+      "url": "https://archives.uslhs.org/places/manitou-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891208",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +199,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -161,9 +210,66 @@
       "key": "osm:node/1009982172",
       "part": "wikidata:Q6750241",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:731",
+      "part": "wikidata:Q6750241",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:manitou-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15170",
+      "part": "wikidata:Q6750241",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2991",
+      "part": "wikidata:Q6750241",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001773",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.41981,-87.58684",
+      "part": "wikidata:Q6750241",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:manitou-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -177,6 +283,10 @@
         },
         {
           "source": "osm",
+          "value": 1850
+        },
+        {
+          "source": "uslhs",
           "value": 1850
         }
       ],

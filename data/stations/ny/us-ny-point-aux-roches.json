@@ -2,7 +2,9 @@
   "id": "us-ny-point-aux-roches",
   "name": "Point Aux Roches Light",
   "other_names": [
-    "Point Aux Roches Lighthouse"
+    "Point Aux Roches Lighthouse",
+    "Point Au Roche",
+    "Point Aux Roches"
   ],
   "country": "US",
   "region": "NY",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.7994,
-    "lon": -73.3606,
+    "lat": 44.79937,
+    "lon": -73.36053,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -24,7 +26,7 @@
       "name": null,
       "type": "conical_masonry",
       "material": "stone",
-      "built": null,
+      "built": 1858,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
@@ -36,7 +38,7 @@
     "deactivated": 1989,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 16.5,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -71,14 +73,26 @@
   "events": [
     {
       "year": 1858,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1989,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -115,6 +129,21 @@
       "label": "ARLHS World List of Lights USA614",
       "url": "https://wlol.arlhs.com/lighthouse/USA614.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point Au Roche",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=682",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Aux Roches",
+      "url": "https://archives.uslhs.org/places/point-aux-roches",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +157,43 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:682",
+      "part": "wikidata:Q7207947",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:point-au-roche",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3428",
+      "part": "wikidata:Q7207947",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

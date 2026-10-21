@@ -3,7 +3,11 @@
   "name": "Hillsboro Inlet Light",
   "other_names": [
     "Hillsboro Inlet Lighthouse",
-    "Hillsboro Inlet Entrance Light"
+    "Hillsboro Inlet Entrance Light",
+    "Hillsboro Inlet",
+    "Hillsboro Inlet Light Station",
+    "Coast Guard Hillsboro Inlet Light Station",
+    "Hillsboro Inlet Entrance Light 4"
   ],
   "country": "US",
   "region": "FL",
@@ -22,14 +26,29 @@
   "structures": [
     {
       "role": "tower",
-      "name": "Hillsboro Inlet Light",
+      "name": null,
       "type": null,
       "material": null,
+      "built": 1907,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 26.259706,
+        "lon": -80.080847
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Hillsboro Inlet Light",
+      "type": "skeletal",
+      "material": "iron",
       "built": 1907,
       "height_m": 42.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "dwelling",
@@ -65,18 +84,25 @@
   "light": {
     "first_lit": 1907,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "2",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl(2) W 20s",
     "focal_height_m": 41.5,
     "range_nm": 28.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79000661",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000661"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000661",
+      "listed": "1974-02-16",
+      "nomination": "https://catalog.archives.gov/id/77842144"
     }
   ],
   "aton": {
@@ -86,22 +112,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -109,14 +135,20 @@
     {
       "year": 1907,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1907,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1907,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1942,
@@ -127,7 +159,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -197,8 +229,33 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/989051537",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/989051538",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hillsboro Inlet",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=361",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hillsboro Inlet",
+      "url": "https://archives.uslhs.org/places/hillsboro-inlet",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842144",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -225,7 +282,6 @@
       "part": "wikidata:Q12060127",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
     },
@@ -253,10 +309,84 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/989051537",
+      "part": "osm:way/989051537",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/989051538",
       "part": "osm:way/827948520",
       "fields": [
         "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:361",
+      "part": "wikidata:Q12060127",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:hillsboro-inlet",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-10302",
+      "part": "wikidata:Q12060127",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-775",
+      "part": "wikidata:Q12060127",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2778",
+      "part": "wikidata:Q12060127",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000661",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:26.25917,-80.08075",
+      "part": "wikidata:Q12060127",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:hillsboro-inlet",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,8 @@
   "id": "us-wi-green-island",
   "name": "Green Island Light",
   "other_names": [
-    "Green Island Lighthouse"
+    "Green Island Lighthouse",
+    "Green Island"
   ],
   "country": "US",
   "region": "WI",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1956,
+    "first_lit": 1863,
     "deactivated": 1956,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 24.0,
-    "range_nm": 7.0,
+    "focal_height_m": 24.4,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,8 +73,20 @@
     {
       "year": 1863,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1863,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1956,
@@ -84,7 +97,7 @@
     {
       "year": 1956,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -136,6 +149,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Green_Island_Light_%28Wisconsin%29",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Green Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=632",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,10 +185,64 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:632",
+      "part": "wikidata:Q5602720",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:green-island-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:green-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21970",
+      "part": "wikidata:Q5602720",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.05569,-87.49181",
+      "part": "wikidata:Q5602720",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

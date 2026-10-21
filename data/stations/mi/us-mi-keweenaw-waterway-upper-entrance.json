@@ -3,7 +3,8 @@
   "name": "Keweenaw Waterway Upper Entrance Light",
   "other_names": [
     "Keweenaw Waterway Upper Entrance Lighthouse",
-    "Keweenaw Upper Entrance Light"
+    "Keweenaw Upper Entrance Light",
+    "Keweenaw Waterway Upper Entrance"
   ],
   "country": "US",
   "region": "MI",
@@ -38,15 +39,16 @@
     "lens": null,
     "characteristic": "Fl W 15s",
     "focal_height_m": 25.0,
-    "range_nm": 15.0,
+    "range_nm": 13.1,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "14000425",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/14000425"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/14000425",
+      "listed": "2014-07-18"
     }
   ],
   "aton": {
@@ -79,7 +81,7 @@
     {
       "year": 1950,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -91,7 +93,7 @@
     {
       "year": 2014,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +145,11 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=221",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,8 +176,46 @@
       "part": "wikidata:Q28376357",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:221",
+      "part": "wikidata:Q28376357",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:keweenaw-waterway-upper-entrance",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15120",
+      "part": "wikidata:Q28376357",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:14000425",
+      "part": "wikidata:Q28376357",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.23453,-88.63034",
+      "part": "wikidata:Q28376357",
+      "fields": [
+        "light"
       ]
     }
   ],

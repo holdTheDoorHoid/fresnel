@@ -5,7 +5,8 @@
     "Hereford Inlet Light",
     "Hereford Inlet lighthouse",
     "Hereford Inlet Light Station",
-    "Hereford Lighthouse"
+    "Hereford Lighthouse",
+    "Hereford Inlet"
   ],
   "country": "US",
   "region": "NJ",
@@ -26,12 +27,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1874,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -42,13 +43,14 @@
     "focal_height_m": 17.4,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000859",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000859"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000859",
+      "listed": "1977-09-20"
     }
   ],
   "aton": {
@@ -60,20 +62,20 @@
   "agency": "City of North Wildwood’s Historical Commission",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,19 +83,31 @@
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1874,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +164,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/266392236",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hereford Inlet",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=388",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hereford Inlet",
+      "url": "https://archives.uslhs.org/places/hereford-inlet",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -183,8 +212,64 @@
       "source": "osm",
       "key": "osm:way/266392236",
       "part": "wikidata:Q5737997",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:388",
+      "part": "wikidata:Q5737997",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:hereford-inlet",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-90",
+      "part": "wikidata:Q5737997",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3381",
+      "part": "wikidata:Q5737997",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000859",
+      "part": "wikidata:Q5737997",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.00660,-74.79112",
+      "part": "wikidata:Q5737997",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:hereford-inlet",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

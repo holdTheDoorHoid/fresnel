@@ -3,7 +3,9 @@
   "name": "Burlington Breakwater North Light",
   "other_names": [
     "Burlington Breakwater North Lighthouse",
-    "Burlington Bay Breakwater North Light"
+    "Burlington Bay Breakwater North Light",
+    "Burlington Breakwater North",
+    "Burlington Breakwater Light"
   ],
   "country": "US",
   "region": "VT",
@@ -40,7 +42,7 @@
     "focal_height_m": 12.2,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -64,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -116,6 +118,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Burlington_Breakwater_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Burlington Breakwater North",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=873",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Burlington Breakwater North",
+      "url": "https://archives.uslhs.org/places/burlington-breakwater-north",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,9 +153,36 @@
       "part": "wikidata:Q109370468",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:873",
+      "part": "wikidata:Q109370468",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39615",
+      "part": "wikidata:Q109370468",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39625",
+      "part": "wikidata:Q109370468",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8939",
+      "part": "wikidata:Q109370468",
+      "fields": []
     }
   ],
   "conflicts": [],

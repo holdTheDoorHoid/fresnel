@@ -1,7 +1,9 @@
 {
   "id": "us-hi-aloha",
   "name": "Aloha Tower",
-  "other_names": [],
+  "other_names": [
+    "Minor light of Oahu - Aloha Tower"
+  ],
   "country": "US",
   "region": "HI",
   "county": "Honolulu",
@@ -43,7 +45,9 @@
     {
       "register": "NRHP",
       "number": "76000660",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000660"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000660",
+      "listed": "1976-05-13",
+      "nomination": "https://catalog.archives.gov/id/63815791"
     }
   ],
   "aton": {
@@ -64,11 +68,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,7 +80,7 @@
     {
       "year": 1926,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -88,7 +92,7 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -140,6 +144,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/61956192",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Oahu - Aloha Tower",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=890",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Aloha Tower",
+      "url": "https://archives.uslhs.org/places/aloha-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63815791",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,6 +189,45 @@
       "part": "wikidata:Q448450",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:890",
+      "part": "wikidata:Q448450",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:aloha-tower",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:96649",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000660",
+      "part": "wikidata:Q448450",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:aloha-tower",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

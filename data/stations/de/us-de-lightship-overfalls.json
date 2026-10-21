@@ -1,7 +1,12 @@
 {
   "id": "us-de-lightship-overfalls",
   "name": "United States lightship Overfalls",
-  "other_names": [],
+  "other_names": [
+    "Overfalls",
+    "Lightship Overfalls LV 118/WAL 539",
+    "Lightship WLV 539",
+    "S-7857 The Lightship \"Overfalls\""
+  ],
   "country": "US",
   "region": "DE",
   "county": "Sussex",
@@ -9,10 +14,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 38.777917,
-    "lon": -75.141111,
+    "lat": 38.77801,
+    "lon": -75.14114,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -31,7 +36,10 @@
     {
       "register": "NRHP",
       "number": "89000006",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000006"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000006",
+      "listed": "1989-02-16",
+      "nhl": "2011-06-14",
+      "nomination": "https://catalog.archives.gov/id/75323923"
     },
     {
       "register": "National Historic Landmark",
@@ -61,7 +69,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,8 +89,14 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 2011,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -113,6 +127,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:United_States_lightship_WAL_539",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Overfalls LV 118/WAL 539",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=453",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75323923",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -126,17 +150,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:453",
+      "part": "wikidata:Q7892547",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89000006",
+      "part": "wikidata:Q7892547",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:de:overfalls-ls-lv-118",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

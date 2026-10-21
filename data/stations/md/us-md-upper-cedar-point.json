@@ -2,7 +2,10 @@
   "id": "us-md-upper-cedar-point",
   "name": "Upper Cedar Point Light",
   "other_names": [
-    "Upper Cedar Point Lighthouse"
+    "Upper Cedar Point Lighthouse",
+    "Upper Cedar Point",
+    "Upper Potomac River Light 6",
+    "Upper Potomac River Light 9"
   ],
   "country": "US",
   "region": "MD",
@@ -11,24 +14,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.4027,
-    "lon": -77.0826,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.402741,
+    "lon": -77.083086,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "screwpile",
       "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "built": 1867,
+      "height_m": 10.4,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +39,10 @@
     "deactivated": 1963,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 4.5,
-    "range_nm": null,
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,13 +75,19 @@
     {
       "year": 1867,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1963,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +124,16 @@
       "label": "ARLHS World List of Lights USA867",
       "url": "https://wlol.arlhs.com/lighthouse/USA867.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Upper Cedar Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1960",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Upper Cedar Point",
+      "url": "https://archives.uslhs.org/places/upper-cedar-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +147,66 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1960",
+      "part": "wikidata:Q7898553",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-17825",
+      "part": "wikidata:Q7898553",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-17880",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8482",
+      "part": "wikidata:Q7898553",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.40259,-77.08257",
+      "part": "wikidata:Q7898553",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 4.5
+        },
+        {
+          "source": "uslhs",
+          "value": 10.36
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

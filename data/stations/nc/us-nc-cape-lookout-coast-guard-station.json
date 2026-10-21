@@ -1,7 +1,9 @@
 {
   "id": "us-nc-cape-lookout-coast-guard-station",
   "name": "Cape Lookout Coast Guard Station",
-  "other_names": [],
+  "other_names": [
+    "Cape Lookout Life-Saving Station"
+  ],
   "country": "US",
   "region": "NC",
   "county": "Carteret",
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "88003436",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003436"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003436",
+      "listed": "1989-02-01",
+      "nomination": "https://catalog.archives.gov/id/47719426"
     }
   ],
   "aton": {
@@ -65,9 +69,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1917,
+      "event": "built",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -104,6 +114,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Cape_Lookout_Coast_Guard_Station",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Lookout Life Saving Station",
+      "url": "https://archives.uslhs.org/places/cape-lookout-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719426",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -121,10 +141,27 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97770",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88003436",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

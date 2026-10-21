@@ -2,7 +2,9 @@
   "id": "us-il-chicago-harbor-southeast-guidewall",
   "name": "Chicago Harbor Southeast Guidewall Light",
   "other_names": [
-    "Southeast Guidewall Light"
+    "Southeast Guidewall Light",
+    "Chicago Harbor Southeast Guidewall",
+    "Chicago Harbor Southeast Guide Wall Light"
   ],
   "country": "US",
   "region": "IL",
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 14.5,
-    "range_nm": 8.0,
+    "focal_height_m": 14.6,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,7 +74,7 @@
     {
       "year": 1912,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -83,7 +85,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-chicago-harbor-navy-pier",
+      "relation": "replica",
+      "name": "Chicago Harbor / Navy Pier Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_River_entrance_Lighthouse_%2815438942359%29.jpg",
@@ -120,6 +128,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/210969111",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Chicago Harbor Southeast Guidewall",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=235",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,6 +163,36 @@
       "part": "wikidata:Q82034552",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:235",
+      "part": "wikidata:Q82034552",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:chicago-harbor-southeast-guidewall",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20000",
+      "part": "wikidata:Q82034552",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.88831,-87.60251",
+      "part": "wikidata:Q82034552",
+      "fields": [
+        "light"
       ]
     }
   ],

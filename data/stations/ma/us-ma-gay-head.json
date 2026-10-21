@@ -3,7 +3,8 @@
   "name": "Gay Head Light",
   "other_names": [
     "Gay Head Lighthouse",
-    "Gay Head"
+    "Gay Head",
+    "Aquinnah"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +34,21 @@
     }
   ],
   "light": {
-    "first_lit": 1856,
+    "first_lit": 1799,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Al.Fl WR 15s",
-    "focal_height_m": 170.0,
-    "range_nm": 20.0,
+    "characteristic": "Fl(3+1) W R 30s",
+    "focal_height_m": 53.3,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001464",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001464"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001464",
+      "listed": "1987-06-15"
     },
     {
       "register": "America's Most Endangered Historic Places",
@@ -60,23 +62,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "MARTHA'S VINEYARD MUSEUM",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1956"
+    "as_of": "1960"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,10 +90,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1799,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1856,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1956,
@@ -100,9 +120,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1960,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +175,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713676415",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Gay Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=627",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gay Head",
+      "url": "https://archives.uslhs.org/places/gay-head",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,7 +202,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -174,8 +214,73 @@
       "key": "osm:way/713676415",
       "part": "wikidata:Q5528593",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:627",
+      "part": "wikidata:Q5528593",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:gay-head-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15610",
+      "part": "wikidata:Q5528593",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-620",
+      "part": "wikidata:Q5528593",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2838",
+      "part": "wikidata:Q5528593",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001464",
+      "part": "wikidata:Q5528593",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.34845,-70.83435",
+      "part": "wikidata:Q5528593",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:gay-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -204,9 +309,27 @@
         {
           "source": "osm",
           "value": 170.0
+        },
+        {
+          "source": "uslhs",
+          "value": 51.82
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1856
+        },
+        {
+          "source": "uslhs",
+          "value": 1799
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

@@ -3,7 +3,9 @@
   "name": "Port Austin Light",
   "other_names": [
     "Port Austin Lighthouse",
-    "Port Austin Reef Light"
+    "Port Austin Reef Light",
+    "Port Austin Reef",
+    "Port Austin Reef Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -24,29 +26,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1878,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1899,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 23.0,
-    "range_nm": 8.0,
+    "focal_height_m": 23.2,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "11000666",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000666"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000666",
+      "listed": "2011-09-15",
+      "nomination": "https://catalog.archives.gov/id/75325037"
     }
   ],
   "aton": {
@@ -59,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,9 +87,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1878,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1899,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -97,7 +113,7 @@
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +165,26 @@
       "label": "Website",
       "url": "https://www.portaustinreeflight.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Port Austin Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=172",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port Austin Reef",
+      "url": "https://archives.uslhs.org/places/port-austin-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325037",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,12 +211,88 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:172",
+      "part": "wikidata:Q7230493",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misel:port-austin-reef-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10275",
+      "part": "wikidata:Q7230493",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3010",
+      "part": "wikidata:Q7230493",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:11000666",
+      "part": "wikidata:Q7230493",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.08200,-82.98253",
+      "part": "wikidata:Q7230493",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:port-austin-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1899
+        },
+        {
+          "source": "osm",
+          "value": 1899
+        },
+        {
+          "source": "uslhs",
+          "value": 1878
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

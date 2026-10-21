@@ -2,7 +2,8 @@
   "id": "us-ms-pass-christian",
   "name": "Pass Christian Light",
   "other_names": [
-    "Pass Christian Lighthouse"
+    "Pass Christian Lighthouse",
+    "Pass Christian"
   ],
   "country": "US",
   "region": "MS",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.3139,
-    "lon": -89.2508,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.313407,
+    "lon": -89.250161,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "brick",
+      "built": 1831,
+      "height_m": 9.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1882,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.8,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,13 +73,13 @@
     {
       "year": 1831,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1882,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -105,6 +106,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Pass_Christian_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Pass Christian",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1826",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pass Christian",
+      "url": "https://archives.uslhs.org/places/pass-christian",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,15 +127,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1826",
+      "part": "wikidata:Q16896471",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8546",
+      "part": "wikidata:Q16896471",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

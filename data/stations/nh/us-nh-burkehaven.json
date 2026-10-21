@@ -1,7 +1,10 @@
 {
   "id": "us-nh-burkehaven",
   "name": "Burkehaven Light",
-  "other_names": [],
+  "other_names": [
+    "Burkehaven",
+    "Burkenhaven"
+  ],
   "country": "US",
   "region": "NH",
   "county": null,
@@ -61,8 +64,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -75,6 +78,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6183086999",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Burkehaven",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=667",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +96,26 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:667",
+      "part": "osm:node/6183086999",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nh:burkenhaven",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

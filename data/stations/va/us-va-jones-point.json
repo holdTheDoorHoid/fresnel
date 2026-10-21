@@ -2,7 +2,9 @@
   "id": "us-va-jones-point",
   "name": "Jones Point Light",
   "other_names": [
-    "Jones Point Lighthouse"
+    "Jones Point Lighthouse",
+    "Jones Point",
+    "Jones Point Lighthouse and District of Columbia South Cornerstone"
   ],
   "country": "US",
   "region": "VA",
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "80000352",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000352"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000352",
+      "listed": "1980-05-19",
+      "nomination": "https://catalog.archives.gov/id/41679458"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -59,43 +63,55 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Park Service",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1856,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1926,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/496345065",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Jones Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=439",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Jones Point",
+      "url": "https://archives.uslhs.org/places/jones-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41679458",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,6 +203,49 @@
       "part": "wikidata:Q6275284",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:439",
+      "part": "wikidata:Q6275284",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:jones-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3527",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000352",
+      "part": "wikidata:Q6275284",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:jones-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

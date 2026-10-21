@@ -4,7 +4,10 @@
   "other_names": [
     "Round Island Lighthouse",
     "Round Island Light House",
-    "Round Island Light (Michigan)"
+    "Round Island Light (Michigan)",
+    "Round Island",
+    "Old Round Island Point",
+    "Old Round Island Point Light"
   ],
   "country": "US",
   "region": "MI",
@@ -18,7 +21,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -35,19 +38,21 @@
   ],
   "light": {
     "first_lit": 1895,
-    "deactivated": 1947,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s",
-    "focal_height_m": 16.0,
+    "characteristic": "Fl(2) W 10s",
+    "focal_height_m": 16.2,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000994",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000994"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000994",
+      "listed": "1974-08-21",
+      "nomination": "https://catalog.archives.gov/id/25339964"
     }
   ],
   "aton": {
@@ -59,19 +64,19 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -90,15 +95,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1896,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1896,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1947,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -156,6 +173,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Round_Island_Light%2C_Michigan",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Round Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=215",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Round Island",
+      "url": "https://archives.uslhs.org/places/round-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339964",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -183,10 +220,86 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:215",
+      "part": "wikidata:Q3378362",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:old-round-island-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12585",
+      "part": "wikidata:Q3378362",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3327",
+      "part": "wikidata:Q3378362",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000994",
+      "part": "wikidata:Q3378362",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.83667,-84.61667",
+      "part": "wikidata:Q3378362",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.83724,-84.61686",
+      "part": "wikidata:Q3378362",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.83825,-84.61819",
+      "part": "station",
+      "fields": []
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,11 @@
   "name": "Grays Harbor Light",
   "other_names": [
     "Grays Harbor Lighthouse",
-    "Westport Lighthouse"
+    "Westport Lighthouse",
+    "Grays Harbor",
+    "Westport",
+    "Grays Harbor Light Station",
+    "Gray's Harbor"
   ],
   "country": "US",
   "region": "WA",
@@ -47,17 +51,19 @@
     "first_lit": 1898,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Alt WR 30s",
-    "focal_height_m": 37.0,
-    "range_nm": 19.0,
+    "characteristic": "Al W R 30s",
+    "focal_height_m": 37.5,
+    "range_nm": 18.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001333",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001333"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001333",
+      "listed": "1977-11-02",
+      "nomination": "https://catalog.archives.gov/id/75325031"
     }
   ],
   "aton": {
@@ -66,23 +72,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Westport-South Beach Historical Society",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -90,24 +96,36 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1898,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ca-grays-harbor",
+      "relation": "replica",
+      "name": "Grays Harbor Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GraysHarborWestportLightNpsPhoto2000.jpg",
@@ -159,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/559675721",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Grays Harbor (Westport)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=117",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grays Harbor",
+      "url": "https://archives.uslhs.org/places/grays-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325031",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -202,6 +240,71 @@
       "key": "osm:way/559675721",
       "part": "osm:way/1225181250",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:117",
+      "part": "wikidata:Q5598355",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:grays-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-15530",
+      "part": "wikidata:Q5598355",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-720",
+      "part": "wikidata:Q5598355",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3546",
+      "part": "wikidata:Q5598355",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001333",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.88822,-124.11691",
+      "part": "wikidata:Q5598355",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:gray-s-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

@@ -3,7 +3,11 @@
   "name": "Little Sable Point Light",
   "other_names": [
     "Little Sable Light",
-    "Little Sable Point Lighthouse"
+    "Little Sable Point Lighthouse",
+    "Little Sable Point",
+    "Little Sable",
+    "Little Sable Point Light Station",
+    "Petite Point au Sable"
   ],
   "country": "US",
   "region": "MI",
@@ -17,25 +21,30 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1874,
-      "height_m": null,
+      "height_m": 30.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1874,
-    "deactivated": 2014,
-    "lens": null,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W, 1 Flevery 6 sec",
     "focal_height_m": 33.0,
     "range_nm": null,
@@ -46,7 +55,9 @@
     {
       "register": "NRHP",
       "number": "84001827",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001827"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001827",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891393"
     }
   ],
   "aton": {
@@ -58,40 +69,53 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1874,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -149,6 +173,26 @@
       "label": "Website",
       "url": "http://www.splka.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Little Sable Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=193",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Little Sable Point",
+      "url": "https://archives.uslhs.org/places/little-sable-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891393",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,10 +220,71 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:193",
+      "part": "wikidata:Q6651797",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:little-sable",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2986",
+      "part": "wikidata:Q6651797",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001827",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:little-sable-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,151 @@
+{
+  "id": "us-ny-rockland-lake",
+  "name": "Rockland Lake",
+  "other_names": [
+    "Rockland Lake Light"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.147319,
+    "lon": -73.90462,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "caisson",
+      "material": "cast_iron",
+      "built": 1894,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1894,
+    "deactivated": 1923,
+    "lens": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 15.2,
+    "range_nm": 4.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "1-37775",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1894,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1923,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Rockland Lake",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1846",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rockland Lake",
+      "url": "https://archives.uslhs.org/places/rockland-lake",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1846",
+      "part": "lighthousefriends:1846",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-37775",
+      "part": "lighthousefriends:1846",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8822",
+      "part": "lighthousefriends:1846",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.14755,-73.90480",
+      "part": "lighthousefriends:1846",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

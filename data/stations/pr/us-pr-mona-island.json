@@ -5,7 +5,12 @@
     "Faro de la Isla de la Mona",
     "Mona Island Lighthouse",
     "Ruinas Faro de Isla de Mona",
-    "Faro de Isla de Mona"
+    "Faro de Isla de Mona",
+    "Isla de Mona",
+    "Mona Island",
+    "Isla de Mona Light",
+    "Isla De Mona Light",
+    "Isla De Mona Southeast Light"
   ],
   "country": "US",
   "region": "PR",
@@ -25,30 +30,37 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1900,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1976,
+    "first_lit": 1900,
     "deactivated": 1976,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 98.0,
-    "range_nm": null,
+    "focal_height_m": 98.5,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000689",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000689"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000689",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518265"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-47",
+      "url": "https://www.loc.gov/item/pr0047/"
     }
   ],
   "aton": {
@@ -61,7 +73,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -72,7 +84,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -85,10 +97,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1900,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1973,
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1976,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1976,
@@ -99,13 +129,13 @@
     {
       "year": 1976,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -157,6 +187,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2668601272",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isla de Mona",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1143",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Puerto Rico",
+      "url": "https://www.ibiblio.org/lighthouse/pr.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-47, Isla de Mona Light",
+      "url": "https://www.loc.gov/item/pr0047/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mona Island",
+      "url": "https://archives.uslhs.org/places/mona-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518265",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -184,9 +239,101 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1143",
+      "part": "wikidata:Q6897679",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pr:isla-de-mona-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-32295",
+      "part": "wikidata:Q6897679",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-32295.5",
+      "part": "wikidata:Q6897679",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-47",
+      "part": "wikidata:Q6897679",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3478",
+      "part": "wikidata:Q6897679",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000689",
+      "part": "wikidata:Q6897679",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.08628,-67.84650",
+      "part": "wikidata:Q6897679",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 98.0
+        },
+        {
+          "source": "uslhs",
+          "value": 70.41
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1976
+        },
+        {
+          "source": "uslhs",
+          "value": 1900
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
     {
       "field": "location",
       "values": [
@@ -203,9 +350,16 @@
             18.08631,
             -67.84638
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            18.0849,
+            -67.85139
+          ]
         }
       ],
-      "distance_m": 540,
+      "distance_m": 552,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],

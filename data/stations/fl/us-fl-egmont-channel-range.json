@@ -1,11 +1,14 @@
 {
   "id": "us-fl-egmont-channel-range",
-  "name": "Egmont Channel Range Lights",
+  "name": "Egmont Channel Range Rear",
   "other_names": [
     "Egmont Channel Front Range Light",
     "Egmont Channel Range Front",
     "Egmont Channel Rear Range Light",
-    "Egmont Channel Range Rear"
+    "Egmont Channel Range Front Light",
+    "Egmont Channel Range Front Light Passing Lights",
+    "Egmont Channel Range Rear Light",
+    "Egmont Channel Range Rear Light Passing Lights"
   ],
   "country": "US",
   "region": "FL",
@@ -19,8 +22,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "front_range",
@@ -53,15 +56,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl W 2.5s",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "3-1380",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -86,7 +89,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2021,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -100,6 +110,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3376364920",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,6 +131,66 @@
     {
       "source": "osm",
       "key": "osm:node/3376364920",
+      "part": "osm:node/3376364920",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:egmont-channel-range-rear-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "name"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1375",
+      "part": "osm:node/10324341866",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1375.1",
+      "part": "osm:node/10324341866",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1380",
+      "part": "osm:node/3376364920",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1380.1",
+      "part": "osm:node/3376364920",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-22280",
+      "part": "osm:node/10324341866",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-22285",
+      "part": "osm:node/3376364920",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:27.61358,-82.76480",
+      "part": "osm:node/10324341866",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:27.61611,-82.73955",
       "part": "osm:node/3376364920",
       "fields": []
     }

@@ -34,10 +34,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": null,
+    "focal_height_m": 13.7,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -84,10 +84,17 @@
       "part": "osm:node/9448794478",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.74653,-87.03716",
+      "part": "osm:node/9448794478",
+      "fields": [
+        "light"
       ]
     }
   ],

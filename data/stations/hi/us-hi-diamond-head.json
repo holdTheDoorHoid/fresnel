@@ -2,7 +2,9 @@
   "id": "us-hi-diamond-head",
   "name": "Diamond Head Light",
   "other_names": [
-    "Diamond Head Lighthouse"
+    "Diamond Head Lighthouse",
+    "Diamond Head",
+    "U.S. Coast Guard Diamond Head Lighthouse"
   ],
   "country": "US",
   "region": "HI",
@@ -23,29 +25,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1898,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1917,
+    "first_lit": 1899,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc(2) W 10s",
-    "focal_height_m": 147.0,
-    "range_nm": 17.0,
+    "focal_height_m": 44.8,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80001282",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80001282"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80001282",
+      "listed": "1980-10-31",
+      "nomination": "https://catalog.archives.gov/id/63815894"
     }
   ],
   "aton": {
@@ -58,7 +67,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +89,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1899,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1917,
@@ -94,9 +115,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1918,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +175,26 @@
       "label": "Website",
       "url": "https://www.pacificarea.uscg.mil/Organizations/District-14/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Diamond Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=140",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Diamond Head",
+      "url": "https://archives.uslhs.org/places/diamond-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63815894",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +207,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -174,8 +220,66 @@
       "part": "wikidata:Q5270818",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:140",
+      "part": "wikidata:Q5270818",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:diamond-head-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-29060",
+      "part": "wikidata:Q5270818",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2798",
+      "part": "wikidata:Q5270818",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80001282",
+      "part": "wikidata:Q5270818",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:21.25572,-157.80955",
+      "part": "wikidata:Q5270818",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:diamond-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -204,9 +308,31 @@
         {
           "source": "osm",
           "value": 147.0
+        },
+        {
+          "source": "uslhs",
+          "value": 44.5
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1917
+        },
+        {
+          "source": "osm",
+          "value": 1917
+        },
+        {
+          "source": "uslhs",
+          "value": 1899
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

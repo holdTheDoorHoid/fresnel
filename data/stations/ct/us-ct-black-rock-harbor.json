@@ -3,7 +3,9 @@
   "name": "Black Rock Harbor Light",
   "other_names": [
     "Black Rock Harbor Lighthouse",
-    "Fayerweather Island Light"
+    "Fayerweather Island Light",
+    "Fayerweather Island",
+    "Black Rock Harbor"
   ],
   "country": "US",
   "region": "CT",
@@ -33,11 +35,11 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1808,
     "deactivated": 1932,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": null,
+    "focal_height_m": 12.2,
     "range_nm": 11.0,
     "fog_signal": null,
     "from": "wikidata"
@@ -52,15 +54,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -71,15 +73,39 @@
   "stay": null,
   "events": [
     {
+      "year": 1808,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1809,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1817,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1823,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1932,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -126,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525263191",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fayerweather Island (Black Rock Harbor)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=789",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Black Rock Harbor",
+      "url": "https://archives.uslhs.org/places/black-rock-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,9 +193,50 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:789",
+      "part": "wikidata:Q3378186",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:black-rock-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2736",
+      "part": "wikidata:Q3378186",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1823
+        },
+        {
+          "source": "uslhs",
+          "value": 1809
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

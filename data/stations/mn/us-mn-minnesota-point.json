@@ -2,7 +2,9 @@
   "id": "us-mn-minnesota-point",
   "name": "Minnesota Point Light",
   "other_names": [
-    "Minnesota Point Lighthouse"
+    "Minnesota Point Lighthouse",
+    "Minnesota Point",
+    "Zero Point"
   ],
   "country": "US",
   "region": "MN",
@@ -45,7 +47,8 @@
     {
       "register": "NRHP",
       "number": "74002206",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74002206"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74002206",
+      "listed": "1974-12-27"
     }
   ],
   "aton": {
@@ -77,9 +80,21 @@
   "events": [
     {
       "year": 1858,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1885,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1913,
@@ -90,7 +105,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +152,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697204402",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minnesota Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=263",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -164,9 +189,47 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:263",
+      "part": "wikidata:Q6868398",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:minnesota-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74002206",
+      "part": "wikidata:Q6868398",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1913
+        },
+        {
+          "source": "rowlett",
+          "value": 1885
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

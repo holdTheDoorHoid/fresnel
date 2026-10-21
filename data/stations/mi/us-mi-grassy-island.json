@@ -2,44 +2,46 @@
   "id": "us-mi-grassy-island",
   "name": "Grassy Island Light",
   "other_names": [
-    "Grassy Island Lighthouse"
+    "Grassy Island Lighthouse",
+    "Grassy Island South Range",
+    "Grassy Island North Channel Range Front"
   ],
   "country": "US",
   "region": "MI",
   "county": "Wayne",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
-    "lat": 42.2243,
-    "lon": -83.1331,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 42.224444,
+    "lon": -83.133333,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "front_range",
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
+      "built": 1897,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 7.9,
+    "range_nm": 4.3,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -68,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -92,6 +101,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Grassy_Island_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Grassy Island South Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1998",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grassy Island North Channel Range Front",
+      "url": "https://archives.uslhs.org/places/grassy-island-north-channel-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -102,16 +121,47 @@
       "fields": [
         "aton",
         "county",
-        "kind",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1998",
+      "part": "wikidata:Q16840811",
+      "fields": [
+        "kind",
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-7785",
+      "part": "wikidata:Q16840811",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9657",
+      "part": "wikidata:Q16840811",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.22431,-83.13314",
+      "part": "wikidata:Q16840811",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

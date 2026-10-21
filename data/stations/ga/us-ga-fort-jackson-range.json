@@ -1,0 +1,140 @@
+{
+  "id": "us-ga-fort-jackson-range",
+  "name": "Fort Jackson Range",
+  "other_names": [
+    "Fort Jackson Range Rear",
+    "Fort Jackson Inbound Range Front Light",
+    "Fort Jackson Inbound Range Rear Light"
+  ],
+  "country": "US",
+  "region": "GA",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 32.08433,
+    "lon": -81.02117,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "rear_range",
+      "name": null,
+      "type": null,
+      "material": "steel",
+      "built": 1884,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1884,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 12.2,
+    "range_nm": 0.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "3-4955",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1884,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Fort Jackson Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1855",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Jackson Range Rear",
+      "url": "https://archives.uslhs.org/places/fort-jackson-range-rear",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1855",
+      "part": "station",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4955",
+      "part": "station",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4960",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:22390",
+      "part": "uslhs:22390",
+      "fields": [
+        "events",
+        "light",
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

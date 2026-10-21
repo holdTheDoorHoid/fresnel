@@ -2,7 +2,9 @@
   "id": "us-nh-isles-of-shoals",
   "name": "Isles of Shoals Light",
   "other_names": [
-    "Isles of Shoals Lighthouse"
+    "Isles of Shoals Lighthouse",
+    "Isles of Shoals",
+    "White Island"
   ],
   "country": "US",
   "region": "NH",
@@ -32,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1865,
+    "first_lit": 1821,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 24.9,
+    "focal_height_m": 25.0,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -48,11 +50,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "STATE OF NEW HAMPSHIRE",
+  "ownership": "state",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -63,8 +65,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,6 +78,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1821,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1865,
       "event": "first_lit",
       "note": null,
@@ -84,7 +104,7 @@
     {
       "year": 1986,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -131,6 +151,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11283448277",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isles of Shoals (White Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=664",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Hampshire",
+      "url": "https://www.ibiblio.org/lighthouse/nh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Isles of Shoals",
+      "url": "https://archives.uslhs.org/places/isles-shoals",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +178,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -155,8 +189,59 @@
       "key": "osm:node/11283448277",
       "part": "wikidata:Q6084239",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:664",
+      "part": "wikidata:Q6084239",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nh:isles-of-shoals-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-235",
+      "part": "wikidata:Q6084239",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3371",
+      "part": "wikidata:Q6084239",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.96723,-70.62327",
+      "part": "wikidata:Q6084239",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nh:isles-of-shoals-white-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -174,6 +259,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1865
+        },
+        {
+          "source": "uslhs",
+          "value": 1821
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

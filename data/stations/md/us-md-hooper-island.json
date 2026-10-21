@@ -4,7 +4,8 @@
   "other_names": [
     "Hooper Island Lighthouse",
     "Hooper Island Light Station",
-    "Hooper's Island Lighthouse"
+    "Hooper's Island Lighthouse",
+    "Hooper Island"
   ],
   "country": "US",
   "region": "MD",
@@ -24,13 +25,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1901,
       "height_m": 10.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -41,13 +42,15 @@
     "focal_height_m": 19.2,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001426",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001426"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001426",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325011"
     }
   ],
   "aton": {
@@ -60,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -85,14 +88,26 @@
     },
     {
       "year": 1902,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1902,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +154,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5685312478",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hooper Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=433",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland: Eastern Shore",
+      "url": "https://www.ibiblio.org/lighthouse/mde.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hooper Island",
+      "url": "https://archives.uslhs.org/places/hooper-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325011",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,8 +200,64 @@
       "key": "osm:node/5685312478",
       "part": "wikidata:Q5898379",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:433",
+      "part": "wikidata:Q5898379",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mde:hooper-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7590",
+      "part": "wikidata:Q5898379",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2874",
+      "part": "wikidata:Q5898379",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001426",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.25625,-76.24981",
+      "part": "wikidata:Q5898379",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:hooper-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

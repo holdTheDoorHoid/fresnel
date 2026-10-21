@@ -1,32 +1,36 @@
 {
   "id": "us-sc-bloody-point-range",
   "name": "Bloody Point Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Bloody Point Front Range",
+    "Bloody Point Range Front",
+    "Bloody Point Range"
+  ],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Beaufort",
   "water": null,
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 32.0971,
-    "lon": -80.8732,
+    "lat": 32.09716,
+    "lon": -80.87318,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "front_range",
       "name": null,
-      "type": null,
+      "type": "integral",
       "material": null,
       "built": 1883,
-      "height_m": null,
+      "height_m": 6.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -34,7 +38,7 @@
     "deactivated": 1922,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 8.2,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -55,20 +59,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,13 +86,13 @@
     {
       "year": 1883,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1922,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -111,6 +115,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Bloody_Point_Range_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Bloody Point Front Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=654",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bloody Point Range Front",
+      "url": "https://archives.uslhs.org/places/bloody-point-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,16 +136,46 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:654",
+      "part": "wikidata:Q4928092",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3508",
+      "part": "wikidata:Q4928092",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:bloody-point-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

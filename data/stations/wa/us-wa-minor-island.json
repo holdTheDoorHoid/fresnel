@@ -1,7 +1,9 @@
 {
   "id": "us-wa-minor-island",
   "name": "Minor Island Light",
-  "other_names": [],
+  "other_names": [
+    "Minor Island"
+  ],
   "country": "US",
   "region": "WA",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -31,17 +33,17 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 2018,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-16380",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -66,7 +68,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +90,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1089754042",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,6 +108,16 @@
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:minor-island-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
       ]
     }
   ],

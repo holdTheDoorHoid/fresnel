@@ -1,0 +1,218 @@
+{
+  "id": "us-as-pago-pago-range-front",
+  "name": "Pago Pago Range Front",
+  "other_names": [
+    "Pago Pago Range Rear",
+    "Pago Pago Range Front Light",
+    "Pago Pago Range Rear Light",
+    "Pago Pago Harbor Range Front Light",
+    "Pago Pago Harbor Range Rear Light"
+  ],
+  "country": "US",
+  "region": "AS",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": -14.268944,
+    "lon": -170.674222,
+    "precision": "exact",
+    "from": "territories"
+  },
+  "status": "active",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Pago Pago Range Front",
+      "type": null,
+      "material": "wood",
+      "built": 1901,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Pago Pago Range Rear",
+      "type": null,
+      "material": "wood",
+      "built": 1901,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": -14.267667,
+        "lon": -170.674778
+      }
+    }
+  ],
+  "light": {
+    "first_lit": 1901,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "QR",
+    "focal_height_m": 9.1,
+    "range_nm": 11.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "6-30190",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: American Samoa",
+      "url": "https://www.ibiblio.org/lighthouse/asm.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wikipedia: List of lighthouses in the United States territories",
+      "url": "https://en.wikipedia.org/wiki/List_of_lighthouses_in_the_United_States_territories",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pago Pago Range Rear",
+      "url": "https://archives.uslhs.org/places/pago-pago-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pago Pago Range Front",
+      "url": "https://archives.uslhs.org/places/pago-pago-range-front",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:asm:pago-pago-range-front-4",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:asm:pago-pago-range-rear-4",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-30190",
+      "part": "uslhs:34799",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-30195",
+      "part": "uslhs:34798",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:pago-pago-range-front-light",
+      "part": "uslhs:34799",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "territories",
+      "key": "territories:pago-pago-range-rear-light",
+      "part": "uslhs:34798",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34798",
+      "part": "uslhs:34798",
+      "fields": [
+        "access",
+        "kind",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34799",
+      "part": "uslhs:34799",
+      "fields": [
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "territories",
+          "value": "active"
+        },
+        {
+          "source": "territories",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

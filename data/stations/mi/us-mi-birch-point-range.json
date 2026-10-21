@@ -1,0 +1,178 @@
+{
+  "id": "us-mi-birch-point-range",
+  "name": "Birch Point Range",
+  "other_names": [
+    "Birch Point Range Front",
+    "Birch Point Range Rear",
+    "Birch Point Range Front Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 46.433695,
+    "lon": -84.523359,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Birch Point Range",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends"
+    },
+    {
+      "role": "rear_range",
+      "name": "Birch Point Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 46.43333,
+        "lon": -84.52333
+      }
+    }
+  ],
+  "light": {
+    "first_lit": 1901,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "FR",
+    "focal_height_m": 15.2,
+    "range_nm": 15.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-14430",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Birch Point Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2010",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Birch Point Range Front",
+      "url": "https://archives.uslhs.org/places/birch-point-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Birch Point Range Rear",
+      "url": "https://archives.uslhs.org/places/birch-point-range-rear",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2010",
+      "part": "lighthousefriends:2010",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:birch-point-range-front-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:birch-point-range-rear-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14430",
+      "part": "lighthousefriends:2010",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9700",
+      "part": "lighthousefriends:2010",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9701",
+      "part": "uslhs:9701",
+      "fields": []
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

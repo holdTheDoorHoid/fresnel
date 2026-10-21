@@ -3,11 +3,15 @@
   "name": "Isle Royale Light",
   "other_names": [
     "Isle Royale Lighthouse",
-    "Menagerie Island Lighthouse"
+    "Menagerie Island Lighthouse",
+    "Isle Royale",
+    "Menagerie Island",
+    "Isle Royale Light Station",
+    "Managerie Island Light Station"
   ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Keweenaw",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -37,16 +41,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 22.0,
-    "range_nm": 9.0,
+    "focal_height_m": 21.9,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83000880",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000880"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000880",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891200"
     }
   ],
   "aton": {
@@ -58,19 +64,19 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -79,19 +85,25 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1875,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/697192408",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isle Royale (Menagerie Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=735",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Isle Royale",
+      "url": "https://archives.uslhs.org/places/isle-royale",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891200",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -173,7 +205,6 @@
       "part": "wikidata:Q6083855",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
     },
@@ -182,6 +213,56 @@
       "key": "osm:way/697192408",
       "part": "wikidata:Q6083855",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:735",
+      "part": "wikidata:Q6083855",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:isle-royale",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16710",
+      "part": "wikidata:Q6083855",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2983",
+      "part": "wikidata:Q6083855",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000880",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.94781,-88.76128",
+      "part": "wikidata:Q6083855",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
@@ -208,13 +289,20 @@
             47.94795,
             -88.76127
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            47.94796,
+            -88.76121
+          ]
         }
       ],
       "distance_m": 833,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

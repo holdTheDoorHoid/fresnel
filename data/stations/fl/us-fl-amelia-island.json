@@ -2,7 +2,9 @@
   "id": "us-fl-amelia-island",
   "name": "Amelia Island Light",
   "other_names": [
-    "Amelia Island Lighthouse"
+    "Amelia Island Lighthouse",
+    "Amelia Island",
+    "Fmsf# 8na134"
   ],
   "country": "US",
   "region": "FL",
@@ -23,29 +25,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1838,
       "height_m": 19.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1839,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl W 10s, R sector",
-    "focal_height_m": 32.5,
+    "lens": {
+      "type": "fresnel",
+      "order": "3",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 32.6,
     "range_nm": 23.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "03000004",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000004"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000004",
+      "listed": "2003-02-13",
+      "nomination": "https://catalog.archives.gov/id/77841560"
     }
   ],
   "aton": {
@@ -54,23 +63,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "City of Fernandina Beach",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +87,25 @@
     {
       "year": 1838,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1839,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2003,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525332391",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Amelia Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=346",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Amelia Island",
+      "url": "https://archives.uslhs.org/places/amelia-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77841560",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -143,7 +184,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,6 +197,65 @@
       "part": "wikidata:Q4742266",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:346",
+      "part": "wikidata:Q4742266",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:amelia-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-565",
+      "part": "wikidata:Q4742266",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2764",
+      "part": "wikidata:Q4742266",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03000004",
+      "part": "wikidata:Q4742266",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.67315,-81.44246",
+      "part": "wikidata:Q4742266",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:amelia-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

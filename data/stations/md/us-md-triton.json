@@ -2,7 +2,8 @@
   "id": "us-md-triton",
   "name": "Triton Light",
   "other_names": [
-    "Triton Lighthouse"
+    "Triton Lighthouse",
+    "Triton"
   ],
   "country": "US",
   "region": "MD",
@@ -35,11 +36,11 @@
     "first_lit": 1959,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl (4+5) G 30s",
-    "focal_height_m": 7.5,
+    "characteristic": "Fl(4+5) G 30s",
+    "focal_height_m": 7.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -80,6 +81,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1960,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -100,6 +107,11 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_Triton",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,6 +128,28 @@
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:triton",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-19780",
+      "part": "wikidata:Q7844327",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.98139,-76.47622",
+      "part": "wikidata:Q7844327",
+      "fields": [
+        "light"
       ]
     }
   ],

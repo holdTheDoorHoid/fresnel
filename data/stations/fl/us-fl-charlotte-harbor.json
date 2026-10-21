@@ -2,7 +2,9 @@
   "id": "us-fl-charlotte-harbor",
   "name": "Charlotte Harbor Light",
   "other_names": [
-    "Charlotte Harbor Lighthouse"
+    "Charlotte Harbor Lighthouse",
+    "Charlotte Harbor",
+    "Cape Haze"
   ],
   "country": "US",
   "region": "FL",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 26.775833,
-    "lon": -82.141945,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 26.760389,
+    "lon": -82.108559,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -116,6 +118,11 @@
       "label": "ARLHS World List of Lights USA157",
       "url": "https://wlol.arlhs.com/lighthouse/USA157.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Charlotte Harbor (Cape Haze)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1834",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,10 +135,17 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1834",
+      "part": "wikidata:Q5085983",
+      "fields": [
+        "location"
       ]
     }
   ],

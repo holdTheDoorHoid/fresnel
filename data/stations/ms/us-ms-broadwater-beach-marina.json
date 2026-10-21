@@ -1,7 +1,10 @@
 {
   "id": "us-ms-broadwater-beach-marina",
   "name": "phare de Broadwater Beach Marina",
-  "other_names": [],
+  "other_names": [
+    "Broadwater Beach",
+    "Broadwater Beach Hotel Marina Channel Light"
+  ],
   "country": "US",
   "region": "MS",
   "county": "Harrison",
@@ -34,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 30.0,
+    "focal_height_m": 20.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,7 +73,7 @@
     {
       "year": 1965,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -107,6 +110,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/251370422",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,7 +127,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -132,6 +139,28 @@
       "part": "wikidata:Q68907302",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ms:broadwater-beach",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-9570",
+      "part": "wikidata:Q68907302",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.38889,-88.96427",
+      "part": "wikidata:Q68907302",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -4,7 +4,9 @@
   "other_names": [
     "Muskegon Breakwater Lighthouse",
     "South Breakwater Light",
-    "Muskegon South Breakwater Light"
+    "Muskegon South Breakwater Light",
+    "Muskegon South Breakwater",
+    "Muskegon Breakwater Front Range Light"
   ],
   "country": "US",
   "region": "MI",
@@ -38,16 +40,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 21.0,
-    "range_nm": 8.0,
+    "focal_height_m": 21.3,
+    "range_nm": 7.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06001026",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001026"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001026",
+      "listed": "2006-11-15",
+      "nomination": "https://catalog.archives.gov/id/75325125"
     }
   ],
   "aton": {
@@ -72,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,7 +84,7 @@
     {
       "year": 1930,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -98,7 +102,7 @@
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +149,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/344559082",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Muskegon South Breakwater",
+      "url": "https://archives.uslhs.org/places/muskegon-south-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325125",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -172,8 +191,54 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:muskegon-south-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18705",
+      "part": "wikidata:Q6942751",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9675",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06001026",
+      "part": "wikidata:Q6942751",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.22409,-86.34690",
+      "part": "wikidata:Q6942751",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:muskegon-south-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

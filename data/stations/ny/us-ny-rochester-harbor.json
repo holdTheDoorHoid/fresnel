@@ -1,0 +1,144 @@
+{
+  "id": "us-ny-rochester-harbor",
+  "name": "Rochester Harbor",
+  "other_names": [
+    "Rochester Harbor (Genesee River) West Pierhead",
+    "Rochester Harbor Light"
+  ],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 43.26388,
+    "lon": -77.59897,
+    "precision": "exact",
+    "from": "lighthousefriends"
+  },
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
+    }
+  ],
+  "light": {
+    "first_lit": 1838,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 12.2,
+    "range_nm": 7.8,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-2320",
+    "arlhs": "USA-322",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1995,
+      "event": "built",
+      "note": "Tower 6 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Rochester Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=909",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:909",
+      "part": "lighthousefriends:909",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:rochester-harbor-genesee-river-west-pierhead-6",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2320",
+      "part": "lighthousefriends:909",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.26390,-77.59898",
+      "part": "lighthousefriends:909",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

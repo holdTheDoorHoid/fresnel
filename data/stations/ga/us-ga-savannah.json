@@ -2,7 +2,8 @@
   "id": "us-ga-savannah",
   "name": "Savannah Light",
   "other_names": [
-    "Savannah Lighthouse"
+    "Savannah Lighthouse",
+    "Savannah"
   ],
   "country": "US",
   "region": "GA",
@@ -13,10 +14,10 @@
   "location": {
     "lat": 31.950943,
     "lon": -80.680648,
-    "precision": "exact",
-    "from": "wikidata"
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -120,6 +121,11 @@
       "label": "ARLHS World List of Lights USA1320",
       "url": "https://wlol.arlhs.com/lighthouse/USA1320.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Savannah",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1852",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,16 +139,23 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1852",
+      "part": "wikidata:Q7427862",
+      "fields": [
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

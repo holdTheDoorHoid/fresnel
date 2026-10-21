@@ -1,10 +1,14 @@
 {
   "id": "us-in-gary-harbor-breakwater",
   "name": "Gary Harbor Breakwater Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Gary Harbor Breakwater",
+    "Gary West Breakwater",
+    "Gary Breakwater Light"
+  ],
   "country": "US",
   "region": "IN",
-  "county": null,
+  "county": "Lake",
   "water": null,
   "setting": "pier",
   "kind": "pier_light",
@@ -14,35 +18,35 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "crib",
       "material": null,
-      "built": null,
+      "built": 1913,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl(3) R 40s",
+    "focal_height_m": 12.2,
     "range_nm": null,
-    "fog_signal": null,
-    "from": null
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-19610",
+    "arlhs": "USA-317",
     "ccg_list_number": null,
     "nga": null
   },
@@ -50,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -61,12 +65,25 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1911,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +92,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1245764127",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Gary Harbor Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=661",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gary Harbor Breakwater",
+      "url": "https://archives.uslhs.org/places/gary-harbor-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +120,55 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:661",
+      "part": "osm:way/1245764127",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:gary-west-breakwater",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19610",
+      "part": "osm:way/1245764127",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9629",
+      "part": "osm:way/1245764127",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.63032,-87.32031",
+      "part": "osm:way/1245764127",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

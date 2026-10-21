@@ -2,7 +2,14 @@
   "id": "us-wi-michigan-island",
   "name": "Michigan Island Light",
   "other_names": [
-    "Michigan Island Lighthouse"
+    "Michigan Island Lighthouse",
+    "Michigan Island",
+    "Old",
+    "New",
+    "Michigan Island New",
+    "Michigan Island Old",
+    "Michigan Island - New",
+    "Michigan Island - Old"
   ],
   "country": "US",
   "region": "WI",
@@ -21,25 +28,40 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Michigan Island Old",
       "type": null,
       "material": null,
+      "built": 1857,
+      "height_m": 19.5,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 46.87083,
+        "lon": -90.49306
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Michigan Island Light",
+      "type": "skeletal",
+      "material": "stone",
       "built": 1857,
       "height_m": 36.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1869,
+    "first_lit": 1857,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 170.0,
-    "range_nm": 11.0,
+    "focal_height_m": 51.8,
+    "range_nm": 9.5,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -62,35 +84,60 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1857,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1869,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1880,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1929,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1977,
@@ -147,6 +194,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/475902605",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Michigan Island (Old)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=693",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Michigan Island (New)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=694",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: MICHIGAN ISLAND NEW",
+      "url": "https://archives.uslhs.org/places/michigan-island-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Michigan Island Old",
+      "url": "https://archives.uslhs.org/places/michigan-island-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -159,7 +231,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -180,9 +251,91 @@
       "key": "osm:node/475902605",
       "part": "wikidata:Q6837577",
       "fields": [
-        "light",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:693",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:694",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:michigan-island-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:michigan-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15275",
+      "part": "wikidata:Q6837577",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3571",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9233",
+      "part": "uslhs:9233",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.87079,-90.49619",
+      "part": "wikidata:Q6837577",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:michigan-island-new",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:michigan-island-old",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [
@@ -200,6 +353,14 @@
         {
           "source": "osm",
           "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
@@ -214,6 +375,10 @@
         {
           "source": "osm",
           "value": 170.0
+        },
+        {
+          "source": "uslhs",
+          "value": 39.32
         }
       ],
       "note": "Sources differ by more than 3 m."

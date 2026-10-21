@@ -2,7 +2,9 @@
   "id": "us-me-grindel-point",
   "name": "Grindel Point Light",
   "other_names": [
-    "Grindel Point Lighthouse"
+    "Grindel Point Lighthouse",
+    "Grindle Point",
+    "Grindle Point Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1874,
+    "first_lit": 1850,
     "deactivated": 1934,
     "lens": null,
-    "characteristic": "Fl G 4s",
-    "focal_height_m": 12.0,
+    "characteristic": "F W",
+    "focal_height_m": 6.1,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87000427",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000427"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87000427",
+      "listed": "1987-03-13",
+      "nomination": "https://catalog.archives.gov/id/88687385"
     }
   ],
   "aton": {
@@ -54,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Islesboro",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,6 +86,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1851,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1874,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1874,
       "event": "first_lit",
       "note": null,
@@ -90,13 +112,13 @@
     {
       "year": 1934,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +170,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Grindel_Point_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Grindle Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=774",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grindle Point",
+      "url": "https://archives.uslhs.org/places/grindle-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687385",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -174,6 +216,80 @@
       "part": "wikidata:Q5609411",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:774",
+      "part": "wikidata:Q5609411",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:grindle-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4405",
+      "part": "wikidata:Q5609411",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2909",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87000427",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.28025,-68.94360",
+      "part": "wikidata:Q5609411",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.28047,-68.94303",
+      "part": "wikidata:Q5609411",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.28141,-68.94304",
+      "part": "wikidata:Q5609411",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:grindle-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-mi-big-bay-point",
   "name": "Big Bay Point Light",
   "other_names": [
-    "Big Bay Point Lighthouse"
+    "Big Bay Point Lighthouse",
+    "Big Bay Point",
+    "Big Bay Point Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -16,14 +18,14 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
+      "material": "brick",
       "built": 1896,
       "height_m": 20.0,
       "status": "standing",
@@ -33,19 +35,21 @@
   ],
   "light": {
     "first_lit": 1896,
-    "deactivated": 1961,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 6s",
+    "characteristic": "Fl W 5s",
     "focal_height_m": 27.0,
-    "range_nm": 9.6,
+    "range_nm": 60.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88001837",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88001837"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88001837",
+      "listed": "1988-10-12",
+      "nomination": "https://catalog.archives.gov/id/25340071"
     }
   ],
   "aton": {
@@ -57,46 +61,59 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": "https://www.bigbaylighthouse.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a bed and breakfast. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1896,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1896,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1896,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1961,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +165,26 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=574",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Big Bay Point",
+      "url": "https://archives.uslhs.org/places/big-bay-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340071",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -175,10 +212,107 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:574",
+      "part": "wikidata:Q4905043",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:big-bay-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14705",
+      "part": "wikidata:Q4905043",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2952",
+      "part": "wikidata:Q4905043",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88001837",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.84199,-87.67926",
+      "part": "wikidata:Q4905043",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:big-bay-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:big-bay-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 27.0
+        },
+        {
+          "source": "uslhs",
+          "value": 32.92
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

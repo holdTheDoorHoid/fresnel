@@ -5,7 +5,8 @@
     "Navassa Island Lighthouse",
     "Phare de la Navasse / Navassa Island Light",
     "Phare de la Navasse",
-    "Faro de la Isla de Navaza"
+    "Faro de la Isla de Navaza",
+    "Navassa Island"
   ],
   "country": "US",
   "region": "UM",
@@ -75,7 +76,7 @@
     {
       "year": 1917,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -87,7 +88,7 @@
     {
       "year": 1996,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -134,6 +135,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/546872234",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Navassa Island",
+      "url": "https://www.ibiblio.org/lighthouse/nvi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,6 +166,14 @@
       "part": "wikidata:Q6982191",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nvi:navassa-island",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

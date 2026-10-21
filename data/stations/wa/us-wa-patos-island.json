@@ -30,7 +30,7 @@
       "name": null,
       "type": "integral",
       "material": "wood",
-      "built": null,
+      "built": 1908,
       "height_m": 8.0,
       "status": "standing",
       "note": null,
@@ -38,20 +38,22 @@
     }
   ],
   "light": {
-    "first_lit": 1908,
+    "first_lit": 1893,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 16.0,
-    "range_nm": 6.0,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 15.8,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001355",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001355"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001355",
+      "listed": "1977-10-21",
+      "nomination": "https://catalog.archives.gov/id/75613123"
     }
   ],
   "aton": {
@@ -63,24 +65,36 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1893,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1908,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1908,
       "event": "first_lit",
@@ -88,9 +102,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1908,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +162,26 @@
       "label": "Website",
       "url": "https://lighthousefriends.com/light.asp?ID=103",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Patos Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=103",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Patos Island",
+      "url": "https://archives.uslhs.org/places/patos-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75613123",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +194,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -167,8 +206,66 @@
       "key": "osm:node/255577387",
       "part": "wikidata:Q7145196",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:103",
+      "part": "wikidata:Q7145196",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:patos-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-19825",
+      "part": "wikidata:Q7145196",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3552",
+      "part": "wikidata:Q7145196",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001355",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.78900,-122.97134",
+      "part": "wikidata:Q7145196",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:patos-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -197,6 +294,10 @@
         {
           "source": "osm",
           "value": 16.0
+        },
+        {
+          "source": "uslhs",
+          "value": 15.85
         }
       ],
       "note": "Sources differ by more than 3 m."

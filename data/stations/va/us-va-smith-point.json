@@ -2,7 +2,9 @@
   "id": "us-va-smith-point",
   "name": "Smith Point Light",
   "other_names": [
-    "Smith Point Lighthouse"
+    "Smith Point Lighthouse",
+    "Smith Point",
+    "Smith Point Light Station"
   ],
   "country": "US",
   "region": "VA",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.879722,
-    "lon": -76.183889,
+    "lat": 37.879874,
+    "lon": -76.183749,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "brick",
       "built": 1897,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1868,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 16.0,
-    "range_nm": 16.0,
+    "focal_height_m": 15.8,
+    "range_nm": 15.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001437",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001437"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001437",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325137"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -62,8 +66,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -74,17 +78,35 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1897,
       "event": "built",
-      "note": null,
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1971,
@@ -95,12 +117,18 @@
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-va-smith-point-old",
+      "relation": "preceded_by",
+      "name": "Smith Point (Old)"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Smith_Point_Lighthouse.jpg",
@@ -137,6 +165,26 @@
       "label": "ARLHS World List of Lights USA764",
       "url": "https://wlol.arlhs.com/lighthouse/USA764.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Smith Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=440",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Smith Point",
+      "url": "https://archives.uslhs.org/places/smith-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325137",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,18 +197,68 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:440",
+      "part": "wikidata:Q7545272",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:smith-point-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7480",
+      "part": "wikidata:Q7545272",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3531",
+      "part": "wikidata:Q7545272",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001437",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.87987,-76.18375",
+      "part": "wikidata:Q7545272",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

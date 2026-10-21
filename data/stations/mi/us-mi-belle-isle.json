@@ -1,0 +1,139 @@
+{
+  "id": "us-mi-belle-isle",
+  "name": "Belle Isle",
+  "other_names": [
+    "Belle Isle Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 42.34,
+    "lon": -82.960278,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": "brick",
+      "built": 1882,
+      "height_m": 12.8,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1882,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "F G",
+    "focal_height_m": 9.1,
+    "range_nm": 6.1,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-8210",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Belle Isle",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2001",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Belle Isle",
+      "url": "https://archives.uslhs.org/places/belle-isle",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2001",
+      "part": "lighthousefriends:2001",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-8210",
+      "part": "lighthousefriends:2001",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8500",
+      "part": "lighthousefriends:2001",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.34003,-82.95992",
+      "part": "lighthousefriends:2001",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

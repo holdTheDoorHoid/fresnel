@@ -3,7 +3,10 @@
   "name": "South Fox Island Light",
   "other_names": [
     "South Fox Island Lighthouse",
-    "Old South Fox Island Lighthouse"
+    "Old South Fox Island Lighthouse",
+    "South Fox Island",
+    "South Fox Island Old",
+    "South Fox Island Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -12,14 +15,29 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.378077,
-    "lon": -85.838418,
+    "lat": 45.378505,
+    "lon": -85.837148,
     "precision": "exact",
     "from": "osm"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
+    {
+      "role": "tower",
+      "name": "South Fox Island Lighthouse",
+      "type": null,
+      "material": "brick",
+      "built": 1867,
+      "height_m": 11.9,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 45.378077,
+        "lon": -85.838418
+      }
+    },
     {
       "role": "tower",
       "name": "South Fox Island Light",
@@ -29,39 +47,25 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 45.378505,
-        "lon": -85.837148
-      }
-    },
-    {
-      "role": "tower",
-      "name": "South Fox Island Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "osm"
+      "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1934,
+    "first_lit": 1867,
     "deactivated": 1959,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 20.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "100006861",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100006861"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100006861",
+      "listed": "2021-08-26"
     }
   ],
   "aton": {
@@ -74,7 +78,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -85,11 +89,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1867,
@@ -98,10 +109,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1867,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1934,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1934,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1959,
@@ -112,7 +135,7 @@
     {
       "year": 2021,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -164,6 +187,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582785101",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: South Fox Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=204",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Fox Island Old",
+      "url": "https://archives.uslhs.org/places/south-fox-island-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -188,18 +221,62 @@
       "source": "osm",
       "key": "osm:node/1770509879",
       "part": "wikidata:Q7567310",
-      "fields": []
+      "fields": [
+        "location"
+      ]
     },
     {
       "source": "osm",
       "key": "osm:node/582785101",
       "part": "osm:node/582785101",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:204",
+      "part": "wikidata:Q7567310",
       "fields": [
-        "location"
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3336",
+      "part": "osm:node/582785101",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100006861",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1959
+        },
+        {
+          "source": "uslhs",
+          "value": 1934
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

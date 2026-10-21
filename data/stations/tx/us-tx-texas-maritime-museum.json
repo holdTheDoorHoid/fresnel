@@ -1,7 +1,11 @@
 {
   "id": "us-tx-texas-maritime-museum",
   "name": "Texas Maritime Museum Light",
-  "other_names": [],
+  "other_names": [
+    "Texas Maritime Museum",
+    "Rockport",
+    "Texas Maritime Museum Lighthouse"
+  ],
   "country": "US",
   "region": "TX",
   "county": "Aransas",
@@ -33,11 +37,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Q F W",
+    "characteristic": "QW",
     "focal_height_m": 13.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -82,7 +86,7 @@
     {
       "year": 2003,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -114,6 +118,11 @@
       "label": "ARLHS World List of Lights USA1247",
       "url": "https://wlol.arlhs.com/lighthouse/USA1247.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Texas: South",
+      "url": "https://www.ibiblio.org/lighthouse/txs.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,6 +141,22 @@
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:txs:texas-maritime-museum",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-39010",
+      "part": "wikidata:Q68161714",
+      "fields": [
+        "light"
       ]
     }
   ],

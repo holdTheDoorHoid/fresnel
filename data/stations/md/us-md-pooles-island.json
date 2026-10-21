@@ -3,7 +3,9 @@
   "name": "Pooles Island Light",
   "other_names": [
     "Pooles Island Lighthouse",
-    "Poole's Island Lighthouse"
+    "Poole's Island Lighthouse",
+    "Pooles Island",
+    "Poole's Island"
   ],
   "country": "US",
   "region": "MD",
@@ -24,29 +26,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1825,
       "height_m": 11.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1825,
     "deactivated": 1939,
     "lens": null,
-    "characteristic": "Fl (4+3) W 16s",
-    "focal_height_m": 13.5,
+    "characteristic": "Fl(4+3) W 16s",
+    "focal_height_m": 11.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "97000060",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97000060"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97000060",
+      "listed": "1997-02-19",
+      "nomination": "https://catalog.archives.gov/id/106777573"
     }
   ],
   "aton": {
@@ -59,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -79,25 +83,31 @@
     {
       "year": 1825,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1825,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1939,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1997,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +159,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=414",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pooles Island",
+      "url": "https://archives.uslhs.org/places/pooles-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106777573",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,6 +200,49 @@
       "part": "wikidata:Q7228638",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:414",
+      "part": "wikidata:Q7228638",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:poole-s-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2879",
+      "part": "wikidata:Q7228638",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:97000060",
+      "part": "wikidata:Q7228638",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.29048,-76.26643",
+      "part": "wikidata:Q7228638",
+      "fields": [
+        "light"
       ]
     }
   ],

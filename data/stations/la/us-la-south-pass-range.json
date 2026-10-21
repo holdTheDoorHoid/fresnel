@@ -2,7 +2,12 @@
   "id": "us-la-south-pass-range",
   "name": "South Pass Range Lights",
   "other_names": [
-    "South Pass Light"
+    "South Pass Light",
+    "South Pass",
+    "Port Eads",
+    "Range Rear",
+    "South Pass Range Rear",
+    "Port Eads Marina Lower Dock Light"
   ],
   "country": "US",
   "region": "LA",
@@ -20,26 +25,26 @@
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
+      "role": "rear_range",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "iron",
       "built": 1832,
       "height_m": 35.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1831,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(5) W 60s",
+    "characteristic": "Fl G 2.5s",
     "focal_height_m": 33.0,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -48,11 +53,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "USCG",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,17 +68,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1832,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -119,6 +148,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1018424988",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: South Pass",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=812",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Pass Range Rear",
+      "url": "https://archives.uslhs.org/places/south-pass-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,6 +189,55 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:812",
+      "part": "wikidata:Q25028596",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:south-pass-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-12597",
+      "part": "wikidata:Q25028596",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2814",
+      "part": "wikidata:Q25028596",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.01535,-89.16644",
+      "part": "wikidata:Q25028596",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.01619,-89.16759",
+      "part": "wikidata:Q25028596",
+      "fields": []
     }
   ],
   "conflicts": [],

@@ -3,7 +3,10 @@
   "name": "Cold Spring Harbor Light",
   "other_names": [
     "Cold Spring Harbor Lighthouse",
-    "Cold Springs Harbor Light"
+    "Cold Springs Harbor Light",
+    "Cold Spring Harbor",
+    "original site",
+    "Cold Springs Harbor"
   ],
   "country": "US",
   "region": "NY",
@@ -12,8 +15,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.907179,
-    "lon": -73.50986,
+    "lat": 40.914178,
+    "lon": -73.493133,
     "precision": "exact",
     "from": "osm"
   },
@@ -23,13 +26,17 @@
     {
       "role": "tower",
       "name": "Cold Spring Harbor Light",
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "wood",
       "built": 1890,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs",
+      "location": {
+        "lat": 40.907179,
+        "lon": -73.50986
+      }
     },
     {
       "role": "tower",
@@ -40,22 +47,18 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 40.914178,
-        "lon": -73.493133
-      }
+      "from": "osm"
     }
   ],
   "light": {
     "first_lit": 1890,
     "deactivated": 1965,
     "lens": null,
-    "characteristic": "FF WR",
-    "focal_height_m": 11.0,
+    "characteristic": "F W",
+    "focal_height_m": 11.3,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -67,8 +70,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -80,7 +83,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,19 +91,31 @@
     {
       "year": 1890,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1890,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1965,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -152,6 +167,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/622791161",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cold Spring Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=748",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cold Spring Harbor",
+      "url": "https://archives.uslhs.org/places/cold-spring-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -173,7 +203,9 @@
       "source": "osm",
       "key": "osm:way/1233555431",
       "part": "osm:way/1233555431",
-      "fields": []
+      "fields": [
+        "location"
+      ]
     },
     {
       "source": "osm",
@@ -181,12 +213,81 @@
       "part": "wikidata:Q5142360",
       "fields": [
         "events",
-        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:748",
+      "part": "wikidata:Q5142360",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:cold-spring-harbor-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:cold-spring-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-26870",
+      "part": "wikidata:Q5142360",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8800",
+      "part": "wikidata:Q5142360",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.91424,-73.49305",
+      "part": "osm:way/1233555431",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:cold-springs-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
     {
       "field": "location",
       "values": [
@@ -202,6 +303,13 @@
           "value": [
             40.90718,
             -73.50986
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            40.91419,
+            -73.49316
           ]
         }
       ],

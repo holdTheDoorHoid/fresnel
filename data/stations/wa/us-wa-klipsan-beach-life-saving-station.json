@@ -1,10 +1,12 @@
 {
   "id": "us-wa-klipsan-beach-life-saving-station",
   "name": "Klipsan Beach Life Saving Station",
-  "other_names": [],
+  "other_names": [
+    "The Barracks"
+  ],
   "country": "US",
   "region": "WA",
-  "county": null,
+  "county": "Pacific",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "79002546",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79002546"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79002546",
+      "listed": "1979-07-05",
+      "nomination": "https://catalog.archives.gov/id/75612895"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -99,6 +103,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Klipsan_Beach_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75612895",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -115,10 +124,20 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79002546",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

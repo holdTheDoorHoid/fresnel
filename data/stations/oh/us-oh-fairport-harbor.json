@@ -4,7 +4,12 @@
   "other_names": [
     "Fairport Harbor Lighthouse",
     "Grand River Lighthouse",
-    "Fairport Harbor Marine Museum and Lighthouse"
+    "Fairport Harbor Marine Museum and Lighthouse",
+    "Fairport Harbor",
+    "Grand River",
+    "Fairport Marine Museum",
+    "Fairport Harbor Coast Guard Light Station Reservation",
+    "Fairport Harbor (Old)"
   ],
   "country": "US",
   "region": "OH",
@@ -25,29 +30,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1871,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1871,
+    "first_lit": 1825,
     "deactivated": 1925,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 31.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "71000642",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000642"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000642",
+      "listed": "1971-11-05",
+      "nomination": "https://catalog.archives.gov/id/71989611"
     }
   ],
   "aton": {
@@ -59,28 +66,34 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1871,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -90,15 +103,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1925,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1971,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -160,6 +179,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Grand_River_%28Fairport_Harbor%29_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Fairport Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=285",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fairport Harbor",
+      "url": "https://archives.uslhs.org/places/fairport-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71989611",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -193,10 +232,71 @@
       "key": "osm:way/485444304",
       "part": "wikidata:Q5595034",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:285",
+      "part": "wikidata:Q5595034",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:grand-river-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3453",
+      "part": "wikidata:Q5595034",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:71000642",
+      "part": "wikidata:Q5595034",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:fairport-harbor-old",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-wa-cattle-point",
   "name": "Cattle Point Light",
   "other_names": [
-    "Cattle Point Lighthouse"
+    "Cattle Point Lighthouse",
+    "Cattle Point"
   ],
   "country": "US",
   "region": "WA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1935,
+    "first_lit": 1888,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 29.0,
+    "focal_height_m": 28.7,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,6 +75,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1888,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1935,
@@ -161,6 +174,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1365113431",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cattle Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=106",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cattle Point",
+      "url": "https://archives.uslhs.org/places/cattle-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -173,7 +201,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,6 +213,43 @@
       "part": "wikidata:Q2291667",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:106",
+      "part": "wikidata:Q2291667",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:cattle-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-19555",
+      "part": "wikidata:Q2291667",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:11765",
+      "part": "station",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.45064,-122.96330",
+      "part": "wikidata:Q2291667",
+      "fields": [
+        "light"
       ]
     }
   ],

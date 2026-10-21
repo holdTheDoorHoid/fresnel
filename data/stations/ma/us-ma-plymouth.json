@@ -3,7 +3,11 @@
   "name": "Plymouth Light",
   "other_names": [
     "Plymouth Lighthouse",
-    "Gurnet Light"
+    "Gurnet Light",
+    "Plymouth",
+    "Gurnet",
+    "Plymouth Light Station",
+    "Gurner Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -44,20 +48,22 @@
     }
   ],
   "light": {
-    "first_lit": 1843,
+    "first_lit": 1768,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(3) R 30s",
-    "focal_height_m": 31.0,
-    "range_nm": 15.0,
+    "characteristic": "Fl(3) W 30s",
+    "focal_height_m": 31.1,
+    "range_nm": 17.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000655",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000655"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000655",
+      "listed": "1977-03-08",
+      "nomination": "https://catalog.archives.gov/id/63792728"
     }
   ],
   "aton": {
@@ -66,32 +72,51 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard, licensed to Project Gurnet and Bug Lights",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1768,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1768,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1769,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1842,
@@ -101,14 +126,26 @@
     },
     {
       "year": 1843,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1843,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -193,6 +230,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1030900169",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Plymouth (Gurnet)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=517",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Plymouth",
+      "url": "https://archives.uslhs.org/places/plymouth",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792728",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -205,7 +262,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -226,9 +282,7 @@
       "source": "osm",
       "key": "osm:way/1030900166",
       "part": "wikidata:Q7205822",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -242,6 +296,69 @@
       "part": "osm:way/1030900169",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:517",
+      "part": "wikidata:Q7205822",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:plymouth-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-12545",
+      "part": "wikidata:Q7205822",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2853",
+      "part": "wikidata:Q7205822",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000655",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.00372,-70.60060",
+      "part": "wikidata:Q7205822",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:plymouth-gurnet",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -1,7 +1,10 @@
 {
   "id": "us-ny-amagansett-u-s-life-saving-and-coast-guard-station",
   "name": "Amagansett U.S. Life-Saving and Coast Guard Station",
-  "other_names": [],
+  "other_names": [
+    "Amagansett Station",
+    "Amagansett Life-Saving Station"
+  ],
   "country": "US",
   "region": "NY",
   "county": "Suffolk",
@@ -34,7 +37,8 @@
     {
       "register": "NRHP",
       "number": "100002743",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002743"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002743",
+      "listed": "2018-07-27"
     }
   ],
   "aton": {
@@ -59,7 +63,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -67,7 +71,7 @@
     {
       "year": 2018,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -106,10 +110,27 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100002743",
+      "part": "wikidata:Q137300824",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:amagansett-lss",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

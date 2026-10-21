@@ -3,7 +3,8 @@
   "name": "Point Reyes Lighthouse",
   "other_names": [
     "Point Reyes Light Station",
-    "Point Reyes Light"
+    "Point Reyes Light",
+    "Point Reyes"
   ],
   "country": "US",
   "region": "CA",
@@ -17,19 +18,19 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": "Point Reyes Lighthouse",
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1870,
       "height_m": 10.7,
       "status": "standing",
       "note": null,
-      "from": "osm",
+      "from": "uslhs",
       "location": {
         "lat": 37.99562,
         "lon": -123.023151
@@ -45,6 +46,36 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1874,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 37.996403,
+        "lon": -123.01862
+      }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1900,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 37.996398,
+        "lon": -123.020329
+      }
     },
     {
       "role": "other",
@@ -78,20 +109,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1870,
+    "deactivated": 1975,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 80.7,
+    "focal_height_m": 80.8,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91001100",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001100"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91001100",
+      "listed": "1991-09-03",
+      "nomination": "https://catalog.archives.gov/id/123857643"
     }
   ],
   "aton": {
@@ -103,20 +136,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -124,8 +157,32 @@
     {
       "year": 1870,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1896,
+      "event": "built",
+      "note": null,
+      "from": "osm"
     },
     {
       "year": 1900,
@@ -140,9 +197,27 @@
       "from": "osm"
     },
     {
+      "year": 1934,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1975,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -202,7 +277,22 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1312418531",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1312590856",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1312596912",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1312599185",
       "kind": "osm"
     },
     {
@@ -222,8 +312,33 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/274178216",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/765577603",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Reyes",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=66",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Reyes",
+      "url": "https://archives.uslhs.org/places/point-reyes",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123857643",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -253,6 +368,22 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1312418531",
+      "part": "osm:way/1312418531",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1312590856",
+      "part": "osm:way/1312418531",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/1312596912",
       "part": "wikidata:Q779685",
       "fields": [
@@ -262,11 +393,18 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1312599185",
+      "part": "osm:way/1312599185",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/1312631322",
       "part": "osm:way/274178212",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -287,13 +425,104 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/274178216",
+      "part": "osm:way/274178214",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/765577603",
       "part": "osm:way/1312418528",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:66",
+      "part": "osm:way/274178212",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-reyes-1",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-reyes-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-385",
+      "part": "osm:way/274178212",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2724",
+      "part": "osm:way/274178212",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91001100",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.99560,-123.02327",
+      "part": "osm:way/274178212",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-reyes",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

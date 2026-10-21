@@ -1,7 +1,9 @@
 {
   "id": "us-nh-loon-island",
   "name": "Loon Island Light",
-  "other_names": [],
+  "other_names": [
+    "Loon Island"
+  ],
   "country": "US",
   "region": "NH",
   "county": null,
@@ -61,8 +63,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3379624122",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Loon Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=666",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +95,26 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:666",
+      "part": "osm:node/3379624122",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nh:loon-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

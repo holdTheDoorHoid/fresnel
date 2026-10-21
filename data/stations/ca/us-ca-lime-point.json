@@ -11,35 +11,50 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.825485,
-    "lon": -122.478338,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 37.82389,
+    "lon": -122.47861,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Lime Point Light",
       "type": "conical_masonry",
       "material": "brick",
       "built": 1883,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 37.825485,
+        "lon": -122.478338
+      }
+    },
+    {
+      "role": "fog_signal",
+      "name": "Lime Point Fog Signal",
+      "type": null,
+      "material": "brick",
+      "built": 1900,
+      "height_m": 5.9,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1961,
+    "first_lit": 1883,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 5.0,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 4.6,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +67,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,6 +89,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1900,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1961,
@@ -125,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1243877573",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Lime Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=146",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lime Point Fog Signal",
+      "url": "https://archives.uslhs.org/places/lime-point-fog-signal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +179,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -148,9 +189,52 @@
       "source": "osm",
       "key": "osm:node/1243877573",
       "part": "wikidata:Q3378304",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:146",
+      "part": "wikidata:Q3378304",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:lime-point-1",
+      "part": "station",
       "fields": [
-        "location"
+        "events",
+        "light"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4270",
+      "part": "wikidata:Q3378304",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2708",
+      "part": "uslhs:2708",
+      "fields": [
+        "access",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.82545,-122.47827",
+      "part": "wikidata:Q3378304",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.82555,-122.47892",
+      "part": "wikidata:Q3378304",
+      "fields": []
     }
   ],
   "conflicts": [],

@@ -3,7 +3,9 @@
   "name": "Calumet Light",
   "other_names": [
     "Calumet Lighthouse",
-    "Calumet Harbor Lighthouse"
+    "Calumet Harbor Lighthouse",
+    "Calumet Harbor",
+    "Columbia Park, Pipe"
   ],
   "country": "US",
   "region": "WI",
@@ -61,7 +63,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -73,7 +75,7 @@
     {
       "year": 1936,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -110,6 +112,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582715733",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Calumet Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=579",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +146,22 @@
       "part": "wikidata:Q5024087",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:579",
+      "part": "wikidata:Q5024087",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:calumet-harbor",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

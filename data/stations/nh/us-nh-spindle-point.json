@@ -1,7 +1,9 @@
 {
   "id": "us-nh-spindle-point",
   "name": "Spindle Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Spindle Point"
+  ],
   "country": "US",
   "region": "NH",
   "county": null,
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7813262735",
       "kind": "osm"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Spindle Point",
+      "url": "https://archives.uslhs.org/places/spindle-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +95,18 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34100",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A private (faux) lighthouse on Lake Winnipesaukee: not an aid to navigation",
   "updated": "2026-10-21"
 }

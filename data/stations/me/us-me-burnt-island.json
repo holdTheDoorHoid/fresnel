@@ -3,7 +3,8 @@
   "name": "Burnt Island Light",
   "other_names": [
     "Burnt Island Lighthouse",
-    "Burnt Island Light Station"
+    "Burnt Island Light Station",
+    "Burnt Island"
   ],
   "country": "US",
   "region": "ME",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1821,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 18.5,
-    "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 18.6,
+    "range_nm": 6.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000139",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000139"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000139",
+      "listed": "1977-11-23",
+      "nomination": "https://catalog.archives.gov/id/88686591"
     }
   ],
   "aton": {
@@ -55,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Maine Department of Marine Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1988"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,25 +82,31 @@
     {
       "year": 1821,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1821,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -144,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1107422176",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Burnt Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=503",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Burnt Island",
+      "url": "https://archives.uslhs.org/places/burnt-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686591",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,6 +199,67 @@
       "part": "wikidata:Q5000205",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:503",
+      "part": "wikidata:Q5000205",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:burnt-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5520",
+      "part": "wikidata:Q5000205",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2893",
+      "part": "wikidata:Q5000205",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000139",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.82519,-69.64022",
+      "part": "wikidata:Q5000205",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:burnt-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

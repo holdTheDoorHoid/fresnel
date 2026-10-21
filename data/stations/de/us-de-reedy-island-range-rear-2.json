@@ -1,0 +1,213 @@
+{
+  "id": "us-de-reedy-island-range-rear-2",
+  "name": "Reedy Island Range Rear",
+  "other_names": [
+    "Old Reedy Island",
+    "Reedy Island Old Range Rear",
+    "Reedy Island Old",
+    "Old Reedy Island Light"
+  ],
+  "country": "US",
+  "region": "DE",
+  "county": "New Castle",
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 39.50074,
+    "lon": -75.568803,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "rear_range",
+      "name": "Reedy Island Old Range Rear",
+      "type": null,
+      "material": null,
+      "built": 1839,
+      "height_m": 16.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.50017,
+        "lon": -75.56833
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Reedy Island Old",
+      "type": "integral",
+      "material": "stone",
+      "built": 1839,
+      "height_m": 16.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.50167,
+        "lon": -75.57
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Old Reedy Island",
+      "type": "skeletal",
+      "material": "cast_iron",
+      "built": 1904,
+      "height_m": 31.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1839,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 6.1,
+    "range_nm": 8.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "2-2605",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1910,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Old Reedy Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1888",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Reedy Island Range Rear",
+      "url": "https://archives.uslhs.org/places/reedy-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Reedy Island Old Range Rear",
+      "url": "https://archives.uslhs.org/places/reedy-island-old-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Reedy Island Old",
+      "url": "https://archives.uslhs.org/places/reedy-island-old",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1888",
+      "part": "lighthousefriends:1888",
+      "fields": [
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2605",
+      "part": "lighthousefriends:1888",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2762",
+      "part": "lighthousefriends:1888",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:33276",
+      "part": "uslhs:33276",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8402",
+      "part": "uslhs:8402",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.50076,-75.56883",
+      "part": "lighthousefriends:1888",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

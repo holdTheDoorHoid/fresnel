@@ -1,7 +1,11 @@
 {
   "id": "us-mn-split-rock",
   "name": "Split Rock Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Split Rock",
+    "Split Rock Light Station",
+    "Split Rock Lighthouse State Park"
+  ],
   "country": "US",
   "region": "MN",
   "county": "Lake",
@@ -43,7 +47,10 @@
     {
       "register": "NRHP",
       "number": "69000073",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000073"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000073",
+      "listed": "1969-06-23",
+      "nhl": "2011-06-23",
+      "nomination": "https://catalog.archives.gov/id/93202200"
     },
     {
       "register": "National Historic Landmark",
@@ -60,20 +67,20 @@
   "agency": "Minnesota Historical Society",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,30 +88,48 @@
     {
       "year": 1910,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1910,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1969,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1969,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 2011,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-split-rock",
+      "relation": "replica",
+      "name": "Split Rock Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Split_Rock_Lighthouse_-_Lake_County%2C_Minnesota_-_8_Jan._2009.jpg",
@@ -151,6 +176,26 @@
       "label": "Website",
       "url": "https://www.mnhs.org/places/sites/srl/index.htm",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Split Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=269",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Split Rock",
+      "url": "https://archives.uslhs.org/places/split-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/93202200",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -180,6 +225,47 @@
         "events",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:269",
+      "part": "wikidata:Q3378404",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:split-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3357",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:69000073",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:split-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

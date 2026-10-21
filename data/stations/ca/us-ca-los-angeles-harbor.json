@@ -7,7 +7,11 @@
     "Los Angeles Harbor Lighthouse",
     "Los Angeles Light",
     "Los Angeles Lighthouse",
-    "Los Angeles Harbor Light Station"
+    "Los Angeles Harbor Light Station",
+    "Los Angeles Harbor",
+    "Angels Gate",
+    "San Pedro Harbor; Angel's Gate",
+    "San Pedro Breakwater"
   ],
   "country": "US",
   "region": "CA",
@@ -37,20 +41,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 15s",
-    "focal_height_m": 22.2,
-    "range_nm": 19.0,
+    "focal_height_m": 22.3,
+    "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80000810",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000810"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000810",
+      "listed": "1980-10-14",
+      "nomination": "https://catalog.archives.gov/id/123859281"
     }
   ],
   "aton": {
@@ -63,7 +69,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,7 +80,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -83,13 +89,25 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1913,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -141,6 +159,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1312710274",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Los Angeles Harbor (Angels Gate)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=99",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Los Angeles Harbor (San Pedro Breakwater)",
+      "url": "https://archives.uslhs.org/places/los-angeles-harbor-san-pedro-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123859281",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -172,6 +210,61 @@
     {
       "source": "osm",
       "key": "osm:way/1312710274",
+      "part": "wikidata:Q12061372",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:99",
+      "part": "wikidata:Q12061372",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:los-angeles-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-135",
+      "part": "wikidata:Q12061372",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-3110",
+      "part": "wikidata:Q12061372",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2709",
+      "part": "wikidata:Q12061372",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000810",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.70855,-118.25165",
       "part": "wikidata:Q12061372",
       "fields": [
         "light"

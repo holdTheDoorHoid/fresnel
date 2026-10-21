@@ -2,7 +2,9 @@
   "id": "us-ct-essex-reef",
   "name": "Essex Reef Light",
   "other_names": [
-    "Essex Reef Lighthouse"
+    "Essex Reef Lighthouse",
+    "Essex Reef",
+    "Hayden's Point"
   ],
   "country": "US",
   "region": "CT",
@@ -32,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1889,
     "deactivated": 1919,
     "lens": null,
     "characteristic": "Fl G 4s",
@@ -76,10 +78,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1919,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1987,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1987,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -100,6 +126,11 @@
       "label": "ARLHS World List of Lights USA1210",
       "url": "https://wlol.arlhs.com/lighthouse/USA1210.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,6 +147,23 @@
         "name",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:essex-reef-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:essex-reef-3",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

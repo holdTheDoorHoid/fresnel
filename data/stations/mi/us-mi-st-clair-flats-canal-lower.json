@@ -1,0 +1,165 @@
+{
+  "id": "us-mi-st-clair-flats-canal-lower",
+  "name": "St. Clair Flats Canal Lower",
+  "other_names": [
+    "Saint Clair Flats South Channel Range Rear",
+    "St Clair Flats Danger Light"
+  ],
+  "country": "US",
+  "region": "MI",
+  "county": "St. Clair",
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 42.519444,
+    "lon": -82.6875,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "rear_range",
+      "name": null,
+      "type": "crib",
+      "material": "brick",
+      "built": 1859,
+      "height_m": 11.3,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1859,
+    "deactivated": 1907,
+    "lens": null,
+    "characteristic": "Fl(2) W 5s",
+    "focal_height_m": 8.5,
+    "range_nm": 7.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-9575",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1859,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1907,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/7696023369",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Clair Flats Canal Lower",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2005",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Saint Clair Flats South Channel Range Rear",
+      "url": "https://archives.uslhs.org/places/saint-clair-flats-south-channel-range-rear",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:node/7696023369",
+      "part": "lighthousefriends:2005",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2005",
+      "part": "lighthousefriends:2005",
+      "fields": [
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-9575",
+      "part": "lighthousefriends:2005",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3342",
+      "part": "lighthousefriends:2005",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "kind",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.51853,-82.68668",
+      "part": "lighthousefriends:2005",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -2,7 +2,8 @@
   "id": "us-wa-alki-point",
   "name": "Alki Point Light",
   "other_names": [
-    "Alki Point Lighthouse"
+    "Alki Point Lighthouse",
+    "Alki Point"
   ],
   "country": "US",
   "region": "WA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1913,
+    "first_lit": 1887,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 39.0,
+    "focal_height_m": 11.9,
     "range_nm": 16.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,20 +52,20 @@
   "agency": "U.S. Coast Guard Auxiliary",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,9 +77,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -86,6 +93,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -136,6 +149,21 @@
       "label": "Website",
       "url": "http://wow.uscgaux.info/content.php?unit=130-02&category=alki-pt-lighthouse#.U-GE1vldW0I",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Alki Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=112",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Alki Point",
+      "url": "https://archives.uslhs.org/places/alki-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -148,7 +176,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -162,8 +189,54 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:112",
+      "part": "wikidata:Q2641400",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:alki-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16915",
+      "part": "wikidata:Q2641400",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3539",
+      "part": "wikidata:Q2641400",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.57628,-122.42055",
+      "part": "wikidata:Q2641400",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:alki-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -178,9 +251,31 @@
         {
           "source": "osm",
           "value": 39.0
+        },
+        {
+          "source": "uslhs",
+          "value": 11.89
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1913
+        },
+        {
+          "source": "osm",
+          "value": 1913
+        },
+        {
+          "source": "uslhs",
+          "value": 1887
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

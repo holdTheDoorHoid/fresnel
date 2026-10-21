@@ -3,7 +3,11 @@
   "name": "Frankfort Light",
   "other_names": [
     "Frankfort Lighthouse",
-    "Frankfort North Breakwater Light"
+    "Frankfort North Breakwater Light",
+    "Frankfort North Breakwater",
+    "Frankfort Breakwater Light",
+    "Frankfort South Breakwater Light",
+    "Frankfort Breakwater"
   ],
   "country": "US",
   "region": "MI",
@@ -36,17 +40,19 @@
     "first_lit": 1873,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 22.0,
-    "range_nm": 16.0,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 14.0,
+    "range_nm": 7.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000983",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000983"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000983",
+      "listed": "2005-09-06",
+      "nomination": "https://catalog.archives.gov/id/75324953"
     }
   ],
   "aton": {
@@ -59,7 +65,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +85,31 @@
     {
       "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1912,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
+    },
+    {
+      "year": 1912,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +156,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1106728000",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Frankfort North Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=198",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Frankfort North Breakwater",
+      "url": "https://archives.uslhs.org/places/frankfort-north-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324953",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,9 +203,76 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:198",
+      "part": "wikidata:Q14716104",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:frankfort-north-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18375",
+      "part": "wikidata:Q14716104",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18385",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2969",
+      "part": "wikidata:Q14716104",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000983",
+      "part": "wikidata:Q14716104",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.62942,-86.25232",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.63085,-86.25221",
+      "part": "wikidata:Q14716104",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:frankfort-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -196,6 +301,10 @@
         {
           "source": "osm",
           "value": 1912
+        },
+        {
+          "source": "uslhs",
+          "value": 1873
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

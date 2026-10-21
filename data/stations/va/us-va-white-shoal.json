@@ -2,7 +2,9 @@
   "id": "us-va-white-shoal",
   "name": "White Shoal Light",
   "other_names": [
-    "White Shoal Lighthouse"
+    "White Shoal Lighthouse",
+    "White Shoal",
+    "White Shoal VA"
   ],
   "country": "US",
   "region": "VA",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.0218,
-    "lon": -76.5275,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.02187,
+    "lon": -76.52753,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -22,24 +24,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1855,
+      "height_m": 12.2,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1855,
+    "first_lit": 1854,
     "deactivated": 1935,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,6 +72,24 @@
   "stay": null,
   "events": [
     {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1855,
       "event": "first_lit",
       "note": null,
@@ -80,6 +100,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1936,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -110,6 +136,16 @@
       "label": "ARLHS World List of Lights USA996",
       "url": "https://wlol.arlhs.com/lighthouse/USA996.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: White Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1938",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: White Shoal VA",
+      "url": "https://archives.uslhs.org/places/white-shoal-va",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,15 +158,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1938",
+      "part": "wikidata:Q7995387",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8976",
+      "part": "wikidata:Q7995387",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,10 @@
   "id": "us-mi-little-traverse",
   "name": "Little Traverse Light",
   "other_names": [
-    "Little Traverse Lighthouse"
+    "Little Traverse Lighthouse",
+    "Little Traverse",
+    "Harbor Point",
+    "Harbor Springs"
   ],
   "country": "US",
   "region": "MI",
@@ -23,12 +26,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1884,
+      "height_m": 10.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +39,10 @@
     "deactivated": 1963,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": null,
-    "range_nm": 10.0,
+    "focal_height_m": 21.9,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -71,14 +74,32 @@
   "events": [
     {
       "year": 1884,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1884,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1963,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -131,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3734580028",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Little Traverse",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=203",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Little Traverse (Harbor Springs)",
+      "url": "https://archives.uslhs.org/places/little-traverse-harbor-springs",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -155,6 +191,54 @@
       "part": "wikidata:Q6652338",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:203",
+      "part": "wikidata:Q6652338",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:little-traverse-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:little-traverse-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17855",
+      "part": "wikidata:Q6652338",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2987",
+      "part": "wikidata:Q6652338",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.41919,-84.97741",
+      "part": "wikidata:Q6652338",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-ma-butler-flats",
   "name": "Butler Flats Light",
   "other_names": [
-    "Butler Flats Lighthouse"
+    "Butler Flats Lighthouse",
+    "Butler Flats",
+    "Butler Flats Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -16,36 +18,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "brick",
       "built": 1898,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 2014,
+    "first_lit": 1898,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 4s",
+    "characteristic": "Fl G 2.5s",
     "focal_height_m": 16.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001530",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001530"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001530",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789689"
     }
   ],
   "aton": {
@@ -54,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,25 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1978,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -148,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713055366",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Butler Flats",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=619",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Butler Flats",
+      "url": "https://archives.uslhs.org/places/butler-flats",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789689",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -183,10 +213,80 @@
       "fields": [
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:619",
+      "part": "wikidata:Q5002608",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:butler-flats",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2826",
+      "part": "wikidata:Q5002608",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001530",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.60422,-70.89347",
+      "part": "wikidata:Q5002608",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:butler-flats",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

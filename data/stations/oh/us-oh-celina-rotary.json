@@ -1,7 +1,9 @@
 {
   "id": "us-oh-celina-rotary",
   "name": "Celina Rotary Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Celina"
+  ],
   "country": "US",
   "region": "OH",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -66,7 +68,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1986,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/462425407",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Celina",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=848",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +107,24 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:848",
+      "part": "osm:way/462425407",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:celina",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

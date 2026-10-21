@@ -3,7 +3,8 @@
   "name": "Burlington Breakwater South Light",
   "other_names": [
     "Burlington Light South",
-    "Burlington Bay Breakwater South Light"
+    "Burlington Bay Breakwater South Light",
+    "Burlington Breakwater South"
   ],
   "country": "US",
   "region": "VT",
@@ -40,7 +41,7 @@
     "focal_height_m": 5.2,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -64,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -116,6 +117,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Burlington_Breakwater_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Burlington Breakwater South",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=874",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Burlington Breakwater South",
+      "url": "https://archives.uslhs.org/places/burlington-breakwater-south",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,9 +152,30 @@
       "part": "wikidata:Q109370544",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:874",
+      "part": "wikidata:Q109370544",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39680",
+      "part": "wikidata:Q109370544",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8940",
+      "part": "wikidata:Q109370544",
+      "fields": []
     }
   ],
   "conflicts": [],

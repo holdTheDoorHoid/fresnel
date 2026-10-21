@@ -4,7 +4,11 @@
   "other_names": [
     "Newburyport Harbor Lighthouse",
     "Newburyport Harbor (Plum Island) Light",
-    "Newburyport Light"
+    "Newburyport Light",
+    "Newburyport Harbor",
+    "Plum Island",
+    "Plum Island, MA",
+    "Newburyport Harbor (Plum Is) I"
   ],
   "country": "US",
   "region": "MA",
@@ -25,29 +29,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1788,
       "height_m": 13.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1898,
+    "first_lit": 1788,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc(2) G 15s",
     "focal_height_m": 15.2,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001485",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001485"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001485",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790230"
     }
   ],
   "aton": {
@@ -57,22 +68,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1951"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,15 +95,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1788,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1898,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1951,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +183,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/316418072",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Newburyport Harbor (Plum Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=651",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Plum Island, MA",
+      "url": "https://archives.uslhs.org/places/plum-island-ma",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790230",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +215,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -177,6 +231,61 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:651",
+      "part": "wikidata:Q7017273",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:newburyport-harbor-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-260",
+      "part": "wikidata:Q7017273",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2849",
+      "part": "wikidata:Q7017273",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001485",
+      "part": "wikidata:Q7017273",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:newburyport-harbor-plum-is-i",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -189,6 +298,10 @@
         },
         {
           "source": "osm",
+          "value": 1788
+        },
+        {
+          "source": "uslhs",
           "value": 1788
         }
       ],

@@ -1,7 +1,9 @@
 {
   "id": "us-md-1879-hooper-straight",
   "name": "1879 Hooper Straight Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Hooper Strait"
+  ],
   "country": "US",
   "region": "MD",
   "county": null,
@@ -58,7 +60,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -80,6 +82,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Hooper_Strait_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Hooper Strait",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=426",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,10 +100,18 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:426",
+      "part": "osm:way/714467182",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

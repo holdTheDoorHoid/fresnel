@@ -3,7 +3,8 @@
   "name": "Wing's Neck Light",
   "other_names": [
     "Wing's Neck Lighthouse",
-    "Wings Neck Light"
+    "Wings Neck Light",
+    "Wings Neck"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1889,
+    "first_lit": 1848,
     "deactivated": 1945,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 15.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001503",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001503"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001503",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789161"
     }
   ],
   "aton": {
@@ -55,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,16 +74,41 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1848,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1889,
@@ -91,13 +119,13 @@
     {
       "year": 1945,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496068",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Wings Neck",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=518",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Wings Neck",
+      "url": "https://archives.uslhs.org/places/wings-neck",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789161",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,9 +219,72 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:518",
+      "part": "wikidata:Q8025064",
+      "fields": [
+        "access",
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:wings-neck-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2864",
+      "part": "wikidata:Q8025064",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001503",
+      "part": "wikidata:Q8025064",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:wings-neck",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1889
+        },
+        {
+          "source": "uslhs",
+          "value": 1849
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

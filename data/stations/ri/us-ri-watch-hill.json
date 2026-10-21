@@ -4,7 +4,8 @@
   "other_names": [
     "Watch Hill Lighthouse",
     "Watch Hill Lighthouse Museum",
-    "Keeper's House"
+    "Keeper's House",
+    "Watch Hill"
   ],
   "country": "US",
   "region": "RI",
@@ -64,14 +65,14 @@
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1807,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Al RW 5s",
-    "focal_height_m": 20.0,
+    "characteristic": "Al R W 5s",
+    "focal_height_m": 18.6,
     "range_nm": 14.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
@@ -89,24 +90,30 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1807,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1808,
       "event": "built",
@@ -121,9 +128,21 @@
     },
     {
       "year": 1857,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1939,
@@ -195,6 +214,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/481348005",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Watch Hill",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=688",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Watch Hill",
+      "url": "https://archives.uslhs.org/places/watch-hill",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -207,7 +241,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -252,6 +285,55 @@
       "key": "osm:way/481348005",
       "part": "osm:way/481348005",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:688",
+      "part": "wikidata:Q16902974",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:watch-hill-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19795",
+      "part": "wikidata:Q16902974",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3507",
+      "part": "wikidata:Q16902974",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.30389,-71.85857",
+      "part": "wikidata:Q16902974",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:watch-hill",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

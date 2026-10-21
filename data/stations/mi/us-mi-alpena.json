@@ -2,7 +2,14 @@
   "id": "us-mi-alpena",
   "name": "Alpena Light",
   "other_names": [
-    "Alpena Lighthouse"
+    "Alpena Lighthouse",
+    "Alpena",
+    "Alpena Harbor",
+    "Alpena Breakwater Light",
+    "Alpena Breakwall Light",
+    "Alpena South Breakwater Light",
+    "City Of Alpena Harbor Entrance Light 1",
+    "City Of Alpena Harbor Entrance Light 2"
   ],
   "country": "US",
   "region": "MI",
@@ -22,30 +29,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "cast_iron",
       "built": 1875,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1914,
+    "first_lit": 1875,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 13.0,
-    "range_nm": 9.0,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 8.8,
+    "range_nm": 4.3,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000197",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000197"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000197",
+      "listed": "2006-03-29",
+      "nomination": "https://catalog.archives.gov/id/75324933"
     }
   ],
   "aton": {
@@ -58,7 +67,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +91,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1914,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -94,14 +115,26 @@
       "from": "wikidata"
     },
     {
+      "year": 1914,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-alpena",
+      "relation": "replica",
+      "name": "Alpena Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lighthouse_at_Alpena_MI_2005-09.jpeg",
@@ -143,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5148666477",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Alpena",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=177",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Alpena",
+      "url": "https://archives.uslhs.org/places/alpena",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324933",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +208,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,12 +222,118 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:177",
+      "part": "wikidata:Q4734801",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:alpena-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11370",
+      "part": "wikidata:Q4734801",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11375",
+      "part": "wikidata:Q4734801",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11380",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11385",
+      "part": "wikidata:Q4734801",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2949",
+      "part": "wikidata:Q4734801",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000197",
+      "part": "wikidata:Q4734801",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.05943,-83.42383",
+      "part": "wikidata:Q4734801",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.06019,-83.42510",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.06034,-83.42306",
+      "part": "wikidata:Q4734801",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:alpena",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1914
+        },
+        {
+          "source": "osm",
+          "value": 1914
+        },
+        {
+          "source": "uslhs",
+          "value": 1877
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

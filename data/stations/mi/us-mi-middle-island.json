@@ -2,7 +2,8 @@
   "id": "us-mi-middle-island",
   "name": "Middle Island Light",
   "other_names": [
-    "Middle Island Lighthouse"
+    "Middle Island Lighthouse",
+    "Middle Island"
   ],
   "country": "US",
   "region": "MI",
@@ -36,16 +37,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 24.0,
-    "range_nm": 14.0,
+    "focal_height_m": 23.8,
+    "range_nm": 12.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000133",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000133"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000133",
+      "listed": "2006-03-15",
+      "nomination": "https://catalog.archives.gov/id/75324935"
     }
   ],
   "aton": {
@@ -57,40 +60,53 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1961"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1961,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +148,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1434607115",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Middle Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=179",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Middle Island",
+      "url": "https://archives.uslhs.org/places/middle-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324935",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,6 +194,64 @@
       "part": "wikidata:Q16895132",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:179",
+      "part": "wikidata:Q16895132",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:middle-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11515",
+      "part": "wikidata:Q16895132",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2997",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000133",
+      "part": "wikidata:Q16895132",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.19320,-83.32092",
+      "part": "wikidata:Q16895132",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:middle-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

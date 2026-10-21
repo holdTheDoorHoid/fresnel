@@ -2,7 +2,8 @@
   "id": "us-me-ram-island",
   "name": "Ram Island Light",
   "other_names": [
-    "Ram Island Lighthouse"
+    "Ram Island Lighthouse",
+    "Ram Island"
   ],
   "country": "US",
   "region": "ME",
@@ -22,24 +23,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "caisson",
+      "material": "brick",
+      "built": 1883,
+      "height_m": 10.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1883,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso R 6s",
+    "characteristic": "Iso W 6s",
     "focal_height_m": 11.0,
     "range_nm": 11.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
@@ -54,11 +55,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Grand Banks Schooner Museum Trust",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,16 +70,28 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1883,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1965,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
@@ -131,6 +144,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1197735521",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ram Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=502",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ram Island",
+      "url": "https://archives.uslhs.org/places/ram-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +166,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -156,6 +178,43 @@
       "part": "wikidata:Q7288481",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:502",
+      "part": "wikidata:Q7288481",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5420",
+      "part": "wikidata:Q7288481",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2934",
+      "part": "wikidata:Q7288481",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.80382,-69.59920",
+      "part": "wikidata:Q7288481",
+      "fields": [
+        "light"
       ]
     }
   ],

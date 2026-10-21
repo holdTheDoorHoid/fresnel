@@ -2,7 +2,13 @@
   "id": "us-oh-perrys-victory-and-international-peace-memorial",
   "name": "Perry's Victory and International Peace Memorial",
   "other_names": [
-    "PEVI"
+    "PEVI",
+    "Perry's memorial lighthouse",
+    "Perry Memorial",
+    "Perry Memorial Monument",
+    "Perry Victory Memorial",
+    "Perry's Victory and International Peace Memorial (Boundary Increase and Additional Documentation)",
+    "Perry Memorial Monument Light"
   ],
   "country": "US",
   "region": "OH",
@@ -16,12 +22,23 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Perry's memorial lighthouse",
+      "type": null,
+      "material": null,
+      "built": 1915,
+      "height_m": 107.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "Perry's Victory and International Peace Memorial",
       "type": null,
       "material": null,
       "built": null,
@@ -35,22 +52,30 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 103.9,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "15000185",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000185"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000185",
+      "listed": "2015-04-28"
     },
     {
       "register": "NRHP",
       "number": "66000118",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000118"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000118",
+      "listed": "1966-10-15",
+      "nomination": "https://catalog.archives.gov/id/71990829"
+    },
+    {
+      "register": "National Register of Historic Places contributing property",
+      "number": null,
+      "url": null
     }
   ],
   "aton": {
@@ -71,7 +96,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -81,10 +106,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1915,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
+    },
+    {
       "year": 1966,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -94,6 +131,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memorial_and_Park_Grounds_%2864dd534f-155d-4519-3eb9-a9e422020e08%29.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memorial_and_Park_Grounds_%2864dd534f-155d-4519-3eb9-a9e422020e08%29.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:Memorial_and_Park_Grounds_%2864dd534f-155d-4519-3eb9-a9e422020e08%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perry_Monument_and_Flags.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perry_Monument_and_Flags.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Perry_Monument_and_Flags.jpg",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -132,9 +178,39 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q81057033",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_du_Perry_Memorial",
+      "kind": "wikipedia"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/377745265",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Perry Memorial",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=277",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Perry Victory Memorial",
+      "url": "https://archives.uslhs.org/places/perry-victory-memorial",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71990829",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,11 +232,76 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q81057033",
+      "part": "wikidata:Q81057033",
+      "fields": [
+        "events",
+        "photos",
+        "registers",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/377745265",
       "part": "wikidata:Q2071814",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:277",
+      "part": "wikidata:Q2071814",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:perry-memorial-monument",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5670",
+      "part": "wikidata:Q2071814",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9946",
+      "part": "wikidata:Q2071814",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:15000185",
+      "part": "wikidata:Q2071814",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:66000118",
+      "part": "wikidata:Q2071814",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.65407,-82.81140",
+      "part": "wikidata:Q2071814",
+      "fields": [
+        "light"
       ]
     }
   ],

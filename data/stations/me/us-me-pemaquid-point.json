@@ -2,7 +2,8 @@
   "id": "us-me-pemaquid-point",
   "name": "Pemaquid Point Light",
   "other_names": [
-    "Pemaquid Point Lighthouse"
+    "Pemaquid Point Lighthouse",
+    "Pemaquid Point"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +33,27 @@
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1827,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "flashing W 6s",
-    "focal_height_m": 24.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 24.1,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "85000843",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85000843"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/85000843",
+      "listed": "1985-04-16",
+      "nomination": "https://catalog.archives.gov/id/88686680"
     }
   ],
   "aton": {
@@ -54,26 +62,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Bristol /American Lighthouse Foundation",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1934"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://www.newharborrentals.com/pemaquid-lighthouse-keepers-apartment-orp5b3cb8dx",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1827,
@@ -82,20 +97,50 @@
       "from": "wikidata"
     },
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1835,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1934,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1985,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-pemaquid-point",
+      "relation": "replica",
+      "name": "Pemaquid Point Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pemaquid_Point_Light_Station%2C_Bristol%2C_Maine%2C_USA_2012.jpg",
@@ -137,6 +182,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/937860830",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Pemaquid Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=504",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pemaquid Point",
+      "url": "https://archives.uslhs.org/places/pemaquid-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686680",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,7 +219,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -162,8 +231,76 @@
       "key": "osm:way/937860830",
       "part": "wikidata:Q2068455",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:504",
+      "part": "wikidata:Q2068455",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:pemaquid-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5145",
+      "part": "wikidata:Q2068455",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2926",
+      "part": "wikidata:Q2068455",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:85000843",
+      "part": "wikidata:Q2068455",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.83684,-69.50589",
+      "part": "wikidata:Q2068455",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:pemaquid-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:pemaquid-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -181,6 +318,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

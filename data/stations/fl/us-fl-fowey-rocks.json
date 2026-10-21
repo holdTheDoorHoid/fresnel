@@ -2,7 +2,9 @@
   "id": "us-fl-fowey-rocks",
   "name": "Fowey Rocks Light",
   "other_names": [
-    "Fowey Rocks Lighthouse"
+    "Fowey Rocks Lighthouse",
+    "Fowey Rocks",
+    "Fowey Rocks Light Station"
   ],
   "country": "US",
   "region": "FL",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -24,7 +26,7 @@
       "name": null,
       "type": "cast_iron",
       "material": "cast_iron",
-      "built": null,
+      "built": 1878,
       "height_m": 34.0,
       "status": "standing",
       "note": null,
@@ -35,17 +37,19 @@
     "first_lit": 1878,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 10s , 2 R sectors",
-    "focal_height_m": 34.0,
-    "range_nm": 15.0,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 33.5,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "10001181",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10001181"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/10001181",
+      "listed": "2011-01-26",
+      "nomination": "https://catalog.archives.gov/id/75324999"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,22 +73,34 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1878,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1878,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1878,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6813442868",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fowey Rocks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=704",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: FOWEY ROCKS",
+      "url": "https://archives.uslhs.org/places/fowey-rocks",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324999",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,10 +199,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:704",
+      "part": "wikidata:Q5476370",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:fowey-rocks",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-920",
+      "part": "wikidata:Q5476370",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2776",
+      "part": "wikidata:Q5476370",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:10001181",
+      "part": "wikidata:Q5476370",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:25.59071,-80.09684",
+      "part": "wikidata:Q5476370",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:fowey-rocks",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

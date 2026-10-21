@@ -1,7 +1,12 @@
 {
   "id": "us-tx-lake-conroe",
   "name": "Lake Conroe Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Lake Conroe",
+    "Harbour Town",
+    "South Shore Harbour",
+    "Beacon Island, Harbor Island, Clear Lake"
+  ],
   "country": "US",
   "region": "TX",
   "county": null,
@@ -42,7 +47,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-118",
     "ccg_list_number": null,
     "nga": null
   },
@@ -66,7 +71,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1977,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1983,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2023,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +99,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/630013694",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Texas: Southeast",
+      "url": "https://www.ibiblio.org/lighthouse/tx.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +116,23 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:tx:lake-conroe",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:tx:south-shore-harbour",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

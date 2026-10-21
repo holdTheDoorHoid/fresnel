@@ -2,7 +2,10 @@
   "id": "us-ca-lightship-relief",
   "name": "United States lightship Relief",
   "other_names": [
-    "WLV-605"
+    "WLV-605",
+    "Relief",
+    "Lightship Relief WLV 605",
+    "Lightship WAL-605, RELIEF"
   ],
   "country": "US",
   "region": "CA",
@@ -11,10 +14,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 37.795689,
-    "lon": -122.280592,
+    "lat": 37.79569,
+    "lon": -122.28065,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -33,7 +36,10 @@
     {
       "register": "NRHP",
       "number": "89002462",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002462"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89002462",
+      "listed": "1989-12-20",
+      "nhl": "1989-12-20",
+      "nomination": "https://catalog.archives.gov/id/75611912"
     },
     {
       "register": "National Historic Landmark",
@@ -63,7 +69,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,8 +89,14 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -120,6 +132,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Relief_%28ship%2C_1950%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Relief WLV 605",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=646",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75611912",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -133,17 +155,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:646",
+      "part": "wikidata:Q7892546",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89002462",
+      "part": "wikidata:Q7892546",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:relief-ls-lv-605",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,9 @@
   "id": "us-la-franks-island",
   "name": "Frank's Island Light",
   "other_names": [
-    "Frank's Island Lighthouse"
+    "Frank's Island Lighthouse",
+    "Franks Island",
+    "Frank's Island"
   ],
   "country": "US",
   "region": "LA",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.141667,
-    "lon": -89.023333,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 29.142895,
+    "lon": -89.023304,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -23,16 +25,16 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1823,
       "height_m": null,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1820,
     "deactivated": 1855,
     "lens": null,
     "characteristic": "F W",
@@ -70,16 +72,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1820,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1823,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1855,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -115,6 +129,21 @@
       "label": "ARLHS World List of Lights USA310",
       "url": "https://wlol.arlhs.com/lighthouse/USA310.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Franks Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1810",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Frank's Island",
+      "url": "https://archives.uslhs.org/places/franks-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +157,56 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1810",
+      "part": "wikidata:Q54933185",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:franks-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8441",
+      "part": "wikidata:Q54933185",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1823
+        },
+        {
+          "source": "uslhs",
+          "value": 1820
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

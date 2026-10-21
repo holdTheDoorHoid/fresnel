@@ -33,11 +33,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 15.5,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -87,6 +87,14 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.73684,-87.50800",
+      "part": "osm:node/3885363466",
+      "fields": [
+        "light"
       ]
     }
   ],

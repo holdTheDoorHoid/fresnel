@@ -2,7 +2,10 @@
   "id": "us-mn-two-harbors",
   "name": "Two Harbors Lighthouse",
   "other_names": [
-    "Agate Bay Lighthouse"
+    "Agate Bay Lighthouse",
+    "Two Harbors",
+    "Two Harbors Light Station",
+    "Two Harbors Light"
   ],
   "country": "US",
   "region": "MN",
@@ -11,10 +14,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 47.013981,
-    "lon": -91.663478,
+    "lat": 47.01407,
+    "lon": -91.66391,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -35,17 +38,19 @@
     "first_lit": 1892,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(2) W 20s",
-    "focal_height_m": 24.0,
-    "range_nm": 17.0,
+    "characteristic": "Fl(2) W 5s",
+    "focal_height_m": 23.8,
+    "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001483",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001483"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001483",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891284"
     }
   ],
   "aton": {
@@ -57,47 +62,53 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": true,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": {
     "type": "inn",
     "provider": null,
-    "url": null,
+    "url": "http://www.lighthousebb.org/",
     "season": null,
-    "note": "Wikidata classes it as a bed and breakfast. Check with the operator before planning a stay.",
-    "checked": null
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a bed and breakfast. Confirm availability and rules with the operator."
   },
   "events": [
     {
       "year": 1892,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1892,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1892,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +150,31 @@
       "label": "ARLHS World List of Lights USA861",
       "url": "https://wlol.arlhs.com/lighthouse/USA861.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Two Harbors",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=267",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Two Harbors",
+      "url": "https://archives.uslhs.org/places/two-harbors",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891284",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/minnesota",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,17 +188,84 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:267",
+      "part": "wikidata:Q7859001",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:two-harbors",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16500",
+      "part": "wikidata:Q7859001",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3358",
+      "part": "wikidata:Q7859001",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001483",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.01398,-91.66348",
+      "part": "wikidata:Q7859001",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:two-harbors",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mn:two-harbors-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

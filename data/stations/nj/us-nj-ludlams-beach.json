@@ -2,7 +2,9 @@
   "id": "us-nj-ludlams-beach",
   "name": "Ludlam's Beach Light",
   "other_names": [
-    "Ludlam's Beach Lighthouse"
+    "Ludlam's Beach Lighthouse",
+    "Ludlam Beach",
+    "Ludlum Beach"
   ],
   "country": "US",
   "region": "NJ",
@@ -11,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 39.1598,
-    "lon": -74.6881,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.1597,
+    "lon": -74.688,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (2010) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,7 +28,7 @@
       "material": null,
       "built": 1885,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -36,7 +38,7 @@
     "deactivated": 1924,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,19 +74,31 @@
     {
       "year": 1885,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1885,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1923,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1924,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -127,6 +141,21 @@
       "label": "ARLHS World List of Lights USA461",
       "url": "https://wlol.arlhs.com/lighthouse/USA461.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Ludlam Beach",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=878",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ludlam Beach",
+      "url": "https://archives.uslhs.org/places/ludlam-beach",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,16 +169,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:878",
+      "part": "wikidata:Q14705720",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:ludlum-beach",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8785",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

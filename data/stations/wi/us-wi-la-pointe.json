@@ -4,7 +4,14 @@
   "other_names": [
     "La Pointe Lighthouse",
     "La Pointe Light Station",
-    "LaPointe Lighthouse"
+    "LaPointe Lighthouse",
+    "LaPointe",
+    "La POINTE",
+    "Long Island",
+    "Lapointe Harbor Detached Breakwater West Light",
+    "Lapointe Harbor Detached Breakwater East Light",
+    "Madeline Island Breakwater Light",
+    "La Pointe"
   ],
   "country": "US",
   "region": "WI",
@@ -34,20 +41,22 @@
     }
   ],
   "light": {
-    "first_lit": 1896,
+    "first_lit": 1858,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso G 6s",
-    "focal_height_m": 70.0,
-    "range_nm": 8.0,
+    "focal_height_m": 21.3,
+    "range_nm": 8.6,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83003366",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83003366"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83003366",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28890713"
     }
   ],
   "aton": {
@@ -60,7 +69,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,16 +80,34 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1896,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -90,9 +117,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1896,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1897,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +178,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582732864",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: LaPointe",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=696",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: La POINTE (LONG ISLAND)",
+      "url": "https://archives.uslhs.org/places/la-pointe-long-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28890713",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -151,7 +210,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,8 +222,96 @@
       "key": "osm:node/582732864",
       "part": "wikidata:Q6464517",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:696",
+      "part": "wikidata:Q6464517",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:lapointe-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:lapointe-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15280",
+      "part": "wikidata:Q6464517",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15450",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15455",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15460",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3569",
+      "part": "wikidata:Q6464517",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83003366",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.72871,-90.78492",
+      "part": "wikidata:Q6464517",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.77828,-90.78926",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:la-pointe",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -180,9 +326,27 @@
         {
           "source": "osm",
           "value": 70.0
+        },
+        {
+          "source": "uslhs",
+          "value": 21.34
         }
       ],
       "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1858
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

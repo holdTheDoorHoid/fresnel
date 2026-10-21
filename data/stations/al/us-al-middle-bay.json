@@ -2,7 +2,11 @@
   "id": "us-al-middle-bay",
   "name": "Middle Bay Light",
   "other_names": [
-    "Middle Bay Lighthouse"
+    "Middle Bay Lighthouse",
+    "Mobile Bay",
+    "Middle Bay",
+    "LL 1729 Mobile Bay Light",
+    "Mobile Bay Light"
   ],
   "country": "US",
   "region": "AL",
@@ -39,13 +43,15 @@
     "focal_height_m": 15.0,
     "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000429",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000429"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000429",
+      "listed": "1974-12-30",
+      "nomination": "https://catalog.archives.gov/id/77837035"
     }
   ],
   "aton": {
@@ -69,8 +75,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +84,13 @@
     {
       "year": 1885,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +142,21 @@
       "label": "Website",
       "url": "https://ahc.alabama.gov/properties/middlebay/middlebay.aspx",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Mobile Bay (Middle Bay)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=650",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alabama",
+      "url": "https://www.ibiblio.org/lighthouse/al.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77837035",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,6 +184,53 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:650",
+      "part": "wikidata:Q6841223",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:al:mobile-bay",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-6490.01",
+      "part": "wikidata:Q6841223",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000429",
+      "part": "wikidata:Q6841223",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.43742,-88.01123",
+      "part": "wikidata:Q6841223",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:al:middle-bay",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

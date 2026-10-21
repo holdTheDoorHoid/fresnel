@@ -3,7 +3,11 @@
   "name": "Michigan City East Light",
   "other_names": [
     "Michigan City East Lighthouse",
-    "Michigan City East Pierhead Light"
+    "Michigan City East Pierhead Light",
+    "Michigan City East Pierhead",
+    "Michigan City East Pierhead Light Tower and Elevated Walk",
+    "Michigan City Lighthouse",
+    "Michigan City E Pier"
   ],
   "country": "US",
   "region": "IN",
@@ -26,27 +30,44 @@
       "type": null,
       "material": null,
       "built": 1904,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.72812,
+        "lon": -86.910305
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Michigan City East Light",
+      "type": null,
+      "material": "brick",
+      "built": 1904,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1871,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 17.0,
-    "range_nm": 10.0,
+    "focal_height_m": 16.8,
+    "range_nm": 8.7,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000069",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000069"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000069",
+      "listed": "1988-02-17",
+      "nomination": "https://catalog.archives.gov/id/132003559"
     }
   ],
   "aton": {
@@ -59,7 +80,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "OpenStreetMap tags the structure access=no. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,21 +92,39 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1904,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +176,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/441547484",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/441547489",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Michigan City East Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=233",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Michigan City East Pierhead",
+      "url": "https://archives.uslhs.org/places/michigan-city-east-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132003559",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +226,6 @@
       "part": "wikidata:Q6837487",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
     },
@@ -171,10 +234,95 @@
       "key": "osm:way/441547484",
       "part": "wikidata:Q6837487",
       "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/441547489",
+      "part": "osm:way/441547489",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:233",
+      "part": "wikidata:Q6837487",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:michigan-city-east-pierhead-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19545",
+      "part": "wikidata:Q6837487",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8431",
+      "part": "wikidata:Q6837487",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000069",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.72898,-86.91169",
+      "part": "wikidata:Q6837487",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:in:michigan-city-e-pier",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

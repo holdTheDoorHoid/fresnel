@@ -1,9 +1,13 @@
 {
   "id": "us-de-delaware-breakwater-range",
-  "name": "Delaware Breakwater Range Lights",
+  "name": "Delaware Breakwater Range Rear",
   "other_names": [
     "Delaware Breakwater Range Rear Light",
-    "Delaware Breakwater Range Front Light"
+    "Delaware Breakwater Range Front Light",
+    "Delaware Breakwater Rear Range",
+    "Green Hill",
+    "Greenhill",
+    "Delaware Breakwater West End Light 3"
   ],
   "country": "US",
   "region": "DE",
@@ -17,8 +21,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1950) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "front_range",
@@ -27,7 +31,7 @@
       "material": null,
       "built": 1838,
       "height_m": 12.0,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     },
@@ -35,15 +39,15 @@
       "role": "rear_range",
       "name": "Delaware Breakwater Range Rear Light",
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "material": "steel",
+      "built": 1881,
+      "height_m": 30.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
-        "lat": 38.789722,
-        "lon": -75.169444
+        "lat": 38.7896,
+        "lon": -75.169
       }
     }
   ],
@@ -52,10 +56,10 @@
     "deactivated": 1918,
     "lens": null,
     "characteristic": "Fl G 4s",
-    "focal_height_m": 14.0,
-    "range_nm": null,
+    "focal_height_m": 12.2,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -93,9 +97,21 @@
     },
     {
       "year": 1881,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1903,
@@ -112,7 +128,7 @@
     {
       "year": 1918,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -175,6 +191,21 @@
       "label": "ARLHS World List of Lights USA1361",
       "url": "https://wlol.arlhs.com/lighthouse/USA1361.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Delaware Breakwater Rear Range (Green Hill)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=884",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Delaware Breakwater Range Rear (Green Hill)",
+      "url": "https://archives.uslhs.org/places/delaware-breakwater-range-rear-green-hill",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -198,9 +229,40 @@
       "fields": [
         "aton",
         "events",
-        "light",
         "location",
         "photos",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:884",
+      "part": "wikidata:Q16974439",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:delaware-breakwater-range-rear",
+      "part": "station",
+      "fields": [
+        "events",
+        "name"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2030",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8396",
+      "part": "wikidata:Q16974439",
+      "fields": [
+        "events",
         "structures"
       ]
     }

@@ -2,7 +2,9 @@
   "id": "us-vt-isle-la-motte",
   "name": "Isle La Motte Light",
   "other_names": [
-    "Isle La Motte Lighthouse"
+    "Isle La Motte Lighthouse",
+    "Isle La Motte",
+    "Isle la Motte"
   ],
   "country": "US",
   "region": "VT",
@@ -16,43 +18,43 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "cast_iron",
       "built": 1856,
-      "height_m": null,
+      "height_m": 7.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1829,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 14.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": "1-39165",
-    "arlhs": null,
+    "arlhs": "USA-405",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "PRIVATE OWNER",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,10 +72,46 @@
   "stay": null,
   "events": [
     {
+      "year": 1829,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1829,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1856,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 2002,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -109,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1117757994",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isle La Motte",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=669",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Vermont",
+      "url": "https://www.ibiblio.org/lighthouse/vt.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Isle la Motte",
+      "url": "https://archives.uslhs.org/places/isle-la-motte",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,6 +186,61 @@
       "part": "wikidata:Q6083843",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:669",
+      "part": "wikidata:Q6083843",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:isle-la-motte-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:isle-la-motte-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:vt:isle-la-motte-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39165",
+      "part": "wikidata:Q6083843",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3535",
+      "part": "wikidata:Q6083843",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
       ]
     }
   ],

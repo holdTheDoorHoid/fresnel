@@ -1,13 +1,15 @@
 {
   "id": "us-oh-beaver-creek-water",
   "name": "Beaver Creek Water Tower Light",
-  "other_names": [],
+  "other_names": [
+    "Vermilion Water Tower"
+  ],
   "country": "US",
   "region": "OH",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 41.421353,
     "lon": -82.358363,
@@ -35,13 +37,13 @@
     "lens": null,
     "characteristic": "Fl W 4s",
     "focal_height_m": 58.2,
-    "range_nm": null,
+    "range_nm": 11.3,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-4429",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/475651206",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -83,11 +90,32 @@
       "key": "osm:node/475651206",
       "part": "osm:node/475651206",
       "fields": [
-        "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:vermilion-water-tower",
+      "part": "station",
+      "fields": [
+        "aton",
+        "kind"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4429",
+      "part": "osm:node/475651206",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.42138,-82.35836",
+      "part": "osm:node/475651206",
+      "fields": [
+        "light"
       ]
     }
   ],

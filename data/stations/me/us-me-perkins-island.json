@@ -3,7 +3,8 @@
   "name": "Perkins Island Light",
   "other_names": [
     "Perkins Island Lighthouse",
-    "Perkins Island Light Station"
+    "Perkins Island Light Station",
+    "Perkins Island"
   ],
   "country": "US",
   "region": "ME",
@@ -36,17 +37,19 @@
     "first_lit": 1898,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 2.5s with 2 W sectors",
+    "characteristic": "Fl W 2.5s",
     "focal_height_m": 12.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002282",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002282"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002282",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88685068"
     }
   ],
   "aton": {
@@ -55,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "American Lighthouse Foundation",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,25 +82,25 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1898,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1959,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6527728489",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Perkins Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=497",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Perkins Island",
+      "url": "https://archives.uslhs.org/places/perkins-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88685068",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,6 +193,64 @@
       "part": "wikidata:Q7169046",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:497",
+      "part": "wikidata:Q7169046",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:perkins-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-6070",
+      "part": "wikidata:Q7169046",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2927",
+      "part": "wikidata:Q7169046",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002282",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.78677,-69.78525",
+      "part": "wikidata:Q7169046",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:perkins-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

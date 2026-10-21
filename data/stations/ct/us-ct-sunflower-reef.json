@@ -1,7 +1,9 @@
 {
   "id": "us-ct-sunflower-reef",
   "name": "Sunflower Reef Light",
-  "other_names": [],
+  "other_names": [
+    "Seaflower Reef Light"
+  ],
   "country": "US",
   "region": "CT",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 8.2,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-20155",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -87,6 +89,22 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-20155",
+      "part": "osm:node/7518449196",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.29600,-72.03322",
+      "part": "osm:node/7518449196",
+      "fields": [
+        "light"
       ]
     }
   ],

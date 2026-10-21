@@ -2,7 +2,10 @@
   "id": "us-va-pungoteague-creek",
   "name": "Pungoteague Creek Light",
   "other_names": [
-    "Pungoteague Creek Lighthouse"
+    "Pungoteague Creek Lighthouse",
+    "Pungoteague",
+    "Pungoteague Creek",
+    "Pungoteague Creek Warning Light A"
   ],
   "country": "US",
   "region": "VA",
@@ -11,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.663,
-    "lon": -75.898,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.663394,
+    "lon": -75.898051,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +29,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +38,11 @@
     "first_lit": 1854,
     "deactivated": 1856,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,13 +75,13 @@
     {
       "year": 1854,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1856,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +118,16 @@
       "label": "ARLHS World List of Lights USA678",
       "url": "https://wlol.arlhs.com/lighthouse/USA678.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Pungoteague",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1896",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pungoteague Creek",
+      "url": "https://archives.uslhs.org/places/pungoteague-creek",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +141,44 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1896",
+      "part": "wikidata:Q7260174",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-21845",
+      "part": "wikidata:Q7260174",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8968",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.66339,-75.89805",
+      "part": "wikidata:Q7260174",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

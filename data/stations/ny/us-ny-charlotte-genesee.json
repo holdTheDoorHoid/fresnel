@@ -3,7 +3,14 @@
   "name": "Charlotte-Genesee Lighthouse",
   "other_names": [
     "Charlotte–Genesee Lighthouse",
-    "Genesee Lighthouse"
+    "Genesee Lighthouse",
+    "Charlotte-Genesee",
+    "Genesee",
+    "Rochester (Genesee) East Pier",
+    "Charlotte Genesee",
+    "Port of Genesee",
+    "Charlotte Genesee Range Rear",
+    "Genesse Lighthouse and Keeper's House"
   ],
   "country": "US",
   "region": "NY",
@@ -44,45 +51,47 @@
     }
   ],
   "light": {
-    "first_lit": 2014,
+    "first_lit": 1822,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W",
+    "characteristic": "FW",
     "focal_height_m": 14.0,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74001259",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001259"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001259",
+      "listed": "1974-08-13",
+      "nomination": "https://catalog.archives.gov/id/75318828"
     }
   ],
   "aton": {
     "uscg_llnr": "7-2333",
-    "arlhs": null,
+    "arlhs": "USA-320",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -90,8 +99,14 @@
     {
       "year": 1822,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1822,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1863,
@@ -102,13 +117,19 @@
     {
       "year": 1881,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1947,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -166,6 +187,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/543434159",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Charlotte-Genesee",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=304",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Charlotte Genesee (Port of Genesee)",
+      "url": "https://archives.uslhs.org/places/charlotte-genesee-port-genesee",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Charlotte Genesee Range Rear",
+      "url": "https://archives.uslhs.org/places/charlotte-genesee-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75318828",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -192,7 +238,6 @@
       "part": "wikidata:Q5086268",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
     },
@@ -204,10 +249,106 @@
         "events",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:304",
+      "part": "wikidata:Q5086268",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:genesee",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:rochester-genesee-east-pier-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2333",
+      "part": "wikidata:Q5086268",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3398",
+      "part": "wikidata:Q5086268",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:7361",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74001259",
+      "part": "wikidata:Q5086268",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:charlotte-genesee",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 14.0
+        },
+        {
+          "source": "uslhs",
+          "value": 25.3
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

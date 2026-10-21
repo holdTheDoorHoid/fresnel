@@ -2,7 +2,8 @@
   "id": "us-va-craney-island",
   "name": "Craney Island Light",
   "other_names": [
-    "Craney Island Lighthouse"
+    "Craney Island Lighthouse",
+    "Craney Island"
   ],
   "country": "US",
   "region": "VA",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 36.892,
-    "lon": -76.337,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 36.8925,
+    "lon": -76.338333,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1859,
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1859,
     "deactivated": 1936,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,8 +73,14 @@
     {
       "year": 1859,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1936,
@@ -115,6 +122,16 @@
       "label": "ARLHS World List of Lights USA202",
       "url": "https://wlol.arlhs.com/lighthouse/USA202.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Craney Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1926",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Craney Island",
+      "url": "https://archives.uslhs.org/places/craney-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +145,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1926",
+      "part": "wikidata:Q5182083",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8953",
+      "part": "wikidata:Q5182083",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.89227,-76.33760",
+      "part": "wikidata:Q5182083",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,9 @@
 {
   "id": "us-nj-waackaack-rear-range",
   "name": "Waackaack Rear Range Light",
-  "other_names": [],
+  "other_names": [
+    "Waackaack"
+  ],
   "country": "US",
   "region": "NJ",
   "county": null,
@@ -9,12 +11,12 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 40.4442,
-    "lon": -74.1361,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 40.443905,
+    "lon": -74.135912,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -87,6 +89,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Waackaack_Rear_Range_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Waackaack",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1875",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -98,14 +105,21 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1875",
+      "part": "wikidata:Q7958557",
+      "fields": [
+        "location"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

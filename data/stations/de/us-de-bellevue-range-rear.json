@@ -2,7 +2,11 @@
   "id": "us-de-bellevue-range-rear",
   "name": "Bellevue Range Rear Light",
   "other_names": [
-    "Bellevue Range Rear Lighthouse"
+    "Bellevue Range Rear Lighthouse",
+    "Bellevue Range",
+    "Bellevue Range Rear",
+    "Bellevue Range Rear Light Station",
+    "Rear Range Light"
   ],
   "country": "US",
   "region": "DE",
@@ -32,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 2000,
+    "first_lit": 1909,
     "deactivated": 2000,
     "lens": null,
-    "characteristic": "F G",
+    "characteristic": "FG",
     "focal_height_m": 28.0,
-    "range_nm": null,
+    "range_nm": 60.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000313",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000313"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000313",
+      "listed": "2006-04-26",
+      "nomination": "https://catalog.archives.gov/id/75325131"
     }
   ],
   "aton": {
@@ -58,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,8 +84,20 @@
     {
       "year": 1909,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1909,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2000,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2000,
@@ -90,13 +108,19 @@
     {
       "year": 2000,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 2001,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +167,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/368217391",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bellevue Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=467",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bellevue Range Rear",
+      "url": "https://archives.uslhs.org/places/bellevue-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325131",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,6 +213,55 @@
       "part": "wikidata:Q4883959",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:467",
+      "part": "wikidata:Q4883959",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:bellevue-range-rear-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:bellevue-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-3085",
+      "part": "wikidata:Q4883959",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2754",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000313",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

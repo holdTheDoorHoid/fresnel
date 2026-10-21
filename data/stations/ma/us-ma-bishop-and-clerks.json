@@ -2,7 +2,10 @@
   "id": "us-ma-bishop-and-clerks",
   "name": "Bishop and Clerks Light",
   "other_names": [
-    "Bishop and Clerks Lighthouse"
+    "Bishop and Clerks Lighthouse",
+    "Bishop and Clerks",
+    "Bishop And Clerks",
+    "Bishop And Clerks Light"
   ],
   "country": "US",
   "region": "MA",
@@ -11,35 +14,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.574256,
-    "lon": -70.250056,
+    "lat": 41.574254,
+    "lon": -70.250054,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1858,
       "height_m": 9.1,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1858,
     "deactivated": 1928,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 14.0,
+    "focal_height_m": 13.7,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,10 +79,22 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1928,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1998,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1998,
@@ -126,6 +141,21 @@
       "label": "ARLHS World List of Lights USA058",
       "url": "https://wlol.arlhs.com/lighthouse/USA058.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Bishop and Clerks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=612",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bishop And Clerks",
+      "url": "https://archives.uslhs.org/places/bishop-and-clerks",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,31 +169,70 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:612",
+      "part": "wikidata:Q4917754",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:bishop-and-clerks-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-14490",
+      "part": "wikidata:Q4917754",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15431",
+      "part": "wikidata:Q4917754",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.57424,-70.25011",
+      "part": "wikidata:Q4917754",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
     {
-      "field": "light.first_lit",
+      "field": "first_year",
       "values": [
         {
           "source": "wikidata",
           "value": 1998
         },
         {
-          "source": "wikidata",
-          "value": 1928
+          "source": "uslhs",
+          "value": 1858
         }
       ],
-      "note": "A source gives the light's service entry (1998) after its retirement (1928); it may have been relit. Neither is shown as the first lighting."
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

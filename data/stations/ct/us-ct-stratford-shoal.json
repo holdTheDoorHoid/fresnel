@@ -2,7 +2,10 @@
   "id": "us-ct-stratford-shoal",
   "name": "Stratford Shoal Light",
   "other_names": [
-    "Stratford Shoal Lighthouse"
+    "Stratford Shoal Lighthouse",
+    "Stratford Shoal",
+    "Middle Ground",
+    "Stratford Shoal (Middle Ground) Light"
   ],
   "country": "US",
   "region": "CT",
@@ -22,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "stone",
       "built": 1837,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1837,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 18.0,
+    "focal_height_m": 18.3,
     "range_nm": 13.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001477",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001477"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001477",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353507"
     }
   ],
   "aton": {
@@ -58,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,15 +87,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1877,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1877,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1877,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5621633671",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stratford Shoal (Middle Ground)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=792",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stratford Shoal (Middle Ground)",
+      "url": "https://archives.uslhs.org/places/stratford-shoal-middle-ground",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353507",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +192,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,9 +206,76 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:792",
+      "part": "wikidata:Q7621986",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:stratford-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21260",
+      "part": "wikidata:Q7621986",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2753",
+      "part": "wikidata:Q7621986",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001477",
+      "part": "wikidata:Q7621986",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.05981,-73.10131",
+      "part": "wikidata:Q7621986",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1877
+        },
+        {
+          "source": "uslhs",
+          "value": 1837
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

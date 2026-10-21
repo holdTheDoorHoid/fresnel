@@ -2,7 +2,8 @@
   "id": "us-wa-north-head",
   "name": "North Head Light",
   "other_names": [
-    "North Head Lighthouse"
+    "North Head Lighthouse",
+    "North Head"
   ],
   "country": "US",
   "region": "WA",
@@ -35,11 +36,11 @@
     "first_lit": 1898,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(2) W 30s",
-    "focal_height_m": 194.0,
-    "range_nm": 19.0,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 59.1,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -55,25 +56,32 @@
     "nga": null
   },
   "agency": "Washington State Parks",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://parks.wa.gov/find-parks/state-parks/cape-disappointment-state-park/cape-disappointment-vacation-houses",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1897,
@@ -84,14 +92,20 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1898,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -142,6 +156,26 @@
       "label": "Website",
       "url": "https://parks.wa.gov/find-park/state-parks/cape-disappointment-state-park/north-head-lighthouse-wedding-day-use-site",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: North Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=116",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: North Head",
+      "url": "https://archives.uslhs.org/places/north-head",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/washington",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -168,9 +202,65 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "registers"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:116",
+      "part": "wikidata:Q7055575",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:north-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-700",
+      "part": "wikidata:Q7055575",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3551",
+      "part": "wikidata:Q7055575",
+      "fields": [
+        "access",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.29891,-124.07800",
+      "part": "wikidata:Q7055575",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:north-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:wa:north-head-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -185,6 +275,10 @@
         {
           "source": "osm",
           "value": 194.0
+        },
+        {
+          "source": "uslhs",
+          "value": 58.67
         }
       ],
       "note": "Sources differ by more than 3 m."

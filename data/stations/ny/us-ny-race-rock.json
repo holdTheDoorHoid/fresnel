@@ -2,11 +2,13 @@
   "id": "us-ny-race-rock",
   "name": "Race Rock Light",
   "other_names": [
-    "Race Rock Lighthouse"
+    "Race Rock Lighthouse",
+    "Race Rock",
+    "Race Rock Light Station"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Suffolk",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1879,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 10s",
-    "focal_height_m": 20.0,
-    "range_nm": 16.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 20.4,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000347",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000347"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000347",
+      "listed": "2005-04-29",
+      "nomination": "https://catalog.archives.gov/id/75325197"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +84,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1878,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1879,
@@ -96,7 +118,7 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +170,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713975667",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Race Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=741",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Race Rock",
+      "url": "https://archives.uslhs.org/places/race-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325197",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -159,7 +201,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -173,6 +214,66 @@
       "part": "wikidata:Q7278919",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:741",
+      "part": "wikidata:Q7278919",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:race-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19815",
+      "part": "wikidata:Q7278919",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3430",
+      "part": "wikidata:Q7278919",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000347",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.24347,-72.04713",
+      "part": "wikidata:Q7278919",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:race-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

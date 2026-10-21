@@ -5,7 +5,11 @@
     "Ipswich Range Rear Light",
     "Ipswich Light",
     "Ipswich Range Front Light",
-    "Ipswich range lights"
+    "Ipswich range lights",
+    "Ipswich Range",
+    "Ipswich",
+    "Ipswich Range Front",
+    "Ipswich Range Rear"
   ],
   "country": "US",
   "region": "MA",
@@ -38,26 +42,26 @@
       "name": "Ipswich Range Rear Light",
       "type": "cast_iron",
       "material": "cast_iron",
-      "built": null,
+      "built": 1881,
       "height_m": 6.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 42.6852,
-        "lon": -70.7662
+        "lat": 42.685377,
+        "lon": -70.766139
       }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1809,
     "deactivated": 1932,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 9.0,
+    "focal_height_m": 9.1,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -88,10 +92,28 @@
   "stay": null,
   "events": [
     {
+      "year": 1809,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1838,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1932,
@@ -162,6 +184,26 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phares_d%27Ipswich",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Ipswich Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1975",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ipswich Range Front",
+      "url": "https://archives.uslhs.org/places/ipswich-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ipswich Range Rear",
+      "url": "https://archives.uslhs.org/places/ipswich-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -173,7 +215,6 @@
         "aton",
         "county",
         "kind",
-        "light",
         "photos",
         "region",
         "structures"
@@ -197,6 +238,50 @@
       "fields": [
         "name",
         "photos"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1975",
+      "part": "wikidata:Q109521878",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:ipswich-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-9315",
+      "part": "wikidata:Q109521878",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:103211",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8492",
+      "part": "wikidata:Q109521878",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.68530,-70.76623",
+      "part": "wikidata:Q109521878",
+      "fields": [
+        "light"
       ]
     }
   ],

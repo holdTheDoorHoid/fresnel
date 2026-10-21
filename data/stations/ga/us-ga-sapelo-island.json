@@ -2,7 +2,8 @@
   "id": "us-ga-sapelo-island",
   "name": "Sapelo Island Light",
   "other_names": [
-    "Sapelo Island Lighthouse"
+    "Sapelo Island Lighthouse",
+    "Sapelo Island"
   ],
   "country": "US",
   "region": "GA",
@@ -35,17 +36,19 @@
     "first_lit": 1820,
     "deactivated": 1905,
     "lens": null,
-    "characteristic": "F W, FI W 45s",
+    "characteristic": "Fl W 45s",
     "focal_height_m": 23.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "97000335",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97000335"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97000335",
+      "listed": "1997-08-26",
+      "nomination": "https://catalog.archives.gov/id/93208941"
     }
   ],
   "aton": {
@@ -66,11 +69,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,7 +81,7 @@
     {
       "year": 1820,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -96,7 +99,7 @@
     {
       "year": 1997,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +146,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/670500856",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sapelo Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=326",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Georgia",
+      "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/93208941",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,6 +187,47 @@
       "part": "wikidata:Q7420934",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:326",
+      "part": "wikidata:Q7420934",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:sapelo-island-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:97000335",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:31.39111,-81.28556",
+      "part": "wikidata:Q7420934",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ga:sapelo-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

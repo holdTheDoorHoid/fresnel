@@ -2,7 +2,9 @@
   "id": "us-mi-minneapolis-shoal",
   "name": "Minneapolis Shoal Light Station",
   "other_names": [
-    "Minneapolis Shoal Lighthouse"
+    "Minneapolis Shoal Lighthouse",
+    "Minneapolis Shoal",
+    "Minneapolis Shoal Light"
   ],
   "country": "US",
   "region": "MI",
@@ -22,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "crib",
+      "material": "concrete",
+      "built": 1935,
+      "height_m": 21.3,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,15 +39,17 @@
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 25.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 13.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06001025",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001025"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001025",
+      "listed": "2006-11-15",
+      "nomination": "https://catalog.archives.gov/id/75325001"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,13 +88,19 @@
     {
       "year": 1935,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +142,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582742870",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minneapolis Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=563",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Minneapolis Shoal",
+      "url": "https://archives.uslhs.org/places/minneapolis-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325001",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,10 +188,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:563",
+      "part": "wikidata:Q14716228",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:minneapolis-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21610",
+      "part": "wikidata:Q14716228",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2998",
+      "part": "wikidata:Q14716228",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06001025",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.58148,-86.99871",
+      "part": "wikidata:Q14716228",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:minneapolis-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,9 @@
   "name": "Grays Reef Light Station",
   "other_names": [
     "Grays Reef Lighthouse",
-    "Grays Reef Light"
+    "Grays Reef Light",
+    "Grays Reef",
+    "Gray's Reef"
   ],
   "country": "US",
   "region": "MI",
@@ -23,30 +25,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "crib",
+      "material": "concrete",
+      "built": 1936,
+      "height_m": 19.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1936,
+    "first_lit": 1891,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 10s",
     "focal_height_m": 25.0,
     "range_nm": 12.2,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05001210",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001210"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001210",
+      "listed": "2005-11-09",
+      "nomination": "https://catalog.archives.gov/id/75325015"
     }
   ],
   "aton": {
@@ -58,8 +62,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,12 +74,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1936,
       "event": "first_lit",
@@ -83,9 +99,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1937,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -127,6 +149,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582790727",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Grays Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=209",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: GRAYS REEF",
+      "url": "https://archives.uslhs.org/places/grays-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325015",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -139,7 +181,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,8 +192,68 @@
       "key": "osm:node/582790727",
       "part": "wikidata:Q5598372",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:209",
+      "part": "wikidata:Q5598372",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:grays-reef",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17775",
+      "part": "wikidata:Q5598372",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2977",
+      "part": "wikidata:Q5598372",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05001210",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.76573,-85.15379",
+      "part": "wikidata:Q5598372",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:gray-s-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

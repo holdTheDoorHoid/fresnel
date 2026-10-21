@@ -1,0 +1,161 @@
+{
+  "id": "us-in-buffington-harbor-breakwater",
+  "name": "Buffington Harbor Breakwater",
+  "other_names": [
+    "Buffington Harbor East Breakwater",
+    "Buffington Harbor Breakwater Light"
+  ],
+  "country": "US",
+  "region": "IN",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 41.646039,
+    "lon": -87.410323,
+    "precision": "exact",
+    "from": "osm"
+  },
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
+    }
+  ],
+  "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 14.6,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "7-19630",
+    "arlhs": "USA-101",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": true,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1216632032",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buffington Harbor Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=662",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Buffington Harbor East Breakwater",
+      "url": "https://archives.uslhs.org/places/buffington-harbor-east-breakwater",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "osm",
+      "key": "osm:way/1216632032",
+      "part": "lighthousefriends:662",
+      "fields": [
+        "kind",
+        "location",
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:662",
+      "part": "lighthousefriends:662",
+      "fields": [
+        "name",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:buffington-harbor-breakwater",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19630",
+      "part": "lighthousefriends:662",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9624",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.64597,-87.41029",
+      "part": "lighthousefriends:662",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

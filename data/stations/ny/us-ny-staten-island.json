@@ -5,7 +5,15 @@
     "Staten Island Lighthouse",
     "Staten Island range lights",
     "Staten Island Range Lighthouse",
-    "Staten Island and Swash Channel Range Rear Light"
+    "Staten Island and Swash Channel Range Rear Light",
+    "Staten Island Range",
+    "Staten Island Range Rear",
+    "Staten Island",
+    "Range Rear",
+    "Staten Island Range Rear Light",
+    "Richmond Light",
+    "Staten Island Rear Range Light",
+    "Swash Channel Range Rear Light"
   ],
   "country": "US",
   "region": "NY",
@@ -26,29 +34,36 @@
       "role": "rear_range",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1912,
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1912,
+    "first_lit": 1909,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "2",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
-    "focal_height_m": 68.6,
+    "focal_height_m": 71.3,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05001340",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001340"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001340",
+      "listed": "2005-11-30",
+      "nomination": "https://catalog.archives.gov/id/75325145"
     },
     {
       "register": "New York City Landmark",
@@ -66,7 +81,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,15 +93,27 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1909,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1909,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1912,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -98,7 +125,7 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/246244365",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Staten Island Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=584",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Staten Island (Range Rear)",
+      "url": "https://archives.uslhs.org/places/staten-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325145",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,12 +217,88 @@
       "part": "wikidata:Q2333708",
       "fields": [
         "kind",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:584",
+      "part": "wikidata:Q2333708",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:staten-island-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-34795",
+      "part": "wikidata:Q2333708",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-35035",
+      "part": "wikidata:Q2333708",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3438",
+      "part": "wikidata:Q2333708",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05001340",
+      "part": "wikidata:Q2333708",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.57608,-74.14125",
+      "part": "wikidata:Q2333708",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:staten-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1912
+        },
+        {
+          "source": "uslhs",
+          "value": 1909
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

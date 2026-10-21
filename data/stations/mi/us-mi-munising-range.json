@@ -1,9 +1,14 @@
 {
   "id": "us-mi-munising-range",
-  "name": "Munising Range Lights",
+  "name": "Munising Range",
   "other_names": [
     "Munising Rear Range Light",
-    "Munising Front Range Light"
+    "Munising Front Range Light",
+    "Munising Entrance Leading",
+    "ex-Range Front",
+    "Munising Range Rear",
+    "Munsing Range",
+    "Munising Entrance Leading Light"
   ],
   "country": "US",
   "region": "MI",
@@ -51,11 +56,11 @@
     "first_lit": 1908,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 33.0,
-    "range_nm": null,
+    "characteristic": "F W",
+    "focal_height_m": 24.0,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -68,7 +73,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -88,14 +93,20 @@
     {
       "year": 1908,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1908,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 2019,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -175,6 +186,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6548210394",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Munsing Range",
+      "url": "https://archives.uslhs.org/places/munsing-range",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -215,6 +236,55 @@
       "key": "osm:node/6548210394",
       "part": "wikidata:Q6936686",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:569",
+      "part": "wikidata:Q6936687",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:munising-entrance-leading",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:munising-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14575",
+      "part": "wikidata:Q6936687",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3000",
+      "part": "wikidata:Q6936687",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.41495,-86.66129",
+      "part": "wikidata:Q6936687",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],

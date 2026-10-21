@@ -1,10 +1,15 @@
 {
   "id": "us-mi-cheboygan-river-front-range",
   "name": "Cheboygan River Front Range Light",
-  "other_names": [],
+  "other_names": [
+    "Cheboygan River Front Range",
+    "Cheboygan River Range Front",
+    "Cheboygan River Range Front Light",
+    "Cheboygan River Front Range Lighthouse"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Cheboygan",
   "water": null,
   "setting": null,
   "kind": "range_lights",
@@ -14,35 +19,35 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1880,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1880,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F R",
+    "focal_height_m": 14.6,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-11790",
+    "arlhs": "USA-162",
     "ccg_list_number": null,
     "nga": null
   },
@@ -50,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -58,15 +63,41 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
-  "events": [],
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "https://www.gllka.org/cheboygan-river-front-range-light",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
+  "events": [
+    {
+      "year": 1880,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1880,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,6 +111,26 @@
       "label": "Website",
       "url": "https://www.gllka.org/cheboygan-river-front-range-light",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Cheboygan River Front Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=216",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cheboygan River Range Front",
+      "url": "https://archives.uslhs.org/places/cheboygan-river-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,10 +144,71 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:216",
+      "part": "osm:way/1226045084",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:cheboygan-river-range-front",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11790",
+      "part": "osm:way/1226045084",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2957",
+      "part": "osm:way/1226045084",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.64742,-84.47279",
+      "part": "osm:way/1226045084",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:cheboygan-river-range-front",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:cheboygan-river-front-range-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

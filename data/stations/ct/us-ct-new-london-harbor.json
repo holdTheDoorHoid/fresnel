@@ -2,7 +2,9 @@
   "id": "us-ct-new-london-harbor",
   "name": "New London Harbor Light",
   "other_names": [
-    "New London Harbor Lighthouse"
+    "New London Harbor Lighthouse",
+    "New London Harbor",
+    "Pequot"
   ],
   "country": "US",
   "region": "CT",
@@ -23,29 +25,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1760,
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1801,
+    "first_lit": 1789,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Iso W 6s, R sector",
-    "focal_height_m": 27.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 27.1,
     "range_nm": 17.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001470",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001470"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001470",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353542"
     }
   ],
   "aton": {
@@ -57,20 +66,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +91,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1789,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1801,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -96,7 +111,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +163,26 @@
       "label": "Website",
       "url": "https://www.nlmaritimesociety.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: New London Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=799",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New London Harbor",
+      "url": "https://archives.uslhs.org/places/new-london-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353542",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +195,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,9 +210,88 @@
         "events",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:799",
+      "part": "wikidata:Q7009889",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:new-london-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21845",
+      "part": "wikidata:Q7009889",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2743",
+      "part": "wikidata:Q7009889",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001470",
+      "part": "wikidata:Q7009889",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.31662,-72.08977",
+      "part": "wikidata:Q7009889",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:new-london-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1801
+        },
+        {
+          "source": "osm",
+          "value": 1801
+        },
+        {
+          "source": "uslhs",
+          "value": 1789
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

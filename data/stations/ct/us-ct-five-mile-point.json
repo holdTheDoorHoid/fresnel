@@ -2,7 +2,10 @@
   "id": "us-ct-five-mile-point",
   "name": "Five Mile Point Light",
   "other_names": [
-    "Five Mile Point Lighthouse"
+    "Five Mile Point Lighthouse",
+    "Five Mile Point",
+    "Old New Haven",
+    "New Haven Lighthouse,Old"
   ],
   "country": "US",
   "region": "CT",
@@ -32,11 +35,11 @@
     }
   ],
   "light": {
-    "first_lit": 1847,
+    "first_lit": 1805,
     "deactivated": 1877,
     "lens": null,
     "characteristic": "decorative light",
-    "focal_height_m": null,
+    "focal_height_m": 28.4,
     "range_nm": 10.0,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +48,9 @@
     {
       "register": "NRHP",
       "number": "90001108",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001108"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001108",
+      "listed": "1990-08-01",
+      "nomination": "https://catalog.archives.gov/id/132355330"
     }
   ],
   "aton": {
@@ -57,20 +62,20 @@
   "agency": "Lighthouse Point Park",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +87,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1805,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1845,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1847,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -96,13 +113,13 @@
     {
       "year": 1877,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -163,6 +180,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/476786219",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Five Mile Point (Old New Haven)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=795",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Five Mile Point",
+      "url": "https://archives.uslhs.org/places/five-mile-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132355330",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -200,6 +237,49 @@
       "part": "wikidata:Q105967392",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:795",
+      "part": "wikidata:Q105967392",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:five-mile-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2738",
+      "part": "wikidata:Q105967392",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90001108",
+      "part": "wikidata:Q105967392",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:five-mile-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -1,7 +1,11 @@
 {
   "id": "us-ms-gulfport-harbor",
   "name": "Gulfport Harbor Light",
-  "other_names": [],
+  "other_names": [
+    "Ship Island Light",
+    "Gulfport Harbor",
+    "Gulfport Harbor Lighthouse"
+  ],
   "country": "US",
   "region": "MS",
   "county": "Harrison",
@@ -9,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.365,
-    "lon": -89.089722,
+    "lat": 30.364999,
+    "lon": -89.089681,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
@@ -37,7 +41,7 @@
     "focal_height_m": 14.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -70,7 +74,7 @@
     {
       "year": 2011,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     }
   ],
@@ -87,6 +91,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_de_Gulfport_Harbor",
       "kind": "wikipedia"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/757719980",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,15 +114,38 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/757719980",
+      "part": "wikidata:Q68932113",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ms:gulfport-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-10020",
+      "part": "wikidata:Q68932113",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -4,7 +4,9 @@
   "other_names": [
     "Tongue Point Lighthouse",
     "The Bug Light",
-    "Bridgeport Breakwater Lighthouse"
+    "Bridgeport Breakwater Lighthouse",
+    "Tongue Point",
+    "Bridgeport Breakwater"
   ],
   "country": "US",
   "region": "CT",
@@ -18,7 +20,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -34,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1894,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl G 4s",
-    "focal_height_m": 9.5,
+    "characteristic": "Q G",
+    "focal_height_m": 9.4,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001478",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001478"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001478",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353084"
     }
   ],
   "aton": {
@@ -56,11 +60,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,9 +82,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1894,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1895,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -92,7 +102,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +154,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/716898544",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tongue Point (Bridgeport Breakwater)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=790",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tongue Point (Bridgeport Breakwater)",
+      "url": "https://archives.uslhs.org/places/tongue-point-bridgeport-breakwater",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353084",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +186,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -178,9 +207,80 @@
       "key": "osm:way/716898544",
       "part": "wikidata:Q7821157",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:790",
+      "part": "wikidata:Q7821157",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:tongue-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-24635",
+      "part": "wikidata:Q7821157",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9361",
+      "part": "wikidata:Q7821157",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001478",
+      "part": "wikidata:Q7821157",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.16661,-73.17628",
+      "part": "wikidata:Q7821157",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.16664,-73.17750",
+      "part": "wikidata:Q7821157",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "first_year",
       "values": [
@@ -191,12 +291,16 @@
         {
           "source": "osm",
           "value": 1984
+        },
+        {
+          "source": "uslhs",
+          "value": 1894
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

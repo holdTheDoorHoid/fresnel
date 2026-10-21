@@ -2,11 +2,12 @@
   "id": "us-ak-cape-spencer",
   "name": "Cape Spencer Light",
   "other_names": [
-    "Cape Spencer Lighthouse"
+    "Cape Spencer Lighthouse",
+    "Cape Spencer"
   ],
   "country": "US",
   "region": "AK",
-  "county": null,
+  "county": "Skagway/Yakutat/Angoon",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -23,12 +24,12 @@
       "role": "tower",
       "name": "Cape Spencer Light",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1925,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "other",
@@ -47,20 +48,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1913,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 30.0,
+    "focal_height_m": 32.0,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "75002160",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75002160"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75002160",
+      "listed": "1975-12-04",
+      "nomination": "https://catalog.archives.gov/id/75325776"
     }
   ],
   "aton": {
@@ -73,7 +76,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -84,17 +87,29 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1913,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1925,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1925,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1974,
@@ -105,7 +120,7 @@
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -187,6 +202,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/826477647",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Spencer",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=829",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Spencer",
+      "url": "https://archives.uslhs.org/places/cape-spencer",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325776",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -219,7 +254,6 @@
       "part": "wikidata:Q2656018",
       "fields": [
         "agency",
-        "light",
         "location",
         "structures"
       ]
@@ -253,6 +287,63 @@
       "key": "osm:way/826477647",
       "part": "wikidata:Q2656018",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:829",
+      "part": "wikidata:Q2656018",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:cape-spencer",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1070",
+      "part": "wikidata:Q2656018",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-24240",
+      "part": "wikidata:Q2656018",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2687",
+      "part": "wikidata:Q2656018",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75002160",
+      "part": "wikidata:Q2656018",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:58.19899,-136.64051",
+      "part": "wikidata:Q2656018",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [

@@ -2,11 +2,12 @@
   "id": "us-ny-south-buffalo-north-side",
   "name": "South Buffalo North Side Light",
   "other_names": [
-    "South Buffalo North Side Lighthouse"
+    "South Buffalo North Side Lighthouse",
+    "Buffalo South Entrance North Side"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Erie",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -35,17 +36,19 @@
     "first_lit": 1903,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 6.1,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83001673",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001673"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001673",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891090"
     }
   ],
   "aton": {
@@ -77,6 +80,12 @@
   "events": [
     {
       "year": 1903,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1903,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -84,7 +93,7 @@
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -116,6 +125,21 @@
       "label": "ARLHS World List of Lights USA1310H",
       "url": "https://wlol.arlhs.com/lighthouse/USA1310H.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/9843815382",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo South Entrance North Side",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=907",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891090",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -134,10 +158,42 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/9843815382",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:907",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83001673",
+      "part": "wikidata:Q7566452",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.83541,-78.86729",
+      "part": "wikidata:Q7566452",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

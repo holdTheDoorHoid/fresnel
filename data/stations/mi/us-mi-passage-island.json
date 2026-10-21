@@ -2,7 +2,9 @@
   "id": "us-mi-passage-island",
   "name": "Passage Island Light",
   "other_names": [
-    "Passage Island Lighthouse"
+    "Passage Island Lighthouse",
+    "Passage Island",
+    "Passage Island Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -16,7 +18,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -35,42 +37,44 @@
     "first_lit": 1882,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 23.8,
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000632",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000632"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000632",
+      "listed": "2006-07-19",
+      "nomination": "https://catalog.archives.gov/id/75325059"
     }
   ],
   "aton": {
     "uscg_llnr": "7-16835",
-    "arlhs": null,
+    "arlhs": "USA-583",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1978"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +82,31 @@
     {
       "year": 1882,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1882,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1882,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1978,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +153,26 @@
       "label": "Website",
       "url": "https://www.nps.gov/articles/000/passage-island-lighthouse.htm",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Passage Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=733",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: PASSAGE ISLAND",
+      "url": "https://archives.uslhs.org/places/passage-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325059",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,6 +200,66 @@
       "fields": [
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:733",
+      "part": "wikidata:Q7142465",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:passage-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16835",
+      "part": "wikidata:Q7142465",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3005",
+      "part": "wikidata:Q7142465",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000632",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.22352,-88.36575",
+      "part": "wikidata:Q7142465",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:passage-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

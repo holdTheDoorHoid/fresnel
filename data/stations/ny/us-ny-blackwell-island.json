@@ -2,7 +2,9 @@
   "id": "us-ny-blackwell-island",
   "name": "Blackwell Island Light",
   "other_names": [
-    "Blackwell Island Lighthouse"
+    "Blackwell Island Lighthouse",
+    "Blackwell Island",
+    "Blackwell (Roosevelt) Island"
   ],
   "country": "US",
   "region": "NY",
@@ -36,7 +38,7 @@
     "deactivated": 1940,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 13.4,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "72000876",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000876"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000876",
+      "listed": "1972-03-16",
+      "nomination": "https://catalog.archives.gov/id/75319694"
     },
     {
       "register": "New York City Landmark",
@@ -68,7 +72,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -80,7 +84,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,7 +92,7 @@
     {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -96,6 +100,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1940,
@@ -106,7 +116,7 @@
     {
       "year": 1972,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -158,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/889019983",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Blackwell Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=753",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Blackwell Island",
+      "url": "https://archives.uslhs.org/places/blackwell-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75319694",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -185,9 +215,65 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:753",
+      "part": "wikidata:Q3378188",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:blackwell-roosevelt-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8796",
+      "part": "wikidata:Q3378188",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:72000876",
+      "part": "wikidata:Q3378188",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:blackwell-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1872
+        },
+        {
+          "source": "uslhs",
+          "value": 1904
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

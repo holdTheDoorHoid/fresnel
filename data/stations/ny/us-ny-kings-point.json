@@ -2,7 +2,9 @@
   "id": "us-ny-kings-point",
   "name": "Kings Point Light",
   "other_names": [
-    "Kings Point Lighthouse"
+    "Kings Point Lighthouse",
+    "King's Point",
+    "Mariner's Memorial Chapel"
   ],
   "country": "US",
   "region": "NY",
@@ -16,8 +18,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -26,7 +28,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -35,15 +37,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Iso W 2s",
+    "focal_height_m": 31.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "1-27165",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -68,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1961,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -82,6 +91,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Kings_Point_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -95,6 +109,35 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:king-s-point-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-27165",
+      "part": "wikidata:Q6413003",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.81138,-73.76355",
+      "part": "wikidata:Q6413003",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.81209,-73.76172",
+      "part": "wikidata:Q6413003",
+      "fields": []
     }
   ],
   "conflicts": [],

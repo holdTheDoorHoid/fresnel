@@ -1,7 +1,11 @@
 {
   "id": "us-mn-two-harbors-breakwater",
   "name": "Two Harbors Breakwater Light",
-  "other_names": [],
+  "other_names": [
+    "Two Harbors Breakwater",
+    "Two Harbors East Breakwater",
+    "Two Harbors East Breakwater Light"
+  ],
   "country": "US",
   "region": "MN",
   "county": "Lake",
@@ -34,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 10.0,
-    "range_nm": 8.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 9.8,
+    "range_nm": 7.8,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,7 +74,7 @@
     {
       "year": 1897,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -122,6 +126,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1531733216",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Two Harbors Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=268",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,7 +148,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -154,6 +167,36 @@
       "key": "osm:way/1531733216",
       "part": "wikidata:Q84704456",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:268",
+      "part": "wikidata:Q84704456",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:two-harbors-east-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16505",
+      "part": "wikidata:Q84704456",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.01061,-91.66947",
+      "part": "wikidata:Q84704456",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],

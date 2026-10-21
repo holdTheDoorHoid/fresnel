@@ -3,7 +3,9 @@
   "name": "Crossover Island Light",
   "other_names": [
     "Crossover Island Lighthouse",
-    "Crossover Island Light Station"
+    "Crossover Island Light Station",
+    "Crossover Island",
+    "St. Lawrence Seaway Light 160"
   ],
   "country": "US",
   "region": "NY",
@@ -24,29 +26,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1848,
-      "height_m": null,
+      "height_m": 7.9,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1882,
+    "first_lit": 1848,
     "deactivated": 1941,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 10.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07001037",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07001037"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07001037",
+      "listed": "2007-10-03",
+      "nomination": "https://catalog.archives.gov/id/28891446"
     }
   ],
   "aton": {
@@ -58,8 +62,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -83,6 +87,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1882,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1882,
       "event": "first_lit",
       "note": null,
@@ -91,13 +107,13 @@
     {
       "year": 1941,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5222038901",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Crossover Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=320",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Crossover Island",
+      "url": "https://archives.uslhs.org/places/crossover-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891446",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,9 +207,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:320",
+      "part": "wikidata:Q5188764",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:crossover-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-1195",
+      "part": "wikidata:Q5188764",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3401",
+      "part": "wikidata:Q5188764",
+      "fields": [
+        "access",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07001037",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1882
+        },
+        {
+          "source": "uslhs",
+          "value": 1848
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

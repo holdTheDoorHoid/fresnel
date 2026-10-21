@@ -3,7 +3,10 @@
   "name": "Battery Point Light",
   "other_names": [
     "Battery Point Lighthouse",
-    "Crescent City Lighthouse"
+    "Crescent City Lighthouse",
+    "Battery Point",
+    "Crescent City",
+    "Cresent City Lighthouse"
   ],
   "country": "US",
   "region": "CA",
@@ -24,7 +27,7 @@
       "role": "tower",
       "name": "Battery Point Light",
       "type": "integral",
-      "material": null,
+      "material": "brick",
       "built": 1856,
       "height_m": 14.0,
       "status": "standing",
@@ -46,18 +49,25 @@
   "light": {
     "first_lit": 1856,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 30s",
     "focal_height_m": 23.0,
-    "range_nm": 12.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83001177",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001177"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001177",
+      "listed": "1983-09-15",
+      "nomination": "https://catalog.archives.gov/id/123858584"
     },
     {
       "register": "California Historical Landmark",
@@ -74,35 +84,48 @@
   "agency": "Restored hisotric private aid",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1856,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1904,
@@ -119,13 +142,13 @@
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -192,6 +215,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/963391784",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Battery Point (Crescent City)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=58",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Battery Point (Crescent City)",
+      "url": "https://archives.uslhs.org/places/battery-point-crescent-city",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123858584",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -218,7 +261,6 @@
       "part": "wikidata:Q4869878",
       "fields": [
         "agency",
-        "light",
         "location"
       ]
     },
@@ -244,6 +286,66 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:58",
+      "part": "wikidata:Q4869878",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:battery-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-555",
+      "part": "wikidata:Q4869878",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2702",
+      "part": "wikidata:Q4869878",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83001177",
+      "part": "wikidata:Q4869878",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.74411,-124.20303",
+      "part": "wikidata:Q4869878",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:battery-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -252,6 +354,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {

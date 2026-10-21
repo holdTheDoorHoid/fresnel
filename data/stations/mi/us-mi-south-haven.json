@@ -4,7 +4,11 @@
   "other_names": [
     "South Haven Lighthouse",
     "South Haven Point Light",
-    "South Haven South Pierhead Light"
+    "South Haven South Pierhead Light",
+    "South Haven South Pier",
+    "South Haven South Pierhead",
+    "Navigation Structures at South Haven Harbor, Michigan",
+    "South Haven North Pier Light"
   ],
   "country": "US",
   "region": "MI",
@@ -25,29 +29,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1872,
       "height_m": 10.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1903,
+    "first_lit": 1872,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R",
-    "focal_height_m": 11.0,
-    "range_nm": 13.0,
+    "characteristic": "F R",
+    "focal_height_m": 11.3,
+    "range_nm": 11.3,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "95001160",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001160"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001160",
+      "listed": "1995-10-23",
+      "nomination": "https://catalog.archives.gov/id/25340591"
     },
     {
       "register": "Michigan State Historic Site",
@@ -64,20 +70,20 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -89,15 +95,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1903,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1903,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1995,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1077439378",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: South Haven South Pier",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=187",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Haven South Pierhead",
+      "url": "https://archives.uslhs.org/places/south-haven-south-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340591",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +200,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,8 +213,78 @@
       "part": "wikidata:Q7567441",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:187",
+      "part": "wikidata:Q7567441",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:south-haven-south-pierhead-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19505",
+      "part": "wikidata:Q7567441",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19510",
+      "part": "wikidata:Q7567441",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3337",
+      "part": "wikidata:Q7567441",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:95001160",
+      "part": "wikidata:Q7567441",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.40136,-86.28797",
+      "part": "wikidata:Q7567441",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.40189,-86.28819",
+      "part": "wikidata:Q7567441",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:south-haven-south-pier",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -189,6 +302,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1903
+        },
+        {
+          "source": "uslhs",
+          "value": 1872
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

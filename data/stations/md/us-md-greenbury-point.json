@@ -2,7 +2,8 @@
   "id": "us-md-greenbury-point",
   "name": "Greenbury Point Light",
   "other_names": [
-    "Greenbury Point Lighthouse"
+    "Greenbury Point Lighthouse",
+    "Greenbury Point"
   ],
   "country": "US",
   "region": "MD",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.975,
-    "lon": -76.455,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.973333,
+    "lon": -76.455556,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": "Greenbury Point Light",
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1848,
       "height_m": 11.9,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 38.968,
         "lon": -76.454
@@ -41,7 +42,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -50,11 +51,11 @@
     "first_lit": 1848,
     "deactivated": 1934,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
+    "characteristic": "Fl R",
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -87,13 +88,19 @@
     {
       "year": 1848,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1891,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -151,6 +158,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_de_Greenbury_Point",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Greenbury Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1946",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Greenbury Point",
+      "url": "https://archives.uslhs.org/places/greenbury-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,13 +193,53 @@
       "fields": [
         "events",
         "light",
-        "location",
         "photos"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1946",
+      "part": "wikidata:Q5603769",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:23249",
+      "part": "wikidata:Q108901001",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.97616,-76.45412",
+      "part": "station",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1934
+        },
+        {
+          "source": "uslhs",
+          "value": 1891
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

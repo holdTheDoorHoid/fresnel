@@ -2,7 +2,8 @@
   "id": "us-md-fort-carroll",
   "name": "Fort Carroll Light",
   "other_names": [
-    "Fort Carroll Lighthouse"
+    "Fort Carroll Lighthouse",
+    "Fort Carroll"
   ],
   "country": "US",
   "region": "MD",
@@ -23,12 +24,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "wood",
+      "built": 1898,
+      "height_m": 21.3,
       "status": "ruins",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1931,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 22.9,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -51,8 +52,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,8 +64,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,13 +73,25 @@
     {
       "year": 1854,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1931,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -120,6 +133,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/574957598",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fort Carroll",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=422",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Carroll",
+      "url": "https://archives.uslhs.org/places/fort-carroll",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,6 +172,42 @@
       "part": "wikidata:Q5470894",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:422",
+      "part": "wikidata:Q5470894",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:fort-carroll-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8463",
+      "part": "wikidata:Q5470894",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:md:fort-carroll",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

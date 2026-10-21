@@ -3,7 +3,8 @@
   "name": "Mary Island Light",
   "other_names": [
     "Mary Island Lighthouse",
-    "Mary Island Light Station"
+    "Mary Island Light Station",
+    "Mary Island"
   ],
   "country": "US",
   "region": "AK",
@@ -24,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1903,
-      "height_m": null,
+      "height_m": 18.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1937,
+    "first_lit": 1903,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 6s.<br> obscuR from 341° to 150°",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 23.2,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000645",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000645"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000645",
+      "listed": "2005-07-08",
+      "nomination": "https://catalog.archives.gov/id/75325141"
     }
   ],
   "aton": {
@@ -59,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,7 +73,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -81,6 +84,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1903,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1937,
@@ -97,7 +118,7 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7681583560",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mary Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=822",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mary Island",
+      "url": "https://archives.uslhs.org/places/mary-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325141",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -171,9 +211,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:822",
+      "part": "wikidata:Q3538980",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:mary-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-21940",
+      "part": "wikidata:Q3538980",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2692",
+      "part": "wikidata:Q3538980",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000645",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:55.09900,-131.18262",
+      "part": "wikidata:Q3538980",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1937
+        },
+        {
+          "source": "uslhs",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

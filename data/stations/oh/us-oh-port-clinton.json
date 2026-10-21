@@ -2,7 +2,10 @@
   "id": "us-oh-port-clinton",
   "name": "Port Clinton Light",
   "other_names": [
-    "Port Clinton Lighthouse"
+    "Port Clinton Lighthouse",
+    "Port Clinton",
+    "Port Clinton (Portage River) Breakwater",
+    "Port Clinton Old OH"
   ],
   "country": "US",
   "region": "OH",
@@ -23,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1833,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1896,
+    "first_lit": 1833,
     "deactivated": 1952,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": null,
+    "characteristic": "F W",
+    "focal_height_m": 10.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -64,7 +67,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -74,6 +77,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1896,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1896,
@@ -131,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/856587583",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Port Clinton",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=274",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port Clinton Old OH",
+      "url": "https://archives.uslhs.org/places/port-clinton-old-oh",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,10 +193,93 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:274",
+      "part": "wikidata:Q43398755",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:port-clinton-portage-river-breakwater-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8876",
+      "part": "wikidata:Q43398755",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.51503,-82.93461",
+      "part": "wikidata:Q43398755",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:port-clinton",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1833
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1952
+        },
+        {
+          "source": "uslhs",
+          "value": 1870
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

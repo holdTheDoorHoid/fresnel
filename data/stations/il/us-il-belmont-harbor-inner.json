@@ -1,7 +1,9 @@
 {
   "id": "us-il-belmont-harbor-inner",
   "name": "Belmont Harbor Inner Light",
-  "other_names": [],
+  "other_names": [
+    "Belmont Harbor Inner"
+  ],
   "country": "US",
   "region": "IL",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl R 3s",
+    "focal_height_m": 24.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20095",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3590651046",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +94,28 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:belmont-harbor-inner",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20095",
+      "part": "osm:node/3590651046",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.94306,-87.63561",
+      "part": "osm:node/3590651046",
+      "fields": [
+        "light"
       ]
     }
   ],

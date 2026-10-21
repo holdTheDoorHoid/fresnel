@@ -2,7 +2,8 @@
   "id": "us-ri-sassafras-point",
   "name": "Sassafras Point Light",
   "other_names": [
-    "Sassafras Point Lighthouse"
+    "Sassafras Point Lighthouse",
+    "Sassafras Point"
   ],
   "country": "US",
   "region": "RI",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.8004,
-    "lon": -71.3921,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.800278,
+    "lon": -71.391944,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "wood",
+      "built": 1872,
+      "height_m": 4.3,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -72,8 +73,14 @@
     {
       "year": 1872,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1912,
@@ -115,6 +122,16 @@
       "label": "ARLHS World List of Lights USA962",
       "url": "https://wlol.arlhs.com/lighthouse/USA962.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Sassafras Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1965",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sassafras Point",
+      "url": "https://archives.uslhs.org/places/sassafras-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,15 +145,31 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1965",
+      "part": "wikidata:Q16899842",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8906",
+      "part": "wikidata:Q16899842",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

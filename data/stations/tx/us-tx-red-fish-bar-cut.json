@@ -1,0 +1,148 @@
+{
+  "id": "us-tx-red-fish-bar-cut",
+  "name": "Red Fish Bar Cut",
+  "other_names": [
+    "Lower Galveston Bay Inner Range Front Light"
+  ],
+  "country": "US",
+  "region": "TX",
+  "county": "Harris",
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 29.50831,
+    "lon": -94.872838,
+    "precision": "approximate",
+    "from": "lighthousefriends"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "screwpile",
+      "material": null,
+      "built": 1900,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    }
+  ],
+  "light": {
+    "first_lit": 1900,
+    "deactivated": 1936,
+    "lens": null,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 40.0,
+    "range_nm": 0.0,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "4-24055",
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1936,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Red Fish Bar Cut",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1795",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Red Fish Bar Cut",
+      "url": "https://archives.uslhs.org/places/red-fish-bar-cut",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1795",
+      "part": "lighthousefriends:1795",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-24055",
+      "part": "lighthousefriends:1795",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:70904",
+      "part": "lighthousefriends:1795",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.50799,-94.87274",
+      "part": "lighthousefriends:1795",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

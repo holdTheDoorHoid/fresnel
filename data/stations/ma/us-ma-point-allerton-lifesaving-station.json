@@ -1,7 +1,9 @@
 {
   "id": "us-ma-point-allerton-lifesaving-station",
   "name": "Point Allerton Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "Old Point Allerton Coast Guard Station"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Plymouth",
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "81000110",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000110"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000110",
+      "listed": "1981-06-11",
+      "nomination": "https://catalog.archives.gov/id/63796664"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +98,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Point_Allerton_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63796664",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -111,10 +120,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000110",
+      "part": "wikidata:Q7207935",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

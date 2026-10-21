@@ -2,7 +2,9 @@
   "id": "us-mi-eagle-harbor",
   "name": "Eagle Harbor Light",
   "other_names": [
-    "Eagle Harbor Lighthouse"
+    "Eagle Harbor Lighthouse",
+    "Eagle Harbor",
+    "Eagle Harbor Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1871,
+    "first_lit": 1851,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Alt WR 20s",
-    "focal_height_m": 18.0,
-    "range_nm": 25.0,
+    "characteristic": "Al Fl W R 20s",
+    "focal_height_m": 18.3,
+    "range_nm": 20.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001745",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001745"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001745",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891204"
     }
   ],
   "aton": {
@@ -57,29 +61,54 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1851,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1851,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1871,
@@ -90,7 +119,7 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +177,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=224",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: EAGLE HARBOR",
+      "url": "https://archives.uslhs.org/places/eagle-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891204",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +204,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,9 +218,83 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:224",
+      "part": "wikidata:Q5325104",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:eagle-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15195",
+      "part": "wikidata:Q5325104",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2963",
+      "part": "wikidata:Q5325104",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001745",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.45976,-88.15908",
+      "part": "wikidata:Q5325104",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:eagle-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1871
+        },
+        {
+          "source": "uslhs",
+          "value": 1851
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

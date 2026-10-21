@@ -1,7 +1,9 @@
 {
   "id": "us-mi-blake-point",
   "name": "Blake Point Light",
-  "other_names": [],
+  "other_names": [
+    "Blake Point"
+  ],
   "country": "US",
   "region": "MI",
   "county": null,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "flashing W 2.5s",
-    "focal_height_m": null,
-    "range_nm": 9.0,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 12.2,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-16820",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/13950240628",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,10 +91,31 @@
       "part": "osm:node/13950240628",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:blake-point",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16820",
+      "part": "osm:node/13950240628",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.19141,-88.42228",
+      "part": "osm:node/13950240628",
+      "fields": [
+        "light"
       ]
     }
   ],

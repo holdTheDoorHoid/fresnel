@@ -1,10 +1,12 @@
 {
   "id": "us-me-fletchers-neck-lifesaving-station",
   "name": "Fletcher's Neck Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "Fletchers Neck Life-Saving Station"
+  ],
   "country": "US",
   "region": "ME",
-  "county": null,
+  "county": "York",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "74000195",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000195"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000195",
+      "listed": "1974-11-01",
+      "nomination": "https://catalog.archives.gov/id/88687705"
     }
   ],
   "aton": {
@@ -67,7 +71,7 @@
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +98,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Fletcher%27s_Neck_Lifesaving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fletchers Neck Life Saving Station",
+      "url": "https://archives.uslhs.org/places/fletchers-neck-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687705",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -110,10 +124,26 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97801",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000195",
+      "part": "wikidata:Q20639106",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

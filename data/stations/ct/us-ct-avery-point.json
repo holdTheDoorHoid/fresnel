@@ -2,7 +2,8 @@
   "id": "us-ct-avery-point",
   "name": "Avery Point Light",
   "other_names": [
-    "Avery Point Lighthouse"
+    "Avery Point Lighthouse",
+    "Avery Point"
   ],
   "country": "US",
   "region": "CT",
@@ -39,13 +40,15 @@
     "focal_height_m": 17.1,
     "range_nm": 3.5,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02000866",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02000866"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02000866",
+      "listed": "2002-08-23",
+      "nomination": "https://catalog.archives.gov/id/132355663"
     }
   ],
   "aton": {
@@ -70,7 +73,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +83,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1944,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1944,
@@ -96,7 +105,7 @@
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/934435868",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Avery Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=801",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Avery Point",
+      "url": "https://archives.uslhs.org/places/avery-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132355663",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,6 +200,57 @@
       "part": "wikidata:Q3378158",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:801",
+      "part": "wikidata:Q3378158",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:avery-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21742",
+      "part": "wikidata:Q3378158",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2735",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02000866",
+      "part": "wikidata:Q3378158",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.31525,-72.06357",
+      "part": "wikidata:Q3378158",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:avery-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

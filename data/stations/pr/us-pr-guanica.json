@@ -4,7 +4,13 @@
   "other_names": [
     "Faro de Guánica",
     "Guánica Lighthouse",
-    "Guanica Lighthouse"
+    "Guanica Lighthouse",
+    "Gu�nica",
+    "Guánica",
+    "Cana",
+    "Guanica",
+    "Faro del Puerto de Guanica",
+    "Faro de Guanica"
   ],
   "country": "US",
   "region": "PR",
@@ -25,29 +31,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1889,
+      "height_m": 9.8,
       "status": "ruins",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1893,
+    "first_lit": 1889,
     "deactivated": 1950,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 35.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001549",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001549"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001549",
+      "listed": "1977-03-28",
+      "nomination": "https://catalog.archives.gov/id/131518212"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-41",
+      "url": "https://www.loc.gov/item/pr0041/"
     }
   ],
   "aton": {
@@ -60,7 +73,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,6 +91,24 @@
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1893,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1893,
       "event": "first_lit",
       "note": null,
@@ -86,13 +117,13 @@
     {
       "year": 1950,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +170,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2748017581",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Gu�nica",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1176",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Puerto Rico",
+      "url": "https://www.ibiblio.org/lighthouse/pr.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-41, Faro del Puerto de Guanica",
+      "url": "https://www.loc.gov/item/pr0041/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Guanica",
+      "url": "https://archives.uslhs.org/places/guanica",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518212",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,9 +221,66 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1176",
+      "part": "wikidata:Q5623121",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pr:guanica",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-41",
+      "part": "station",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3477",
+      "part": "wikidata:Q5623121",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001549",
+      "part": "wikidata:Q5623121",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1893
+        },
+        {
+          "source": "uslhs",
+          "value": 1889
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,9 @@
   "id": "us-sc-cape-romain",
   "name": "Cape Romain Lighthouse",
   "other_names": [
-    "Old Cape Romain Lighthouse"
+    "Old Cape Romain Lighthouse",
+    "Cape Romain",
+    "Cape Romain Lighthouses"
   ],
   "country": "US",
   "region": "SC",
@@ -47,16 +49,23 @@
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1827,
     "deactivated": 1858,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 26.7,
     "range_nm": 19.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
+    {
+      "register": "NRHP",
+      "number": "81000563",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000563",
+      "listed": "1981-11-12",
+      "nomination": "https://catalog.archives.gov/id/118997291"
+    },
     {
       "register": "National Register of Historic Places contributing property",
       "number": null,
@@ -73,7 +82,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -84,8 +93,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -93,14 +102,26 @@
     {
       "year": 1827,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1857,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1858,
@@ -111,25 +132,31 @@
     {
       "year": 1858,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1937,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1947,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -200,6 +227,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6537970135",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Romain",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=335",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Romain",
+      "url": "https://archives.uslhs.org/places/cape-romain",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/118997291",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -244,9 +291,79 @@
       "key": "osm:node/6537970135",
       "part": "wikidata:Q31061877",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:335",
+      "part": "wikidata:Q76781004",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:cape-romain-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:cape-romain-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3509",
+      "part": "wikidata:Q76781004",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000563",
+      "part": "wikidata:Q76781004",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:cape-romain",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "rowlett",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1947
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

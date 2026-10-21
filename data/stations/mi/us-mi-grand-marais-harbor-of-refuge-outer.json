@@ -4,7 +4,13 @@
   "other_names": [
     "Grand Marais Harbor of Refuge Range Front Light",
     "Grand Marais Harbor of Refuge Inner and Outer Lights",
-    "Grand Marais Harbor of Refuge Inner Light"
+    "Grand Marais Harbor of Refuge Inner Light",
+    "Grand Marais",
+    "Grand Marais Harbor of Refuge Outer",
+    "Grand Marais MI",
+    "Grand Marias Harbor of Refuge Range Lights",
+    "Grand Marais Harbor Of Refuge Outer Light",
+    "Grand Marais Harbor Of Refuge Inner Light"
   ],
   "country": "US",
   "region": "MI",
@@ -27,7 +33,7 @@
       "type": "concrete",
       "material": "concrete",
       "built": 1895,
-      "height_m": null,
+      "height_m": 10.4,
       "status": "standing",
       "note": null,
       "from": "wikidata",
@@ -52,17 +58,19 @@
     "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 2.5s",
-    "focal_height_m": 12.2,
-    "range_nm": 7.8,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "F W",
+    "focal_height_m": 16.4,
+    "range_nm": 13.9,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "12000254",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000254"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000254",
+      "listed": "2012-05-02",
+      "nomination": "https://catalog.archives.gov/id/75324931"
     }
   ],
   "aton": {
@@ -74,20 +82,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -95,7 +103,7 @@
     {
       "year": 1895,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -105,9 +113,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1908,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -178,6 +198,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3738213882",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Marais MI",
+      "url": "https://archives.uslhs.org/places/grand-marais-mi",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324931",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -220,6 +255,76 @@
       "key": "osm:node/3738213882",
       "part": "wikidata:Q5594785",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:723",
+      "part": "wikidata:Q5594785",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:grand-marais-harbor-of-refuge-outer",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14550",
+      "part": "wikidata:Q108839334",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14560",
+      "part": "wikidata:Q5594785",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2974",
+      "part": "wikidata:Q5594785",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000254",
+      "part": "wikidata:Q5594785",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.67664,-85.97139",
+      "part": "wikidata:Q5594785",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.68378,-85.97173",
+      "part": "wikidata:Q108839334",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:grand-marais-keeper-s-house",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -245,6 +350,13 @@
           "value": [
             46.68376,
             -85.97194
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            46.67671,
+            -85.97144
           ]
         }
       ],

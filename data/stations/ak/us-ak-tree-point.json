@@ -2,7 +2,9 @@
   "id": "us-ak-tree-point",
   "name": "Tree Point Light",
   "other_names": [
-    "Tree Point Lighthouse"
+    "Tree Point Lighthouse",
+    "Tree Point",
+    "Tree Point Light Station"
   ],
   "country": "US",
   "region": "AK",
@@ -16,36 +18,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "integral",
+      "material": "concrete",
+      "built": 1935,
+      "height_m": 20.1,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1935,
-    "deactivated": null,
+    "first_lit": 1903,
+    "deactivated": 1969,
     "lens": null,
-    "characteristic": "Fl W 6s.<br> obscuR from 158° to 318°",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 26.2,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "04001177",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001177"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/04001177",
+      "listed": "2004-10-27",
+      "nomination": "https://catalog.archives.gov/id/75325139"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,17 +73,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1903,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1905,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1935,
@@ -94,9 +122,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1969,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2004,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525308150",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tree Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=817",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tree Point",
+      "url": "https://archives.uslhs.org/places/tree-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325139",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +209,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -169,10 +222,89 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:817",
+      "part": "wikidata:Q3662067",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:tree-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-21840",
+      "part": "wikidata:Q3662067",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2696",
+      "part": "wikidata:Q3662067",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:04001177",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:54.80287,-130.93382",
+      "part": "wikidata:Q3662067",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1903
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

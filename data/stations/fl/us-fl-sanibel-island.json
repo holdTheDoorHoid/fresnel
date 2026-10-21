@@ -3,7 +3,8 @@
   "name": "Sanibel Island Light",
   "other_names": [
     "Sanibel Island Lighthouse",
-    "Sanibel Lighthouse"
+    "Sanibel Lighthouse",
+    "Sanibel Island"
   ],
   "country": "US",
   "region": "FL",
@@ -23,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "skeletal",
+      "material": "iron",
+      "built": 1884,
       "height_m": 30.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 6s",
-    "focal_height_m": 31.0,
+    "focal_height_m": 29.9,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74000648",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000648"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74000648",
+      "listed": "1974-10-01",
+      "nomination": "https://catalog.archives.gov/id/77842868"
     }
   ],
   "aton": {
@@ -58,34 +61,46 @@
   "agency": "City of Sanibel",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1884,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1884,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1729001655",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sanibel Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=367",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sanibel Island",
+      "url": "https://archives.uslhs.org/places/sanibel-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77842868",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -159,6 +194,62 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:367",
+      "part": "wikidata:Q7418266",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:sanibel-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-1245",
+      "part": "wikidata:Q7418266",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2784",
+      "part": "wikidata:Q7418266",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74000648",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:26.45294,-82.01427",
+      "part": "wikidata:Q7418266",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:sanibel-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

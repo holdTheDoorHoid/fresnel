@@ -2,7 +2,9 @@
   "id": "us-oh-green-island",
   "name": "Green Island Light",
   "other_names": [
-    "Green Island Lighthouse"
+    "Green Island Lighthouse",
+    "Green Island",
+    "Green Island OH"
   ],
   "country": "US",
   "region": "OH",
@@ -21,7 +23,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Green Island Light",
       "type": null,
       "material": null,
       "built": 1855,
@@ -29,23 +31,40 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "other",
+      "name": "Old Lighthouse Walkway",
+      "type": null,
+      "material": null,
+      "built": 1864,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.645844,
+        "lon": -82.866036
+      }
     }
   ],
   "light": {
-    "first_lit": 1865,
+    "first_lit": 1854,
     "deactivated": 1939,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 24.0,
-    "range_nm": null,
+    "focal_height_m": 24.4,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90001909",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001909"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001909",
+      "listed": "1990-12-18",
+      "nomination": "https://catalog.archives.gov/id/71985988"
     }
   ],
   "aton": {
@@ -58,7 +77,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=no."
+    "note": "OpenStreetMap tags the structure access=no. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,17 +88,29 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1855,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1864,
@@ -89,20 +120,32 @@
     },
     {
       "year": 1865,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1865,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
       "year": 1939,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1939,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -147,6 +190,11 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/344919652",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/888309697",
       "kind": "osm"
     },
@@ -159,6 +207,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/888309699",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Green Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=275",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Green Island OH",
+      "url": "https://archives.uslhs.org/places/green-island-oh",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71985988",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -190,6 +258,14 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/344919652",
+      "part": "osm:way/344919652",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/888309697",
       "part": "wikidata:Q5602719",
       "fields": []
@@ -205,24 +281,66 @@
       "key": "osm:way/888309699",
       "part": "wikidata:Q5602719",
       "fields": []
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1865
-        },
-        {
-          "source": "osm",
-          "value": 1864
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:275",
+      "part": "wikidata:Q5602719",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:green-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:green-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5535",
+      "part": "wikidata:Q5602719",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:6805",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90001909",
+      "part": "wikidata:Q5602719",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.64491,-82.86766",
+      "part": "wikidata:Q5602719",
+      "fields": [
+        "light"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -4,7 +4,9 @@
   "other_names": [
     "East Point Lighthouse",
     "Maurice River lighthouse",
-    "Maurice River Lighthouse"
+    "Maurice River Lighthouse",
+    "East Point",
+    "Maurice River"
   ],
   "country": "US",
   "region": "NJ",
@@ -18,14 +20,14 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
+      "material": "brick",
       "built": 1849,
       "height_m": 12.0,
       "status": "standing",
@@ -35,19 +37,20 @@
   ],
   "light": {
     "first_lit": 1849,
-    "deactivated": 1941,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "Iso W 6s, R sector",
-    "focal_height_m": 13.0,
+    "characteristic": "Iso W 6s",
+    "focal_height_m": 14.6,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "95001047",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001047"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001047",
+      "listed": "1995-08-25"
     }
   ],
   "aton": {
@@ -59,20 +62,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,25 +83,31 @@
     {
       "year": 1849,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1849,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1941,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1995,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +154,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/696484811",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: East Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=372",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: East Point (Maurice River)",
+      "url": "https://archives.uslhs.org/places/east-point-maurice-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,10 +196,75 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:372",
+      "part": "wikidata:Q5329173",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:east-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1695",
+      "part": "wikidata:Q5329173",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3378",
+      "part": "wikidata:Q5329173",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:95001047",
+      "part": "wikidata:Q5329173",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:east-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

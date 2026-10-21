@@ -1,13 +1,16 @@
 {
   "id": "us-ny-old-orchard-shoal",
-  "name": "Old Orchard Shoal Light",
+  "name": "Orchard Shoal Light Station, Old",
   "other_names": [
+    "Old Orchard Shoal Light",
     "Old Orchard Shoal light",
-    "Old Orchard Shoal Lighthouse"
+    "Old Orchard Shoal Lighthouse",
+    "Old Orchard Shoal",
+    "Ruins"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Richmond",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -23,13 +26,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1893,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +40,18 @@
     "deactivated": 2012,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 16.0,
-    "range_nm": null,
+    "focal_height_m": 6.1,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000864",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000864"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000864",
+      "listed": "2006-09-20",
+      "nomination": "https://catalog.archives.gov/id/75321381"
     }
   ],
   "aton": {
@@ -71,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +84,25 @@
     {
       "year": 1893,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1893,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1893,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -99,6 +110,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2012,
+      "event": "removed",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2012,
@@ -150,6 +167,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2576304646",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Old Orchard Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=758",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Old Orchard Shoal",
+      "url": "https://archives.uslhs.org/places/old-orchard-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75321381",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +199,6 @@
         "events",
         "kind",
         "light",
-        "name",
         "photos",
         "region",
         "registers",
@@ -176,10 +212,85 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:758",
+      "part": "wikidata:Q983738",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:old-orchard-shoal-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-35395",
+      "part": "wikidata:Q983738",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3424",
+      "part": "wikidata:Q983738",
+      "fields": [
+        "county",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000864",
+      "part": "station",
+      "fields": [
+        "events",
+        "name",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.51230,-74.09871",
+      "part": "wikidata:Q983738",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:old-orchard-shoal-ruins",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

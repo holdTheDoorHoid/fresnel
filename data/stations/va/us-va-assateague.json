@@ -2,7 +2,8 @@
   "id": "us-va-assateague",
   "name": "Assateague Light",
   "other_names": [
-    "Assateague Lighthouse"
+    "Assateague Lighthouse",
+    "Assateague"
   ],
   "country": "US",
   "region": "VA",
@@ -23,29 +24,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1867,
       "height_m": 43.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1833,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 5s",
-    "focal_height_m": 47.0,
-    "range_nm": 19.0,
+    "focal_height_m": 46.9,
+    "range_nm": 22.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73001989",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001989"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001989",
+      "listed": "1973-06-04",
+      "nomination": "https://catalog.archives.gov/id/41679227"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -62,16 +65,16 @@
   "agency": "Chincoteague Natural History Association;US Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1933"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -81,9 +84,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1867,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -93,9 +102,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1933,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +157,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/562175159",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Assateague",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=451",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Assateague",
+      "url": "https://archives.uslhs.org/places/assateague",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41679227",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +189,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -172,9 +206,75 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:451",
+      "part": "wikidata:Q4808548",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:assateague-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-275",
+      "part": "wikidata:Q4808548",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3523",
+      "part": "wikidata:Q4808548",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73001989",
+      "part": "wikidata:Q4808548",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.91115,-75.35608",
+      "part": "wikidata:Q4808548",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 47.0
+        },
+        {
+          "source": "uslhs",
+          "value": 43.28
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

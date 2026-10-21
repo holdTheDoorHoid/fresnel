@@ -2,7 +2,9 @@
   "id": "us-ri-castle-hill",
   "name": "Castle Hill Light",
   "other_names": [
-    "Castle Hill Lighthouse"
+    "Castle Hill Lighthouse",
+    "Castle Hill",
+    "Castle Hill Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 12.0,
+    "focal_height_m": 12.2,
     "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "osm"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
@@ -50,7 +52,9 @@
     {
       "register": "NRHP",
       "number": "88000277",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000277"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000277",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374352"
     }
   ],
   "aton": {
@@ -63,7 +67,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -75,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,14 +87,20 @@
     {
       "year": 1890,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1890,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1957,
@@ -101,7 +111,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713487173",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Castle Hill",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=396",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Castle Hill",
+      "url": "https://archives.uslhs.org/places/castle-hill",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374352",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -175,9 +205,64 @@
       "key": "osm:way/713487173",
       "part": "wikidata:Q5050138",
       "fields": [
-        "light",
         "location",
         "registers"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:396",
+      "part": "wikidata:Q5050138",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:castle-hill",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-17795",
+      "part": "wikidata:Q5050138",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3491",
+      "part": "wikidata:Q5050138",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000277",
+      "part": "wikidata:Q5050138",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.46217,-71.36292",
+      "part": "wikidata:Q5050138",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:castle-hill",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

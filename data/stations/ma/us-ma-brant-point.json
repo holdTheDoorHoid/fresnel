@@ -3,7 +3,11 @@
   "name": "Brant Point Light",
   "other_names": [
     "Brant Point (Old) Light",
-    "Brant Point Lighthouse"
+    "Brant Point Lighthouse",
+    "Brant Point",
+    "Old",
+    "Bryant Point",
+    "Brant Point Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -26,13 +30,13 @@
       "type": null,
       "material": "mixed",
       "built": 1856,
-      "height_m": null,
+      "height_m": 7.9,
       "status": "standing",
       "note": null,
       "from": "wikidata",
       "location": {
-        "lat": 41.28972,
-        "lon": -70.0925
+        "lat": 41.28975,
+        "lon": -70.09243
       }
     },
     {
@@ -48,20 +52,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1746,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Oc R 4s",
-    "focal_height_m": 26.0,
-    "range_nm": 10.0,
-    "fog_signal": null,
-    "from": "osm"
+    "characteristic": "F W",
+    "focal_height_m": 15.5,
+    "range_nm": 9.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002029",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002029"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002029",
+      "listed": "1987-09-28",
+      "nomination": "https://catalog.archives.gov/id/63792339"
     }
   ],
   "aton": {
@@ -70,11 +76,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -86,44 +92,62 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1746,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1856,
       "event": "built",
-      "note": null,
+      "note": "Tower 7 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1900,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1901,
       "event": "built",
-      "note": null,
+      "note": "Tower 8 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1901,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1965,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ct-mystic-seaport",
+      "relation": "replica",
+      "name": "Mystic Seaport Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brant_Point_Lighthouse_1856_MA.JPG",
@@ -189,6 +213,36 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713398769",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Brant Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=629",
+      "kind": "reference"
+    },
+    {
+      "label": "LighthouseFriends: Brant Point (Old)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=630",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brant Point",
+      "url": "https://archives.uslhs.org/places/brant-point",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bryant Point",
+      "url": "https://archives.uslhs.org/places/bryant-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792339",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -224,7 +278,6 @@
       "key": "osm:way/713398764",
       "part": "wikidata:Q4957614",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -233,6 +286,100 @@
       "key": "osm:way/713398769",
       "part": "wikidata:Q4957614",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:629",
+      "part": "wikidata:Q4957614",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:630",
+      "part": "wikidata:Q109323340",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:brant-point-7",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:brant-point-8",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15205",
+      "part": "wikidata:Q4957614",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2825",
+      "part": "wikidata:Q109323340",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:60298",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002029",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.28926,-70.09205",
+      "part": "wikidata:Q109323340",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.28989,-70.09232",
+      "part": "wikidata:Q109323340",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.29002,-70.09027",
+      "part": "wikidata:Q4957614",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:brant-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -241,6 +388,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {

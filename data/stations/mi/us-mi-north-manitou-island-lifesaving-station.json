@@ -1,10 +1,12 @@
 {
   "id": "us-mi-north-manitou-island-lifesaving-station",
   "name": "North Manitou Island Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "North Manitou Coast Guard Station"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Leelanau",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -34,7 +36,10 @@
     {
       "register": "NRHP",
       "number": "98001191",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98001191"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/98001191",
+      "listed": "1998-08-05",
+      "nhl": "1998-08-05",
+      "nomination": "https://catalog.archives.gov/id/25338755"
     },
     {
       "register": "National Historic Landmark",
@@ -72,8 +77,14 @@
     {
       "year": 1998,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1998,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -113,6 +124,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:North_Manitou_Island_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25338755",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -129,10 +145,20 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:98001191",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

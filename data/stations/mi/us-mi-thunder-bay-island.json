@@ -2,7 +2,9 @@
   "id": "us-mi-thunder-bay-island",
   "name": "Thunder Bay Island Light",
   "other_names": [
-    "Thunder Bay Island Lighthouse"
+    "Thunder Bay Island Lighthouse",
+    "Thunder Bay Island",
+    "Thunder Bay Island Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1831,
       "height_m": 19.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1832,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 10s",
-    "focal_height_m": 19.0,
-    "range_nm": 16.0,
+    "focal_height_m": 19.2,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001371",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001371"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001371",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28890711"
     }
   ],
   "aton": {
@@ -58,18 +62,18 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1980"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,15 +86,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1832,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1832,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1980,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +159,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/530130456",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Thunder Bay Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=178",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Thunder Bay Island",
+      "url": "https://archives.uslhs.org/places/thunder-bay-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28890711",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +191,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,9 +205,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:178",
+      "part": "wikidata:Q7798929",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:thunder-bay-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11495",
+      "part": "wikidata:Q7798929",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3350",
+      "part": "wikidata:Q7798929",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001371",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.03727,-83.19426",
+      "part": "wikidata:Q7798929",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1832
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

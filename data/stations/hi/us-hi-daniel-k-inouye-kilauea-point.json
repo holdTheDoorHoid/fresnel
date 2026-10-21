@@ -9,7 +9,12 @@
     "Kīlauea Lighthouse",
     "Kilauea Point Lighthouse",
     "Kīlauea Point Lighthouse",
-    "Kilauea Point Light Station"
+    "Kilauea Point Light Station",
+    "Kilauea Point",
+    "KÃÂ«lauea Point",
+    "US Coast Guard Light Station Kilauea Point",
+    "Kilauea Point Light",
+    "Daniel K. Inouye"
   ],
   "country": "US",
   "region": "HI",
@@ -23,9 +28,39 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1913,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 22.228673,
+        "lon": -159.402486
+      }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1913,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 22.2295,
+        "lon": -159.402779
+      }
+    },
     {
       "role": "tower",
       "name": "Daniel K. Inouye Kilauea Point Lighthouse",
@@ -45,12 +80,12 @@
       "role": "tower",
       "name": "Daniel K. Inouye Kīlauea Point Lighthouse",
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1913,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     },
     {
       "role": "dwelling",
@@ -111,23 +146,40 @@
         "lat": 22.2314,
         "lon": -159.401907
       }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1933,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 22.229145,
+        "lon": -159.402098
+      }
     }
   ],
   "light": {
     "first_lit": 1913,
-    "deactivated": null,
+    "deactivated": 1976,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 53.0,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79000759",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000759"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000759",
+      "listed": "1979-10-18",
+      "nomination": "https://catalog.archives.gov/id/63815955"
     }
   ],
   "aton": {
@@ -136,23 +188,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "U.S. Fish and Wildlife Service",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -160,19 +212,37 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1913,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1913,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1976,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -227,6 +297,21 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1252139162",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1252339531",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1252339533",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1252339534",
       "kind": "osm"
     },
@@ -249,6 +334,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/565175321",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Kilauea Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=139",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Kilauea Point",
+      "url": "https://archives.uslhs.org/places/kilauea-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63815955",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -273,6 +378,32 @@
       "source": "osm",
       "key": "osm:way/1252139146",
       "part": "osm:way/1252139146",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1252139162",
+      "part": "osm:way/1252139162",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1252339531",
+      "part": "osm:way/1252339531",
+      "fields": [
+        "agency",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1252339533",
+      "part": "osm:way/1252339533",
       "fields": [
         "structures"
       ]
@@ -316,10 +447,96 @@
       "fields": [
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:139",
+      "part": "wikidata:Q6406516",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:ka-a-lauea-point",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-29737",
+      "part": "wikidata:Q6406516",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2799",
+      "part": "wikidata:Q6406516",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000759",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:22.23146,-159.40199",
+      "part": "wikidata:Q6406516",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:kilauea-point-daniel-k-inouye",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 53.0
+        },
+        {
+          "source": "uslhs",
+          "value": 65.84
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

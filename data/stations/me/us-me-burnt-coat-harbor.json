@@ -3,7 +3,12 @@
   "name": "Burnt Coat Harbor Light",
   "other_names": [
     "Burnt Coat Harbor Lighthouse",
-    "Hockamock Head Lighthouse"
+    "Hockamock Head Lighthouse",
+    "Burnt Coat Harbor",
+    "Hockamock Head",
+    "Swan's Island, Hockamock Head",
+    "Burnt Coat Harbor Light Station",
+    "Swan's Island"
   ],
   "country": "US",
   "region": "ME",
@@ -24,29 +29,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1872,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1872,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 23.0,
+    "focal_height_m": 22.9,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002272",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002272"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002272",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88684903"
     }
   ],
   "aton": {
@@ -55,43 +62,62 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Swans Island",
+  "ownership": "local",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1975"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://www.burntcoatharborlight.com/rent-the-keepers-house-apartment/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1975,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +164,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/367795300",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Burnt Coat Harbor (Hockamock Head)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=771",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Burnt Coat Harbor",
+      "url": "https://archives.uslhs.org/places/burnt-coat-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684903",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,7 +201,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,6 +214,75 @@
       "part": "wikidata:Q5000188",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:771",
+      "part": "wikidata:Q5000188",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:burnt-coat-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-2700",
+      "part": "wikidata:Q5000188",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2892",
+      "part": "wikidata:Q5000188",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002272",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.13411,-68.44717",
+      "part": "wikidata:Q5000188",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:burnt-coat-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:burnt-coat-harbor-light-station-swan-s-island",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

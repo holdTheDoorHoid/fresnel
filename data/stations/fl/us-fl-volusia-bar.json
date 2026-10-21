@@ -2,7 +2,8 @@
   "id": "us-fl-volusia-bar",
   "name": "Volusia Bar Light",
   "other_names": [
-    "Volusia Bar Lighthouse"
+    "Volusia Bar Lighthouse",
+    "Volusia Bar"
   ],
   "country": "US",
   "region": "FL",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.2067,
-    "lon": -81.5794,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 29.20665,
+    "lon": -81.57939,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": "wood",
       "built": 1886,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -64,11 +65,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1885,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1886,
       "event": "built",
@@ -78,13 +85,19 @@
     {
       "year": 1886,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1916,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -121,6 +134,21 @@
       "label": "ARLHS World List of Lights USA869",
       "url": "https://wlol.arlhs.com/lighthouse/USA869.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Volusia Bar",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1840",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Volusia Bar",
+      "url": "https://archives.uslhs.org/places/volusia-bar",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,16 +161,47 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1840",
+      "part": "wikidata:Q7941089",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:volusia-bar",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8409",
+      "part": "wikidata:Q7941089",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:volusia-bar",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,10 @@
 {
   "id": "us-oh-ballast-island",
   "name": "Ballast Island Light Tower",
-  "other_names": [],
+  "other_names": [
+    "Ballast Island",
+    "Ballast Island Light"
+  ],
   "country": "US",
   "region": "OH",
   "county": null,
@@ -14,8 +17,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,18 +33,18 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1916,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 28.0,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-5650",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -66,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1916,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +85,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/492456158",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +102,30 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:ballast-island-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5650",
+      "part": "osm:node/492456158",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.67886,-82.78439",
+      "part": "osm:node/492456158",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -6,7 +6,11 @@
     "Three Sisters Lighthouses",
     "Three Sisters Light #1",
     "Three Sisters Light #2",
-    "Three Sisters Light #3"
+    "Three Sisters Light #3",
+    "Three Sisters",
+    "Nauset",
+    "Three Sisters of Nauset (Twin Lights)",
+    "Beacon, The"
   ],
   "country": "US",
   "region": "MA",
@@ -36,30 +40,34 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001502",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001502"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001502",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789159"
     },
     {
       "register": "NRHP",
       "number": "87001527",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001527"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001527",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789165"
     }
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-975",
     "ccg_list_number": null,
     "nga": null
   },
@@ -79,15 +87,27 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1892,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -140,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496087",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Three Sisters",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=489",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789159",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789165",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -177,6 +217,47 @@
       "key": "osm:node/257496087",
       "part": "wikidata:Q7797819",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:489",
+      "part": "wikidata:Q7797819",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:nauset-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001502",
+      "part": "wikidata:Q7797819",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001527",
+      "part": "station",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:three-sisters",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

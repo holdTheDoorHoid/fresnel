@@ -4,7 +4,9 @@
   "other_names": [
     "Terrible Tilly",
     "Tillamook Lighthouse",
-    "Tillamook Rock Lighthouse"
+    "Tillamook Rock Lighthouse",
+    "Tillamook Rock",
+    "Tilly"
   ],
   "country": "US",
   "region": "OR",
@@ -26,7 +28,7 @@
       "name": null,
       "type": null,
       "material": "mixed",
-      "built": null,
+      "built": 1881,
       "height_m": 18.9,
       "status": "standing",
       "note": null,
@@ -47,7 +49,9 @@
     {
       "register": "NRHP",
       "number": "81000480",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000480"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000480",
+      "listed": "1981-12-09",
+      "nomination": "https://catalog.archives.gov/id/77848932"
     }
   ],
   "aton": {
@@ -60,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,17 +75,29 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1881,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1934,
@@ -92,13 +108,13 @@
     {
       "year": 1957,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +161,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/369576085",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tillamook Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=135",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tillamook Rock",
+      "url": "https://archives.uslhs.org/places/tillamook-rock",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77848932",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,6 +207,49 @@
       "part": "wikidata:Q7802250",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:135",
+      "part": "wikidata:Q7802250",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:tillamook-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3465",
+      "part": "wikidata:Q7802250",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000480",
+      "part": "wikidata:Q7802250",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:tillamook-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

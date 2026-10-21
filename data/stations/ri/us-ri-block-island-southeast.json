@@ -4,11 +4,16 @@
   "other_names": [
     "Block Island Southeast Lighthouse",
     "Block Island South East Light",
-    "Southeast Lighthouse"
+    "Southeast Lighthouse",
+    "Block Island Southeast",
+    "Block Island",
+    "Southeast",
+    "South East Light",
+    "Southeast Light"
   ],
   "country": "US",
   "region": "RI",
-  "county": null,
+  "county": "Washington",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -46,28 +51,67 @@
         "lat": 41.152784,
         "lon": -71.551789
       }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.153657,
+        "lon": -71.550928
+      }
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 41.154666,
+        "lon": -71.551611
+      }
     }
   ],
   "light": {
-    "first_lit": 1994,
+    "first_lit": 1875,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl G 5s",
-    "focal_height_m": 80.0,
-    "range_nm": 20.0,
+    "focal_height_m": 79.6,
+    "range_nm": 17.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90001131",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001131"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90001131",
+      "listed": "1990-08-06",
+      "nomination": "https://catalog.archives.gov/id/41374784"
     },
     {
       "register": "NRHP",
       "number": "97001264",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97001264"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97001264",
+      "listed": "1997-09-25",
+      "nhl": "1997-09-25"
     },
     {
       "register": "America's Most Endangered Historic Places",
@@ -89,20 +133,20 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -116,19 +160,31 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1990,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -136,6 +192,18 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1997,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places and National Historic Landmark",
+      "from": "nrhp"
+    },
+    {
+      "year": 1997,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -194,8 +262,38 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1015253641",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1015253648",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/555526366",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Block Island Southeast",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=41",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Block Island (Southeast)",
+      "url": "https://archives.uslhs.org/places/block-island-southeast",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374784",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -207,7 +305,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -222,7 +319,6 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
       ]
     },
@@ -234,12 +330,109 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1015253641",
+      "part": "osm:way/1015253641",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1015253648",
+      "part": "osm:way/1015253648",
+      "fields": []
+    },
+    {
+      "source": "osm",
       "key": "osm:way/555526366",
       "part": "wikidata:Q4356900",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:41",
+      "part": "wikidata:Q4356900",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:block-island-southeast",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-640",
+      "part": "wikidata:Q4356900",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3489",
+      "part": "wikidata:Q4356900",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90001131",
+      "part": "osm:way/1015253639",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:97001264",
+      "part": "wikidata:Q4356900",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.15341,-71.55207",
+      "part": "wikidata:Q4356900",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:block-island-southeast",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 80.0
+        },
+        {
+          "source": "uslhs",
+          "value": 61.26
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

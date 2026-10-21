@@ -3,7 +3,11 @@
   "name": "Stamford Harbor Ledge Light",
   "other_names": [
     "Stamford Harbor Ledge Lighthouse",
-    "Stamford Harbor Ledge Obstruction Light"
+    "Stamford Harbor Ledge Obstruction Light",
+    "Stamford Harbor",
+    "Stamford Harbor Ledge",
+    "Chatham Rocks",
+    "Stamford Harbor Lighthouse"
   ],
   "country": "US",
   "region": "CT",
@@ -23,30 +27,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1882,
       "height_m": 20.6,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1882,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 18.3,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "91000348",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91000348"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/91000348",
+      "listed": "1991-04-03",
+      "nomination": "https://catalog.archives.gov/id/132354089"
     }
   ],
   "aton": {
@@ -58,8 +64,8 @@
   "agency": "Privately Operated",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +76,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -79,19 +85,31 @@
     {
       "year": 1882,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
+    },
+    {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1882,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1953,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1991,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -133,6 +151,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/716763582",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stamford Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=784",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stamford Harbor",
+      "url": "https://archives.uslhs.org/places/stamford-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132354089",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,9 +196,61 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:784",
+      "part": "wikidata:Q7597392",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:stamford-harbor-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-25195",
+      "part": "wikidata:Q7597392",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2750",
+      "part": "wikidata:Q7597392",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:91000348",
+      "part": "wikidata:Q7597392",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.01361,-73.54278",
+      "part": "wikidata:Q7597392",
+      "fields": [
+        "light"
       ]
     }
   ],
@@ -170,6 +260,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {

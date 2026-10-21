@@ -1,9 +1,18 @@
 {
   "id": "us-wi-baileys-harbor-range-front",
-  "name": "Baileys Harbor Range Front Light",
+  "name": "Baileys harbor Lower Range Light",
   "other_names": [
+    "Baileys Harbor Directional Light",
+    "Baileys Harbor Range Front Light",
     "Baileys Harbor Front Range Light",
-    "Baileys harbor Lower Range Light"
+    "Baileys Harbor Range Rear Light",
+    "Baileys harbor Upper Range Light",
+    "Baileys Harbor Range Lights",
+    "Baileys Harbor Range Front",
+    "Baileys Harbor Range Rear",
+    "Baileys Harbor Range Light",
+    "Baileys Harbor Rear Range Light",
+    "Baileys Harbor Range"
   ],
   "country": "US",
   "region": "WI",
@@ -22,7 +31,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Baileys Harbor Range Front Light",
       "type": "wood_frame",
       "material": "wood",
       "built": 1869,
@@ -30,19 +39,56 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Baileys Harbor Directional Light",
+      "type": null,
+      "material": "wood",
+      "built": 1869,
+      "height_m": 21.0,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 45.069807,
+        "lon": -87.119384
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Baileys Harbor Range Rear Light",
+      "type": null,
+      "material": null,
+      "built": 1870,
+      "height_m": 9.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 45.070833,
+        "lon": -87.121111
+      }
     }
   ],
   "light": {
-    "first_lit": 1869,
-    "deactivated": 1969,
+    "first_lit": 1853,
+    "deactivated": 2015,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 7.0,
+    "characteristic": "FR",
+    "focal_height_m": 21.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
+    {
+      "register": "NRHP",
+      "number": "89001466",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001466",
+      "listed": "1989-09-21",
+      "nomination": "https://catalog.archives.gov/id/106780755"
+    },
     {
       "register": "National Register of Historic Places contributing property",
       "number": null,
@@ -55,35 +101,71 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "THE RIDGES SANCTUARY",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1930"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1869,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1869,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1897,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1930,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1969,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -97,6 +179,18 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 2015,
+      "event": "deactivated",
       "note": null,
       "from": "wikidata"
     }
@@ -112,9 +206,23 @@
       "license": null,
       "caption": null,
       "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BaileysHarborRangeBack.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/BaileysHarborRangeBack.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BaileysHarborRangeBack.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q108657557",
+      "kind": "wikidata"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q83854596",
@@ -131,26 +239,90 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q83856128",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_arri%C3%A8re_de_Baileys_Harbor",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA027",
+      "url": "https://wlol.arlhs.com/lighthouse/USA027.html",
+      "kind": "register"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/560438006",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/560438007",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Baileys Harbor Range Lights",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=257",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baileys Harbor Range Rear",
+      "url": "https://archives.uslhs.org/places/baileys-harbor-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baileys Harbor Range Front",
+      "url": "https://archives.uslhs.org/places/baileys-harbor-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106780755",
+      "kind": "register"
     }
   ],
   "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q108657557",
+      "part": "uslhs:3561",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "light",
+        "region",
+        "structures"
+      ]
+    },
     {
       "source": "wikidata",
       "key": "wikidata:Q83854596",
       "part": "wikidata:Q83854596",
       "fields": [
         "aton",
-        "county",
         "events",
         "kind",
-        "light",
-        "name",
         "photos",
-        "region",
         "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q83856128",
+      "part": "wikidata:Q83856128",
+      "fields": [
+        "events",
+        "photos",
         "structures"
       ]
     },
@@ -159,7 +331,86 @@
       "key": "osm:way/560438006",
       "part": "wikidata:Q83854596",
       "fields": [
-        "location"
+        "location",
+        "name"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/560438007",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:257",
+      "part": "wikidata:Q83854596",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:baileys-harbor-range-front-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:baileys-harbor-range-rear",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21228",
+      "part": "wikidata:Q83854596",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21229",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3561",
+      "part": "uslhs:3561",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9528",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001466",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:baileys-harbor-range",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

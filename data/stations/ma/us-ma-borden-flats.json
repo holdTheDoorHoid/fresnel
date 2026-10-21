@@ -2,11 +2,13 @@
   "id": "us-ma-borden-flats",
   "name": "Borden Flats Light",
   "other_names": [
-    "Borden Flats Lighthouse"
+    "Borden Flats Lighthouse",
+    "Borden Flats",
+    "Borden Flats Light Station"
   ],
   "country": "US",
   "region": "MA",
-  "county": null,
+  "county": "Bristol",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -36,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 14.0,
-    "range_nm": 11.0,
+    "focal_height_m": 14.3,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001528",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001528"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001528",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789687"
     }
   ],
   "aton": {
@@ -54,26 +58,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1963"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://www.bordenflats.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1875,
@@ -83,14 +94,32 @@
     },
     {
       "year": 1881,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1881,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1963,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +166,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/628919990",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Borden Flats",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=621",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Borden Flats",
+      "url": "https://archives.uslhs.org/places/borden-flats",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789687",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/massachusetts",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,6 +216,75 @@
       "part": "wikidata:Q4944488",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:621",
+      "part": "wikidata:Q4944488",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:borden-flats",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18925",
+      "part": "wikidata:Q4944488",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2823",
+      "part": "wikidata:Q4944488",
+      "fields": [
+        "access",
+        "agency",
+        "county",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001528",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.70444,-71.17440",
+      "part": "wikidata:Q4944488",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:borden-flats",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ma:borden-flats-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

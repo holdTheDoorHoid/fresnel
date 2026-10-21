@@ -2,7 +2,8 @@
   "id": "us-va-lambert-point",
   "name": "Lambert Point Light",
   "other_names": [
-    "Lambert Point Lighthouse"
+    "Lambert Point Lighthouse",
+    "Lambert Point"
   ],
   "country": "US",
   "region": "VA",
@@ -11,13 +12,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 36.875,
-    "lon": -76.331,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 36.876548,
+    "lon": -76.331512,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,7 +27,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +36,11 @@
     "first_lit": 1872,
     "deactivated": 1911,
     "lens": null,
-    "characteristic": "R",
+    "characteristic": "Fl G 2.5s",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,8 +73,20 @@
     {
       "year": 1872,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1892,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1911,
@@ -105,6 +118,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Lambert_Point_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Lambert Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1931",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lambert Point",
+      "url": "https://archives.uslhs.org/places/lambert-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,15 +140,53 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1931",
+      "part": "wikidata:Q6481286",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8961",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.87439,-76.33128",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1911
+        },
+        {
+          "source": "uslhs",
+          "value": 1892
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

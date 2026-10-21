@@ -2,7 +2,8 @@
   "id": "us-ri-poplar-point",
   "name": "Poplar Point Light",
   "other_names": [
-    "Poplar Point Lighthouse"
+    "Poplar Point Lighthouse",
+    "Poplar Point"
   ],
   "country": "US",
   "region": "RI",
@@ -16,36 +17,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1765,
-      "height_m": null,
+      "height_m": 10.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1831,
-    "deactivated": 1882,
+    "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 15.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001703",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001703"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001703",
+      "listed": "1988-02-25",
+      "nomination": "https://catalog.archives.gov/id/41374699"
     }
   ],
   "aton": {
@@ -54,11 +57,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Russell & Cathy Shippee",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +73,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,20 +86,32 @@
     },
     {
       "year": 1831,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1831,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1882,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -128,6 +143,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/718133480",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Poplar Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=686",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Poplar Point",
+      "url": "https://archives.uslhs.org/places/poplar-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374699",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,10 +189,79 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:686",
+      "part": "wikidata:Q7229418",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:poplar-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3502",
+      "part": "wikidata:Q7229418",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001703",
+      "part": "wikidata:Q7229418",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.57103,-71.43915",
+      "part": "wikidata:Q7229418",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:poplar-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

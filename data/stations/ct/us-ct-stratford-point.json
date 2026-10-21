@@ -2,7 +2,8 @@
   "id": "us-ct-stratford-point",
   "name": "Stratford Point Light",
   "other_names": [
-    "Stratford Point Lighthouse"
+    "Stratford Point Lighthouse",
+    "Stratford Point"
   ],
   "country": "US",
   "region": "CT",
@@ -54,20 +55,22 @@
     }
   ],
   "light": {
-    "first_lit": 1881,
+    "first_lit": 1822,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 20s",
-    "focal_height_m": 16.0,
-    "range_nm": 16.0,
+    "focal_height_m": 15.8,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001476",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001476"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001476",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353076"
     }
   ],
   "aton": {
@@ -80,7 +83,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -92,7 +95,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -104,9 +107,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1822,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1881,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -114,6 +123,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1910,
@@ -124,7 +139,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -181,6 +196,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/929356965",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stratford Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=793",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stratford Point",
+      "url": "https://archives.uslhs.org/places/stratford-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353076",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -193,7 +228,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -225,6 +259,61 @@
       "fields": [
         "events",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:793",
+      "part": "wikidata:Q7621979",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:stratford-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21230",
+      "part": "wikidata:Q7621979",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2752",
+      "part": "wikidata:Q7621979",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001476",
+      "part": "wikidata:Q7621979",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.15203,-73.10322",
+      "part": "wikidata:Q7621979",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:stratford-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -4,7 +4,10 @@
   "other_names": [
     "Point Isabel Light",
     "Port Isabel Light",
-    "Port Isabel Lighthouse"
+    "Port Isabel Lighthouse",
+    "Port Isabel",
+    "Point Isabel",
+    "Point (Port) Isabel"
   ],
   "country": "US",
   "region": "TX",
@@ -18,36 +21,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1852,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1853,
+    "deactivated": 1905,
     "lens": null,
-    "characteristic": "FF W",
-    "focal_height_m": 28.0,
+    "characteristic": "F W",
+    "focal_height_m": 27.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "76002014",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002014"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76002014",
+      "listed": "1976-04-30",
+      "nomination": "https://catalog.archives.gov/id/40971473"
     },
     {
       "register": "Texas State Historic Site",
@@ -62,22 +67,22 @@
     "nga": null
   },
   "agency": "Texas Historical Commission",
-  "ownership": "unknown",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -91,13 +96,31 @@
     {
       "year": 1853,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1905,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -150,6 +173,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/664956704",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Port Isabel",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=159",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Texas: South",
+      "url": "https://www.ibiblio.org/lighthouse/txs.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port Isabel",
+      "url": "https://archives.uslhs.org/places/port-isabel",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/40971473",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +205,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -178,10 +220,97 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:159",
+      "part": "wikidata:Q7208052",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:txs:port-isabel",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3521",
+      "part": "wikidata:Q7208052",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76002014",
+      "part": "wikidata:Q7208052",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:26.07772,-97.20745",
+      "part": "wikidata:Q7208052",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:tx:point-port-isabel",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1852
+        },
+        {
+          "source": "osm",
+          "value": 1852
+        },
+        {
+          "source": "uslhs",
+          "value": 1853
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

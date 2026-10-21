@@ -2,7 +2,8 @@
   "id": "us-ms-lake-borgne",
   "name": "Lake Borgne Light",
   "other_names": [
-    "Lake Borgne Lighthouse"
+    "Lake Borgne Lighthouse",
+    "Lake Borgne"
   ],
   "country": "US",
   "region": "MS",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.175,
-    "lon": -89.454,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.175553,
+    "lon": -89.463165,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +36,11 @@
     "first_lit": 1889,
     "deactivated": 1937,
     "lens": null,
-    "characteristic": "F W",
+    "characteristic": "Fl W 2.5s",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -115,6 +116,11 @@
       "label": "ARLHS World List of Lights USA424",
       "url": "https://wlol.arlhs.com/lighthouse/USA424.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Lake Borgne",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1823",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,11 +134,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1823",
+      "part": "wikidata:Q23074244",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.17541,-89.46444",
+      "part": "wikidata:Q23074244",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.17568,-89.46247",
+      "part": "wikidata:Q23074244",
+      "fields": []
     }
   ],
   "conflicts": [],

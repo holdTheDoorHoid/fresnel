@@ -163,6 +163,13 @@ function normaliseNotation(s: string, notes: string[]): string {
   s = s.replace(/\bFI(?=[\s(\d]|$)/g, 'Fl'); // a capital i for the l
   s = s.replace(/\bQ\s*F(?:l|I)?(?=\s|$)/g, 'Q'); // "QF W", "QFl W", "Q F W": quick flashing
   s = s.replace(/\bAlt\b/gi, 'Al');
+  // The US Light List's compact forms: "FG" fixed green, "QR" quick red, "VQW".
+  s = s.replace(/^(F|Q|VQ|UQ|IQ)(W|R|G|Y)(?=\s|$)/, '$1 $2');
+  // A bare number after the period ("Iso W 6s 70") is a height or range from another column.
+  s = s.replace(/^(.*\d(?:\.\d+)?s)\s+(\d+(?:\.\d+)?)$/, (_, head: string, n: string) => {
+    notes.push(`The record ends with “${n}”, which is not part of a light's pattern (probably a height or range), so it is left out.`);
+    return head;
+  });
   s = s.replace(/\(\s*\(\s*([\d+\s]+)\s*\)\s*\)/g, '($1)');
   s = s.replace(/\bevery\s+(?=\d)/gi, '');
   s = s.replace(/\s+/g, ' ').trim();

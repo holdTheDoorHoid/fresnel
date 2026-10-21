@@ -3,7 +3,10 @@
   "name": "Duluth South Breakwater Outer Light",
   "other_names": [
     "Duluth South Breakwater Outer Lighthouse",
-    "Duluth Harbor South Breakwater Outer Light"
+    "Duluth Harbor South Breakwater Outer Light",
+    "Duluth Harbor South Breakwater Outer",
+    "Duluth South Breakwater Light",
+    "Duluth South Breakwater Outer"
   ],
   "country": "US",
   "region": "MN",
@@ -33,20 +36,21 @@
     }
   ],
   "light": {
-    "first_lit": 1901,
+    "first_lit": 1874,
     "deactivated": null,
     "lens": null,
     "characteristic": "F G",
-    "focal_height_m": 13.0,
+    "focal_height_m": 13.4,
     "range_nm": 13.9,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "16000341",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000341"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/16000341",
+      "listed": "2016-06-07"
     }
   ],
   "aton": {
@@ -71,7 +75,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,6 +87,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1901,
       "event": "first_lit",
       "note": null,
@@ -91,7 +107,7 @@
     {
       "year": 2016,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +154,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1075242726",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Duluth Harbor South Breakwater Outer",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=265",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,7 +176,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -164,8 +189,55 @@
       "part": "wikidata:Q5313523",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:265",
+      "part": "wikidata:Q5313523",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:duluth-harbor-south-breakwater-outer-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15845",
+      "part": "wikidata:Q5313523",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:16000341",
+      "part": "wikidata:Q5313523",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.78013,-92.08751",
+      "part": "wikidata:Q5313523",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:duluth-south-breakwater-outer",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

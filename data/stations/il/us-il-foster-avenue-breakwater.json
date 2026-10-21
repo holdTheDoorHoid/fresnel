@@ -1,7 +1,11 @@
 {
   "id": "us-il-foster-avenue-breakwater",
   "name": "Foster Avenue Breakwater Light",
-  "other_names": [],
+  "other_names": [
+    "Foster Avenue Breakwater",
+    "Foster Beach",
+    "Foster Avenue Pierhead Light"
+  ],
   "country": "US",
   "region": "IL",
   "county": null,
@@ -14,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -33,15 +37,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl W 3s",
+    "focal_height_m": 12.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20140",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +79,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/210392309",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,6 +96,28 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:foster-avenue-breakwater",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20140",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.97779,-87.64616",
+      "part": "osm:way/210392309",
+      "fields": [
+        "light"
       ]
     }
   ],

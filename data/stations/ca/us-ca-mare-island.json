@@ -2,7 +2,8 @@
   "id": "us-ca-mare-island",
   "name": "Mare Island Light",
   "other_names": [
-    "Mare Island Lighthouse"
+    "Mare Island Lighthouse",
+    "Mare Island"
   ],
   "country": "US",
   "region": "CA",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.074834,
-    "lon": -122.250464,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.075587,
+    "lon": -122.250572,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1912) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1873,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -72,8 +73,14 @@
     {
       "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1912,
@@ -84,7 +91,7 @@
     {
       "year": 1917,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -126,6 +133,16 @@
       "label": "ARLHS World List of Lights USA475",
       "url": "https://wlol.arlhs.com/lighthouse/USA475.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Mare Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1789",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mare Island",
+      "url": "https://archives.uslhs.org/places/mare-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,15 +156,46 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1789",
+      "part": "wikidata:Q6758727",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8376",
+      "part": "wikidata:Q6758727",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 12.0
+        },
+        {
+          "source": "uslhs",
+          "value": 22.56
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

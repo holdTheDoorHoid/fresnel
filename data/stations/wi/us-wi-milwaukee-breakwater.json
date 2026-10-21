@@ -3,7 +3,11 @@
   "name": "Milwaukee Breakwater Light",
   "other_names": [
     "Milwaukee Breakwater light",
-    "Milwaukee Breakwater Lighthouse"
+    "Milwaukee Breakwater Lighthouse",
+    "Milwaukee Breakwater",
+    "Milwaukee North Breakwater New",
+    "Milwaukee Breakwater Old",
+    "Milwaukee Breakwater Entrance South Side Light"
   ],
   "country": "US",
   "region": "WI",
@@ -33,20 +37,22 @@
     }
   ],
   "light": {
-    "first_lit": 1926,
+    "first_lit": 1899,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 10s",
-    "focal_height_m": 61.0,
-    "range_nm": 14.0,
+    "characteristic": "Fl G 2.5s",
+    "focal_height_m": 14.6,
+    "range_nm": 6.1,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "11000678",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000678"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/11000678",
+      "listed": "2011-09-16",
+      "nomination": "https://catalog.archives.gov/id/75325111"
     },
     {
       "register": "listed in the Wisconsin State Register of Historic Places",
@@ -63,40 +69,52 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1966"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1926,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1926,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1966,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2011,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +166,31 @@
       "label": "Website",
       "url": "https://milwaukeebreakwaterlighthouse.org/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Milwaukee Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=243",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: MILWAUKEE NORTH BREAKWATER NEW",
+      "url": "https://archives.uslhs.org/places/milwaukee-north-breakwater-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Milwaukee Breakwater Old",
+      "url": "https://archives.uslhs.org/places/milwaukee-breakwater-old",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325111",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,6 +218,78 @@
         "light",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:243",
+      "part": "wikidata:Q6861683",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:milwaukee-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20645",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3572",
+      "part": "wikidata:Q6861683",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9559",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:11000678",
+      "part": "wikidata:Q6861683",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.02539,-87.88187",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.02695,-87.88193",
+      "part": "wikidata:Q6861683",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:milwaukee-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -189,6 +303,10 @@
         {
           "source": "osm",
           "value": 61.0
+        },
+        {
+          "source": "uslhs",
+          "value": 18.59
         }
       ],
       "note": "Sources differ by more than 3 m."

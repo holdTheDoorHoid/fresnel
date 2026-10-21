@@ -2,7 +2,9 @@
   "id": "us-ak-fairway-island",
   "name": "Fairway Island Light",
   "other_names": [
-    "Fairway Island Lighthouse"
+    "Fairway Island Lighthouse",
+    "Fairway Island",
+    "Fairway Island Light 32"
   ],
   "country": "US",
   "region": "AK",
@@ -11,39 +13,39 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 57.441389,
-    "lon": -134.871389,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 57.442862,
+    "lon": -134.871497,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "wood",
+      "built": 1904,
+      "height_m": 1.8,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1904,
     "deactivated": 1917,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl R 6s",
+    "focal_height_m": 3.7,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-25310",
     "arlhs": "ALK021",
     "ccg_list_number": null,
     "nga": null
@@ -63,12 +65,24 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1911,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1917,
       "event": "deactivated",
@@ -99,6 +113,21 @@
       "label": "ARLHS World List of Lights ALK021",
       "url": "https://wlol.arlhs.com/lighthouse/ALK021.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Fairway Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1781",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fairway Island",
+      "url": "https://archives.uslhs.org/places/fairway-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,14 +140,64 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1781",
+      "part": "wikidata:Q3088886",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:fairway-island-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-25310",
+      "part": "wikidata:Q3088886",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8366",
+      "part": "wikidata:Q3088886",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1917
+        },
+        {
+          "source": "uslhs",
+          "value": 1911
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

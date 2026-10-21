@@ -4,7 +4,9 @@
   "other_names": [
     "Point Betsie Lighthouse",
     "Point Betsie Light Station",
-    "Pointe Betsie Lighthouse"
+    "Pointe Betsie Lighthouse",
+    "Point Betsie",
+    "Point aux Becs Scies"
   ],
   "country": "US",
   "region": "MI",
@@ -13,8 +15,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.691648,
-    "lon": -86.254727,
+    "lat": 44.691298,
+    "lon": -86.255332,
     "precision": "exact",
     "from": "osm"
   },
@@ -30,7 +32,11 @@
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 44.691648,
+        "lon": -86.254727
+      }
     },
     {
       "role": "tower",
@@ -41,10 +47,21 @@
       "height_m": null,
       "status": "standing",
       "note": null,
+      "from": "osm"
+    },
+    {
+      "role": "fog_signal",
+      "name": "Fog Signal Building",
+      "type": null,
+      "material": null,
+      "built": 1912,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
       "from": "osm",
       "location": {
-        "lat": 44.691298,
-        "lon": -86.255332
+        "lat": 44.691604,
+        "lon": -86.254912
       }
     },
     {
@@ -64,20 +81,22 @@
     }
   ],
   "light": {
-    "first_lit": 1859,
+    "first_lit": 1858,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 16.0,
-    "range_nm": 19.0,
+    "focal_height_m": 15.8,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001375",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001375"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001375",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28890721"
     }
   ],
   "aton": {
@@ -90,28 +109,47 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1983"
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "http://pointbetsie.org/accommodation/keepers-quarters?#booking-form-866",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1858,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1859,
@@ -126,9 +164,21 @@
       "from": "osm"
     },
     {
+      "year": 1912,
+      "event": "built",
+      "note": null,
+      "from": "osm"
+    },
+    {
+      "year": 1983,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -198,6 +248,11 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/810725236",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/810725237",
       "kind": "osm"
     },
@@ -205,6 +260,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/810725238",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Betsie",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=199",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Betsie",
+      "url": "https://archives.uslhs.org/places/point-betsie",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28890721",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -217,7 +297,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -229,9 +308,7 @@
       "source": "osm",
       "key": "osm:way/1107038262",
       "part": "wikidata:Q7207954",
-      "fields": [
-        "location"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -246,6 +323,7 @@
       "key": "osm:way/1107314095",
       "part": "osm:way/1107314095",
       "fields": [
+        "location",
         "structures"
       ]
     },
@@ -253,8 +331,15 @@
       "source": "osm",
       "key": "osm:way/224982276",
       "part": "wikidata:Q7207954",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/810725236",
+      "part": "osm:way/810725236",
       "fields": [
-        "light"
+        "events",
+        "structures"
       ]
     },
     {
@@ -268,6 +353,71 @@
       "key": "osm:way/810725238",
       "part": "osm:way/810725238",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:199",
+      "part": "wikidata:Q7207954",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:point-betsie",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18370",
+      "part": "wikidata:Q7207954",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3007",
+      "part": "wikidata:Q7207954",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001375",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.69126,-86.25532",
+      "part": "osm:way/1107314095",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:point-betsie",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:point-betsie-keepers-quarters",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
   "conflicts": [],

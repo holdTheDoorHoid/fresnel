@@ -3,7 +3,10 @@
   "name": "Oswego Harbor West Pierhead Light",
   "other_names": [
     "Oswego Harbor West Pierhead Lighthouse",
-    "West Pierhead Light"
+    "West Pierhead Light",
+    "Oswego West Pierhead",
+    "Oswego Harbor West Pierhead",
+    "Oswego West Pierhead Lighthouse"
   ],
   "country": "US",
   "region": "NY",
@@ -33,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 1934,
+    "first_lit": 1880,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 10s",
-    "focal_height_m": 17.0,
-    "range_nm": 11.0,
+    "focal_height_m": 17.4,
+    "range_nm": 9.6,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "00001468",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00001468"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00001468",
+      "listed": "2000-12-01",
+      "nomination": "https://catalog.archives.gov/id/75320861"
     }
   ],
   "aton": {
@@ -59,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -83,16 +88,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1880,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1934,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1934,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1968,
@@ -103,7 +120,7 @@
     {
       "year": 2000,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -160,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/529001425",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Oswego West Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=308",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Oswego Harbor West Pierhead",
+      "url": "https://archives.uslhs.org/places/oswego-harbor-west-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75320861",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -172,7 +209,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -186,7 +222,6 @@
       "part": "wikidata:Q7108231",
       "fields": [
         "events",
-        "light",
         "location"
       ]
     },
@@ -203,6 +238,55 @@
       "key": "osm:way/529001425",
       "part": "wikidata:Q7108231",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:308",
+      "part": "wikidata:Q7108231",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:oswego-harbor-west-pierhead-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2080",
+      "part": "wikidata:Q7108231",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3426",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:00001468",
+      "part": "wikidata:Q7108231",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.47327,-76.51705",
+      "part": "wikidata:Q7108231",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [

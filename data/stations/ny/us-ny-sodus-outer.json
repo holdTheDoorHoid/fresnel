@@ -2,7 +2,10 @@
   "id": "us-ny-sodus-outer",
   "name": "Sodus Outer Light",
   "other_names": [
-    "Sodus Outer Lighthouse"
+    "Sodus Outer Lighthouse",
+    "Sodus Outer",
+    "Sodus Bay West Pier",
+    "Sodus Bay East Pier Light 1"
   ],
   "country": "US",
   "region": "NY",
@@ -32,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1938,
+    "first_lit": 1901,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Iso W 6s",
-    "focal_height_m": 15.5,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 5.5,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -64,7 +67,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -74,6 +77,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1938,
@@ -125,6 +140,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2151887156",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sodus Outer",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=306",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -137,7 +162,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -150,6 +174,55 @@
       "part": "wikidata:Q7553442",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:306",
+      "part": "wikidata:Q7553442",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyw:sodus-outer-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2170",
+      "part": "wikidata:Q7553442",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2180",
+      "part": "wikidata:Q7553442",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.27694,-76.97230",
+      "part": "wikidata:Q7553442",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.27741,-76.97396",
+      "part": "wikidata:Q7553442",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:sodus-outer",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

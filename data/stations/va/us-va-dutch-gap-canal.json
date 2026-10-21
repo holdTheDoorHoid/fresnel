@@ -1,7 +1,12 @@
 {
   "id": "us-va-dutch-gap-canal",
   "name": "Dutch Gap Canal Lights",
-  "other_names": [],
+  "other_names": [
+    "Dutch Gap Canal",
+    "Fort Wool",
+    "Rappahannock Shoal Channel South Range Rear",
+    "James River Channel Light 151"
+  ],
   "country": "US",
   "region": "VA",
   "county": "Chesterfield",
@@ -9,12 +14,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.3766,
-    "lon": -77.3595,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.376389,
+    "lon": -77.359444,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -22,27 +27,27 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": 1875,
+      "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
     "first_lit": 1878,
     "deactivated": 1910,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Q G",
+    "focal_height_m": 4.5,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "2-9385",
+    "arlhs": "USA-106",
     "ccg_list_number": null,
     "nga": null
   },
@@ -70,7 +75,7 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -84,6 +89,24 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1918,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1991,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2016,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -104,6 +127,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phares_de_Dutch_Gap_Canal",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Dutch Gap Canal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1928",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -116,15 +149,75 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
-        "region",
-        "structures"
+        "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1928",
+      "part": "wikidata:Q5317296",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:dutch-gap-canal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:fort-wool",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:rappahannock-shoal-channel-south-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-12705",
+      "part": "wikidata:Q5317296",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.37662,-77.35951",
+      "part": "wikidata:Q5317296",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1910
+        },
+        {
+          "source": "rowlett",
+          "value": 2016
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

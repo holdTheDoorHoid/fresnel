@@ -1,7 +1,10 @@
 {
   "id": "us-la-pass-a-loutre",
   "name": "Pass A L'Outre Light",
-  "other_names": [],
+  "other_names": [
+    "Pass a l'Outre",
+    "Pass à l'Outre"
+  ],
   "country": "US",
   "region": "LA",
   "county": "Plaquemines",
@@ -9,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.1901,
-    "lon": -89.0371,
+    "lat": 29.19014,
+    "lon": -89.03706,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -61,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -70,7 +73,7 @@
     {
       "year": 1852,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -82,7 +85,7 @@
     {
       "year": 1930,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -119,6 +122,16 @@
       "label": "ARLHS World List of Lights USA580",
       "url": "https://wlol.arlhs.com/lighthouse/USA580.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Pass a l'Outre",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=814",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,16 +145,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:814",
+      "part": "wikidata:Q39060672",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:pass-a-l-outre",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

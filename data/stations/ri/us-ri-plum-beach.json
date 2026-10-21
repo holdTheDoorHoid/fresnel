@@ -2,7 +2,8 @@
   "id": "us-ri-plum-beach",
   "name": "Plum Beach Light",
   "other_names": [
-    "Plum Beach Lighthouse"
+    "Plum Beach Lighthouse",
+    "Plum Beach"
   ],
   "country": "US",
   "region": "RI",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1897,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 2003,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
     "focal_height_m": 16.5,
-    "range_nm": 2.0,
+    "range_nm": 3.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000281",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000281"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000281",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374703"
     }
   ],
   "aton": {
@@ -58,7 +61,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +72,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,9 +85,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1897,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1899,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1941,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -175,6 +202,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713487094",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Plum Beach",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=402",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Plum Beach",
+      "url": "https://archives.uslhs.org/places/plum-beach",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374703",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -200,7 +247,6 @@
       "key": "osm:node/1580008275",
       "part": "wikidata:Q7205303",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -209,9 +255,84 @@
       "key": "osm:way/713487094",
       "part": "wikidata:Q7205303",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:402",
+      "part": "wikidata:Q7205303",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:plum-beach",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19130",
+      "part": "wikidata:Q7205303",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3499",
+      "part": "wikidata:Q7205303",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000281",
+      "part": "wikidata:Q7205303",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.53028,-71.40522",
+      "part": "wikidata:Q7205303",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:plum-beach",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2003
+        },
+        {
+          "source": "uslhs",
+          "value": 1897
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

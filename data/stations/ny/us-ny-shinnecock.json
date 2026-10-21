@@ -2,7 +2,9 @@
   "id": "us-ny-shinnecock",
   "name": "Shinnecock Light",
   "other_names": [
-    "Shinnecock Lighthouse"
+    "Shinnecock Lighthouse",
+    "Shinnecock",
+    "Ponquogue, Great West Bay"
   ],
   "country": "US",
   "region": "NY",
@@ -11,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.8506,
-    "lon": -72.5042,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 40.8505,
+    "lon": -72.5041,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -35,11 +37,11 @@
     "first_lit": 1858,
     "deactivated": 1931,
     "lens": null,
-    "characteristic": "F W (1901)",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl(2) W 15s",
+    "focal_height_m": 22.9,
+    "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -51,8 +53,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -72,7 +74,7 @@
     {
       "year": 1858,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -110,6 +112,16 @@
       "label": "ARLHS World List of Lights USA755",
       "url": "https://wlol.arlhs.com/lighthouse/USA755.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Shinnecock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=852",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,15 +134,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:852",
+      "part": "wikidata:Q7497681",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:shinnecock-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-675",
+      "part": "wikidata:Q7497681",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

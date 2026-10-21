@@ -2,7 +2,8 @@
   "id": "us-ca-point-blunt",
   "name": "Point Blunt Light",
   "other_names": [
-    "Point Blunt Lighthouse"
+    "Point Blunt Lighthouse",
+    "Point Blunt"
   ],
   "country": "US",
   "region": "CA",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.853119,
-    "lon": -122.419067,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.8532,
+    "lon": -122.41913,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1915,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 6.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1956,
+    "first_lit": 1915,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 5s",
-    "focal_height_m": 18.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 18.3,
+    "range_nm": 4.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,7 +65,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -74,6 +75,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1915,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1956,
@@ -120,6 +133,21 @@
       "label": "ARLHS World List of Lights USA617",
       "url": "https://wlol.arlhs.com/lighthouse/USA617.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point Blunt",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=837",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Blunt",
+      "url": "https://archives.uslhs.org/places/point-blunt",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,17 +160,81 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:837",
+      "part": "wikidata:Q7207964",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-blunt-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4335",
+      "part": "wikidata:Q7207964",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2714",
+      "part": "wikidata:Q7207964",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.85322,-122.41921",
+      "part": "wikidata:Q7207964",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-blunt",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1956
+        },
+        {
+          "source": "uslhs",
+          "value": 1915
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,10 @@
   "id": "us-ct-sheffield-island",
   "name": "Sheffield Island Light",
   "other_names": [
-    "Sheffield Island Lighthouse"
+    "Sheffield Island Lighthouse",
+    "Sheffield Island",
+    "Norwalk",
+    "Norwalk Island Lighthouse"
   ],
   "country": "US",
   "region": "CT",
@@ -16,75 +19,95 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1868,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1828,
+    "deactivated": 1902,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 15.8,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88003222",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003222"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003222",
+      "listed": "1989-01-19",
+      "nomination": "https://catalog.archives.gov/id/132353988"
     }
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-753",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": true,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1868,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
+    },
+    {
+      "year": 1902,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -126,6 +149,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/716771601",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sheffield Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=786",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sheffield Island",
+      "url": "https://archives.uslhs.org/places/sheffield-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353988",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,6 +201,53 @@
       "key": "osm:way/716771601",
       "part": "wikidata:Q15458192",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:786",
+      "part": "wikidata:Q15458192",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:sheffield-island-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2748",
+      "part": "wikidata:Q15458192",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88003222",
+      "part": "wikidata:Q15458192",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:sheffield-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

@@ -2,7 +2,9 @@
   "id": "us-va-windmill-point",
   "name": "Windmill Point Light",
   "other_names": [
-    "Windmill Point Lighthouse"
+    "Windmill Point Lighthouse",
+    "Windmill Point",
+    "Windmill Point VA"
   ],
   "country": "US",
   "region": "VA",
@@ -11,24 +13,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.5968,
-    "lon": -76.2359,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.596924,
+    "lon": -76.236081,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1834,
+      "height_m": 13.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,10 +38,10 @@
     "deactivated": 1965,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 10.5,
-    "range_nm": 7.8,
+    "focal_height_m": 10.4,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,16 +72,34 @@
   "stay": null,
   "events": [
     {
+      "year": 1834,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1869,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1869,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 2008,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -105,6 +125,21 @@
       "label": "ARLHS World List of Lights USA898",
       "url": "https://wlol.arlhs.com/lighthouse/USA898.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Windmill Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1939",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Windmill Point VA",
+      "url": "https://archives.uslhs.org/places/windmill-point-va",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,14 +153,53 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1939",
+      "part": "wikidata:Q8024300",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:windmill-point-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7330",
+      "part": "wikidata:Q8024300",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8977",
+      "part": "wikidata:Q8024300",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.59693,-76.23609",
+      "part": "wikidata:Q8024300",
+      "fields": [
+        "light"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

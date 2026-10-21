@@ -1,24 +1,32 @@
 {
   "id": "us-mi-middle-neebish-lower-nicolet-range",
   "name": "Middle Neebish (Lower Nicolet) Range Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Lower Nicolet West Range",
+    "Lower Nicolet East Range Front",
+    "Lower Nicolet West Range Front",
+    "Middle Neebish",
+    "Lower Nicolet West Range Rear",
+    "Lower Nicolet East Range Front Light",
+    "Lower Nicolet West Range Front Light"
+  ],
   "country": "US",
   "region": "MI",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 46.324784,
     "lon": -84.175723,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
-      "role": "tower",
+      "role": "front_range",
       "name": null,
       "type": null,
       "material": null,
@@ -30,18 +38,18 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "F W",
+    "focal_height_m": 18.3,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-13355",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -61,12 +69,25 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1993,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,6 +101,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=839",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lower Nicolet West Range Front",
+      "url": "https://archives.uslhs.org/places/lower-nicolet-west-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,15 +119,80 @@
       "key": "osm:node/1011851645",
       "part": "osm:node/1011851645",
       "fields": [
-        "kind",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:839",
+      "part": "osm:node/1011851645",
+      "fields": [
+        "kind",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:lower-nicolet-east-range-front-2",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:lower-nicolet-west-range-front-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:lower-nicolet-west-range-rear-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-13355",
+      "part": "osm:node/1011851645",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-13365",
+      "part": "osm:node/1011851645",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9768",
+      "part": "osm:node/1011851645",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.32462,-84.17650",
+      "part": "osm:node/1011851645",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.32479,-84.17574",
+      "part": "osm:node/1011851645",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

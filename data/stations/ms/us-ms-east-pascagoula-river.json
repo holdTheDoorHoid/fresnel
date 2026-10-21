@@ -2,7 +2,8 @@
   "id": "us-ms-east-pascagoula-river",
   "name": "East Pascagoula River Light",
   "other_names": [
-    "East Pascagoula River Lighthouse"
+    "East Pascagoula River Lighthouse",
+    "East Pascagoula River"
   ],
   "country": "US",
   "region": "MS",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.35,
-    "lon": -88.568,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.348182,
+    "lon": -88.571093,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -24,11 +25,11 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
-      "height_m": null,
+      "built": 1854,
+      "height_m": 10.7,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1906,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.6,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,13 +73,19 @@
     {
       "year": 1854,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1906,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -110,6 +117,16 @@
       "label": "ARLHS World List of Lights USA260",
       "url": "https://wlol.arlhs.com/lighthouse/USA260.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: East Pascagoula River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1827",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: East Pascagoula River Light",
+      "url": "https://archives.uslhs.org/places/east-pascagoula-river-light",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,15 +139,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1827",
+      "part": "wikidata:Q23074210",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8541",
+      "part": "wikidata:Q23074210",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

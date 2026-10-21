@@ -2,7 +2,9 @@
   "id": "us-or-pelican-bay",
   "name": "Pelican Bay Light",
   "other_names": [
-    "Pelican Bay Lighthouse"
+    "Pelican Bay Lighthouse",
+    "Pelican Bay",
+    "Port of Brookings"
   ],
   "country": "US",
   "region": "OR",
@@ -35,11 +37,11 @@
     "first_lit": 1999,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(3) W 19.5s",
-    "focal_height_m": 43.0,
+    "characteristic": "Fl(3) W 20s",
+    "focal_height_m": 42.9,
     "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -77,6 +79,12 @@
     },
     {
       "year": 1999,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1999,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -110,6 +118,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/843511989",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +147,30 @@
       "part": "wikidata:Q7161385",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:pelican-bay",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-570",
+      "part": "wikidata:Q7161385",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.04166,-124.26249",
+      "part": "wikidata:Q7161385",
+      "fields": [
+        "light"
       ]
     }
   ],

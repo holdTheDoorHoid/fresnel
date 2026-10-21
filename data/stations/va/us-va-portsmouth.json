@@ -5,7 +5,10 @@
     "LV-101",
     "United States Lightship 101",
     "United States lightship Portsmouth",
-    "United States lightship Portsmouth (LV-101)"
+    "United States lightship Portsmouth (LV-101)",
+    "Lightship Portsmouth LV 101/WAL 524",
+    "LIGHTSHIP No. 101, PORTSMOUTH",
+    "Lightship # 101"
   ],
   "country": "US",
   "region": "VA",
@@ -14,10 +17,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 36.8386,
-    "lon": -76.2986,
+    "lat": 36.83702,
+    "lon": -76.29611,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -36,7 +39,10 @@
     {
       "register": "NRHP",
       "number": "89001080",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001080"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001080",
+      "listed": "1989-05-05",
+      "nhl": "1989-05-05",
+      "nomination": "https://catalog.archives.gov/id/41679105"
     },
     {
       "register": "National Historic Landmark",
@@ -71,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -91,8 +97,14 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -137,6 +149,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Portsmouth_%28ship%2C_1916%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Portsmouth LV 101/WAL 524",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=447",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41679105",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -150,17 +172,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:447",
+      "part": "wikidata:Q7890709",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001080",
+      "part": "wikidata:Q7890709",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:portsmouth-ls-lv101",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

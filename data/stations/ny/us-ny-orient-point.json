@@ -2,7 +2,11 @@
   "id": "us-ny-orient-point",
   "name": "Orient Point Light",
   "other_names": [
-    "Orient Point Lighthouse"
+    "Orient Point Lighthouse",
+    "Orient Point",
+    "\"Coffee Pot\"",
+    "Orient Point Light Station",
+    "The Coffee Pot"
   ],
   "country": "US",
   "region": "NY",
@@ -35,17 +39,19 @@
     "first_lit": 1899,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl 5s",
+    "characteristic": "Fl W 5s",
     "focal_height_m": 19.5,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06001229",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001229"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06001229",
+      "listed": "2007-01-09",
+      "nomination": "https://catalog.archives.gov/id/75325203"
     }
   ],
   "aton": {
@@ -57,8 +63,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +75,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +84,19 @@
     {
       "year": 1899,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1899,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +143,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/610341960",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Orient Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=744",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Orient Point",
+      "url": "https://archives.uslhs.org/places/orient-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325203",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,8 +188,72 @@
       "key": "osm:way/610341960",
       "part": "wikidata:Q7102309",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:744",
+      "part": "wikidata:Q7102309",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:orient-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21095",
+      "part": "wikidata:Q7102309",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-27680",
+      "part": "wikidata:Q7102309",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3425",
+      "part": "wikidata:Q7102309",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06001229",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.16351,-72.22360",
+      "part": "wikidata:Q7102309",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:orient-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

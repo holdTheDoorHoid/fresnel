@@ -2,7 +2,8 @@
   "id": "us-ca-rubicon-point",
   "name": "Rubicon Point Light",
   "other_names": [
-    "Rubicon Point Lighthouse"
+    "Rubicon Point Lighthouse",
+    "Rubicon Point"
   ],
   "country": "US",
   "region": "CA",
@@ -72,13 +73,13 @@
     {
       "year": 1916,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1921,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -125,6 +126,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/2919834085",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Rubicon Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1772",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,6 +161,20 @@
       "part": "wikidata:Q7376081",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1772",
+      "part": "wikidata:Q7376081",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:rubicon-point",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

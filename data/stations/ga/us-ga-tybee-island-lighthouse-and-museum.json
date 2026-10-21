@@ -4,7 +4,10 @@
   "other_names": [
     "Tybee Island Light",
     "Tybee Island Lighthouse",
-    "Typee Island Light Station and Museum"
+    "Typee Island Light Station and Museum",
+    "Tybee Island",
+    "Range Rear",
+    "Tybee Light"
   ],
   "country": "US",
   "region": "GA",
@@ -23,7 +26,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Tybee Island Lighthouse and Museum",
       "type": null,
       "material": null,
       "built": 1736,
@@ -31,17 +34,32 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "dwelling",
+      "name": "Keeper's Cottage",
+      "type": null,
+      "material": null,
+      "built": 1867,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 32.02221,
+        "lon": -80.845045
+      }
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1736,
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": 44.0,
+    "focal_height_m": 43.9,
     "range_nm": 19.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -68,11 +86,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": true,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,9 +102,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1736,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1867,
       "event": "built",
-      "note": null,
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -163,6 +187,16 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/456451301",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/456451302",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/456451305",
       "kind": "osm"
     },
@@ -170,6 +204,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/456451306",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tybee Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=322",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Georgia",
+      "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -182,7 +226,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -209,9 +252,21 @@
       "source": "osm",
       "key": "osm:way/456451300",
       "part": "wikidata:Q7859692",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/456451301",
+      "part": "osm:way/456451301",
       "fields": [
-        "light"
+        "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/456451302",
+      "part": "osm:way/456451301",
+      "fields": []
     },
     {
       "source": "osm",
@@ -224,6 +279,51 @@
       "key": "osm:way/456451306",
       "part": "wikidata:Q7859692",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:322",
+      "part": "wikidata:Q7859692",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:tybee-island-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-345",
+      "part": "wikidata:Q7859692",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4540",
+      "part": "wikidata:Q7859692",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.02223,-80.84568",
+      "part": "wikidata:Q7859692",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ga:tybee-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

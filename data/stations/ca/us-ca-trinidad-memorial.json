@@ -1,7 +1,9 @@
 {
   "id": "us-ca-trinidad-memorial",
   "name": "Trinidad Memorial Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Trinidad Memorial"
+  ],
   "country": "US",
   "region": "CA",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -68,13 +70,24 @@
   "stay": null,
   "events": [],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ca-trinidad-head",
+      "relation": "replica_of",
+      "name": "Trinidad Head Light"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/368174433",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Trinidad Memorial",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=870",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +101,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:870",
+      "part": "osm:node/368174433",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

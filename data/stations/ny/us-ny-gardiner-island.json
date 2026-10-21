@@ -3,7 +3,9 @@
   "name": "Gardiner Island Lighthouse",
   "other_names": [
     "Gardiners Island Lighthouse",
-    "Gardiners Point Island Lighthouse"
+    "Gardiners Point Island Lighthouse",
+    "Gardiners Island",
+    "Gardiner's Island"
   ],
   "country": "US",
   "region": "NY",
@@ -12,35 +14,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.141441,
-    "lon": -72.145715,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.141605,
+    "lon": -72.14637,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "integral",
+      "material": "brick",
+      "built": 1870,
+      "height_m": 7.9,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1854,
+    "deactivated": 1894,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 10.1,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -69,7 +71,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1894,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -78,6 +99,16 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q126003156",
       "kind": "wikidata"
+    },
+    {
+      "label": "LighthouseFriends: Gardiners Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1869",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gardiner's Island",
+      "url": "https://archives.uslhs.org/places/gardiners-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,14 +119,31 @@
       "fields": [
         "county",
         "kind",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1869",
+      "part": "wikidata:Q126003156",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8809",
+      "part": "wikidata:Q126003156",
+      "fields": [
+        "events",
+        "light",
+        "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

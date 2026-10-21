@@ -34,14 +34,14 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 22.8,
-    "range_nm": 6.0,
+    "focal_height_m": 22.9,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-2635",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -84,10 +84,25 @@
       "part": "osm:node/560634775",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-2635",
+      "part": "osm:node/560634775",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.46320,-118.49167",
+      "part": "osm:node/560634775",
+      "fields": [
+        "light"
       ]
     }
   ],

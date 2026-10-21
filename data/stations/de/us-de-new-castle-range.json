@@ -1,10 +1,16 @@
 {
   "id": "us-de-new-castle-range",
-  "name": "New Castle Range Lights",
+  "name": "New Castle Range",
   "other_names": [
     "New Castle Range Front Light",
     "New Castle Range Front Lighthouse",
-    "New Castle Range Rear Light"
+    "New Castle Range Rear Light",
+    "New Castle Range Front",
+    "New Castle Range Rear",
+    "New Castle Range Rear Old",
+    "New Castle Range Rear New",
+    "New Castle Range Front New",
+    "New Castle Range Front Old"
   ],
   "country": "US",
   "region": "DE",
@@ -13,50 +19,80 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 39.6424,
-    "lon": -75.5954,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.63917,
+    "lon": -75.60017,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
+      "name": "New Castle Range Front Old",
+      "type": null,
+      "material": "wood",
+      "built": 1876,
+      "height_m": 4.6,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "front_range",
       "name": "New Castle Range Front Light",
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1876,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs",
+      "location": {
+        "lat": 39.642391,
+        "lon": -75.595424
+      }
     },
     {
       "role": "rear_range",
       "name": "New Castle Range Rear Light",
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1876,
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 39.6482,
         "lon": -75.599
       }
+    },
+    {
+      "role": "rear_range",
+      "name": "New Castle Range Rear New",
+      "type": null,
+      "material": "steel",
+      "built": 1964,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.64283,
+        "lon": -75.60267
+      }
     }
   ],
   "light": {
-    "first_lit": 1953,
+    "first_lit": 1876,
     "deactivated": 1964,
     "lens": null,
     "characteristic": "Iso G 2s",
     "focal_height_m": 17.0,
-    "range_nm": null,
+    "range_nm": 55.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -68,8 +104,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -93,6 +129,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1876,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1953,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1953,
       "event": "first_lit",
       "note": null,
@@ -106,15 +154,33 @@
     },
     {
       "year": 1964,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1964,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1964,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 2025,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2025,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -184,6 +250,36 @@
       "label": "ARLHS World List of Lights USA1126",
       "url": "https://wlol.arlhs.com/lighthouse/USA1126.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: New Castle Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=881",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Castle Range Rear Old",
+      "url": "https://archives.uslhs.org/places/new-castle-range-rear-old",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Castle Range Rear New",
+      "url": "https://archives.uslhs.org/places/new-castle-range-rear-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Castle Range Front New",
+      "url": "https://archives.uslhs.org/places/new-castle-range-front-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: New Castle Range Front Old",
+      "url": "https://archives.uslhs.org/places/new-castle-range-front-old",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -197,7 +293,6 @@
         "events",
         "kind",
         "light",
-        "location",
         "photos",
         "region",
         "structures"
@@ -209,13 +304,122 @@
       "part": "wikidata:Q14685702",
       "fields": [
         "events",
-        "light",
         "photos",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:881",
+      "part": "wikidata:Q14685697",
+      "fields": [
+        "access",
+        "name",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:new-castle-range-front-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:new-castle-range-front-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:new-castle-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:new-castle-range-rear-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2730",
+      "part": "wikidata:Q14685697",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-2735",
+      "part": "wikidata:Q14685702",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:25002",
+      "part": "wikidata:Q14685702",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:25005",
+      "part": "uslhs:25005",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:25006",
+      "part": "wikidata:Q14685697",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8399",
+      "part": "uslhs:8399",
+      "fields": [
+        "location",
         "structures"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1964
+        },
+        {
+          "source": "rowlett",
+          "value": 2025
+        },
+        {
+          "source": "uslhs",
+          "value": 1964
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

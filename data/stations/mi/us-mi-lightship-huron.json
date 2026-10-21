@@ -2,7 +2,13 @@
   "id": "us-mi-lightship-huron",
   "name": "United States lightship Huron",
   "other_names": [
-    "Huron Light Ship Museum"
+    "Huron Light Ship Museum",
+    "Huron",
+    "Lightship Huron LV 103/WAL 526",
+    "HURON (lightship)",
+    "Relief (lightship)",
+    "Grays Reef",
+    "North Manitou Shoal"
   ],
   "country": "US",
   "region": "MI",
@@ -11,10 +17,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 42.989167,
-    "lon": -82.426667,
+    "lat": 42.98956,
+    "lon": -82.42654,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -33,7 +39,10 @@
     {
       "register": "NRHP",
       "number": "76001974",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76001974"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76001974",
+      "listed": "1976-07-12",
+      "nhl": "1989-12-20",
+      "nomination": "https://catalog.archives.gov/id/25340523"
     },
     {
       "register": "Michigan State Historic Site",
@@ -68,7 +77,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,8 +85,14 @@
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -118,6 +133,16 @@
       "label": "Official website",
       "url": "https://www.phmuseum.org/huron-light-ship-museum/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Huron LV 103/WAL 526",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=166",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25340523",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -130,17 +155,41 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:166",
+      "part": "wikidata:Q7892543",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76001974",
+      "part": "wikidata:Q7892543",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:huron-ls-lv-526",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

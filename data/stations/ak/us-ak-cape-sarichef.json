@@ -2,7 +2,8 @@
   "id": "us-ak-cape-sarichef",
   "name": "Cape Sarichef Light",
   "other_names": [
-    "Cape Sarichef Lighthouse"
+    "Cape Sarichef Lighthouse",
+    "Cape Sarichef"
   ],
   "country": "US",
   "region": "AK",
@@ -11,12 +12,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 54.5982,
-    "lon": -164.928,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 54.598242,
+    "lon": -164.927526,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +27,7 @@
       "material": "wood",
       "built": 1979,
       "height_m": 7.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -36,10 +37,10 @@
     "deactivated": 1950,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 52.0,
+    "focal_height_m": 51.8,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -55,15 +56,15 @@
     "note": null
   },
   "staffing": {
-    "status": "automated",
-    "as_of": "1979"
+    "status": "unknown",
+    "as_of": null
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,8 +73,20 @@
     {
       "year": 1904,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1904,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1950,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1950,
@@ -92,6 +105,12 @@
       "event": "automated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1979,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -132,6 +151,21 @@
       "label": "ARLHS World List of Lights ALK003",
       "url": "https://wlol.arlhs.com/lighthouse/ALK003.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Cape Sarichef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1779",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Sarichef",
+      "url": "https://archives.uslhs.org/places/cape-sarichef",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,16 +178,73 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1779",
+      "part": "wikidata:Q2503276",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:cape-sarichef-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-1230",
+      "part": "wikidata:Q2503276",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8365",
+      "part": "wikidata:Q2503276",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:54.59823,-164.92765",
+      "part": "wikidata:Q2503276",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1950
+        },
+        {
+          "source": "rowlett",
+          "value": 1979
+        },
+        {
+          "source": "uslhs",
+          "value": 1979
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

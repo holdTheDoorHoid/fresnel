@@ -4,7 +4,11 @@
   "other_names": [
     "Marblehead Lighthouse",
     "Marblehead Light (Ohio)",
-    "Marblehead Lighthouse State Park"
+    "Marblehead Lighthouse State Park",
+    "Marblehead",
+    "Sandusky Bay",
+    "Marblehead (Sandusky Bay) OH",
+    "Sandusky Bay Lighthouse"
   ],
   "country": "US",
   "region": "OH",
@@ -49,20 +53,22 @@
     }
   ],
   "light": {
-    "first_lit": 1822,
+    "first_lit": 1821,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 20.0,
-    "range_nm": 10.0,
+    "focal_height_m": 20.4,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "69000148",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000148"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/69000148",
+      "listed": "1969-12-17",
+      "nomination": "https://catalog.archives.gov/id/71990843"
     }
   ],
   "aton": {
@@ -74,20 +80,20 @@
   "agency": "Ohio Department of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1958"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -95,8 +101,14 @@
     {
       "year": 1821,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
+    },
+    {
+      "year": 1821,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1822,
@@ -117,9 +129,15 @@
       "from": "osm"
     },
     {
+      "year": 1958,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1969,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -196,6 +214,26 @@
       "label": "Website",
       "url": "https://www.marbleheadlighthouseohio.org/museum",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Marblehead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=278",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Marblehead (Sandusky Bay) OH",
+      "url": "https://archives.uslhs.org/places/marblehead-sandusky-bay-oh",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/71990843",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -208,7 +246,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -231,8 +268,7 @@
       "key": "osm:way/267328191",
       "part": "wikidata:Q6755249",
       "fields": [
-        "events",
-        "light"
+        "events"
       ]
     },
     {
@@ -241,6 +277,64 @@
       "part": "osm:way/267328192",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:278",
+      "part": "wikidata:Q6755249",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:marblehead",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5250",
+      "part": "wikidata:Q6755249",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3456",
+      "part": "wikidata:Q6755249",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:69000148",
+      "part": "wikidata:Q6755249",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.53632,-82.71181",
+      "part": "wikidata:Q6755249",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:marblehead-lighthouse",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

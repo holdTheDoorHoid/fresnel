@@ -1,7 +1,9 @@
 {
   "id": "us-sc-fort-sumter-range",
   "name": "Fort Sumter Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Fort Sumter Range"
+  ],
   "country": "US",
   "region": "SC",
   "county": "Charleston",
@@ -9,10 +11,10 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 32.752222,
-    "lon": -79.874722,
+    "lat": 32.779,
+    "lon": -79.92924,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -113,6 +115,11 @@
       "label": "ARLHS World List of Lights USA1163",
       "url": "https://wlol.arlhs.com/lighthouse/USA1163.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Fort Sumter Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1770",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,15 +133,44 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1770",
+      "part": "wikidata:Q5472151",
+      "fields": [
+        "location"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            32.75222,
+            -79.87472
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            32.779,
+            -79.92924
+          ]
+        }
+      ],
+      "distance_m": 5904,
+      "note": "Sources place this structure more than 500 m apart."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

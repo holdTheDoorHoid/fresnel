@@ -2,7 +2,8 @@
   "id": "us-ma-cuttyhunk",
   "name": "Cuttyhunk Light",
   "other_names": [
-    "Cuttyhunk Lighthouse"
+    "Cuttyhunk Lighthouse",
+    "Cuttyhunk"
   ],
   "country": "US",
   "region": "MA",
@@ -23,16 +24,16 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1823,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1947,
+    "first_lit": 1823,
     "deactivated": 2005,
     "lens": null,
     "characteristic": "Q W",
@@ -74,6 +75,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1860,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1947,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1947,
@@ -131,6 +150,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496089",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cuttyhunk",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=840",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cuttyhunk",
+      "url": "https://archives.uslhs.org/places/cuttyhunk",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -157,10 +191,67 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:840",
+      "part": "wikidata:Q5197027",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:cuttyhunk-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8489",
+      "part": "wikidata:Q5197027",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1947
+        },
+        {
+          "source": "uslhs",
+          "value": 1823
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

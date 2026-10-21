@@ -3,7 +3,9 @@
   "name": "Seguin Light",
   "other_names": [
     "Seguin Island Light Station",
-    "Seguin Lighthouse"
+    "Seguin Lighthouse",
+    "Seguin Island",
+    "Seguin Island Lighthouse"
   ],
   "country": "US",
   "region": "ME",
@@ -33,20 +35,27 @@
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1795,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
-    "focal_height_m": 54.8,
+    "focal_height_m": 54.9,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000084",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000084"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000084",
+      "listed": "1977-03-08",
+      "nomination": "https://catalog.archives.gov/id/88687213"
     }
   ],
   "aton": {
@@ -55,26 +64,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Friends of Seguin Island",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1985"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": "https://www.seguinisland.org/the-island/spend-the-night/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1795,
@@ -83,21 +99,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1795,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1985,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -144,6 +178,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1217645105",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Seguin Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=495",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Seguin Island",
+      "url": "https://archives.uslhs.org/places/seguin-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687213",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,7 +215,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -169,12 +227,109 @@
       "key": "osm:way/1217645105",
       "part": "wikidata:Q7446368",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:495",
+      "part": "wikidata:Q7446368",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:seguin-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-35",
+      "part": "wikidata:Q7446368",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5590",
+      "part": "wikidata:Q7446368",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2938",
+      "part": "wikidata:Q7446368",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000084",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.70747,-69.75803",
+      "part": "wikidata:Q7446368",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:seguin-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:seguin-island-lighthouse-also-see-listing-under-vacation-ren",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:me:seguin-island-lighthouse-guest-quarters-also-see-listing-und",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1795
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

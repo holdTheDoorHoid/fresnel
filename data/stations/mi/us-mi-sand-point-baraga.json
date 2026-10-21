@@ -1,10 +1,14 @@
 {
   "id": "us-mi-sand-point-baraga",
   "name": "Sand Point (Baraga) Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Sand Point",
+    "Baraga",
+    "Sand Point Light"
+  ],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Baraga",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -14,34 +18,34 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1878,
+      "height_m": 9.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1878,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 12.2,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-14750",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -49,15 +53,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1922"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -66,7 +70,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1878,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1922,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -80,6 +97,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=230",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sand Point (Baraga)",
+      "url": "https://archives.uslhs.org/places/sand-point-baraga",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,10 +120,51 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:230",
+      "part": "osm:node/1010026461",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:sand-point-3",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14750",
+      "part": "osm:node/1010026461",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3332",
+      "part": "osm:node/1010026461",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.78340,-88.46650",
+      "part": "osm:node/1010026461",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

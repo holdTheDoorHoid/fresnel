@@ -1,7 +1,9 @@
 {
   "id": "us-nj-five-fathom-bank",
   "name": "Five Fathom Bank light station",
-  "other_names": [],
+  "other_names": [
+    "Five Fathom Bank"
+  ],
   "country": "US",
   "region": "NJ",
   "county": null,
@@ -18,14 +20,14 @@
   "status_note": null,
   "structures": [],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1839,
+    "deactivated": 1972,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -54,7 +56,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1972,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -68,6 +83,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Five_Fathom_Bank_light_station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Five Fathom Bank (Lightship Station)",
+      "url": "https://archives.uslhs.org/places/five-fathom-bank-lightship-station",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -82,6 +102,15 @@
         "name",
         "ownership",
         "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9052",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
       ]
     }
   ],

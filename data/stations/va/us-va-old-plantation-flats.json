@@ -2,7 +2,9 @@
   "id": "us-va-old-plantation-flats",
   "name": "Old Plantation Flats Light",
   "other_names": [
-    "Old Plantation Flats Lighthouse"
+    "Old Plantation Flats Lighthouse",
+    "Old Plantation Flats",
+    "Old Plantation Flats Warning Light A"
   ],
   "country": "US",
   "region": "VA",
@@ -16,8 +18,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,7 +28,7 @@
       "material": "mixed",
       "built": 1962,
       "height_m": 10.7,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +37,11 @@
     "first_lit": 1886,
     "deactivated": 1962,
     "lens": null,
-    "characteristic": "Fl W 4 sec",
-    "focal_height_m": 6.0,
-    "range_nm": 9.6,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 5.8,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,8 +74,14 @@
     {
       "year": 1886,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1962,
@@ -84,12 +92,18 @@
     {
       "year": 1962,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-va-bay-creek",
+      "relation": "replica",
+      "name": "Old Plantation Flats (Replica)"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_plantation_flats_light.PNG",
@@ -126,6 +140,16 @@
       "label": "ARLHS World List of Lights USA566",
       "url": "https://wlol.arlhs.com/lighthouse/USA566.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Old Plantation Flats Light",
+      "url": "https://archives.uslhs.org/places/old-plantation-flats-light",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -145,6 +169,40 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:old-plantation-flats-3",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-21435",
+      "part": "wikidata:Q7084743",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8965",
+      "part": "wikidata:Q7084743",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.22868,-76.04670",
+      "part": "wikidata:Q7084743",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.23291,-76.04937",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

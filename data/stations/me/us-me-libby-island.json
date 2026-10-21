@@ -2,7 +2,9 @@
   "id": "us-me-libby-island",
   "name": "Libby Island Light",
   "other_names": [
-    "Libby Island Lighthouse"
+    "Libby Island Lighthouse",
+    "Libby Island",
+    "Libby Island Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1822,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1848,
+    "first_lit": 1822,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 20s",
     "focal_height_m": 27.7,
     "range_nm": 18.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "76000117",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000117"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/76000117",
+      "listed": "1976-06-18",
+      "nomination": "https://catalog.archives.gov/id/88687542"
     }
   ],
   "aton": {
@@ -54,11 +58,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Fish and Wildlife Service (Maine Coastal Islands National Wildlife Refuge)",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,8 +82,14 @@
     {
       "year": 1822,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1822,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1823,
@@ -94,15 +104,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1974,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1976,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -154,6 +170,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1100742934",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Libby Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=763",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Libby Island",
+      "url": "https://archives.uslhs.org/places/libby-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88687542",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -166,7 +202,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -179,7 +214,6 @@
       "key": "osm:node/11289892893",
       "part": "wikidata:Q6540433",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -189,6 +223,68 @@
       "part": "wikidata:Q6540433",
       "fields": [
         "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:763",
+      "part": "wikidata:Q6540433",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:libby-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-1120",
+      "part": "wikidata:Q6540433",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2915",
+      "part": "wikidata:Q6540433",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:76000117",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.56833,-67.36738",
+      "part": "wikidata:Q6540433",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:libby-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -203,6 +299,10 @@
         {
           "source": "osm",
           "value": 1823
+        },
+        {
+          "source": "uslhs",
+          "value": 1822
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

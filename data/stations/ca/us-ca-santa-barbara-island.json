@@ -39,11 +39,11 @@
     "focal_height_m": 59.4,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-2675",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -86,10 +86,25 @@
       "part": "osm:node/559184020",
       "fields": [
         "kind",
-        "light",
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-2675",
+      "part": "osm:node/559184020",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.48737,-119.03024",
+      "part": "osm:node/559184020",
+      "fields": [
+        "light"
       ]
     }
   ],

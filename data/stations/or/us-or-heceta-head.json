@@ -2,7 +2,8 @@
   "id": "us-or-heceta-head",
   "name": "Heceta Head Light",
   "other_names": [
-    "Heceta Head Lighthouse"
+    "Heceta Head Lighthouse",
+    "Heceta Head"
   ],
   "country": "US",
   "region": "OR",
@@ -34,18 +35,25 @@
   "light": {
     "first_lit": 1894,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 10s",
     "focal_height_m": 62.5,
-    "range_nm": 18.2,
+    "range_nm": 25.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "78002296",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78002296"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78002296",
+      "listed": "1978-11-28",
+      "nomination": "https://catalog.archives.gov/id/77849809"
     }
   ],
   "aton": {
@@ -54,26 +62,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Oregon Parks and Recreation Department",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "inn",
+    "provider": null,
+    "url": "https://www.hecetalighthouse.com/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a bed and breakfast. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1892,
@@ -83,14 +98,26 @@
     },
     {
       "year": 1894,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1894,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1894,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1978,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +164,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/405049972",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Heceta Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=131",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Heceta Head",
+      "url": "https://archives.uslhs.org/places/heceta-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77849809",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/oregon",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,8 +214,77 @@
       "key": "osm:way/405049972",
       "part": "wikidata:Q5696191",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:131",
+      "part": "wikidata:Q5696191",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:heceta-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-635",
+      "part": "wikidata:Q5696191",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3464",
+      "part": "wikidata:Q5696191",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:78002296",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.13757,-124.12777",
+      "part": "wikidata:Q5696191",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:heceta-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:or:heceta-head-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -178,6 +299,10 @@
         {
           "source": "osm",
           "value": 62.5
+        },
+        {
+          "source": "uslhs",
+          "value": 62.18
         }
       ],
       "note": "Sources differ by more than 3 m."

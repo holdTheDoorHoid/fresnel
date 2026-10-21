@@ -3,7 +3,10 @@
   "name": "Rockwell Light",
   "other_names": [
     "Rockwell Lighthouse",
-    "Bray's Point Lighthouse"
+    "Bray's Point Lighthouse",
+    "Brays Point",
+    "Rockwell",
+    "Bray's Point"
   ],
   "country": "US",
   "region": "WI",
@@ -52,8 +55,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -75,6 +78,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1910,
@@ -127,6 +136,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/867155949",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Brays Point (Rockwell)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=577",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,6 +171,23 @@
       "part": "wikidata:Q7355677",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:577",
+      "part": "wikidata:Q7355677",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:bray-s-point",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     }
   ],

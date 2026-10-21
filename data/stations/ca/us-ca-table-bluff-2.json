@@ -2,7 +2,8 @@
   "id": "us-ca-table-bluff-2",
   "name": "Table Bluff Light",
   "other_names": [
-    "Table Bluff Lighthouse"
+    "Table Bluff Lighthouse",
+    "Table Bluff"
   ],
   "country": "US",
   "region": "CA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1892,
     "deactivated": 1961,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 14.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,9 +77,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1892,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1892,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1961,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -120,6 +133,11 @@
       "label": "ARLHS World List of Lights USA832H",
       "url": "https://wlol.arlhs.com/lighthouse/USA832H.html",
       "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Table Bluff",
+      "url": "https://archives.uslhs.org/places/table-bluff",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,10 +157,35 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2731",
+      "part": "wikidata:Q7673128",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 14.0
+        },
+        {
+          "source": "uslhs",
+          "value": 53.64
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

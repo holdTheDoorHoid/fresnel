@@ -3,7 +3,11 @@
   "name": "Point Hueneme Light",
   "other_names": [
     "Point Hueneme Lighthouse",
-    "Port Hueneme Light"
+    "Port Hueneme Light",
+    "Point Hueneme",
+    "Port Hueneme",
+    "Lightship WLV-605 Relief",
+    "Port Hueneme East Jetty Light 4"
   ],
   "country": "US",
   "region": "CA",
@@ -24,23 +28,28 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1874,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1941,
+    "first_lit": 1874,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl(5) W 30s",
-    "focal_height_m": 15.8,
-    "range_nm": 17.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 9.4,
+    "range_nm": 5.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -61,11 +70,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -77,10 +86,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1941,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1941,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1951,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -131,6 +164,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/106597798",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Hueneme",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=92",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Hueneme",
+      "url": "https://archives.uslhs.org/places/point-hueneme",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +196,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -155,8 +207,90 @@
       "key": "osm:way/106597798",
       "part": "wikidata:Q7208044",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:92",
+      "part": "wikidata:Q7208044",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:point-hueneme-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:lightship-wlv-605-relief",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-190",
+      "part": "wikidata:Q7208044",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-3585",
+      "part": "wikidata:Q7208044",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-3600",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2719",
+      "part": "wikidata:Q7208044",
+      "fields": [
+        "access",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.14310,-119.21191",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.14509,-119.21145",
+      "part": "wikidata:Q7208044",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.14517,-119.20998",
+      "part": "wikidata:Q7208044",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-hueneme",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -174,6 +308,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1941
+        },
+        {
+          "source": "uslhs",
+          "value": 1874
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

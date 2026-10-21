@@ -2,7 +2,9 @@
   "id": "us-de-fourteen-foot-bank",
   "name": "Fourteen Foot Bank Light",
   "other_names": [
-    "Fourteen Foot Bank Lighthouse"
+    "Fourteen Foot Bank Lighthouse",
+    "Fourteen Foot Bank",
+    "United States Coast Guard Light List #1355"
   ],
   "country": "US",
   "region": "DE",
@@ -11,8 +13,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 39.009318,
-    "lon": -75.129475,
+    "lat": 39.048254,
+    "lon": -75.182269,
     "precision": "exact",
     "from": "osm"
   },
@@ -28,39 +30,41 @@
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 39.009318,
+        "lon": -75.129475
+      }
     },
     {
       "role": "tower",
       "name": "Fourteen Foot Bank Lighthouse",
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "caisson",
+      "material": "cast_iron",
+      "built": 1887,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 39.048254,
-        "lon": -75.182269
-      }
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1888,
+    "first_lit": 1887,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 9s, R Sector",
+    "characteristic": "Fl W 9s",
     "focal_height_m": 18.0,
     "range_nm": 13.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89000286",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000286"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89000286",
+      "listed": "1989-03-27",
+      "nomination": "https://catalog.archives.gov/id/75324077"
     }
   ],
   "aton": {
@@ -72,8 +76,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -84,8 +88,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -97,6 +101,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1887,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1888,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1888,
       "event": "first_lit",
       "note": null,
@@ -105,7 +127,7 @@
     {
       "year": 1989,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -157,6 +179,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1211354440",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fourteen Foot Bank",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=386",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fourteen Foot Bank",
+      "url": "https://archives.uslhs.org/places/fourteen-foot-bank",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324077",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -169,7 +211,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -181,16 +222,76 @@
       "source": "osm",
       "key": "osm:node/7483283259",
       "part": "wikidata:Q5475898",
-      "fields": [
-        "location"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
       "key": "osm:way/1211354440",
       "part": "osm:way/1211354440",
       "fields": [
+        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:386",
+      "part": "osm:way/1211354440",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:fourteen-foot-bank",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1575",
+      "part": "osm:way/1211354440",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2757",
+      "part": "osm:way/1211354440",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89000286",
+      "part": "osm:way/1211354440",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.04825,-75.18221",
+      "part": "osm:way/1211354440",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:de:fourteen-foot-bank",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -217,7 +318,7 @@
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

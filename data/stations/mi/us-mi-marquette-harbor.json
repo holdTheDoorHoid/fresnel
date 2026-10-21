@@ -3,7 +3,9 @@
   "name": "Marquette Harbor Light",
   "other_names": [
     "Marquette Harbor Lighthouse",
-    "Marquette Light"
+    "Marquette Light",
+    "Marquette Harbor",
+    "Marquette Harbor Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -24,12 +26,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1852,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +39,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 23.0,
-    "range_nm": 10.0,
+    "focal_height_m": 23.5,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001803",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001803"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001803",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891359"
     }
   ],
   "aton": {
@@ -59,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,11 +71,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -85,19 +89,25 @@
     {
       "year": 1853,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1866,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +159,26 @@
       "label": "Website",
       "url": "https://mqtmaritimemuseum.com/marquette-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Marquette Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=572",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Marquette Harbor",
+      "url": "https://archives.uslhs.org/places/marquette-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891359",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,8 +206,64 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:572",
+      "part": "wikidata:Q6772591",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:marquette-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14630",
+      "part": "wikidata:Q6772591",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2992",
+      "part": "wikidata:Q6772591",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001803",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.54646,-87.37611",
+      "part": "wikidata:Q6772591",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:marquette-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -192,6 +278,10 @@
         {
           "source": "osm",
           "value": 1866
+        },
+        {
+          "source": "uslhs",
+          "value": 1853
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

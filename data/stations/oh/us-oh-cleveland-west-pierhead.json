@@ -3,7 +3,13 @@
   "name": "Cleveland West Pierhead Light",
   "other_names": [
     "Cleveland Harbor Main Entrance Light",
-    "Cleveland West Pierhead Lighthouse"
+    "Cleveland West Pierhead Lighthouse",
+    "Cleveland Harbor Main Entrance",
+    "Cleveland East Inner Pier",
+    "West Pierhead",
+    "Cleveland West Inner Pier",
+    "Cleveland Harbor Light 5",
+    "Cleveland Harbor Light 6"
   ],
   "country": "US",
   "region": "OH",
@@ -22,7 +28,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cleveland West Pierhead Light",
       "type": "cast_iron",
       "material": "cast_iron",
       "built": 1884,
@@ -30,23 +36,36 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "fog_signal",
+      "name": "Fog Signal House",
+      "type": null,
+      "material": null,
+      "built": 1916,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1911,
+    "first_lit": 1831,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
-    "focal_height_m": 19.0,
-    "range_nm": 14.0,
+    "characteristic": "Fl R 2.5s",
+    "focal_height_m": 8.2,
+    "range_nm": 4.3,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83001950",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001950"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83001950",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891064"
     }
   ],
   "aton": {
@@ -59,7 +78,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,17 +89,35 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1884,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1910,
@@ -90,14 +127,26 @@
     },
     {
       "year": 1911,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1911,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1916,
+      "event": "built",
+      "note": null,
+      "from": "osm"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +199,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/414659280",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/414659282",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cleveland Harbor Main Entrance",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=282",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cleveland Harbor Main Entrance",
+      "url": "https://archives.uslhs.org/places/cleveland-harbor-main-entrance",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891064",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +236,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,27 +249,111 @@
       "part": "wikidata:Q28374708",
       "fields": [
         "events",
-        "light",
         "location"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1911
-        },
-        {
-          "source": "osm",
-          "value": 1910
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
+      "source": "osm",
+      "key": "osm:way/414659282",
+      "part": "osm:way/414659282",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:282",
+      "part": "wikidata:Q28374708",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:cleveland-east-inner-pier-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:cleveland-harbor-main-entrance-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:cleveland-west-inner-pier-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4160",
+      "part": "wikidata:Q28374708",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4180",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4185",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3450",
+      "part": "wikidata:Q28374708",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83001950",
+      "part": "wikidata:Q28374708",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.50356,-81.71256",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.50396,-81.71158",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.50896,-81.71788",
+      "part": "wikidata:Q28374708",
+      "fields": []
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

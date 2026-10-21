@@ -1,48 +1,67 @@
 {
   "id": "us-sc-parris-island-range",
   "name": "Parris Island Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Parris Island",
+    "Parris Island Range Rear",
+    "Parris Island Range Front"
+  ],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Beaufort",
   "water": null,
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 32.3128,
-    "lon": -80.6775,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.30767,
+    "lon": -80.67317,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Parris Island Range Front",
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1881,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 13.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Parris Island Range Lights",
+      "type": "skeletal",
+      "material": "iron",
+      "built": 1881,
+      "height_m": 36.6,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 32.3129,
+        "lon": -80.6774
+      }
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1881,
+    "deactivated": 1912,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 13.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-119",
     "ccg_list_number": null,
     "nga": null
   },
@@ -50,7 +69,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +89,20 @@
     {
       "year": 1881,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1881,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1912,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -87,6 +118,26 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Parris_Island_Range_Lights",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Parris Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=868",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Parris Island Range Front",
+      "url": "https://archives.uslhs.org/places/parris-island-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Parris Island Range Rear",
+      "url": "https://archives.uslhs.org/places/parris-island-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,9 +148,45 @@
       "fields": [
         "events",
         "kind",
-        "location",
         "name",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:868",
+      "part": "wikidata:Q7139801",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:parris-island-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8921",
+      "part": "uslhs:8921",
+      "fields": [
+        "county",
+        "events",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8922",
+      "part": "wikidata:Q7139801",
+      "fields": [
+        "access",
         "structures"
       ]
     }

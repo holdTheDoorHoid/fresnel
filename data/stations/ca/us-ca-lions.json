@@ -2,7 +2,8 @@
   "id": "us-ca-lions",
   "name": "Lions Lighthouse",
   "other_names": [
-    "Lions Lighthouse for Sight"
+    "Lions Lighthouse for Sight",
+    "Lions Lighthouse For Sight"
   ],
   "country": "US",
   "region": "CA",
@@ -35,11 +36,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "F G",
+    "focal_height_m": 3.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -102,6 +103,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1054968664",
       "kind": "osm"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lions Lighthouse For Sight",
+      "url": "https://archives.uslhs.org/places/lions-lighthouse-sight",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -124,6 +130,20 @@
       "fields": [
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:90129",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.75981,-118.19352",
+      "part": "wikidata:Q108292860",
+      "fields": [
+        "light"
       ]
     }
   ],

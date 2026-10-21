@@ -2,7 +2,9 @@
   "id": "us-ny-throgs-neck",
   "name": "Throgs Neck Light",
   "other_names": [
-    "Throgs Neck Lighthouse"
+    "Throgs Neck Lighthouse",
+    "Throgs Neck",
+    "Throg's Neck"
   ],
   "country": "US",
   "region": "NY",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.8044,
-    "lon": -73.7906,
+    "lat": 40.8046,
+    "lon": -73.7907,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1827,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1934,
-    "deactivated": null,
+    "first_lit": 1827,
+    "deactivated": 1934,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": 18.0,
-    "range_nm": null,
+    "focal_height_m": 18.3,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -64,7 +66,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,10 +78,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1827,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Tower 5 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1934,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1934,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -115,6 +141,21 @@
       "label": "ARLHS World List of Lights USA846",
       "url": "https://wlol.arlhs.com/lighthouse/USA846.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Throgs Neck",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=752",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Throgs Neck",
+      "url": "https://archives.uslhs.org/places/throgs-neck",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,16 +168,93 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:752",
+      "part": "wikidata:Q7798334",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:throg-s-neck-5",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21520",
+      "part": "wikidata:Q7798334",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8834",
+      "part": "wikidata:Q7798334",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.80457,-73.79059",
+      "part": "wikidata:Q7798334",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:throgs-neck",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1934
+        },
+        {
+          "source": "uslhs",
+          "value": 1827
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

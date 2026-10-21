@@ -2,7 +2,10 @@
   "id": "us-md-somers-cove",
   "name": "Somers Cove Light",
   "other_names": [
-    "Somers Cove Lighthouse"
+    "Somers Cove Lighthouse",
+    "Somers Cove",
+    "Little Annemessex River Warning Light A",
+    "Little Annemessex River Light 7"
   ],
   "country": "US",
   "region": "MD",
@@ -11,40 +14,40 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.9665,
-    "lon": -75.8775,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.966245,
+    "lon": -75.877125,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (2021) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1867,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 10.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1867,
     "deactivated": 1932,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "QW",
+    "focal_height_m": 10.7,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "2-22837",
+    "arlhs": "USA-987",
     "ccg_list_number": null,
     "nga": null
   },
@@ -78,8 +81,20 @@
     {
       "year": 1867,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1932,
@@ -122,6 +137,21 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_de_Somers_Cove",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Somers Cove",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1959",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland: Eastern Shore",
+      "url": "https://www.ibiblio.org/lighthouse/mde.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Somers Cove",
+      "url": "https://archives.uslhs.org/places/somers-cove",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +164,71 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1959",
+      "part": "wikidata:Q7559769",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mde:somers-cove-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-22837",
+      "part": "wikidata:Q7559769",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-22840",
+      "part": "wikidata:Q7559769",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8480",
+      "part": "wikidata:Q7559769",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1932
+        },
+        {
+          "source": "rowlett",
+          "value": 2005
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

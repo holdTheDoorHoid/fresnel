@@ -2,7 +2,9 @@
   "id": "us-mi-waugoshance",
   "name": "Waugoshance Light",
   "other_names": [
-    "Waugoshance Lighthouse"
+    "Waugoshance Lighthouse",
+    "Waugoshance",
+    "Waugoshance Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -22,13 +24,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1850,
       "height_m": 19.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -45,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "83000841",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000841"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83000841",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891082"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,20 +87,26 @@
     },
     {
       "year": 1851,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1851,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1912,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582790728",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Waugoshance",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=211",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Waugoshance",
+      "url": "https://archives.uslhs.org/places/waugoshance",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891082",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,6 +200,49 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:211",
+      "part": "wikidata:Q7975138",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:waugoshance",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3351",
+      "part": "wikidata:Q7975138",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83000841",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:waugoshance",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -189,13 +262,20 @@
             45.78733,
             -85.09169
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            45.78617,
+            -85.091
+          ]
         }
       ],
       "distance_m": 1392,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-sc-castle-pinckney",
   "name": "Castle Pinckney Light",
   "other_names": [
-    "Castle Pinckney Lighthouse"
+    "Castle Pinckney Lighthouse",
+    "Castle Pinckney"
   ],
   "country": "US",
   "region": "SC",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 32.773639,
-    "lon": -79.911,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 32.773892,
+    "lon": -79.911195,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -23,23 +24,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1855,
-      "height_m": null,
+      "height_m": 13.7,
       "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1855,
     "deactivated": 1917,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 15.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -76,9 +77,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1917,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -115,6 +128,16 @@
       "label": "ARLHS World List of Lights USA1002",
       "url": "https://wlol.arlhs.com/lighthouse/USA1002.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Castle Pinckney",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1859",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Castle Pinckney",
+      "url": "https://archives.uslhs.org/places/castle-pinckney",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +151,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1859",
+      "part": "wikidata:Q5050226",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8912",
+      "part": "wikidata:Q5050226",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

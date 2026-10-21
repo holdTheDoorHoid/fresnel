@@ -5,7 +5,9 @@
     "Bete Grise light",
     "Bete Grise lighthouse",
     "Mendota Lighthouse",
-    "Bete Grise (Mendota) Lighthouse"
+    "Bete Grise (Mendota) Lighthouse",
+    "Mendota",
+    "Bete Grise"
   ],
   "country": "US",
   "region": "MI",
@@ -26,23 +28,28 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1869,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1895,
+    "first_lit": 1869,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 20s",
     "focal_height_m": 13.4,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -60,20 +67,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1933"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -85,15 +92,45 @@
       "from": "wikidata"
     },
     {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1895,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1895,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1895,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1933,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1956,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -151,6 +188,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Mendota_%28Bete_Grise%29_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mendota (Bete Grise)",
+      "url": "https://archives.uslhs.org/places/mendota-bete-grise",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,8 +223,59 @@
       "key": "osm:way/1162832164",
       "part": "wikidata:Q6816728",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:227",
+      "part": "wikidata:Q6816728",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:mendota-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15151",
+      "part": "wikidata:Q6816728",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2995",
+      "part": "wikidata:Q6816728",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.37403,-87.96670",
+      "part": "wikidata:Q6816728",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:mendota-bete-grise",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -190,11 +288,29 @@
           "value": "active"
         },
         {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
           "source": "wikidata",
           "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1895
+        },
+        {
+          "source": "uslhs",
+          "value": 1870
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

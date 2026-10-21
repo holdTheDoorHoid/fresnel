@@ -1,7 +1,11 @@
 {
   "id": "us-hi-kaumalapau",
   "name": "Kaumalapa‘u Light",
-  "other_names": [],
+  "other_names": [
+    "Kaumalapau",
+    "Minor light of Lana'i - Kaumalapau",
+    "Kaumalapau Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -14,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,18 +34,18 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1925,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 20.7,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-28555",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -66,7 +70,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1925,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +86,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11963331323",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Lana'i - Kaumalapau",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=927",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +109,40 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:927",
+      "part": "osm:node/11963331323",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:kaumalapau-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28555",
+      "part": "osm:node/11963331323",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.78304,-156.99154",
+      "part": "osm:node/11963331323",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

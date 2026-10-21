@@ -1,7 +1,9 @@
 {
   "id": "us-um-sand-island",
   "name": "Sand Island Light",
-  "other_names": [],
+  "other_names": [
+    "Sand Island"
+  ],
   "country": "US",
   "region": "UM",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -33,11 +35,11 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Al Fl W G",
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -85,6 +87,11 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q107421889",
       "kind": "wikidata"
+    },
+    {
+      "label": "Lighthouse Directory: U.S. Minor Outlying Islands",
+      "url": "https://www.ibiblio.org/lighthouse/umi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -98,6 +105,20 @@
         "name",
         "photos",
         "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:umi:sand-island-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:28.21196,-177.37696",
+      "part": "wikidata:Q107421889",
+      "fields": [
+        "light"
       ]
     }
   ],

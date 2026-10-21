@@ -3,7 +3,8 @@
   "name": "Roe Island Light",
   "other_names": [
     "Roe Island Lighthouse",
-    "Roe Island Light Station"
+    "Roe Island Light Station",
+    "Roe Island"
   ],
   "country": "US",
   "region": "CA",
@@ -12,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.067856,
-    "lon": -122.028166,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.067873,
+    "lon": -122.028235,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -27,13 +28,13 @@
       "material": "wood",
       "built": 1891,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1891,
     "deactivated": 1945,
     "lens": null,
     "characteristic": "Fl W 5",
@@ -77,9 +78,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1891,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1945,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -121,6 +134,16 @@
       "label": "ARLHS World List of Lights USA700",
       "url": "https://wlol.arlhs.com/lighthouse/USA700.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Roe Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1790",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Roe Island",
+      "url": "https://archives.uslhs.org/places/roe-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +157,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1790",
+      "part": "wikidata:Q7357527",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8380",
+      "part": "wikidata:Q7357527",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

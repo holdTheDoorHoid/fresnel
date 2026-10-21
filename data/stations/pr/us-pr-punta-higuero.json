@@ -6,7 +6,11 @@
     "Punta Higüero Lighthouse",
     "Rincón Light",
     "Rincón Lighthouse",
-    "Punta Higuero"
+    "Punta Higuero",
+    "Point Jiquero, Rincon",
+    "Faro de Punta Higuero",
+    "Faro di Punta Higuero",
+    "Punta Higuero Light"
   ],
   "country": "US",
   "region": "PR",
@@ -40,16 +44,23 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 27.0,
+    "focal_height_m": 27.4,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000560",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000560"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000560",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518164"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-44",
+      "url": "https://www.loc.gov/item/pr0044/"
     }
   ],
   "aton": {
@@ -94,7 +105,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -146,6 +157,21 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Punta_Higuero_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Punta Higuero (Point Jiquero, Rincon)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1161",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-44, Faro de Punta Higuero",
+      "url": "https://www.loc.gov/item/pr0044/",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518164",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,8 +197,44 @@
       "key": "osm:node/909248190",
       "part": "wikidata:Q7260540",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1161",
+      "part": "wikidata:Q7260540",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-32400",
+      "part": "wikidata:Q7260540",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-44",
+      "part": "wikidata:Q7260540",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000560",
+      "part": "wikidata:Q7260540",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.36209,-67.27081",
+      "part": "wikidata:Q7260540",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -4,7 +4,10 @@
   "other_names": [
     "Faro de Arecibo",
     "Arecibo Lighthouse",
-    "Faro de Punta Los Morrillos"
+    "Faro de Punta Los Morrillos",
+    "Arecibo",
+    "Punta Morrillo",
+    "Faro de los Morillos de Arecibo"
   ],
   "country": "US",
   "region": "PR",
@@ -38,16 +41,23 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 37.0,
-    "range_nm": 14.0,
+    "focal_height_m": 36.6,
+    "range_nm": 11.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77001546",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001546"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77001546",
+      "listed": "1977-11-23",
+      "nomination": "https://catalog.archives.gov/id/131518162"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-38",
+      "url": "https://www.loc.gov/item/pr0038/"
     }
   ],
   "aton": {
@@ -59,15 +69,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1964"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -86,8 +96,14 @@
     {
       "year": 1898,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1964,
@@ -98,7 +114,7 @@
     {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -155,6 +171,26 @@
       "label": "Website",
       "url": "https://www.arecibolighthouse.com/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Arecibo (Punta Morrillo)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1164",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-38, Faro de los Morillos de Arecibo",
+      "url": "https://www.loc.gov/item/pr0038/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Arecibo",
+      "url": "https://archives.uslhs.org/places/arecibo",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518162",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,6 +217,53 @@
       "part": "wikidata:Q4788720",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1164",
+      "part": "wikidata:Q4788720",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-30720",
+      "part": "wikidata:Q4788720",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-38",
+      "part": "station",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3471",
+      "part": "wikidata:Q4788720",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77001546",
+      "part": "wikidata:Q4788720",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.48190,-66.69862",
+      "part": "wikidata:Q4788720",
+      "fields": [
+        "light"
       ]
     }
   ],

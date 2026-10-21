@@ -1,7 +1,11 @@
 {
   "id": "us-mi-presque-isle-rear-range",
   "name": "Presque Isle Rear Range Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Presque Isle Range",
+    "Presque Isle Range Front",
+    "Presque Isle Harbor Range Front Light"
+  ],
   "country": "US",
   "region": "MI",
   "county": null,
@@ -14,8 +18,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "rear_range",
@@ -31,18 +35,18 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1967,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "FG",
+    "focal_height_m": 5.5,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": null
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-11565",
+    "arlhs": "USA-669",
     "ccg_list_number": null,
     "nga": null
   },
@@ -62,11 +66,24 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1967,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +92,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/925868222",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Presque Isle Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=182",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +115,42 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:182",
+      "part": "osm:way/925868222",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:presque-isle-range-front-1",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11565",
+      "part": "osm:way/925868222",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:presque-isle-range",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

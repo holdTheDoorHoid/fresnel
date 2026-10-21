@@ -1,7 +1,11 @@
 {
   "id": "us-fl-tampa-bay-watch",
   "name": "Tampa Bay Watch Light",
-  "other_names": [],
+  "other_names": [
+    "Tierra Verde Lighthouse",
+    "Tampa Bay Watch",
+    "Tierra Verde"
+  ],
   "country": "US",
   "region": "FL",
   "county": "Pinellas",
@@ -9,10 +13,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 27.654722,
-    "lon": -82.717778,
+    "lat": 27.654705,
+    "lon": -82.717913,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
   "status": "active",
   "status_note": null,
@@ -46,7 +50,7 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Tampa Bay Watch",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -62,7 +66,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -70,7 +74,7 @@
     {
       "year": 2005,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -102,6 +106,16 @@
       "label": "ARLHS World List of Lights USA1335",
       "url": "https://wlol.arlhs.com/lighthouse/USA1335.html",
       "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/522540102",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,16 +129,40 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/522540102",
+      "part": "wikidata:Q69969515",
+      "fields": [
+        "agency",
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:tampa-bay-watch",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:tampa-bay-watch",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,9 @@
   "id": "us-nj-barnegat-2",
   "name": "Barnegat Lighthouse",
   "other_names": [
-    "Old Barney"
+    "Old Barney",
+    "Barnegat",
+    "Barnegat Light"
   ],
   "country": "US",
   "region": "NJ",
@@ -22,55 +24,56 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "brick",
       "built": 1835,
       "height_m": 52.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1835,
     "deactivated": 1944,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 50.0,
+    "focal_height_m": 49.7,
     "range_nm": 22.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "71000512",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000512"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/71000512",
+      "listed": "1971-01-25"
     }
   ],
   "aton": {
     "uscg_llnr": "2-958",
-    "arlhs": null,
+    "arlhs": "USA-039",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": "NRHP",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1927"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,10 +85,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1858,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1927,
@@ -96,18 +123,24 @@
     {
       "year": 1944,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1971,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-barnegat",
+      "relation": "replica",
+      "name": "Barnegat Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/OldBarneyLight.jpg",
@@ -144,6 +177,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/704069002",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Barnegat",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=380",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Barnegat",
+      "url": "https://archives.uslhs.org/places/barnegat",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -172,9 +220,90 @@
         "agency",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:380",
+      "part": "wikidata:Q3378177",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:barnegat-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-958",
+      "part": "wikidata:Q3378177",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3374",
+      "part": "wikidata:Q3378177",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:71000512",
+      "part": "wikidata:Q3378177",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.76432,-74.10618",
+      "part": "wikidata:Q3378177",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.76482,-74.10770",
+      "part": "wikidata:Q3378177",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:barnegat",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

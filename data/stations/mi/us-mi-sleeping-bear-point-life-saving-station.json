@@ -36,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "79000285",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000285"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000285",
+      "listed": "1979-04-26",
+      "nomination": "https://catalog.archives.gov/id/25339828"
     }
   ],
   "aton": {
@@ -69,7 +71,7 @@
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -101,6 +103,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Sleeping_Bear_Point_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339828",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -118,10 +125,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000285",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

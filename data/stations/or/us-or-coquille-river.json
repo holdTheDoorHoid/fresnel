@@ -2,7 +2,11 @@
   "id": "us-or-coquille-river",
   "name": "Coquille River Light",
   "other_names": [
-    "Coquille River Lighthouse"
+    "Coquille River Lighthouse",
+    "Coquille River",
+    "Bandon",
+    "Old Coast Guard Building",
+    "Coquille River Regulated Navigation Area Warning"
   ],
   "country": "US",
   "region": "OR",
@@ -22,58 +26,67 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1895,
-      "height_m": null,
+      "height_m": 12.2,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1896,
     "deactivated": 1939,
     "lens": null,
-    "characteristic": "28 s on, 2 s off",
+    "characteristic": "QY",
     "focal_height_m": 12.0,
-    "range_nm": null,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "74001682",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001682"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/74001682",
+      "listed": "1974-03-22",
+      "nomination": "https://catalog.archives.gov/id/77849057"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-8705",
     "arlhs": "USA194",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Oregon Parks and Recreation Department",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1895,
@@ -83,20 +96,32 @@
     },
     {
       "year": 1896,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1896,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1896,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1939,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1974,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -154,6 +179,26 @@
       "label": "Website",
       "url": "https://lighthousefriends.com/light.asp?ID=127",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Coquille River (Bandon)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=127",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Coquille River (Bandon)",
+      "url": "https://archives.uslhs.org/places/coquille-river-bandon",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77849057",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -180,6 +225,62 @@
       "part": "wikidata:Q5169330",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:127",
+      "part": "wikidata:Q5169330",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:coquille-river",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-8705",
+      "part": "station",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3463",
+      "part": "wikidata:Q5169330",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:74001682",
+      "part": "wikidata:Q5169330",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:coquille-river",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

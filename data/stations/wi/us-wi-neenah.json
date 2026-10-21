@@ -3,7 +3,10 @@
   "name": "Neenah Light",
   "other_names": [
     "Kimberly Point Park Lighthouse",
-    "Neenah Lighthouse"
+    "Neenah Lighthouse",
+    "Neenah",
+    "Kimberly Point",
+    "Kimberly Lighthouse"
   ],
   "country": "US",
   "region": "WI",
@@ -46,7 +49,9 @@
     {
       "register": "NRHP",
       "number": "12001275",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12001275"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12001275",
+      "listed": "2013-02-05",
+      "nomination": "https://catalog.archives.gov/id/106783032"
     }
   ],
   "aton": {
@@ -79,7 +84,7 @@
     {
       "year": 1945,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -91,7 +96,7 @@
     {
       "year": 2013,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +143,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/564906787",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Neenah (Kimberly Point)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=575",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Neenah",
+      "url": "https://archives.uslhs.org/places/neenah",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/106783032",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,6 +189,35 @@
       "part": "wikidata:Q6986891",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:575",
+      "part": "wikidata:Q6986891",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:neenah",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9561",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12001275",
+      "part": "wikidata:Q6986891",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

@@ -3,7 +3,8 @@
   "name": "Cape Flattery Light",
   "other_names": [
     "Cape Flattery Lighthouse",
-    "Cape Flattery"
+    "Cape Flattery",
+    "Tatoosh Island"
   ],
   "country": "US",
   "region": "WA",
@@ -22,7 +23,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Cape Flattery Light",
       "type": "conical_masonry",
       "material": "brick",
       "built": 1854,
@@ -30,17 +31,47 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 48.391536,
+        "lon": -124.735627
+      }
+    },
+    {
+      "role": "fog_signal",
+      "name": "Fog Signal Building",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 48.391779,
+        "lon": -124.736893
+      }
     }
   ],
   "light": {
     "first_lit": 1857,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(4) W 20s",
+    "characteristic": "Fl(2) W 20s",
     "focal_height_m": 34.1,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -64,7 +95,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -75,8 +106,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -90,20 +121,38 @@
     {
       "year": 1857,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 1857,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2008,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 2009,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2009,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -147,6 +196,21 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1087695264",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1087695265",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1087695266",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1087695273",
       "kind": "osm"
     },
@@ -162,8 +226,28 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/234494773",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/643092088",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Flattery",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=120",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Flattery",
+      "url": "https://archives.uslhs.org/places/cape-flattery",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -186,11 +270,30 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/1087695264",
+      "part": "osm:way/1087695264",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1087695265",
+      "part": "osm:way/1087695264",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1087695266",
+      "part": "osm:way/1087695264",
+      "fields": []
+    },
+    {
+      "source": "osm",
       "key": "osm:way/1087695273",
       "part": "wikidata:Q1963379",
       "fields": [
-        "location",
-        "registers"
+        "location"
       ]
     },
     {
@@ -205,15 +308,81 @@
       "part": "wikidata:Q1963379",
       "fields": [
         "events",
-        "light",
         "structures"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/234494773",
+      "part": "osm:way/234494773",
+      "fields": []
     },
     {
       "source": "osm",
       "key": "osm:way/643092088",
       "part": "wikidata:Q1963379",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:120",
+      "part": "wikidata:Q1963379",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:cape-flattery-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:cape-flattery-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-16145",
+      "part": "wikidata:Q1963379",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-760",
+      "part": "wikidata:Q1963379",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3543",
+      "part": "wikidata:Q1963379",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.39199,-124.73693",
+      "part": "wikidata:Q1963379",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:cape-flattery",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -222,6 +391,10 @@
       "values": [
         {
           "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
           "value": "active"
         },
         {
@@ -255,6 +428,10 @@
         {
           "source": "osm",
           "value": 34.1376
+        },
+        {
+          "source": "uslhs",
+          "value": 47.24
         }
       ],
       "note": "Sources differ by more than 3 m."

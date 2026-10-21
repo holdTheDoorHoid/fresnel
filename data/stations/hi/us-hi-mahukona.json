@@ -1,7 +1,12 @@
 {
   "id": "us-hi-mahukona",
   "name": "Mahukona Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Mahukona",
+    "Minor light of Hawai'i - Mahukona",
+    "MÃÂhukona",
+    "Mahukona Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -30,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1889,
     "deactivated": 1915,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 64.0,
+    "focal_height_m": 19.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -68,6 +73,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1899,
       "event": "built",
       "note": null,
@@ -76,7 +87,7 @@
     {
       "year": 1915,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -124,6 +135,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/13840977494",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Hawai'i - Mahukona",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=902",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -136,7 +157,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "ownership",
         "region",
@@ -159,6 +179,35 @@
       "part": "wikidata:Q106394597",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:902",
+      "part": "wikidata:Q106394597",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:ma-a-hukona-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28325",
+      "part": "wikidata:Q106394597",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.18033,-155.90148",
+      "part": "wikidata:Q106394597",
+      "fields": [
+        "light"
       ]
     }
   ],

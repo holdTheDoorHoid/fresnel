@@ -1,7 +1,13 @@
 {
   "id": "us-hi-pohakuloa-point",
   "name": "Pōhakuloa Point Light",
-  "other_names": [],
+  "other_names": [
+    "Pohakuloa Point",
+    "Minor light of Lana'i - Pohakuloa Point",
+    "Pohakuloa",
+    "Shipwreck Beach",
+    "Pohakuloa Point Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -33,15 +39,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 9.1,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-28520",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -75,6 +81,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/5137610723",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Lana'i - Pohakuloa Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=916",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +104,38 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:916",
+      "part": "osm:node/5137610723",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:pohakuloa",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28520",
+      "part": "osm:node/5137610723",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.92905,-156.98765",
+      "part": "osm:node/5137610723",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

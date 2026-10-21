@@ -2,7 +2,8 @@
   "id": "us-va-hog-island",
   "name": "Hog Island Light",
   "other_names": [
-    "Hog Island Lighthouse"
+    "Hog Island Lighthouse",
+    "Hog Island"
   ],
   "country": "US",
   "region": "VA",
@@ -17,26 +18,26 @@
     "from": "wikidata"
   },
   "status": "unknown",
-  "status_note": "Wikidata gives an end date (1948) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status_note": "Reviewed 2026-10: Wikidata's end date (1948) is the only evidence that this light is gone; no source maps or lists a structure.",
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "skeletal",
+      "material": "cast_iron",
+      "built": 1896,
+      "height_m": 13.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1853,
+    "first_lit": 1852,
     "deactivated": 1948,
     "lens": null,
     "characteristic": "Fl W 45s",
-    "focal_height_m": null,
+    "focal_height_m": 18.3,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -70,15 +71,33 @@
   "stay": null,
   "events": [
     {
+      "year": 1852,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1853,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1896,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1896,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1948,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -121,6 +140,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Hog_Island_Light",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hog Island",
+      "url": "https://archives.uslhs.org/places/hog-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,9 +162,34 @@
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8958",
+      "part": "wikidata:Q5876980",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1853
+        },
+        {
+          "source": "uslhs",
+          "value": 1852
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

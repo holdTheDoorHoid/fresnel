@@ -2,7 +2,8 @@
   "id": "us-ma-tarpaulin-cove",
   "name": "Tarpaulin Cove Light",
   "other_names": [
-    "Tarpaulin Cove Lighthouse"
+    "Tarpaulin Cove Lighthouse",
+    "Tarpaulin Cove"
   ],
   "country": "US",
   "region": "MA",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1818,
       "height_m": 8.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1891,
+    "first_lit": 1759,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 24.0,
+    "focal_height_m": 23.8,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001505",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001505"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001505",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63789799"
     }
   ],
   "aton": {
@@ -54,11 +57,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "CUTTYHUNK HISTORICAL SOCIETY",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,17 +72,41 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1759,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1817,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1818,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1891,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1891,
@@ -90,13 +117,13 @@
     {
       "year": 1941,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -152,6 +179,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496042",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Tarpaulin Cove",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=609",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tarpaulin Cove",
+      "url": "https://archives.uslhs.org/places/tarpaulin-cove",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789799",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,7 +211,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -179,9 +225,76 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:609",
+      "part": "wikidata:Q7686574",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:tarpaulin-cove-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15580",
+      "part": "wikidata:Q7686574",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2860",
+      "part": "wikidata:Q7686574",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001505",
+      "part": "wikidata:Q7686574",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.46881,-70.75747",
+      "part": "wikidata:Q7686574",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1891
+        },
+        {
+          "source": "uslhs",
+          "value": 1759
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,9 @@
   "id": "us-va-great-wicomico-river",
   "name": "Great Wicomico River Light",
   "other_names": [
-    "Great Wicomico River Lighthouse"
+    "Great Wicomico River Lighthouse",
+    "Great Wicomico River",
+    "Great Wicomico River Wreck Light WR4"
   ],
   "country": "US",
   "region": "VA",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.8042,
-    "lon": -76.2675,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.804316,
+    "lon": -76.26763,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -26,7 +28,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,15 +37,15 @@
     "first_lit": 1889,
     "deactivated": 2016,
     "lens": null,
-    "characteristic": "Fl W 6 sec",
-    "focal_height_m": null,
-    "range_nm": 6.1,
+    "characteristic": "QR",
+    "focal_height_m": 14.3,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-7475",
     "arlhs": "USA351",
     "ccg_list_number": null,
     "nga": null
@@ -72,8 +74,20 @@
     {
       "year": 1889,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1967,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2016,
@@ -120,6 +134,21 @@
       "label": "ARLHS World List of Lights USA351",
       "url": "https://wlol.arlhs.com/lighthouse/USA351.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Great Wicomico River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1929",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Great Wicomico River",
+      "url": "https://archives.uslhs.org/places/great-wicomico-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,15 +162,63 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1929",
+      "part": "wikidata:Q5600248",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:great-wicomico-river-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-16245",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8957",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2016
+        },
+        {
+          "source": "uslhs",
+          "value": 1967
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,8 @@
   "name": "Puerto Ferro Light",
   "other_names": [
     "Faro de Puerto Ferro",
-    "Puerto Ferro Lighthouse"
+    "Puerto Ferro Lighthouse",
+    "Puerto Ferro"
   ],
   "country": "US",
   "region": "PR",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "stone",
+      "built": 1899,
+      "height_m": 11.6,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,12 +38,18 @@
     "deactivated": 1926,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 20.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "HAER",
+      "number": "PR-45",
+      "url": "https://www.loc.gov/item/pr0045/"
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "PUR012",
@@ -53,7 +60,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -77,9 +84,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1899,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1926,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -126,6 +145,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4304896990",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Puerto Ferro",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1168",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-45, Faro de Puerto Ferro",
+      "url": "https://www.loc.gov/item/pr0045/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Puerto Ferro",
+      "url": "https://archives.uslhs.org/places/puerto-ferro",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,9 +185,49 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1168",
+      "part": "wikidata:Q16898845",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-45",
+      "part": "wikidata:Q16898845",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3486",
+      "part": "wikidata:Q16898845",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1899
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

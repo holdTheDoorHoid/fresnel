@@ -2,7 +2,8 @@
   "id": "us-ca-point-diablo",
   "name": "Point Diablo Light",
   "other_names": [
-    "Point Diablo Lighthouse"
+    "Point Diablo Lighthouse",
+    "Point Diablo"
   ],
   "country": "US",
   "region": "CA",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.82,
-    "lon": -122.49965,
+    "lat": 37.8201,
+    "lon": -122.4995,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
@@ -36,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 26.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 25.9,
+    "range_nm": 9.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,7 +73,7 @@
     {
       "year": 1923,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     }
   ],
@@ -114,6 +115,21 @@
       "label": "ARLHS World List of Lights USA974",
       "url": "https://wlol.arlhs.com/lighthouse/USA974.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point Diablo",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=342",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Diablo",
+      "url": "https://archives.uslhs.org/places/point-diablo",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,17 +142,54 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:342",
+      "part": "wikidata:Q7208009",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:point-diablo-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4250",
+      "part": "wikidata:Q7208009",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:91928",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.82012,-122.49946",
+      "part": "wikidata:Q7208009",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

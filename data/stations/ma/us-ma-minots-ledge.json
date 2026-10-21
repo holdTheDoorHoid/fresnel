@@ -2,7 +2,10 @@
   "id": "us-ma-minots-ledge",
   "name": "Minot's Ledge Light",
   "other_names": [
-    "Minot's Ledge Lighthouse"
+    "Minot's Ledge Lighthouse",
+    "Minots Ledge",
+    "Minot's Ledge",
+    "Minots Ledge Light"
   ],
   "country": "US",
   "region": "MA",
@@ -32,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1860,
+    "first_lit": 1850,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(1+4+3) W 45s",
-    "focal_height_m": 26.0,
+    "focal_height_m": 25.9,
     "range_nm": 10.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001489",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001489"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001489",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63792732"
     },
     {
       "register": "Historic Civil Engineering Landmark",
@@ -59,11 +64,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -74,8 +79,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -87,21 +92,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1860,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1860,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1860,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1947,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713423319",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minots Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=474",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Minots Ledge",
+      "url": "https://archives.uslhs.org/places/minots-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792732",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,9 +217,100 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:474",
+      "part": "wikidata:Q6869325",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:minot-s-ledge-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-440",
+      "part": "wikidata:Q6869325",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2845",
+      "part": "wikidata:Q6869325",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001489",
+      "part": "wikidata:Q6869325",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.26972,-70.75908",
+      "part": "wikidata:Q6869325",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:minot-s-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 26.0
+        },
+        {
+          "source": "uslhs",
+          "value": 34.75
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1860
+        },
+        {
+          "source": "uslhs",
+          "value": 1850
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

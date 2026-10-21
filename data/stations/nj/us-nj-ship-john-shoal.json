@@ -2,7 +2,9 @@
   "id": "us-nj-ship-john-shoal",
   "name": "Ship John Shoal Light",
   "other_names": [
-    "Ship John Shoal Lighthouse"
+    "Ship John Shoal Lighthouse",
+    "Ship John Shoal",
+    "Ship John Shoal Light Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1877,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1854,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s, R sector",
-    "focal_height_m": 15.0,
+    "characteristic": "Fl W 5s",
+    "focal_height_m": 15.2,
     "range_nm": 16.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000630",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000630"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000630",
+      "listed": "2006-07-19",
+      "nomination": "https://catalog.archives.gov/id/75324997"
     }
   ],
   "aton": {
@@ -57,8 +61,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,28 +73,40 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1877,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1877,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2006,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/800160381",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ship John Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=383",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ship John Shoal",
+      "url": "https://archives.uslhs.org/places/ship-john-shoal",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324997",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +190,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -175,6 +210,67 @@
       "key": "osm:way/800160381",
       "part": "wikidata:Q7497932",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:383",
+      "part": "wikidata:Q7497932",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:ship-john-shoal-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-1640",
+      "part": "wikidata:Q7497932",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3389",
+      "part": "wikidata:Q7497932",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000630",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.30530,-75.37665",
+      "part": "wikidata:Q7497932",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:ship-john-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

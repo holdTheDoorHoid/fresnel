@@ -1,7 +1,9 @@
 {
   "id": "us-wi-fishermans-road",
   "name": "Fisherman's Road Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Fishermans Road"
+  ],
   "country": "US",
   "region": "WI",
   "county": null,
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582715740",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Fishermans Road",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=863",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +95,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:863",
+      "part": "osm:node/582715740",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

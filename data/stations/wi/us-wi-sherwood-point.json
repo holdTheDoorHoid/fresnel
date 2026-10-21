@@ -3,7 +3,8 @@
   "name": "Sherwood Point Light",
   "other_names": [
     "Sherwood Point Lighthouse",
-    "Sherwood Point Light Station"
+    "Sherwood Point Light Station",
+    "Sherwood Point"
   ],
   "country": "US",
   "region": "WI",
@@ -74,16 +75,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
-    "focal_height_m": 19.0,
-    "range_nm": 12.0,
+    "focal_height_m": 18.6,
+    "range_nm": 10.4,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84003663",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003663"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003663",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891070"
     }
   ],
   "aton": {
@@ -96,19 +99,19 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1983"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -116,19 +119,25 @@
     {
       "year": 1883,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
       "year": 1883,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -195,6 +204,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/560439177",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sherwood Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=636",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: SHERWOOD POINT",
+      "url": "https://archives.uslhs.org/places/sherwood-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891070",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -222,7 +251,6 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location",
         "structures"
       ]
@@ -249,6 +277,62 @@
       "part": "osm:way/560439177",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:636",
+      "part": "wikidata:Q7495560",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:sherwood-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-22000",
+      "part": "wikidata:Q7495560",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3584",
+      "part": "wikidata:Q7495560",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84003663",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.89273,-87.43359",
+      "part": "wikidata:Q7495560",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:sherwood-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

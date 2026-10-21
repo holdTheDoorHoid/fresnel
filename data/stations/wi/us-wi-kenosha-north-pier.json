@@ -5,7 +5,10 @@
     "Kenosha North Pier Lighthouse",
     "Kenosha North Pierhead Light",
     "ADD Name",
-    "Kenosha Light"
+    "Kenosha Light",
+    "Kenosha Pierhead",
+    "Kenosha North Pierhead",
+    "Kenosha South Pier Light"
   ],
   "country": "US",
   "region": "WI",
@@ -35,20 +38,22 @@
     }
   ],
   "light": {
-    "first_lit": 1906,
+    "first_lit": 1856,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso R 6s",
-    "focal_height_m": 15.0,
-    "range_nm": 8.0,
+    "focal_height_m": 15.2,
+    "range_nm": 6.9,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "08000545",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000545"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/08000545",
+      "listed": "2008-06-24",
+      "nomination": "https://catalog.archives.gov/id/75325055"
     }
   ],
   "aton": {
@@ -60,8 +65,8 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -79,9 +84,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1906,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -93,7 +104,7 @@
     {
       "year": 2008,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -145,6 +156,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=239",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Kenosha North Pierhead",
+      "url": "https://archives.uslhs.org/places/kenosha-north-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325055",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -157,7 +183,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -171,13 +196,106 @@
       "part": "wikidata:Q6391315",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:239",
+      "part": "wikidata:Q6391315",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:kenosha-north-pierhead-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20415",
+      "part": "wikidata:Q6391315",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20435",
+      "part": "wikidata:Q6391315",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9554",
+      "part": "wikidata:Q6391315",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:08000545",
+      "part": "wikidata:Q6391315",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.58882,-87.80856",
+      "part": "wikidata:Q6391315",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 15.0
+        },
+        {
+          "source": "osm",
+          "value": 15.0
+        },
+        {
+          "source": "uslhs",
+          "value": 11.89
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

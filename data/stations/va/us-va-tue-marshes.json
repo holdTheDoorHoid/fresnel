@@ -2,7 +2,8 @@
   "id": "us-va-tue-marshes",
   "name": "Tue Marshes Light",
   "other_names": [
-    "Tue Marshes Lighthouse"
+    "Tue Marshes Lighthouse",
+    "Tue Marshes"
   ],
   "country": "US",
   "region": "VA",
@@ -11,39 +12,39 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.2356,
-    "lon": -76.3859,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.235522,
+    "lon": -76.385794,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1875,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 14.6,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1960,
+    "first_lit": 1875,
     "deactivated": 2012,
     "lens": null,
     "characteristic": "Fl W 6s (R sector)",
-    "focal_height_m": null,
+    "focal_height_m": 14.6,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-13505",
     "arlhs": "USA856",
     "ccg_list_number": null,
     "nga": null
@@ -72,8 +73,20 @@
     {
       "year": 1875,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1875,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1960,
@@ -82,9 +95,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1960,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 2012,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -121,6 +140,21 @@
       "label": "ARLHS World List of Lights USA856",
       "url": "https://wlol.arlhs.com/lighthouse/USA856.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Tue Marshes",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1936",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Tue Marshes",
+      "url": "https://archives.uslhs.org/places/tue-marshes",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +168,75 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1936",
+      "part": "wikidata:Q7851368",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:tue-marshes-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8973",
+      "part": "wikidata:Q7851368",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1960
+        },
+        {
+          "source": "uslhs",
+          "value": 1875
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2012
+        },
+        {
+          "source": "rowlett",
+          "value": 2012
+        },
+        {
+          "source": "uslhs",
+          "value": 1960
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

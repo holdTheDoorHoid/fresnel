@@ -4,7 +4,10 @@
   "other_names": [
     "Seul Choix Lighthouse",
     "Seul-Choix Lighthouse",
-    "Seul Choix Point Lighthouse"
+    "Seul Choix Point Lighthouse",
+    "Seul Choix Point",
+    "Seul Choix Pointe Light Station",
+    "Seul Choix Point Light"
   ],
   "country": "US",
   "region": "MI",
@@ -25,12 +28,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1892,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -38,16 +41,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 24.0,
-    "range_nm": 16.0,
+    "focal_height_m": 24.4,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001846",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001846"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001846",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891442"
     },
     {
       "register": "Michigan State Historic Site",
@@ -64,20 +69,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -85,19 +90,31 @@
     {
       "year": 1892,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1892,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1895,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1895,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +161,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582783104",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Seul Choix Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=565",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Seul Choix Point",
+      "url": "https://archives.uslhs.org/places/seul-choix-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891442",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -170,6 +207,64 @@
       "part": "wikidata:Q7457019",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:565",
+      "part": "wikidata:Q7457019",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:seul-choix-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21490",
+      "part": "wikidata:Q7457019",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3334",
+      "part": "wikidata:Q7457019",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001846",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.92142,-85.91208",
+      "part": "wikidata:Q7457019",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:seul-choix-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,8 @@
   "id": "us-ca-point-arguello",
   "name": "Point Arguello Light",
   "other_names": [
-    "Point Arguello Lighthouse"
+    "Point Arguello Lighthouse",
+    "Point Arguello"
   ],
   "country": "US",
   "region": "CA",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 34.576944,
-    "lon": -120.647222,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 34.57712,
+    "lon": -120.64731,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "concrete",
       "built": 1901,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 8.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1967,
+    "first_lit": 1901,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 38.0,
-    "range_nm": 17.0,
+    "focal_height_m": 29.6,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -74,6 +75,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1901,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1901,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1967,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1967,
@@ -120,6 +139,21 @@
       "label": "ARLHS World List of Lights USA612",
       "url": "https://wlol.arlhs.com/lighthouse/USA612.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point Arguello",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=645",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Arguello",
+      "url": "https://archives.uslhs.org/places/point-arguello",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,17 +166,84 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:645",
+      "part": "wikidata:Q7207940",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:point-arguello-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-210",
+      "part": "wikidata:Q7207940",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8379",
+      "part": "wikidata:Q7207940",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:34.57715,-120.64725",
+      "part": "wikidata:Q7207940",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 38.0
+        },
+        {
+          "source": "uslhs",
+          "value": 27.74
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1967
+        },
+        {
+          "source": "uslhs",
+          "value": 1901
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

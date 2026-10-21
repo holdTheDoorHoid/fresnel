@@ -6,7 +6,9 @@
     "Cabras Island Light",
     "Cabras Island Lighthouse",
     "Isla de Cabras Light",
-    "Isla de Cabras Lighthouse"
+    "Isla de Cabras Lighthouse",
+    "Cabras Island",
+    "Isla Cabras"
   ],
   "country": "US",
   "region": "PR",
@@ -15,22 +17,22 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 18.211667,
-    "lon": -65.6,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 18.212882,
+    "lon": -65.599435,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1966) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "conical_masonry",
       "material": "stone",
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "built": 1902,
+      "height_m": 15.2,
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -40,7 +42,7 @@
     "deactivated": 1946,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 23.8,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -74,10 +76,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1902,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1908,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1908,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1946,
@@ -130,6 +144,16 @@
       "label": "ARLHS World List of Lights PUR008",
       "url": "https://wlol.arlhs.com/lighthouse/PUR008.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Cabras Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2412",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cabras Island (Isla Cabras)",
+      "url": "https://archives.uslhs.org/places/cabras-island-isla-cabras",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,16 +167,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2412",
+      "part": "wikidata:Q5015818",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3472",
+      "part": "wikidata:Q5015818",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

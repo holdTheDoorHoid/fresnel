@@ -4,7 +4,10 @@
   "other_names": [
     "Grand Haven South Pierhead Inner Lighthouse",
     "South Pierhead Inner Light",
-    "Grand Haven SOUTH PIERHEAD INNER LIGHT"
+    "Grand Haven SOUTH PIERHEAD INNER LIGHT",
+    "Grand Haven South Pierhead Inner",
+    "Copper Harbor Range Rear",
+    "Grand Marais Harbor of Refuge Inner"
   ],
   "country": "US",
   "region": "MI",
@@ -34,14 +37,14 @@
     }
   ],
   "light": {
-    "first_lit": 1907,
+    "first_lit": 1881,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc R 4s",
-    "focal_height_m": 16.0,
-    "range_nm": 6.0,
+    "focal_height_m": 15.8,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,16 +75,46 @@
   "stay": null,
   "events": [
     {
+      "year": 1865,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1881,
       "event": "built",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1881,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1907,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1907,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -127,6 +160,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1885500399",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,7 +182,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -152,8 +194,46 @@
       "part": "wikidata:Q16840779",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwl:grand-haven-south-pierhead-inner-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:copper-harbor-range-rear-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:grand-marais-harbor-of-refuge-inner",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18975",
+      "part": "wikidata:Q16840779",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.05721,-86.25379",
+      "part": "wikidata:Q16840779",
+      "fields": [
+        "light"
       ]
     }
   ],

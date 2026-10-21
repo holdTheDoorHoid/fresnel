@@ -2,7 +2,10 @@
   "id": "us-fl-cape-san-blas",
   "name": "Cape San Blas Light",
   "other_names": [
-    "Cape San Blas Lighthouse"
+    "Cape San Blas Lighthouse",
+    "Cape San Blas",
+    "Cape San Blas Lighthouse at Port St. Joe",
+    "FMSF#8GU25"
   ],
   "country": "US",
   "region": "FL",
@@ -32,7 +35,7 @@
     }
   ],
   "light": {
-    "first_lit": 1885,
+    "first_lit": 1847,
     "deactivated": 1996,
     "lens": null,
     "characteristic": "Fl W 20s",
@@ -45,7 +48,8 @@
     {
       "register": "NRHP",
       "number": "15000208",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000208"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000208",
+      "listed": "2015-05-07"
     }
   ],
   "aton": {
@@ -66,7 +70,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -76,10 +80,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1847,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1848,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1885,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1885,
@@ -90,13 +106,13 @@
     {
       "year": 1996,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2015,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +159,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/627569702",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape San Blas",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=591",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: West Coast",
+      "url": "https://www.ibiblio.org/lighthouse/flw.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,6 +195,32 @@
       "part": "wikidata:Q5035030",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:591",
+      "part": "wikidata:Q5035030",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flw:cape-san-blas-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:15000208",
+      "part": "wikidata:Q5035030",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

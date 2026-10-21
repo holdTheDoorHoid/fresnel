@@ -2,7 +2,10 @@
   "id": "us-mi-forty-mile-point",
   "name": "Forty Mile Point Light",
   "other_names": [
-    "Forty Mile Point Lighthouse"
+    "Forty Mile Point Lighthouse",
+    "Forty Mile Point",
+    "Forty Mile Point Light Station",
+    "Forty-Mile Point Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +26,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1896,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1897,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Iso W 6s",
-    "focal_height_m": 20.0,
-    "range_nm": 14.0,
+    "focal_height_m": 20.1,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001830",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001830"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001830",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891411"
     },
     {
       "register": "Michigan State Historic Site",
@@ -62,23 +72,30 @@
   "agency": "Presque Isle County / 40 Mile Point Lighthouse Society",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "OpenStreetMap tags the structure access=yes. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "http://fortymilepointlighthouse.org/keepers-program/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1896,
@@ -88,14 +105,20 @@
     },
     {
       "year": 1897,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1897,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -147,6 +170,31 @@
       "label": "Website",
       "url": "https://fortymilepointlighthouse.org",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Forty Mile Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=183",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Forty Mile Point",
+      "url": "https://archives.uslhs.org/places/forty-mile-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891411",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -174,6 +222,65 @@
       "fields": [
         "agency",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:183",
+      "part": "wikidata:Q5472981",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:forty-mile-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11715",
+      "part": "wikidata:Q5472981",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2967",
+      "part": "wikidata:Q5472981",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001830",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.48617,-83.91363",
+      "part": "wikidata:Q5472981",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:forty-mile-point-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-ma-egg-rock",
   "name": "Egg Rock Light",
   "other_names": [
-    "Egg Rock Lighthouse"
+    "Egg Rock Lighthouse",
+    "Egg Rock",
+    "Egg Rock, MA"
   ],
   "country": "US",
   "region": "MA",
@@ -11,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 42.433333,
-    "lon": -70.898056,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 42.433428,
+    "lon": -70.898281,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
@@ -26,13 +28,13 @@
       "material": null,
       "built": 1856,
       "height_m": null,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1898,
+    "first_lit": 1856,
     "deactivated": 1922,
     "lens": null,
     "characteristic": "F R",
@@ -74,6 +76,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1898,
@@ -121,6 +129,16 @@
       "label": "ARLHS World List of Lights USA956",
       "url": "https://wlol.arlhs.com/lighthouse/USA956.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Egg Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1974",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Egg Rock, MA",
+      "url": "https://archives.uslhs.org/places/egg-rock-ma",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +152,47 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1974",
+      "part": "wikidata:Q5347829",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9314",
+      "part": "wikidata:Q5347829",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1898
+        },
+        {
+          "source": "uslhs",
+          "value": 1856
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

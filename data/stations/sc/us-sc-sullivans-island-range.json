@@ -1,7 +1,10 @@
 {
   "id": "us-sc-sullivans-island-range",
   "name": "Sullivan's Island Range Lights",
-  "other_names": [],
+  "other_names": [
+    "Sullivans Island Range Rear",
+    "Sullivans Island Range Front"
+  ],
   "country": "US",
   "region": "SC",
   "county": "Charleston",
@@ -11,30 +14,41 @@
   "location": {
     "lat": 32.756,
     "lon": -79.852,
-    "precision": "exact",
-    "from": "wikidata"
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "rear_range",
+      "name": "Sullivan's Island Range Lights",
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1848,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 16.8,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
+    },
+    {
+      "role": "front_range",
+      "name": "Sullivans Island Range Front",
+      "type": null,
+      "material": "wood",
+      "built": 1878,
+      "height_m": 7.9,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1848,
     "deactivated": 1901,
     "lens": null,
     "characteristic": "F R (rear); F W (front)",
-    "focal_height_m": null,
+    "focal_height_m": 17.4,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -74,9 +88,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1878,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1901,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -108,6 +134,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phares_de_Sullivan%27s_Island",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sullivans Island Range Rear",
+      "url": "https://archives.uslhs.org/places/sullivans-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sullivans Island Range Front",
+      "url": "https://archives.uslhs.org/places/sullivans-island-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,16 +156,35 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15290",
+      "part": "wikidata:Q7636367",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8923",
+      "part": "uslhs:8923",
+      "fields": [
+        "events",
+        "location",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

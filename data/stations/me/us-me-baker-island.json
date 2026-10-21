@@ -2,7 +2,9 @@
   "id": "us-me-baker-island",
   "name": "Baker Island Light",
   "other_names": [
-    "Baker Island Lighthouse"
+    "Baker Island Lighthouse",
+    "Baker Island",
+    "Baker Island Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1855,
+    "first_lit": 1828,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 10s",
     "focal_height_m": 32.0,
     "range_nm": 10.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000046",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000046"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000046",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684895"
     }
   ],
   "aton": {
@@ -54,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Park Service - Acadia National Park",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1966"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,10 +86,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1855,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1855,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1957,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1966,
@@ -96,7 +124,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/300718880",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Baker Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=768",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baker Island",
+      "url": "https://archives.uslhs.org/places/baker-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684895",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,9 +217,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:768",
+      "part": "wikidata:Q4849167",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:baker-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-2045",
+      "part": "wikidata:Q4849167",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2886",
+      "part": "wikidata:Q4849167",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000046",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.24117,-68.19902",
+      "part": "wikidata:Q4849167",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:baker-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1855
+        },
+        {
+          "source": "uslhs",
+          "value": 1828
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

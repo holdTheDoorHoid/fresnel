@@ -2,7 +2,9 @@
   "id": "us-il-waukegan-harbor",
   "name": "Waukegan Harbor Light",
   "other_names": [
-    "Waukegan Harbor Lighthouse"
+    "Waukegan Harbor Lighthouse",
+    "Waukegan Harbor",
+    "Waukegan North Pierhead Light"
   ],
   "country": "US",
   "region": "IL",
@@ -37,9 +39,9 @@
     "lens": null,
     "characteristic": "Oc G 4s",
     "focal_height_m": 11.0,
-    "range_nm": 14.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,7 +74,7 @@
     {
       "year": 1889,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -125,6 +127,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/13500739181",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Waukegan Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=238",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -151,6 +163,48 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:238",
+      "part": "wikidata:Q7975147",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:waukegan-harbor-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20315",
+      "part": "wikidata:Q7975147",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20340",
+      "part": "wikidata:Q7975147",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.36064,-87.81340",
+      "part": "wikidata:Q7975147",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.36135,-87.81472",
+      "part": "wikidata:Q7975147",
+      "fields": []
     }
   ],
   "conflicts": [],

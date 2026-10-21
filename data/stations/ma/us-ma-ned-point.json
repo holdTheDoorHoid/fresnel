@@ -4,7 +4,9 @@
   "other_names": [
     "Ned Point Lighthouse",
     "Ned'S Point Light",
-    "Ned's Point Light"
+    "Ned's Point Light",
+    "Neds Point",
+    "Ned's Point"
   ],
   "country": "US",
   "region": "MA",
@@ -18,36 +20,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1838,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1838,
-    "deactivated": 1951,
+    "first_lit": 1837,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 6s",
     "focal_height_m": 12.5,
     "range_nm": 12.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001488",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001488"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001488",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63792730"
     }
   ],
   "aton": {
@@ -56,31 +60,37 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1923"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1837,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1838,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -90,15 +100,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1888,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1923,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1951,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1952,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -150,6 +178,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713409344",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Neds Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=616",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ned's Point",
+      "url": "https://archives.uslhs.org/places/neds-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792730",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -162,7 +210,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -183,10 +230,86 @@
       "key": "osm:way/713409344",
       "part": "wikidata:Q6986072",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:616",
+      "part": "wikidata:Q6986072",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:ned-s-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-17095",
+      "part": "wikidata:Q6986072",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2848",
+      "part": "wikidata:Q6986072",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001488",
+      "part": "wikidata:Q6986072",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.65087,-70.79565",
+      "part": "wikidata:Q6986072",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:ned-s-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

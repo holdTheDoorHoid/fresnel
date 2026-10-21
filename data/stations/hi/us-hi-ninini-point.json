@@ -2,7 +2,11 @@
   "id": "us-hi-ninini-point",
   "name": "Ninini Point Lighthouse",
   "other_names": [
-    "Nawiliwili Lighthouse"
+    "Nawiliwili Lighthouse",
+    "Nawiliwili",
+    "Nawiliwili Harbor",
+    "Ninini Point",
+    "Nawiliwili Harbor Light"
   ],
   "country": "US",
   "region": "HI",
@@ -32,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1897,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 34.0,
-    "range_nm": null,
+    "focal_height_m": 33.5,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -74,6 +78,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1897,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -114,6 +130,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/288995436",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Nawiliwili",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=138",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,7 +152,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -139,6 +164,35 @@
       "part": "wikidata:Q28376275",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:138",
+      "part": "wikidata:Q28376275",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:nawiliwili-harbor-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-29745",
+      "part": "wikidata:Q28376275",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:21.95497,-159.33581",
+      "part": "wikidata:Q28376275",
+      "fields": [
+        "light"
       ]
     }
   ],

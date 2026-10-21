@@ -2,7 +2,8 @@
   "id": "us-ca-point-fermin",
   "name": "Point Fermin Light",
   "other_names": [
-    "Point Fermin Lighthouse"
+    "Point Fermin Lighthouse",
+    "Point Fermin"
   ],
   "country": "US",
   "region": "CA",
@@ -32,20 +33,22 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1874,
     "deactivated": 1942,
     "lens": null,
     "characteristic": "Fl W 10s",
-    "focal_height_m": 36.5,
+    "focal_height_m": 36.6,
     "range_nm": 13.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "72000234",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000234"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/72000234",
+      "listed": "1972-06-13",
+      "nomination": "https://catalog.archives.gov/id/123859420"
     }
   ],
   "aton": {
@@ -57,20 +60,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,19 +81,31 @@
     {
       "year": 1874,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1942,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1972,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -152,6 +167,26 @@
       "label": "Website",
       "url": "https://sanpedro.com/san-pedro-area-points-interest/point-fermin-lighthouse/",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Point Fermin",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=97",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: South",
+      "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Fermin",
+      "url": "https://archives.uslhs.org/places/point-fermin",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/123859420",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -176,9 +211,7 @@
       "source": "osm",
       "key": "osm:node/566859469",
       "part": "wikidata:Q7208023",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -187,9 +220,82 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:97",
+      "part": "wikidata:Q7208023",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca2:point-fermin-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-140",
+      "part": "wikidata:Q7208023",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2718",
+      "part": "wikidata:Q7208023",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:72000234",
+      "part": "wikidata:Q7208023",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:33.70481,-118.29399",
+      "part": "wikidata:Q7208023",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:point-fermin",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 37.0
+        },
+        {
+          "source": "uslhs",
+          "value": 46.94
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

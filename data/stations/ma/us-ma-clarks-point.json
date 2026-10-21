@@ -3,7 +3,9 @@
   "name": "Clarks Point Light",
   "other_names": [
     "Clark's Point Light",
-    "Clarks Point Lighthouse"
+    "Clarks Point Lighthouse",
+    "Clarks Point",
+    "Clark's Point"
   ],
   "country": "US",
   "region": "MA",
@@ -24,16 +26,16 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1797,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1869,
+    "first_lit": 1804,
     "deactivated": 1898,
     "lens": null,
     "characteristic": "F W",
@@ -55,8 +57,8 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "CITY OF NEW BEDFORD",
+  "ownership": "local",
   "access": {
     "level": "unknown",
     "note": null
@@ -71,7 +73,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,6 +85,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1804,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1869,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1869,
       "event": "first_lit",
       "note": null,
@@ -91,7 +105,7 @@
     {
       "year": 1898,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -149,6 +163,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=620",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Clarks Point",
+      "url": "https://archives.uslhs.org/places/clarks-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -176,10 +200,73 @@
         "location",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:620",
+      "part": "wikidata:Q5127584",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:clark-s-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8488",
+      "part": "wikidata:Q5127584",
+      "fields": [
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:clark-s-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1869
+        },
+        {
+          "source": "uslhs",
+          "value": 1804
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

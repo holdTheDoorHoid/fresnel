@@ -4,11 +4,12 @@
   "other_names": [
     "Farallon Island Lighthouse",
     "Farallon Islands Light Station",
-    "Farallon Island"
+    "Farallon Island",
+    "Farallon Light"
   ],
   "country": "US",
   "region": "CA",
-  "county": null,
+  "county": "San Francisco",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -34,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1855,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 109.0,
+    "focal_height_m": 109.1,
     "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -54,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -65,7 +66,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -74,8 +75,20 @@
     {
       "year": 1855,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +134,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/232321619",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Farallon Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=100",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Farallon Island",
+      "url": "https://archives.uslhs.org/places/farallon-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,7 +160,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -144,8 +171,48 @@
       "key": "osm:way/232321619",
       "part": "wikidata:Q5434798",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:100",
+      "part": "wikidata:Q5434798",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:farallon-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-355",
+      "part": "wikidata:Q5434798",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2706",
+      "part": "wikidata:Q5434798",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.69919,-123.00182",
+      "part": "wikidata:Q5434798",
+      "fields": [
+        "light"
       ]
     }
   ],

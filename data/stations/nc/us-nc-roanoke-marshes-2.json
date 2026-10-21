@@ -2,7 +2,9 @@
   "id": "us-nc-roanoke-marshes-2",
   "name": "Roanoke Marshes Light",
   "other_names": [
-    "Roanoke Marshes Lighthouse"
+    "Roanoke Marshes Lighthouse",
+    "Roanoke Marshes",
+    "Roanoke Marshes Light RM"
   ],
   "country": "US",
   "region": "NC",
@@ -16,34 +18,34 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1877,
+      "height_m": 11.6,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1877,
+    "first_lit": 1857,
     "deactivated": 1955,
     "lens": null,
-    "characteristic": "F W with R sector",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 6s",
+    "focal_height_m": 6.1,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-31975",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -70,6 +72,24 @@
   "stay": null,
   "events": [
     {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1877,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1877,
       "event": "first_lit",
       "note": null,
@@ -78,7 +98,7 @@
     {
       "year": 1955,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -110,6 +130,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Roanoke_Marshes_Lighthouse",
       "kind": "commons"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Roanoke Marshes",
+      "url": "https://archives.uslhs.org/places/roanoke-marshes",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,9 +151,50 @@
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-31975",
+      "part": "wikidata:Q7339790",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8864",
+      "part": "wikidata:Q7339790",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.81109,-75.70060",
+      "part": "wikidata:Q7339790",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1877
+        },
+        {
+          "source": "uslhs",
+          "value": 1857
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

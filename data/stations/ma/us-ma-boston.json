@@ -2,7 +2,10 @@
   "id": "us-ma-boston",
   "name": "Boston Light",
   "other_names": [
-    "Boston Lighthouse"
+    "Boston Lighthouse",
+    "Boston Harbor",
+    "Boston",
+    "Boston Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -11,13 +14,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 42.327979,
-    "lon": -70.891509,
+    "lat": 42.327915,
+    "lon": -70.890114,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -28,26 +31,7 @@
       "height_m": 27.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 42.327915,
-        "lon": -70.890114
-      }
-    },
-    {
-      "role": "other",
-      "name": "Oil Shed",
-      "type": null,
-      "material": null,
-      "built": 1783,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "osm",
-      "location": {
-        "lat": 42.327867,
-        "lon": -70.89058
-      }
+      "from": "wikidata"
     },
     {
       "role": "dwelling",
@@ -58,7 +42,11 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "osm",
+      "location": {
+        "lat": 42.328089,
+        "lon": -70.89127
+      }
     },
     {
       "role": "fog_signal",
@@ -69,10 +57,21 @@
       "height_m": null,
       "status": "standing",
       "note": null,
+      "from": "osm"
+    },
+    {
+      "role": "other",
+      "name": "Rainshed",
+      "type": null,
+      "material": null,
+      "built": 1890,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
       "from": "osm",
       "location": {
-        "lat": 42.327888,
-        "lon": -70.889989
+        "lat": 42.328144,
+        "lon": -70.890128
       }
     },
     {
@@ -84,24 +83,36 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "osm",
+      "location": {
+        "lat": 42.327979,
+        "lon": -70.891509
+      }
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": 1776,
-    "lens": null,
+    "first_lit": 1716,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "2",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 10s",
     "focal_height_m": 31.1,
     "range_nm": 27.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "66000133",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000133"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/66000133",
+      "listed": "1966-10-15",
+      "nhl": "1964-01-29",
+      "nomination": "https://catalog.archives.gov/id/63792781"
     },
     {
       "register": "National Historic Landmark",
@@ -116,22 +127,22 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1998"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -143,6 +154,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1716,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1776,
       "event": "deactivated",
       "note": null,
@@ -151,7 +168,7 @@
     {
       "year": 1783,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -179,9 +196,15 @@
       "from": "osm"
     },
     {
+      "year": 1964,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
+    },
+    {
       "year": 1966,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
     },
     {
@@ -242,6 +265,11 @@
     },
     {
       "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/212121729",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/212121730",
       "kind": "osm"
     },
@@ -259,6 +287,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/225332979",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Boston Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=473",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Boston",
+      "url": "https://archives.uslhs.org/places/boston",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792781",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -271,7 +319,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -290,12 +337,20 @@
     },
     {
       "source": "osm",
+      "key": "osm:way/212121729",
+      "part": "osm:way/225332979",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
       "key": "osm:way/212121730",
       "part": "wikidata:Q2895493",
       "fields": [
         "agency",
         "events",
-        "light"
+        "location"
       ]
     },
     {
@@ -313,7 +368,6 @@
       "part": "osm:way/212121732",
       "fields": [
         "events",
-        "location",
         "structures"
       ]
     },
@@ -321,27 +375,77 @@
       "source": "osm",
       "key": "osm:way/225332979",
       "part": "osm:way/225332979",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:473",
+      "part": "wikidata:Q2895493",
       "fields": [
-        "structures"
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:boston-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-11340",
+      "part": "wikidata:Q2895493",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-425",
+      "part": "wikidata:Q2895493",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2824",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:66000133",
+      "part": "wikidata:Q2895493",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.32802,-70.89007",
+      "part": "wikidata:Q2895493",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:boston-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1783
-        },
-        {
-          "source": "wikidata",
-          "value": 1776
-        }
-      ],
-      "note": "A source gives the light's service entry (1783) after its retirement (1776); it may have been relit. Neither is shown as the first lighting."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

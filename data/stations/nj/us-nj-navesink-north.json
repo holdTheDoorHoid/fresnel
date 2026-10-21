@@ -1,14 +1,24 @@
 {
   "id": "us-nj-navesink-north",
-  "name": "Navesink north lighthouse",
+  "name": "Navesink Twin Lights",
   "other_names": [
-    "Navesink Twin Lights",
+    "Navesink north lighthouse",
     "Navesink twin lights",
+    "Navesink south lighthouse",
     "Twin Lights Museum",
     "Navesink Light Station",
     "North Tower",
     "South Tower",
-    "Twin Lights State Historic Site"
+    "Twin Lights State Historic Site",
+    "Navesink",
+    "Navesink (2) Twin Lights: North Tower",
+    "Highlands",
+    "Navesink (2) Twin Lights: South Tower",
+    "Twin Lights Historic Site",
+    "Navesink Historic District",
+    "Twin Lights",
+    "Navesink Lighthouse",
+    "Highlands Light"
   ],
   "country": "US",
   "region": "NJ",
@@ -17,28 +27,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.395984,
-    "lon": -73.985648,
+    "lat": 40.39628,
+    "lon": -73.985699,
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": "Navesink north lighthouse",
       "type": null,
+      "material": "brick",
+      "built": 1828,
+      "height_m": 22.0,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Navesink south lighthouse",
+      "type": null,
       "material": null,
       "built": 1828,
       "height_m": 22.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
-      "location": {
-        "lat": 40.39628,
-        "lon": -73.985699
-      }
+      "from": "wikidata"
     },
     {
       "role": "other",
@@ -49,29 +66,41 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "osm",
+      "location": {
+        "lat": 40.395984,
+        "lon": -73.985648
+      }
     }
   ],
   "light": {
     "first_lit": 1828,
-    "deactivated": 1952,
-    "lens": null,
+    "deactivated": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "6",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Iso W 10s",
     "focal_height_m": 75.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "06000237",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000237"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/06000237",
+      "listed": "2006-02-17",
+      "nhl": "2006-02-17"
     },
     {
       "register": "NRHP",
       "number": "70000389",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/70000389"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/70000389",
+      "listed": "1970-12-02"
     },
     {
       "register": "National Historic Landmark",
@@ -93,20 +122,20 @@
   "agency": "Twin Lights Historical Society",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -120,13 +149,19 @@
     {
       "year": 1828,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1841,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1862,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -150,7 +185,7 @@
     {
       "year": 1898,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -160,10 +195,28 @@
       "from": "wikidata"
     },
     {
-      "year": 1970,
-      "event": "nrhp_listed",
+      "year": 1953,
+      "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1970,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "wikidata"
+    },
+    {
+      "year": 2006,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places and National Historic Landmark",
+      "from": "nrhp"
+    },
+    {
+      "year": 2006,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -182,6 +235,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navesink_twin_lights_NJ1.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navesink_twin_lights_NJ1.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:Navesink_twin_lights_NJ1.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Navesink_Twin_Lights_is_situated_200_feet_above_sea_level_in_Highlands%2C_New_Jersey_LCCN2011630321.tif",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Navesink_Twin_Lights_is_situated_200_feet_above_sea_level_in_Highlands%2C_New_Jersey_LCCN2011630321.tif?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Navesink_Twin_Lights_is_situated_200_feet_above_sea_level_in_Highlands%2C_New_Jersey_LCCN2011630321.tif",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -220,6 +282,21 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q80183144",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_sud_de_Navesink",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Navesink_south_tower",
+      "kind": "commons"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/relation/13463857",
       "kind": "osm"
@@ -248,6 +325,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/423922694",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Navesink",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=376",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Navesink",
+      "url": "https://archives.uslhs.org/places/navesink",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -280,12 +372,23 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q80183144",
+      "part": "wikidata:Q80183144",
+      "fields": [
+        "events",
+        "photos",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:relation/13463857",
       "part": "wikidata:Q6982276",
       "fields": [
         "agency",
-        "events"
+        "events",
+        "location"
       ]
     },
     {
@@ -312,13 +415,109 @@
       "part": "osm:way/423922694",
       "fields": [
         "events",
-        "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:376",
+      "part": "wikidata:Q6982276",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:navesink-2-twin-lights-north-tower",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:navesink-2-twin-lights-south-tower",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-35025",
+      "part": "wikidata:Q6982276",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3383",
+      "part": "wikidata:Q6982276",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:06000237",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:70000389",
+      "part": "wikidata:Q6982276",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.39657,-73.98583",
+      "part": "wikidata:Q6982276",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:navesink-twin-lights",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

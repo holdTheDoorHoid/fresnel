@@ -2,7 +2,9 @@
   "id": "us-me-monhegan-island",
   "name": "Monhegan Island Light",
   "other_names": [
-    "Monhegan Island Lighthouse"
+    "Monhegan Island Lighthouse",
+    "Monhegan Island",
+    "Monhegan"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +34,22 @@
     }
   ],
   "light": {
-    "first_lit": 1850,
+    "first_lit": 1824,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 54.2,
-    "range_nm": 20.0,
+    "focal_height_m": 54.3,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "80000239",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000239"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/80000239",
+      "listed": "1980-05-07",
+      "nomination": "https://catalog.archives.gov/id/88686669"
     }
   ],
   "aton": {
@@ -54,23 +58,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Monhegan Historical and Cultural Museum Association",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1950"
+    "as_of": "1959"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,10 +86,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1824,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1850,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1850,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1950,
@@ -94,9 +116,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1959,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1980,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +171,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/798889834",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Monhegan Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=777",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Monhegan Island",
+      "url": "https://archives.uslhs.org/places/monhegan-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686669",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,7 +203,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -168,8 +215,73 @@
       "key": "osm:way/798889834",
       "part": "wikidata:Q6899831",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:777",
+      "part": "wikidata:Q6899831",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:monhegan-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-20",
+      "part": "wikidata:Q6899831",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4925",
+      "part": "wikidata:Q6899831",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2920",
+      "part": "wikidata:Q6899831",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:80000239",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.76480,-69.31583",
+      "part": "wikidata:Q6899831",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:monhegan-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -183,6 +295,10 @@
         },
         {
           "source": "osm",
+          "value": 1824
+        },
+        {
+          "source": "uslhs",
           "value": 1824
         }
       ],

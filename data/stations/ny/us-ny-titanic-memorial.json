@@ -14,7 +14,7 @@
     "lat": 40.7074,
     "lon": -74.00386,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -114,6 +114,11 @@
       "label": "ARLHS World List of Lights USA1229",
       "url": "https://wlol.arlhs.com/lighthouse/USA1229.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Titanic Memorial",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=585",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,16 +131,23 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:585",
+      "part": "wikidata:Q6147476",
+      "fields": [
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

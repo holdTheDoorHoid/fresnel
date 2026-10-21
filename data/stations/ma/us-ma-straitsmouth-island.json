@@ -2,7 +2,11 @@
   "id": "us-ma-straitsmouth-island",
   "name": "Straitsmouth Island Light",
   "other_names": [
-    "Straitsmouth Island Lighthouse"
+    "Straitsmouth Island Lighthouse",
+    "Straitsmouth Island",
+    "Straightsmouth Island Light",
+    "Straitsmouth Light",
+    "Straitsmouth Island Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -23,29 +27,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1835,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1896,
+    "first_lit": 1835,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 14.0,
     "range_nm": 6.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001487",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001487"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001487",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63790222"
     }
   ],
   "aton": {
@@ -54,26 +60,33 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "OWNED BY TOWN OF ROCKPORT; MANAGED BY THACHER ISLAND ASSOCIATION",
+  "ownership": "local",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1967"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": "https://thacherisland.org/",
+    "season": null,
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
+  },
   "events": [
     {
       "year": 1835,
@@ -82,15 +95,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1896,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1896,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1967,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +174,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/714430286",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Straitsmouth Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=605",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Straitsmouth Island",
+      "url": "https://archives.uslhs.org/places/straitsmouth-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63790222",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/massachusetts",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,7 +211,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -170,9 +231,86 @@
       "key": "osm:way/714430286",
       "part": "wikidata:Q7621171",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:605",
+      "part": "wikidata:Q7621171",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:straitsmouth-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-290",
+      "part": "wikidata:Q7621171",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2859",
+      "part": "wikidata:Q7621171",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001487",
+      "part": "wikidata:Q7621171",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.66228,-70.58806",
+      "part": "wikidata:Q7621171",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ma:straitsmouth-island-light-station",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

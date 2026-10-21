@@ -2,7 +2,8 @@
   "id": "us-wi-kevich",
   "name": "Kevich Light",
   "other_names": [
-    "Kevich Lighthouse"
+    "Kevich Lighthouse",
+    "Kevich"
   ],
   "country": "US",
   "region": "WI",
@@ -39,7 +40,7 @@
     "focal_height_m": 50.0,
     "range_nm": 20.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -51,8 +52,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission."
   },
   "staffing": {
     "status": "unknown",
@@ -72,7 +73,7 @@
     {
       "year": 1981,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -110,6 +111,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582772978",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Kevich",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=642",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Kevich",
+      "url": "https://archives.uslhs.org/places/kevich",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,6 +151,37 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:642",
+      "part": "wikidata:Q6395679",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:kevich",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20765",
+      "part": "wikidata:Q6395679",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:77484",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

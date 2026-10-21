@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "84000073",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000073"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84000073",
+      "listed": "1984-10-11",
+      "nomination": "https://catalog.archives.gov/id/47719899"
     }
   ],
   "aton": {
@@ -73,7 +75,7 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -100,6 +102,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Kitty_Hawk_Life-Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719899",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -118,10 +125,19 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84000073",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

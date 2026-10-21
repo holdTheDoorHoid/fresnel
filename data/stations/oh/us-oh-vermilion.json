@@ -3,7 +3,10 @@
   "name": "Vermilion Light",
   "other_names": [
     "Vermilion Lighthouse",
-    "Vermilion Museum Lighthouse"
+    "Vermilion Museum Lighthouse",
+    "Vermilion",
+    "Vermilion (Replica)",
+    "Vermillion"
   ],
   "country": "US",
   "region": "OH",
@@ -33,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": 1992,
+    "first_lit": 1847,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": 10.6,
+    "characteristic": "F W",
+    "focal_height_m": 10.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -65,16 +68,28 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1847,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1877,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1992,
+      "event": "built",
+      "note": "Tower 5 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1992,
@@ -84,7 +99,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-vermilion",
+      "relation": "replica",
+      "name": "Vermilion Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vermilion_Lighthouse_in_Vermilion%2C_Ohio.jpg",
@@ -126,6 +147,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/472639567",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Vermilion",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=280",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Vermilion (Replica)",
+      "url": "https://archives.uslhs.org/places/vermilion-replica",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,7 +174,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -150,12 +185,71 @@
       "key": "osm:way/472639567",
       "part": "wikidata:Q14716840",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:280",
+      "part": "wikidata:Q14716840",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:vermilion-5",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-4451",
+      "part": "wikidata:Q14716840",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9953",
+      "part": "wikidata:Q14716840",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.42497,-82.36662",
+      "part": "wikidata:Q14716840",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:oh:vermillion",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1992
+        },
+        {
+          "source": "uslhs",
+          "value": 1847
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

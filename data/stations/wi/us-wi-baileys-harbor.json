@@ -3,7 +3,9 @@
   "name": "Baileys Harbor Light",
   "other_names": [
     "Baileys Harbor Lighthouse",
-    "Baileys Harbor Bird Cage Lighthouse"
+    "Baileys Harbor Bird Cage Lighthouse",
+    "Baileys Harbor",
+    "Baileys Harbor (Old)"
   ],
   "country": "US",
   "region": "WI",
@@ -24,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1852,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1853,
     "deactivated": 1869,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -49,11 +51,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private Owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -65,7 +67,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -77,10 +79,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1869,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +141,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/560438336",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Baileys Harbor",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=258",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baileys Harbor",
+      "url": "https://archives.uslhs.org/places/baileys-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -146,6 +181,44 @@
       "part": "wikidata:Q4848417",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:258",
+      "part": "wikidata:Q4848417",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:baileys-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3560",
+      "part": "wikidata:Q4848417",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:baileys-harbor-old",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

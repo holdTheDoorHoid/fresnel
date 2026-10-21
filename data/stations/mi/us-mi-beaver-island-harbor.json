@@ -3,7 +3,13 @@
   "name": "Beaver Island Harbor Light",
   "other_names": [
     "Beaver Island Harbor Lighthouse",
-    "Saint James Lighthouse"
+    "Saint James Lighthouse",
+    "Beaver Island Harbor",
+    "St. James",
+    "Beaver Island Harbor, Whiskey Point",
+    "Saint James",
+    "St. James Light",
+    "Beaver Is. Harbor"
   ],
   "country": "US",
   "region": "MI",
@@ -24,23 +30,28 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1856,
-      "height_m": null,
+      "height_m": 10.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1870,
+    "first_lit": 1856,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Iso R",
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Iso R 6s",
     "focal_height_m": 11.5,
-    "range_nm": 9.5,
+    "range_nm": 11.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -53,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -65,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -75,6 +86,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1870,
@@ -126,6 +155,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/503112264",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Beaver Island Harbor (St. James)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=206",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Beaver Island Harbor (Saint James)",
+      "url": "https://archives.uslhs.org/places/beaver-island-harbor-saint-james",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,7 +182,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -152,6 +195,48 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:206",
+      "part": "wikidata:Q4878098",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:st-james-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17845",
+      "part": "wikidata:Q4878098",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3344",
+      "part": "wikidata:Q4878098",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:beaver-is-harbor-st-james",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -169,6 +254,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1870
+        },
+        {
+          "source": "uslhs",
+          "value": 1856
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

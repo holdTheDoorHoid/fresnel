@@ -2,7 +2,16 @@
   "id": "us-wi-racine-harbor-lighthouse-and-life-saving",
   "name": "Racine Harbor Lighthouse and Life Saving Station",
   "other_names": [
-    "Root River light"
+    "Root River light",
+    "Racine Harbor",
+    "Root River",
+    "Racine",
+    "Racine Harbor Light 5",
+    "Racine Harbor Light 9",
+    "Racine Harbor Light 14",
+    "Racine Harbor Light 13",
+    "Racine Harbor Junction Light",
+    "Racine Yacht Club South Breakwater Light"
   ],
   "country": "US",
   "region": "WI",
@@ -23,23 +32,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1837,
-      "height_m": null,
+      "height_m": 11.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1839,
     "deactivated": 1903,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "QG",
+    "focal_height_m": 14.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
@@ -49,7 +58,7 @@
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-20500",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -82,6 +91,24 @@
       "from": "wikidata"
     },
     {
+      "year": 1839,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1865,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1903,
       "event": "deactivated",
       "note": null,
@@ -95,7 +122,13 @@
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-wi-racine-harbor-lighthouse-and-life-saving-station",
+      "relation": "life_saving_station_nearby",
+      "name": "Racine Harbor Lighthouse and Life Saving Station"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Root_River_Racine_070107.jpg",
@@ -132,6 +165,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/929199010",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Racine Harbor (Root River)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=643",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Racine (Root River)",
+      "url": "https://archives.uslhs.org/places/racine-root-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -158,10 +201,108 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:643",
+      "part": "wikidata:Q16948352",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20500",
+      "part": "wikidata:Q16948352",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20515",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20540",
+      "part": "wikidata:Q16948352",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20545",
+      "part": "wikidata:Q16948352",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20550",
+      "part": "wikidata:Q16948352",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20585",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8999",
+      "part": "wikidata:Q16948352",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1837
+        },
+        {
+          "source": "uslhs",
+          "value": 1839
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1903
+        },
+        {
+          "source": "uslhs",
+          "value": 1865
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

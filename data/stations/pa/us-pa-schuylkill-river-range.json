@@ -1,0 +1,183 @@
+{
+  "id": "us-pa-schuylkill-river-range",
+  "name": "Schuylkill River Range",
+  "other_names": [
+    "Schuylkill River Entrance Range Rear",
+    "Schuylkill River Range Front",
+    "Schuylkill River Range Rear",
+    "Schuylkill River Range Front Light",
+    "Schuylkill River Range Rear Light"
+  ],
+  "country": "US",
+  "region": "PA",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 39.88667,
+    "lon": -75.18933,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Schuylkill River Range Front",
+      "type": null,
+      "material": "steel",
+      "built": 1875,
+      "height_m": 2.4,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Schuylkill River Range",
+      "type": null,
+      "material": null,
+      "built": 1875,
+      "height_m": 5.8,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.890556,
+        "lon": -75.1925
+      }
+    }
+  ],
+  "light": {
+    "first_lit": 1875,
+    "deactivated": null,
+    "lens": null,
+    "characteristic": "QG",
+    "focal_height_m": 2.4,
+    "range_nm": 20.0,
+    "fog_signal": null,
+    "from": "uscg_light_list"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "2-3420",
+    "arlhs": "USA-120",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1875,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Schuylkill River Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1885",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Pennsylvania: Southeast",
+      "url": "https://www.ibiblio.org/lighthouse/pase.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Schuylkill River Range Front",
+      "url": "https://archives.uslhs.org/places/schuylkill-river-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Schuylkill River Range Rear",
+      "url": "https://archives.uslhs.org/places/schuylkill-river-range-rear",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1885",
+      "part": "lighthousefriends:1885",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pase:schuylkill-river-entrance-range-rear-6",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-3415",
+      "part": "uslhs:8892",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-3420",
+      "part": "lighthousefriends:1885",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8892",
+      "part": "uslhs:8892",
+      "fields": [
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8893",
+      "part": "lighthousefriends:1885",
+      "fields": [
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

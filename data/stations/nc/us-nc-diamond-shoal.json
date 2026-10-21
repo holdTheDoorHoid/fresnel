@@ -2,7 +2,9 @@
   "id": "us-nc-diamond-shoal",
   "name": "Diamond Shoal Light",
   "other_names": [
-    "Diamond Shoal Lighthouse"
+    "Diamond Shoal Lighthouse",
+    "Diamond Shoals",
+    "Diamond Shoals (1966)"
   ],
   "country": "US",
   "region": "NC",
@@ -11,32 +13,47 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 35.153333,
-    "lon": -75.296667,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 35.15167,
+    "lon": -75.29833,
+    "precision": "approximate",
+    "from": "uslhs"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Diamond Shoals (1966)",
+      "type": "skeletal",
+      "material": "steel",
+      "built": 1966,
+      "height_m": 38.1,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Diamond Shoal Light",
       "type": "texas_tower",
       "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 35.1533,
+        "lon": -75.2967
+      }
     }
   ],
   "light": {
     "first_lit": 1966,
-    "deactivated": 2001,
+    "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 38.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -48,22 +65,22 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Privately Owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1977"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,13 +89,25 @@
     {
       "year": 1966,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1967,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1977,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2001,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -120,6 +149,21 @@
       "label": "ARLHS World List of Lights USA230",
       "url": "https://wlol.arlhs.com/lighthouse/USA230.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Diamond Shoals",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1690",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Diamond Shoals (1966)",
+      "url": "https://archives.uslhs.org/places/diamond-shoals-1966",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,15 +177,60 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1690",
+      "part": "wikidata:Q5270917",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:diamond-shoals",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3366",
+      "part": "uslhs:3366",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "location",
+        "ownership",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,8 @@
   "id": "us-va-point-of-shoals",
   "name": "Point of Shoals Light",
   "other_names": [
-    "Point of Shoals Lighthouse"
+    "Point of Shoals Lighthouse",
+    "Point of Shoals"
   ],
   "country": "US",
   "region": "VA",
@@ -11,32 +12,32 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.0683,
-    "lon": -76.653,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 37.06831,
+    "lon": -76.653031,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1855,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1871,
+    "first_lit": 1854,
     "deactivated": 1933,
     "lens": null,
     "characteristic": "F W",
-    "focal_height_m": null,
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -70,10 +71,34 @@
   "stay": null,
   "events": [
     {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1855,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1871,
@@ -84,7 +109,7 @@
     {
       "year": 1933,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -121,6 +146,21 @@
       "label": "ARLHS World List of Lights USA632",
       "url": "https://wlol.arlhs.com/lighthouse/USA632.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point of Shoals",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1934",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point of Shoals",
+      "url": "https://archives.uslhs.org/places/point-shoals",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +174,56 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1934",
+      "part": "wikidata:Q7208260",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:point-of-shoals-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8967",
+      "part": "wikidata:Q7208260",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1871
+        },
+        {
+          "source": "uslhs",
+          "value": 1854
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

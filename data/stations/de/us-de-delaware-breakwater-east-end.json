@@ -4,7 +4,10 @@
   "other_names": [
     "Delaware Breakwater East End Lighthouse",
     "Delaware Breakwater Light",
-    "National Harbor of Refuge"
+    "National Harbor of Refuge",
+    "Delaware Breakwater",
+    "Delaware (Lewes) Breakwater",
+    "Delaware Breakwater East End"
   ],
   "country": "US",
   "region": "DE",
@@ -24,21 +27,21 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1885,
-      "height_m": null,
+      "height_m": 17.1,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1885,
     "deactivated": 1996,
     "lens": null,
     "characteristic": "current decorative light",
-    "focal_height_m": null,
+    "focal_height_m": 18.6,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -59,20 +62,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,13 +83,25 @@
     {
       "year": 1885,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1996,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -138,6 +153,21 @@
       "label": "Website",
       "url": "http://delaware-baylights.20fr.com/EastEndLighthouse.html",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Delaware Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=454",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Delaware Breakwater East End",
+      "url": "https://archives.uslhs.org/places/delaware-breakwater-east-end",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -164,6 +194,42 @@
       "fields": [
         "location",
         "registers"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:454",
+      "part": "wikidata:Q5253240",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:delaware-lewes-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2755",
+      "part": "wikidata:Q5253240",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:de:delaware-bw-east-end",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,9 @@
   "id": "us-mi-sturgeon-point",
   "name": "Sturgeon Point Light",
   "other_names": [
-    "Sturgeon Point Lighthouse"
+    "Sturgeon Point Lighthouse",
+    "Sturgeon Point",
+    "Sturgeon Point Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -34,18 +36,25 @@
   "light": {
     "first_lit": 1869,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "3.5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 6s",
     "focal_height_m": 21.0,
-    "range_nm": 9.0,
+    "range_nm": 7.8,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001370",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001370"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001370",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28890709"
     }
   ],
   "aton": {
@@ -57,20 +66,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1913"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,7 +87,7 @@
     {
       "year": 1869,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -88,9 +97,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1870,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1913,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +164,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/288588662",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sturgeon Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=176",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sturgeon Point",
+      "url": "https://archives.uslhs.org/places/sturgeon-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28890709",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,6 +210,64 @@
       "part": "wikidata:Q7629022",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:176",
+      "part": "wikidata:Q7629022",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:sturgeon-point",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11345",
+      "part": "wikidata:Q7629022",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3348",
+      "part": "wikidata:Q7629022",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001370",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.71254,-83.27239",
+      "part": "wikidata:Q7629022",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:sturgeon-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

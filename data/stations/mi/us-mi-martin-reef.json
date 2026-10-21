@@ -2,7 +2,9 @@
   "id": "us-mi-martin-reef",
   "name": "Martin Reef Light Station",
   "other_names": [
-    "Martin Reef Lighthouse"
+    "Martin Reef Lighthouse",
+    "Martin Reef",
+    "Martin Reef Light"
   ],
   "country": "US",
   "region": "MI",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "type": "crib",
+      "material": "concrete",
+      "built": 1927,
+      "height_m": 15.8,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1927,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W/R 10s",
-    "focal_height_m": 20.0,
-    "range_nm": 13.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl R 10s",
+    "focal_height_m": 19.8,
+    "range_nm": 10.4,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000743",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000743"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000743",
+      "listed": "2005-07-27",
+      "nomination": "https://catalog.archives.gov/id/75325083"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,22 +73,28 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1927,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1927,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +141,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=717",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Martin Reef",
+      "url": "https://archives.uslhs.org/places/martin-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325083",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -156,6 +181,65 @@
       "part": "wikidata:Q6776447",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:717",
+      "part": "wikidata:Q6776447",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:martin-reef",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12205",
+      "part": "wikidata:Q6776447",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2993",
+      "part": "wikidata:Q6776447",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000743",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.91315,-84.14861",
+      "part": "wikidata:Q6776447",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:martin-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

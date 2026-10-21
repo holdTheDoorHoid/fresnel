@@ -3,7 +3,10 @@
   "name": "Ocracoke Light",
   "other_names": [
     "Ocracoke Island Lighthouse",
-    "Ocracoke Lighthouse"
+    "Ocracoke Lighthouse",
+    "Ocracoke",
+    "Ocracoke Island",
+    "Ocracoke Light Station"
   ],
   "country": "US",
   "region": "NC",
@@ -24,29 +27,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1798,
       "height_m": 25.9,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1823,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F W",
-    "focal_height_m": 22.8,
+    "focal_height_m": 22.9,
     "range_nm": 15.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "77000110",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000110"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/77000110",
+      "listed": "1977-11-25",
+      "nomination": "https://catalog.archives.gov/id/47720910"
     },
     {
       "register": "NRHP",
@@ -60,23 +70,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Park Service",
+  "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -100,9 +110,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1824,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -154,6 +176,26 @@
       "label": "Website",
       "url": "https://www.nps.gov/caha/planyourvisit/ols.htm",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Ocracoke",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=355",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ocracoke Island",
+      "url": "https://archives.uslhs.org/places/ocracoke-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47720910",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -180,14 +222,91 @@
       "part": "wikidata:Q4286368",
       "fields": [
         "events",
-        "light",
         "location",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:355",
+      "part": "wikidata:Q4286368",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:ocracoke",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-660",
+      "part": "wikidata:Q4286368",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3369",
+      "part": "wikidata:Q4286368",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:77000110",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.10896,-75.98603",
+      "part": "wikidata:Q4286368",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:ocracoke-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1823
+        },
+        {
+          "source": "osm",
+          "value": 1823
+        },
+        {
+          "source": "uslhs",
+          "value": 1828
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

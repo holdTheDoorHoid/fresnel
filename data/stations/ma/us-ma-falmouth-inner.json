@@ -2,7 +2,9 @@
   "id": "us-ma-falmouth-inner",
   "name": "Falmouth Inner Light",
   "other_names": [
-    "Falmouth Inner Lighthouse"
+    "Falmouth Inner Lighthouse",
+    "Falmouth Inner Harbor Light 1",
+    "Falmouth Inner Harbor Light 2"
   ],
   "country": "US",
   "region": "MA",
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 2.5s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 7.6,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -103,12 +105,37 @@
         "aton",
         "county",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15110",
+      "part": "wikidata:Q5432592",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-15112",
+      "part": "wikidata:Q5432592",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.54207,-70.60828",
+      "part": "wikidata:Q5432592",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.54250,-70.60750",
+      "part": "wikidata:Q5432592",
+      "fields": []
     }
   ],
   "conflicts": [],

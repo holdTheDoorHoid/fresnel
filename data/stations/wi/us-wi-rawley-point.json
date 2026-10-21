@@ -4,7 +4,12 @@
   "other_names": [
     "Rawley Point light",
     "Rawley Point Lighthouse",
-    "Keeper's House"
+    "Keeper's House",
+    "Rawley Point",
+    "Twin River",
+    "Twin Rivers Point",
+    "Rawley Point Light Station",
+    "Twin River Point Light Station"
   ],
   "country": "US",
   "region": "WI",
@@ -24,30 +29,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "skeletal",
       "material": "steel",
       "built": 1853,
       "height_m": 33.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1894,
+    "first_lit": 1853,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 34.0,
-    "range_nm": 16.0,
+    "focal_height_m": 34.4,
+    "range_nm": 13.9,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84003706",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003706"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003706",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891355"
     }
   ],
   "aton": {
@@ -60,11 +67,11 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "note": "OpenStreetMap tags the structure access=private. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1979"
   },
   "visit": {
     "grounds_open": null,
@@ -72,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,9 +91,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1894,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -96,9 +115,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1894,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1979,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -155,6 +186,26 @@
       "label": "Website",
       "url": "https://vrentals.vacationrentaldesk.com/USCGLighthouses/homepage.html",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Rawley Point (Twin River)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=252",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rawley Point",
+      "url": "https://archives.uslhs.org/places/rawley-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891355",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,7 +218,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -182,7 +232,6 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
       ]
     },
@@ -191,9 +240,92 @@
       "key": "osm:way/838811908",
       "part": "wikidata:Q7297018",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:252",
+      "part": "wikidata:Q7297018",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:rawley-point-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:rawley-point-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20935",
+      "part": "wikidata:Q7297018",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3582",
+      "part": "wikidata:Q7297018",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84003706",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.21067,-87.50887",
+      "part": "wikidata:Q7297018",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:rawley-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1894
+        },
+        {
+          "source": "osm",
+          "value": 1894
+        },
+        {
+          "source": "uslhs",
+          "value": 1853
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

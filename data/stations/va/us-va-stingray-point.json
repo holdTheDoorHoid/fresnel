@@ -2,7 +2,8 @@
   "id": "us-va-stingray-point",
   "name": "Stingray Point Light",
   "other_names": [
-    "Stingray Point Lighthouse"
+    "Stingray Point Lighthouse",
+    "Stingray Point"
   ],
   "country": "US",
   "region": "VA",
@@ -16,30 +17,30 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1858,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 12.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1965,
+    "first_lit": 1858,
     "deactivated": 1965,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": null,
+    "focal_height_m": 10.4,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -76,6 +77,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1965,
       "event": "first_lit",
       "note": null,
@@ -84,12 +97,18 @@
     {
       "year": 1965,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-va-stingray-point-replica",
+      "relation": "replica",
+      "name": "Stingray Point (Replica)"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stingray_point_light.PNG",
@@ -121,6 +140,16 @@
       "label": "ARLHS World List of Lights USA812",
       "url": "https://wlol.arlhs.com/lighthouse/USA812.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stingray Point",
+      "url": "https://archives.uslhs.org/places/stingray-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,9 +169,56 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:stingray-point-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-7325",
+      "part": "wikidata:Q7617432",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8971",
+      "part": "wikidata:Q7617432",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.56127,-76.27005",
+      "part": "wikidata:Q7617432",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1965
+        },
+        {
+          "source": "uslhs",
+          "value": 1858
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -2,7 +2,8 @@
   "id": "us-md-fog-point",
   "name": "Fog Point Light",
   "other_names": [
-    "Fog Point Lighthouse"
+    "Fog Point Lighthouse",
+    "Fog Point"
   ],
   "country": "US",
   "region": "MD",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.0299,
-    "lon": -76.0417,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.034444,
+    "lon": -76.0375,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "material": "stone",
+      "built": 1827,
+      "height_m": 7.3,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1875,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 9.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,13 +73,13 @@
     {
       "year": 1827,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1875,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -95,6 +96,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Fog_Point_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Fog Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1944",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fog Point",
+      "url": "https://archives.uslhs.org/places/fog-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -106,9 +117,26 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1944",
+      "part": "wikidata:Q5464053",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8462",
+      "part": "wikidata:Q5464053",
+      "fields": [
+        "events",
+        "light",
+        "structures"
       ]
     }
   ],

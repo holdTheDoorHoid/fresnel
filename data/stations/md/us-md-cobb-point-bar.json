@@ -2,7 +2,11 @@
   "id": "us-md-cobb-point-bar",
   "name": "Cobb Point Bar Light",
   "other_names": [
-    "Cobb Point Bar Lighthouse"
+    "Cobb Point Bar Lighthouse",
+    "Cobb Point Bar",
+    "Wicomico River Entrance",
+    "Cobb Point Bar, Cobb Island Bar",
+    "Wicomico River Entrance Light 1W"
   ],
   "country": "US",
   "region": "MD",
@@ -22,24 +26,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1889,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1940,
+    "first_lit": 1889,
     "deactivated": 1940,
     "lens": null,
     "characteristic": "Fl G 4s",
     "focal_height_m": 18.5,
-    "range_nm": null,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -72,8 +76,20 @@
     {
       "year": 1889,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1940,
@@ -84,7 +100,7 @@
     {
       "year": 1940,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -126,6 +142,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1075552417",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cobb Point Bar",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1943",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cobb Point Bar",
+      "url": "https://archives.uslhs.org/places/cobb-point-bar",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,10 +183,75 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1943",
+      "part": "wikidata:Q5138773",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:wicomico-river-entrance-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-17255",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8460",
+      "part": "wikidata:Q5138773",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "lighthousefriends",
+          "value": "lost"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1940
+        },
+        {
+          "source": "uslhs",
+          "value": 1889
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

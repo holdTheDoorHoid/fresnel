@@ -4,7 +4,10 @@
   "other_names": [
     "Faro Culebrita",
     "El Faro Culebrita",
-    "Faro de Culebrita"
+    "Faro de Culebrita",
+    "Culebrita",
+    "Faro Isla de Culebritas",
+    "Isla Culebrita Light"
   ],
   "country": "US",
   "region": "PR",
@@ -37,17 +40,24 @@
     "first_lit": 1886,
     "deactivated": 1975,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 10s",
+    "focal_height_m": 93.0,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000686",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000686"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000686",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518204"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-42",
+      "url": "https://www.loc.gov/item/pr0042/"
     }
   ],
   "aton": {
@@ -68,10 +78,10 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -92,7 +102,7 @@
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +154,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/3404864796",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Culebrita",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1171",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Puerto Rico",
+      "url": "https://www.ibiblio.org/lighthouse/pr.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-42, Faro Isla de Culebritas",
+      "url": "https://www.loc.gov/item/pr0042/",
+      "kind": "register"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518204",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,6 +201,51 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1171",
+      "part": "wikidata:Q15212163",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pr:culebrita-2",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-31685",
+      "part": "wikidata:Q15212163",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-42",
+      "part": "station",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000686",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:18.31309,-65.22771",
+      "part": "wikidata:Q15212163",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
@@ -190,13 +265,20 @@
             18.31375,
             -65.22749
           ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            18.31377,
+            -65.22745
+          ]
         }
       ],
       "distance_m": 1563,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -4,7 +4,11 @@
   "other_names": [
     "Manning Light",
     "Manning Memorial Lighthouse",
-    "Robert H. Manning Memorial Lighthouse"
+    "Robert H. Manning Memorial Lighthouse",
+    "Robert H. Manning Memorial",
+    "Manning",
+    "Robert H. Manning Memorial, Empire",
+    "Manning Memorial"
   ],
   "country": "US",
   "region": "MI",
@@ -38,10 +42,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 11.5,
+    "focal_height_m": 11.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -82,10 +86,22 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1991,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-az-robert-h-manning",
+      "relation": "replica",
+      "name": "Robert H. Manning Lighthouse"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ManningLight.jpg",
@@ -127,6 +143,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6548255483",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Robert H. Manning Memorial",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=200",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Manning Memorial",
+      "url": "https://archives.uslhs.org/places/manning-memorial",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,6 +183,40 @@
       "part": "wikidata:Q6750873",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:200",
+      "part": "wikidata:Q6750873",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:manning",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-18366",
+      "part": "wikidata:Q6750873",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9778",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.81426,-86.06725",
+      "part": "wikidata:Q6750873",
+      "fields": [
+        "light"
       ]
     }
   ],

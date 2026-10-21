@@ -9,35 +9,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.7903,
-    "lon": -75.0806,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.790278,
+    "lon": -75.080556,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1825,
-      "height_m": null,
-      "status": "standing",
+      "height_m": 13.7,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1825,
     "deactivated": 1884,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 13.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -74,9 +74,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1825,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1884,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -113,6 +125,16 @@
       "label": "ARLHS World List of Lights USA1186",
       "url": "https://wlol.arlhs.com/lighthouse/USA1186.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Cape Henlopen Beacon",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1892",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Henlopen Beacon",
+      "url": "https://archives.uslhs.org/places/cape-henlopen-beacon",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,16 +147,33 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1892",
+      "part": "wikidata:Q16890085",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8391",
+      "part": "wikidata:Q16890085",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

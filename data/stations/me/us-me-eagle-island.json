@@ -2,7 +2,8 @@
   "id": "us-me-eagle-island",
   "name": "Eagle Island Light",
   "other_names": [
-    "Eagle Island Lighthouse"
+    "Eagle Island Lighthouse",
+    "Eagle Island"
   ],
   "country": "US",
   "region": "ME",
@@ -23,23 +24,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1838,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1838,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 32.5,
+    "focal_height_m": 32.3,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -48,11 +49,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Eagle Light Caretakers",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -63,8 +64,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,8 +73,14 @@
     {
       "year": 1838,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1858,
@@ -82,9 +89,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1959,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     }
   ],
@@ -131,6 +144,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/367794388",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Eagle Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=773",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Eagle Island",
+      "url": "https://archives.uslhs.org/places/eagle-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -143,7 +171,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -157,9 +184,74 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:773",
+      "part": "wikidata:Q5325142",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:eagle-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3455",
+      "part": "wikidata:Q5325142",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2902",
+      "part": "wikidata:Q5325142",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.21767,-68.76777",
+      "part": "wikidata:Q5325142",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:eagle-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1858
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

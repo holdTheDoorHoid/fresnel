@@ -2,7 +2,9 @@
   "id": "us-or-willamette-river",
   "name": "Willamette River Light",
   "other_names": [
-    "Willamette River Lighthouse"
+    "Willamette River Lighthouse",
+    "Willamette River",
+    "Kelley Point Junction Light"
   ],
   "country": "US",
   "region": "OR",
@@ -11,12 +13,12 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.65301,
-    "lon": -122.763,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 45.650801,
+    "lon": -122.764476,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
@@ -24,9 +26,9 @@
       "name": null,
       "type": null,
       "material": "wood",
-      "built": null,
+      "built": 1895,
       "height_m": 7.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,15 +37,15 @@
     "first_lit": 1895,
     "deactivated": 1935,
     "lens": null,
-    "characteristic": "F R",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl(2+1) R 6s",
+    "focal_height_m": 11.9,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-11225",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -55,8 +57,8 @@
     "note": null
   },
   "staffing": {
-    "status": "automated",
-    "as_of": "1935"
+    "status": "unknown",
+    "as_of": null
   },
   "visit": {
     "grounds_open": null,
@@ -72,7 +74,7 @@
     {
       "year": 1895,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -111,6 +113,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Willamette_River_Light",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Willamette River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1788",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Willamette River",
+      "url": "https://archives.uslhs.org/places/willamette-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -123,16 +135,54 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1788",
+      "part": "wikidata:Q8003304",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-11225",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-14850",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8886",
+      "part": "wikidata:Q8003304",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.65304,-122.76282",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

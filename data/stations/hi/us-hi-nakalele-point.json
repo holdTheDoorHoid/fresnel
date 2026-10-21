@@ -1,7 +1,12 @@
 {
   "id": "us-hi-nakalele-point",
   "name": "Nakalele Point Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Nakalele",
+    "Minor light of Maui - Nakalele",
+    "Nakalele Point",
+    "Nakalele Point Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": null,
@@ -14,8 +19,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,19 +35,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1908,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 43.3,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "6-28330",
+    "arlhs": "HAW-039",
     "ccg_list_number": null,
     "nga": null
   },
@@ -66,7 +71,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +87,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/842306309",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Minor light of Maui - Nakalele",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=919",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,10 +111,40 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:919",
+      "part": "osm:way/842306309",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:nakalele-point-3",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28330",
+      "part": "osm:way/842306309",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:21.02908,-156.59048",
+      "part": "osm:way/842306309",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

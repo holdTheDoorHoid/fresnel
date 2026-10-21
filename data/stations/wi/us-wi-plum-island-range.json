@@ -7,7 +7,10 @@
     "Plum Island Range Rear Light",
     "Llnr 21310",
     "Plum Island Range Front Light",
-    "Llnr 21305"
+    "Llnr 21305",
+    "Plum Island Rear Range",
+    "Plum Island Range Rear",
+    "Plum Island Range Front"
   ],
   "country": "US",
   "region": "WI",
@@ -38,13 +41,13 @@
     {
       "role": "rear_range",
       "name": "Plum Island Range rear light",
-      "type": null,
+      "type": "skeletal",
       "material": "mixed",
       "built": 1896,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 45.307652,
         "lon": -86.958127
@@ -54,12 +57,17 @@
   "light": {
     "first_lit": 1897,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "F R",
-    "focal_height_m": 12.0,
-    "range_nm": 14.0,
+    "focal_height_m": 25.6,
+    "range_nm": 12.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -70,7 +78,9 @@
     {
       "register": "NRHP",
       "number": "84003659",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003659"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003659",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891068"
     }
   ],
   "aton": {
@@ -83,18 +93,18 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
-    "as_of": "1960"
+    "as_of": "1969"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -108,8 +118,14 @@
     },
     {
       "year": 1897,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1897,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -119,14 +135,26 @@
       "from": "wikidata"
     },
     {
+      "year": 1969,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-wi-plum-island-life-saving-station-wi",
+      "relation": "life_saving_station_nearby",
+      "name": "Plum Island Life Saving Station, WI"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plum_Island.JPG",
@@ -192,6 +220,31 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/8592273259",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Plum Island Rear Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=641",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: PLUM ISLAND RANGE REAR",
+      "url": "https://archives.uslhs.org/places/plum-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Plum Island Range Front",
+      "url": "https://archives.uslhs.org/places/plum-island-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891068",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -232,9 +285,7 @@
       "source": "osm",
       "key": "osm:node/582699343",
       "part": "wikidata:Q107278505",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "osm",
@@ -242,9 +293,72 @@
       "part": "wikidata:Q107288678",
       "fields": [
         "agency",
-        "light",
         "location",
         "registers"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:641",
+      "part": "wikidata:Q107278505",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:plum-island-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21305",
+      "part": "wikidata:Q107288678",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21310",
+      "part": "wikidata:Q107278505",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3577",
+      "part": "wikidata:Q107278505",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:77990",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84003659",
+      "part": "wikidata:Q107278505",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.30764,-86.95817",
+      "part": "wikidata:Q107278505",
+      "fields": [
+        "light"
       ]
     }
   ],

@@ -1,7 +1,9 @@
 {
   "id": "us-ma-nahant-life-saving-station",
   "name": "Nahant Life-Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Nahant Coast Guard Station"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Essex",
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "other",
@@ -24,7 +26,7 @@
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
@@ -34,7 +36,9 @@
     {
       "register": "NRHP",
       "number": "12000133",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000133"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000133",
+      "listed": "2012-03-20",
+      "nomination": "https://catalog.archives.gov/id/63794930"
     }
   ],
   "aton": {
@@ -59,7 +63,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -67,7 +71,7 @@
     {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -94,6 +98,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Nahant_Life-Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Nahant Life Saving Station",
+      "url": "https://archives.uslhs.org/places/nahant-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63794930",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -111,10 +125,33 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97816",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000133",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:nahant-lss",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

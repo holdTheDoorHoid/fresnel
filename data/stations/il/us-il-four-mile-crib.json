@@ -2,7 +2,9 @@
   "id": "us-il-four-mile-crib",
   "name": "Four Mile Crib Light",
   "other_names": [
-    "Four Mile Crib Lighthouse"
+    "Four Mile Crib Lighthouse",
+    "Four Mile Crib",
+    "Four-Mile Crib Light"
   ],
   "country": "US",
   "region": "IL",
@@ -22,24 +24,24 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
+      "type": "crib",
       "material": null,
       "built": 1898,
       "height_m": 9.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 20.0,
-    "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl W 15s",
+    "focal_height_m": 20.1,
+    "range_nm": 8.7,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,7 +65,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,7 +74,7 @@
     {
       "year": 1898,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -99,6 +101,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7042993305",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Four Mile Crib",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=865",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Illinois",
+      "url": "https://www.ibiblio.org/lighthouse/il.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Four Mile Crib",
+      "url": "https://archives.uslhs.org/places/four-mile-crib",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -111,7 +128,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -123,6 +139,46 @@
       "part": "wikidata:Q82290501",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:865",
+      "part": "wikidata:Q82290501",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:il:four-mile-crib",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19925",
+      "part": "wikidata:Q82290501",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9606",
+      "part": "wikidata:Q82290501",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.87275,-87.54500",
+      "part": "wikidata:Q82290501",
+      "fields": [
+        "light"
       ]
     }
   ],

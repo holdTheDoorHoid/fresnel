@@ -2,7 +2,8 @@
   "id": "us-ma-long-island-head",
   "name": "Long Island Head Light",
   "other_names": [
-    "Long Island Head Lighthouse"
+    "Long Island Head Lighthouse",
+    "Long Island Head"
   ],
   "country": "US",
   "region": "MA",
@@ -16,36 +17,38 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1819,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1901,
-    "deactivated": 1982,
+    "first_lit": 1819,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 36.5,
+    "focal_height_m": 36.6,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001481",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001481"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001481",
+      "listed": "1987-06-15",
+      "nomination": "https://catalog.archives.gov/id/63792783"
     }
   ],
   "aton": {
@@ -54,11 +57,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Boston Harbor Islands National Recreation Area",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +72,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,6 +83,24 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1819,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1900,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1901,
@@ -96,7 +117,7 @@
     {
       "year": 1982,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -108,7 +129,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -155,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/257496039",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Long Island Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=471",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Long Island Head",
+      "url": "https://archives.uslhs.org/places/long-island-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792783",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,7 +208,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -183,10 +223,102 @@
         "events",
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:471",
+      "part": "wikidata:Q6672695",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:long-island-head-4",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10800",
+      "part": "wikidata:Q6672695",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2842",
+      "part": "wikidata:Q6672695",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001481",
+      "part": "wikidata:Q6672695",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.33022,-70.95767",
+      "part": "wikidata:Q6672695",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:long-island-head",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1901
+        },
+        {
+          "source": "osm",
+          "value": 1901
+        },
+        {
+          "source": "uslhs",
+          "value": 1819
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,9 @@
   "id": "us-wa-burrows-island",
   "name": "Burrows Island Light",
   "other_names": [
-    "Burrows Island Lighthouse"
+    "Burrows Island Lighthouse",
+    "Burrows Island",
+    "Burrows Island Light Station"
   ],
   "country": "US",
   "region": "WA",
@@ -23,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1906,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,23 +38,30 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 17.4,
+    "focal_height_m": 13.7,
     "range_nm": 7.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "NRHP",
+      "number": "100010694",
+      "url": null,
+      "listed": "2024-08-09"
+    }
+  ],
   "aton": {
     "uscg_llnr": "6-19350",
     "arlhs": "USA098",
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Northwest Schooner Society",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,7 +72,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -72,14 +81,26 @@
     {
       "year": 1906,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1906,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1906,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 2024,
+      "event": "nrhp_listed",
+      "note": "National Register of Historic Places",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -120,6 +141,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/441563680",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Burrows Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=107",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Burrows Island",
+      "url": "https://archives.uslhs.org/places/burrows-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,8 +180,60 @@
       "key": "osm:way/441563680",
       "part": "wikidata:Q2055218",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:107",
+      "part": "wikidata:Q2055218",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:burrows-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-19350",
+      "part": "wikidata:Q2055218",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3541",
+      "part": "wikidata:Q2055218",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100010694",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:48.47794,-122.71379",
+      "part": "wikidata:Q2055218",
+      "fields": [
+        "light"
       ]
     }
   ],

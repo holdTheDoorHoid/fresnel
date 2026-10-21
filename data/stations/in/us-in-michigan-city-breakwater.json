@@ -3,7 +3,9 @@
   "name": "Michigan City Breakwater Light",
   "other_names": [
     "Breakwater Light",
-    "Michgan City BREAKWATER LIGHT"
+    "Michgan City BREAKWATER LIGHT",
+    "Michigan City Breakwater",
+    "Michigan City west Breakwater"
   ],
   "country": "US",
   "region": "IN",
@@ -38,15 +40,16 @@
     "lens": null,
     "characteristic": "Fl R 4s",
     "focal_height_m": 11.0,
-    "range_nm": 6.0,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "100001344",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100001344"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100001344",
+      "listed": "2017-07-24"
     }
   ],
   "aton": {
@@ -79,13 +82,13 @@
     {
       "year": 1911,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 2017,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -127,6 +130,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6553280493",
       "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Directory: Indiana",
+      "url": "https://www.ibiblio.org/lighthouse/in.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Michigan City west Breakwater",
+      "url": "https://archives.uslhs.org/places/michigan-city-west-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,8 +165,44 @@
       "part": "wikidata:Q82458937",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:in:michigan-city-breakwater",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19555",
+      "part": "wikidata:Q82458937",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9635",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100001344",
+      "part": "wikidata:Q82458937",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.72989,-86.91397",
+      "part": "wikidata:Q82458937",
+      "fields": [
+        "light"
       ]
     }
   ],

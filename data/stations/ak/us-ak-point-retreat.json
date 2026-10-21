@@ -2,11 +2,14 @@
   "id": "us-ak-point-retreat",
   "name": "Point Retreat Light",
   "other_names": [
-    "Point Retreat Lighthouse"
+    "Point Retreat Lighthouse",
+    "Point Retreat",
+    "Point Retreat Light Station",
+    "AHRS Site No. JUN-0084"
   ],
   "country": "US",
   "region": "AK",
-  "county": null,
+  "county": "Juneau",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -23,29 +26,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "concrete",
+      "built": 1924,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1923,
+    "first_lit": 1904,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": null,
-    "range_nm": null,
+    "focal_height_m": 19.2,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "03000529",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000529"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000529",
+      "listed": "2003-06-19",
+      "nomination": "https://catalog.archives.gov/id/75325043"
     }
   ],
   "aton": {
@@ -58,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,10 +87,34 @@
       "from": "wikidata"
     },
     {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1923,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1924,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1973,
@@ -96,7 +125,7 @@
     {
       "year": 2003,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +177,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1339186128",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Point Retreat",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=827",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Alaska",
+      "url": "https://www.ibiblio.org/lighthouse/ak.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Retreat",
+      "url": "https://archives.uslhs.org/places/point-retreat",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325043",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -159,7 +208,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -181,9 +229,75 @@
       "fields": [
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:827",
+      "part": "wikidata:Q3560917",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ak:point-retreat-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23955",
+      "part": "wikidata:Q3560917",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2694",
+      "part": "wikidata:Q3560917",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03000529",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:58.41151,-134.95510",
+      "part": "wikidata:Q3560917",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1923
+        },
+        {
+          "source": "uslhs",
+          "value": 1904
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

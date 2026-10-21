@@ -2,7 +2,12 @@
   "id": "us-wi-kewaunee-pierhead",
   "name": "Kewaunee Pierhead Lighthouse",
   "other_names": [
-    "Kewaunee Pierhead Light"
+    "Kewaunee Pierhead Light",
+    "Kewaunee Pierhead",
+    "Kewaunee South Pierhead",
+    "Kewaunee Light",
+    "Kewaunee South Pier Light",
+    "Kewaunee Breakwater Light"
   ],
   "country": "US",
   "region": "WI",
@@ -11,41 +16,62 @@
   "setting": "pier",
   "kind": "pier_light",
   "location": {
-    "lat": 44.457295,
-    "lon": -87.493139,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 44.45833,
+    "lon": -87.49167,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Kewaunee Pierhead Lighthouse",
       "type": null,
       "material": null,
       "built": 1891,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 44.457295,
+        "lon": -87.493139
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Kewaunee South Pierhead",
+      "type": null,
+      "material": "steel",
+      "built": 1931,
+      "height_m": 13.1,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1912,
+    "first_lit": 1889,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl W",
-    "focal_height_m": 14.0,
-    "range_nm": 12.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "F W",
+    "focal_height_m": 13.7,
+    "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "100007998",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100007998"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100007998",
+      "listed": "2022-08-15"
     },
     {
       "register": "listed in the Wisconsin State Register of Historic Places",
@@ -62,29 +88,47 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1891,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1891,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1912,
@@ -95,13 +139,13 @@
     {
       "year": 1931,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
       "year": 2022,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +192,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1228456711",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Kewaunee Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=253",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Kewaunee South Pierhead",
+      "url": "https://archives.uslhs.org/places/kewaunee-south-pierhead",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,7 +219,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -174,42 +232,84 @@
       "part": "wikidata:Q6397941",
       "fields": [
         "agency",
+        "events"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:253",
+      "part": "wikidata:Q6397941",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:kewaunee-pierhead-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20955",
+      "part": "wikidata:Q6397941",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20965",
+      "part": "uslhs:3568",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3568",
+      "part": "uslhs:3568",
+      "fields": [
+        "access",
         "events",
         "light",
-        "location"
+        "location",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100007998",
+      "part": "wikidata:Q6397941",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.45728,-87.49313",
+      "part": "wikidata:Q6397941",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.45800,-87.49080",
+      "part": "uslhs:3568",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:kewaunee-pierhead",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "osm",
-          "value": "Fl W"
-        },
-        {
-          "source": "wikidata",
-          "value": "F W"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1912
-        },
-        {
-          "source": "osm",
-          "value": 1931
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

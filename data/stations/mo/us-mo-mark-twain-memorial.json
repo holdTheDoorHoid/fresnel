@@ -1,7 +1,9 @@
 {
   "id": "us-mo-mark-twain-memorial",
   "name": "Mark Twain Memorial Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Mark Twain Memorial"
+  ],
   "country": "US",
   "region": "MO",
   "county": null,
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/579071287",
       "kind": "osm"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mark Twain Memorial",
+      "url": "https://archives.uslhs.org/places/mark-twain-memorial",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +95,18 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:95211",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
+  "hidden": true,
+  "hidden_reason": "A memorial lighthouse (1935) on Cardiff Hill, Hannibal: not an aid to navigation",
   "updated": "2026-10-21"
 }

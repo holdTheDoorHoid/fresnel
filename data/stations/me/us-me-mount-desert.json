@@ -3,7 +3,8 @@
   "name": "Mount Desert Light",
   "other_names": [
     "Mount Desert Lighthouse",
-    "Mount Desert Rock Light"
+    "Mount Desert Rock Light",
+    "Mount Desert Rock"
   ],
   "country": "US",
   "region": "ME",
@@ -33,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": 1847,
+    "first_lit": 1830,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 15s",
-    "focal_height_m": 22.8,
+    "focal_height_m": 22.9,
     "range_nm": 14.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -55,11 +56,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "College of the Atlantic",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -70,7 +71,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -83,9 +84,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1830,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1847,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
@@ -95,9 +102,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1977,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
@@ -150,6 +163,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11282207864",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mount Desert Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=770",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mount Desert Rock",
+      "url": "https://archives.uslhs.org/places/mount-desert-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -162,7 +190,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -176,12 +203,79 @@
       "part": "wikidata:Q15256757",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:770",
+      "part": "wikidata:Q15256757",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:mount-desert-rock",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-2290",
+      "part": "wikidata:Q15256757",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-5",
+      "part": "wikidata:Q15256757",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2922",
+      "part": "wikidata:Q15256757",
+      "fields": [
+        "access",
+        "agency",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.96861,-68.12834",
+      "part": "wikidata:Q15256757",
+      "fields": [
+        "light"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1847
+        },
+        {
+          "source": "osm",
+          "value": 1847
+        },
+        {
+          "source": "uslhs",
+          "value": 1830
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -1,7 +1,10 @@
 {
   "id": "us-ny-split-rock-point",
   "name": "Split Rock Point Light",
-  "other_names": [],
+  "other_names": [
+    "Split Rock",
+    "Split Rock Point"
+  ],
   "country": "US",
   "region": "NY",
   "county": "Essex",
@@ -9,10 +12,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 44.26815,
-    "lon": -73.32212,
+    "lat": 44.26825,
+    "lon": -73.3221,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -30,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1867,
+    "first_lit": 1835,
     "deactivated": 1928,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 28.0,
-    "range_nm": null,
+    "focal_height_m": 28.3,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -49,8 +52,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -61,7 +64,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -74,6 +77,30 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1838,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1867,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1867,
       "event": "first_lit",
       "note": null,
@@ -81,9 +108,21 @@
     },
     {
       "year": 1928,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1928,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 2003,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -104,6 +143,21 @@
       "label": "ARLHS World List of Lights USA784",
       "url": "https://wlol.arlhs.com/lighthouse/USA784.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Split Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=674",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Split Rock Point",
+      "url": "https://archives.uslhs.org/places/split-rock-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,15 +171,91 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:674",
+      "part": "wikidata:Q64799434",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:split-rock-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:split-rock-point-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-39810",
+      "part": "wikidata:Q64799434",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3437",
+      "part": "wikidata:Q64799434",
+      "fields": [
+        "access",
+        "events"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1867
+        },
+        {
+          "source": "uslhs",
+          "value": 1838
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1928
+        },
+        {
+          "source": "rowlett",
+          "value": 2003
+        },
+        {
+          "source": "uslhs",
+          "value": 1928
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

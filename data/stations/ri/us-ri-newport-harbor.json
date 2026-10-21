@@ -3,7 +3,10 @@
   "name": "Newport Harbor Light",
   "other_names": [
     "Newport Harbor Lighthouse",
-    "Goat Island Light"
+    "Goat Island Light",
+    "Newport Harbor",
+    "Goat Island",
+    "Newport Harbor Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -33,20 +36,22 @@
     }
   ],
   "light": {
-    "first_lit": 1842,
+    "first_lit": 1823,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F G 1s",
-    "focal_height_m": 10.0,
+    "characteristic": "F G",
+    "focal_height_m": 10.1,
     "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000276",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000276"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000276",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374358"
     }
   ],
   "aton": {
@@ -58,20 +63,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1963"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,6 +86,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1842,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1842,
@@ -103,7 +120,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -159,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1064840043",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Newport Harbor (Goat Island)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=399",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Newport Harbor (Goat Island)",
+      "url": "https://archives.uslhs.org/places/newport-harbor-goat-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374358",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,7 +208,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -185,8 +221,62 @@
       "part": "wikidata:Q15262179",
       "fields": [
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:399",
+      "part": "wikidata:Q15262179",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:newport-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-17850",
+      "part": "wikidata:Q15262179",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3498",
+      "part": "wikidata:Q15262179",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000276",
+      "part": "wikidata:Q15262179",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.49333,-71.32706",
+      "part": "wikidata:Q15262179",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:newport-harbor-goat-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -215,6 +305,10 @@
         {
           "source": "osm",
           "value": 1865
+        },
+        {
+          "source": "uslhs",
+          "value": 1823
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."

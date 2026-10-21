@@ -1,0 +1,164 @@
+{
+  "id": "us-nc-bogue-banks-range",
+  "name": "Bogue Banks Range Lights",
+  "other_names": [
+    "Bogue Banks",
+    "Bogue Banks Range Rear",
+    "Bogue Banks Range Front"
+  ],
+  "country": "US",
+  "region": "NC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "range_lights",
+  "location": {
+    "lat": 34.69033,
+    "lon": -76.672,
+    "precision": "approximate",
+    "from": "uslhs"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "front_range",
+      "name": "Bogue Banks Range Front",
+      "type": null,
+      "material": "brick",
+      "built": 1855,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Bogue Banks",
+      "type": null,
+      "material": "brick",
+      "built": 1855,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 34.696467,
+        "lon": -76.679641
+      }
+    }
+  ],
+  "light": {
+    "first_lit": 1855,
+    "deactivated": 1862,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1862,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "LighthouseFriends: Bogue Banks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1905",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bogue Banks Range Rear",
+      "url": "https://archives.uslhs.org/places/bogue-banks-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bogue Banks Range Front",
+      "url": "https://archives.uslhs.org/places/bogue-banks-range-front",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1905",
+      "part": "lighthousefriends:1905",
+      "fields": [
+        "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8842",
+      "part": "lighthousefriends:1905",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8843",
+      "part": "uslhs:8843",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

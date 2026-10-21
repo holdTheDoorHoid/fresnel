@@ -3,11 +3,12 @@
   "name": "Stepping Stones Light",
   "other_names": [
     "Stepping Stones Lighthouse",
-    "Stepping Stones Light Station"
+    "Stepping Stones Light Station",
+    "Stepping Stones"
   ],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Nassau",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1877,
       "height_m": 14.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -40,13 +41,15 @@
     "focal_height_m": 14.0,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05001026",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001026"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05001026",
+      "listed": "2005-09-15",
+      "nomination": "https://catalog.archives.gov/id/75325129"
     }
   ],
   "aton": {
@@ -59,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +73,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -79,19 +82,25 @@
     {
       "year": 1877,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1877,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1877,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +147,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/444032306",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Stepping Stones",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=751",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Stepping Stones",
+      "url": "https://archives.uslhs.org/places/stepping-stones",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325129",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,6 +192,64 @@
       "part": "wikidata:Q7611130",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:751",
+      "part": "wikidata:Q7611130",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:stepping-stones",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-21505",
+      "part": "wikidata:Q7611130",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3440",
+      "part": "wikidata:Q7611130",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05001026",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.82448,-73.77464",
+      "part": "wikidata:Q7611130",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:stepping-stones",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -2,7 +2,8 @@
   "id": "us-pa-turtle-rock",
   "name": "Turtle Rock Light",
   "other_names": [
-    "Turtle Rock Lighthouse"
+    "Turtle Rock Lighthouse",
+    "Turtle Rock"
   ],
   "country": "US",
   "region": "PA",
@@ -70,7 +71,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,7 +79,7 @@
     {
       "year": 1887,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -125,6 +126,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6212056670",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Turtle Rock",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=856",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Pennsylvania: Southeast",
+      "url": "https://www.ibiblio.org/lighthouse/pase.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Turtle Rock",
+      "url": "https://archives.uslhs.org/places/turtle-rock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -152,6 +168,34 @@
         "agency",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:856",
+      "part": "wikidata:Q7856452",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pase:turtle-rock",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:32707",
+      "part": "wikidata:Q7856452",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:pa:turtle-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

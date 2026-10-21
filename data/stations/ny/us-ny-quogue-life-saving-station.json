@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "NY",
-  "county": null,
+  "county": "Suffolk",
   "water": null,
   "setting": null,
   "kind": "life_saving_station",
@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "99000640",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000640"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/99000640",
+      "listed": "1999-05-27",
+      "nomination": "https://catalog.archives.gov/id/75322212"
     }
   ],
   "aton": {
@@ -67,7 +69,7 @@
     {
       "year": 1999,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -99,6 +101,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Quogue_Life-Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75322212",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -115,10 +122,20 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:99000640",
+      "part": "station",
+      "fields": [
+        "county",
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

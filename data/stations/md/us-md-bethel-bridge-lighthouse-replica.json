@@ -1,7 +1,9 @@
 {
   "id": "us-md-bethel-bridge-lighthouse-replica",
   "name": "Bethel Bridge Lighthouse (replica)",
-  "other_names": [],
+  "other_names": [
+    "Bethel Bridge"
+  ],
   "country": "US",
   "region": "MD",
   "county": null,
@@ -14,7 +16,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/7539142856",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bethel Bridge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=886",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +95,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:886",
+      "part": "osm:node/7539142856",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

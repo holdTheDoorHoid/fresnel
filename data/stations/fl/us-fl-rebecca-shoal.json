@@ -2,7 +2,8 @@
   "id": "us-fl-rebecca-shoal",
   "name": "Rebecca Shoal Light",
   "other_names": [
-    "Rebecca Shoal Lighthouse"
+    "Rebecca Shoal Lighthouse",
+    "Rebecca Shoal"
   ],
   "country": "US",
   "region": "FL",
@@ -11,22 +12,22 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 24.578333,
-    "lon": -82.585,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 24.579187,
+    "lon": -82.585332,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1953) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": "wood_frame",
       "material": "wood",
-      "built": null,
-      "height_m": null,
-      "status": "unknown",
+      "built": 1886,
+      "height_m": 20.1,
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -36,15 +37,15 @@
     "deactivated": 1953,
     "lens": null,
     "characteristic": "W Flevery 6 s (R sector covers the shoal)",
-    "focal_height_m": null,
+    "focal_height_m": 20.1,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "3-1090",
+    "arlhs": "USA-690",
     "ccg_list_number": null,
     "nga": null
   },
@@ -64,7 +65,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,8 +73,14 @@
     {
       "year": 1886,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1953,
@@ -86,6 +93,18 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 1985,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2014,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -116,6 +135,21 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Rebecca_Shoal_Light",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Rebecca Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1837",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: Keys",
+      "url": "https://www.ibiblio.org/lighthouse/flkey.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Rebecca Shoal",
+      "url": "https://archives.uslhs.org/places/rebecca-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +162,65 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1837",
+      "part": "wikidata:Q7301915",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:flkey:rebecca-shoal-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8408",
+      "part": "wikidata:Q7301915",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:rebecca-shoal",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1953
+        },
+        {
+          "source": "rowlett",
+          "value": 2014
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-ms-biloxi",
   "name": "Biloxi Light",
   "other_names": [
-    "Biloxi Lighthouse"
+    "Biloxi Lighthouse",
+    "Biloxi"
   ],
   "country": "US",
   "region": "MS",
@@ -36,16 +37,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc W 4s",
-    "focal_height_m": 18.5,
+    "focal_height_m": 18.6,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73001012",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001012"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73001012",
+      "listed": "1973-10-03",
+      "nomination": "https://catalog.archives.gov/id/73891206"
     },
     {
       "register": "Mississippi Landmark",
@@ -71,7 +74,7 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
@@ -83,7 +86,7 @@
     {
       "year": 1848,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "osm"
     },
     {
@@ -101,7 +104,7 @@
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -153,6 +156,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/335046004",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Biloxi",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=543",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/73891206",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -181,6 +199,45 @@
         "events",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:543",
+      "part": "wikidata:Q4913574",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ms:biloxi",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-8955",
+      "part": "wikidata:Q4913574",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73001012",
+      "part": "wikidata:Q4913574",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.39433,-88.90121",
+      "part": "wikidata:Q4913574",
+      "fields": [
+        "light"
       ]
     }
   ],

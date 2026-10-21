@@ -1,13 +1,15 @@
 {
   "id": "us-ny-buffalo-intake-crib",
   "name": "Buffalo Intake Crib Light",
-  "other_names": [],
+  "other_names": [
+    "Buffalo Intake Crib"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
   "water": null,
   "setting": null,
-  "kind": "harbor_light",
+  "kind": "lighthouse",
   "location": {
     "lat": 42.879593,
     "lon": -78.912186,
@@ -33,15 +35,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 5s",
-    "focal_height_m": 18.0,
+    "characteristic": "Fl(2) W 5s",
+    "focal_height_m": 18.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-2670",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -61,7 +63,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -75,6 +77,11 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/9844862110",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Buffalo Intake Crib",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=299",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -84,16 +91,39 @@
       "part": "osm:node/9844862110",
       "fields": [
         "agency",
-        "kind",
-        "light",
         "location",
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:299",
+      "part": "osm:node/9844862110",
+      "fields": [
+        "kind",
+        "visit"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-2670",
+      "part": "osm:node/9844862110",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.87964,-78.91226",
+      "part": "osm:node/9844862110",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -3,7 +3,8 @@
   "name": "Sankaty Head Light",
   "other_names": [
     "Sankaty Head Lighthouse",
-    "Sankaty Lighthouse"
+    "Sankaty Lighthouse",
+    "Sankaty Head"
   ],
   "country": "US",
   "region": "MA",
@@ -24,12 +25,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
+      "material": "brick",
+      "built": 1850,
       "height_m": 21.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +38,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 7.5s",
-    "focal_height_m": 48.0,
-    "range_nm": 24.0,
+    "focal_height_m": 48.2,
+    "range_nm": 20.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002028",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002028"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002028",
+      "listed": "1987-10-15",
+      "nomination": "https://catalog.archives.gov/id/63792341"
     }
   ],
   "aton": {
@@ -55,37 +58,55 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "'SCONSET TRUST",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1965"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1850,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1850,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1850,
+      "event": "lens_installed",
+      "note": "Original lens: order 2 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1965,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -132,6 +153,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713399804",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sankaty Head",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=622",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: South",
+      "url": "https://www.ibiblio.org/lighthouse/maso.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sankaty Head",
+      "url": "https://archives.uslhs.org/places/sankaty-head",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792341",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -158,6 +199,58 @@
       "part": "wikidata:Q7418689",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:622",
+      "part": "wikidata:Q7418689",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:maso:sankaty-head",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2856",
+      "part": "wikidata:Q7418689",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002028",
+      "part": "wikidata:Q7418689",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.28437,-69.96608",
+      "part": "wikidata:Q7418689",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:sankaty-head",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

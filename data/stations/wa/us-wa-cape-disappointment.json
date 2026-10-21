@@ -2,7 +2,11 @@
   "id": "us-wa-cape-disappointment",
   "name": "Cape Disappointment Light",
   "other_names": [
-    "Cape Disappointment Lighthouse"
+    "Cape Disappointment Lighthouse",
+    "Cape Disappointment",
+    "Columbia River Entrance Range Front",
+    "Cape Hancock",
+    "Columbia River Entrance Range Front Light"
   ],
   "country": "US",
   "region": "WA",
@@ -34,12 +38,17 @@
   "light": {
     "first_lit": 1856,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Al.Fl(1+1) WR 30s",
-    "focal_height_m": 67.0,
-    "range_nm": 21.0,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Al Fl W R 30s",
+    "focal_height_m": 67.1,
+    "range_nm": 19.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
@@ -57,20 +66,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1973"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,14 +87,20 @@
     {
       "year": 1856,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1973,
@@ -137,6 +152,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/414755757",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Disappointment",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=115",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Washington",
+      "url": "https://www.ibiblio.org/lighthouse/wa.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Disappointment (Cape Hancock)",
+      "url": "https://archives.uslhs.org/places/cape-disappointment-cape-hancock",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,9 +191,73 @@
       "key": "osm:way/414755757",
       "part": "wikidata:Q2187477",
       "fields": [
-        "light",
         "location",
         "registers"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:115",
+      "part": "wikidata:Q2187477",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:cape-disappointment",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wa:columbia-river-entrance-range-front",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-695",
+      "part": "wikidata:Q2187477",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-9890",
+      "part": "wikidata:Q2187477",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-9895",
+      "part": "wikidata:Q2187477",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3542",
+      "part": "wikidata:Q2187477",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.27579,-124.05218",
+      "part": "wikidata:Q2187477",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:cape-disappointment",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -181,6 +275,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 67.0
+        },
+        {
+          "source": "uslhs",
+          "value": 71.02
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
     }
   ],
   "verification": "facts",

@@ -2,7 +2,8 @@
   "id": "us-la-point-au-fer-reef",
   "name": "Point Au Fer Reef Light",
   "other_names": [
-    "Point Au Fer Reef Lighthouse"
+    "Point Au Fer Reef Lighthouse",
+    "Point au Fer Reef"
   ],
   "country": "US",
   "region": "LA",
@@ -11,35 +12,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.372222,
-    "lon": -91.384167,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 29.3746,
+    "lon": -91.374411,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1975) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "wood",
       "built": 1916,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 16.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1975,
-    "deactivated": null,
+    "first_lit": 1916,
+    "deactivated": 2011,
     "lens": null,
-    "characteristic": "Fl W 6s (c1965)",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 5.2,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,6 +77,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1916,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1975,
       "event": "first_lit",
       "note": null,
@@ -86,6 +99,12 @@
       "event": "other",
       "note": "Wikidata gives this as the end date, without saying whether the light was discontinued or the structure taken down.",
       "from": "wikidata"
+    },
+    {
+      "year": 2011,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -126,6 +145,21 @@
       "label": "ARLHS World List of Lights USA613",
       "url": "https://wlol.arlhs.com/lighthouse/USA613.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Point au Fer Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1812",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Louisiana",
+      "url": "https://www.ibiblio.org/lighthouse/la.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point au Fer Reef",
+      "url": "https://archives.uslhs.org/places/point-au-fer-reef",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,16 +172,69 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1812",
+      "part": "wikidata:Q7207943",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:la:point-au-fer-reef-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2810",
+      "part": "wikidata:Q7207943",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.37218,-91.38436",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.37308,-91.38390",
+      "part": "station",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1975
+        },
+        {
+          "source": "uslhs",
+          "value": 1916
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

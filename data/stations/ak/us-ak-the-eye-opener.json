@@ -33,15 +33,15 @@
     "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 10.4,
+    "range_nm": 7.0,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "6-23290",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -87,6 +87,22 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-23290",
+      "part": "osm:node/12152906124",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:56.38592,-133.27679",
+      "part": "osm:node/12152906124",
+      "fields": [
+        "light"
       ]
     }
   ],

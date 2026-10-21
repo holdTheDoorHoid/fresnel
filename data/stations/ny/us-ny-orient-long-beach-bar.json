@@ -4,7 +4,11 @@
   "other_names": [
     "Bug Light",
     "Long Beach Bar Lighthouse",
-    "Orient Long Beach Bar Lighthouse"
+    "Orient Long Beach Bar Lighthouse",
+    "Long Beach Bar",
+    "\"Bug Light\"",
+    "Long Beach Bar (Replica)",
+    "Long Beach Bar Light"
   ],
   "country": "US",
   "region": "NY",
@@ -18,12 +22,27 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Long Beach Bar",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1871,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 41.1055,
+        "lon": -72.30383
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Orient Long Beach Bar Light",
       "type": null,
       "material": null,
       "built": 1871,
@@ -35,13 +54,13 @@
   ],
   "light": {
     "first_lit": 1871,
-    "deactivated": 1963,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 19.0,
+    "focal_height_m": 17.7,
     "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -62,11 +81,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,14 +99,38 @@
     {
       "year": 1871,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1948,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1963,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -133,6 +176,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/459906821",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Long Beach Bar",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=738",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Long Island",
+      "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Long Beach Bar (Replica)",
+      "url": "https://archives.uslhs.org/places/long-beach-bar-replica",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Long Beach Bar",
+      "url": "https://archives.uslhs.org/places/long-beach-bar",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -158,9 +221,79 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:738",
+      "part": "wikidata:Q7102302",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyli:long-beach-bar-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-27975",
+      "part": "wikidata:Q7102302",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:34236",
+      "part": "wikidata:Q7102302",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8815",
+      "part": "uslhs:8815",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.10969,-72.30600",
+      "part": "wikidata:Q7102302",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ny:long-beach-bar",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1963
+        },
+        {
+          "source": "uslhs",
+          "value": 1948
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

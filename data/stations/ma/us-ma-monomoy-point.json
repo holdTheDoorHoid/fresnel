@@ -3,7 +3,9 @@
   "name": "Monomoy Point Light",
   "other_names": [
     "Monomoy Point Lighthouse",
-    "Monomoy Point Light Station"
+    "Monomoy Point Light Station",
+    "Monomoy Point",
+    "Old Monomoy Lighthouse"
   ],
   "country": "US",
   "region": "MA",
@@ -33,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1849,
+    "first_lit": 1823,
     "deactivated": 1923,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "79000324",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000324"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/79000324",
+      "listed": "1979-11-01",
+      "nomination": "https://catalog.archives.gov/id/63789145"
     }
   ],
   "aton": {
@@ -55,11 +59,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
+  "agency": "Monomoy National Wildlife Refuge",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -83,21 +87,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1823,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1849,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1849,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1923,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1979,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -144,6 +166,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713401554",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Monomoy Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=611",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Monomoy Point",
+      "url": "https://archives.uslhs.org/places/monomoy-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63789145",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -171,9 +213,69 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:611",
+      "part": "wikidata:Q1945051",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:monomoy-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2846",
+      "part": "wikidata:Q1945051",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:79000324",
+      "part": "wikidata:Q1945051",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ma:monomoy-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1849
+        },
+        {
+          "source": "uslhs",
+          "value": 1823
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

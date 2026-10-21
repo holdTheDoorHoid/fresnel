@@ -2,7 +2,8 @@
   "id": "us-al-battery-gladden",
   "name": "Battery Gladden Light",
   "other_names": [
-    "Battery Gladden Lighthouse"
+    "Battery Gladden Lighthouse",
+    "Battery Gladden"
   ],
   "country": "US",
   "region": "AL",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.6675,
-    "lon": -88.0228,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 30.668364,
+    "lon": -88.022917,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1872,
+      "height_m": 12.5,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,7 +37,7 @@
     "deactivated": 1913,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 13.9,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -72,13 +73,13 @@
     {
       "year": 1872,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1913,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -100,6 +101,16 @@
       "label": "ARLHS World List of Lights USA1006",
       "url": "https://wlol.arlhs.com/lighthouse/USA1006.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Battery Gladden",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1829",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Battery Gladden",
+      "url": "https://archives.uslhs.org/places/battery-gladden",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -112,14 +123,31 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1829",
+      "part": "wikidata:Q16165346",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8362",
+      "part": "wikidata:Q16165346",
+      "fields": [
+        "events",
+        "light",
+        "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

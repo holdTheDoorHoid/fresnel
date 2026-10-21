@@ -1,7 +1,13 @@
 {
   "id": "us-hi-lahaina",
   "name": "Lahaina Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Lahaina",
+    "LÃÂhainÃÂ",
+    "Lahaina Light",
+    "Lahaina Boat Basin Range Front Light",
+    "Lahaina Boat Basin Range Rear Light"
+  ],
   "country": "US",
   "region": "HI",
   "county": "Maui",
@@ -14,8 +20,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -30,14 +36,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1840,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl R 4s",
     "focal_height_m": null,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -66,7 +72,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1840,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Tower 6 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -110,6 +129,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/11113257730",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Lahaina",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=143",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Hawaii",
+      "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -121,7 +150,6 @@
         "aton",
         "county",
         "kind",
-        "light",
         "name",
         "photos",
         "region"
@@ -135,6 +163,61 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:143",
+      "part": "wikidata:Q28376274",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:hi:la-a-haina-a-6",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28460",
+      "part": "wikidata:Q28376274",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28470",
+      "part": "wikidata:Q28376274",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-28475",
+      "part": "wikidata:Q28376274",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.87136,-156.67958",
+      "part": "wikidata:Q28376274",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.87162,-156.67932",
+      "part": "wikidata:Q28376274",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:20.87215,-156.67924",
+      "part": "wikidata:Q28376274",
+      "fields": []
     }
   ],
   "conflicts": [],

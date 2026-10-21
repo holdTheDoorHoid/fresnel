@@ -6,7 +6,12 @@
     "Santa Cruz West Breakwater Light",
     "Twin Lakes State Beach Lighthouse",
     "Walton Lighthouse",
-    "Santa Cruz Harbor Walton Lighthouse"
+    "Santa Cruz Harbor Walton Lighthouse",
+    "Santa Cruz Breakwater",
+    "Walton",
+    "Santa Cruz",
+    "Mark Abbott Memorial",
+    "Santa Cruz West Breakwater"
   ],
   "country": "US",
   "region": "CA",
@@ -36,14 +41,14 @@
     }
   ],
   "light": {
-    "first_lit": 2001,
+    "first_lit": 1869,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc G 4s",
-    "focal_height_m": 18.2,
+    "focal_height_m": 18.3,
     "range_nm": 8.0,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -68,16 +73,40 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1869,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1964,
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1964,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1967,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 2001,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2001,
@@ -129,6 +158,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/400699453",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Santa Cruz Breakwater (Walton)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=836",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Santa Cruz Breakwater",
+      "url": "https://archives.uslhs.org/places/santa-cruz-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -141,7 +185,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -153,8 +196,72 @@
       "key": "osm:node/400699453",
       "part": "wikidata:Q7419398",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:836",
+      "part": "wikidata:Q7419398",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:santa-cruz-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:santa-cruz-west-breakwater-4",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-300",
+      "part": "wikidata:Q7419398",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4085",
+      "part": "wikidata:Q7419398",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:97535",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.96071,-122.00220",
+      "part": "wikidata:Q7419398",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:36.96141,-122.00156",
+      "part": "wikidata:Q7419398",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:santa-cruz-breakwater",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

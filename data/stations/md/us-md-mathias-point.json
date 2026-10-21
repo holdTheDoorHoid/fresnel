@@ -2,7 +2,10 @@
   "id": "us-md-mathias-point",
   "name": "Mathias Point Light",
   "other_names": [
-    "Mathias Point Lighthouse"
+    "Mathias Point Lighthouse",
+    "Mathias Point",
+    "Mathias Point Shoal",
+    "Upper Potomac River Channel Light 5"
   ],
   "country": "US",
   "region": "MD",
@@ -16,17 +19,32 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Mathias Point Shoal",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1876,
+      "height_m": 13.7,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 38.40267,
+        "lon": -77.03917
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Mathias Point Light",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
-      "status": "standing",
+      "status": "lost",
       "note": null,
       "from": "wikidata"
     }
@@ -35,11 +53,11 @@
     "first_lit": 1876,
     "deactivated": 1961,
     "lens": null,
-    "characteristic": "Fl G 6s",
-    "focal_height_m": 13.5,
-    "range_nm": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 13.4,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -71,9 +89,21 @@
   "events": [
     {
       "year": 1876,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1876,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1876,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1951,
@@ -86,6 +116,12 @@
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1963,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -131,6 +167,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1075556392",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mathias Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1955",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mathias Point Shoal",
+      "url": "https://archives.uslhs.org/places/mathias-point-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,10 +207,62 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1955",
+      "part": "wikidata:Q6787143",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:mathias-point-shoal-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-17765",
+      "part": "wikidata:Q6787143",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8963",
+      "part": "uslhs:8963",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:38.40522,-77.04277",
+      "part": "wikidata:Q6787143",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1961
+        },
+        {
+          "source": "uslhs",
+          "value": 1963
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -2,7 +2,8 @@
   "id": "us-wi-sheboygan-breakwater",
   "name": "Sheboygan Breakwater Light",
   "other_names": [
-    "Sheboygan Breakwater Lighthouse"
+    "Sheboygan Breakwater Lighthouse",
+    "Sheboygan Breakwater"
   ],
   "country": "US",
   "region": "WI",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1900,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 4s",
-    "focal_height_m": 17.0,
-    "range_nm": 7.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 16.8,
+    "range_nm": 6.9,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,9 +71,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1905,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     }
   ],
@@ -114,6 +121,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/477082189",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Sheboygan Breakwater",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=249",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sheboygan Breakwater",
+      "url": "https://archives.uslhs.org/places/sheboygan-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,7 +148,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -139,6 +160,43 @@
       "part": "wikidata:Q84081619",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:249",
+      "part": "wikidata:Q84081619",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:sheboygan-breakwater-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20820",
+      "part": "wikidata:Q84081619",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:78388",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.74951,-87.69270",
+      "part": "wikidata:Q84081619",
+      "fields": [
+        "light"
       ]
     }
   ],

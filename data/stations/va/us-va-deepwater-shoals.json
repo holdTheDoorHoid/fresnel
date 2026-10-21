@@ -2,7 +2,10 @@
   "id": "us-va-deepwater-shoals",
   "name": "Deepwater Shoals Light",
   "other_names": [
-    "Deepwater Shoals Lighthouse"
+    "Deepwater Shoals Lighthouse",
+    "Deep Water Shoals",
+    "Deepwater Shoals",
+    "Deep Water Shoals Warning Light"
   ],
   "country": "US",
   "region": "VA",
@@ -11,35 +14,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 37.136517,
+    "lat": 37.148879,
     "lon": -76.6368,
-    "precision": "exact",
-    "from": "wikidata"
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1966) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "screwpile",
+      "material": "wood",
       "built": 1855,
-      "height_m": null,
-      "status": "unknown",
+      "height_m": 12.2,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1854,
     "deactivated": 2017,
     "lens": null,
-    "characteristic": "F W, R sector",
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "Fl W 4s",
+    "focal_height_m": 4.6,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -70,10 +73,40 @@
   "stay": null,
   "events": [
     {
+      "year": 1854,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1854,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1855,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1966,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1966,
@@ -84,7 +117,7 @@
     {
       "year": 2017,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -121,6 +154,21 @@
       "label": "ARLHS World List of Lights USA220",
       "url": "https://wlol.arlhs.com/lighthouse/USA220.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Deep Water Shoals",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1927",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Deepwater Shoals",
+      "url": "https://archives.uslhs.org/places/deepwater-shoals",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,15 +182,73 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1927",
+      "part": "wikidata:Q5250673",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:deepwater-shoals-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-11780",
+      "part": "wikidata:Q5250673",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8954",
+      "part": "wikidata:Q5250673",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.14868,-76.63708",
+      "part": "wikidata:Q5250673",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 2017
+        },
+        {
+          "source": "rowlett",
+          "value": 2017
+        },
+        {
+          "source": "uslhs",
+          "value": 1966
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

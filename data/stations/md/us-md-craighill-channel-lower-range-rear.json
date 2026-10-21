@@ -2,7 +2,11 @@
   "id": "us-md-craighill-channel-lower-range-rear",
   "name": "Craighill Channel Lower Range Rear Light",
   "other_names": [
-    "Craighill Channel Range Rear Light"
+    "Craighill Channel Range Rear Light",
+    "Craighill Channel Lower Rear",
+    "Craighill Channel Lower Range Rear",
+    "Millers Island",
+    "Craighill Channel Lower Range Rear Light Station"
   ],
   "country": "US",
   "region": "MD",
@@ -37,15 +41,17 @@
     "lens": null,
     "characteristic": "F W",
     "focal_height_m": 32.0,
-    "range_nm": 16.0,
+    "range_nm": 0.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "02001418",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001418"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001418",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75324947"
     }
   ],
   "aton": {
@@ -58,7 +64,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,7 +75,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -77,14 +83,26 @@
   "events": [
     {
       "year": 1873,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1886,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -131,6 +149,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/968360686",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Craighill Channel Lower Rear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=415",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maryland",
+      "url": "https://www.ibiblio.org/lighthouse/md.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Craighill Channel Lower Range Rear",
+      "url": "https://archives.uslhs.org/places/craighill-channel-lower-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324947",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -155,9 +193,58 @@
       "key": "osm:node/968360686",
       "part": "wikidata:Q5181678",
       "fields": [
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:415",
+      "part": "wikidata:Q5181678",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:md:craighill-channel-lower-range-rear",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-8050",
+      "part": "wikidata:Q5181678",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:22332",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001418",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:39.22904,-76.39441",
+      "part": "wikidata:Q5181678",
+      "fields": [
+        "light"
       ]
     }
   ],

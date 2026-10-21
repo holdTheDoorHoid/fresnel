@@ -6,7 +6,10 @@
     "Examination Vessel",
     "Fire Island",
     "Pollock Rip",
-    "Portland"
+    "Portland",
+    "New Bedford",
+    "Lightship New Bedford LV 114/WAL 536",
+    "Diamond Shoals"
   ],
   "country": "US",
   "region": "MA",
@@ -37,7 +40,9 @@
     {
       "register": "NRHP",
       "number": "90000777",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000777"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000777",
+      "listed": "1990-05-30",
+      "nomination": "https://catalog.archives.gov/id/63794566"
     }
   ],
   "aton": {
@@ -82,7 +87,7 @@
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -105,6 +110,16 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Lightship_No._114",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Lightship New Bedford LV 114/WAL 536",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=617",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63794566",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -124,10 +139,25 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:617",
+      "part": "lighthousefriends:617",
+      "fields": []
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000777",
+      "part": "wikidata:Q6546566",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

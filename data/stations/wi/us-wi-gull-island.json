@@ -2,7 +2,8 @@
   "id": "us-wi-gull-island",
   "name": "Gull Island Light",
   "other_names": [
-    "Gull Island Lighthouse"
+    "Gull Island Lighthouse",
+    "Gull Island"
   ],
   "country": "US",
   "region": "WI",
@@ -36,10 +37,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 56.0,
-    "range_nm": 7.0,
+    "focal_height_m": 3.7,
+    "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,12 +64,18 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1928,
       "event": "first_lit",
@@ -109,6 +116,21 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Gull_Island_Light_%28Wisconsin%29",
       "kind": "wikipedia"
+    },
+    {
+      "label": "LighthouseFriends: Gull Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=855",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gull Island",
+      "url": "https://archives.uslhs.org/places/gull-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -132,8 +154,43 @@
       "key": "osm:node/582733847",
       "part": "wikidata:Q5617718",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:855",
+      "part": "wikidata:Q5617718",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi2:gull-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15260",
+      "part": "wikidata:Q5617718",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:77445",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.90667,-90.44333",
+      "part": "wikidata:Q5617718",
+      "fields": [
+        "light"
       ]
     }
   ],

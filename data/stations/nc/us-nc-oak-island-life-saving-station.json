@@ -34,7 +34,9 @@
     {
       "register": "NRHP",
       "number": "00001553",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00001553"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00001553",
+      "listed": "2000-12-28",
+      "nomination": "https://catalog.archives.gov/id/47719113"
     }
   ],
   "aton": {
@@ -67,21 +69,21 @@
     {
       "year": 2000,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
   "related": [
     {
-      "id": "us-nc-cape-fear",
-      "relation": "light_station_nearby",
-      "name": "Cape Fear Light"
-    },
-    {
       "id": "us-nc-oak-island",
       "relation": "light_station_nearby",
       "name": "Oak Island Light"
+    },
+    {
+      "id": "us-nc-oak-island-range",
+      "relation": "light_station_nearby",
+      "name": "Oak Island Range"
     }
   ],
   "photos": [
@@ -115,6 +117,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Oak_Island_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719113",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -132,10 +139,19 @@
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:00001553",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

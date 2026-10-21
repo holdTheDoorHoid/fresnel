@@ -1,7 +1,9 @@
 {
   "id": "us-oh-west-sister-island",
   "name": "West Sister Island Light",
-  "other_names": [],
+  "other_names": [
+    "West Sister Island"
+  ],
   "country": "US",
   "region": "OH",
   "county": "Lucas",
@@ -21,29 +23,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1848,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1848,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 4s",
-    "focal_height_m": 17.0,
-    "range_nm": 8.0,
+    "focal_height_m": 13.7,
+    "range_nm": 9.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "uscg_light_list"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "83002006",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002006"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/83002006",
+      "listed": "1983-08-04",
+      "nomination": "https://catalog.archives.gov/id/28891339"
     }
   ],
   "aton": {
@@ -56,7 +60,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,7 +71,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -76,13 +80,25 @@
     {
       "year": 1848,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1848,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1983,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -129,6 +145,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/653484952",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: West Sister Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=273",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Ohio",
+      "url": "https://www.ibiblio.org/lighthouse/oh.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: WEST SISTER ISLAND",
+      "url": "https://archives.uslhs.org/places/west-sister-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891339",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -153,8 +189,51 @@
       "key": "osm:way/653484952",
       "part": "wikidata:Q80772845",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:273",
+      "part": "wikidata:Q80772845",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:oh:west-sister-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-5550",
+      "part": "wikidata:Q80772845",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3459",
+      "part": "wikidata:Q80772845",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:83002006",
+      "part": "wikidata:Q80772845",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

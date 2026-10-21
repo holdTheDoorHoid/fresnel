@@ -2,7 +2,8 @@
   "id": "us-ri-dutch-island",
   "name": "Dutch Island Light",
   "other_names": [
-    "Dutch Island Lighthouse"
+    "Dutch Island Lighthouse",
+    "Dutch Island"
   ],
   "country": "US",
   "region": "RI",
@@ -22,30 +23,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "brick",
       "built": 1826,
       "height_m": 13.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1857,
+    "first_lit": 1826,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R 6s",
+    "characteristic": "Fl(2+1) R 6s",
     "focal_height_m": 17.0,
-    "range_nm": 2.0,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87001701",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001701"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001701",
+      "listed": "1988-02-25",
+      "nomination": "https://catalog.archives.gov/id/41374354"
     }
   ],
   "aton": {
@@ -57,20 +60,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,21 +85,39 @@
       "from": "wikidata"
     },
     {
+      "year": 1826,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1857,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1979,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -143,6 +164,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/512079862",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Dutch Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=404",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Dutch Island",
+      "url": "https://archives.uslhs.org/places/dutch-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374354",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -168,8 +209,74 @@
       "key": "osm:way/512079862",
       "part": "wikidata:Q5317318",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:404",
+      "part": "wikidata:Q5317318",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:dutch-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-19101",
+      "part": "wikidata:Q5317318",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3494",
+      "part": "wikidata:Q5317318",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87001701",
+      "part": "wikidata:Q5317318",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.49513,-71.40495",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.49674,-71.40426",
+      "part": "wikidata:Q5317318",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:dutch-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -184,9 +291,27 @@
         {
           "source": "wikidata",
           "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1857
+        },
+        {
+          "source": "uslhs",
+          "value": 1826
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

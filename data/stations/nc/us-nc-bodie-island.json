@@ -3,7 +3,10 @@
   "name": "Bodie Island Light",
   "other_names": [
     "Bodie Island Lighthouse",
-    "Bodie Island Light Station"
+    "Bodie Island Light Station",
+    "Bodie Island",
+    "Body's Island Lighthouse",
+    "Bodie Island Visitor Center and Lighthouse"
   ],
   "country": "US",
   "region": "NC",
@@ -24,29 +27,36 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1872,
       "height_m": 47.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1872,
+    "first_lit": 1848,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "1",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl(2) W 30s",
     "focal_height_m": 47.5,
     "range_nm": 18.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "03000607",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000607"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/03000607",
+      "listed": "2003-07-04",
+      "nomination": "https://catalog.archives.gov/id/47719895"
     },
     {
       "register": "National Register of Historic Places contributing property",
@@ -63,28 +73,41 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1940"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
+    {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
     {
       "year": 1872,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -92,6 +115,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1932,
@@ -102,13 +131,13 @@
     {
       "year": 1940,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 2003,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -185,6 +214,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/295323506",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Bodie Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=357",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: North Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/nc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bodie Island",
+      "url": "https://archives.uslhs.org/places/bodie-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/47719895",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -197,7 +246,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -221,8 +269,68 @@
       "key": "osm:way/295323506",
       "part": "wikidata:Q4286384",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:357",
+      "part": "wikidata:Q4286384",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nc:bodie-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:2-590",
+      "part": "wikidata:Q4286384",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3362",
+      "part": "wikidata:Q4286384",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:03000607",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.81864,-75.56330",
+      "part": "wikidata:Q4286384",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:bodie-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

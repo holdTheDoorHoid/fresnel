@@ -2,7 +2,10 @@
   "id": "us-me-saint-croix-river",
   "name": "Saint Croix River Light",
   "other_names": [
-    "Saint Croix River Lighthouse"
+    "Saint Croix River Lighthouse",
+    "St. Croix River",
+    "St. Croix Island",
+    "St. Croix River Light"
   ],
   "country": "US",
   "region": "ME",
@@ -11,35 +14,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.128242,
-    "lon": -67.133819,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 45.128168,
+    "lon": -67.133664,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "integral",
+      "material": "wood",
       "built": 1857,
       "height_m": 23.0,
-      "status": "standing",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1976,
-    "deactivated": null,
+    "first_lit": 1857,
+    "deactivated": 1976,
     "lens": null,
     "characteristic": "Fl W 2.5s",
     "focal_height_m": 31.0,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -55,8 +58,8 @@
     "note": null
   },
   "staffing": {
-    "status": "automated",
-    "as_of": "1957"
+    "status": "unknown",
+    "as_of": null
   },
   "visit": {
     "grounds_open": null,
@@ -76,16 +79,40 @@
       "from": "wikidata"
     },
     {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1957,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
+    },
+    {
+      "year": 1976,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1976,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1976,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -121,6 +148,21 @@
       "label": "ARLHS World List of Lights USA792",
       "url": "https://wlol.arlhs.com/lighthouse/USA792.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: St. Croix River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1866",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: St. Croix River",
+      "url": "https://archives.uslhs.org/places/st-croix-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,16 +176,65 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1866",
+      "part": "wikidata:Q7401147",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:st-croix-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-950",
+      "part": "wikidata:Q7401147",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8454",
+      "part": "wikidata:Q7401147",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1976
+        },
+        {
+          "source": "uslhs",
+          "value": 1857
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

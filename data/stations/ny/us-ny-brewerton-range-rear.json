@@ -1,7 +1,10 @@
 {
   "id": "us-ny-brewerton-range-rear",
   "name": "Brewerton Range Rear Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Brewerton Range Rear",
+    "Hastings"
+  ],
   "country": "US",
   "region": "NY",
   "county": null,
@@ -30,19 +33,19 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1917,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 25.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "enc"
   },
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-104",
     "ccg_list_number": null,
     "nga": null
   },
@@ -50,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,7 +69,20 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1917,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +91,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/8796669774",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Brewerton Range Rear",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=889",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brewerton Range Rear",
+      "url": "https://archives.uslhs.org/places/brewerton-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +119,43 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:889",
+      "part": "osm:node/8796669774",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:hastings",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8797",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.24115,-76.14463",
+      "part": "osm:node/8796669774",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

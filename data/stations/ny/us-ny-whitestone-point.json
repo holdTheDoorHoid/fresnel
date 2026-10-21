@@ -2,7 +2,9 @@
   "id": "us-ny-whitestone-point",
   "name": "Whitestone Point Light",
   "other_names": [
-    "Whitestone Point Lighthouse"
+    "Whitestone Point Lighthouse",
+    "Whitestone Point",
+    "Whitestone Point Light 1"
   ],
   "country": "US",
   "region": "NY",
@@ -11,35 +13,35 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.8017,
-    "lon": -73.8194,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 40.801413,
+    "lon": -73.819607,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
+      "material": "wood",
+      "built": 1889,
+      "height_m": 6.1,
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1889,
     "deactivated": null,
     "lens": null,
-    "characteristic": "QF G",
-    "focal_height_m": null,
+    "characteristic": "Q G",
+    "focal_height_m": 17.1,
     "range_nm": 3.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -72,7 +74,7 @@
     {
       "year": 1889,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     }
   ],
@@ -114,6 +116,21 @@
       "label": "ARLHS World List of Lights USA889",
       "url": "https://wlol.arlhs.com/lighthouse/USA889.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Whitestone Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1871",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Whitestone Point",
+      "url": "https://archives.uslhs.org/places/whitestone-point",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,15 +144,52 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1871",
+      "part": "wikidata:Q7996282",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:whitestone-point-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-27215",
+      "part": "wikidata:Q7996282",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8838",
+      "part": "wikidata:Q7996282",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:40.80138,-73.81958",
+      "part": "wikidata:Q7996282",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

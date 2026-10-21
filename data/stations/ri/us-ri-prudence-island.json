@@ -3,7 +3,11 @@
   "name": "Prudence Island Light",
   "other_names": [
     "Prudence Island Lighthouse",
-    "Sandy Point Light"
+    "Sandy Point Light",
+    "Prudence Island",
+    "Sand Point, Sandy Point",
+    "Sandy Point",
+    "Prudence Island Light Station"
   ],
   "country": "US",
   "region": "RI",
@@ -24,12 +28,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1852,
       "height_m": 8.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -37,16 +41,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
-    "focal_height_m": 9.0,
+    "focal_height_m": 8.5,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "88000270",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000270"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000270",
+      "listed": "1988-03-30",
+      "nomination": "https://catalog.archives.gov/id/41374356"
     }
   ],
   "aton": {
@@ -55,11 +61,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Prudence Conservancy",
+  "ownership": "nonprofit",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,16 +77,28 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
       "year": 1823,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1823,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1824,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1852,
@@ -89,9 +107,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1852,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1852,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +168,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/627208349",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Prudence Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=684",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Rhode Island",
+      "url": "https://www.ibiblio.org/lighthouse/ri.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Prudence Island (Sandy Point)",
+      "url": "https://archives.uslhs.org/places/prudence-island-sandy-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/41374356",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,8 +213,64 @@
       "key": "osm:way/627208349",
       "part": "wikidata:Q7252958",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:684",
+      "part": "wikidata:Q7252958",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ri:prudence-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-18125",
+      "part": "wikidata:Q7252958",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3503",
+      "part": "wikidata:Q7252958",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:88000270",
+      "part": "wikidata:Q7252958",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.60589,-71.30351",
+      "part": "wikidata:Q7252958",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ri:prudence-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -182,6 +288,20 @@
         }
       ],
       "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1823
+        },
+        {
+          "source": "uslhs",
+          "value": 1852
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "facts",

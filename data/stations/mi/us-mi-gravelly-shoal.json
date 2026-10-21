@@ -2,7 +2,9 @@
   "id": "us-mi-gravelly-shoal",
   "name": "Gravelly Shoal Light",
   "other_names": [
-    "Gravelly Shoal Lighthouse"
+    "Gravelly Shoal Lighthouse",
+    "Gravelly Shoal",
+    "Gravelly Shoals"
   ],
   "country": "US",
   "region": "MI",
@@ -11,12 +13,12 @@
   "setting": "offshore",
   "kind": "lighthouse",
   "location": {
-    "lat": 44.0183,
-    "lon": -83.5372,
+    "lat": 44.01984,
+    "lon": -83.538394,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "active",
+  "status": "inactive",
   "status_note": null,
   "structures": [
     {
@@ -36,10 +38,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
-    "focal_height_m": 23.0,
-    "range_nm": 9.6,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 22.9,
+    "range_nm": 8.7,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -51,8 +53,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -63,8 +65,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,13 +74,13 @@
     {
       "year": 1939,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1939,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -120,6 +122,21 @@
       "label": "ARLHS World List of Lights USA340",
       "url": "https://wlol.arlhs.com/lighthouse/USA340.html",
       "kind": "register"
+    },
+    {
+      "label": "LighthouseFriends: Gravelly Shoal",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=174",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Gravelly Shoal",
+      "url": "https://archives.uslhs.org/places/gravelly-shoal",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,15 +150,80 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:174",
+      "part": "wikidata:Q5597861",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:gravelly-shoal",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-10540",
+      "part": "wikidata:Q5597861",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9752",
+      "part": "wikidata:Q5597861",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.01976,-83.53839",
+      "part": "wikidata:Q5597861",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:gravelly-shoals",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

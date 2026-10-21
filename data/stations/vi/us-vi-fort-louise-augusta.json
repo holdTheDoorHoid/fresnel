@@ -1,0 +1,163 @@
+{
+  "id": "us-vi-fort-louise-augusta",
+  "name": "Fort Louise Augusta",
+  "other_names": [
+    "Christiansted Entrance Range Front",
+    "Fort Louise Augusta Light",
+    "Christiansted Harbor Channel Entrance Range"
+  ],
+  "country": "US",
+  "region": "VI",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "lighthouse",
+  "location": {
+    "lat": 17.754889,
+    "lon": -64.694083,
+    "precision": "exact",
+    "from": "territories"
+  },
+  "status": "inactive",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "tower",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1919,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "territories"
+    }
+  ],
+  "light": {
+    "first_lit": 1857,
+    "deactivated": 1931,
+    "lens": null,
+    "characteristic": "Q G",
+    "focal_height_m": 14.6,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "enc"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": "3-32870",
+    "arlhs": "VIR-006",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1931,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Lighthouse Directory: U.S. Virgin Islands",
+      "url": "https://www.ibiblio.org/lighthouse/vi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wikipedia: List of lighthouses in the United States territories",
+      "url": "https://en.wikipedia.org/wiki/List_of_lighthouses_in_the_United_States_territories",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fort Louise Augusta",
+      "url": "https://archives.uslhs.org/places/fort-louise-augusta",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "rowlett",
+      "key": "rowlett:vi:fort-louise-augusta-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-32870",
+      "part": "territories:fort-louise-augusta-light",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:fort-louise-augusta-light",
+      "part": "territories:fort-louise-augusta-light",
+      "fields": [
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8945",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:17.75510,-64.69448",
+      "part": "territories:fort-louise-augusta-light",
+      "fields": [
+        "light"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

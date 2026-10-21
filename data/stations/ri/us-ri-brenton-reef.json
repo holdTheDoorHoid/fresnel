@@ -2,7 +2,8 @@
   "id": "us-ri-brenton-reef",
   "name": "Brenton Reef Light",
   "other_names": [
-    "Brenton Reef Lighthouse"
+    "Brenton Reef Lighthouse",
+    "Brenton Reef"
   ],
   "country": "US",
   "region": "RI",
@@ -11,24 +12,24 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 41.426389,
-    "lon": -71.389444,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 41.4264,
+    "lon": -71.3894,
+    "precision": "approximate",
+    "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date (1992) without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
       "material": null,
-      "built": null,
+      "built": 1962,
       "height_m": 26.5,
-      "status": "unknown",
+      "status": "lost",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -71,6 +72,12 @@
   "events": [
     {
       "year": 1962,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1962,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -78,7 +85,7 @@
     {
       "year": 1989,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -116,6 +123,16 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Brenton_Reef_Light",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Brenton Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=2417",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brenton Reef",
+      "url": "https://archives.uslhs.org/places/brenton-reef",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,16 +145,32 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:2417",
+      "part": "wikidata:Q4961727",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:57594",
+      "part": "wikidata:Q4961727",
+      "fields": [
+        "events",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

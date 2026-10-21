@@ -2,7 +2,10 @@
   "id": "us-fl-st-johns",
   "name": "St. Johns Light",
   "other_names": [
-    "St. Johns Lighthouse"
+    "St. Johns Lighthouse",
+    "St. Johns",
+    "New St. Johns Light",
+    "St. Johns Lighthouse (new)"
   ],
   "country": "US",
   "region": "FL",
@@ -35,17 +38,18 @@
     "first_lit": 1954,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(4) W 20s",
-    "focal_height_m": 25.0,
-    "range_nm": 22.0,
+    "characteristic": "F R",
+    "focal_height_m": 25.3,
+    "range_nm": 19.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "100002224",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002224"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002224",
+      "listed": "2018-03-20"
     }
   ],
   "aton": {
@@ -77,6 +81,12 @@
   "events": [
     {
       "year": 1954,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1954,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
@@ -84,12 +94,18 @@
     {
       "year": 2018,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-fl-st-johns-river",
+      "relation": "preceded_by",
+      "name": "St. Johns River Light"
+    }
+  ],
   "photos": [
     {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stjohns1954.JPG",
@@ -136,6 +152,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1450116706",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: St. Johns",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=344",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Florida: East Coast",
+      "url": "https://www.ibiblio.org/lighthouse/fl.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,6 +195,45 @@
       "key": "osm:way/1450116706",
       "part": "wikidata:Q7589013",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:344",
+      "part": "wikidata:Q7589013",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:fl:st-johns",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-575",
+      "part": "wikidata:Q7589013",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:100002224",
+      "part": "wikidata:Q7589013",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:30.38615,-81.39800",
+      "part": "wikidata:Q7589013",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [],

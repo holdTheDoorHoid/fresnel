@@ -2,7 +2,8 @@
   "id": "us-or-cape-blanco",
   "name": "Cape Blanco Light",
   "other_names": [
-    "Cape Blanco Lighthouse"
+    "Cape Blanco Lighthouse",
+    "Cape Blanco"
   ],
   "country": "US",
   "region": "OR",
@@ -34,18 +35,25 @@
   "light": {
     "first_lit": 1870,
     "deactivated": null,
-    "lens": null,
-    "characteristic": "Fl W 20s",
+    "lens": {
+      "type": "fresnel",
+      "order": "2",
+      "status": "in_place",
+      "where": null
+    },
+    "characteristic": "Fl W 10s",
     "focal_height_m": 74.7,
     "range_nm": 26.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73002339",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002339"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73002339",
+      "listed": "1993-04-21",
+      "nomination": "https://catalog.archives.gov/id/77847849"
     }
   ],
   "aton": {
@@ -55,42 +63,55 @@
     "nga": null
   },
   "agency": "U.S. Coast Guard",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "keeper_program",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+  },
   "events": [
     {
       "year": 1870,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1870,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1870,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1993,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +158,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1085664713",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Blanco",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=125",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Oregon",
+      "url": "https://www.ibiblio.org/lighthouse/or.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Blanco",
+      "url": "https://archives.uslhs.org/places/cape-blanco",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/77847849",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -163,8 +204,67 @@
       "part": "wikidata:Q1034264",
       "fields": [
         "agency",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:125",
+      "part": "wikidata:Q1034264",
+      "fields": [
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:or:cape-blanco",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-595",
+      "part": "wikidata:Q1034264",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3461",
+      "part": "wikidata:Q1034264",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73002339",
+      "part": "wikidata:Q1034264",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.83703,-124.56367",
+      "part": "wikidata:Q1034264",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:cape-blanco",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

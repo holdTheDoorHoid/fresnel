@@ -2,7 +2,10 @@
   "id": "us-wi-milwaukee-pierhead",
   "name": "Milwaukee Pierhead Light",
   "other_names": [
-    "Milwaukee Pierhead Lighthouse"
+    "Milwaukee Pierhead Lighthouse",
+    "Milwaukee Pierhead",
+    "Milwaukee North Pierhead",
+    "Milwaukee South Pierhead Light 3"
   ],
   "country": "US",
   "region": "WI",
@@ -11,41 +14,58 @@
   "setting": "pier",
   "kind": "pier_light",
   "location": {
-    "lat": 43.025962,
-    "lon": -87.895345,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 43.02667,
+    "lon": -87.8975,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Milwaukee Pierhead Light",
       "type": null,
       "material": null,
       "built": 1872,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 43.025962,
+        "lon": -87.895345
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Milwaukee North Pierhead",
+      "type": null,
+      "material": "steel",
+      "built": 1906,
+      "height_m": 9.8,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1872,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl R",
-    "focal_height_m": 13.0,
-    "range_nm": 7.0,
+    "characteristic": "Fl G 4s",
+    "focal_height_m": 6.0,
+    "range_nm": 6.1,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "12000971",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000971"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000971",
+      "listed": "2012-11-21",
+      "nomination": "https://catalog.archives.gov/id/75325113"
     }
   ],
   "aton": {
@@ -58,7 +78,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,7 +90,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -84,13 +104,25 @@
     {
       "year": 1872,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1906,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +169,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/401086725",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Milwaukee Pierhead",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=244",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Milwaukee North Pierhead",
+      "url": "https://archives.uslhs.org/places/milwaukee-north-pierhead",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325113",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -161,28 +213,78 @@
       "source": "osm",
       "key": "osm:way/401086725",
       "part": "wikidata:Q6861794",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:244",
+      "part": "wikidata:Q6861794",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:milwaukee-pierhead-2",
+      "part": "station",
       "fields": [
-        "light",
-        "location"
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20670",
+      "part": "wikidata:Q6861794",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-20675",
+      "part": "wikidata:Q6861794",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3573",
+      "part": "uslhs:3573",
+      "fields": [
+        "access",
+        "events",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000971",
+      "part": "wikidata:Q6861794",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.02494,-87.89471",
+      "part": "wikidata:Q6861794",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.02596,-87.89533",
+      "part": "wikidata:Q6861794",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:milwaukee-pierhead",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.characteristic",
-      "values": [
-        {
-          "source": "osm",
-          "value": "Fl R"
-        },
-        {
-          "source": "wikidata",
-          "value": "Fl R 4s"
-        }
-      ],
-      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,

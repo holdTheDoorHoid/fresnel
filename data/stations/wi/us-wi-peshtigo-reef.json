@@ -2,7 +2,8 @@
   "id": "us-wi-peshtigo-reef",
   "name": "Peshtigo Reef Light",
   "other_names": [
-    "Peshtigo Reef Lighthouse"
+    "Peshtigo Reef Lighthouse",
+    "Peshtigo Reef"
   ],
   "country": "US",
   "region": "WI",
@@ -32,20 +33,22 @@
     }
   ],
   "light": {
-    "first_lit": 1936,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 22.0,
-    "range_nm": 9.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 21.9,
+    "range_nm": 7.8,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "07000404",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000404"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000404",
+      "listed": "2007-05-02",
+      "nomination": "https://catalog.archives.gov/id/75325085"
     }
   ],
   "aton": {
@@ -58,7 +61,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,7 +72,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,6 +85,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1936,
       "event": "first_lit",
       "note": null,
@@ -90,7 +105,7 @@
     {
       "year": 2007,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582712062",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Peshtigo Reef",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=633",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin: Door Peninsula",
+      "url": "https://www.ibiblio.org/lighthouse/widp.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Peshtigo Reef",
+      "url": "https://archives.uslhs.org/places/peshtigo-reef-0",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325085",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -149,7 +184,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -163,6 +197,56 @@
       "part": "wikidata:Q7171398",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:633",
+      "part": "wikidata:Q7171398",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:widp:peshtigo-reef",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-21990",
+      "part": "wikidata:Q7171398",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9563",
+      "part": "station",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:07000404",
+      "part": "wikidata:Q7171398",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.95665,-87.57925",
+      "part": "wikidata:Q7171398",
+      "fields": [
+        "light"
       ]
     }
   ],

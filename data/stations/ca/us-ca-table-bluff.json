@@ -1,7 +1,9 @@
 {
   "id": "us-ca-table-bluff",
   "name": "Table Bluff Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Table Bluff"
+  ],
   "country": "US",
   "region": "CA",
   "county": null,
@@ -80,6 +82,11 @@
       "label": "Website",
       "url": "https://www.us-lighthouses.com/table-bluff-lighthouse",
       "kind": "website"
+    },
+    {
+      "label": "LighthouseFriends: Table Bluff",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=62",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -93,10 +100,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:62",
+      "part": "osm:way/474490580",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

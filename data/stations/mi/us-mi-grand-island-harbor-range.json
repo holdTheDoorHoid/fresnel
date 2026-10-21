@@ -1,9 +1,16 @@
 {
   "id": "us-mi-grand-island-harbor-range",
-  "name": "Grand Island Harbor Range Lights",
+  "name": "Grand Island Harbor Range",
   "other_names": [
     "Grand Island Harbor Rear Range Light",
-    "Grand Island Harbor Front Range Light"
+    "Grand Island Harbor Front Range Light",
+    "Bay Furnace",
+    "Grand Island Harbor Range Front",
+    "Christmas",
+    "keeper's house",
+    "Grand Island Harbor Range Rear",
+    "Forest Service Cultural Resource Site No. 09-10-03-704",
+    "Bay Furnace Light"
   ],
   "country": "US",
   "region": "MI",
@@ -17,7 +24,7 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "inactive",
+  "status": "active",
   "status_note": null,
   "structures": [
     {
@@ -35,12 +42,12 @@
       "role": "rear_range",
       "name": "Grand Island Harbor Rear Range Light",
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1868,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata",
+      "from": "uslhs",
       "location": {
         "lat": 46.436869,
         "lon": -86.691279
@@ -48,24 +55,26 @@
     }
   ],
   "light": {
-    "first_lit": 1914,
-    "deactivated": 1969,
+    "first_lit": 1868,
+    "deactivated": null,
     "lens": null,
-    "characteristic": "F W",
-    "focal_height_m": 21.0,
-    "range_nm": 9.0,
+    "characteristic": "Fl W 2.5s",
+    "focal_height_m": 6.1,
+    "range_nm": 5.2,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "90000906",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000906"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/90000906",
+      "listed": "1990-06-26",
+      "nomination": "https://catalog.archives.gov/id/25338813"
     }
   ],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "7-14600",
     "arlhs": "USA981",
     "ccg_list_number": null,
     "nga": null
@@ -73,15 +82,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -94,8 +103,26 @@
     {
       "year": 1868,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1868,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1913,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1914,
@@ -104,15 +131,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1914,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 1969,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1983,
+      "event": "built",
+      "note": "Tower 4 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -183,6 +222,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=570",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: GRAND ISLAND HARBOR RANGE REAR",
+      "url": "https://archives.uslhs.org/places/grand-island-harbor-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25338813",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -195,7 +249,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "photos",
         "region",
         "registers",
@@ -207,7 +260,6 @@
       "key": "wikidata:Q85929348",
       "part": "wikidata:Q85929348",
       "fields": [
-        "light",
         "location",
         "photos",
         "structures"
@@ -218,12 +270,84 @@
       "key": "osm:node/1010140990",
       "part": "wikidata:Q1542605",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:570",
+      "part": "wikidata:Q1542605",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:bay-furnace-4",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:christmas-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:christmas-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-14600",
+      "part": "wikidata:Q85929348",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2972",
+      "part": "wikidata:Q1542605",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:90000906",
+      "part": "wikidata:Q1542605",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:46.43878,-86.69207",
+      "part": "wikidata:Q85929348",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "uslhs",
+          "value": "active"
+        },
         {
           "source": "wikidata",
           "value": "active"

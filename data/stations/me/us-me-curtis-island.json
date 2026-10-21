@@ -2,7 +2,10 @@
   "id": "us-me-curtis-island",
   "name": "Curtis Island Light",
   "other_names": [
-    "Curtis Island Lighthouse"
+    "Curtis Island Lighthouse",
+    "Curtis Island",
+    "Negro Island",
+    "Negro Island Light"
   ],
   "country": "US",
   "region": "ME",
@@ -32,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1896,
+    "first_lit": 1835,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc G 4s",
-    "focal_height_m": 16.0,
+    "focal_height_m": 15.8,
     "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "73000263",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000263"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/73000263",
+      "listed": "1973-05-17",
+      "nomination": "https://catalog.archives.gov/id/88686465"
     }
   ],
   "aton": {
@@ -54,11 +59,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Camden",
+  "ownership": "local",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -69,8 +74,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -82,6 +87,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1835,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1896,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1896,
       "event": "first_lit",
       "note": null,
@@ -90,13 +107,13 @@
     {
       "year": 1972,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1973,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -148,6 +165,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/765617102",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Curtis Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=532",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: South",
+      "url": "https://www.ibiblio.org/lighthouse/me2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Curtis Island",
+      "url": "https://archives.uslhs.org/places/curtis-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88686465",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +197,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -181,9 +217,83 @@
       "key": "osm:way/765617102",
       "part": "wikidata:Q5195779",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:532",
+      "part": "wikidata:Q5195779",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me2:curtis-island-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-4310",
+      "part": "wikidata:Q5195779",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2897",
+      "part": "wikidata:Q5195779",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:73000263",
+      "part": "wikidata:Q5195779",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.20137,-69.04886",
+      "part": "wikidata:Q5195779",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:curtis-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1896
+        },
+        {
+          "source": "uslhs",
+          "value": 1835
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -3,7 +3,9 @@
   "name": "Copper Harbor Light",
   "other_names": [
     "Copper Harbor Lighthouse",
-    "Harbor Lighthouse"
+    "Harbor Lighthouse",
+    "Copper Harbor",
+    "Copper Harbor Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -33,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1866,
+    "first_lit": 1848,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 6s",
     "focal_height_m": 27.4,
     "range_nm": 12.2,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "12000305",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000305"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/12000305",
+      "listed": "2012-06-07",
+      "nomination": "https://catalog.archives.gov/id/25339765"
     },
     {
       "register": "Michigan State Historic Site",
@@ -63,20 +67,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -88,15 +92,51 @@
       "from": "wikidata"
     },
     {
+      "year": 1848,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1866,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1866,
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1933,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 2012,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -153,6 +193,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=226",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miwu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Copper Harbor",
+      "url": "https://archives.uslhs.org/places/copper-harbor",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/25339765",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -165,7 +220,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -185,13 +239,128 @@
       "source": "osm",
       "key": "osm:way/696474243",
       "part": "wikidata:Q5168733",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:226",
+      "part": "wikidata:Q5168733",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:copper-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miwu:copper-harbor-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-15175",
+      "part": "wikidata:Q5168733",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2958",
+      "part": "wikidata:Q5168733",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:12000305",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.47420,-87.86040",
+      "part": "wikidata:Q5168733",
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:copper-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 27.0
+        },
+        {
+          "source": "osm",
+          "value": 27.4
+        },
+        {
+          "source": "uslhs",
+          "value": 19.81
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1866
+        },
+        {
+          "source": "uslhs",
+          "value": 1849
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

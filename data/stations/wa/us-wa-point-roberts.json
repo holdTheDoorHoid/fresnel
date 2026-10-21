@@ -2,7 +2,8 @@
   "id": "us-wa-point-roberts",
   "name": "Point Roberts Light",
   "other_names": [
-    "Point Roberts Lighthouse"
+    "Point Roberts Lighthouse",
+    "Point Roberts"
   ],
   "country": "US",
   "region": "WA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1908,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl(2) W 15s",
-    "focal_height_m": 9.0,
-    "range_nm": null,
+    "characteristic": "Fl(2) W 5s",
+    "focal_height_m": 6.1,
+    "range_nm": 14.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
@@ -52,7 +53,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -68,7 +69,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [
@@ -97,6 +105,16 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Phare_de_Point_Roberts",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Lighthouse Directory: Washington: Puget Sound",
+      "url": "https://www.ibiblio.org/lighthouse/waps.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Roberts",
+      "url": "https://archives.uslhs.org/places/point-roberts",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -108,12 +126,35 @@
         "aton",
         "county",
         "kind",
-        "light",
         "location",
         "name",
         "photos",
         "region",
         "structures"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:waps:point-roberts",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-19965",
+      "part": "wikidata:Q7208154",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:46100",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
       ]
     }
   ],

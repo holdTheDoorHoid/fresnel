@@ -2,7 +2,11 @@
   "id": "us-ct-peck-ledge",
   "name": "Peck Ledge Light",
   "other_names": [
-    "Pecks Ledge Lighthouse"
+    "Pecks Ledge Lighthouse",
+    "Peck Ledge",
+    "Cockenoe",
+    "Peck Ledge Lighthouse",
+    "Peck's Ledge"
   ],
   "country": "US",
   "region": "CT",
@@ -22,30 +26,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "caisson",
+      "material": "cast_iron",
       "built": 1906,
       "height_m": 16.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 2.5s",
     "focal_height_m": 18.6,
     "range_nm": 5.0,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "89001472",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001472"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/89001472",
+      "listed": "1990-05-29",
+      "nomination": "https://catalog.archives.gov/id/132353049"
     }
   ],
   "aton": {
@@ -57,8 +63,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,8 +75,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,13 +84,25 @@
     {
       "year": 1906,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1906,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1990,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -136,6 +154,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/716893013",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Peck Ledge",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=787",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Connecticut",
+      "url": "https://www.ibiblio.org/lighthouse/ct.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Peck Ledge",
+      "url": "https://archives.uslhs.org/places/peck-ledge",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/132353049",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -160,7 +198,6 @@
       "key": "osm:node/5659561415",
       "part": "wikidata:Q7158764",
       "fields": [
-        "light",
         "location"
       ]
     },
@@ -169,6 +206,65 @@
       "key": "osm:way/716893013",
       "part": "wikidata:Q7158764",
       "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:787",
+      "part": "wikidata:Q7158764",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ct:peck-ledge",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-24930",
+      "part": "wikidata:Q7158764",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2745",
+      "part": "wikidata:Q7158764",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:89001472",
+      "part": "wikidata:Q7158764",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:41.07739,-73.36973",
+      "part": "wikidata:Q7158764",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ct:peck-s-ledge",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],

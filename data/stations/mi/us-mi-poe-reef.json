@@ -2,7 +2,9 @@
   "id": "us-mi-poe-reef",
   "name": "Poe Reef Light",
   "other_names": [
-    "Poe Reef Lighthouse"
+    "Poe Reef Lighthouse",
+    "Poe Reef",
+    "Poe Reef Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -22,30 +24,32 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "crib",
+      "material": "concrete",
       "built": 1929,
       "height_m": 17.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1929,
+    "first_lit": 1892,
     "deactivated": null,
     "lens": null,
     "characteristic": "Iso W 2s",
     "focal_height_m": 21.6,
     "range_nm": 7.8,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000985",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000985"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000985",
+      "listed": "2005-09-06",
+      "nomination": "https://catalog.archives.gov/id/75324989"
     }
   ],
   "aton": {
@@ -58,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -69,28 +73,40 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1892,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1929,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1929,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -142,6 +158,21 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=709",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Poe Reef",
+      "url": "https://archives.uslhs.org/places/poe-reef",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324989",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -154,7 +185,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -167,8 +197,67 @@
       "key": "osm:node/1012228478",
       "part": "wikidata:Q7207272",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:709",
+      "part": "wikidata:Q7207272",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minel:poe-reef",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-11750",
+      "part": "wikidata:Q7207272",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3006",
+      "part": "wikidata:Q7207272",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000985",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.69479,-84.36212",
+      "part": "wikidata:Q7207272",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:poe-reef",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

@@ -4,7 +4,9 @@
   "other_names": [
     "Isle Au Haut Lighthouse",
     "Robinson Point Light",
-    "Robinson Point"
+    "Robinson Point",
+    "Isle au Haut",
+    "Isle Au Haut Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -25,29 +27,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1907,
       "height_m": 12.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1907,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
-    "focal_height_m": 15.0,
-    "range_nm": 8.0,
+    "focal_height_m": 14.6,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002265",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002265"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002265",
+      "listed": "1988-01-21",
+      "nomination": "https://catalog.archives.gov/id/88684970"
     }
   ],
   "aton": {
@@ -56,11 +60,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Town of Isle au Haut (tower); keeper's house is privately owned",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -72,27 +76,46 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
-  "stay": null,
+  "stay": {
+    "type": "rental",
+    "provider": null,
+    "url": null,
+    "season": null,
+    "checked": null,
+    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+  },
   "events": [
     {
       "year": 1907,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1907,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1907,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1934,
       "event": "automated",
-      "note": null,
+      "note": "US Lighthouse Society Digital Archive",
       "from": "wikidata"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -139,6 +162,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/692919723",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Isle au Haut",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=537",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Maine: East",
+      "url": "https://www.ibiblio.org/lighthouse/me.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Isle au Haut",
+      "url": "https://archives.uslhs.org/places/isle-au-haut",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684970",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -151,7 +194,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -165,6 +207,68 @@
       "part": "wikidata:Q6083839",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:537",
+      "part": "wikidata:Q6083839",
+      "fields": [
+        "access",
+        "stay",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:me:isle-au-haut",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-3360",
+      "part": "wikidata:Q6083839",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2914",
+      "part": "wikidata:Q6083839",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002265",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:44.06468,-68.65131",
+      "part": "wikidata:Q6083839",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:isle-au-haut",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

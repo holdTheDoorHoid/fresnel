@@ -2,7 +2,9 @@
   "id": "us-mi-saugatuck-harbour",
   "name": "Saugatuck Harbour lighthouse",
   "other_names": [
-    "Saugatuck Harbor Lights"
+    "Saugatuck Harbor Lights",
+    "Saugatuck South Pierhead Light",
+    "Saugatuck North Pierhead Light"
   ],
   "country": "US",
   "region": "MI",
@@ -35,11 +37,11 @@
     "first_lit": 2011,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl G 4s",
-    "focal_height_m": 9.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "wikidata"
+    "characteristic": "Fl R 4s",
+    "focal_height_m": 9.1,
+    "range_nm": 6.1,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -141,6 +143,34 @@
         "photos",
         "structures"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19445",
+      "part": "wikidata:Q88204597",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-19450",
+      "part": "wikidata:Q88204597",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.67685,-86.21632",
+      "part": "wikidata:Q88204597",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.67745,-86.21616",
+      "part": "wikidata:Q88204597",
+      "fields": []
     }
   ],
   "conflicts": [],

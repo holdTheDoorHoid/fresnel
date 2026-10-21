@@ -2,7 +2,10 @@
   "id": "us-ma-the-graves",
   "name": "The Graves Light",
   "other_names": [
-    "The Graves Lighthouse"
+    "The Graves Lighthouse",
+    "Graves",
+    "The Graves",
+    "Graves Light Station"
   ],
   "country": "US",
   "region": "MA",
@@ -23,12 +26,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "stone",
       "built": 1903,
       "height_m": 34.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -36,16 +39,18 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl(2) W 12s",
-    "focal_height_m": 29.0,
-    "range_nm": 15.0,
-    "fog_signal": null,
-    "from": "wikidata"
+    "focal_height_m": 29.9,
+    "range_nm": 14.0,
+    "fog_signal": "horn",
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "87002041",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002041"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002041",
+      "listed": "1987-09-28",
+      "nomination": "https://catalog.archives.gov/id/63792736"
     }
   ],
   "aton": {
@@ -54,22 +59,22 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1976"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -83,14 +88,32 @@
     },
     {
       "year": 1905,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1905,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1905,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1976,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -137,6 +160,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/713681714",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Graves",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=483",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: North",
+      "url": "https://www.ibiblio.org/lighthouse/ma.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Graves",
+      "url": "https://archives.uslhs.org/places/graves",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/63792736",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,9 +207,84 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:483",
+      "part": "wikidata:Q14537875",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ma:the-graves",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-10679",
+      "part": "wikidata:Q14537875",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:1-390",
+      "part": "wikidata:Q14537875",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2839",
+      "part": "wikidata:Q14537875",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:87002041",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.36512,-70.86913",
+      "part": "wikidata:Q14537875",
+      "fields": [
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 29.0
+        },
+        {
+          "source": "uslhs",
+          "value": 34.44
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

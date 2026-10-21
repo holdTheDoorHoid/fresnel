@@ -4,7 +4,10 @@
   "other_names": [
     "Skillagalee Island Light",
     "Skillagalee Island (Ile Aux Galets) Lighthouse",
-    "Ile Aux Galets Light"
+    "Ile Aux Galets Light",
+    "Skillagalee",
+    "Ile aux Galets",
+    "Skillagalee Light Station"
   ],
   "country": "US",
   "region": "MI",
@@ -25,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1888,
       "height_m": 18.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1888,
+    "first_lit": 1850,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 18.0,
-    "range_nm": 11.0,
+    "focal_height_m": 17.7,
+    "range_nm": 9.5,
     "fog_signal": null,
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84001389",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001389"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84001389",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891084"
     }
   ],
   "aton": {
@@ -59,8 +64,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,16 +76,22 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
     {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1888,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -92,7 +103,7 @@
     {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -134,6 +145,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/582790726",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Ile Aux Galets (Skillagalee)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=207",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Skillagalee (Ile Aux Galets)",
+      "url": "https://archives.uslhs.org/places/skillagalee-ile-aux-galets",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891084",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -146,7 +177,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -159,8 +189,65 @@
       "key": "osm:node/582790726",
       "part": "wikidata:Q5997383",
       "fields": [
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:207",
+      "part": "wikidata:Q5997383",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:ile-aux-galets-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-17795",
+      "part": "wikidata:Q5997383",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3335",
+      "part": "wikidata:Q5997383",
+      "fields": [
+        "access",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84001389",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:45.67630,-85.17230",
+      "part": "wikidata:Q5997383",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:skillagalee-ile-aux-galets",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

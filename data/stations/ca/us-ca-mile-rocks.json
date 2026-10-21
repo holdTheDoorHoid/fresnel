@@ -2,7 +2,8 @@
   "id": "us-ca-mile-rocks",
   "name": "Mile Rocks Light",
   "other_names": [
-    "Mile Rocks Lighthouse"
+    "Mile Rocks Lighthouse",
+    "Mile Rocks"
   ],
   "country": "US",
   "region": "CA",
@@ -32,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": 1966,
+    "first_lit": 1906,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 5s",
-    "focal_height_m": 15.0,
-    "range_nm": 15.0,
+    "focal_height_m": 14.9,
+    "range_nm": 8.0,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -63,8 +64,8 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,8 +73,20 @@
     {
       "year": 1906,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1906,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1906,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1966,
@@ -125,6 +138,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/847856761",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Mile Rocks",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=77",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mile Rocks",
+      "url": "https://archives.uslhs.org/places/mile-rocks",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -136,7 +164,6 @@
         "aton",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -151,10 +178,106 @@
         "location",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:77",
+      "part": "wikidata:Q12061785",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:mile-rocks",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-365",
+      "part": "wikidata:Q12061785",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:6-4245",
+      "part": "wikidata:Q12061785",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8377",
+      "part": "wikidata:Q12061785",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:37.79283,-122.51039",
+      "part": "wikidata:Q12061785",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:mile-rocks",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "uslhs",
+          "value": "lost"
+        }
+      ],
+      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 15.0
+        },
+        {
+          "source": "uslhs",
+          "value": 23.85
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1966
+        },
+        {
+          "source": "uslhs",
+          "value": 1906
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

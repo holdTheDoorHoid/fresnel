@@ -3,7 +3,9 @@
   "name": "Grand Marais Light",
   "other_names": [
     "Grand Marais Lighthouse",
-    "Grand Marais light"
+    "Grand Marais light",
+    "Grand Marais",
+    "Grand Marais MN"
   ],
   "country": "US",
   "region": "MN",
@@ -24,23 +26,23 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "steel",
       "built": 1886,
       "height_m": 10.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1922,
+    "first_lit": 1885,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 2.5s",
-    "focal_height_m": 15.0,
-    "range_nm": 12.0,
+    "focal_height_m": 14.6,
+    "range_nm": 10.4,
     "fog_signal": "horn",
-    "from": "osm"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -53,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,16 +73,40 @@
   "stay": null,
   "events": [
     {
+      "year": 1885,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1885,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1886,
       "event": "built",
       "note": null,
       "from": "wikidata"
     },
     {
+      "year": 1886,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1897,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1922,
@@ -132,6 +158,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/996162754",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Grand Marais",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=652",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Minnesota",
+      "url": "https://www.ibiblio.org/lighthouse/mn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grand Marais MN",
+      "url": "https://archives.uslhs.org/places/grand-marais-mn",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,7 +185,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -158,12 +198,88 @@
       "fields": [
         "agency",
         "events",
-        "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:652",
+      "part": "wikidata:Q5594783",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:mn:grand-marais-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-16615",
+      "part": "wikidata:Q5594783",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:6796",
+      "part": "wikidata:Q5594783",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:47.74522,-90.33788",
+      "part": "wikidata:Q5594783",
+      "fields": [
+        "light"
       ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 15.0
+        },
+        {
+          "source": "osm",
+          "value": 15.0
+        },
+        {
+          "source": "uslhs",
+          "value": 11.58
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
     {
       "field": "first_year",
       "values": [
@@ -174,12 +290,16 @@
         {
           "source": "osm",
           "value": 1897
+        },
+        {
+          "source": "uslhs",
+          "value": 1885
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

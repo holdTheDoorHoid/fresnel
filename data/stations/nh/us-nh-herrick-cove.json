@@ -1,7 +1,9 @@
 {
   "id": "us-nh-herrick-cove",
   "name": "Herrick Cove Light",
-  "other_names": [],
+  "other_names": [
+    "Herrick Cove"
+  ],
   "country": "US",
   "region": "NH",
   "county": null,
@@ -14,8 +16,8 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "active",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -42,7 +44,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-967",
     "ccg_list_number": null,
     "nga": null
   },
@@ -61,12 +63,19 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
+    "boat_only": true,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1893,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,6 +84,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6183086998",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Herrick Cove",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=665",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Hampshire",
+      "url": "https://www.ibiblio.org/lighthouse/nh.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,10 +107,35 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:665",
+      "part": "osm:node/6183086998",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nh:herrick-cove",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nh:herrick-cove",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

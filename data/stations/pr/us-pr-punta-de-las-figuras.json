@@ -5,7 +5,11 @@
     "Faro de Punta de las Figuras",
     "Punta de las Figuras Lighthouse",
     "Faro de Punta Figuras",
-    "Punta Figuras Lighthouse"
+    "Punta Figuras Lighthouse",
+    "Punta de las Figuras",
+    "Point Figuras",
+    "Faro de Punta de Las Figuras",
+    "Punta Figuras Light"
   ],
   "country": "US",
   "region": "PR",
@@ -25,30 +29,37 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
+      "type": "integral",
+      "material": "brick",
+      "built": 1889,
       "height_m": 15.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1893,
+    "first_lit": 1889,
     "deactivated": 1938,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "81000687",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000687"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/81000687",
+      "listed": "1981-10-22",
+      "nomination": "https://catalog.archives.gov/id/131518225"
+    },
+    {
+      "register": "HAER",
+      "number": "PR-39",
+      "url": "https://www.loc.gov/item/pr0039/"
     }
   ],
   "aton": {
@@ -61,7 +72,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -79,6 +90,18 @@
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1889,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1893,
       "event": "first_lit",
       "note": null,
@@ -87,13 +110,13 @@
     {
       "year": 1938,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1981,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -140,6 +163,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/4304692955",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Punta de las Figuras (Point Figuras)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1172",
+      "kind": "reference"
+    },
+    {
+      "label": "Library of Congress: HAER PR-39, Faro de Punta de Las Figuras",
+      "url": "https://www.loc.gov/item/pr0039/",
+      "kind": "register"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Point Figuras",
+      "url": "https://archives.uslhs.org/places/point-figuras",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/131518225",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -167,9 +210,58 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1172",
+      "part": "wikidata:Q7260568",
+      "fields": []
+    },
+    {
+      "source": "territories",
+      "key": "territories:haer-pr-39",
+      "part": "wikidata:Q7260568",
+      "fields": [
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3481",
+      "part": "wikidata:Q7260568",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:81000687",
+      "part": "wikidata:Q7260568",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1893
+        },
+        {
+          "source": "uslhs",
+          "value": 1889
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

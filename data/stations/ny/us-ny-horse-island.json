@@ -3,7 +3,11 @@
   "name": "Horse Island Light",
   "other_names": [
     "Sackets Harbor Light",
-    "Horse Island Lighthouse"
+    "Horse Island Lighthouse",
+    "Horse Island",
+    "Sackets Harbor",
+    "Sackett's Harbor, Horse Island",
+    "Sacketts Harbor"
   ],
   "country": "US",
   "region": "NY",
@@ -33,14 +37,14 @@
     }
   ],
   "light": {
-    "first_lit": 1870,
+    "first_lit": 1831,
     "deactivated": 1957,
     "lens": null,
     "characteristic": "Fl W 2.5s",
     "focal_height_m": 17.4,
     "range_nm": 4.3,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -52,8 +56,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "automated",
@@ -77,6 +81,18 @@
       "from": "wikidata"
     },
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1870,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1870,
       "event": "first_lit",
       "note": null,
@@ -85,7 +101,7 @@
     {
       "year": 1957,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -97,7 +113,7 @@
     {
       "year": 1957,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -144,6 +160,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6548172750",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Horse Island (Sackets Harbor)",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=312",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Central and Northern",
+      "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sacketts Harbor",
+      "url": "https://archives.uslhs.org/places/sacketts-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,7 +187,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "region",
         "structures"
@@ -181,6 +211,54 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:312",
+      "part": "wikidata:Q108701407",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:sackets-harbor-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nyup:sackets-harbor-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-1850",
+      "part": "wikidata:Q108701407",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3413",
+      "part": "wikidata:Q108701407",
+      "fields": [
+        "access"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:43.94373,-76.14529",
+      "part": "wikidata:Q108701407",
+      "fields": [
+        "light"
+      ]
     }
   ],
   "conflicts": [
@@ -194,9 +272,27 @@
         {
           "source": "wikidata",
           "value": "inactive"
+        },
+        {
+          "source": "uslhs",
+          "value": "inactive"
         }
       ],
       "note": "Sources differ on whether the light is still lit."
+    },
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1957
+        },
+        {
+          "source": "uslhs",
+          "value": 1831
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
     }
   ],
   "verification": "unverified",

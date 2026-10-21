@@ -1,7 +1,12 @@
 {
   "id": "us-sc-harbour-town",
   "name": "Harbour Town Lighthouse",
-  "other_names": [],
+  "other_names": [
+    "Harbour Town",
+    "Harbour Town Light 1",
+    "Harbour Town Light 3",
+    "Harbour Town Light 4"
+  ],
   "country": "US",
   "region": "SC",
   "county": "Beaufort",
@@ -33,11 +38,11 @@
     "first_lit": 1970,
     "deactivated": null,
     "lens": null,
-    "characteristic": "Fl W 2.5s",
+    "characteristic": "Q R",
     "focal_height_m": 28.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -58,11 +63,11 @@
   },
   "visit": {
     "grounds_open": null,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -72,6 +77,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1970,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1970,
@@ -123,6 +134,16 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/427711566",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Harbour Town",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=330",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -148,6 +169,74 @@
       "part": "wikidata:Q14709506",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:330",
+      "part": "wikidata:Q14709506",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:harbour-town",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4375",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4385",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4390",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:3-4395",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.13838,-80.81416",
+      "part": "wikidata:Q14709506",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.13863,-80.81264",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "enc",
+      "key": "enc:32.13868,-80.81405",
+      "part": "wikidata:Q14709506",
+      "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:harbour-town",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

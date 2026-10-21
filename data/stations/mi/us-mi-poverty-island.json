@@ -2,7 +2,9 @@
   "id": "us-mi-poverty-island",
   "name": "Poverty Island Light Station",
   "other_names": [
-    "Poverty Island Lighthouse"
+    "Poverty Island Lighthouse",
+    "Poverty Island",
+    "Poverty Island Light"
   ],
   "country": "US",
   "region": "MI",
@@ -23,29 +25,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "brick",
+      "built": 1874,
+      "height_m": 21.3,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1875,
+    "first_lit": 1874,
     "deactivated": 1976,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 24.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "05000984",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000984"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000984",
+      "listed": "2005-09-06",
+      "nomination": "https://catalog.archives.gov/id/75325003"
     }
   ],
   "aton": {
@@ -58,23 +62,41 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1957"
   },
   "visit": {
     "grounds_open": null,
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1874,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1874,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1874,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1875,
       "event": "built",
@@ -88,15 +110,27 @@
       "from": "wikidata"
     },
     {
+      "year": 1957,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1976,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1990,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -138,6 +172,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/495388540",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Poverty Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=834",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/misu.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Poverty Island",
+      "url": "https://archives.uslhs.org/places/poverty-island",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325003",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -164,10 +218,65 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:834",
+      "part": "wikidata:Q7235831",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:misu:poverty-island",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3013",
+      "part": "wikidata:Q7235831",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:05000984",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1976
+        },
+        {
+          "source": "rowlett",
+          "value": 1976
+        },
+        {
+          "source": "uslhs",
+          "value": 1990
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -4,7 +4,10 @@
   "other_names": [
     "North Point light",
     "North Point Lighthouse",
-    "North Point Lighthouse and Keeper's Quarters"
+    "North Point Lighthouse and Keeper's Quarters",
+    "North Point",
+    "Milwaukee",
+    "Milwaukee North Point"
   ],
   "country": "US",
   "region": "WI",
@@ -25,29 +28,31 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "cast_iron",
       "built": 1855,
       "height_m": 23.0,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": 1888,
+    "first_lit": 1855,
     "deactivated": 1994,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 47.0,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "84003732",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003732"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/84003732",
+      "listed": "1984-07-19",
+      "nomination": "https://catalog.archives.gov/id/28891373"
     },
     {
       "register": "NRHP",
@@ -64,20 +69,20 @@
   "agency": "North Point Lighthouse Museum",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1943"
   },
   "visit": {
-    "grounds_open": null,
-    "climbable": null,
+    "grounds_open": true,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -89,10 +94,22 @@
       "from": "osm"
     },
     {
+      "year": 1855,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1879,
       "event": "built",
       "note": null,
       "from": "osm"
+    },
+    {
+      "year": 1888,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1888,
@@ -101,15 +118,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1943,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
       "year": 1984,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
       "year": 1994,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -161,6 +184,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/403385111",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: North Point",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=245",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Milwaukee North Point",
+      "url": "https://archives.uslhs.org/places/milwaukee-north-point",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/28891373",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -200,9 +243,68 @@
         "agency",
         "events"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:245",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:north-point-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3574",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:84003732",
+      "part": "wikidata:Q7056375",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wi:north-point",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "light.focal_height_m",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 47.0
+        },
+        {
+          "source": "uslhs",
+          "value": 37.19
+        }
+      ],
+      "note": "Sources differ by more than 3 m."
+    },
     {
       "field": "first_year",
       "values": [
@@ -212,6 +314,10 @@
         },
         {
           "source": "osm",
+          "value": 1855
+        },
+        {
+          "source": "uslhs",
           "value": 1855
         }
       ],

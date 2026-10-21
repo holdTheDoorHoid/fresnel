@@ -1,7 +1,11 @@
 {
   "id": "us-de-baker-shoal-range-rear",
-  "name": "Baker Shoal Range Rear Light",
-  "other_names": [],
+  "name": "Baker Range",
+  "other_names": [
+    "Baker Shoal Range Rear Light",
+    "Baker Range Rear",
+    "Baker Range Front"
+  ],
   "country": "US",
   "region": "DE",
   "county": null,
@@ -9,28 +13,58 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 39.540892,
-    "lon": -75.569959,
-    "precision": "exact",
-    "from": "osm"
+    "lat": 39.53433,
+    "lon": -75.56833,
+    "precision": "approximate",
+    "from": "uslhs"
   },
   "status": "active",
   "status_note": null,
   "structures": [
     {
       "role": "rear_range",
-      "name": null,
+      "name": "Baker Shoal Range Rear Light",
       "type": null,
       "material": null,
       "built": 1896,
       "height_m": 33.5,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 39.540892,
+        "lon": -75.569959
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Baker Range Front",
+      "type": null,
+      "material": "steel",
+      "built": 1902,
+      "height_m": 5.2,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Baker Range Rear",
+      "type": null,
+      "material": "steel",
+      "built": 1902,
+      "height_m": 16.8,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.53817,
+        "lon": -75.56867
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1902,
     "deactivated": null,
     "lens": null,
     "characteristic": "F G",
@@ -41,7 +75,7 @@
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "2-2510",
     "arlhs": "USA029",
     "ccg_list_number": null,
     "nga": null
@@ -70,8 +104,14 @@
     {
       "year": 1896,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1902,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -112,6 +152,26 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/6525319469",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Baker Range",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=885",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baker Range Front",
+      "url": "https://archives.uslhs.org/places/baker-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Baker Range Rear",
+      "url": "https://archives.uslhs.org/places/baker-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,7 +185,6 @@
         "events",
         "kind",
         "light",
-        "name",
         "ownership",
         "photos",
         "region",
@@ -136,13 +195,54 @@
       "source": "osm",
       "key": "osm:node/6525319469",
       "part": "wikidata:Q4849207",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:885",
+      "part": "wikidata:Q4849207",
       "fields": [
-        "location"
+        "name"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:baker-range-rear-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:baker-range-rear-2",
+      "part": "station",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8387",
+      "part": "uslhs:8387",
+      "fields": [
+        "events",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8388",
+      "part": "uslhs:8388",
+      "fields": [
+        "structures"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

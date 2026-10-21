@@ -2,7 +2,10 @@
   "id": "us-sc-morris-island",
   "name": "Morris Island Light",
   "other_names": [
-    "Morris Island Lighthouse"
+    "Morris Island Lighthouse",
+    "Morris Island",
+    "Old Charleston",
+    "Charleston Main Light"
   ],
   "country": "US",
   "region": "SC",
@@ -32,20 +35,22 @@
     }
   ],
   "light": {
-    "first_lit": 1876,
+    "first_lit": 1767,
     "deactivated": 1962,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "rowlett"
   },
   "registers": [
     {
       "register": "NRHP",
       "number": "82003837",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82003837"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/82003837",
+      "listed": "1982-06-28",
+      "nomination": "https://catalog.archives.gov/id/118997393"
     }
   ],
   "aton": {
@@ -69,7 +74,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": null
   },
@@ -82,9 +87,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1767,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1876,
       "event": "built",
-      "note": null,
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
     },
     {
@@ -96,13 +107,13 @@
     {
       "year": 1962,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
       "year": 1982,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -149,6 +160,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1528926180",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Morris Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=333",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: South Carolina",
+      "url": "https://www.ibiblio.org/lighthouse/sc.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/118997393",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -178,6 +204,32 @@
         "events",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:333",
+      "part": "wikidata:Q6913753",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:sc:morris-island-3",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:82003837",
+      "part": "wikidata:Q6913753",
+      "fields": [
+        "events",
+        "registers"
       ]
     }
   ],

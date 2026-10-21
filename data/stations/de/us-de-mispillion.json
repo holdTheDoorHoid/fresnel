@@ -3,7 +3,11 @@
   "name": "Mispillion Light",
   "other_names": [
     "Mispillion lighthouse",
-    "Mispillion Lighthouse"
+    "Mispillion Lighthouse",
+    "Mispillion",
+    "Mispillion New",
+    "Mispillion (Old)",
+    "Mispillion Lighthouse and Beacon Tower"
   ],
   "country": "US",
   "region": "DE",
@@ -17,12 +21,27 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Wikidata gives an end date without saying whether the light was discontinued or the tower taken down, and no current map shows a structure here. It may be gone.",
+  "status": "lost",
+  "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Mispillion (Old)",
+      "type": "integral",
+      "material": "wood",
+      "built": 1831,
+      "height_m": 11.6,
+      "status": "unknown",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 38.93933,
+        "lon": -75.305
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Mispillion Light",
       "type": null,
       "material": "steel",
       "built": 1873,
@@ -33,11 +52,11 @@
     }
   ],
   "light": {
-    "first_lit": 1873,
+    "first_lit": 1831,
     "deactivated": 1984,
     "lens": null,
     "characteristic": "Fl W 3s",
-    "focal_height_m": null,
+    "focal_height_m": 14.6,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -46,7 +65,9 @@
     {
       "register": "NRHP",
       "number": "86002919",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86002919"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/86002919",
+      "listed": "1987-02-18",
+      "nomination": "https://catalog.archives.gov/id/75324645"
     }
   ],
   "aton": {
@@ -59,7 +80,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -77,16 +98,34 @@
   "stay": null,
   "events": [
     {
+      "year": 1831,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1859,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1873,
       "event": "built",
-      "note": null,
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1873,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1926,
@@ -103,7 +142,7 @@
     {
       "year": 1929,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -115,7 +154,7 @@
     {
       "year": 1987,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -171,6 +210,26 @@
       "label": "ARLHS World List of Lights USA503",
       "url": "https://wlol.arlhs.com/lighthouse/USA503.html",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Directory: Delaware",
+      "url": "https://www.ibiblio.org/lighthouse/de.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mispillion New",
+      "url": "https://archives.uslhs.org/places/mispillion-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Mispillion (Old)",
+      "url": "https://archives.uslhs.org/places/mispillion-old",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75324645",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -202,10 +261,66 @@
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:mispillion-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:24997",
+      "part": "wikidata:Q111395782",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2761",
+      "part": "uslhs:2761",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:86002919",
+      "part": "wikidata:Q111395782",
+      "fields": [
+        "events",
+        "registers"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1984
+        },
+        {
+          "source": "rowlett",
+          "value": 1929
+        },
+        {
+          "source": "uslhs",
+          "value": 1859
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

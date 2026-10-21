@@ -2,7 +2,11 @@
   "id": "us-ma-hyannis-rear-range",
   "name": "Hyannis Rear Range Light",
   "other_names": [
-    "Hyannis Harbor Light"
+    "Hyannis Harbor Light",
+    "Hyannis",
+    "Hyannis Harbor",
+    "Range Rear",
+    "Hyannis Range Rear"
   ],
   "country": "US",
   "region": "MA",
@@ -23,23 +27,23 @@
       "role": "rear_range",
       "name": null,
       "type": null,
-      "material": null,
+      "material": "brick",
       "built": 1849,
-      "height_m": null,
+      "height_m": 5.8,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1849,
     "deactivated": 1929,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.8,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -48,11 +52,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Private owner",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -72,13 +76,19 @@
     {
       "year": 1849,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1929,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -115,6 +125,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/1541332502",
       "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Hyannis",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=484",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Massachusetts: Cape Cod",
+      "url": "https://www.ibiblio.org/lighthouse/macape.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Hyannis Range Rear",
+      "url": "https://archives.uslhs.org/places/hyannis-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,6 +165,36 @@
       "part": "wikidata:Q5952778",
       "fields": [
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:484",
+      "part": "wikidata:Q5952778",
+      "fields": [
+        "access",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:macape:hyannis-harbor",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2841",
+      "part": "wikidata:Q5952778",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "structures"
       ]
     }
   ],

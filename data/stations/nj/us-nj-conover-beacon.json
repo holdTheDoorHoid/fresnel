@@ -1,7 +1,9 @@
 {
   "id": "us-nj-conover-beacon",
   "name": "Conover Beacon",
-  "other_names": [],
+  "other_names": [
+    "Chapel Hill Range Front"
+  ],
   "country": "US",
   "region": "NJ",
   "county": null,
@@ -9,10 +11,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.4213,
+    "lat": 40.42133,
     "lon": -74.0556,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
@@ -21,12 +23,12 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "steel",
+      "built": 1856,
+      "height_m": 13.7,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -34,7 +36,7 @@
     "deactivated": 1988,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 17.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -42,7 +44,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": null,
+    "arlhs": "USA-191",
     "ccg_list_number": null,
     "nga": null
   },
@@ -50,7 +52,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -70,8 +72,14 @@
     {
       "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1988,
@@ -108,6 +116,21 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Conover_Beacon",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Conover Beacon",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=377",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New Jersey",
+      "url": "https://www.ibiblio.org/lighthouse/nj.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Conover Beacon",
+      "url": "https://archives.uslhs.org/places/conover-beacon",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,15 +142,41 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:377",
+      "part": "wikidata:Q5162359",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nj:conover-beacon-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8558",
+      "part": "wikidata:Q5162359",
+      "fields": [
+        "access",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
