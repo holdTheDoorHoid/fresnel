@@ -4,6 +4,7 @@
   research/corpus.py grep "<station name>" [--alias "<OCR or old spelling>" ...] [--state XX]
                      [--series lss,lhb,commissioner,bulletin,marine_ca] [--years 1880-1900] [--max 20]
   research/corpus.py page <series> <year> "<phrase>"     the page for a phrase, and the URL to cite
+  research/corpus.py cite <identifier | bulletin year>    the URL to cite (so check_quotes.py can find the text)
   research/corpus.py status                               what is in the corpus, what is missing, archive.org state
   research/corpus.py build [--series ...] [--wait]        download / extend the corpus (slow, resumable)
   research/corpus.py discover "<archive.org query>"       list archive.org items (to extend the catalog)
@@ -526,6 +527,23 @@ def cmd_status(a):
     return 0
 
 
+def cmd_cite(a):
+    """The URL to cite for a corpus identifier (what research/check_quotes.py can read offline)."""
+    vols = [v for v in load_index()["volumes"] if v["identifier"] == a.identifier or
+            (a.identifier.isdigit() and v["series"] == "bulletin" and v["year"] == int(a.identifier) and v.get("kind") != "index")]
+    if not vols:
+        print("No corpus volume %r (`corpus.py status`)." % a.identifier)
+        return 1
+    for v in vols:
+        yrs = ("%d" % v["years"][0]) if len(v["years"]) == 1 else "%d-%d" % (v["years"][0], v["years"][-1])
+        print("%s | %s | %s" % (v["series"], yrs, v["source_url"]))
+        if v["series"] != "bulletin":
+            print("  add /page/n<scan page>/mode/2up for a page (see `corpus.py page`)")
+        else:
+            print("  add #page=<PDF page> for a page")
+    return 0
+
+
 def cmd_discover(a):
     ok, msg = ia_probe()
     if not ok:
@@ -1030,11 +1048,13 @@ def main(argv=None):
     b.add_argument("--wait", action="store_true", help="if archive.org is down, probe every 30 minutes until it answers")
     b.add_argument("--max", type=int, help="most archive.org volumes to fetch this run")
     sub.add_parser("status", help="what the corpus holds")
+    c = sub.add_parser("cite", help="the URL to cite for an identifier (or a Bulletin year)")
+    c.add_argument("identifier")
     d = sub.add_parser("discover", help="list archive.org items for a query")
     d.add_argument("query")
     d.add_argument("--rows", type=int, default=100)
     a = ap.parse_args(argv)
-    return {"grep": cmd_grep, "page": cmd_page, "build": cmd_build, "status": cmd_status, "discover": cmd_discover}[a.cmd](a)
+    return {"grep": cmd_grep, "page": cmd_page, "build": cmd_build, "status": cmd_status, "cite": cmd_cite, "discover": cmd_discover}[a.cmd](a)
 
 
 if __name__ == "__main__":

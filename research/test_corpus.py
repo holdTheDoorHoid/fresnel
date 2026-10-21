@@ -230,6 +230,14 @@ class GrepAndPage(unittest.TestCase):
         rc, out = run(["page", "lss", "1890", "anything"])
         self.assertEqual(rc, 1)
 
+    def test_cite(self):
+        rc, out = run(["cite", "lhbvol1"])
+        self.assertIn("https://archive.org/details/lhbvol1", out)
+        rc, out = run(["cite", "1933"])
+        self.assertIn("LighthouseServiceBulletin_1933.pdf", out)
+        rc, out = run(["cite", "nope"])
+        self.assertEqual(rc, 1)
+
     def test_status(self):
         rc, out = run(["status"])
         self.assertIn("lhb", out)

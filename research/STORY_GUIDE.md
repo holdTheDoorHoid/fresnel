@@ -201,10 +201,11 @@ order, and stop when you have an honest story; a thin station needs only the fir
 1. **Identity and roster.** `python3 /home/hoid/Desktop/fresnel/research/roster.py <station-id>` (for example
    `us-me-portland-head`) prints the keepers the USLHS Digital Archive lists for the station: each line is
    `Name (years)` under the archive's own role heading, with our normalised role in brackets (from NARA's
-   keeper registers, via Kraig Anderson's inventory). It works from the local cache, matches the station by
-   name and position (within about 1 km; USLHS positions are only to the minute) and, when it is not sure,
-   prints the candidates instead; then use `--place <slug>` (the slug is in the candidate list) or
-   `--name "<name>" --state XX [--near lat,lon]`. `--detail N` also fetches salary and source for the first N
+   keeper registers, via Kraig Anderson's inventory). It works from the local cache and matches the station
+   to a USLHS place by name and position (a name match within about 1 km, or an exact name nobody else in the
+   state shares, with a warning when USLHS's position is far: its positions are only to the minute and a few
+   are wrong). The first line says how it matched; when it is not sure it prints the candidates instead,
+   and you use `--place <slug>` (the slug is in the candidate list) or `--name "<name>" --state XX [--near lat,lon]`. `--detail N` also fetches salary and source for the first N
    people (one request each). USLHS covers the US only; there is nothing for `ca-` stations. Compare with
    the station's LighthouseFriends page (keeper list in its "Keepers" line; facts only), New England
    Lighthouses (Jeremy D'Entremont) or Terry Pepper's Great Lakes pages where they cover it. Record every
@@ -235,11 +236,15 @@ order, and stop when you have an honest story; a thin station needs only the fir
    down it says so, and you cite the volume without a page); the Bulletin's page is the PDF page, shown
    in the grep line as `p.N`. The scan page is the viewer's image number: read the printed folio on the
    page image before writing "p. 42", or write "scan page 73".
-   **Cite these URLs exactly** (so `check_quotes.py` can find the text offline):
+   **Cite these URLs exactly** (so `check_quotes.py` can find the text offline); `corpus.py cite <identifier>`
+   (or `corpus.py cite 1933` for a Bulletin year) prints the one to use:
    - Internet Archive volumes: `https://archive.org/details/<identifier>` with the identifier grep printed
      (a `/page/n<leaf>/mode/2up` tail is fine);
-   - Lighthouse Service Bulletin: `https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_<YYYY>.pdf`
-     (`#page=N` is fine).
+   - Lighthouse Service Bulletin: the PDF's address on uslhs.org, usually
+     `https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_<YYYY>.pdf` (1925 and 1936 have
+     odd file names: use what `cite` prints; `#page=N` is fine). The Bulletin series also holds the five
+     **index** volumes (1912-17, 1918-23, 1924-29, 1930-35, 1936-39), which list each station with the
+     Bulletin pages that mention it: grep them first (`--series bulletin`) to find the right issue and page.
    Copy evidence quotes from the grep snippet exactly, OCR errors and all (line breaks and runs of spaces
    do not matter; a word hyphenated across a line is rejoined, as the checker does).
 4. **Newspapers.** `python3 /home/hoid/Desktop/fresnel/research/newspapers.py "<station name>" ["<keeper name>"]
