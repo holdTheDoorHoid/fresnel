@@ -80,16 +80,23 @@ import regions  # noqa: E402
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 
-SOURCE_ORDER = ["wikidata", "osm"]
+# Matching order: records of an earlier source start stations first, a later source joins them.
+# The US sources added 2026-10-21 (DESIGN 2.3) come after Wikidata and OSM; a source missing from a
+# list below ranks after the listed ones, then alphabetically.
+SOURCE_ORDER = ["wikidata", "osm", "lighthousefriends", "uslhs", "nrhp", "territories", "rowlett",
+                "uscg_light_list", "enc", "uslhs_passport"]
 PRECEDENCE = {
-    "name": ["wikidata", "osm"],
-    "location": ["osm", "wikidata"],
-    "region": ["wikidata", "osm"],
-    "kind": ["wikidata", "osm"],
-    "structure": ["wikidata", "osm"],
-    "charted": ["osm", "wikidata"],
-    "light_dates": ["wikidata", "osm"],
-    "other": ["wikidata", "osm"],
+    "name": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "rowlett", "nrhp"],
+    "location": ["osm", "wikidata", "territories", "lighthousefriends", "uslhs", "nrhp"],
+    "region": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
+    "kind": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
+    "structure": ["wikidata", "osm", "uslhs", "rowlett", "territories", "nrhp"],
+    "charted": ["enc", "uscg_light_list", "osm", "wikidata", "territories", "uslhs", "rowlett"],
+    "light_dates": ["wikidata", "osm", "uslhs", "rowlett", "territories", "lighthousefriends"],
+    "other": ["wikidata", "osm", "uscg_light_list", "rowlett", "territories", "uslhs", "nrhp", "lighthousefriends"],
+    "visit": ["uslhs_passport", "lighthousefriends", "uslhs", "wikidata", "osm"],
+    "access": ["lighthousefriends", "uslhs", "wikidata", "osm"],
+    "stay": ["uslhs_passport", "lighthousefriends", "wikidata", "osm"],
 }
 KIND_GROUP = {"lighthouse": "light", "range_lights": "light", "pier_light": "light", "harbor_light": "light",
               "lightship_station": "lightship_station", "lightship": "lightship",
@@ -378,6 +385,11 @@ class Rec:
             self.role = next((r for rx, r in ROLE_BY_ANCILLARY if rx.search(self.name)), "other")
         self.light = raw.get("light") or {}
         self.structure = raw.get("structure") or {}
+        # What a visitor can do, as a source says it (LighthouseFriends icons, the Society's lists):
+        # only keys the source knows are present, and a missing key never means false.
+        self.visit = raw.get("visit") or {}
+        self.stay = raw.get("stay") if isinstance(raw.get("stay"), dict) else None
+        self.access = raw.get("access") or {}
         # Weak "active" claim from Wikidata: a charted characteristic and no deactivation or end date.
         self.status_claim = self.status
         if (source == "wikidata" and self.status is None and self.light.get("characteristic")
@@ -911,6 +923,45 @@ def pick(recs: list[Rec], field: str, getter):
     return None, None
 
 
+VISIT_KEYS = ("grounds_open", "climbable", "museum", "tours", "boat_only", "passport_stamp")
+
+
+def visit_stay_access(recs: list["Rec"], visit: dict, stay: dict | None, access_note: str | None, use) -> tuple:
+    """What the sources say about visiting, staying and access (3.2), field by field: the first source
+    in PRECEDENCE["visit" / "stay" / "access"] with a value wins. A source lists only what it knows
+    (LighthouseFriends lists the icons that are true), so a missing key never overrides a value and is
+    never read as false. Returns (visit, stay, access level, access note)."""
+    for key in VISIT_KEYS:
+        if visit.get(key) is not None:
+            continue
+        val, r = pick(recs, "visit", lambda r, k=key: r.visit.get(k))
+        if val is not None:
+            visit[key] = val
+            use(r, "visit")
+    notes = []
+    for r in sorted(recs, key=lambda r: (source_rank("visit", r.source), r.key)):
+        n = r.visit.get("note")
+        if isinstance(n, str) and n and n not in notes:
+            notes.append(n)
+            use(r, "visit")
+    if notes:
+        visit["note"] = " ".join(notes)
+    got, s_rec = pick(recs, "stay", lambda r: r.stay)
+    if got:
+        stay = dict(got)
+        use(s_rec, "stay")
+    level, l_rec = pick(recs, "access", lambda r: r.access.get("level") if r.access.get("level") not in (None, "unknown") else None)
+    if level:
+        use(l_rec, "access")
+    notes = [access_note] if access_note else []
+    for r in sorted(recs, key=lambda r: (source_rank("access", r.source), r.key)):
+        n = r.access.get("note")
+        if isinstance(n, str) and n and n not in notes:
+            notes.append(n)
+            use(r, "access")
+    return visit, stay, level or "unknown", " ".join(notes) or None
+
+
 def resolve(st: Station, today: str) -> tuple[dict, dict]:
     """(the station record, a few facts for the report)."""
     # Attach order differs between a first run and a run with memory: resolve from a fixed order.
@@ -1120,6 +1171,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         site = next((l["url"] for r in recs for l in r.raw.get("links") or [] if l.get("kind") == "website"), None)
         stay = {"type": "inn", "provider": None, "url": site, "season": None,
                 "note": "Wikidata classes it as a bed and breakfast. Check with the operator before planning a stay.", "checked": None}
+    visit, stay, access_level, access_note = visit_stay_access(recs, visit, stay, access_note, use)
 
     setting = None
     if any(r.raw.get("setting") == "offshore" for r in recs):
@@ -1174,7 +1226,7 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
         "location": location, "status": status, "status_note": status_note,
         "structures": structures, "light": light, "registers": registers, "aton": aton,
         "agency": agency, "ownership": ownership or "unknown",
-        "access": {"level": "unknown", "note": access_note},
+        "access": {"level": access_level, "note": access_note},
         "staffing": staffing, "visit": visit, "stay": stay,
         "events": events, "keepers_count": None, "related": [],
         "photos": photos, "links": links, "sources": sources, "conflicts": conflicts,
