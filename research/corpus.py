@@ -723,8 +723,9 @@ def grep_volume(v, patterns, state, before, after):
     exact_rx = patterns["exact"]
     hits = scan(text, patterns["fuzzy"], patterns.get("gate"))
     merged = []
+    paged = v["series"] == "bulletin"
     for s, e in hits:
-        if merged and s - merged[-1][1] < 250:
+        if merged and s - merged[-1][1] < 250 and not (paged and "\f" in text[merged[-1][1]:s]):
             merged[-1][1] = max(merged[-1][1], e)
             merged[-1][2] += 1
         else:
@@ -762,6 +763,9 @@ def cmd_grep(a):
         if hs:
             per_vol.append((v, len(hs)))
         all_hits.extend(hs)
+    yrs = parse_years(a.years)
+    if yrs:  # inside a bound volume, keep only the reports of the years asked for
+        all_hits = [h for h in all_hits if h.get("year") is None or yrs[0] <= h["year"] <= yrs[1]]
     total = len(all_hits)
     dropped = 0
     if state and not a.all_states:

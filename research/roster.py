@@ -213,6 +213,8 @@ FIELD_MAP = {
     "keeper's quarters style": "keepers_quarters_style",
     "keeper's quarters construction": "keepers_quarters_construction",
     "other structures": "other_structures", "source": "data_source",
+    "alternate name(s)": "alternate_names", "start year": "start_year", "end year": "end_year",
+    "disposition": "disposition", "depot type": "depot_type", "tower daymark": "tower_daymark", "vessel": "vessels",
 }
 # Labels that mean "no longer lit / gone"; the first one present is kept as `discontinued`.
 DISCONTINUED_LABELS = ("year discontinued", "year deactivated", "year light discontinued", "year decommissioned",
@@ -332,7 +334,9 @@ def parse_place(page_html, slug=None):
     p["lat"], p["lon"] = signed_latlon(p.get("lat_raw"), p.get("lon_raw"), p.get("state_name"))
     p["existing"] = yes_no(p.get("existing"))
     p["open_to_public"] = yes_no(p.get("open_to_public")) if "open_to_public" in p else None
-    p["established"] = to_year(p.get("established"))
+    p["start_year"] = to_year(p.get("start_year")) if "start_year" in p else None
+    p["end_year"] = to_year(p.get("end_year")) if "end_year" in p else None
+    p["established"] = to_year(p.get("established")) or p["start_year"]
     p["tower_established"] = to_year(p.get("tower_established")) if "tower_established" in p else None
     p["automated"] = to_year(p.get("automated")) if "automated" in p else None
     p["original_lens_year"] = to_year(p.get("original_lens_year")) if "original_lens_year" in p else None
@@ -341,12 +345,13 @@ def parse_place(page_html, slug=None):
     for key in ("active_aton", "private_aid", "fog_signal_building", "keepers_quarters"):
         if key in p:
             p[key] = yes_no(p[key])
-    p["discontinued"] = next((to_year(f[l]) for l in DISCONTINUED_LABELS if l in f and to_year(f[l])), None)
+    p["discontinued"] = next((to_year(f[l]) for l in DISCONTINUED_LABELS if l in f and to_year(f[l])), None) or p["end_year"]
     p["demolished"] = next((to_year(f[l]) for l in DEMOLISHED_LABELS if l in f and to_year(f[l])), None)
     known = set(FIELD_MAP) | set(DISCONTINUED_LABELS) | set(DEMOLISHED_LABELS)
     p["_unmapped"] = sorted(k for k in f if k not in known and k not in
                             ("download", "file type", "photo date", "photo credit", "photo courtesy of",
-                             "entered by", "entered date", "image source", "collection / donor"))
+                             "entered by", "entered date", "image source", "collection / donor", "comments",
+                             "non-existing (more info.)"))
     p["url"] = "%s/places/%s" % (BASE, urllib.parse.quote(slug)) if slug else None
     return {k: v for k, v in p.items() if v is not None}
 
@@ -792,7 +797,7 @@ def resolve_station(station_id, places):
         region = (rec.get("region") or region).lower()
     cands = rank_candidates(places, names, state=region.upper(), near=near, kinds=kinds)
     if not cands:
-        return None, cands, (note or "") + " ; no USLHS place matches name/state"
+        return None, cands, "; ".join(x for x in (note, "no USLHS place matches the name and state") if x)
     top = cands[0]
     runner = cands[1] if len(cands) > 1 else None
     sure_name = top[1] >= 0.85
