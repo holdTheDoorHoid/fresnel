@@ -7,10 +7,10 @@
  "credit": "U.S. Lighthouse Society Digital Archive (stations, years, vessels; facts with a link) and the Light Lists of the Light-House Board and Lighthouse Service (public domain; positions)",
  "notes": {
   "stations": 139,
-  "placed": 42,
-  "stated": 41,
-  "computed": 1,
-  "unplaced": 97,
+  "placed": 44,
+  "stated": 42,
+  "computed": 2,
+  "unplaced": 95,
   "entries_not_tied_to_a_station": [],
   "lists": {
    "ll1893": {
@@ -39,6 +39,13 @@
     "year": 1928,
     "id": "lightlist00unkngoog",
     "url": "https://archive.org/details/lightlist00unkngoog",
+    "bearings": "true"
+   },
+   "ll1934": {
+    "title": "Atlantic Coast of the United States, Local Light and Buoy List, New England Coast, 1934 (Lighthouse Service)",
+    "year": 1934,
+    "id": "atlanticcoastofu00unit",
+    "url": "https://archive.org/details/atlanticcoastofu00unit",
     "bearings": "true"
    },
    "lhb1895": {
@@ -9308,8 +9315,8 @@
    "country": "US",
    "region": "ME",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 43.53333,
+   "lon": -70.1,
    "precision": "approximate",
    "kind": "lightship_station",
    "kind_raw": "Lightship Station",
@@ -9412,7 +9419,16 @@
     "location_text": null,
     "light_list_source": null,
     "region_basis": null,
-    "unplaced_reason": "no Light List, Lighthouse Board report or Bulletin entry read gives a position or a bearing and distance for this station"
+    "position_from": "light_list",
+    "position_note": "Position printed in the Atlantic Coast of the United States, Local Light and Buoy List, New England Coast, 1934 (Lighthouse Service), page 20, entry 81: Portland Lightship, 43 32 N, 70 06 W (to the minute). Location as printed: In 150 feet, off entrance to Portland Harbor.",
+    "position": {
+     "basis": "stated",
+     "list": "ll1934",
+     "page": 20,
+     "entry": 81,
+     "also": [],
+     "tie": "name and year (the entry carries no vessel number)"
+    }
    }
   },
   {
@@ -11280,8 +11296,8 @@
    "country": "US",
    "region": "MA",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 41.54609,
+   "lon": -69.98507,
    "precision": "approximate",
    "kind": "lightship_station",
    "kind_raw": "Lightship Station",
@@ -11372,7 +11388,12 @@
     "location_text": null,
     "light_list_source": null,
     "region_basis": null,
-    "unplaced_reason": "no Light List, Lighthouse Board report or Bulletin entry read gives a position or a bearing and distance for this station"
+    "position_from": "computed",
+    "position_note": "Computed: 0.9 nautical miles from Monomoy Point Light-House (41.55944, -69.99417; Light List 1900, page 42, entry 144: 41 33 34 N, 69 59 39 W), true bearing 153 degrees as printed: 153.0 degrees true. Source text, Atlantic Coast of the United States, Local Light and Buoy List, New England Coast, 1934 (Lighthouse Service): “Stone Horse Shoal Lightship (no. 249), In 84 feet, 0.9 mile 153° from Monomoy Point Unused Lighthouse. 41 33 69 59”",
+    "position": {
+     "basis": "computed",
+     "list": "ll1934"
+    }
    }
   },
   {

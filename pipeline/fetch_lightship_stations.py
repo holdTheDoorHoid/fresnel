@@ -61,6 +61,8 @@ LISTS = {
                "id": "lightlist00unkngoog", "url": "https://archive.org/details/lightlist00unkngoog", "bearings": "true"},
     "gl1928": {"title": "Light List, Great Lakes, United States and Canada, 1928 edition (Lighthouse Service)", "year": 1928,
                "id": "lightlist00unkngoog", "url": "https://archive.org/details/lightlist00unkngoog", "bearings": "true"},
+    "ll1934": {"title": "Atlantic Coast of the United States, Local Light and Buoy List, New England Coast, 1934 (Lighthouse Service)", "year": 1934,
+               "id": "atlanticcoastofu00unit", "url": "https://archive.org/details/atlanticcoastofu00unit", "bearings": "true"},
     "lhb1895": {"title": "Annual Report of the Light-House Board for the fiscal year 1895", "year": 1895,
                 "id": "annualreportlig00boargoog", "url": "https://archive.org/details/annualreportlig00boargoog", "bearings": "true"},
 }
@@ -162,8 +164,10 @@ def stated_position(e: dict) -> dict:
     L = LISTS[e["list"]]
     return {"lat": round(lat, 5), "lon": round(lon, 5), "basis": "stated", "list": e["list"], "page": e["page"], "entry": e["number"],
             "note": (f"Position printed in the {L['title']}, page {e['page']}, entry {e['number']}: {e['name']}, "
-                     f"{e['lat'][0]} {e['lat'][1]:02d} {e['lat'][2]:02d} N, {e['lon'][0]} {e['lon'][1]:02d} {e['lon'][2]:02d} W"
-                     f"{' (the seconds are in brackets: the position varies somewhat)' if any(e.get('approx', [])) else ''}. "
+                     + (f"{e['lat'][0]} {e['lat'][1]:02d} N, {e['lon'][0]} {e['lon'][1]:02d} W (to the minute)" if e.get("to_minute")
+                        else f"{e['lat'][0]} {e['lat'][1]:02d} {e['lat'][2]:02d} N, {e['lon'][0]} {e['lon'][1]:02d} {e['lon'][2]:02d} W"
+                        f"{' (the seconds are in brackets: the position varies somewhat)' if any(e.get('approx', [])) else ''}") + ". "
+                     
                      f"Location as printed: {e['location']}")}
 
 
