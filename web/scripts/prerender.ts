@@ -1,13 +1,17 @@
 /**
- * Prerender one static page per station, plus the About and Credits pages' generated parts.
+ * Prerender one static page per station and per keeper, plus the About, Credits and Keepers pages'
+ * generated parts.
  * Runs after `vite build` (see package.json "build"): node scripts/prerender.ts
  *
  * Input:  dist/station.html (template with hashed asset links, from Vite)
  *         dist/data/s/<id>.json, dist/data/meta.json, dist/data/redirects.json
  *         (from pipeline/build_site_data.py, copied from public/data by Vite)
- * Output: dist/s/<id>/index.html; a redirecting page at the address of each station the merge
- *         folded into another; the key and counts in dist/about/index.html; the sources table
- *         in dist/credits/index.html; dist/sitemap.xml
+ *         dist/person.html (template), dist/data/k/index.json and dist/data/k/p/<L>.json (the keepers
+ *         index, DESIGN.md 3.6; the p/ files are read here and then deleted, not published)
+ * Output: dist/s/<id>/index.html; dist/k/<person id>/index.html; a redirecting page at the address
+ *         of each station the merge folded into another; the key and counts in dist/about/index.html;
+ *         the sources table in dist/credits/index.html; the explanation in dist/keepers/index.html;
+ *         dist/sitemap.xml
  *
  * Plain string templates and synchronous file writes: ~3,000 pages take a few seconds.
  */
@@ -20,6 +24,8 @@ import type { RedirectsFile } from '../src/lib/redirects.ts';
 import { isSafeStoryHtml } from '../src/lib/html.ts';
 import type { Meta, SourceInfo, StationRecord } from '../src/lib/types.ts';
 import type { RenderContext } from '../src/render/common.ts';
+import { isPersonId, chunkName, type KeeperManifest, type PersonRecord } from '../src/lib/people.ts';
+import { renderKeepersMain, renderPersonHead, renderPersonMain } from '../src/render/people.ts';
 import { renderRedirectPage } from '../src/render/redirect.ts';
 import { countsLine, fixtureBanner, mapKey, sourcesRows, takedownEmail } from '../src/render/site.ts';
 import { renderStationHead, renderStationMain } from '../src/render/station.ts';
@@ -129,16 +135,58 @@ fill(join(dist, 'credits', 'index.html'), {
   '<!--fr:built-->': escapeHtml(`Data built ${meta.built.slice(0, 10)}.`),
 });
 
+/* ---------- Keepers: the index page and one page per person (DESIGN.md 3.6) ---------- */
+let personPages = 0;
+const personSitemap: string[] = [];
+const keeperManifestPath = join(dataDir, 'k', 'index.json');
+const keeperManifest: KeeperManifest = existsSync(keeperManifestPath)
+  ? (JSON.parse(readFileSync(keeperManifestPath, 'utf8')) as KeeperManifest)
+  : { built: meta.built, total: 0, multi: 0, withheld: 0, letters: {}, regions: [], roles: [], stations: 0 };
+fill(join(dist, 'keepers', 'index.html'), {
+  '<!--fr:keepers-->': squeeze(renderKeepersMain(keeperManifest, ctx).value),
+  '<!--fr:banner-->': banner,
+});
+if (existsSync(join(dist, 'person.html'))) {
+  const ptemplate = readFileSync(join(dist, 'person.html'), 'utf8');
+  for (const mark of ['<!--fr:head-->', '<!--fr:main-->', '<!--fr:banner-->']) {
+    if (!ptemplate.includes(mark)) fail(`person.html template has no ${mark} placeholder`);
+  }
+  const [pBeforeHead, pAfterHead] = ptemplate.split('<!--fr:head-->') as [string, string];
+  const [pHeadToBanner, pAfterBanner] = pAfterHead.split('<!--fr:banner-->') as [string, string];
+  const [pBannerToMain, pAfterMain] = pAfterBanner.split('<!--fr:main-->') as [string, string];
+  const kDir = join(dist, 'k');
+  rmSync(kDir, { recursive: true, force: true });
+  mkdirSync(kDir);
+  for (const letter of Object.keys(keeperManifest.letters)) {
+    const chunkPath = join(dataDir, 'k', 'p', `${chunkName(letter)}.json`);
+    if (!existsSync(chunkPath)) fail(`${chunkPath} is missing (listed in k/index.json)`);
+    const people = JSON.parse(readFileSync(chunkPath, 'utf8')) as Record<string, PersonRecord>;
+    for (const [id, p] of Object.entries(people)) {
+      if (!isPersonId(id) || p.id !== id) {
+        console.warn(`prerender: skipped person ${JSON.stringify(id)}: not a valid person id`);
+        continue;
+      }
+      const page = squeeze(pBeforeHead + renderPersonHead(p, ctx).value + pHeadToBanner + banner + pBannerToMain + renderPersonMain(p, ctx).value + pAfterMain);
+      mkdirSync(join(kDir, id));
+      writeFileSync(join(kDir, id, 'index.html'), page);
+      personPages++;
+      if (!p.fixture) personSitemap.push(`<url><loc>${escapeHtml(`${ctx.siteUrl}k/${id}/`)}</loc></url>`);
+    }
+  }
+  rmSync(join(dataDir, 'k', 'p'), { recursive: true, force: true }); // read here; the browser never needs it
+  rmSync(join(dist, 'person.html'));
+}
+
 /* ---------- Sitemap ---------- */
-const fixed = ['', 'about/', 'credits/'].map((p) => `<url><loc>${escapeHtml(ctx.siteUrl + p)}</loc></url>`);
+const fixed = ['', 'about/', 'credits/', 'keepers/'].map((p) => `<url><loc>${escapeHtml(ctx.siteUrl + p)}</loc></url>`);
 writeFileSync(
   join(dist, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...fixed, ...sitemap].join('\n')}\n</urlset>\n`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...fixed, ...sitemap, ...personSitemap].join('\n')}\n</urlset>\n`,
 );
 
 const ms = performance.now() - t0;
 console.log(
-  `prerender: ${pages} station pages and ${redirectPages} redirects in ${(ms / 1000).toFixed(2)} s` +
+  `prerender: ${pages} station pages, ${personPages} keeper pages and ${redirectPages} redirects in ${(ms / 1000).toFixed(2)} s` +
     (meta.fixtures ? ' (FIXTURE DATA: station pages are marked noindex and left out of the sitemap)' : '') +
     (unsafeStories ? `; ${unsafeStories} unsafe stories replaced by a notice` : ''),
 );

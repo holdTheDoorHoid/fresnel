@@ -506,6 +506,11 @@ ROLE_ORDER = ["keeper", "head keeper", "first assistant", "second assistant", "t
 LETTERS = [chr(c) for c in range(ord("A"), ord("Z") + 1)] + ["#"]
 
 
+def chunk_name(letter: str) -> str:
+    """File name (without .json) of a surname-initial chunk: the letter, or `other` for '#'."""
+    return "other" if letter == "#" else letter
+
+
 def yr(v: object) -> int | None:
     """The year of a year number or a 'YYYY' / 'YYYY-MM-DD' string."""
     if isinstance(v, bool):
@@ -725,6 +730,8 @@ class KeeperData:
                         out_s["mentioned"] = True
                 stints.append(out_s)
             site_people[pid] = {**{k: v for k, v in p.items() if k not in ("stints", "possibly")}, "stints": stints}
+            if p.get("source") == "research" and any(stations.get(s.get("station"), {}).get("fixture") for s in stints):
+                site_people[pid]["fixture"] = True
 
         # hints, with enough to read without opening the other page
         def brief(oid: str) -> dict:
@@ -776,8 +783,8 @@ class KeeperData:
                 continue
             letters[letter] = len(rows)
             chunk = [[r[1], r[2], r[3], r[4], r[5], [roles.index(c) for c in r[6]], r[7]] for r in rows]
-            _write_compact(base / "i" / f"{letter}.json", {"letter": letter, "rows": chunk})
-            _write_compact(base / "p" / f"{letter}.json", dict(sorted(pages_by_letter[letter].items())))
+            _write_compact(base / "i" / f"{chunk_name(letter)}.json", {"letter": letter, "rows": chunk})
+            _write_compact(base / "p" / f"{chunk_name(letter)}.json", dict(sorted(pages_by_letter[letter].items())))
         _write_compact(base / "stations.json", {"stations": station_list})
         reg_rows = [{"code": c, "name": regions.region_name(c), "n": n} for c, n in
                     sorted(region_count.items(), key=lambda kv: regions.region_name(kv[0]))]
@@ -803,3 +810,13 @@ def _write_compact(path: Path, obj: object) -> None:
 def load_report(path: Path | None) -> dict:
     rec = _read_json(path) if path and path.is_file() else None
     return rec if isinstance(rec, dict) else {}
+
+
+def load_research_dir(directory: Path | None) -> dict[str, dict]:
+    """data/research/<station id>.json files that parse, keyed by station id."""
+    out: dict[str, dict] = {}
+    for path in sorted(directory.glob("*.json")) if directory and directory.is_dir() else []:
+        rec = _read_json(path)
+        if isinstance(rec, dict):
+            out[path.stem] = rec
+    return out

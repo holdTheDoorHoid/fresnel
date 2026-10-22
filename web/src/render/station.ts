@@ -55,6 +55,7 @@ import {
   type RenderContext,
 } from './common.ts';
 import { keepersTable, researchSourcesList } from './keepers.ts';
+import { archiveRosterBlock, archiveRosterCredit } from './people.ts';
 import { nightSection, reachLine } from './night.ts';
 import { renderTimeline } from './timeline.ts';
 
@@ -386,11 +387,13 @@ export function historySection(r: StationRecord, ctx: RenderContext): SafeHtml {
 /* ---------- Keepers ---------- */
 
 export function keepersSection(r: StationRecord, ctx: RenderContext): SafeHtml {
-  const table = keepersTable(r.keepers, r.research_sources);
-  if (!table) {
-    return html`<p class="muted">No roster of keepers has been compiled for this station yet. Know a keeper’s name and years, with a source? <a href="${editIssueUrl(r, ctx)}">Tell us</a>.</p>`;
+  const table = keepersTable(r.keepers, r.research_sources, ctx);
+  const archive = archiveRosterBlock(r, ctx);
+  if (table) {
+    return html`<p><span class="tag tag-checked">Checked</span> Everyone the sources name as keeping this ${r.kind === 'life_saving_station' ? 'station' : 'light'}, with the role as the source gives it. Each line cites the sources listed under <a href="#research-sources">Research sources</a>. A name with a page links to it.</p>${table}${archive ?? ''}`;
   }
-  return html`<p>Everyone the sources name as keeping this ${r.kind === 'life_saving_station' ? 'station' : 'light'}, with the role as the source gives it. Each line cites the sources listed under <a href="#research-sources">Research sources</a>.</p>${table}`;
+  if (archive) return archive;
+  return html`<p class="muted">No roster of keepers has been compiled for this station yet. Know a keeper’s name and years, with a source? <a href="${editIssueUrl(r, ctx)}">Tell us</a>.</p>`;
 }
 
 /* ---------- Photos ---------- */
@@ -523,6 +526,7 @@ export function sourcesSection(r: StationRecord, ctx: RenderContext): SafeHtml {
   const links = (r.links ?? []).filter((l) => l && safeUrl(l.url));
   const photos = (r.photos ?? []).filter((p) => p && (p.credit || p.source_url));
   const research = researchSourcesList(r.research_sources);
+  const rosterCredit = archiveRosterCredit(r, ctx);
   return html`
     <h3 class="h-small" id="data-sources">Where the facts come from</h3>
     ${bySource.size
@@ -537,6 +541,7 @@ export function sourcesSection(r: StationRecord, ctx: RenderContext): SafeHtml {
         })}</ol>`
       : html`<p class="muted">No sources recorded.</p>`}
     ${research ? html`<h3 class="h-small" id="research-sources">Research sources</h3><p class="fine">The sources the history’s research and the keepers roster cite, by number.</p>${research}` : ''}
+    ${rosterCredit ?? ''}
     ${photos.length ? html`<h3 class="h-small">Photo credits</h3><ul class="plain credits-list">${photos.map((p) => html`<li>${p.caption ? html`${p.caption}: ` : ''}${p.credit ?? 'credit unknown'}${p.license ? ` (${p.license})` : ''}${safeUrl(p.source_url) ? html` · ${externalLink(p.source_url, 'source')}` : ''}</li>`)}</ul>` : ''}
     ${links.length ? html`<h3 class="h-small">More about this station elsewhere</h3><ul class="links">${links.map((l) => html`<li>${externalLink(l.url, l.label || l.url)}</li>`)}</ul>` : ''}
     <p class="fine">Fresnel takes facts (places, dates, numbers, names) from these sources, credits them here, and writes its own words. See <a href="${ctx.base}credits/">all sources and licences</a>.</p>`;
@@ -565,7 +570,7 @@ export const SECTIONS: readonly StationSection[] = [
   { id: 'night', title: 'The light at night', render: nightSection },
   { id: 'timeline', title: 'Timeline', render: timelineSection },
   { id: 'history', title: 'History', render: historySection },
-  { id: 'keepers', title: 'Keepers', render: (r, ctx) => (r.kind === 'lightship_station' && !r.keepers?.length ? null : keepersSection(r, ctx)) },
+  { id: 'keepers', title: 'Keepers', render: (r, ctx) => (r.kind === 'lightship_station' && !r.keepers?.length && !r.archive_roster?.places?.length ? null : keepersSection(r, ctx)) },
   { id: 'photos', title: 'Photos', render: photosSection },
   { id: 'conflicts', title: 'Where sources disagree', render: conflictsSection },
   { id: 'related', title: 'Related stations', render: relatedSection },

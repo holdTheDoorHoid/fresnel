@@ -270,3 +270,26 @@ a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
   .night-ranges > div { grid-template-columns: minmax(0, 1fr); }
   .night-map, .night-map-wrap:empty { height: 260px; min-height: 260px; }
 }
+
+/* ---------- Keepers index: rosters and people's pages (DESIGN.md 3.6) ---------- */
+.tag {
+  display: inline-block; padding: 0 8px; margin-right: 4px; border-radius: 999px; vertical-align: 1px;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2);
+  font: 800 0.72rem/1.6 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+}
+.tag-checked { border-color: var(--ok-ink); color: var(--ok-ink); }
+.tag-unchecked { border-style: dashed; color: var(--muted); }
+.roster-source { margin-top: 0; }
+.roster-link { margin: 0 0 6px; }
+.roster-note { margin-top: 14px; }
+.keepers th .sub, .keepers td .sub { font-weight: 400; }
+.keepers-archive tbody th { font-weight: 650; }
+.person-page .p-head h1 { max-width: 24ch; }
+.p-summary { margin: 4px 0 0; font-size: 1.1rem; color: var(--ink-2); max-width: 60ch; }
+.p-main { max-width: 900px; }
+.possibly { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.possibly li { padding: 10px 14px; border: 1px dashed var(--line-strong); border-radius: 10px; background: var(--surface); }
+.possibly .p-lead { font-weight: 700; color: var(--ink-2); }
+.possibly .sub { margin-top: 2px; }
+.histories .sub { font-size: 0.875rem; }
+.keepers-stints .cites { font-size: 0.9rem; }

@@ -6,6 +6,7 @@
  */
 import { html, type SafeHtml } from '../lib/html.ts';
 import { formatDate, yearOf, yearSpan } from '../lib/format.ts';
+import { isPersonId } from '../lib/people.ts';
 import type { Keeper, ResearchSource } from '../lib/types.ts';
 import { externalLink } from './common.ts';
 
@@ -27,8 +28,11 @@ function citeLinks(cite: readonly number[] | null | undefined, known: Set<number
   return html`${nums.map((n, i) => html`${i ? ', ' : ''}${known.has(n) ? html`<a href="#${researchSourceId(n)}" aria-label="Source ${n}">[${n}]</a>` : html`[${n}]`}`)}`;
 }
 
-/** The roster table, or null when there is no roster. */
-export function keepersTable(keepers: readonly Keeper[] | null | undefined, sources: readonly ResearchSource[] | null | undefined): SafeHtml | null {
+/**
+ * The roster table, or null when there is no roster. With `ctx`, a name whose line carries a
+ * `person` (the pipeline keeps it only for people who have a page) links to /k/<id>/.
+ */
+export function keepersTable(keepers: readonly Keeper[] | null | undefined, sources: readonly ResearchSource[] | null | undefined, ctx?: { base: string }): SafeHtml | null {
   const rows = sortKeepers((keepers ?? []).filter((k) => k && typeof k.name === 'string' && k.name.trim()));
   if (!rows.length) return null;
   const known = new Set((sources ?? []).map((s) => s.n));
@@ -38,7 +42,7 @@ export function keepersTable(keepers: readonly Keeper[] | null | undefined, sour
       <thead><tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Years</th><th scope="col">Note</th><th scope="col">Sources</th></tr></thead>
       <tbody>${rows.map(
         (k) => html`<tr>
-          <th scope="row" data-label="Name">${k.name}</th>
+          <th scope="row" data-label="Name">${ctx && k.person && isPersonId(k.person) ? html`<a href="${ctx.base}k/${k.person}/">${k.name}</a>` : k.name}</th>
           <td data-label="Role">${k.role || html`<span class="muted">Not given</span>`}</td>
           <td data-label="Years" class="years">${yearSpan(k.from, k.to, k.from_approx === true, k.to_approx === true)}</td>
           <td data-label="Note">${k.note || ''}</td>

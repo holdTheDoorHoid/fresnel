@@ -8,7 +8,7 @@ The first tower was lit in 1791 and replaced by a brick tower in 1855.[^1][^2]
 
 ## The keepers
 
-On most stations of the period, keepers trimmed the wicks every few hours through the night.[^3] At Example Head, the first keeper served for four years.[^2]
+On most stations of the period, keepers trimmed the wicks every few hours through the night.[^3] At Example Head, the first keeper served for four years.[^2] Samuel Sample became head keeper in 1855, when the brick tower replaced the first.[^2]
 
 ## Today
 
