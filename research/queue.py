@@ -106,8 +106,19 @@ def weight(s):
     return len({x.get("source") for x in s.get("sources") or []}) * 10 + len(s.get("links") or [])
 
 
+def queued_ids():
+    """Ids already handed to a batch (research/.work/batch_*.txt), published or still running: a station in a
+    running batch has no story in data/stories yet, and must not be queued twice."""
+    out = set()
+    for f in glob.glob(os.path.join(ROOT, "research", ".work", "batch_*.txt")):
+        with open(f, encoding="utf-8") as fh:
+            out |= {l.strip() for l in fh if l.strip() and not l.startswith("#")}
+    return out
+
+
 def queue(country=None, region_codes=None):
-    todo = [s for s in stations(country, region_codes) if not has_story(s["id"])]
+    taken = queued_ids()
+    todo = [s for s in stations(country, region_codes) if not has_story(s["id"]) and s["id"] not in taken]
     todo.sort(key=lambda s: (tier(s), -weight(s), s["id"]))
     return todo
 

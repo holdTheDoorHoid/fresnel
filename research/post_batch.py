@@ -14,7 +14,7 @@ the build and tests read all of it). Steps, stopping at the first failure:
   4. pipeline/validate.py, the pipeline tests, build_site_data, the web type check, tests and build
   5. with --publish: git add data/stories data/research, commit, push
 Exit status 0 only when every step passed."""
-import argparse, glob, json, os, re, subprocess, sys
+import argparse, glob, json, os, re, shutil, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -46,11 +46,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("idfiles", nargs="+")
     ap.add_argument("--publish", metavar="MESSAGE")
+    ap.add_argument("--staging", action="append", default=[], metavar="DIR",
+                    help="a batch's staging folder (stories/, research/): its files for the batch ids are copied into data/ first")
     a = ap.parse_args()
     ids = []
     for f in a.idfiles:
         ids += [l.strip() for l in open(f, encoding="utf-8") if l.strip() and not l.startswith("#")]
     ok = True
+    for d in a.staging:
+        n = 0
+        for sid in ids:
+            for sub, ext in (("stories", ".md"), ("research", ".json")):
+                src = os.path.join(d, sub, sid + ext)
+                if os.path.exists(src):
+                    os.makedirs(os.path.join(ROOT, "data", sub), exist_ok=True)
+                    shutil.copyfile(src, os.path.join(ROOT, "data", sub, sid + ext))
+                    n += 1
+        print(f"0. copied {n} files from {d}")
 
     print("1. reconcile"); run(["python3", "research/reconcile.py"], quiet=False)
 

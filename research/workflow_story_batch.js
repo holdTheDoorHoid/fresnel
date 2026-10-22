@@ -7,8 +7,10 @@ export const meta = {
   ],
 }
 
-// args: { today: 'YYYY-MM-DD', model: 'sonnet' | 'haiku', ids: [...], group: 1 }
+// args: { today: 'YYYY-MM-DD', model: 'sonnet' | 'haiku', ids: [...], group: 1, out: '<staging folder>' }
+// `out` keeps this batch's files apart from other running batches; research/post_batch.py --staging copies them in.
 const ROOT = '/home/hoid/Desktop/fresnel'
+const OUT = args.out || `${ROOT}/data`
 const today = args.today
 const ids = args.ids
 const MODEL = args.model || 'haiku'
@@ -46,14 +48,14 @@ ${COMMON}
 
 Stations: ${g.join(', ')}. Compact briefs of our records (they may be wrong): \`cd ${ROOT} && python3 research/queue.py --briefs ${g.join(' ')}\`
 
-For each station: research it in the guide's order, write \`${ROOT}/data/stories/<id>.md\` and \`${ROOT}/data/research/<id>.json\`, then run \`python3 research/check_quotes.py <id> --verbose\` and fix any missing quote before moving on. Length follows the evidence (a thin station gets a short honest story). ${g.length > 1 ? `**Finish all ${g.length} before you return.**` : ''} Write only those files. Return one row per station.`
+For each station: research it in the guide's order, write \`${OUT}/stories/<id>.md\` and \`${OUT}/research/<id>.json\` (this batch's folder; create it if needed; not data/stories unless that is the folder named here), then run \`python3 research/check_quotes.py --dir ${OUT} <id> --verbose\` and fix any missing quote before moving on. Length follows the evidence (a thin station gets a short honest story). ${g.length > 1 ? `**Finish all ${g.length} before you return.**` : ''} Write only those files. Return one row per station.`
 
-const checkPrompt = (g) => `You are the independent fact-checker for ${g.length === 1 ? 'one Fresnel story' : g.length + ' Fresnel stories'} (repo ${ROOT}). Today is ${today}. Stations: ${g.join(', ')}; files \`data/stories/<id>.md\` and \`data/research/<id>.json\`.
+const checkPrompt = (g) => `You are the independent fact-checker for ${g.length === 1 ? 'one Fresnel story' : g.length + ' Fresnel stories'} (repo ${ROOT}). Today is ${today}. Stations: ${g.join(', ')}; files \`${OUT}/stories/<id>.md\` and \`${OUT}/research/<id>.json\`.
 ${COMMON}
 
 For each station:
 1. If either file is missing, verdict "fail" and move on. Confirm the story is about this station.
-2. \`cd ${ROOT} && python3 research/check_quotes.py <id> --verbose\`. For each missing quote, find the real wording at its source (\`research/fetch_text.py\`, \`research/corpus.py grep\`, a cached newspaper page); replace it, or remove the claim.
+2. \`cd ${ROOT} && python3 research/check_quotes.py --dir ${OUT} <id> --verbose\`. For each missing quote, find the real wording at its source (\`research/fetch_text.py\`, \`research/corpus.py grep\`, a cached newspaper page); replace it, or remove the claim.
 3. The quote script only proves each quote is somewhere in its source. **Read the story sentence by sentence against its evidence and sources**: numbers, names, dates, page numbers and meaning must match. Spot-check at least five quotes in the sources yourself, and read the page image (\`corpus.py page\`) for any name or date the researcher matched by column position in an OCR'd table. Fix or remove anything unsupported.
 4. Check every item in the guide's "Mistakes the pilot found": disagreements stated, no unsourced details, Wikipedia not cited as a source, second-hand quotes footnoted to the page actually read, fiscal years, same-name stations, people linked only when a source connects them, no first person.
 5. **Atmosphere audit:** for every vivid sentence ask "which footnote says this happened here?". Remove or reframe anything imagined, any guessed feeling, general context written as if local, and the guide's banned phrases.
