@@ -147,14 +147,15 @@ def is_caps_header(line: str) -> bool:
 
 
 def is_numeric_line(line: str) -> bool:
-    """A coordinate or a fragment of one: at most three short tokens, mostly digits ("44 48 40", "6658 5(",
-    "00 iSS 50"), no word of three letters or more except a damaged number."""
+    """A coordinate or a fragment of one: at most three short tokens, at least half of them holding a digit ("44 48 40",
+    "6658 5(", "00 iSS 50", ".50"), and no word of three letters or more."""
     toks = line.split()
-    if not toks or len(toks) > 3 or any(len(t) > 4 for t in toks):
+    if not toks or len(toks) > 3 or any(len(t) > 5 for t in toks):
         return False
-    if sum(bool(re.fullmatch(r"\d{1,4}", t)) for t in toks) * 2 < len(toks):
+    with_digit = sum(any(ch.isdigit() for ch in t) for t in toks)
+    if with_digit * 2 < len(toks) or sum(ch.isalpha() for ch in line) > 4:
         return False
-    return sum(ch.isalpha() for ch in line) <= 4 and any(ch.isdigit() for ch in line)
+    return with_digit >= 1
 
 
 def tokens_of(line: str) -> list:
@@ -234,12 +235,12 @@ class Row:
     footnote: str | None = None
     block_k: int = 0
     pooled: bool = False
+    state_inferred: bool = False
 
 
 def clean_name(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     s = re.sub(r"[\s.,:;_\-'\"«»¬•|\\/*]+$", "", s).strip()           # dot leaders and OCR dust at the end
-    s = re.sub(r"\s+[a-e]$", "", s)                                     # a footnote mark ("Coney Island c")
     s = re.sub(r"\s*\.{2,}.*$", "", s)
     s = re.sub(r"^[\W_]+", "", s)
     return s.strip()
@@ -247,11 +248,12 @@ def clean_name(s: str) -> str:
 
 def split_mark(raw: str) -> tuple[str, str | None]:
     """"Bolinas Bay b" -> ("Bolinas Bay", "b"); "Indian River Inlet®" -> ("Indian River Inlet", "*"): the footnote
-    mark the table prints after a name (a letter, or a symbol the OCR reads for the first footnote) is taken off."""
+    mark the table prints after a name (a letter, or a symbol the OCR reads for the first footnote) is taken off.
+    A single letter after a space is a mark whatever letter the OCR made of it (b, t, J, l)."""
     s = re.sub(r"\s+", " ", raw).strip()
     mark = None
-    m = re.search(r"(?:^|[\s.,_\-\"'\u2018\u2019]*)([a-g])[\s.,_]*$", s)
-    if m and re.search(r"[A-Za-z]{3}", s[:m.start(1)]) and (m.start(1) > 0 and s[m.start(1) - 1] in " .,_-\"'"):
+    m = re.search(r"[\s.,_\-\"'\u2018\u2019]+([A-Za-z])[\s.,_]*$", s)
+    if m and re.search(r"[A-Za-z]{3}", s[:m.start(1)]):
         mark = m.group(1)
         s = s[:m.start(1)]
     elif re.search(r"[\u00ae\u00a9\u00ab\u00b0*\u2020\u2021\u00a7]", s):
@@ -294,23 +296,56 @@ def triples_of(toks: list) -> list[tuple] | None:
     return [tuple(toks[i:i + 3]) for i in range(0, len(toks), 3)]
 
 
-def read_block(district: int | None, names: list[str], states: list[str], locs: list[str], toks: list,
-               prev_state: str | None, state_of_ditto: str | None) -> tuple[list[Row], str | None]:
-    """One block -> rows. `prev_state` is the state to give a "do" cell at the top of the block."""
-    k = len(states)
-    rows: list[Row] = []
+def pair_names_states(cur: list[Cell]) -> tuple[list[tuple[str, str | None]], str | None]:
+    """The (name, state cell) pairs of a block's text and state cells, in order. When names and states come in
+    two runs (or one pair at a time) the k-th name goes with the k-th state; when the counts differ but every state
+    cell follows a name directly (name, state, name, state), a name with no state cell after it is a row whose
+    state the OCR dropped. Returns (pairs, problem)."""
+    last = max(i for i, c in enumerate(cur) if c.kind == "state")
+    seq = [c for c in cur[:last + 1] if c.kind in ("text", "state")]
+    names = [c for c in seq if c.kind == "text"]
+    states = [c for c in seq if c.kind == "state"]
+    if len(names) == len(states):
+        return [(n.text, st.state) for n, st in zip(names, states)], None
+    pairs: list[tuple[str, str | None]] = []
+    for idx, c in enumerate(seq):
+        if c.kind == "text":
+            nxt = seq[idx + 1] if idx + 1 < len(seq) else None
+            pairs.append((c.text, nxt.state if nxt is not None and nxt.kind == "state" else None))
+        elif idx == 0 or seq[idx - 1].kind != "text":
+            return [], f"{len(names)} names but {len(states)} states"      # a state cell with no name before it
+    return pairs, None
+
+
+def resolve_states(cells: list[str | None], prev_state: str | None) -> tuple[list[str | None], list[bool], str | None]:
+    """State cells -> states: "do" repeats the state above; a missing cell (None) takes the state above when the next
+    explicit state is the same or a "do", else stays None (unknown)."""
+    out: list[str | None] = []
+    inferred: list[bool] = []
     cur = prev_state
-    resolved = []
-    for s in states:
-        if s == DITTO:
-            resolved.append(cur)
+    for i, cell in enumerate(cells):
+        if cell is None:
+            nxt = next((c for c in cells[i + 1:] if c is not None), None)
+            keep = cur is not None and (nxt == DITTO or nxt == cur or nxt is None)
+            out.append(cur if keep else None)
+            inferred.append(True)
+        elif cell == DITTO:
+            out.append(cur)
+            inferred.append(False)
         else:
-            cur = s
-            resolved.append(s)
-    nm = [clean_name(n) for n in names]
-    problem = None
-    if len(nm) != k:
-        problem = f"{len(nm)} names but {k} states"
+            cur = cell
+            out.append(cell)
+            inferred.append(False)
+    return out, inferred, cur
+
+
+def read_block(district: int | None, pairs: list[tuple[str, str | None]], pair_problem: str | None, locs: list[str],
+               toks: list, prev_state: str | None) -> tuple[list[Row], str | None]:
+    """One block -> rows (names as the OCR gave them: `split_mark` takes off a footnote mark). `prev_state` is the
+    state a "do" cell at the top of the block repeats."""
+    k = len(pairs)
+    resolved, inferred, cur = resolve_states([st for _, st in pairs], prev_state)
+    problem = pair_problem
     trip = triples_of(toks)
     coords: list[tuple[tuple | None, tuple | None]] = [(None, None)] * k
     if problem is None:
@@ -320,15 +355,15 @@ def read_block(district: int | None, names: list[str], states: list[str], locs: 
             problem = f"{len(trip)} coordinates for {k} stations"
         else:
             kinds = [classify_triple(t, "AK" in resolved) for t in trip]
-            # Alaska is read by the state of the station the triple would belong to; elsewhere by degrees
             lats = [t for t, kd in zip(trip, kinds) if kd == "lat"]
             lons = [t for t, kd in zip(trip, kinds) if kd == "lon"]
             if len(lats) != k or len(lons) != k:
                 problem = f"{len(lats)} latitudes and {len(lons)} longitudes for {k} stations"
             else:
                 coords = list(zip(lats, lons))
+    rows: list[Row] = []
     for i in range(k):
-        row = Row(district, nm[i] if i < len(nm) else "", resolved[i], block_k=k)
+        row = Row(district, pairs[i][0], resolved[i], block_k=k, state_inferred=inferred[i] and resolved[i] is not None)
         if len(locs) == k:
             row.locality = re.sub(r"[\s.]+$", "", locs[i])
         if problem:
@@ -350,7 +385,7 @@ def parse_blocks(district: int | None, cells: list[Cell], start_state: str | Non
     """Rows of one district's stretch of text.
 
     A block is a run of cells that holds at least one state cell and ends where a text or state cell follows
-    its numbers. Its first k text cells (k = its state cells) are the names, the other text cells its localities,
+    its numbers. Its text cells before the last state cell are the names, the ones after it the localities,
     whether the names and states alternate (name, state, name, state), come in two runs, or one by one."""
     rows: list[Row] = []
     problems: list[str] = []
@@ -359,14 +394,21 @@ def parse_blocks(district: int | None, cells: list[Cell], start_state: str | Non
 
     def close() -> None:
         nonlocal cur, cur_state
-        states = [c.state for c in cur if c.kind == "state"]
-        toks = [t for c in cur if c.kind == "num" for t in c.toks]
-        if states:
+        if any(c.kind == "state" for c in cur):
             last = max(i for i, c in enumerate(cur) if c.kind == "state")
-            names = [c.text for c in cur[:last] if c.kind == "text"]
+            toks = [t for c in cur if c.kind == "num" for t in c.toks]
             locs = [c.text for c in cur[last + 1:] if c.kind == "text"]
-            rs, cur_state = read_block(district, names, states, locs, toks, cur_state, cur_state)
-            rows.extend(rs)
+            pairs, problem = pair_names_states(cur)
+            if problem:
+                # the rows are still listed (their names), without a position
+                states = [c.state for c in cur if c.kind == "state"]
+                names = [c.text for c in cur[:last] if c.kind == "text"]
+                resolved, _inf, cur_state = resolve_states(states, cur_state)
+                for n_ in names:
+                    rows.append(Row(district, n_, None, problem=problem, block_k=len(states)))
+            else:
+                rs, cur_state = read_block(district, pairs, None, locs, toks, cur_state)
+                rows.extend(rs)
         elif cur:
             problems.append(f"orphan cells: {[c.text for c in cur][:3]}")
         cur = []
@@ -425,7 +467,7 @@ def parse_pooled(district: int | None, cells: list[Cell], start_state: str | Non
         return None
     rows = []
     for i in range(n):
-        row = Row(district, clean_name(names[i]), resolved[i], block_k=n)
+        row = Row(district, names[i], resolved[i], block_k=n)
         row.lat_dms, row.lon_dms = lats[i], lons[i]
         row.lat, row.lon = dms_value(lats[i]), dms_value(lons[i])
         if row.lat is None or row.lon is None:
