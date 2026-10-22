@@ -19,7 +19,10 @@ for fire lookouts. Named for the Fresnel lens at the heart of nearly every light
   footnoted.
 - **The light at night**: the light as a sailor saw it, flashing in its real pattern, and how
   far out it could be seen.
-- **Keepers index**: every keeper linked across the stations they served.
+- **Keepers index**: every keeper linked across the stations they served (`/keepers/`): 16,884
+  people from the U.S. Lighthouse Society's Digital Archive so far, joined across stations only by
+  the archive's own person record, never by a shared name. People who may be alive (service from
+  1950, or past 1960) have no page.
 
 ## Corrections, additions, takedowns
 

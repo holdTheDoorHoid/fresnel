@@ -26,3 +26,9 @@ Facts come from many places, each credited on every station page that uses them 
 `data/sources/`. So far: Wikidata (CC0) and OpenStreetMap contributors (ODbL), both read through
 QLever (University of Freiburg). Later rounds add NOAA, the US Coast Guard, the National Park
 Service (public domain) and Canadian government sources, each with its own credit line.
+
+`data/people/` and `data/rosters/` (the keepers index) hold **facts only** (names, roles, years, places)
+taken from the U.S. Lighthouse Society's Digital Archive, which transcribes the National Archives'
+keeper registers. The archive's own text is all rights reserved and is not copied; every roster and
+person page links to the archive's pages and credits it. People whose service begins in 1950 or later
+or ends after 1960 are left out of `data/people/` (DESIGN.md 3.6).
