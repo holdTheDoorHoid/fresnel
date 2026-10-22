@@ -232,7 +232,7 @@ class OtherLayoutsTest(unittest.TestCase):
 class NameTest(unittest.TestCase):
     def test_marks_come_off_names(self):
         self.assertEqual(T.split_mark("Bolinas  Bay  b . "), ("Bolinas Bay", "b"))
-        self.assertEqual(T.split_mark("Fort Lauderdale t"), ("Fort Lauderdale", "t"))
+        self.assertEqual(T.split_mark("Fort Lauderdale t"), ("Fort Lauderdale", "*"))      # a dagger the OCR read as t
         self.assertEqual(T.split_mark("Indian  River  Inlet® "), ("Indian River Inlet", "*"))
         self.assertEqual(T.split_mark("Quoddy  Head . "), ("Quoddy Head", None))
 

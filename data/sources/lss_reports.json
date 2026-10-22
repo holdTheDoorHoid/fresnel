@@ -76,7 +76,7 @@
    "lifesavingservic06unitrich": {
     "year": 1895,
     "rows": 76,
-    "clean": 47,
+    "clean": 48,
     "table_found": true
    },
    "annualreportope05servgoog": {
@@ -94,7 +94,7 @@
    "lifesavingservic02unitrich": {
     "year": 1897,
     "rows": 85,
-    "clean": 43,
+    "clean": 44,
     "table_found": true
    },
    "annualreportope06servgoog": {
@@ -106,7 +106,7 @@
    "lifesavingservic13unitrich": {
     "year": 1898,
     "rows": 129,
-    "clean": 47,
+    "clean": 48,
     "table_found": true
    },
    "lifesavingservic12unitrich": {
@@ -136,7 +136,7 @@
    "lifesavingservic15unitrich": {
     "year": 1902,
     "rows": 178,
-    "clean": 99,
+    "clean": 100,
     "table_found": true
    },
    "united-states-life-saving-service-0001": {
@@ -184,13 +184,13 @@
    "annualreportofun00unit_2": {
     "year": 1909,
     "rows": 237,
-    "clean": 153,
+    "clean": 186,
     "table_found": true
    }
   },
-  "stations_with_position": 211,
-  "stations_without_position": 15,
-  "positions_left_out": 17,
+  "stations_with_position": 217,
+  "stations_without_position": 8,
+  "positions_left_out": 15,
   "station_numbers": "The lists print no station numbers; the record carries the district of the newest report that lists the station (districts were renumbered), not a number.",
   "great_lakes": "The Great Lakes stations (districts 10-12 in 1909) have no latitude or longitude in the printed lists, and their pages are too broken in the OCR to read reliably: not included.",
   "review": "docs/sources/review_2026-10-lss_reports.md"
@@ -405,6 +405,12 @@
      "event": "other",
      "note": "Among the stations in the Life-Saving Service's list in the report for 1897 (the earliest report in which this station could be read; not an opening date)",
      "from": "lss_reports"
+    },
+    {
+     "year": 1890,
+     "event": "closed",
+     "note": "Footnote in the list of stations: No crew employed. b Discontinued December 17, 1890.",
+     "from": "lss_reports"
     }
    ],
    "photos": [],
@@ -442,7 +448,8 @@
      "lifesavingservic97unitrich"
     ],
     "footnotes": [
-     "Destroyed by fire."
+     "Destroyed by fire.",
+     "No crew employed. b Discontinued December 17, 1890."
     ],
     "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
    }
@@ -1596,7 +1603,7 @@
      "House of refuge: no crew employed",
      "House of refuge; no crew employed."
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -1689,8 +1696,100 @@
      "House of refuge. No crew employed.",
      "House of refuge: no crew employed"
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+   }
+  },
+  {
+   "key": "lss_reports:fl-cape-malabar",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Cape Malabar House of Refuge",
+   "other_names": [],
+   "country": "US",
+   "region": "FL",
+   "county": null,
+   "lat": null,
+   "lon": null,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "house of refuge",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1895,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1895 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    },
+    {
+     "year": 1891,
+     "event": "closed",
+     "note": "Footnote in the list of stations: Discontinued March 30, 1891.",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 8,
+    "district_year": 1909,
+    "years_listed": [
+     1895,
+     1896,
+     1905,
+     1909
+    ],
+    "readings": 0,
+    "volumes": [
+     "annualreportofun00unit_2",
+     "annualreportope05servgoog",
+     "lifesavingservic05unitrich",
+     "lifesavingservic06unitrich",
+     "lifesavingservic07unitrich"
+    ],
+    "footnotes": [
+     "Discontinued March 30, 1891."
+    ],
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
+    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
    }
   },
   {
@@ -1785,7 +1884,7 @@
      "House of refuge: no crew employed",
      "House of refuge; no crew employed."
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -1876,7 +1975,7 @@
     "footnotes": [
      "House of refuge: no crew employed"
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -1973,7 +2072,7 @@
      "House of refuge. No crew employed.",
      "House of refuge: no crew employed"
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
     "other_source_km": 0.2
    }
@@ -2067,7 +2166,7 @@
      "House of refuge. No crew employed.",
      "House of refuge: no crew employed"
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -2259,14 +2358,14 @@
      "House of refuge: no crew employed",
      "House of refuge; no crew employed."
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:fl-orange-grove",
    "url": "https://archive.org/details/lifesavingservic14unitrich",
-   "name": "Orange Grove Life-Saving Station",
+   "name": "Orange Grove House of Refuge",
    "other_names": [],
    "country": "US",
    "region": "FL",
@@ -2275,7 +2374,7 @@
    "lon": -80.055556,
    "precision": "approximate",
    "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
+   "kind_raw": "house of refuge",
    "role": null,
    "status": null,
    "status_raw": null,
@@ -2346,10 +2445,11 @@
      1909
     ],
     "locality": "Five and one-half miles south of Lake Worth",
-    "readings": 5,
+    "readings": 6,
     "volumes": [
      "annualreportofop00unit",
      "lifesavingservic02unitrich",
+     "lifesavingservic06unitrich",
      "lifesavingservic08unitrich",
      "lifesavingservic13unitrich",
      "lifesavingservic14unitrich"
@@ -2357,6 +2457,7 @@
     "footnotes": [
      "Discontinued October 1, 1896."
     ],
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -2545,7 +2646,7 @@
      "House of refuge. No crew employed.",
      "House of refuge; no crew employed."
     ],
-    "house_of_refuge": true,
+    "house_of_refuge": "the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives",
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -4922,7 +5023,7 @@
      1909
     ],
     "locality": "2£ miles northeast of Provincetown",
-    "readings": 7,
+    "readings": 8,
     "volumes": [
      "annualreporto301888unit",
      "annualreportofop00unit",
@@ -4930,7 +5031,8 @@
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich",
      "lifesavingservic10unitrich",
-     "lifesavingservic13unitrich"
+     "lifesavingservic13unitrich",
+     "lifesavingservic15unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
@@ -6954,7 +7056,7 @@
   },
   {
    "key": "lss_reports:nc-big-kinnakeet",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Big Kinnakeet Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7005,8 +7107,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7029,10 +7131,11 @@
      1909
     ],
     "locality": "5% miles north of Cape Hatteras light",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
@@ -7040,7 +7143,7 @@
   },
   {
    "key": "lss_reports:nc-bodie-island",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Bodie Island Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7091,8 +7194,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7114,10 +7217,11 @@
      1909
     ],
     "locality": "I/a mile northeast of Bodie Island light",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -7133,8 +7237,8 @@
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 34.65,
+   "lon": -77.094444,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -7195,17 +7299,17 @@
     "years_listed": [
      1909
     ],
-    "readings": 0,
+    "readings": 1,
     "volumes": [
      "annualreportofun00unit_2"
     ],
     "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-caffeys-inlet",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Caffeys Inlet Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7256,8 +7360,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7280,10 +7384,11 @@
      1909
     ],
     "locality": "10% miles south of Currituck Beach light",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -7293,14 +7398,14 @@
   },
   {
    "key": "lss_reports:nc-cape-fear",
-   "url": "https://archive.org/details/annualreportofop1888unit",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Cape Fear Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": 33.841667,
-   "lon": -77.955556,
+   "lat": 33.844444,
+   "lon": -77.958333,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -7344,8 +7449,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7364,17 +7469,18 @@
      1889,
      1909
     ],
-    "readings": 2,
+    "readings": 3,
     "volumes": [
      "annualreportofop00unit",
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-cape-hatteras",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Cape Hatteras Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7425,8 +7531,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7449,10 +7555,11 @@
      1909
     ],
     "locality": "1 mile south of Cape Hatteras light",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic07unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
@@ -7460,7 +7567,7 @@
   },
   {
    "key": "lss_reports:nc-cape-lookout",
-   "url": "https://archive.org/details/annualreportofop1888unit",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Cape Lookout Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7511,8 +7618,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7533,19 +7640,19 @@
      1909
     ],
     "locality": "IV^ miles south of Oaoe Lookout lisrht",
-    "readings": 1,
+    "readings": 2,
     "volumes": [
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
-    "name_read_once": true,
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
     "other_source_km": 0.6
    }
   },
   {
-   "key": "lss_reports:nc-chicamicomico",
-   "url": "https://archive.org/details/annualreportofop1888unit",
-   "name": "Chicamicomico Life-Saving Station",
+   "key": "lss_reports:nc-chicamacomico",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Chicamacomico Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
@@ -7595,8 +7702,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7614,11 +7721,11 @@
      1889,
      1909
     ],
-    "readings": 1,
+    "readings": 2,
     "volumes": [
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
-    "name_read_once": true,
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
     "other_source_km": 1.8
    }
@@ -7631,8 +7738,8 @@
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 34.858333,
+   "lon": -76.308333,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -7693,17 +7800,17 @@
     "years_listed": [
      1909
     ],
-    "readings": 0,
+    "readings": 1,
     "volumes": [
      "annualreportofun00unit_2"
     ],
     "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-creed-s-hill",
-   "url": "https://archive.org/details/annualreportofop1888unit",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Creed's Hill Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7754,8 +7861,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7776,95 +7883,18 @@
      1897,
      1909
     ],
-    "readings": 2,
+    "readings": 3,
     "volumes": [
      "annualreportofop00unit",
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
-   "key": "lss_reports:nc-currituck-beach",
-   "url": "https://archive.org/details/annualreportofun00unit_2",
-   "name": "Currituck Beach Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": null,
-   "lon": null,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1909,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1909 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofun00unit_2",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 8,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1909
-    ],
-    "readings": 0,
-    "volumes": [
-     "annualreportofun00unit_2"
-    ],
-    "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
-   }
-  },
-  {
    "key": "lss_reports:nc-currituck-inlet",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Currituck Inlet Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -7915,8 +7945,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -7925,30 +7955,34 @@
     "replaced_by": []
    },
    "extra": {
-    "district": 6,
-    "district_year": 1897,
+    "district": 7,
+    "list_position": 7,
+    "list_size": 34,
+    "district_year": 1909,
     "years_listed": [
      1884,
      1888,
      1889,
      1895,
      1896,
-     1897
+     1897,
+     1909
     ],
     "locality": "5J miles north of Currituck Beach light",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
-   "key": "lss_reports:nc-durant",
-   "url": "https://archive.org/details/annualreportofop1888unit",
-   "name": "Durant’ Life-Saving Station",
+   "key": "lss_reports:nc-durants",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Durants Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
@@ -7998,8 +8032,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -8020,17 +8054,18 @@
      1897,
      1909
     ],
-    "readings": 2,
+    "readings": 3,
     "volumes": [
      "annualreportofop00unit",
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-gull-shoal",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Gull Shoal Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -8081,8 +8116,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -8105,10 +8140,11 @@
      1909
     ],
     "locality": "11% miles south of New Inlet",
-    "readings": 5,
+    "readings": 6,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
@@ -8124,8 +8160,8 @@
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 35.183333,
+   "lon": -75.769444,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -8160,9 +8196,9 @@
    "ownership": null,
    "events": [
     {
-     "year": 1909,
+     "year": 1884,
      "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1909 (the earliest report in which this station could be read; not an opening date)",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
      "from": "lss_reports"
     }
    ],
@@ -8184,19 +8220,24 @@
     "list_size": 34,
     "district_year": 1909,
     "years_listed": [
+     1884,
+     1888,
+     1889,
+     1893,
      1909
     ],
-    "readings": 0,
+    "readings": 2,
     "volumes": [
+     "annualreportofop00unit",
      "annualreportofun00unit_2"
     ],
     "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-kill-devil-hills",
-   "url": "https://archive.org/details/annualreportofop1888unit",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Kill Devil Hills Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -8247,8 +8288,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -8270,17 +8311,18 @@
      1909
     ],
     "locality": "4Vo miles south of Kitty Hawk",
-    "readings": 2,
+    "readings": 3,
     "volumes": [
      "annualreportofop00unit",
-     "annualreportofop1888unit"
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
    "key": "lss_reports:nc-kitty-hawk",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Kitty Hawk Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -8288,430 +8330,6 @@
    "county": null,
    "lat": 36.063889,
    "lon": -75.691667,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 12,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1889,
-     1895,
-     1896,
-     1897,
-     1909
-    ],
-    "locality": "On the beach abreast of north end of Kitty",
-    "readings": 3,
-    "volumes": [
-     "annualreportofop00unit",
-     "annualreportofop1888unit",
-     "lifesavingservic02unitrich"
-    ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
-    "other_source_km": 0.4
-   }
-  },
-  {
-   "key": "lss_reports:nc-little-kinnakeet",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
-   "name": "Little Kinnakeet Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 35.416667,
-   "lon": -75.486111,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 21,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1889,
-     1895,
-     1896,
-     1897,
-     1909
-    ],
-    "locality": "11% miles north of Cape Hatteras light",
-    "readings": 4,
-    "volumes": [
-     "annualreportofop00unit",
-     "annualreportofop1888unit",
-     "lifesavingservic02unitrich",
-     "lifesavingservic07unitrich"
-    ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
-   }
-  },
-  {
-   "key": "lss_reports:nc-nag-s-head",
-   "url": "https://archive.org/details/lifesavingservic06unitrich",
-   "name": "Nag’s Head Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 35.933333,
-   "lon": -75.611111,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1895: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic06unitrich",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 14,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1895,
-     1896,
-     1909
-    ],
-    "readings": 2,
-    "volumes": [
-     "annualreportofop00unit",
-     "lifesavingservic06unitrich"
-    ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
-   }
-  },
-  {
-   "key": "lss_reports:nc-new-inlet",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
-   "name": "New Inlet Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 35.677778,
-   "lon": -75.483333,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 18,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1889,
-     1895,
-     1896,
-     1897,
-     1909
-    ],
-    "locality": "3/ mile south of New Inlet",
-    "readings": 5,
-    "volumes": [
-     "annualreportofop00unit",
-     "annualreportofop1888unit",
-     "lifesavingservic02unitrich",
-     "lifesavingservic06unitrich",
-     "lifesavingservic07unitrich"
-    ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
-   }
-  },
-  {
-   "key": "lss_reports:nc-oak-island",
-   "url": "https://archive.org/details/annualreportofop1888unit",
-   "name": "Oak Island Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 33.888889,
-   "lon": -78.022222,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1889,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 34,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1889,
-     1909
-    ],
-    "readings": 1,
-    "volumes": [
-     "annualreportofop1888unit"
-    ],
-    "name_read_once": true,
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
-    "other_source_km": 1.1
-   }
-  },
-  {
-   "key": "lss_reports:nc-ocracoke",
-   "url": "https://archive.org/details/annualreportofun00unit_2",
-   "name": "Ocracoke Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": null,
-   "lon": null,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -8766,175 +8384,7 @@
    },
    "extra": {
     "district": 7,
-    "list_position": 27,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1889,
-     1893,
-     1909
-    ],
-    "readings": 0,
-    "volumes": [
-     "annualreporto301888unit",
-     "annualreportofop00unit",
-     "annualreportofop1888unit",
-     "annualreportofun00unit_2",
-     "lifesavingservic08unitrich"
-    ],
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
-   }
-  },
-  {
-   "key": "lss_reports:nc-oregon-inlet",
-   "url": "https://archive.org/details/annualreportofop1888unit",
-   "name": "Oregon Inlet Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 35.791667,
-   "lon": -75.536111,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1889: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofop1888unit",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 16,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1884,
-     1888,
-     1889,
-     1895,
-     1909
-    ],
-    "readings": 2,
-    "volumes": [
-     "annualreportofop00unit",
-     "annualreportofop1888unit"
-    ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
-    "other_source_km": 2.8
-   }
-  },
-  {
-   "key": "lss_reports:nc-paul-gamiels-hill",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
-   "name": "Paul Gamiels Hill Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "NC",
-   "county": null,
-   "lat": 36.133333,
-   "lon": -75.730556,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1884,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 11,
+    "list_position": 12,
     "list_size": 34,
     "district_year": 1909,
     "years_listed": [
@@ -8946,27 +8396,28 @@
      1897,
      1909
     ],
-    "locality": "5 miles north of Kitty Hawk",
+    "locality": "On the beach abreast of north end of Kitty",
     "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
-     "lifesavingservic02unitrich",
-     "lifesavingservic07unitrich"
+     "annualreportofun00unit_2",
+     "lifesavingservic02unitrich"
     ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
+    "other_source_km": 0.4
    }
   },
   {
-   "key": "lss_reports:nc-pea-island",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
-   "name": "Pea Island Life-Saving Station",
+   "key": "lss_reports:nc-little-kinnakeet",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Little Kinnakeet Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": 35.720833,
-   "lon": -75.491667,
+   "lat": 35.416667,
+   "lon": -75.486111,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -9010,8 +8461,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -9021,7 +8472,7 @@
    },
    "extra": {
     "district": 7,
-    "list_position": 17,
+    "list_position": 21,
     "list_size": 34,
     "district_year": 1909,
     "years_listed": [
@@ -9030,29 +8481,283 @@
      1889,
      1895,
      1896,
+     1897,
      1909
     ],
-    "readings": 4,
+    "locality": "11% miles north of Cape Hatteras light",
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
-     "lifesavingservic06unitrich",
+     "annualreportofun00unit_2",
+     "lifesavingservic02unitrich",
      "lifesavingservic07unitrich"
     ],
-    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
-    "other_source_km": 0.5
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
-   "key": "lss_reports:nc-penneys-hill",
+   "key": "lss_reports:nc-nags-head",
    "url": "https://archive.org/details/annualreportofun00unit_2",
-   "name": "Penneys Hill Life-Saving Station",
+   "name": "Nags Head Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 35.933333,
+   "lon": -75.611111,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1884,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 14,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1884,
+     1888,
+     1895,
+     1896,
+     1909
+    ],
+    "readings": 3,
+    "volumes": [
+     "annualreportofop00unit",
+     "annualreportofun00unit_2",
+     "lifesavingservic06unitrich"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+   }
+  },
+  {
+   "key": "lss_reports:nc-new-inlet",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "New Inlet Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 35.677778,
+   "lon": -75.483333,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1884,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 18,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1884,
+     1888,
+     1889,
+     1895,
+     1896,
+     1897,
+     1909
+    ],
+    "locality": "3/ mile south of New Inlet",
+    "readings": 6,
+    "volumes": [
+     "annualreportofop00unit",
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2",
+     "lifesavingservic02unitrich",
+     "lifesavingservic06unitrich",
+     "lifesavingservic07unitrich"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+   }
+  },
+  {
+   "key": "lss_reports:nc-oak-island",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Oak Island Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 33.888889,
+   "lon": -78.022222,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1889,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 34,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1889,
+     1909
+    ],
+    "readings": 2,
+    "volumes": [
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
+    "other_source_km": 1.1
+   }
+  },
+  {
+   "key": "lss_reports:nc-ocracoke",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Ocracoke Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 35.115278,
+   "lon": -75.988889,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -9107,18 +8812,277 @@
    },
    "extra": {
     "district": 7,
-    "list_position": 7,
+    "list_position": 27,
     "list_size": 34,
     "district_year": 1909,
     "years_listed": [
      1909
     ],
-    "readings": 0,
+    "readings": 1,
     "volumes": [
      "annualreportofun00unit_2"
     ],
     "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+   }
+  },
+  {
+   "key": "lss_reports:nc-oregon-inlet",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Oregon Inlet Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 35.791667,
+   "lon": -75.536111,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1884,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 16,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1884,
+     1888,
+     1889,
+     1895,
+     1909
+    ],
+    "readings": 3,
+    "volumes": [
+     "annualreportofop00unit",
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
+    "other_source_km": 2.8
+   }
+  },
+  {
+   "key": "lss_reports:nc-paul-gamiels-hill",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Paul Gamiels Hill Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 36.133333,
+   "lon": -75.730556,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1884,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 11,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1884,
+     1888,
+     1889,
+     1895,
+     1896,
+     1897,
+     1909
+    ],
+    "locality": "5 miles north of Kitty Hawk",
+    "readings": 5,
+    "volumes": [
+     "annualreportofop00unit",
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2",
+     "lifesavingservic02unitrich",
+     "lifesavingservic07unitrich"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
+   }
+  },
+  {
+   "key": "lss_reports:nc-pea-island",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Pea Island Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "lat": 35.720833,
+   "lon": -75.491667,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1884,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 7,
+    "list_position": 17,
+    "list_size": 34,
+    "district_year": 1909,
+    "years_listed": [
+     1884,
+     1888,
+     1889,
+     1895,
+     1896,
+     1909
+    ],
+    "readings": 5,
+    "volumes": [
+     "annualreportofop00unit",
+     "annualreportofop1888unit",
+     "annualreportofun00unit_2",
+     "lifesavingservic06unitrich",
+     "lifesavingservic07unitrich"
+    ],
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds",
+    "other_source_km": 0.5
    }
   },
   {
@@ -9129,8 +9093,8 @@
    "country": "US",
    "region": "NC",
    "county": null,
-   "lat": null,
-   "lon": null,
+   "lat": 35.066667,
+   "lon": -76.051389,
    "precision": "approximate",
    "kind": "life_saving_station",
    "kind_raw": "life-saving station",
@@ -9191,18 +9155,18 @@
     "years_listed": [
      1909
     ],
-    "readings": 0,
+    "readings": 1,
     "volumes": [
      "annualreportofun00unit_2"
     ],
     "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {
-   "key": "lss_reports:nc-poyner-s-hill",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
-   "name": "Poyner's Hill Life-Saving Station",
+   "key": "lss_reports:nc-poyners-hill",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
+   "name": "Poyners Hill Life-Saving Station",
    "other_names": [],
    "country": "US",
    "region": "NC",
@@ -9252,8 +9216,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -9276,10 +9240,11 @@
      1909
     ],
     "locality": "6% miles south of Currituck Beach light",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -9288,7 +9253,7 @@
   },
   {
    "key": "lss_reports:nc-wash-woods",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Wash Woods Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -9339,8 +9304,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -9361,10 +9326,11 @@
      1909
     ],
     "locality": "On beach abreast of Knotts Island",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -9373,7 +9339,7 @@
   },
   {
    "key": "lss_reports:nc-whales-head",
-   "url": "https://archive.org/details/lifesavingservic02unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Whales Head Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -9424,8 +9390,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1897: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic02unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -9434,21 +9400,25 @@
     "replaced_by": []
    },
    "extra": {
-    "district": 6,
-    "district_year": 1897,
+    "district": 7,
+    "list_position": 8,
+    "list_size": 34,
+    "district_year": 1909,
     "years_listed": [
      1884,
      1888,
      1889,
      1895,
      1896,
-     1897
+     1897,
+     1909
     ],
     "locality": "% mile north of Currituck Beach light",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic02unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -12529,10 +12499,11 @@
      1909
     ],
     "locality": "About a mile south of Navesink light",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofun00unit_2",
      "lifesavingservic05unitrich",
+     "lifesavingservic13unitrich",
      "lifesavingservic14unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
@@ -16727,6 +16698,9 @@
      "lifesavingservic13unitrich",
      "lifesavingservic17unitrich"
     ],
+    "footnotes": [
+     "No crew employed."
+    ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
@@ -17485,8 +17459,9 @@
      1909
     ],
     "locality": "At Moultrieville Sullivans Island at north",
-    "readings": 2,
+    "readings": 3,
     "volumes": [
+     "lifesavingservic02unitrich",
      "lifesavingservic05unitrich",
      "lifesavingservic06unitrich"
     ],
@@ -18210,7 +18185,7 @@
   },
   {
    "key": "lss_reports:va-cape-henry",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Cape Henry Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -18261,8 +18236,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -18287,10 +18262,11 @@
      1909
     ],
     "locality": "% mile southeast of Cape Henry light",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic07unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
@@ -18383,7 +18359,7 @@
   },
   {
    "key": "lss_reports:va-dam-neck-mills",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Dam Neck Mills Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -18434,8 +18410,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -18456,10 +18432,11 @@
      1896,
      1909
     ],
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -18468,7 +18445,7 @@
   },
   {
    "key": "lss_reports:va-false-cape",
-   "url": "https://archive.org/details/lifesavingservic06unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "False Cape Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -18519,8 +18496,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1895: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic06unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -18542,10 +18519,11 @@
      1909
     ],
     "locality": "On beach abreast of Back Bay",
-    "readings": 3,
+    "readings": 4,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich"
     ],
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
@@ -18639,7 +18617,7 @@
   },
   {
    "key": "lss_reports:va-little-island",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Little Island Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -18690,8 +18668,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -18714,10 +18692,11 @@
      1909
     ],
     "locality": "On beach abreast of North Bay",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -18980,7 +18959,7 @@
   },
   {
    "key": "lss_reports:va-seatack",
-   "url": "https://archive.org/details/lifesavingservic07unitrich",
+   "url": "https://archive.org/details/annualreportofun00unit_2",
    "name": "Seatack Life-Saving Station",
    "other_names": [],
    "country": "US",
@@ -19031,8 +19010,8 @@
    "photos": [],
    "links": [
     {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1896: list of life-saving districts and stations",
-     "url": "https://archive.org/details/lifesavingservic07unitrich",
+     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+     "url": "https://archive.org/details/annualreportofun00unit_2",
      "kind": "reference"
     }
    ],
@@ -19041,20 +19020,24 @@
     "replaced_by": []
    },
    "extra": {
-    "district": 6,
-    "district_year": 1896,
+    "district": 7,
+    "list_position": 2,
+    "list_size": 34,
+    "district_year": 1909,
     "years_listed": [
      1884,
      1888,
      1889,
      1895,
-     1896
+     1896,
+     1909
     ],
     "locality": "5% miles south of Cape Henry light",
-    "readings": 4,
+    "readings": 5,
     "volumes": [
      "annualreportofop00unit",
      "annualreportofop1888unit",
+     "annualreportofun00unit_2",
      "lifesavingservic06unitrich",
      "lifesavingservic07unitrich"
     ],
@@ -19145,84 +19128,6 @@
     ],
     "name_read_once": true,
     "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
-   }
-  },
-  {
-   "key": "lss_reports:va-virginia-beach",
-   "url": "https://archive.org/details/annualreportofun00unit_2",
-   "name": "Virginia Beach Life-Saving Station",
-   "other_names": [],
-   "country": "US",
-   "region": "VA",
-   "county": null,
-   "lat": null,
-   "lon": null,
-   "precision": "approximate",
-   "kind": "life_saving_station",
-   "kind_raw": "life-saving station",
-   "role": null,
-   "status": null,
-   "status_raw": null,
-   "structure": {
-    "type": null,
-    "material": null,
-    "built": null,
-    "height_m": null,
-    "status": null
-   },
-   "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "lens": null
-   },
-   "setting": null,
-   "registers": [],
-   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-   },
-   "agency": null,
-   "ownership": null,
-   "events": [
-    {
-     "year": 1909,
-     "event": "other",
-     "note": "Among the stations in the Life-Saving Service's list in the report for 1909 (the earliest report in which this station could be read; not an opening date)",
-     "from": "lss_reports"
-    }
-   ],
-   "photos": [],
-   "links": [
-    {
-     "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
-     "url": "https://archive.org/details/annualreportofun00unit_2",
-     "kind": "reference"
-    }
-   ],
-   "relations": {
-    "replaces": [],
-    "replaced_by": []
-   },
-   "extra": {
-    "district": 7,
-    "list_position": 2,
-    "list_size": 34,
-    "district_year": 1909,
-    "years_listed": [
-     1909
-    ],
-    "readings": 0,
-    "volumes": [
-     "annualreportofun00unit_2"
-    ],
-    "name_read_once": true,
-    "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
    }
   },
   {
@@ -19739,6 +19644,84 @@
      "lifesavingservic17unitrich"
     ],
     "table_note": "the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)"
+   }
+  },
+  {
+   "key": "lss_reports:wa-point-adams",
+   "url": "https://archive.org/details/lifesavingservic13unitrich",
+   "name": "Point Adams Life-Saving Station",
+   "other_names": [],
+   "country": "US",
+   "region": "WA",
+   "county": null,
+   "lat": 46.2,
+   "lon": -123.95,
+   "precision": "approximate",
+   "kind": "life_saving_station",
+   "kind_raw": "life-saving station",
+   "role": null,
+   "status": null,
+   "status_raw": null,
+   "structure": {
+    "type": null,
+    "material": null,
+    "built": null,
+    "height_m": null,
+    "status": null
+   },
+   "light": {
+    "first_lit": null,
+    "deactivated": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "lens": null
+   },
+   "setting": null,
+   "registers": [],
+   "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+   },
+   "agency": null,
+   "ownership": null,
+   "events": [
+    {
+     "year": 1897,
+     "event": "other",
+     "note": "Among the stations in the Life-Saving Service's list in the report for 1897 (the earliest report in which this station could be read; not an opening date)",
+     "from": "lss_reports"
+    }
+   ],
+   "photos": [],
+   "links": [
+    {
+     "label": "Annual Report of the U.S. Life-Saving Service for 1898: list of life-saving districts and stations",
+     "url": "https://archive.org/details/lifesavingservic13unitrich",
+     "kind": "reference"
+    }
+   ],
+   "relations": {
+    "replaces": [],
+    "replaced_by": []
+   },
+   "extra": {
+    "district": 13,
+    "district_year": 1908,
+    "years_listed": [
+     1897,
+     1898,
+     1908
+    ],
+    "readings": 1,
+    "volumes": [
+     "lifesavingservic13unitrich"
+    ],
+    "name_read_once": true,
+    "position_text": "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"
    }
   },
   {

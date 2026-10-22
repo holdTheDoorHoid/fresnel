@@ -254,7 +254,7 @@ def split_mark(raw: str) -> tuple[str, str | None]:
     mark = None
     m = re.search(r"[\s.,_\-\"'\u2018\u2019]+([A-Za-z])[\s.,_]*$", s)
     if m and re.search(r"[A-Za-z]{3}", s[:m.start(1)]):
-        mark = m.group(1)
+        mark = m.group(1) if m.group(1) in "abcdefg" else "*"       # t, f, J, l: the OCR's reading of the first mark (a dagger)
         s = s[:m.start(1)]
     elif re.search(r"[\u00ae\u00a9\u00ab\u00b0*\u2020\u2021\u00a7]", s):
         mark = "*"
@@ -353,14 +353,15 @@ def read_block(district: int | None, pairs: list[tuple[str, str | None]], pair_p
             problem = f"{len(toks)} number tokens, not a multiple of three"
         elif len(trip) != 2 * k:
             problem = f"{len(trip)} coordinates for {k} stations"
-        elif any(None in t or classify_triple(t, "AK" in resolved) is None for t in trip) and k > 1:
-            problem = "a coordinate is damaged"
+        elif k > 1 and any(classify_triple(t, "AK" in resolved) is None for t in trip):
+            problem = "a coordinate is damaged"        # a degree that is neither a latitude nor a longitude: the pairing is lost
         else:
             kinds = [classify_triple(t, "AK" in resolved) for t in trip]
             lats = [t for t, kd in zip(trip, kinds) if kd == "lat"]
             lons = [t for t, kd in zip(trip, kinds) if kd == "lon"]
             if len(lats) != k or len(lons) != k:
-                problem = "a coordinate is damaged" if any(None in t for t in trip) else f"{len(lats)} latitudes and {len(lons)} longitudes for {k} stations"
+                problem = ("a coordinate is damaged" if any(None in t for t in trip)
+                           else f"{len(lats)} latitudes and {len(lons)} longitudes for {k} stations")
             else:
                 coords = list(zip(lats, lons))
     rows: list[Row] = []

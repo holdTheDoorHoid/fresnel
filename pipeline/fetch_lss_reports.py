@@ -503,7 +503,7 @@ def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict], ranks: dic
     name_vote, single = pick_name(st["names"])
     rs = st["members"] + st.get("loose", [])
     foot = " ".join(r["footnote"] or "" for r in rs if r.get("footnote"))
-    hor = bool(re.search(r"house of refuge", foot, re.I))
+    hor = bool(re.search(r"house of refuge", foot, re.I)) or any(named_house_of_refuge(n["name"], st["state"]) >= 2 for n in st["names"] if n["volumes"] >= 2)
     label = station_label(name_vote["name"], st["state"], hor)
     years = sorted({r["year"] for r in rs})
     newest = max(rs, key=lambda r: (r["year"], r["volume"]))
@@ -543,7 +543,7 @@ def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict], ranks: dic
         "volumes": vol_ids,
         "name_read_once": single or None,
         "footnotes": sorted({r["footnote"].strip() for r in rs if r.get("footnote")}) or None,
-        "house_of_refuge": hor or None,
+        "house_of_refuge": ("the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives" if hor else None),
         "table_note": ("the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)" if not pos else None),
     }
     if pos:
@@ -575,6 +575,24 @@ def corpus_word_counts() -> Counter:
 
 
 _WORDS: Counter | None = None
+_TEXT: str | None = None
+
+
+def corpus_text() -> str:
+    """All the Life-Saving Service reports' text on one line (blank-normalised), for phrase counts."""
+    global _TEXT
+    if _TEXT is None:
+        parts = [path.read_text(encoding="utf-8", errors="replace") for path in sorted((c.RAW_ROOT / "corpus" / "lss").glob("*/*.txt"))]
+        _TEXT = re.sub(r"\s+", " ", " ".join(parts))
+    return _TEXT
+
+
+def named_house_of_refuge(name: str, state: str) -> int:
+    """How often the reports write "<name> House of Refuge" in Florida (the wreck narratives do: "the keeper of the Orange
+    Grove House of Refuge"; OCR reads Refuge as Kefuge or Eefuge). Houses of refuge stood on the Florida coast only."""
+    if state != "FL":
+        return 0
+    return len(re.findall(re.escape(name) + r"\s+(?:Station\s+)?\(?House\s+of\s+[REK]efuge", corpus_text()))
 MIN_WORD_COUNT = 8          # a word in a station name read in one volume occurs at least this often in the reports
 CORRECT_RATIO = 20          # ... and a one-letter variant is not this many times commoner
 
@@ -677,14 +695,13 @@ def stations_from(readings: list[dict], lookup, ref: list[dict]):
 def name_only_stations(name_only: list[dict], vocab: set[str]) -> list[dict]:
     """Stations the lists name but whose position could not be read, kept when the name is sound: not a Great
     Lakes state (those lists print no position and their OCR is too broken to read), made of known words, and
-    read in two volumes or in the 1909 list; a state the OCR had to infer does not count."""
+    read in two volumes or in the 1909 list. A state the OCR dropped is taken from the rows on both sides only when
+    they agree (`lss_table.resolve_states`)."""
     out = []
     for g in name_only:
         if g["state"] in GREAT_LAKES_STATES:
             continue
-        rs = [r for r in g["readings"] if not r.get("state_inferred")]
-        if not rs:
-            continue
+        rs = g["readings"]
         names = name_votes(rs)
         if not names:
             continue
