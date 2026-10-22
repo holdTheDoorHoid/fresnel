@@ -170,7 +170,13 @@ home) or reachable only by boat, say so plainly in *Today*.
   "about" or gives only a range. Spell names as the source does; give variants in `note`
   ("also spelled Stroudt in the 1875 Register"). `other_stations` lists the person's service
   elsewhere **only when a source names it** (it feeds the keepers index; never infer a person from
-  a shared name).
+  a shared name): each entry is `{"name": "…", "id": "<station id>" (when it is on the map), "role", "from",
+  "to", "cite": [n]}` and **must carry a `cite`**, the source that connects the two stations. `person` is
+  the USLHS archive's person slug (`roster.py --json` prints it on each line, the `person` field): put it on a
+  line when that line IS that archive record's stint, so the keepers index joins the research stint to the
+  archive's person and links the name on the station page. Never put a slug on a line because the names
+  look alike. A line with `other_stations` and no `person` makes a person only your research names. A line
+  with neither stays a row in the table. (DESIGN.md 3.6)
 - **`wrecks`**: wrecks and rescues at or near the station that a source ties to it.
 - **`events`**: `event` from DESIGN §3.4 (`built, first_lit, rebuilt, replaced, relit, deactivated,
   automated, keeper_appointed, lens_installed, lens_removed, characteristic_changed,
@@ -192,6 +198,36 @@ home) or reachable only by boat, say so plainly in *Today*.
 - `photos`: new photos you found. Prefer public domain (USCG, LOC, NOAA, Library and Archives Canada
   where expired) or Creative Commons; always give credit and licence.
 - `sources` numbering matches the story's footnotes.
+
+## Mistakes the pilot found (avoid them)
+
+The writer pilot (`research/PILOT.md`, 2026-10-21) fact-checked fourteen long stories. Every draft needed
+fixes. These were the repeated ones; the checker looks for each.
+
+- **Disagreements stated as settled.** When sources differ on a date, a size or a cause, say so in the text.
+  Do not pick one silently.
+- **Details no source gives.** "People carried off the stone", a death count, "rowed out": if no footnote
+  says it happened here, it does not go in.
+- **Wikipedia cited as a source.** It is for leads only. Cite what it cites, or leave the fact out.
+- **Second-hand sources written as if read.** A newspaper you saw quoted on a blog is footnoted to the blog
+  ("the Wilmington Evening Journal of 14 April 1926, as quoted by …"), never to the newspaper.
+- **Unsigned text credited to a named report.** A clipping file, an index entry or a compilation is cited as
+  what it is.
+- **Wording that follows a source too closely.** Rewrite in your own words, or quote it, marked.
+- **Fiscal years.** An annual report "for the fiscal year ended June 30, 1884" covers July 1883 to June 1884:
+  a December event in it happened in December 1883.
+- **OCR'd tables.** Names, stations and dates read off a table by column position are easily misread. Say in
+  `notes_for_editor` which ones you matched by position; the checker reads the page image for them.
+- **Same name, different place.** Index entries for "Split Rock" may be Split Rock, New York. Check the state.
+- **Wrong page numbers.** `check_quotes.py` finds a quote anywhere in a volume, so it does not catch a wrong
+  page. Take the page from `corpus.py page`.
+- **People linked by name alone** (a keeper "probably" the same as another station's): only when a source
+  connects them.
+- **First person.** No "I could not find" or "sources I could reach" in the story; that goes in
+  `notes_for_editor`.
+- **Shared scratch files.** Several agents run at once and share the session scratchpad: use a private
+  folder named for your station (`<scratchpad>/<station-id>-<role>/`), never generic file names in the
+  scratchpad itself.
 
 ## Where to look
 
@@ -286,18 +322,27 @@ order, and stop when you have an honest story; a thin station needs only the fir
    or a book for young readers (James Otis, *The Life Savers*) as a record.
 
 **Do not use** (robots.txt, blocks or the owner's rulings, DESIGN §2): query.wikidata.org,
-Overpass, Wikipedia's `/w/` and `/api/`, HathiTrust, Google Books, the NARA catalog, Canadiana, BAnQ,
-Nauticapedia, the USCG Historian's site and its archived copies (on hold for the owner), CDNC, NYS
-Historic Newspapers, Digital Michigan Newspapers, the NOAA historical chart collection.
+Overpass, Wikipedia's `/w/` and `/api/`, HathiTrust, Google Books, the NARA catalog, Canadiana, CDNC,
+NYS Historic Newspapers, Digital Michigan Newspapers, the NOAA historical chart collection. Never call
+loc.gov directly: only through `research/newspapers.py`, which keeps every agent inside its rate limit.
+
+**Allowed by the owner's rulings (2026-10-21):**
+- **The USCG Historian's pages through the Internet Archive.** The live site blocks us; read its archived
+  copies with `fetch_text.py "https://web.archive.org/web/2024/https://www.history.uscg.mil/<path>"` (any
+  capture year that exists), including the Lightship Station Index PDF on media.defense.gov. Every footnote
+  gives both addresses: `[^n]: Title, U.S. Coast Guard Historian's Office, https://www.history.uscg.mil/...
+  (archived copy: https://web.archive.org/web/...; accessed YYYY-MM-DD).` and the JSON source's `url` is the
+  archive copy you read.
+- **BAnQ numérique and Nauticapedia**, although their robots.txt names Anthropic's crawlers: the owner chose
+  to use them. Read them only through `fetch_text.py` (it keeps them slow), and only the pages you need.
 
 **Budget per station:** at most 3 WebSearch calls (fallback `research/websearch.py`), at most 15 page
 reads (fetch_text and newspaper pages together), corpus greps as needed but each capped by its
 `--max`. A thin station should take a fraction of that.
 
 **Lightship stations and vessels:** the USLHS Digital Archive's lightship-station records and vessel
-assignments, the Lighthouse Board and Commissioner reports (stations, collisions,
-drags), and newspapers. (The USCG Lightship Station Index is a Coast Guard PDF on a host that blocks us;
-its archived copies are on hold with the Historian's, DESIGN §2.) A lightship station's position comes from the Light List or the bearing text
+assignments, the USCG Lightship Station Index (archived copy, as above), the Lighthouse Board and
+Commissioner reports (stations, collisions, drags), and newspapers. A lightship station's position comes from the Light List or the bearing text
 ("8 miles SE of …"); give the source of the position in `corrections` when the record has none.
 
 **Life-saving stations:** the Life-Saving Service annual reports (station lists with positions; wreck

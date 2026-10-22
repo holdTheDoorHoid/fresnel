@@ -17,3 +17,12 @@ site built from them shows a "Sample data" banner.
   redirect) and one hidden decorative record to test the out-of-scope rule.
 - `stories/us-me-example-head.md`: a story in chapters with footnotes.
 - `research/us-me-example-head.json`: its research, with a keepers roster (DESIGN.md 3.6).
+- `people/<id>.json`, `rosters/<dir>/<station id>.json`, `people_report.json`: the keepers index (DESIGN.md 3.6) in
+  the shape `pipeline/build_people.py` writes, for invented people at the invented stations: one person at two
+  stations under one archive record (`jonas-example`), three records named Ezra Sample (a pair whose years and
+  region fit, so each says "possibly the same person as", and one a century away, so nothing is said), a stint at
+  a depot that is not on the map (`lars-fixture`), a research line that names an archive record
+  (`samuel-sample` in the research file) and one whose `other_stations` makes a person only the research names
+  (Joseph Example, who also served at the Canadian fixture), and two lines that the living-people rule leaves in
+  the station's table with no person (`alex-present`, `pat-coastguard`). `us-nc-example-shoal` shows the
+  archive's roster; `us-me-example-head` has a research roster, which takes precedence.

@@ -13,7 +13,12 @@ Priority (within a tier, stations with more sources and links first: more to wor
   3 lightship stations, surviving lightships and life-saving stations
   4 lost lights and ruins
   5 status unknown
-Replicas come last of all. Hidden stations and retired ids (merged_into) are never queued."""
+Replicas come last of all. Hidden stations and retired ids (merged_into) are never queued.
+
+Writer tiers (owner, 2026-10-21: the mix): `--tier sonnet` is the fixed list in research/tier_sonnet.txt (the
+~300 best-documented stations, chosen once by `--make-sonnet-tier 300` from the documentation score below);
+`--tier haiku` is every other station. Score = independent sources + 4 for a heritage listing + 1 per further
+listing (up to 3) + 1 per 20 keeper-roster lines in the USLHS archive (up to 4)."""
 import argparse, glob, json, os, sys
 from collections import Counter
 
@@ -58,6 +63,43 @@ def tier(s):
     if status in ("lost", "ruins"):
         return 4
     return 5
+
+
+ROSTERS = None
+
+
+def roster_lines(s):
+    """Keeper-roster lines the USLHS archive holds for the station's USLHS place, 0 if none."""
+    global ROSTERS
+    if ROSTERS is None:
+        p = os.path.join(os.environ.get("FRESNEL_RAW_ROOT") or os.path.join(ROOT, "data", "raw"), "uslhs", "rosters.json")
+        try:
+            with open(p, encoding="utf-8") as fh:
+                ROSTERS = json.load(fh)
+        except (OSError, ValueError):
+            ROSTERS = {}
+    n = 0
+    for x in s.get("sources") or []:
+        if x.get("source") == "uslhs" and str(x.get("key", "")).startswith("uslhs:"):
+            n = max(n, len((ROSTERS.get(x["key"].split(":", 1)[1]) or {}).get("lines") or []))
+    return n
+
+
+def doc_score(s):
+    regs = len(s.get("registers") or [])
+    return (len({x.get("source") for x in s.get("sources") or []}) + (4 if regs else 0) + min(max(regs - 1, 0), 3)
+            + min(roster_lines(s) // 20, 4))
+
+
+TIER_FILE = os.path.join(ROOT, "research", "tier_sonnet.txt")
+
+
+def sonnet_tier():
+    try:
+        with open(TIER_FILE, encoding="utf-8") as fh:
+            return {l.split()[0] for l in fh if l.strip() and not l.startswith("#")}
+    except OSError:
+        return set()
 
 
 def weight(s):
@@ -123,7 +165,31 @@ def main():
     ap.add_argument("--briefs", nargs="+", metavar="ID")
     ap.add_argument("--country")
     ap.add_argument("--region", action="append")
+    ap.add_argument("--tier", choices=["sonnet", "haiku"], help="only this writer's stations (research/tier_sonnet.txt)")
+    ap.add_argument("--make-sonnet-tier", type=int, metavar="N", help="write research/tier_sonnet.txt: the N best-documented stations")
     a = ap.parse_args()
+    if a.make_sonnet_tier:
+        # Each country gets a share of the tier in proportion to its heritage-listed stations, and its stations
+        # are ranked against each other: the score leans on USLHS keeper rosters, which cover the US only.
+        pool = [s for s in stations() if s.get("status") != "replica"]
+        by_country = {}
+        for s in pool:
+            by_country.setdefault(str(s.get("country") or "US").upper(), []).append(s)
+        listed = {c: sum(1 for s in ss if s.get("registers")) for c, ss in by_country.items()}
+        total = sum(listed.values()) or 1
+        quota = {c: round(a.make_sonnet_tier * n / total) for c, n in listed.items()}
+        quota[max(quota, key=quota.get)] += a.make_sonnet_tier - sum(quota.values())
+        chosen = []
+        for c, ss in sorted(by_country.items()):
+            ss.sort(key=lambda s: (-doc_score(s), -weight(s), s["id"]))
+            chosen += ss[: quota[c]]
+        with open(TIER_FILE, "w", encoding="utf-8") as fh:
+            fh.write(f"# The {a.make_sonnet_tier} best-documented stations, written by Sonnet (owner's mix, 2026-10-21).\n"
+                     f"# Shares by heritage-listed stations: {quota}. id, documentation score. Fixed once chosen; see research/queue.py.\n")
+            for s in chosen:
+                fh.write(f"{s['id']} {doc_score(s)}\n")
+        print(f"wrote {TIER_FILE}: {len(chosen)} stations, by country {quota}")
+        return
     if a.briefs:
         out = []
         for sid in a.briefs:
@@ -146,6 +212,9 @@ def main():
                     sys.exit(f"unknown region {part!r}")
                 codes.add(code)
     q = queue(country, codes)
+    if a.tier:
+        chosen = sonnet_tier()
+        q = [s for s in q if (s["id"] in chosen) == (a.tier == "sonnet")]
     if a.next:
         print("\n".join(s["id"] for s in q[: a.next]))
     if a.summary or not a.next:

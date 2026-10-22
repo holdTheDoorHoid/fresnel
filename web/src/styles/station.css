@@ -1,7 +1,9 @@
 /* Station pages. One column on phones in the order a visitor needs it; on wide screens a
    reading column plus a sticky rail with the map link, checklist and "Suggest an edit". */
 
-.station-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; overflow-x: clip; }
+/* No overflow clipping here: Chrome stops painting a clipped box taller than its texture limit (about
+   16,000 px), and a long story makes the page taller than that. Long words and URLs wrap instead. */
+.station-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; overflow-wrap: anywhere; }
 
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 6px; padding: 0; margin: 4px 0 16px; font-size: 0.9rem; color: var(--muted); }
 .crumbs li + li::before { content: '›'; margin-right: 6px; color: var(--line-strong); }
@@ -290,3 +292,27 @@ a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
   .career th::before, .career td::before, .gaps th::before, .gaps td::before { content: attr(data-label); color: var(--muted); font-weight: 650; font-size: 0.85rem; }
   .gaps .suggest { white-space: normal; }
 }
+
+/* ---------- Keepers index: rosters and people's pages (DESIGN.md 3.6) ---------- */
+.tag {
+  display: inline-block; padding: 0 8px; margin-right: 4px; border-radius: 999px; vertical-align: 1px;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2);
+  font: 800 0.72rem/1.6 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+}
+.tag-checked { border-color: var(--ok-ink); color: var(--ok-ink); }
+.tag-unchecked { border-style: dashed; color: var(--muted); }
+.roster-source { margin-top: 0; }
+.roster-link { margin: 0 0 6px; }
+.roster-note { margin-top: 14px; }
+.keepers th .sub, .keepers td .sub { font-weight: 400; }
+.keepers-archive tbody th { font-weight: 650; }
+.person-page .p-head h1 { max-width: 24ch; }
+.p-summary { margin: 4px 0 0; font-size: 1.1rem; color: var(--ink-2); max-width: 60ch; }
+.p-main { max-width: 900px; }
+.possibly { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.possibly li { padding: 10px 14px; border: 1px dashed var(--line-strong); border-radius: 10px; background: var(--surface); }
+.possibly .p-lead { font-weight: 700; color: var(--ink-2); }
+.possibly .sub { margin-top: 2px; }
+.histories .sub { font-size: 0.875rem; }
+.keepers-stints .cites { font-size: 0.9rem; }
+.keepers .cell { display: block; min-width: 0; }

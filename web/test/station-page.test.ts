@@ -201,6 +201,6 @@ describe('site pages from meta.json', () => {
       if (s.license) expect(rows).toContain(escapeHtml(s.license)); // the page escapes it (an apostrophe is &#39;)
     }
     expect(text(rows)).not.toMatch(/\b(null|undefined)\b/);
-    expect(countsLine(meta)).toBe('14 stations on the map, 1 with a written history, 1 with a keepers roster.');
+    expect(countsLine(meta)).toBe('14 stations on the map, 1 with a written history, 1 with a keepers roster, 8 people in the keepers index.');
   });
 });

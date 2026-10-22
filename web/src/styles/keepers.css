@@ -1,0 +1,33 @@
+/* The keepers index page (/keepers/). */
+.keepers-index { max-width: 900px; }
+.k-find { scroll-margin-top: 12px; }
+.k-form {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 16px; align-items: end;
+  margin: 8px 0 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+}
+.k-field { display: grid; gap: 4px; }
+.k-field-wide { grid-column: span 2; }
+@media (max-width: 560px) { .k-field-wide { grid-column: auto; } }
+.k-field label { font: 700 0.85rem var(--font-sans); color: var(--ink-2); }
+.k-form input, .k-form select {
+  width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--bg); color: var(--ink); font: 400 1rem var(--font-sans);
+}
+.k-actions { display: flex; align-items: end; }
+.k-letters ul { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 14px; }
+.k-letters a {
+  display: inline-flex; flex-direction: column; align-items: center; min-width: 46px; padding: 4px 8px;
+  border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); color: var(--ink);
+  font: 800 1.05rem/1.2 var(--font-sans); text-decoration: none;
+}
+.k-letters a:hover { background: var(--surface-2); }
+.k-letters a[aria-current='true'] { background: var(--primary-bg); border-color: var(--primary-bg); color: var(--primary-ink); }
+.k-n { font: 600 0.7rem/1.2 var(--font-sans); opacity: 0.8; font-variant-numeric: tabular-nums; }
+.k-status { margin: 10px 0; font-weight: 650; color: var(--ink-2); }
+.k-list { list-style: none; padding: 0; margin: 0 0 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.k-list:empty { display: none; }
+.k-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; padding: 9px 14px; border-top: 1px solid var(--line); }
+.k-list li:first-child { border-top: 0; }
+.k-list a { font-weight: 700; }
+.k-meta { color: var(--muted); font-size: 0.9rem; }
+.keepers-index section { scroll-margin-top: 12px; }

@@ -16,6 +16,12 @@ Errors (exit status 1):
 - a research file whose keepers roster is malformed (DESIGN.md 3.6: each line has a name, a
   role, from / to as a year or a "YYYY" / "YYYY-MM-DD" string or null, a note or null, and cite:
   one or more numbers of the file's own `sources`);
+- a research roster line whose `person` is not an archive person id, or whose `other_stations` entry has no
+  name or no cite (DESIGN.md 3.6: only a cited connection adds service elsewhere to a person);
+- a keepers-index record (data/people, data/rosters) that breaks the rules: a person file whose id does not
+  match its file name, with a stint that begins in 1950 or later, ends after 1960 or has no year at all
+  (the living-people rule: such a person must have no file), any race or sex field, a `possibly` hint to a
+  person with no file; a roster for something that is not a station;
 - a story footnote reference with no definition;
 - a source extract without its header, or with two records of one key.
 
@@ -25,6 +31,7 @@ light on a border or offshore), a related id that is not a station.
 An empty data/stations/ passes (the site then builds from fixtures).
 
 Usage: python3 pipeline/validate.py [--stations DIR] [--research DIR] [--stories DIR] [--sources DIR]
+                                    [--people DIR] [--rosters DIR]
 """
 from __future__ import annotations
 
@@ -35,6 +42,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import keepers as keeper_rules  # noqa: E402
 import regions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -174,6 +182,105 @@ def check_research(p: Problems, path: Path, res: object) -> None:
             p.error(at, "cite must list one or more source numbers")
         elif any(c not in numbers for c in cite):
             p.error(at, f"cites {sorted(set(cite) - numbers)}, which the file's sources do not have")
+        if k.get("person") is not None and not (isinstance(k["person"], str) and keeper_rules.PERSON_ID_RE.match(k["person"])):
+            p.error(at, f"person {k['person']!r} is not an archive person id (the slug of archives.uslhs.org/people/<slug>)")
+        for j, o in enumerate(k.get("other_stations") or []):
+            if not (isinstance(o, dict) and isinstance(o.get("name"), str) and o["name"].strip()):
+                p.error(at, f"other_stations[{j}] has no name")
+            elif not (isinstance(o.get("cite"), list) and o["cite"] and all(isinstance(c, int) for c in o["cite"])):
+                p.error(at, f"other_stations[{j}] ({o['name']}) has no cite: service elsewhere joins a person only with a source")
+            elif any(c not in numbers for c in o["cite"]):
+                p.error(at, f"other_stations[{j}] cites {sorted(set(o['cite']) - numbers)}, which the file's sources do not have")
+
+
+FORBIDDEN_KEYS = {"race", "sex", "gender", "ethnicity"}
+
+
+def _forbidden(obj: object) -> str | None:
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if isinstance(k, str) and k.lower() in FORBIDDEN_KEYS:
+                return k
+            found = _forbidden(v)
+            if found:
+                return found
+    elif isinstance(obj, list):
+        for v in obj:
+            found = _forbidden(v)
+            if found:
+                return found
+    return None
+
+
+def check_people(p: Problems, people_dir: Path | None, rosters_dir: Path | None, recs: dict[str, dict]) -> None:
+    """data/people and data/rosters: the keepers index's committed files (pipeline/keepers.py)."""
+    ids: set[str] = set()
+    files: dict[str, dict] = {}
+    for path in sorted(people_dir.glob("*.json")) if people_dir and people_dir.is_dir() else []:
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            p.error(path, f"not valid JSON: {e}")
+            continue
+        if not isinstance(rec, dict):
+            p.error(path, "not a JSON object")
+            continue
+        if rec.get("id") != path.stem:
+            p.error(path, f"id {rec.get('id')!r} does not match the file name")
+        if not keeper_rules.PERSON_ID_RE.match(path.stem):
+            p.error(path, "the file name is not an archive person id")
+        if not isinstance(rec.get("name"), str) or not rec["name"].strip():
+            p.error(path, "name is missing")
+        stints = rec.get("stints")
+        if not isinstance(stints, list) or not stints:
+            p.error(path, "stints must be a non-empty list")
+            continue
+        for i, s in enumerate(stints):
+            if not isinstance(s, dict) or not isinstance(s.get("place"), str) or not s["place"]:
+                p.error(path, f"stints[{i}] has no place")
+                continue
+            for f in ("from", "to"):
+                v = s.get(f)
+                if v is not None and not (isinstance(v, int) and not isinstance(v, bool) and keeper_rules.MIN_YEAR <= v <= keeper_rules.MAX_YEAR):
+                    p.error(path, f"stints[{i}].{f} {v!r} is not a year")
+        years = [{"from": s.get("from") if isinstance(s, dict) else None, "to": s.get("to") if isinstance(s, dict) else None} for s in stints]
+        why = keeper_rules.withhold_reason(years)
+        if why:
+            p.error(path, f"this person is withheld by the living-people rule ({why}): a withheld person must have no file (DESIGN.md 3.6)")
+        bad = _forbidden(rec)
+        if bad:
+            p.error(path, f"carries a race or sex field ({bad!r}), which the site never keeps")
+        ids.add(path.stem)
+        files[path.stem] = rec
+    for pid, rec in files.items():
+        for o in rec.get("possibly") or []:
+            if o == pid or o not in ids:
+                p.error(people_dir / f"{pid}.json" if people_dir else pid, f"possibly {o!r} is not another person with a file")
+    for path in sorted(rosters_dir.rglob("*.json")) if rosters_dir and rosters_dir.is_dir() else []:
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            p.error(path, f"not valid JSON: {e}")
+            continue
+        sid = rec.get("station") if isinstance(rec, dict) else None
+        if not isinstance(sid, str) or sid != path.stem:
+            p.error(path, f"station {sid!r} does not match the file name")
+            continue
+        if path.parent.name != regions.station_dir(sid):
+            p.error(path, f"should be in data/rosters/{regions.station_dir(sid)}/")
+        target = recs.get(sid)
+        if target is None:
+            p.error(path, f"roster for {sid}, which is not a station")
+        elif target.get("hidden") or target.get("merged_into"):
+            p.warn(path, f"roster for {sid}, which is hidden or retired: run pipeline/build_people.py again")
+        bad = _forbidden(rec)
+        if bad:
+            p.error(path, f"carries a race or sex field ({bad!r}), which the site never keeps")
+        for pl in rec.get("places") or []:
+            for i, l in enumerate(pl.get("lines") or []):
+                if not (isinstance(l, dict) and isinstance(l.get("name"), str) and l["name"].strip() and isinstance(l.get("person"), str)):
+                    p.error(path, f"a line of {pl.get('slug')} has no name or no person id")
+                    break
 
 
 def check_story(p: Problems, path: Path, text: str) -> None:
@@ -198,7 +305,8 @@ def check_sources(p: Problems, sources_dir: Path) -> None:
             p.error(path, "two records share a key")
 
 
-def validate(stations_dir: Path, research_dir: Path, stories_dir: Path, sources_dir: Path, vocab_path: Path) -> Problems:
+def validate(stations_dir: Path, research_dir: Path, stories_dir: Path, sources_dir: Path, vocab_path: Path,
+             people_dir: Path | None = None, rosters_dir: Path | None = None) -> Problems:
     p = Problems()
     vocab = json.loads(vocab_path.read_text(encoding="utf-8"))
     recs: dict[str, dict] = {}
@@ -242,6 +350,7 @@ def validate(stations_dir: Path, research_dir: Path, stories_dir: Path, sources_
             else:
                 check_story(p, path, text)
     check_sources(p, sources_dir)
+    check_people(p, people_dir, rosters_dir, recs)
     return p
 
 
@@ -251,17 +360,20 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--research", type=Path, default=DATA / "research")
     ap.add_argument("--stories", type=Path, default=DATA / "stories")
     ap.add_argument("--sources", type=Path, default=DATA / "sources")
+    ap.add_argument("--people", type=Path, default=DATA / "people")
+    ap.add_argument("--rosters", type=Path, default=DATA / "rosters")
     ap.add_argument("--vocab", type=Path, default=DATA / "vocab.json")
     ap.add_argument("--quiet", action="store_true", help="print errors only")
     args = ap.parse_args(argv)
-    p = validate(args.stations, args.research, args.stories, args.sources, args.vocab)
+    p = validate(args.stations, args.research, args.stories, args.sources, args.vocab, args.people, args.rosters)
     if not args.quiet:
         for w in p.warnings:
             print(f"warning: {w}")
     for e in p.errors:
         print(f"ERROR: {e}", file=sys.stderr)
     n = len(list(args.stations.rglob("*.json"))) if args.stations.is_dir() else 0
-    print(f"validate: {n} station files, {len(p.errors)} errors, {len(p.warnings)} warnings")
+    k = len(list(args.people.glob("*.json"))) if args.people.is_dir() else 0
+    print(f"validate: {n} station files, {k} people files, {len(p.errors)} errors, {len(p.warnings)} warnings")
     return 1 if p.errors else 0
 
 

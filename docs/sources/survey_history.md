@@ -334,9 +334,13 @@ place for **PDFs of the Board and Commissioner reports** and station histories i
   Edward F. Sexton 1910 only (he drowned that October with the second assistant Roy C. Gill, 1910); a crowded 1930s
   list of second and third assistants including Thomas S. Hassing (1933, then 1938-53 as first assistant).
   Samples: `data/raw/survey/history/uslhs/`.
-- **People ids:** the roster gives names only; person pages are at `/people/<slug>` (Dexter W. Baker: laborer at
-  Abagadasset Point Range, started 1903, salary $250-252). A person who served at two stations is two records; the
-  **"never join two people by name alone"** rule of DESIGN 3.6 applies.
+- **People ids:** a roster line links the person's page, `/people/<slug>` (Dexter W. Baker: laborer at
+  Abagadasset Point Range, started 1903, salary $250-252). The **"never join two people by name alone"** rule of
+  DESIGN 3.6 applies. *Correction, 2026-10-21 (keepers index):* an archive person record is one record per person
+  with a stint for every place, not one per place: 6,210 of the 24,355 slugs on the 2,160 rosters appear at more than
+  one place, and for each of the 34 person pages in the cache the stints on the page are exactly the roster lines
+  that carry its slug (`pipeline/test_keepers.py`, `ArchiveGroundTruthTest`). The slug therefore is the join, and
+  two records with one name (`william-robertson`, `william-robertson-0`) stay two people.
 
 ### 4.2 NARA Record Group 26 keeper records
 

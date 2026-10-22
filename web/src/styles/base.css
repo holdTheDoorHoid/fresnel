@@ -157,7 +157,8 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 2px; }
   .site-nav a { padding: 8px 5px; font-size: 0.88rem; }
   .theme-toggle { padding: 6px 7px; }
 }
-@media (max-width: 330px) { .brand .logo { display: none; } }
+/* Four links beside the brand: below 420px the logo gives way, or the brand runs into the nav. */
+@media (max-width: 420px) { .brand .logo { display: none; } }
 
 .fixture-banner {
   margin: 0; padding: 8px var(--gutter);

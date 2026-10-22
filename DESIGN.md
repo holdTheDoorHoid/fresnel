@@ -31,7 +31,7 @@ worked-out detail, and Fresnel follows it unless this file says otherwise.
 | Audience | Balanced, in layers, as in Firefinder: a clean map for anyone; each page puts visit / climb / stay / access first and the history below. |
 | Stories | **Long-form, in chapters.** Length follows the evidence: about 800–3,000 words for a well-documented light, shorter (down to ~150) when the sources are thin. A short honest story beats a padded one. Chapters, used when there is something to put in them: *The place*, *Building the light*, *The keepers* (with a roster of names, roles and years), *Storms, wrecks and rescues*, *After the keepers*, *Today*. Sources include the Lighthouse Board and Commissioner of Lighthouses annual reports, keeper registers, the Life-Saving Service annual reports, historic-register nominations and old newspapers. Every factual sentence is footnoted. Detail: section 5 and `research/STORY_GUIDE.md`. |
 | Atmosphere | **Sourced scenes plus marked context.** Every detail of a scene (the weather that night, the sound of the fog signal, a keeper's words) comes from a source: logbooks, letters, inspectors' reports, newspaper accounts, weather and wreck records, short quotations in their own words. General passages about the period (what trimming a wick in the 1870s involved, life aboard a lightship) are allowed **only** when framed as general ("On most stations of the period…") and cited to a history of the service. They are **never** presented as having happened at this station. Nothing is invented: no imagined scenes, no guessed feelings, no composite characters. |
-| Writer | Pilot first: the same handful of stations researched once and written by **both Haiku and Sonnet**, shown to the owner side by side; the owner picks the writer for the big run. Then batches, as in Firefinder. |
+| Writer | Pilot first: the same handful of stations researched once and written by **both Haiku and Sonnet**, shown to the owner side by side; the owner picks the writer for the big run. Then batches, as in Firefinder. **Owner decided 2026-10-21 after the pilot (`research/PILOT.md`): the mix.** Sonnet researches and writes the roughly 300 best-documented stations (`research/queue.py --tier sonnet`), Haiku the rest; each model fact-checks its own stories. The big run goes in multi-agent workflows, back to back until the owner says stop, pausing near 90% of the weekly allowance. The pilot's seven Sonnet stories are published. |
 | Publishing | **Public from day one.** Thin or unchecked entries show a visible **Unverified** badge. |
 | Photos | **Same as Firefinder**: mirror photos from every source, hobbyist and registry sites included, **with credit and a takedown note**, served from a separate public repo `holdTheDoorHoid/fresnel-photos`. The owner chose this; do not relitigate. |
 | Features | (a) **The light at night**: the light seen from a ship's deck at sea, flashing in its real characteristic, at a distance the visitor chooses, plus a map ring showing how far out it could be seen (worked out from its focal height and its recorded range); lost lights use their recorded height and characteristic. (b) **Keepers index**: a page for each keeper, linked across every station they served. (c) **Wrecks and rescues**: a map layer of recorded wrecks near each light (NOAA) with the rescues the stories mention. (d) **Old charts and then-and-now**: a historical nautical-chart overlay, a timeline on each page, and a "lights lit per year" slider. By default (told the owner): a **lens and tower-type guide** (Fresnel orders, screwpile, caisson, skeletal iron, conical masonry…) linking to surviving examples, and a **"fix your position" lesson** (bearings on two lights, crossed on the chart), the sailor's version of Firefinder's smoke-spotting lesson. |
@@ -60,17 +60,17 @@ Endpoint rulings (orchestrator, 2026-10-21, from the surveys):
   at `https://www.wikidata.org/wiki/Special:EntityData/<Q>.json` is allowed by wikidata.org's robots.txt.
 - **Wikipedia: article pages only** (`/wiki/<Title>`). Its robots.txt disallows `/w/` (the Action API)
   and `/api/` (REST) for all agents; Firefinder follows the same rule.
-- **Skipped because robots.txt names Anthropic's crawlers** (ClaudeBot, anthropic-ai, Claude-Web):
-  BAnQ numérique, Nauticapedia. Canadiana disallows the same names, and its `/search` and `/file`
-  paths for every agent, so it is skipped too. The owner may overrule (in Firefinder the owner kept a
-  source whose robots.txt named AI crawlers).
+- **robots.txt that names Anthropic's crawlers** (ClaudeBot, anthropic-ai, Claude-Web): BAnQ numérique
+  and Nauticapedia are **used by the owner's decision (2026-10-21)**, told of the ban: politely, at low
+  volume, keeping to each site's rules for all other agents (`*`); `research/polite.py` lists them in
+  `OWNER_ALLOWED_DESPITE_AI_RULES`. Canadiana stays out: it disallows `/search` and `/file` for every agent.
 - **Retired pages through the Wayback Machine: allowed.** A page its publisher has taken down (the
   NPS light-station inventory, old Tripod sites) may be read from the Internet Archive and cited with
   both the original URL and the archive URL.
-- **Live but blocked pages through the Wayback Machine: OWNER'S CALL, on hold.** The USCG Historian's
-  site (public-domain federal histories: station pages with keeper lists, the Lightship Station Index)
-  answers 403 to our requests. The territories survey read 292 archived copies of its pages. Until the
-  owner decides, no fetcher is built on them and no story cites them.
+- **The USCG Historian's pages through the Wayback Machine: allowed (owner, 2026-10-21).** The site
+  (public-domain federal histories: station pages with keeper lists, the Lightship Station Index) answers
+  403 to our requests; its Internet Archive copies may be read and cited, every footnote giving both the
+  original address and the archive copy.
 - **Skipped as blocked:** USCG Historian (`history.uscg.mil`, Akamai 403 to everything), the Michigan
   Lighthouse Conservancy, PEI Island Newspapers, Maritime History of the Great Lakes (Cloudflare
   challenges), Library and Archives Canada search and the New Brunswick archives (robots.txt), NPS IRMA
@@ -293,7 +293,9 @@ data/
                             <dir> is the state or territory code for a US station (me/, pr/),
                             <country>-<region> for any other country (ca-ns/), as in Firefinder
   vessels/<id>.json         one record per lightship vessel (3.5)
-  people/<id>.json          one record per keeper or crew member in the keepers index (3.6)
+  people/<id>.json          one record per keeper or crew member in the keepers index (3.6); id = the archive's person slug
+  rosters/<dir>/<id>.json   the U.S. Lighthouse Society archive's roster for each US station that has one (3.6)
+  people_report.json        counts from pipeline/build_people.py: people, withheld by reason, matches. Never a name
   stories/<id>.md           the researched long-form story with footnotes (section 5)
   research/<id>.json        that research's facts, events, keepers, evidence, sources, fact-check
   photos_manifest.json      mirror output (as in Firefinder); files served from fresnel-photos
@@ -303,9 +305,10 @@ data/
   merge_report.json         pipeline/merge.py's review file (3.9); committed
 ```
 
-Built so far: `sources/`, `stations/`, `merge_report.json`, `vocab.json`. `vessels/`, `people/`,
-`stories/`, `research/` and `photos_manifest.json` come with later rounds; the site already renders
-a story and a keepers roster when they exist (`web/fixtures/` has one of each).
+Built so far: `sources/`, `stations/`, `merge_report.json`, `vocab.json`, and (3.6) `people/`, `rosters/` and
+`people_report.json`. `vessels/`, `stories/`, `research/` and `photos_manifest.json` come with later
+rounds; the site already renders a story and a keepers roster when they exist (`web/fixtures/` has one of
+each).
 
 ### 3.2 Canonical station (`data/stations/<dir>/<id>.json`)
 
@@ -517,28 +520,103 @@ A station with no position is not guessed: it goes to the "can't place yet" list
 
 The research for each station records a **roster**: every keeper, assistant and (on lightships)
 master and crew member the sources name, with role and years and a cite for each line. The roster is
-shown on the station page and feeds `data/people/<id>.json`, one page per person, listing every
-station they served and linking the stories that mention them.
+shown on the station page and feeds the keepers index: one page per person (`/k/<person-id>/`), listing
+every station they served and linking the stories that mention them, and a searchable index of
+them (`/keepers/`).
 
-- **Never join two people by name alone.** Two roster lines become one person only when a source
-  connects them (a transfer "from Portland Head to Cape Elizabeth", the same birth date, a family
-  history that follows one person through both stations). Same name, no link: two people, and the
-  pages say "possibly the same person as…" when the years and places fit.
+**Where the names come from (built 2026-10-21).** Until research has checked a station, its roster is the
+**U.S. Lighthouse Society's Digital Archive's** (`archives.uslhs.org`, "All Rights Reserved": facts only, a
+credit and a link on every page): "Keepers listed by the U.S. Lighthouse Society's Digital Archive, from the
+National Archives' keeper registers". The corpus crawl (`research/roster.py crawl`, 2 s per request) holds 2,160
+rosters of 43,999 lines naming **24,355 people**. A roster line carries the archive's own person record (the slug of
+its `/people/<slug>` page, `william-robertson`, `charles-h-davis-0`), so one record seen at several places is one
+person without anyone reading a person page: the 24,355 pages would take 14 hours at 2 s each, and they would
+add only salary, source and birth and death years, none of which the index needs. That one slug is one person is checked against the archive itself: the 34 person pages in the cache list exactly the stints that the rosters group under their slug (`ArchiveGroundTruthTest`). `pipeline/build_people.py`
+turns the cache into the committed files below; it fetches nothing.
+
+- **Never join two people by name alone.** Two roster lines become one person only when a source connects them.
+  With the archive that is its own record: lines naming the same record are one person's stints, and two
+  records with the same name are two people (the archive itself files a "Thorwald Hansen" and a "Thorwald
+  Hansen-0"). Where two records share a name and their years and region fit one career (the later one begins
+  within 6 years of the earlier one ending, in one state or within 150 km; no overlap of more than a year; each
+  side has at most 3 such candidates, else the name is too common to say anything), each page may say
+  "**possibly the same person as…**" with a link, and **nothing more**: the stints are never merged. Of the
+  published people 22 carry such a hint (11 pairs). A record whose stints overlap by 2 years or more at places
+  100 km or more apart (`check: far_overlap`) gets a plain note that the archive's record may hold two people.
+- **Research rosters join a person only on a source.** In `data/research/<id>.json` a roster line may carry
+  `person` (the archive person slug, from `research/roster.py --json`: the line is that record's stint) and
+  `other_stations` (service elsewhere, each `{name, id?, role?, from, to, cite}` with a **cite**, the connecting
+  source). A line that names a published archive record replaces that person's overlapping archive stint at
+  the station (the research is the checked version of it) and adds its `other_stations`. A line with
+  `other_stations` and no `person` makes a person only the research names (`<station id>--<name slug>`), who is
+  never joined to an archive record of the same name. A line with neither stays a row in the station's table.
+  A `person` the archive does not know is left unlinked with a warning; one the rule withholds is never made a
+  page. The pipeline keeps `person` on a research line only when that person has a page.
 - Family keepers (spouses, children who kept the light) are listed in their own right, with the role
   the source gives ("acting keeper", "assistant", "kept the light after her husband's death").
-- **Living people:** keepers, owners and volunteers who may be alive (roughly anyone whose service
-  ended after 1960) are named only as published sources name them, in their public role, with no
-  personal details beyond what those sources print. Private residents of converted lighthouses are
-  not named unless they present themselves publicly (an inn's owners).
+- **Living people (DECIDED, the owner's 1950/1960 line).** Keepers, owners and volunteers who may be alive
+  (roughly anyone whose service ended after 1960) are named only as published sources name them, in their
+  public role, with no personal details beyond what those sources print. Private residents of converted
+  lighthouses are not named unless they present themselves publicly (an inn's owners). In the keepers index
+  that is a rule with no judgment in it (`keepers.withhold_reason`): **a person any of whose recorded stints
+  begins in 1950 or later, or ends after 1960, or who has no year at all, has no person page and no index
+  entry.** A stint with no end year is read as lasting 30 years, so one that began in 1931 or later is withheld
+  (a career that long was the longest usual). The archive's spans are read as printed ("1950s-" begins in
+  1950; "at least 1950-1951" begins in 1950). The decision is for the whole person, so a keeper who served 1935
+  to 1962 is out. Such people stay **only as lines in the roster tables of the stations**, exactly as the
+  archive prints them (name, role, years). The archive's race and sex fields are never read, stored or shown;
+  roles as printed ("acting keeper", "USCG") are fine. As built: of 24,355 archive people **16,884 have a page and
+  7,471 are withheld** (counted once, by the first rule a stint breaks: 6,879 begin in 1950 or later, 158 end after
+  1960, 321 have an open end that began in 1931 or later, 113 have no year). `validate.py` fails the build if a person with a file breaks the rule, and
+  `test_keepers.py` checks the committed files too.
+
+**Files.** `data/people/<person-id>.json` (16,884 as built):
+
+```json
+{"id": "thorwald-hansen-0", "name": "Thorwald Hansen", "source": "uslhs",
+ "archive": "https://archives.uslhs.org/people/thorwald-hansen-0",
+ "stints": [
+  {"place": "round-island-ms", "place_name": "Round Island MS", "state": "MS", "role": "first assistant",
+   "span": "1909-1911", "from": 1909, "to": 1911}],
+ "possibly": ["thorwald-hansen"]}
+```
+
+`place` is the archive's place slug, `span` the years as printed, `from` / `to` the years read from it (with
+`from_approx` / `to_approx` for "at least"), `role` the normalised role, `role_raw` the archive's heading when it
+is not one of its standard seven ("Machinist"), `check` the far-overlap note. `data/rosters/<dir>/<station
+id>.json` (958 stations) holds, for each US station, the roster of each archive place it shows, every line as
+printed with its `person` slug **whether or not that person has a page**, and `match`, how the place was
+matched. `data/people_report.json` holds counts, never a name. A run on the same cache writes the same bytes
+and deletes files of people the rule now withholds.
+
+**Which archive place is which station.** First the merge's own join: a station whose `sources` hold
+`uslhs:<nid>` shows that place's roster (950 stations; the merge matched name and position, and the doubtful
+ones were reviewed, `docs/sources/review_2026-10-us.md`); a range's front and rear are two places on one
+station. Then, for a station with no archive record at all, `research/roster.py`'s own match (name and position),
+accepted only when it is **by name and position within 1 km**, the place is claimed by no station's merge key
+and no other station is matched to it (8 stations). The fallback's weaker matches ("by name only, WARNING: its
+USLHS position is 790 km from the station's") are refused: they would put one light's keepers on another
+(Pigeon Point 2, Table Bluff, Sabine Bank twice). Lightship stations have no archive rosters.
+
+**What the pages say.** A station page shows its **checked** research roster when it has one (marked "Checked",
+each line with its sources) and a one-line note that the archive lists N lines too; otherwise the archive's
+roster, marked "Not yet checked", with the archive's sentence, the archive place linked, and the credit again
+under Sources and credits. Each name with a person page links to it. A person's page lists the stints in order
+with the station (linked, or the archive's place with a link when the station is not on the map), the role,
+the years as printed and the source of each stint, the "possibly the same person as" block, the written histories of the stations they served at (and whether the
+history's text names them), and the credit. A story is linked only through a station where the person is listed,
+never because its text contains their name: finding "Strout" in another station's story would be joining by
+name. Details in 4.2.
 
 **Roster shape** (`data/research/<id>.json` → `keepers`, rendered as the station page's Keepers
 table; `research/STORY_GUIDE.md` has the research rules):
 
 ```json
 "keepers": [
-  {"name": "Joseph Greenleaf", "role": "keeper", "from": 1791, "to": 1795, "note": "First keeper", "cite": [2]},
+  {"name": "Joseph Greenleaf", "role": "keeper", "from": 1791, "to": 1795, "note": "First keeper", "cite": [2],
+   "person": "joseph-k-greenleaf"},
   {"name": "Joshua F. Strout", "role": "head keeper", "from": 1869, "to": 1904, "cite": [2, 4],
-   "from_approx": false, "other_stations": [{"name": "…", "from": 1860, "to": 1869, "cite": [4]}]}
+   "from_approx": false, "other_stations": [{"name": "…", "id": "us-me-…", "from": 1860, "to": 1869, "cite": [4]}]}
 ]
 ```
 
@@ -550,11 +628,22 @@ table; `research/STORY_GUIDE.md` has the research rules):
 - `note`: text or null.
 - `cite` (required): one or more numbers of the research file's own `sources[].n`; the page links
   each to that source, listed under Sources and credits.
-- `person`, `other_stations`: for the keepers index (later).
+- `person` (optional): the archive person slug this line is the stint of. `other_stations` (optional): service
+  elsewhere with a `cite` for each; `id` when the station is on the map (else the name stays text).
 
-`pipeline/validate.py` rejects a roster line without a name, with a malformed year, or citing a
-number the file's sources do not have. `pipeline/build_site_data.py` copies the roster and the
+`pipeline/validate.py` rejects a roster line without a name, with a malformed year, citing a
+number the file's sources do not have, with a `person` that is not a slug, or an `other_stations` entry
+without a name or a cite. `pipeline/build_site_data.py` copies the roster and the
 research sources into `s/<id>.json` as `keepers` and `research_sources`.
+
+**Canada.** The archive covers the United States only, so the index has no Canadian keepers yet and says so.
+Canadian keepers come from the stations' researched stories (research-only people, joined by `other_stations`
+with a cite), never from name matching. A research roster on any station, Canadian or American, appears in
+the index through the rules above.
+
+**Refreshing.** `python3 pipeline/build_people.py` after the archive cache is rebuilt
+(`research/roster.py crawl` then `build`) or the stations change (`--check` prints the report and writes
+nothing). The site build reads only the committed files, so CI needs no cache.
 
 ### 3.7 Wrecks
 
@@ -788,6 +877,16 @@ file is byte for byte the same.
 - `unplaced.json`: `{count, stations: [{key, kind, name, other_names, region, country, first, last, reason, suggest, vessels, where, url}]}`:
   the lightship and life-saving stations the sources name that no source places and no station on the map holds. `suggest` is false for
   a depot, a bell boat or a station never built.
+- `s/<id>.json` also carries `archive_roster` (`{count, places: [{name, url, count, lines?}]}`) for a station the
+  archive has a roster for: the lines as printed with `person` only where that person has a page, and **no
+  lines** when a checked research roster exists (just the count and the place links). A research line's
+  `person` is kept only when that person has a page.
+- `k/`: the keepers index (`pipeline/keepers.py`, 3.6, 4.2). `index.json` (the manifest: totals, people at more
+  than one place, people left out, counts by surname initial, state and role), `stations.json` (the stations a
+  person served at, for the station filter), `i/<L>.json` (the search index, one file per surname initial,
+  `other.json` for a non-letter; a row is `[id, name, first year, last year, regions, role numbers, station
+  numbers]`) and `p/<L>.json` (each person's page data, **read by the prerender and then deleted**: it is not
+  published).
 
 ---
 
@@ -835,7 +934,7 @@ styles; they are in the sitemap.
   height; range in nautical miles with km; lens; fog signal; structures with roles, types, materials,
   years and their own status; registers; light list numbers); a timeline; **History** (the story with
   an "In this history" chapter list and footnotes, or a plain line that none is written yet and a
-  one-sentence summary labelled as built from the record); **Keepers** (the roster table, 3.6);
+  one-sentence summary labelled as built from the record); **Keepers** (the checked research roster when there is one, else the archive's, each name with a page linked, 3.6);
   photos with credits; where sources disagree; sources and credits (every source of the record with
   its credit line and licence, every link, the research sources); Suggest an edit (a pre-filled
   GitHub issue form, `.github/ISSUE_TEMPLATE/edit.yml`, on holdTheDoorHoid/fresnel); the checklist.
@@ -852,7 +951,7 @@ styles; they are in the sitemap.
   controls are in `web/src/map/controls.ts`, so the light at night, wrecks and old charts are one
   addition each.
 - **Not built yet**: the "lights lit per year" view, a general mini-map on station pages (the light at
-  night has its own, 4.1), the keepers index, vessels, guide and lessons.
+  night has its own, 4.1), vessels, guide and lessons. (The keepers index is 4.2.)
 - **Commands** (in `web/`): `npm run data:fixtures` (sample data) or `npm run data` (the real
   stations), `npm run dev -- --port 5194 --strictPort`, `npm run check`, `npm test`, `npm run build`.
   `.github/workflows/pages.yml` runs the pipeline tests, `validate.py`, `build_site_data.py
@@ -989,6 +1088,48 @@ eye heights, visibility, rings), `light-history.ts` (eras); `web/src/render/nigh
 the live sentence), `render/strip.ts` (the strip); `web/src/ui/night.ts` (scene and controls),
 `ui/night-map.ts` (mini-map); `web/src/map/reach.ts` (map layer and control). Tests:
 `web/test/characteristic.test.ts`, `web/test/night.test.ts`.
+
+### 4.2 The keepers index (built 2026-10-21)
+
+Feature (b) of section 1. The data and the rules are 3.6; this is what the site does with them.
+
+- **`/keepers/`** (header link "Keepers"). The page is prerendered: the counts, a plain explanation (where the
+  names come from, that two people are never joined by name, what "possibly the same person as" means, who is
+  left out and why, that Canada has no keepers here yet), the form's frame and the A to Z letters with their
+  counts. The script then loads the index **lazily, one file per surname initial** (up to 109 KB, 33 KB
+  gzipped; 1.1 MB in all, 0.35 MB gzipped): a typed name reads the chunk of each word's initial (a surname
+  is one of them); a single word searches surnames beginning with it, with a link to **search first names
+  too** (reads every chunk); a letter reads one chunk; a state, role or station filter without a name reads
+  every chunk (about 0.35 MB gzipped, once). The station filter's list (`k/stations.json`, 14 KB gzipped) is read
+  when the field is focused. Search by name (every typed word must begin a word of the name), filter by state or
+  territory, role and station (a text field with a list; a name two stations share also shows its id), counts
+  ("N people found; showing the first 100"), **Show more**; the search is kept in the address
+  (`?q=strout&state=ME&role=head keeper&station=us-me-portland-head&l=S&all=1`) so it can be shared. Without
+  JavaScript the form stays hidden and a notice says so; every station page still lists its keepers, linked.
+  The logic is `web/src/lib/people.ts` (pure, tested, and tested against `pipeline/keepers.py` for the name
+  folding and the letters); the DOM is `src/pages/keepers.ts`.
+- **`/k/<person-id>/`**, prerendered like a station page (`person.html`, 16,884 pages, 8 to 27 KB each, median
+  8.7 KB or 3 KB gzipped; the prerender takes about 15 s for all 19,500 pages). Header: the name, "Listed at 3 places in Maine and New
+  Hampshire, 1861–1878." Sections: **Where they served** (a table: station, role, years as printed, source of
+  each stint: "Archive" with the archive place linked, or "Checked" with the research source numbers linked to
+  the station's list), **Possibly the same person** (only when there is a hint), **In the histories** (the
+  stations' written histories where they served, adding "The history mentions the name “Jane Doe”" only when
+  the history's text contains it: whole-name match, never part of a longer name; a common name may be another
+  person, so it says "the name"), **Sources and credits** (the archive's sentence, the archive's
+  own person page linked, "two records with the same name are never joined", the credit line), and **Suggest a
+  correction** (the edit form on GitHub, filled in). A stint at a place not on the map names the archive's place
+  with a link and says "Not linked to a station page". The page never shows a race or sex, and a sample (fixture)
+  person's page is `noindex` and left out of the sitemap.
+- **Station pages** show the archive's roster as 3.6 says; the section appears for a lightship station too when it
+  has one. A station with neither roster says so plainly and offers "Tell us".
+- **Sitemap and prerender.** `scripts/prerender.ts` writes the index page's body and one page per person from
+  `dist/data/k/p/<L>.json`, deletes those files, and adds every non-sample person to `sitemap.xml` (19,513
+  addresses in all, well under the 50,000 limit). `person.html` and `keepers/index.html` are Vite entries.
+- **Size.** The built site is 260 MB (keeper pages 153 MB, station pages 89 MB, the data 15 MB); the largest
+  station page (Cape Ann, 200 lines of keepers) is 125 KB, 17 KB gzipped.
+- Tests: `web/test/people.test.ts` (names, search logic, the pages from the fixtures: grouping, hints, research
+  joins, the cut-off, escaping), `pipeline/test_keepers.py` (the rules and the committed files);
+  `web/fixtures/people`, `rosters` and `people_report.json` are invented people at the invented stations.
 
 ---
 

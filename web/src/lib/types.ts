@@ -190,6 +190,7 @@ export interface Keeper {
   note?: string | null;
   /** Numbers (`n`) of the research_sources entries this line rests on. */
   cite?: number[] | null;
+  /** The archive person id (the USLHS /people/ slug) when this line is that person's stint; the pipeline keeps it only when the person has a page (/k/<id>/). */
   person?: string | null;
   /** The source gives only an approximate year ("about 1880"). */
   from_approx?: boolean;
@@ -261,6 +262,35 @@ export interface StationRecord {
   vessels?: VesselLink[] | null;
   research_sources?: ResearchSource[] | null;
   research?: ResearchStamp | null;
+  /** The U.S. Lighthouse Society archive's roster for this station (pipeline/keepers.py); lines are left out when a checked research roster exists. */
+  archive_roster?: ArchiveRoster | null;
+}
+
+/** One roster line as the archive prints it (DESIGN.md 3.6). `span` is the printed years ("at least 1950-1951"). */
+export interface ArchiveLine {
+  name: string;
+  role?: string | null;
+  /** The archive's own heading when it is not one of the standard seven. */
+  role_raw?: string | null;
+  span?: string | null;
+  from?: number | null;
+  to?: number | null;
+  from_approx?: boolean;
+  to_approx?: boolean;
+  /** Set only when the person has a page. */
+  person?: string | null;
+}
+
+export interface ArchivePlace {
+  name: string;
+  url: string;
+  count: number;
+  lines?: ArchiveLine[];
+}
+
+export interface ArchiveRoster {
+  count: number;
+  places: ArchivePlace[];
 }
 
 export interface SourceInfo {
@@ -352,6 +382,7 @@ export interface Meta {
       regions: { code: string; name: string; territory?: boolean; stations: number }[];
     }[];
   };
+  keepers?: { people: number; multi: number; withheld: number; letters: number; archive_rosters: number };
   sources: SourceInfo[];
   format?: Record<string, Record<string, string>>;
 }
