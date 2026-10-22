@@ -52,14 +52,6 @@ export function fateWords(v: Pick<VesselPage, 'fate' | 'berth'>): string {
   }
 }
 
-const FATE_LABEL: Record<string, string> = {
-  survives: 'Survives',
-  lost: 'Lost',
-  scrapped: 'Scrapped',
-  sold: 'Sold',
-  unknown: 'Fate not recorded',
-};
-
 /* ---------- The "Vessels" section of a station page ---------- */
 
 function stintYears(stints: VesselLink['stints']): string {
@@ -140,7 +132,6 @@ function vesselIssueUrl(v: VesselPage, ctx: Pick<RenderContext, 'repo' | 'siteUr
 
 export function renderVesselMain(v: VesselPage, ctx: RenderContext): SafeHtml {
   const name = vesselName(v);
-  const status = v.fate?.status ?? 'unknown';
   const other = [v.wal && v.wal !== v.hull ? `Coast Guard number ${v.wal}` : null, ...(v.names ?? []).slice(1).map((n) => `also called ${n}`)].filter(Boolean);
   const berth = berthSection(v, ctx);
   const served = (v.career ?? []).length;
@@ -170,7 +161,7 @@ export function renderVesselMain(v: VesselPage, ctx: RenderContext): SafeHtml {
     <p class="eyebrow">Lightship vessel${typeof v.built === 'number' ? ` · built ${v.built}` : ''}</p>
     <h1>${name}</h1>
     ${other.length ? html`<p class="aka">${other.join('; ')}</p>` : ''}
-    <div class="notices"><p class="status-line"><strong>${FATE_LABEL[status] ?? FATE_LABEL.unknown}.</strong> ${fateWords(v)}</p></div>
+    <div class="notices"><p class="status-line">${fateWords(v)}</p></div>
     <nav class="jump" aria-label="On this page"><ul>${sections.map(([id, title]) => html`<li><a href="#${id}">${title}</a></li>`)}</ul></nav>
   </header>
   <div class="s-grid">

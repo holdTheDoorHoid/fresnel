@@ -317,7 +317,7 @@ export function factsSection(r: StationRecord): SafeHtml {
   station.push(['Location', placeLine(r)]);
   station.push(['Coordinates', html`<span class="coords" data-coords="${plainCoords(r.location.lat, r.location.lon)}">${formatCoords(r.location.lat, r.location.lon)}</span>${r.location.precision && r.location.precision !== 'exact' ? ` (${r.location.precision})` : ''}${disagree(r, 'location')}`]);
   const basis = positionBasis(r);
-  if (basis) station.push(['How the position was found', basis]);
+  if (basis) station.push(['Where the position comes from', basis]);
   if (r.agency) station.push(['Run by', r.agency]);
   const own = lookup(OWNERSHIP, r.ownership);
   if (own && r.ownership !== 'unknown') station.push(['Owner', own]);
