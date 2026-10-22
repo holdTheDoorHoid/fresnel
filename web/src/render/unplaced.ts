@@ -68,7 +68,7 @@ function row(s: UnplacedStation, common: string | null, ctx: RenderContext): Saf
   const why = common !== null && s.reason === common ? 'Not found in the sources read.' : sentence(s.reason);
   const others = (s.other_names ?? []).filter(Boolean);
   return html`<tr id="${rowId(s)}">
-    <th scope="row" data-label="Station">${s.name}${others.length ? html`<span class="sub">Also known as ${others.join('; ')}</span>` : ''}${s.where ? html`<span class="sub">Described as: ${s.where}</span>` : ''}${s.vessels.length ? html`<span class="sub">Vessels: ${s.vessels.map((v, i) => html`${i ? ', ' : ''}<a href="${vesselPath(v.id, ctx)}">${vesselName({ hull: v.hull, names: [] })}</a>`)}</span>` : ''}</th>
+    <th scope="row" data-label="Station"><div>${s.name}${others.length ? html`<span class="sub">Also known as ${others.join('; ')}</span>` : ''}${s.where ? html`<span class="sub">Described as: ${s.where}</span>` : ''}${s.vessels.length ? html`<span class="sub">Vessels: ${s.vessels.map((v, i) => html`${i ? ', ' : ''}<a href="${vesselPath(v.id, ctx)}">${vesselName({ hull: v.hull, names: [] })}</a>`)}</span>` : ''}</div></th>
     <td data-label="Region">${s.region ? regionWithCountry(s.region) || s.region : html`<span class="muted">Not given</span>`}</td>
     <td data-label="Years" class="years">${years || html`<span class="muted">Not recorded</span>`}</td>
     <td data-label="Why no position">${why}</td>
