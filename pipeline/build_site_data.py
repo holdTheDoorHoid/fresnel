@@ -15,6 +15,10 @@ web/public/data/:
                                        {name, role, from, to, note, cite[]}
                       research_sources [{n, title, publisher, url, accessed}] the cites point at
                       research         {researched, verdict, confidence} for the page's line
+  v/<id>.json       a lightship vessel's career, fate and berth (data/vessels/, pipeline/site_vessels.py;
+                    only when --vessels is given), and on a lightship station's s/<id>.json the `vessels`
+                    that served it or lie at it now
+  unplaced.json     the lightship and life-saving stations that no source places on the map, with why
   meta.json         counts, regions, the source list with credit lines and retrieved dates,
                     build date, and the geojson format legend
   redirects.json    {"redirects": {old id: new id}} for stations the merge folded into others
@@ -46,6 +50,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import keepers  # noqa: E402
 import regions  # noqa: E402
+import site_vessels  # noqa: E402
 import story_md  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
@@ -301,6 +306,8 @@ def _prepare_out(out: Path) -> None:
     if (out / "s").exists():
         shutil.rmtree(out / "s")
     (out / "s").mkdir()
+    if (out / "v").exists():
+        shutil.rmtree(out / "v")
 
 
 def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
@@ -324,7 +331,8 @@ def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
 
 def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir: Path, vocab_path: Path,
           out: Path, *, fixtures: bool = False, strict: bool = False, log: Log | None = None,
-          people_dir: Path | None = None, rosters_dir: Path | None = None, people_report: Path | None = None) -> dict:
+          people_dir: Path | None = None, rosters_dir: Path | None = None, people_report: Path | None = None,
+          vessels_dir: Path | None = None) -> dict:
     log = log or Log()
     # The keepers index: committed people and archive rosters, with the research rosters layered on.
     kd = None
@@ -336,6 +344,21 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
     station_info: dict[str, dict] = {}
     story_text: dict[str, str] = {}
     files = sorted(stations_dir.rglob("*.json")) if stations_dir.is_dir() else []
+    # lightship vessels and the can't-place-yet list (pipeline/site_vessels.py): which station holds which source record
+    vessels = site_vessels.load_vessels(vessels_dir) if vessels_dir is not None else {}
+    key_to_id: dict[str, str] = {}
+    visible: dict[str, str] = {}
+    points: dict[str, tuple[float, float]] = {}
+    if vessels_dir is not None:
+        loaded = []
+        for path in files:
+            try:
+                loaded.append(json.loads(path.read_text(encoding="utf-8")))
+            except (OSError, json.JSONDecodeError):
+                pass
+        key_to_id, visible = site_vessels.scan(loaded, lambda r: check_record(r) is None, points)
+        del loaded
+    on_station = site_vessels.station_vessels(vessels, key_to_id, visible)
     vocab = json.loads(vocab_path.read_text(encoding="utf-8")) if vocab_path.is_file() else {}
     headers = load_source_headers(sources_dir, log)
 
@@ -394,6 +417,8 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         if res:
             rec.update(research_extras(res))
             rosters += bool(rec.get("keepers"))
+        if rid in on_station:
+            rec["vessels"] = on_station[rid]
         if has_story:  # a researched story lifts the entry's standing; the record itself is never edited here
             ver = res.get("verification") if res and isinstance(res.get("verification"), dict) else {}
             rec["verification"] = "verified" if ver.get("verdict") in ("pass", "fixed") else "researched"
@@ -429,6 +454,14 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         "redirects": redirects,
     })
 
+    if vessels_dir is not None:
+        (out / "v").mkdir(exist_ok=True)
+        for vid, v in vessels.items():
+            _write_json(out / "v" / f"{vid}.json", site_vessels.vessel_page(v, key_to_id, visible, points))
+        gap = site_vessels.unplaced(sources_dir, key_to_id, vessels)
+        _write_json(out / "unplaced.json", gap)
+        log.info(f"Wrote {len(vessels)} vessel records and {gap['count']} stations that cannot be placed yet")
+
     built = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     keeper_counts = kd.write_site(out, station_info, redirects, story_text, built) if kd else None
 
@@ -460,6 +493,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
             "stories": stories,
             "rosters": rosters,
             "registered": registered,
+            "vessels": len(vessels),
             "by_status": dict(sorted(counts["status"].items())),
             "by_kind": dict(sorted(counts["kind"].items())),
             "by_region": dict(sorted(counts["region"].items())),
@@ -505,6 +539,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--rosters", type=Path, default=None, help="archive rosters of stations (default: data/rosters)")
     ap.add_argument("--people-report", type=Path, default=None, help="default: data/people_report.json")
     ap.add_argument("--sources", type=Path, default=DATA / "sources")
+    ap.add_argument("--vessels", type=Path, default=None,
+                    help="lightship vessel records (default: data/vessels when --stations is data/stations, else none)")
     ap.add_argument("--vocab", type=Path, default=DATA / "vocab.json")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--fallback-fixtures", action="store_true", help="use web/fixtures when data/stations is empty")
@@ -529,7 +565,8 @@ def main(argv: list[str] | None = None) -> int:
         fixtures = True
     build(stations, stories or DATA / "stories", research or DATA / "research", args.sources, args.vocab, args.out,
           fixtures=fixtures, strict=args.strict, log=log, people_dir=people or DATA / "people",
-          rosters_dir=rosters_dir or DATA / "rosters", people_report=report or DATA / "people_report.json")
+          rosters_dir=rosters_dir or DATA / "rosters", people_report=report or DATA / "people_report.json",
+          vessels_dir=None if fixtures else args.vessels or (DATA / "vessels" if args.stations == DATA / "stations" else None))
     if log.warnings:
         log.info(f"{log.warnings} warning(s); see above.")
     return 0

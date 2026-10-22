@@ -134,8 +134,11 @@ SOURCE_ORDER = ["wikidata", "osm",
                 "ca_lightships_lifesaving", "ca_staffed_lightstations", "ccg_list_of_lights", "lighthousefriends",
                 "parks_canada_hl", "uslhs", "nrhp", "territories", "rowlett", "uscg_light_list", "enc", "uslhs_passport"]
 PRECEDENCE = {
-    "name": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "rowlett", "nrhp"],
-    "location": ["osm", "wikidata", "territories", "lighthousefriends", "uslhs", "nrhp"],
+    # lightship_stations names a station as the Light Lists do ("Scotland", not the Society's "Wreck of Scotland")
+    "name": ["wikidata", "osm", "lighthousefriends", "lightship_stations", "uslhs", "territories", "rowlett", "nrhp"],
+    # lightship_stations (DESIGN 2.5): its positions are the Light Lists' own, or worked from them, and lead for a lightship station
+    # (Wikidata's and the Society's points for a mooring are rounded or copied from a lighthouse)
+    "location": ["lightship_stations", "osm", "wikidata", "territories", "lighthousefriends", "uslhs", "nrhp"],
     "region": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
     "kind": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "nrhp"],
     "structure": ["wikidata", "osm", "uslhs", "rowlett", "territories", "nrhp"],
@@ -1482,6 +1485,11 @@ def resolve(st: Station, today: str) -> tuple[dict, dict]:
     location = {"lat": round(pos[0], 6), "lon": round(pos[1], 6),
                 "precision": (loc_rec.raw.get("precision") if loc_rec else None) or "exact",
                 "from": loc_rec.source if loc_rec else None}
+    # a record may say how its position was found ("computed" from a bearing and distance) and give the source text
+    if loc_rec is not None and loc_rec.extra.get("position_from") == "computed":
+        location["from"] = "computed"
+    if loc_rec is not None and loc_rec.extra.get("position_note"):
+        location["note"] = loc_rec.extra["position_note"]
 
     region, region_rec = pick(main_recs, "region", lambda r: r.region)
     if region and not regions.in_region_box(region, pos[0], pos[1]) and loc_rec and loc_rec.region:

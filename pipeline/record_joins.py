@@ -1212,3 +1212,59 @@ KEEP_VISIBLE.add('us-wi-kevich')
 # lists in the town is a separate structure.
 KEEP_VISIBLE.add('us-mi-new-buffalo')
 
+
+
+# ---------------------------------------------------------------------------------------------
+# Life-Saving Service lists (agent/gaps, 2026-10-21): records of data/sources/lss_reports.json that are the
+# same station as one another source already holds, where the list's approximate position is too far from the
+# register's point (or the register names the building by its number) for the matcher to see it. Evidence for
+# each: the station's name in the report, the register's name, and the distance between the two points.
+# ---------------------------------------------------------------------------------------------
+
+# "Umpqua River" station (Winchester Bay), 1891; the Coast Guard station that replaced it stands on the same
+# spot. The printed position is 4.4 km from the register's point; no other Umpqua River station exists.
+_join('us-or-u-s-coast-guard-station-umpqua-river-administration-and-equipment', 'lss_reports:or-umpqua-river')
+
+# Wikidata/NRHP "Coquille River Life Boat Station", 0.5 km from the printed position of "Coquille River".
+_join('us-or-coquille-river-life-boat-station', 'lss_reports:or-coquille-river')
+
+# NRHP "Indian River Life Saving Service Station", 0.7 km from the printed position of "Indian River Inlet".
+_join('us-de-indian-river-life-saving-service-station', 'lss_reports:de-indian-river-inlet')
+
+# NRHP "U.S. Life Saving Station No. 14" (Island Beach State Park), 0.2 km from "Island Beach"; the list's
+# fourteenth station of the Fifth District.
+_join('us-nj-u-s-life-saving-station-no-14', 'lss_reports:nj-island-beach')
+
+# NRHP "U.S. Life-Saving Station No. 35" (Strathmere), 0.5 km from "Tathams".
+_join('us-nj-u-s-life-saving-station-no-35', 'lss_reports:nj-tathams')
+
+# Klipsan Beach Life Saving Station (Ocean Park, WA), 0.4 km from the list's "Ilwaco Beach", which the 1909 list
+# places "13 miles north of Cape Disappointment": the same station under the name of the nearest town.
+_join('us-wa-klipsan-beach-life-saving-station', 'lss_reports:wa-ilwaco-beach')
+
+# West Quoddy Lifesaving Station (NRHP, Wikidata), 1.3 km from the list's "Quoddy Head".
+_join('us-me-west-quoddy-lifesaving-station', 'lss_reports:me-quoddy-head')
+
+
+# ---------------------------------------------------------------------------------------------
+# Lightship stations (agent/gaps, 2026-10-21): lightship_stations records whose station the matcher cannot see.
+# ---------------------------------------------------------------------------------------------
+
+# Wikidata's "Five Fathom Bank light station" (Q18150126) is the Society's Five Fathom Bank lightship station, but
+# its point (38.8354 N, 75.0119 W) is at the mouth of Delaware Bay, 38 km from where the Light List prints the
+# lightship (1900, page 92, entry 462: 38 47 20 N, 74 34 36 W, off Cape May). The Light List's point leads; Wikidata's is set aside.
+_join('us-nj-five-fathom-bank', 'lightship_stations:five-fathom-bank')
+NO_POSITION.add('wikidata:Q18150126')
+
+# The Society's and Light Lists' name for the station is "Five Fathom Bank"; Wikidata's label adds "light station".
+NAME_PICKS['us-nj-five-fathom-bank'] = 'Five Fathom Bank'
+
+# The surviving lightship Swiftsure (LV-83) was two stations: us-wa-swiftsure (Wikidata Q7656131) and us-wa-swiftsure-2
+# (Lighthouse Friends 185 and the National Register 75001852). One vessel: both carry NRHP number 75001852, Wikidata's Wikipedia
+# link is "United States lightship Swiftsure (LV-83)" and Lighthouse Friends' title is "Lightship Swiftsure LV 83/WAL 508", both are
+# in King County, WA. The matcher kept them apart because Wikidata's point (47.6749 N, 122.207 W) is 11.0 km from the register's
+# batch point (47.6282, -122.3367) and Lighthouse Friends' (47.62806, -122.33703), which agree with each other to 30 m and lie at
+# Lake Union, Seattle, where the ship is berthed; the hard-key join reaches 10 km. Wikidata's point is the wrong one. The records of
+# us-wa-swiftsure-2 join the plainer id (both are live; the file of -2 stays, hidden, with merged_into, and its address redirects).
+_join('us-wa-swiftsure', 'lighthousefriends:185', 'nrhp:75001852')
+NO_POSITION.add('wikidata:Q7656131')

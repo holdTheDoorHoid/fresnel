@@ -237,6 +237,46 @@ positions for a handful of lights are tens of kilometres out (Six Mile Point Ran
 (Ship Shoal, Cape Fear, Point Stuart) and the Society's (Oswego, Split Rock, Race Point): the decisions are in
 `pipeline/record_joins.py`, with their reasons in `docs/sources/review_2026-10-us.md`.
 
+### 2.5 Life-saving and lightship stations from their own lists (2026-10-21, branch `agent/gaps`)
+
+The Society's and Rowlett's lists name most life-saving and lightship stations but give no position for them (2.4). Two more
+extracts fill that gap from US government publications (public domain), each from its own fetcher with tests; the raw pages
+are in `$FRESNEL_RAW_ROOT`, the Internet Archive page of every volume is linked in the extract. Facts only from the Society.
+
+| Source id | Fetcher | Licence and use | What it supplies |
+|---|---|---|---|
+| `lss_reports` | `fetch_lss_reports.py` (table reader: `lss_table.py`) | US federal public domain (the Life-Saving Service's annual reports, 1884-1909, 30 volumes on the Internet Archive; the OCR text) | The reports' "list of life-saving districts and stations": the 1909 list with its latitude and longitude first, the earlier lists for stations closed before 1909. 225 stations (217 with a position), district, locality, the years each is listed, the report's footnotes ("Discontinued ...") and Florida's ten Houses of Refuge. OCR of the tables is poor, so a position is kept only when it clears several checks (2 below); a row that cannot be read cleanly is **left out and listed** in `docs/sources/review_2026-10-lss_reports.md`, never guessed |
+| `lightship_stations` | `fetch_lightship_stations.py` (reads `uslhs_vessels.py`, `geo.py`) | The list, years and vessels: (c) U.S. Lighthouse Society, facts only with a link. Positions: the Light Lists of the Light-House Board and Lighthouse Service and the Light-House Board's 1895 report (public domain) | The Society's 138 lightship stations (its "Cape Hatteras" stub is folded into Diamond Shoal), each with years, alternate names and the vessels that served it. **A position comes only from a source that gives one**: a latitude and longitude printed in a Light List (1893, 1900, the Great Lakes list of 1924-28, New England 1934; read from the page images into `data/lightships/ll_entries.jsonl`: list, page, entry number, text), or a bearing and distance from a named light, worked from that light's own position (`data/lightships/computed.json`). 44 stations are placed (42 printed, 2 computed); 94 are not and go to `unplaced.json` with the reason (3.5, 3.10); `docs/sources/review_2026-10-lightship_stations.md` lists each position with its page and the conflicts |
+
+How the two are read and joined:
+
+1. **A station table of the Life-Saving reports** is read as blocks: *k* names, *k* state cells, the locality cells and 2*k* coordinate
+   triples. A latitude is told from a longitude by its degrees (a latitude is under 50, a longitude at least 66; Alaska has a case of its own). Four other layouts the OCR produces (row order, column order, split numbers, paired blocks) are read the same way;
+   a block that will not read is read column by column, and a row whose parts do not add up is dropped. The Great Lakes lists have no
+   latitude and longitude in print and are not read.
+2. **Readings from the volumes are pooled.** Clean readings within 2 km of each other (same state) are one station; the name is
+   voted and spelled from the words the corpus knows; renamed and reused names make separate stations (Plum Island / Newburyport). A
+   position is kept only if it lies in its state (the bounding box and the Census polygon, 8 km tolerance), no other source contradicts
+   it, a single reading has a neighbour in its own list within 60 km (or another source vouches for it), and a single-volume name is made
+   of known words. A "station number" is **not** printed in the tables; `extra.list_position` is the station's place in the 1909 district
+   list when the count matches the report's own total (New Jersey's matches the National Register's numbers before Avalon, which was
+   inserted: Tathams is 36 where the Register says No. 35).
+3. **Joins** to the stations already on the map are by name and position in the merge (3.9); seven the matcher cannot see (a name taken from
+   the nearest town, a position 1 to 4 km off) are pinned in `record_joins.py` with the evidence. 236 life-saving stations after the merge:
+   54 existing and 182 new. A status is never invented: it stays unknown unless a source says standing or lost (a discontinuation
+   footnote is a dated event, not a status).
+4. **A Light List entry** is tied to a station by the vessel's number and the list's year against the Society's assignment table and by the
+   name; one that does not agree is not used. The Light Lists say "bearings and courses given are magnetic" (1893, 1900) and give distances
+   in nautical miles; `geo.py` turns a compass point ("SE. by E. 1/4 E.") into degrees, the magnetic bearing into a true one with the
+   IGRF-14 declination of the place and year (`data/reference/igrf14coeffs.txt`, IAGA's coefficients, 1900 on; pure Python, checked
+   against pyIGRF to 3 decimals), and a great-circle sum gives the point. **Worked example** (a test in `test_geo.py`): Pollock Rip
+   Light-Vessel No. 47, Light List 1900 page 42, entry 143, "about 4 miles SE. by E. 1/4 E. from Monomoy Point Light-House", Monomoy at
+   41 33 34 N, 69 59 39 W: 120.94 degrees magnetic, 108.09 true (declination -12.85), 4 nautical miles, lands 80 m from the entry's own printed
+   41 32 17 N, 69 54 36 W. A computed position is `precision: "approximate"`, `from: "computed"`, with the source text in `location.note`.
+5. **In the merge** `lightship_stations` leads for `location` and for `name` of a lightship station (the Lists' name, "Scotland", over the
+   Society's "Wreck of Scotland"; Wikidata's and the Society's points for a mooring are rounded or copied from a lighthouse), and a record with
+   no position joins the station of its name or waits (`not_shown`) and appears in `unplaced.json`.
+
 ---
 
 ## 3. Data model
@@ -448,10 +488,33 @@ charted.
 
 A **lightship station** (Nantucket Shoals, Diamond Shoals, Ambrose, Lurcher Shoal…) is a map entry like any
 station, at its charted position, with the vessels that served it by years. A **vessel** has its own
-record (`data/vessels/<id>.json`, id from its hull number: `lv-112`, `wal-534`, Canadian names
-slugged) with its career (stations and years), its fate, and, if it survives, its berth. A
-surviving vessel is also on the map at its berth (`kind: lightship`). The keepers index covers
-lightship crews the same way as keepers.
+record (`data/vessels/<id>.json`, id from its hull number: `lv-112`, `wlv-604`, `wal-612`, a ship the Society
+knows by a letter code `lv-zz` or by a name `kewaunee`; Canadian names slugged) with its career (stations and
+years), its fate, and, if it survives, its berth. A surviving vessel is also on the map at its berth
+(`kind: lightship`). The keepers index covers lightship crews the same way as keepers.
+
+**Vessel record** (`pipeline/build_vessels.py`, from the US Lighthouse Society's 170 vessel pages, facts only, each linked):
+
+```
+{"id": "lv-112", "hull": "LV-112", "wal": "WAL-534", "names": ["Nantucket"], "built": 1936, "retired": 1975,
+ "career": [{"station": "Nantucket Shoals", "station_key": "lightship_stations:nantucket-shoals", "start": 1936, "end": 1942}, ...],
+ "fate": {"status": "survives" | "lost" | "scrapped" | "sold" | "unknown", "year": 1944 | null, "existing": true, "doubtful": true (only when the Society says both)},
+ "berth": {"station_id": "us-ma-lightship-nantucket", "name": ..., "basis": ...} | null,   (the site shows the station's own name and point)
+ "sources": [{"label": ..., "url": "https://archives.uslhs.org/node/4156", "credit": ...}]}
+```
+
+A career line names its station by the **source key** (`lightship_stations:<slug>`), never by an id a later merge might number
+differently; the site resolves it (3.10). A line that is no station ("Examination Vessel WWII") keeps its words and has no key.
+The fate is read from the Society's remark (sunk, wrecked, burned: `lost`; scrapped, broken up: `scrapped`; sold, privately owned:
+`sold`) and its year kept; the remark's own words are not. The **berth** is the map station of `kind: lightship` that carries the hull
+number in its names (Wikidata, the National Register, Lighthouse Friends), or one tied by hand with its reason (`BERTH_BY_HAND`);
+sixteen vessels survive, fifteen have a berth on the map already, so nothing was added; the sixteenth, LV-75 (the Society's remark also
+says "possibly scrapped 2013"), has none that any source gives. Two vessels (WAL-612 and WAL-613, Nantucket I and II) share one map station.
+
+**Positions**: only from a source that gives one (2.5). `lightship_stations` records carry `extra.position_from` (`light_list` or
+`computed`), `extra.position_note` (the page, the entry, the printed text) and `extra.position` (list, page, entry, the other lists'
+readings and how the entry was tied); the merge writes `location.from` (`"lightship_stations"` or `"computed"`) and `location.note`.
+A station with no position is not guessed: it goes to the "can't place yet" list (`unplaced.json`, the page `/unplaced/`, 3.10, 4).
 
 ### 3.6 Keepers index
 
@@ -806,6 +869,14 @@ file is byte for byte the same.
   in listing order (states and DC, then the territories, then Canada), the sources with licence,
   credit line, retrieved date and how many stations each supplies, build date, `fixtures`.
 - `redirects.json`: `{redirects: {old id: new id}}` for retired stations.
+- `v/<id>.json` (when `--vessels` is given or `--stations` is `data/stations`): a vessel's page data (3.5) with each career line's
+  `station_id` resolved from its source key to the published station (null when that station is not on the map), the berth when its
+  station is published, and the sources. `pipeline/site_vessels.py` writes it.
+- On a lightship station's `s/<id>.json`: `vessels`, `[{id, hull, names, role: "served" | "berth", stints: [{start, end}]}]`: the vessels
+  that served it by first year, or (a surviving hull's berth) the vessel that lies there.
+- `unplaced.json`: `{count, stations: [{key, kind, name, other_names, region, country, first, last, reason, suggest, vessels, where, url}]}`:
+  the lightship and life-saving stations the sources name that no source places and no station on the map holds. `suggest` is false for
+  a depot, a bell boat or a station never built.
 - `s/<id>.json` also carries `archive_roster` (`{count, places: [{name, url, count, lines?}]}`) for a station the
   archive has a roster for: the lines as printed with `person` only where that person has a page, and **no
   lines** when a checked research roster exists (just the count and the place links). A research line's
@@ -828,6 +899,14 @@ Pages planned: map (`/`), station pages (`/s/<id>/`), keepers index (`/keepers/`
 vessels (`/v/<id>/`), lens and tower guide (`/guide/`), lessons (`/learn/`), credits and about. The
 light at night and the range ring are built like Firefinder's view from the cab (Rust → WebAssembly
 where terrain matters, otherwise TypeScript).
+
+**Built (agent/gaps, 2026-10-21):** vessel pages (`/v/<id>/`: the career as a table with each station linked, the fate, the berth of a
+survivor, the sources; `web/src/render/vessel.ts`), a "Lightship vessels" section on a lightship station's page (the vessels that
+served it with their years, or the hull at its berth), a "Where the position comes from" line under Coordinates when the record says
+(a Light List page and entry, or a computed position with the words it was worked from), and the page of stations we can't place yet
+(`/unplaced/`: name, region, years, why no position, and a pre-filled **Suggest a location** link to the edit form;
+`web/src/render/unplaced.ts`; linked from About). All three go through the station page's template in `scripts/prerender.ts` and its
+styles; they are in the sitemap.
 
 **Built (scaffold, 2026-10-21):**
 
