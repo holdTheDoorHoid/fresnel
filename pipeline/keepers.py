@@ -450,11 +450,6 @@ def dump(obj: object) -> str:
     return _fmt(obj, 0) + "\n"
 
 
-def roster_path(rosters_dir: Path, station_id: str) -> Path:
-    import regions  # local: only the file layout needs it
-    return rosters_dir / regions.station_dir(station_id) / f"{station_id}.json"
-
-
 def write_tree(directory: Path, files: dict[str, object]) -> tuple[int, int]:
     """Write {relative path: object} under `directory` as JSON, and remove .json files there that the
     set no longer holds (a person who has become withheld must disappear). Returns (written, removed)."""
