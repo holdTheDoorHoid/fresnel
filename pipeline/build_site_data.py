@@ -19,6 +19,9 @@ web/public/data/:
                     build date, and the geojson format legend
   redirects.json    {"redirects": {old id: new id}} for stations the merge folded into others
                     (merged_into); the prerender step writes a redirecting page at each old address
+  k/                the keepers index (keepers.py, DESIGN.md 3.6): index.json, stations.json, i/<L>.json
+                    and p/<L>.json; and in s/<id>.json an `archive_roster` for a station the U.S.
+                    Lighthouse Society's archive has a roster for
 
 Hidden records (hidden: true) and retired ones (merged_into) are not published. A record that
 fails basic checks is skipped with a warning, so one bad file never takes the site down; pass
@@ -41,6 +44,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import keepers  # noqa: E402
 import regions  # noqa: E402
 import story_md  # noqa: E402
 
@@ -319,8 +323,18 @@ def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
 
 
 def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir: Path, vocab_path: Path,
-          out: Path, *, fixtures: bool = False, strict: bool = False, log: Log | None = None) -> dict:
+          out: Path, *, fixtures: bool = False, strict: bool = False, log: Log | None = None,
+          people_dir: Path | None = None, rosters_dir: Path | None = None, people_report: Path | None = None) -> dict:
     log = log or Log()
+    # The keepers index: committed people and archive rosters, with the research rosters layered on.
+    kd = None
+    if people_dir is not None or rosters_dir is not None:
+        kd = keepers.KeeperData(keepers.load_people(people_dir), keepers.load_station_rosters(rosters_dir),
+                                keepers.load_research_dir(research_dir), keepers.load_report(people_report))
+        for w in kd.warnings:
+            log.warn(w)
+    station_info: dict[str, dict] = {}
+    story_text: dict[str, str] = {}
     files = sorted(stations_dir.rglob("*.json")) if stations_dir.is_dir() else []
     vocab = json.loads(vocab_path.read_text(encoding="utf-8")) if vocab_path.is_file() else {}
     headers = load_source_headers(sources_dir, log)
@@ -370,6 +384,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         has_story = story.is_file()
         if has_story:
             md = story.read_text(encoding="utf-8")
+            story_text[rid] = md
             rec["story_html"] = story_md.markdown_to_html(md, title=rec.get("name"))
             chapters = story_md.chapters_of(md)
             if chapters:
@@ -382,6 +397,9 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         if has_story:  # a researched story lifts the entry's standing; the record itself is never edited here
             ver = res.get("verification") if res and isinstance(res.get("verification"), dict) else {}
             rec["verification"] = "verified" if ver.get("verdict") in ("pass", "fixed") else "researched"
+        if kd:
+            kd.station_extras(rid, rec)
+        station_info[rid] = {"name": rec["name"], "region": rec["region"], "fixture": bool(rec.get("fixture"))}
         _write_json(out / "s" / f"{rid}.json", rec)
         features.append(feature(rec, has_story))
         country = country_of(rec)
@@ -411,6 +429,9 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         "redirects": redirects,
     })
 
+    built = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    keeper_counts = kd.write_site(out, station_info, redirects, story_text, built) if kd else None
+
     source_ids = list(KNOWN_SOURCES) + sorted((set(headers) | set(cited)) - set(KNOWN_SOURCES))
     sources = []
     for sid in source_ids:
@@ -429,7 +450,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
         })
 
     meta = {
-        "built": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "built": built,
         "fixtures": any_fixture,
         "counts": {
             "total": len(features),
@@ -447,6 +468,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
             "by_verification": dict(sorted(counts["verification"].items())),
         },
         "regions": regions_meta(counts["region"]),
+        **({"keepers": keeper_counts} if keeper_counts else {}),
         "sources": sources,
         "format": {"stations.geojson": FORMAT},
     }
@@ -455,6 +477,9 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
     log.info(f"Wrote {len(features)} stations ({hidden} hidden, {len(redirects)} merged into others, "
              f"{skipped} skipped, {stories} stories, {rosters} keeper rosters) to {out}; "
              f"stations.geojson is {size / 1024:.0f} KiB")
+    if keeper_counts:
+        log.info(f"Keepers index: {keeper_counts['people']} people ({keeper_counts['multi']} at more than one place), "
+                 f"{keeper_counts['archive_rosters']} stations show the archive's roster")
     return meta
 
 
@@ -476,6 +501,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--stations", type=Path, default=DATA / "stations")
     ap.add_argument("--stories", type=Path, default=None, help="story Markdown (default: data/stories)")
     ap.add_argument("--research", type=Path, default=None, help="research JSON (default: data/research)")
+    ap.add_argument("--people", type=Path, default=None, help="people records (default: data/people)")
+    ap.add_argument("--rosters", type=Path, default=None, help="archive rosters of stations (default: data/rosters)")
+    ap.add_argument("--people-report", type=Path, default=None, help="default: data/people_report.json")
     ap.add_argument("--sources", type=Path, default=DATA / "sources")
     ap.add_argument("--vocab", type=Path, default=DATA / "vocab.json")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
@@ -486,6 +514,7 @@ def main(argv: list[str] | None = None) -> int:
     log = Log(args.quiet)
 
     stations, stories, research = args.stations, args.stories, args.research
+    people, rosters_dir, report = args.people, args.rosters, args.people_report
     fixtures = False
     if not (stations.is_dir() and any(stations.rglob("*.json"))):
         if not args.fallback_fixtures:
@@ -496,9 +525,11 @@ def main(argv: list[str] | None = None) -> int:
         stations = FIXTURES / "stations"
         stories = stories or FIXTURES / "stories"
         research = research or FIXTURES / "research"
+        people, rosters_dir, report = people or FIXTURES / "people", rosters_dir or FIXTURES / "rosters", report or FIXTURES / "people_report.json"
         fixtures = True
     build(stations, stories or DATA / "stories", research or DATA / "research", args.sources, args.vocab, args.out,
-          fixtures=fixtures, strict=args.strict, log=log)
+          fixtures=fixtures, strict=args.strict, log=log, people_dir=people or DATA / "people",
+          rosters_dir=rosters_dir or DATA / "rosters", people_report=report or DATA / "people_report.json")
     if log.warnings:
         log.info(f"{log.warnings} warning(s); see above.")
     return 0

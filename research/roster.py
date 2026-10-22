@@ -6,6 +6,10 @@
   research/roster.py --name "Split Rock" --state MN [--near 47.2,-91.37]
   research/roster.py crawl | build | stats        maintenance (see below)
 
+`--json` prints every line with its `person`: the archive's person slug (its /people/<slug> page). A research
+roster line that IS that person's stint names it (`"person": "<slug>"`), which is how the keepers index joins the
+research to the archive's person record (DESIGN.md 3.6; never join two people by name alone).
+
 The archive is "All Rights Reserved": we keep FACTS ONLY (names, roles, years, salaries, positions,
 flags), never its prose, and cite the place page. Rosters come from NARA's Registers of Lighthouse
 Keepers via Kraig Anderson's inventory, so every line is a start, not a final word: a story still cites a

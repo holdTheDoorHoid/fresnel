@@ -8,9 +8,10 @@ const root = import.meta.dirname;
 
 /** Which header link is the current page, from the entry's path. */
 function navFor(path: string): string {
+  if (path.includes('keepers')) return 'keepers';
   if (path.includes('credits')) return 'credits';
   if (path.includes('about')) return 'about';
-  if (path.includes('404') || path.includes('station')) return 'none';
+  if (path.includes('404') || path.includes('station') || path.includes('person')) return 'none';
   return 'map';
 }
 
@@ -54,6 +55,8 @@ export default defineConfig({
         about: resolve(root, 'about/index.html'),
         credits: resolve(root, 'credits/index.html'),
         station: resolve(root, 'station.html'),
+        person: resolve(root, 'person.html'),
+        keepers: resolve(root, 'keepers/index.html'),
         notfound: resolve(root, '404.html'),
       },
     },
