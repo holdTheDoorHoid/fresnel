@@ -1212,3 +1212,35 @@ KEEP_VISIBLE.add('us-wi-kevich')
 # lists in the town is a separate structure.
 KEEP_VISIBLE.add('us-mi-new-buffalo')
 
+
+
+# ---------------------------------------------------------------------------------------------
+# Life-Saving Service lists (agent/gaps, 2026-10-21): records of data/sources/lss_reports.json that are the
+# same station as one another source already holds, where the list's approximate position is too far from the
+# register's point (or the register names the building by its number) for the matcher to see it. Evidence for
+# each: the station's name in the report, the register's name, and the distance between the two points.
+# ---------------------------------------------------------------------------------------------
+
+# "Umpqua River" station (Winchester Bay), 1891; the Coast Guard station that replaced it stands on the same
+# spot. The printed position is 4.4 km from the register's point; no other Umpqua River station exists.
+_join('us-or-u-s-coast-guard-station-umpqua-river-administration-and-equipment', 'lss_reports:or-umpqua-river')
+
+# Wikidata/NRHP "Coquille River Life Boat Station", 0.5 km from the printed position of "Coquille River".
+_join('us-or-coquille-river-life-boat-station', 'lss_reports:or-coquille-river')
+
+# NRHP "Indian River Life Saving Service Station", 0.7 km from the printed position of "Indian River Inlet".
+_join('us-de-indian-river-life-saving-service-station', 'lss_reports:de-indian-river-inlet')
+
+# NRHP "U.S. Life Saving Station No. 14" (Island Beach State Park), 0.2 km from "Island Beach"; the list's
+# fourteenth station of the Fifth District.
+_join('us-nj-u-s-life-saving-station-no-14', 'lss_reports:nj-island-beach')
+
+# NRHP "U.S. Life-Saving Station No. 35" (Strathmere), 0.5 km from "Tathams".
+_join('us-nj-u-s-life-saving-station-no-35', 'lss_reports:nj-tathams')
+
+# Klipsan Beach Life Saving Station (Ocean Park, WA), 0.4 km from the list's "Ilwaco Beach", which the 1909 list
+# places "13 miles north of Cape Disappointment": the same station under the name of the nearest town.
+_join('us-wa-klipsan-beach-life-saving-station', 'lss_reports:wa-ilwaco-beach')
+
+# West Quoddy Lifesaving Station (NRHP, Wikidata), 1.3 km from the list's "Quoddy Head".
+_join('us-me-west-quoddy-lifesaving-station', 'lss_reports:me-quoddy-head')

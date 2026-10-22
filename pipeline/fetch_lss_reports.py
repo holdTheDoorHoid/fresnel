@@ -64,6 +64,10 @@ MOVED_KM = 8.0              # the same name this far apart, in different years, 
 FIRST_YEAR = 1884           # the first report whose list carries positions
 TABLE_WINDOW = 1200         # raw lines after the last district's heading that the table may run
 SOURCE_SOURCES = ("nrhp", "wikidata", "osm", "uslhs", "territories")
+# Names the lists print that are not stations, with the reason (a locality, a landmark, a station of another state)
+NOT_STATIONS = {
+    ("NH", "greatboarshead"): "a headland the Hampton Beach station's locality is measured from ('1.5 miles north of Great Boars Head')",
+}
 
 
 # ---------------------------------------------------------------------------------------------
@@ -110,6 +114,38 @@ def end_of_table(lines: list[str], start: int, stop: int) -> int:
         if re.search(r"INSTRUCTIONS\s+TO\s+MARINERS|PERIODS\s+OF\s+EMPLOYMENT|HOUSES?\s+OF\s+REFUGE\s*\.?\s*$", lines[k]):
             return k
     return stop
+
+
+DISTRICT_WORDS = {"first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5, "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9,
+                  "tenth": 10, "eleventh": 11, "twelfth": 12, "thirteenth": 13}
+
+
+def expected_counts(lines: list[str]) -> dict[int, int]:
+    """The report's own count of stations in each district ("Fifth district (coast of New Jersey) ... 42"), printed in
+    its summary of the service. It is the check that a district's list was read whole."""
+    out: dict[int, int] = {}
+    for ln in lines:
+        m = re.match(r"^\s*(\w+)[,.]?\s+district\s*(?:\([^)]*\))?\s*[.\s_\w]{0,6}?\s*(\d{1,2})\s*$", re.sub(r"\s+", " ", ln), re.I)
+        if m and m.group(1).lower() in DISTRICT_WORDS and m.group(1).lower() not in ("district",):
+            out.setdefault(DISTRICT_WORDS[m.group(1).lower()], int(m.group(2)))
+    return out
+
+
+def list_ranks(readings: list[dict], volume: dict) -> dict[int, tuple[int, int]]:
+    """id(reading) -> (position, size) in its district's list, for a report whose district was read whole: as many
+    rows (a name, even a damaged one, and a state) as the report says the district has. The Service numbered its stations along the coast
+    in this order (New Jersey's Squan Beach is No. 9, Island Beach 14, Absecon 28, Tathams 35: the lists do not
+    print the numbers)."""
+    lines = (c.RAW_ROOT / "corpus" / volume["path"]).read_text(encoding="utf-8", errors="replace").split("\n")
+    expected = expected_counts(lines)
+    rows = [r for r in readings if r["volume"] == volume["identifier"] and r["state"]]
+    out: dict[int, tuple[int, int]] = {}
+    for d, n in expected.items():
+        dr = sorted((r for r in rows if r["district"] == d), key=lambda r: r["pos"])
+        if len(dr) == n:
+            for i, r in enumerate(dr, 1):
+                out[id(r)] = (i, n)
+    return out
 
 
 def load_volumes(min_year: int = FIRST_YEAR) -> list[dict]:
@@ -462,7 +498,7 @@ def station_label(name: str, state: str, house_of_refuge: bool) -> str:
     return f"{name} House of Refuge" if house_of_refuge else f"{name} Life-Saving Station"
 
 
-def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict]) -> dict:
+def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict], ranks: dict | None = None) -> dict:
     name_vote, single = pick_name(st["names"])
     rs = st["members"] + st.get("loose", [])
     foot = " ".join(r["footnote"] or "" for r in rs if r.get("footnote"))
@@ -480,8 +516,8 @@ def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict]) -> dict:
     ev = []
     first, last = years[0], years[-1]
     ev.append({"year": first, "event": "other",
-               "note": f"First listed among the Life-Saving Service's stations in the report for {first}"
-                       f"{'' if first > FIRST_YEAR else ' (the earliest report read with a station list)'}",
+               "note": f"Among the stations in the Life-Saving Service's list in the report for {first} (the earliest report in which this station "
+                       f"could be read; not an opening date)",
                "from": SOURCE})
     for r in rs:
         m = DISCONTINUED.search(r.get("footnote") or "")
@@ -494,8 +530,11 @@ def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict]) -> dict:
     locs = Counter((r.get("locality") or "").strip() for r in rs if r.get("locality"))
     rec["links"] = [{"label": f"Annual Report of the U.S. Life-Saving Service for {volumes_by_id[src_vol]['year']}: list of life-saving districts and stations",
                      "url": f"https://archive.org/details/{src_vol}", "kind": "reference"}]
+    rank = next((ranks[id(r)] for r in rs if ranks and id(r) in ranks), None)
     rec["extra"] = {
         "district": districts.most_common(1)[0][0] if districts else None,
+        "list_position": rank[0] if rank else None,
+        "list_size": rank[1] if rank else None,
         "district_year": district_year,
         "years_listed": years,
         "locality": locs.most_common(1)[0][0] if locs else None,
@@ -666,6 +705,15 @@ def build(min_year: int = FIRST_YEAR) -> tuple[list[dict], dict]:
     ref = load_reference()
     placed, left, name_only, vocab = stations_from(readings, lookup, ref)
     unplaced = name_only_stations(name_only, vocab)
+    placed_names = {(st["state"], squash(pick_name(st["names"])[0]["name"])) for st in placed}
+    unplaced = [st for st in unplaced
+                if (st["state"], squash(pick_name(st["names"])[0]["name"])) not in NOT_STATIONS
+                and not any(n == squash(pick_name(st["names"])[0]["name"]) and s_ != st["state"] for s_, n in placed_names)]
+    newest_year = max(v["year"] for v in vols)
+    ranks: dict = {}
+    for v in vols:
+        if v["year"] == newest_year:
+            ranks.update(list_ranks(readings, v))
     # a station keeps one record key for good: <state>-<slug of its name>, numbered when two share a name
     records, seen = [], Counter()
     for st in sorted(placed + unplaced, key=lambda s: (s["state"], pick_name(s["names"])[0]["name"], -(s.get("lat") or 0), s.get("lon") or 0)):
@@ -674,7 +722,7 @@ def build(min_year: int = FIRST_YEAR) -> tuple[list[dict], dict]:
         seen[base] += 1
         ident = base if seen[base] == 1 else f"{base}-{seen[base]}"
         st["ident"] = ident
-        records.append(make_record(st, ident, volumes_by_id))
+        records.append(make_record(st, ident, volumes_by_id, ranks))
     notes = {
         "volumes_read": {v["identifier"]: {**vstats[v["identifier"]], "table_found": vstats[v["identifier"]]["rows"] > 0} for v in vols},
         "stations_with_position": sum(1 for r in records if r["lat"] is not None),

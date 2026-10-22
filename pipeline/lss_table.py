@@ -180,8 +180,8 @@ def classify(raw_lines: list[str]) -> tuple[list[Cell], list[tuple[str, str]], l
             continue
         if not re.search(r"[A-Za-z0-9]", ln):
             continue
-        if re.fullmatch(r"\d{1,3}", ln) and k in near_header and (int(ln) > 125 or int(ln) < 18):
-            continue                                # a page number beside the running head (never a degree)
+        if re.fullmatch(r"\d{1,3}", ln) and k in near_header and int(ln) > 175:
+            continue                                # a page number beside the running head (the report's pages are 3xx; no degree is over 175)
         m = FOOTNOTE_RE.match(ln)
         if m and not is_numeric_line(ln) and state_cell(ln) is None:
             notes.append((m.group(1), m.group(2)))
@@ -353,12 +353,14 @@ def read_block(district: int | None, pairs: list[tuple[str, str | None]], pair_p
             problem = f"{len(toks)} number tokens, not a multiple of three"
         elif len(trip) != 2 * k:
             problem = f"{len(trip)} coordinates for {k} stations"
+        elif any(None in t or classify_triple(t, "AK" in resolved) is None for t in trip) and k > 1:
+            problem = "a coordinate is damaged"
         else:
             kinds = [classify_triple(t, "AK" in resolved) for t in trip]
             lats = [t for t, kd in zip(trip, kinds) if kd == "lat"]
             lons = [t for t, kd in zip(trip, kinds) if kd == "lon"]
             if len(lats) != k or len(lons) != k:
-                problem = f"{len(lats)} latitudes and {len(lons)} longitudes for {k} stations"
+                problem = "a coordinate is damaged" if any(None in t for t in trip) else f"{len(lats)} latitudes and {len(lons)} longitudes for {k} stations"
             else:
                 coords = list(zip(lats, lons))
     rows: list[Row] = []
