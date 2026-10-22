@@ -1,0 +1,59 @@
+Oregon's first lighthouse was built twice. The first tower, on the sandy spit at the mouth of the Umpqua River, was lit in 1857 and undermined by the river within a few years; the second, begun in 1891 on higher ground, still flashes two white beams and one red every fifteen seconds through a first-order Fresnel lens.[^1][^2]
+
+## The place
+
+The Coast Survey picked the mouth of the Umpqua River in 1849 as one of the earliest lighthouse sites on the West Coast. The idea was a chain of lights so that no stretch of coast lay beyond sight of one, and this part of the Oregon shore, a long run of dunes between Cape Arago and Heceta Head, had no rocky headland to build on. The chosen spot was the low, sandy north spit of the river mouth.[^2] A Treasury letter of 1 October 1851 listed the Umpqua among the first four sites chosen in Oregon Territory, with Cape Disappointment, New Dungeness and Cape Flattery.[^1]
+
+The Oregon Encyclopedia ties the choice to a young local economy: Hudson's Bay Company posts on the Umpqua since 1832, towns platted at the river mouth and up the estuary after 1850, a customs office and gold mining inland. It also notes that the first lighthouse went up in a region of violent conflict, as miners flooded in and the government moved lower Umpqua and other coastal peoples onto reservations. A temporary facility on the spit, within sight of the construction, held captured and detained Native people, and the building crews, working on the lighthouse and on the Army's Fort Umpqua at the same time, were sometimes delayed by standoffs.[^2]
+
+## Building the light
+
+Congress made its first appropriation in March 1851 and added more in 1854; construction began in 1855 with materials shipped from San Francisco, according to the Oregon Encyclopedia. The National Register nomination and Lighthousefriends say work began in 1856.[^2][^1][^9] All agree that the light was shown in the fall of 1857, and both the encyclopedia and Lighthousefriends give the date as 10 October 1857, with Fayette Crosby as first keeper.[^2][^9] The building was a Cape Cod style house with quarters on either side of a 92-foot (28 m) tower, and its lens was third order.[^2]
+
+That light did not last. An 1861 gale and flood eroded the foundation and the building began to tilt, and an October 1863 storm undermined it further.[^2] The keepers, with official permission, left in January 1864; the lens came out about a week later, and while workers were taking down the lantern room the tower began to sway and then fell.[^2][^9] The dates differ between sources: the National Register nomination says river freshets undermined the foundations and the tower collapsed in 1863, while the encyclopedia and Lighthousefriends put the fall in early 1864, after the October 1863 storm.[^1][^2][^9]
+
+For the next three decades there was a buoy and no light. In 1888 Congress voted money for a new Umpqua River lighthouse, $50,000 on 2 October according to Lighthousefriends, to close a gap in the chain of lights on this stretch of coast.[^2][^9] This time the site was a shelf of land about 165 feet (50 m) above the south side of the river.[^2]
+
+The work still went badly. The Light-House Board opened bids on 21 April 1891 for the dwellings, barn, oil houses, cisterns, tower and metalwork. Only the metalwork bid, $5,020, fit the money available, and the others were thrown out and re-advertised.[^3] New bids were opened on 11 August 1891: $12,000 for the tower, contracted on 5 October 1891, and $17,879 for the dwellings, contracted on 17 September 1891. The metalwork was finished by 21 March 1892 and carried to the river mouth on the lighthouse tender *Manzanita*.[^4] On 16 February 1892 the dwelling contractors told the Board they could not go on. Their bondsmen refused to take over the job, and the Board relet it, with bids opened on 5 April 1892 and the lowest, $20,250, accepted.[^4]
+
+The tower was finished on 30 August 1892 and the dwellings, barn and the rest on 14 January 1893. From 19 January 1893 the station was in the charge of a watchman, because the lens could not be set up: the stand that carried it was about 15 inches too short, a fix the Board put at $200, and the appropriation was spent.[^5] The Board reported that $2,371 was owed by the first contractors' bondsmen and that the Attorney-General had the matter in hand.[^5] The light was finally exhibited on 31 December 1894, listed in the Board's report as "A first-order light".[^6] The Oregon Encyclopedia says Head Keeper Marinus Stream of Astoria lit it.[^2] In 1895 two galvanized-iron oil houses, a fence around the cleared grounds, and furnaces for the dwellings were added.[^7]
+
+The brick tower, plastered over, is 67 feet (20 m) high by the nomination's measure and 22 feet in diameter at the base (Lighthousefriends says 65 feet). Its focal plane is 165 feet (50 m) above the sea, and its sixteen-sided lantern holds a first-order lens made by F. Barbier & Cie of Paris in 1890.[^1][^9] The nomination names C. W. Leick as builder or architect and notes the tower's resemblance to Heceta Head.[^1] The station had no fog signal; a bell of 1889 by J. Regester & Sons of Baltimore stood on display in front of the tower when the nomination was written.[^1][^9]
+
+## The keepers
+
+Fayette S. Crosby, a former hotelkeeper at Scottsburg, was the first keeper from 1857 to 1860. William E. Lewis, who began as first assistant, took over as head keeper in 1860 and served to 1863; Harvey B. Burnap was in charge as the tower failed, in 1863 and 1864.[^2][^8]
+
+At the second station Marinus A. Stream, of Astoria, was the first head keeper, from 1894 to 1896. Lighthousefriends says he drowned two years after he arrived.[^8][^9] Andrew P. C. Hald, head keeper from 1899 to 1921, had the longest tenure.[^8] Lighthousefriends, which lists a 1921 Oregonian article among its references, describes him as a Dane who went to sea as a boy and entered the Lighthouse Service in 1888 at Cape Flattery; it counts 33 years of service and says he was never reprimanded.[^9] In 1915 the Lighthouse Service Bulletin recorded that the efficiency flag for the seventeenth district, omitted from an earlier list, had gone to the Umpqua River station, "A. P. C. Hald, keeper".[^10]
+
+Isidore P. Fahy was first assistant from 1901 to 1927, by the archive's dates a longer stay than any head keeper's.[^8] David Oliver Kinyon was head keeper from 1928 to 1939.[^8] The archive's roster runs to at least 1950, by which time the light was electric.[^8][^9]
+
+## Storms, wrecks and rescues
+
+The storms that mattered most came before the second tower: the 1861 gale and flood and the October 1863 storm that undid the first lighthouse (see above).[^2]
+
+The nomination, citing Jim Gibbs's *West Coast Lighthouses* (1974), tells of a 1909 plot by two men, suspecting a large gold shipment, to seize an Alaska Pacific Navigation Company liner, run her aground off the light and take the treasure; it says the plan failed but that the captain and the ringleader were dead.[^1] The nomination's own text gives the ship's name only in garbled type.
+
+In April 1931 an easterly wind of about 50 miles per hour carried dust from eastern Oregon and Washington over the coast for roughly three days. The Lighthouse Service Bulletin reported that at Umpqua River the storm reached the station on 22 April, uprooted trees and hid the sun, and that the dust lay so thickly on the lens machinery that the wheels and the chariot track had to be cleaned before the lens would turn properly.[^11] Kinyon was then head keeper.[^8]
+
+## After the keepers
+
+Lighthousefriends says the station was electrified in 1934, when a generator building went up, and that the light was automated in the 1960s, after which most outbuildings were taken down. Before automation the light burned from an hour before sunset to an hour after sunrise, with curtains drawn around the lantern room by day to protect the lens.[^9]
+
+The lens's rotating mechanism wore out. In November 1983 a temporary beacon replaced it, and when the Coast Guard talked of retiring the Fresnel lens for good, residents of Gardiner, Reedsport and Winchester Bay gathered signatures; the original lens went back into service on 14 January 1985.[^9][^2] In 2009 the Coast Guard told Douglas County it no longer considered the light critical to navigation and said a local government agency or nonprofit could operate it as a private aid to navigation; the county took ownership in early 2010, and the Coast Guard formally handed over operation and maintenance on 14 April 2012.[^9] The Oregon Encyclopedia notes that the county's funding for the lighthouse and its museum was slated to end in July 2018 and that private funds were being sought.[^2]
+
+## Today
+
+The tower stands next to Umpqua Lighthouse State Park, a short way south of Winchester Bay, on a Coast Guard reservation, and the first-order lens is still lit.[^2][^9] The former Coast Guard lifeboat station of 1939 beside it is the Umpqua Lighthouse Museum.[^2] Lighthousefriends reports that the county is the owner and that the museum has run daily interior tours in the summer months, during which the tower is open; hours change, so check with the museum before you go, and treat the tower as closed except on a tour.[^9] The nomination notes that no associated structures of significance remain beyond the tower and engine room.[^1]
+
+[^1]: Umpqua River Light, National Register of Historic Places Inventory-Nomination Form (prepared by R. J. Williamson, Thirteenth Coast Guard District), National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/77001100.pdf (accessed 2026-10-22).
+[^2]: "Umpqua River Lighthouse," The Oregon Encyclopedia, Oregon Historical Society, https://www.oregonencyclopedia.org/articles/umpqua_river_lighthouse/ (accessed 2026-10-22).
+[^3]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1891, Thirteenth District, no. 827, Umpqua River, scan page 232, https://archive.org/details/annualreportlig03statgoog/page/n232/mode/2up (accessed 2026-10-22).
+[^4]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1892, Thirteenth District, no. 866, Umpqua River, scan pages 578-579, https://archive.org/details/annualreportlig03statgoog/page/n578/mode/2up (accessed 2026-10-22).
+[^5]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1893, Thirteenth District, no. 895, Umpqua River (scan page 238), https://archive.org/details/annualreportlig01statgoog/page/n238/mode/2up (accessed 2026-10-22).
+[^6]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1895, list of new lights exhibited (scan page 78), https://archive.org/details/annualreportlig00boargoog/page/n78/mode/2up (accessed 2026-10-22).
+[^7]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1895, Thirteenth District, no. 925, Umpqua River (scan page 402), https://archive.org/details/annualreportlig00boargoog/page/n402/mode/2up (accessed 2026-10-22).
+[^8]: "Umpqua River" place record and keeper roster, US Lighthouse Society Digital Archive (from NARA registers via the Kraig Anderson inventory), https://archives.uslhs.org/places/umpqua-river (accessed 2026-10-22).
+[^9]: "Umpqua River Lighthouse, Oregon," Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=130 (accessed 2026-10-22).
+[^10]: Lighthouse Service Bulletin, 1915, "Efficiency flags," p. 155 (PDF page 10), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1915.pdf#page=10 (accessed 2026-10-22).
+[^11]: "Severe dust storm at Oregon and Washington stations," Lighthouse Service Bulletin, 1931 (PDF page 23), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1931.pdf#page=23 (accessed 2026-10-22).
