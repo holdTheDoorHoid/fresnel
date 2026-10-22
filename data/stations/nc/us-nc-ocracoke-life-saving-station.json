@@ -1,0 +1,104 @@
+{
+  "id": "us-nc-ocracoke-life-saving-station",
+  "name": "Ocracoke Life-Saving Station",
+  "other_names": [],
+  "country": "US",
+  "region": "NC",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "life_saving_station",
+  "location": {
+    "lat": 35.115278,
+    "lon": -75.988889,
+    "precision": "approximate",
+    "from": "lss_reports"
+  },
+  "status": "unknown",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "other",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports"
+    }
+  ],
+  "light": null,
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1909,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1909 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-nc-ocracoke",
+      "relation": "light_station_nearby",
+      "name": "Ocracoke Light"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-ocracoke",
+      "part": "lss_reports:nc-ocracoke",
+      "fields": [
+        "events",
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

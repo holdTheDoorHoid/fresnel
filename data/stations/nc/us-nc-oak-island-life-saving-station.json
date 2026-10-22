@@ -1,7 +1,9 @@
 {
   "id": "us-nc-oak-island-life-saving-station",
   "name": "Oak Island Life Saving Station",
-  "other_names": [],
+  "other_names": [
+    "Oak Island Life-Saving Station"
+  ],
   "country": "US",
   "region": "NC",
   "county": "Brunswick",
@@ -67,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 2000,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -122,6 +130,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/47719113",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -147,6 +160,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-oak-island",
+      "part": "wikidata:Q18155276",
+      "fields": [
+        "events"
       ]
     }
   ],

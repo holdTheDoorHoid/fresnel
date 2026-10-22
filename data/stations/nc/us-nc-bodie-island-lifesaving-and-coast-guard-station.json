@@ -4,7 +4,8 @@
   "other_names": [
     "Bodie Island Lifesaving/Coast Guard Station",
     "Bodie Island Ranger Station",
-    "Bodie Island Ranger Residence &"
+    "Bodie Island Ranger Residence &",
+    "Bodie Island Life-Saving Station"
   ],
   "country": "US",
   "region": "NC",
@@ -13,10 +14,10 @@
   "setting": null,
   "kind": "life_saving_station",
   "location": {
-    "lat": 35.829197,
-    "lon": -75.558963,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 35.827778,
+    "lon": -75.555556,
+    "precision": "approximate",
+    "from": "lss_reports"
   },
   "status": "unknown",
   "status_note": null,
@@ -26,11 +27,11 @@
       "name": null,
       "type": null,
       "material": null,
-      "built": 1878,
+      "built": null,
       "height_m": null,
       "status": "unknown",
       "note": null,
-      "from": "wikidata"
+      "from": "lss_reports"
     }
   ],
   "light": null,
@@ -75,6 +76,12 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
     },
     {
       "year": 1979,
@@ -127,6 +134,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/47719920",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -138,12 +150,10 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
-        "registers",
-        "structures"
+        "registers"
       ]
     },
     {
@@ -154,10 +164,19 @@
         "events",
         "registers"
       ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-bodie-island",
+      "part": "wikidata:Q4936565",
+      "fields": [
+        "events",
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

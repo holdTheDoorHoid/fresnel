@@ -1,0 +1,136 @@
+{
+  "id": "us-me-cranberry-island",
+  "name": "Cranberry Island",
+  "other_names": [
+    "Cranberry Islands Life-Saving Station",
+    "Cranberry Isles Life-Saving Station",
+    "Cranberry Island Life-Saving Station"
+  ],
+  "country": "US",
+  "region": "ME",
+  "county": null,
+  "water": null,
+  "setting": null,
+  "kind": "life_saving_station",
+  "location": {
+    "lat": 44.258333,
+    "lon": -68.211111,
+    "precision": "approximate",
+    "from": "lss_reports"
+  },
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
+  "structures": [
+    {
+      "role": "other",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lss_reports"
+    }
+  ],
+  "light": null,
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "General Service Administration",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": true,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1879,
+      "event": "built",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
+      "year": 1946,
+      "event": "closed",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Cranberry Island",
+      "url": "https://archives.uslhs.org/places/cranberry-island",
+      "kind": "reference"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:115971",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:me-cranberry-islands",
+      "part": "lss_reports:me-cranberry-islands",
+      "fields": [
+        "events",
+        "location"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:cranberry-island-lss",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -4,7 +4,8 @@
   "other_names": [
     "Old Coast Guard Station Museum",
     "Virginia Beach Surf & Rescue Museum",
-    "Seatack Life Saving Station"
+    "Seatack Life Saving Station",
+    "Seatack Life-Saving Station"
   ],
   "country": "US",
   "region": "VA",
@@ -76,6 +77,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1979,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -115,6 +122,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/41684003",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -140,6 +152,14 @@
         "events",
         "name",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:va-seatack",
+      "part": "wikidata:Q7083708",
+      "fields": [
+        "events"
       ]
     }
   ],

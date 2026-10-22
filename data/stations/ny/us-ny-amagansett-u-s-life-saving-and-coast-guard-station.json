@@ -69,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 2018,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -93,6 +99,11 @@
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q137300824",
       "kind": "wikidata"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -118,6 +129,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:ny-amagansett",
+      "part": "wikidata:Q137300824",
+      "fields": [
+        "events"
       ]
     },
     {

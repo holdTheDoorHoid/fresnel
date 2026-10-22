@@ -1,7 +1,9 @@
 {
   "id": "us-me-damariscove-lifesaving-station",
   "name": "Damariscove Lifesaving Station",
-  "other_names": [],
+  "other_names": [
+    "Damiscove Island Life-Saving Station"
+  ],
   "country": "US",
   "region": "ME",
   "county": "Lincoln",
@@ -67,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1899,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1899 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1987,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -91,6 +99,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/88686616",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -115,6 +128,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:me-damiscove-island",
+      "part": "wikidata:Q5212005",
+      "fields": [
+        "events"
       ]
     }
   ],

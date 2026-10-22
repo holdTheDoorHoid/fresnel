@@ -67,6 +67,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1975,
       "event": "nrhp_listed",
       "note": null,
@@ -101,6 +107,11 @@
       "label": "Wikipédia (français)",
       "url": "https://fr.wikipedia.org/wiki/Oregon_Inlet_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -117,6 +128,14 @@
         "photos",
         "region",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-oregon-inlet",
+      "part": "wikidata:Q18209373",
+      "fields": [
+        "events"
       ]
     },
     {

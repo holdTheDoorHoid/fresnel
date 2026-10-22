@@ -3,7 +3,9 @@
   "name": "U.S. Life-Saving Station No. 35",
   "other_names": [
     "Stone Harbor Life Saving Station,",
-    "Steven C. Ludlum American Legion Post 331"
+    "Steven C. Ludlum American Legion Post 331",
+    "Tathams Life-Saving Station",
+    "Tatham Life-Saving Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -22,7 +24,22 @@
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Tathams Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports",
+      "location": {
+        "lat": 39.041667,
+        "lon": -74.763889
+      }
+    },
+    {
+      "role": "other",
+      "name": "U.S. Life-Saving Station No. 35",
       "type": null,
       "material": null,
       "built": null,
@@ -63,11 +80,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1889,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
     {
       "year": 2008,
       "event": "nrhp_listed",
@@ -103,6 +126,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:U.S._Life-Saving_Station_No._35",
       "kind": "commons"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -128,6 +156,22 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nj-tathams",
+      "part": "lss_reports:nj-tathams",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nj:tatham-lss",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],

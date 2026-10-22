@@ -1,0 +1,119 @@
+{
+  "id": "us-me-cape-elizabeth-life-saving-station",
+  "name": "Cape Elizabeth Life-Saving Station",
+  "other_names": [],
+  "country": "US",
+  "region": "ME",
+  "county": "Cumberland",
+  "water": null,
+  "setting": null,
+  "kind": "life_saving_station",
+  "location": {
+    "lat": 43.566111,
+    "lon": -70.2,
+    "precision": "approximate",
+    "from": "lss_reports"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [
+    {
+      "role": "other",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports"
+    }
+  ],
+  "light": null,
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "U.S. Coast Guard",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1889,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    }
+  ],
+  "keepers_count": null,
+  "related": [
+    {
+      "id": "us-me-cape-elizabeth-light-western",
+      "relation": "light_station_nearby",
+      "name": "Cape Elizabeth Light (western tower)"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape Elizabeth Life Saving Station",
+      "url": "https://archives.uslhs.org/places/cape-elizabeth-life-saving-station",
+      "kind": "reference"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:109756",
+      "part": "station",
+      "fields": [
+        "agency",
+        "county",
+        "kind",
+        "name",
+        "ownership",
+        "region"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:me-cape-elizabeth",
+      "part": "lss_reports:me-cape-elizabeth",
+      "fields": [
+        "events",
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

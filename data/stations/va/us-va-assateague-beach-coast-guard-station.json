@@ -2,7 +2,8 @@
   "id": "us-va-assateague-beach-coast-guard-station",
   "name": "Assateague Beach Coast Guard Station",
   "other_names": [
-    "United States Coast Guard Station No. 150"
+    "United States Coast Guard Station No. 150",
+    "Assateague Beach Life-Saving Station"
   ],
   "country": "US",
   "region": "VA",
@@ -73,6 +74,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 2015,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -112,6 +119,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Assateague_Beach_Coast_Guard_Station",
       "kind": "commons"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,6 +151,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:va-assateague-beach",
+      "part": "wikidata:Q22935656",
+      "fields": [
+        "events"
       ]
     }
   ],

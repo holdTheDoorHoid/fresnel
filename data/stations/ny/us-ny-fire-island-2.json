@@ -1,0 +1,110 @@
+{
+  "id": "us-ny-fire-island-2",
+  "name": "Fire Island",
+  "other_names": [],
+  "country": "US",
+  "region": "NY",
+  "county": null,
+  "water": null,
+  "setting": "offshore",
+  "kind": "lightship_station",
+  "location": {
+    "lat": 40.47083,
+    "lon": -73.1875,
+    "precision": "approximate",
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board), page 72, entry 347: Fire Island Light-Vessel, No. 68, 40 28 15 N, 73 11 15 W (the seconds are in brackets: the position varies somewhat). Location as printed: Moored in 96 feet of water, in the latitude of Sandy Hook Light-Vessel, and 9.7 miles S. from Fire Island Light-House, N. Y."
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [],
+  "light": {
+    "first_lit": 1896,
+    "deactivated": 1942,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1896,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1942,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Fire Island (Lightship Station)",
+      "url": "https://archives.uslhs.org/places/fire-island-lightship-station",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:9050",
+      "part": "station",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:fire-island",
+      "part": "lightship_stations:fire-island",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

@@ -2,7 +2,8 @@
   "id": "us-ma-old-harbor-u-s-life-saving-station-2",
   "name": "Old Harbor U.S. Life Saving Station",
   "other_names": [
-    "USCG Station"
+    "USCG Station",
+    "Old Harbor Life-Saving Station"
   ],
   "country": "US",
   "region": "MA",
@@ -11,10 +12,10 @@
   "setting": null,
   "kind": "life_saving_station",
   "location": {
-    "lat": 41.697925,
-    "lon": -69.929024,
+    "lat": 41.695833,
+    "lon": -69.933333,
     "precision": "approximate",
-    "from": "nrhp"
+    "from": "lss_reports"
   },
   "status": "unknown",
   "status_note": null,
@@ -28,7 +29,7 @@
       "height_m": null,
       "status": "unknown",
       "note": null,
-      "from": "nrhp"
+      "from": "lss_reports"
     }
   ],
   "light": null,
@@ -69,6 +70,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1888,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1888 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1975,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -83,6 +90,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/63793978",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -94,15 +106,23 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:ma-old-harbor",
+      "part": "nrhp:75000159",
+      "fields": [
+        "events",
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

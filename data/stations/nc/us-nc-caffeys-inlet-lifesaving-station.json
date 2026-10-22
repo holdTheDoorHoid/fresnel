@@ -2,7 +2,8 @@
   "id": "us-nc-caffeys-inlet-lifesaving-station",
   "name": "Caffeys Inlet Lifesaving Station",
   "other_names": [
-    "Caffey's Inlet Lifesaving Station"
+    "Caffey's Inlet Lifesaving Station",
+    "Caffeys Inlet Life-Saving Station"
   ],
   "country": "US",
   "region": "NC",
@@ -69,6 +70,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1897,
       "event": "built",
       "note": null,
@@ -109,6 +116,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/47719891",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,6 +147,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-caffeys-inlet",
+      "part": "wikidata:Q18205749",
+      "fields": [
+        "events"
       ]
     }
   ],

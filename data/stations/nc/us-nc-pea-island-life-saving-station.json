@@ -57,7 +57,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -81,6 +88,11 @@
       "label": "US Lighthouse Society Digital Archive: Pea Island Life Saving Station",
       "url": "https://archives.uslhs.org/places/pea-island-life-saving-station",
       "kind": "reference"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -100,6 +112,14 @@
       "key": "uslhs:97824",
       "part": "station",
       "fields": []
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-pea-island",
+      "part": "wikidata:Q16966619",
+      "fields": [
+        "events"
+      ]
     }
   ],
   "conflicts": [],

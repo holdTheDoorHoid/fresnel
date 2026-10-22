@@ -6,15 +6,16 @@
   "region": "SC",
   "county": null,
   "water": null,
-  "setting": null,
+  "setting": "offshore",
   "kind": "lightship_station",
   "location": {
     "lat": 32.73333,
-    "lon": -79.72417,
+    "lon": -79.72778,
     "precision": "approximate",
-    "from": "uslhs"
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1893 (Light-House Board), page 94, entry 564: Rattlesnake Shoal Light-Vessel, No. 29, 32 44 00 N, 79 43 40 W (the seconds are in brackets: the position varies somewhat). Location as printed: Off Rattlesnake Shoal, northeasterly of the entrance to Charleston Harbor, S. C."
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [],
   "light": {
@@ -87,14 +88,21 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:rattlesnake-shoal",
+      "part": "uslhs:9102",
+      "fields": [
+        "location"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

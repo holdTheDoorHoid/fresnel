@@ -1,0 +1,112 @@
+{
+  "id": "us-ma-cross-rip",
+  "name": "Cross Rip",
+  "other_names": [
+    "Tuckanuck Shoal"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": null,
+  "water": null,
+  "setting": "offshore",
+  "kind": "lightship_station",
+  "location": {
+    "lat": 41.46194,
+    "lon": -70.29139,
+    "precision": "approximate",
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board), page 44, entry 160: Cross Rip Light-Vessel, No. 5, 41 27 43 N, 70 17 29 W (the seconds are in brackets: the position varies somewhat). Location as printed: Moored in 40 feet of water, to the northward of Cross Rip Shoal, Nantucket Sound, 11 5/8 miles NW. by W. 3/4 W. from Nantucket (Great Point) Light-House."
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [],
+  "light": {
+    "first_lit": 1828,
+    "deactivated": 1963,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1828,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1963,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Cross Rip (Lightship Station)",
+      "url": "https://archives.uslhs.org/places/cross-rip-lightship-station",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:9042",
+      "part": "station",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:cross-rip",
+      "part": "lightship_stations:cross-rip",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

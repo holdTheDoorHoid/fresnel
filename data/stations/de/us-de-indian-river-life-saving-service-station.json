@@ -1,7 +1,9 @@
 {
   "id": "us-de-indian-river-life-saving-service-station",
   "name": "Indian River Life Saving Service Station",
-  "other_names": [],
+  "other_names": [
+    "Indian River Inlet Life-Saving Station"
+  ],
   "country": "US",
   "region": "DE",
   "county": "Sussex",
@@ -19,7 +21,22 @@
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Indian River Inlet Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports",
+      "location": {
+        "lat": 38.630556,
+        "lon": -75.061111
+      }
+    },
+    {
+      "role": "other",
+      "name": "Indian River Life Saving Service Station",
       "type": null,
       "material": null,
       "built": null,
@@ -67,6 +84,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1976,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -101,6 +124,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/75324784",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,6 +154,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:de-indian-river-inlet",
+      "part": "lss_reports:de-indian-river-inlet",
+      "fields": [
+        "events"
       ]
     }
   ],

@@ -1,7 +1,9 @@
 {
   "id": "us-nj-great-egg-coast-guard-station",
   "name": "Great Egg Coast Guard Station",
-  "other_names": [],
+  "other_names": [
+    "Great Egg Life-Saving Station"
+  ],
   "country": "US",
   "region": "NJ",
   "county": "Atlantic",
@@ -66,6 +68,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1889,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 2005,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -95,6 +103,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Great_Egg_Coast_Guard_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -120,6 +133,14 @@
         "county",
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nj-great-egg",
+      "part": "wikidata:Q5599108",
+      "fields": [
+        "events"
       ]
     }
   ],

@@ -3,7 +3,8 @@
   "name": "U.S. Coast Guard Station – Umpqua River, Administration and Equipment Buildings",
   "other_names": [
     "US Coast Guard Station-Umpqua River, Administration and Equipment Buildings",
-    "Coastal Visitor Center"
+    "Coastal Visitor Center",
+    "Umpqua River Life-Saving Station"
   ],
   "country": "US",
   "region": "OR",
@@ -22,7 +23,22 @@
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Umpqua River Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports",
+      "location": {
+        "lat": 43.7,
+        "lon": -124.175
+      }
+    },
+    {
+      "role": "other",
+      "name": "U.S. Coast Guard Station – Umpqua River, Administration and Equipment Buildings",
       "type": null,
       "material": null,
       "built": null,
@@ -70,6 +86,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1895,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1895 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1992,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -105,6 +127,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/77849251",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1905: list of life-saving districts and stations",
+      "url": "https://archive.org/details/lifesavingservic05unitrich",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -130,6 +157,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:or-umpqua-river",
+      "part": "lss_reports:or-umpqua-river",
+      "fields": [
+        "events"
       ]
     }
   ],

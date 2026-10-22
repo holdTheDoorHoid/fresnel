@@ -2,6 +2,7 @@
   "id": "us-me-west-quoddy-lifesaving-station",
   "name": "West Quoddy Lifesaving Station",
   "other_names": [
+    "Quoddy Head Life-Saving Station",
     "West Quoddy Station"
   ],
   "country": "US",
@@ -21,7 +22,22 @@
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Quoddy Head Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports",
+      "location": {
+        "lat": 44.811111,
+        "lon": -66.980556
+      }
+    },
+    {
+      "role": "other",
+      "name": "West Quoddy Lifesaving Station",
       "type": null,
       "material": null,
       "built": null,
@@ -76,6 +92,12 @@
   },
   "events": [
     {
+      "year": 1884,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1884 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1990,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -118,6 +140,11 @@
       "kind": "register"
     },
     {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1902: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun1902unit",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society: lighthouse accommodations",
       "url": "https://uslhs.org/travel/lighthouse-accommodations/maine",
       "kind": "reference"
@@ -146,6 +173,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:me-quoddy-head",
+      "part": "lss_reports:me-quoddy-head",
+      "fields": [
+        "events"
       ]
     },
     {

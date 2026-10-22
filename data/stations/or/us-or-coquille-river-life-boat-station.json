@@ -2,7 +2,8 @@
   "id": "us-or-coquille-river-life-boat-station",
   "name": "Coquille River Life Boat Station",
   "other_names": [
-    "Old Coast Guard Building"
+    "Old Coast Guard Building",
+    "Coquille River Life-Saving Station"
   ],
   "country": "US",
   "region": "OR",
@@ -11,24 +12,39 @@
   "setting": null,
   "kind": "life_saving_station",
   "location": {
-    "lat": 43.12069,
-    "lon": -124.41789,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 43.116667,
+    "lon": -124.416667,
+    "precision": "approximate",
+    "from": "lss_reports"
   },
   "status": "unknown",
   "status_note": null,
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Coquille River Life Boat Station",
       "type": null,
       "material": null,
       "built": 1939,
       "height_m": null,
       "status": "unknown",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 43.12069,
+        "lon": -124.41789
+      }
+    },
+    {
+      "role": "other",
+      "name": "Coquille River Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports"
     }
   ],
   "light": null,
@@ -68,6 +84,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1893,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1893 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
     {
       "year": 1939,
       "event": "built",
@@ -115,6 +137,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/77849062",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1905: list of life-saving districts and stations",
+      "url": "https://archive.org/details/lifesavingservic05unitrich",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -126,7 +153,6 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
@@ -141,6 +167,15 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:or-coquille-river",
+      "part": "lss_reports:or-coquille-river",
+      "fields": [
+        "events",
+        "location"
       ]
     }
   ],

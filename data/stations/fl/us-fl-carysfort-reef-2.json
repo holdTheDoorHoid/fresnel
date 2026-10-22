@@ -6,7 +6,7 @@
   "region": "FL",
   "county": null,
   "water": null,
-  "setting": null,
+  "setting": "offshore",
   "kind": "lightship_station",
   "location": {
     "lat": 25.13333,
@@ -14,7 +14,7 @@
     "precision": "approximate",
     "from": "uslhs"
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [],
   "light": {
@@ -91,6 +91,12 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:carysfort-reef",
+      "part": "station",
+      "fields": []
     }
   ],
   "conflicts": [],

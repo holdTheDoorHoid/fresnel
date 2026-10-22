@@ -1,20 +1,23 @@
 {
   "id": "us-sc-martins-industry",
   "name": "Martins Industry",
-  "other_names": [],
+  "other_names": [
+    "Tybee Channel"
+  ],
   "country": "US",
   "region": "SC",
   "county": null,
   "water": null,
-  "setting": null,
+  "setting": "offshore",
   "kind": "lightship_station",
   "location": {
-    "lat": 32.0885,
-    "lon": -80.5855,
+    "lat": 32.0925,
+    "lon": -80.55417,
     "precision": "approximate",
-    "from": "uslhs"
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board), page 142, entry 765: Martins Industry Light-Vessel, No. 53, 32 05 33 N, 80 33 15 W (the seconds are in brackets: the position varies somewhat). Location as printed: In 51 feet of water, off Port Royal entrance, outside of Martins Industry Shoal, S. C., about 15 miles eastward of Tybee Light-House, Ga."
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [],
   "light": {
@@ -87,9 +90,16 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:martins-industry",
+      "part": "uslhs:9078",
+      "fields": [
+        "location"
       ]
     }
   ],

@@ -2,7 +2,8 @@
   "id": "us-nj-fort-hancock-u-s-life-saving-station",
   "name": "Fort Hancock, U.S. Life Saving Station",
   "other_names": [
-    "Spermacetti Cove No. 2 Life Saving Service Station"
+    "Spermacetti Cove No. 2 Life Saving Service Station",
+    "Spermaceti Cove Life-Saving Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -21,7 +22,22 @@
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "Spermaceti Cove Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports",
+      "location": {
+        "lat": 40.427778,
+        "lon": -73.983333
+      }
+    },
+    {
+      "role": "other",
+      "name": "Fort Hancock, U.S. Life Saving Station",
       "type": null,
       "material": null,
       "built": null,
@@ -68,6 +84,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1894,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1894 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1981,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -97,6 +119,11 @@
       "label": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Fort_Hancock_U.S._Life_Saving_Station",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -122,6 +149,14 @@
         "county",
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nj-spermaceti-cove",
+      "part": "lss_reports:nj-spermaceti-cove",
+      "fields": [
+        "events"
       ]
     }
   ],

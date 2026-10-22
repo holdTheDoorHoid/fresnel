@@ -1,0 +1,110 @@
+{
+  "id": "us-mi-lake-huron",
+  "name": "Lake Huron",
+  "other_names": [],
+  "country": "US",
+  "region": "MI",
+  "county": null,
+  "water": null,
+  "setting": "offshore",
+  "kind": "lightship_station",
+  "location": {
+    "lat": 43.02983,
+    "lon": -82.41079,
+    "precision": "approximate",
+    "from": "computed",
+    "note": "Computed: 1.50167 nautical miles from Fort Gratiot Light (43.00631, -82.42243; OpenStreetMap, station us-mi-fort-gratiot), true bearing 19.8833 degrees as printed: 19.9 degrees true. Source text, Annual Report of the Light-House Board for the fiscal year 1895: “Lake Huron light vessel, No. 61, off the entrance to the St. Clair River, Michigan. - Moved, on the opening of navigation 1895, to a position 9,125 feet N. 19° 53' E. (N. by E. 3/4 E.) from Fort Gratiot light-house.”"
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [],
+  "light": {
+    "first_lit": 1893,
+    "deactivated": 1970,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1893,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1970,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Lake Huron (Lightship Station)",
+      "url": "https://archives.uslhs.org/places/lake-huron-lightship-station",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:9068",
+      "part": "station",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:lake-huron",
+      "part": "lightship_stations:lake-huron",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

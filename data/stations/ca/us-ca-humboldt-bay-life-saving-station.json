@@ -69,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1893,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1893 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1979,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -109,6 +115,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/123858762",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1903: list of life-saving districts and stations",
+      "url": "https://archive.org/details/lifesavingservic14unitrich",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -134,6 +145,14 @@
         "county",
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:ca-humboldt-bay",
+      "part": "wikidata:Q5940254",
+      "fields": [
+        "events"
       ]
     }
   ],

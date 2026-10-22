@@ -1,0 +1,110 @@
+{
+  "id": "us-ri-brenton-reef-2",
+  "name": "Brenton Reef",
+  "other_names": [],
+  "country": "US",
+  "region": "RI",
+  "county": null,
+  "water": null,
+  "setting": "offshore",
+  "kind": "lightship_station",
+  "location": {
+    "lat": 41.43111,
+    "lon": -71.37667,
+    "precision": "approximate",
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board), page 50, entry 181: Brenton Reef Light-Vessel, No. 39, 41 25 52 N, 71 22 36 W (the seconds are in brackets: the position varies somewhat). Location as printed: Moored in about 88 feet of water, about 1 mile southwesterly from the reef making off from Brenton Point, R. I., easterly side of the entrance to the Eastern Passage of Narragansett Bay."
+  },
+  "status": "lost",
+  "status_note": null,
+  "structures": [],
+  "light": {
+    "first_lit": 1853,
+    "deactivated": 1962,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "uslhs"
+  },
+  "registers": [],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": null,
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": null,
+    "climbable": null,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "US Lighthouse Society Digital Archive: Brenton Reef (Lightship Station)",
+      "url": "https://archives.uslhs.org/places/brenton-reef-lightship-station",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "uslhs",
+      "key": "uslhs:9024",
+      "part": "station",
+      "fields": [
+        "events",
+        "kind",
+        "light",
+        "name",
+        "region"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:brenton-reef",
+      "part": "lightship_stations:brenton-reef",
+      "fields": [
+        "location"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
+}

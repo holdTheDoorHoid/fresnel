@@ -2,7 +2,8 @@
   "id": "us-nj-u-s-life-saving-station-no-14",
   "name": "U.S. Life Saving Station No. 14",
   "other_names": [
-    "U.S. Life Saving Station Station No. 14"
+    "U.S. Life Saving Station Station No. 14",
+    "Island Beach Life-Saving Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -11,24 +12,39 @@
   "setting": null,
   "kind": "life_saving_station",
   "location": {
-    "lat": 39.895667,
-    "lon": -74.081917,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 39.894444,
+    "lon": -74.083333,
+    "precision": "approximate",
+    "from": "lss_reports"
   },
   "status": "unknown",
   "status_note": null,
   "structures": [
     {
       "role": "other",
-      "name": null,
+      "name": "U.S. Life Saving Station No. 14",
       "type": null,
       "material": null,
       "built": 1894,
       "height_m": null,
       "status": "unknown",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 39.895667,
+        "lon": -74.081917
+      }
+    },
+    {
+      "role": "other",
+      "name": "Island Beach Life-Saving Station",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lss_reports"
     }
   ],
   "light": null,
@@ -67,6 +83,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1889,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1889 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
     {
       "year": 1894,
       "event": "built",
@@ -108,6 +130,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:U.S._Life-Saving_Station_No._14",
       "kind": "commons"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -119,7 +146,6 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
@@ -135,10 +161,19 @@
         "events",
         "registers"
       ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nj-island-beach",
+      "part": "lss_reports:nj-island-beach",
+      "fields": [
+        "events",
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

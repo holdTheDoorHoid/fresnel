@@ -11,10 +11,10 @@
   "setting": null,
   "kind": "life_saving_station",
   "location": {
-    "lat": 34.60306,
-    "lon": -76.537816,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 34.608333,
+    "lon": -76.538889,
+    "precision": "approximate",
+    "from": "lss_reports"
   },
   "status": "lost",
   "status_note": null,
@@ -28,7 +28,7 @@
       "height_m": null,
       "status": "unknown",
       "note": null,
-      "from": "wikidata"
+      "from": "lss_reports"
     }
   ],
   "light": null,
@@ -68,6 +68,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1888,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1888 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
     {
       "year": 1917,
       "event": "built",
@@ -124,6 +130,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/47719426",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -135,7 +146,6 @@
         "county",
         "events",
         "kind",
-        "location",
         "name",
         "photos",
         "region",
@@ -158,10 +168,19 @@
         "events",
         "registers"
       ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nc-cape-lookout",
+      "part": "wikidata:Q15207396",
+      "fields": [
+        "events",
+        "location"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

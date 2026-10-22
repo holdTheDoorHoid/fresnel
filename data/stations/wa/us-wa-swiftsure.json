@@ -1,7 +1,13 @@
 {
   "id": "us-wa-swiftsure",
   "name": "Swiftsure",
-  "other_names": [],
+  "other_names": [
+    "Lightship Swiftsure LV 83/WAL 508",
+    "RELIEF (lightship)",
+    "\"Blunts\"",
+    "\"San Fransisco\"",
+    "Lightship No. 83"
+  ],
   "country": "US",
   "region": "WA",
   "county": "King",
@@ -9,10 +15,10 @@
   "setting": null,
   "kind": "lightship",
   "location": {
-    "lat": 47.6749,
-    "lon": -122.207,
+    "lat": 47.62806,
+    "lon": -122.33703,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
   "status": "unknown",
   "status_note": null,
@@ -31,7 +37,10 @@
     {
       "register": "NRHP",
       "number": "75001852",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75001852"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75001852",
+      "listed": "1975-04-23",
+      "nhl": "1989-04-11",
+      "nomination": "https://catalog.archives.gov/id/75612590"
     },
     {
       "register": "National Historic Landmark",
@@ -66,7 +75,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -80,8 +89,14 @@
     {
       "year": 1975,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places and National Historic Landmark",
       "from": "wikidata"
+    },
+    {
+      "year": 1989,
+      "event": "heritage_designated",
+      "note": "National Historic Landmark",
+      "from": "nrhp"
     }
   ],
   "keepers_count": null,
@@ -117,30 +132,64 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Swiftsure_%28ship%2C_1904%29",
       "kind": "commons"
+    },
+    {
+      "label": "LighthouseFriends: Lightship Swiftsure LV 83/WAL 508",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=185",
+      "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75612590",
+      "kind": "register"
     }
   ],
   "sources": [
     {
       "source": "wikidata",
       "key": "wikidata:Q7656131",
-      "part": "wikidata:Q7656131",
+      "part": "station",
       "fields": [
         "agency",
         "county",
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "ownership",
         "photos",
         "region",
         "registers"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:185",
+      "part": "lighthousefriends:185",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:75001852",
+      "part": "lighthousefriends:185",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:wa:swiftsure-ls-lv-83",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -69,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1902,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1902 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 2012,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -108,6 +114,11 @@
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/63794930",
       "kind": "register"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -139,6 +150,14 @@
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:ma-nahant",
+      "part": "wikidata:Q16895649",
+      "fields": [
+        "events"
       ]
     },
     {

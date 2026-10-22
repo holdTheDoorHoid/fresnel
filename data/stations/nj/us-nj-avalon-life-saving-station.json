@@ -2,7 +2,8 @@
   "id": "us-nj-avalon-life-saving-station",
   "name": "Avalon Life Saving Station",
   "other_names": [
-    "Avalon Coast Guard Station # 131"
+    "Avalon Coast Guard Station # 131",
+    "Avalon Life-Saving Station"
   ],
   "country": "US",
   "region": "NJ",
@@ -68,6 +69,12 @@
   "stay": null,
   "events": [
     {
+      "year": 1896,
+      "event": "other",
+      "note": "Among the stations in the Life-Saving Service's list in the report for 1896 (the earliest report in which this station could be read; not an opening date)",
+      "from": "lss_reports"
+    },
+    {
       "year": 1979,
       "event": "nrhp_listed",
       "note": "National Register of Historic Places",
@@ -102,6 +109,11 @@
       "label": "Wikimedia Commons category",
       "url": "https://commons.wikimedia.org/wiki/Category:Avalon_Life_Saving_Station",
       "kind": "commons"
+    },
+    {
+      "label": "Annual Report of the U.S. Life-Saving Service for 1909: list of life-saving districts and stations",
+      "url": "https://archive.org/details/annualreportofun00unit_2",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -127,6 +139,14 @@
         "county",
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "lss_reports",
+      "key": "lss_reports:nj-avalon",
+      "part": "wikidata:Q4827583",
+      "fields": [
+        "events"
       ]
     }
   ],

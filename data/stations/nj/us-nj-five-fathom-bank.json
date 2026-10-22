@@ -1,22 +1,24 @@
 {
   "id": "us-nj-five-fathom-bank",
-  "name": "Five Fathom Bank light station",
+  "name": "Five Fathom Bank",
   "other_names": [
-    "Five Fathom Bank"
+    "Five Fathom Bank light station",
+    "Cape May"
   ],
   "country": "US",
   "region": "NJ",
   "county": null,
   "water": null,
-  "setting": null,
+  "setting": "offshore",
   "kind": "lightship_station",
   "location": {
-    "lat": 38.8354,
-    "lon": -75.0119,
-    "precision": "exact",
-    "from": "wikidata"
+    "lat": 38.78889,
+    "lon": -74.57667,
+    "precision": "approximate",
+    "from": "lightship_stations",
+    "note": "Position printed in the Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board), page 92, entry 462: Five-Fathom Bank Light-Vessel, No. 40, 38 47 20 N, 74 34 36 W (the seconds are in brackets: the position varies somewhat). Location as printed: Moored in 90 feet of water, off the entrance to Delaware Bay, about 6 1/4 miles south-southeasterly from the shoalest part of Five-Fathom Bank, N. J."
   },
-  "status": "unknown",
+  "status": "lost",
   "status_note": null,
   "structures": [],
   "light": {
@@ -94,11 +96,10 @@
     {
       "source": "wikidata",
       "key": "wikidata:Q18150126",
-      "part": "wikidata:Q18150126",
+      "part": "station",
       "fields": [
         "agency",
         "kind",
-        "location",
         "name",
         "ownership",
         "region"
@@ -111,6 +112,14 @@
       "fields": [
         "events",
         "light"
+      ]
+    },
+    {
+      "source": "lightship_stations",
+      "key": "lightship_stations:five-fathom-bank",
+      "part": "lightship_stations:five-fathom-bank",
+      "fields": [
+        "location"
       ]
     }
   ],
