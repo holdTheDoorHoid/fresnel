@@ -3,7 +3,9 @@
 
   research/post_batch.py ID-FILE [ID-FILE ...] [--publish "message"]
 
-Each ID-FILE lists one station id per line (the batch's ids). Steps, stopping at the first failure:
+Each ID-FILE lists one station id per line (the batch's ids). With batches running in parallel, publish only
+when all of them have finished, passing every finished batch's ID-FILE (their stories share data/stories, and
+the build and tests read all of it). Steps, stopping at the first failure:
   1. research/reconcile.py (cite lists, footnotes missing from sources)
   2. research/check_quotes.py on the batch's ids (missing quotes are reported, not fatal: the checker
      verdicts decide; stations with missing quotes are listed for a look)
@@ -93,7 +95,9 @@ def main():
 
     if a.publish and ok:
         print("5. publish")
-        run(["git", "add", "data/stories", "data/research"])
+        # Only this batch's files: another batch may be writing its own next to them.
+        files = [f for f in sorted(batch) if os.path.exists(os.path.join(ROOT, f))]
+        run(["git", "add", "--", *files])
         r = run(["git", "commit", "-q", "-m", a.publish + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"])
         if r.returncode == 0:
             r = run(["git", "push", "-q"])
