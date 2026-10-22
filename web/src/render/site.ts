@@ -70,10 +70,11 @@ export function takedownEmail(email: string | null | undefined): SafeHtml {
 }
 
 /** "7 stations: 2 active lights, …" for the About page's lede, from meta.json. */
-export function countsLine(meta: Pick<Meta, 'counts'>): string {
+export function countsLine(meta: Pick<Meta, 'counts'> & Partial<Pick<Meta, 'keepers'>>): string {
   const c = meta.counts;
   const parts = [`${formatCount(c.total)} stations on the map`];
   if (c.stories) parts.push(`${formatCount(c.stories)} with a written history`);
   if (c.rosters) parts.push(`${formatCount(c.rosters)} with a keepers roster`);
+  if (meta.keepers?.people) parts.push(`${formatCount(meta.keepers.people)} people in the keepers index`);
   return parts.join(', ') + '.';
 }

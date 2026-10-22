@@ -275,7 +275,7 @@ export function renderPersonMain(p: PersonRecord, ctx: RenderContext): SafeHtml 
     {
       id: 'sources',
       title: 'Sources and credits',
-      body: html`<p>${ARCHIVE_SOURCE_LINE} This page puts two stints together only because the archive files them under one person record${p.archive && safeUrl(p.archive) ? html`: ${externalLink(p.archive, 'the archive’s page for this person')}` : ''}. Two records with the same name are never joined.</p>
+      body: html`<p>${ARCHIVE_SOURCE_LINE} ${p.stints.length > 1 ? 'This page puts the stints together only because the archive files them under one person record' : 'The archive keeps one record for this person'}${p.archive && safeUrl(p.archive) ? html`: ${externalLink(p.archive, 'the archive’s page for this person')}` : ''}. Two records with the same name are never joined.</p>
         ${research ? html`<p>Lines marked <span class="tag tag-checked">Checked</span> come from Fresnel’s own research, each with the sources listed on that station’s page.</p>` : ''}
         <p class="fine">${info?.credit ?? ARCHIVE_NAME}. Facts only (names, roles, years, places); the archive’s text is not copied. See <a href="${keepersPath(ctx)}#where">where the names come from and who is left out</a>, and <a href="${ctx.base}credits/">all sources and licences</a>.</p>`,
     },

@@ -170,7 +170,13 @@ home) or reachable only by boat, say so plainly in *Today*.
   "about" or gives only a range. Spell names as the source does; give variants in `note`
   ("also spelled Stroudt in the 1875 Register"). `other_stations` lists the person's service
   elsewhere **only when a source names it** (it feeds the keepers index; never infer a person from
-  a shared name).
+  a shared name): each entry is `{"name": "…", "id": "<station id>" (when it is on the map), "role", "from",
+  "to", "cite": [n]}` and **must carry a `cite`**, the source that connects the two stations. `person` is
+  the USLHS archive's person slug (`roster.py --json` prints it on each line, the `person` field): put it on a
+  line when that line IS that archive record's stint, so the keepers index joins the research stint to the
+  archive's person and links the name on the station page. Never put a slug on a line because the names
+  look alike. A line with `other_stations` and no `person` makes a person only your research names. A line
+  with neither stays a row in the table. (DESIGN.md 3.6)
 - **`wrecks`**: wrecks and rescues at or near the station that a source ties to it.
 - **`events`**: `event` from DESIGN §3.4 (`built, first_lit, rebuilt, replaced, relit, deactivated,
   automated, keeper_appointed, lens_installed, lens_removed, characteristic_changed,
