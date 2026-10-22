@@ -300,7 +300,7 @@ export function renderPersonMain(p: PersonRecord, ctx: RenderContext): SafeHtml 
 
 export function renderPersonHead(p: PersonRecord, ctx: RenderContext): SafeHtml {
   const places = distinctPlaces(p);
-  const title = `${p.name}: keeper${places.length === 1 ? ` at ${places[0]}` : ''} · Fresnel`;
+  const title = `${p.name}: listed at ${places.length === 1 ? places[0] : `${places.length} places`} · Fresnel`;
   const desc = `${personSummary(p)} Names, roles and years from the U.S. Lighthouse Society’s Digital Archive, from the National Archives’ keeper registers.`;
   const url = personUrl(p.id, ctx);
   return html`<title>${title}</title>
@@ -345,7 +345,7 @@ export function renderKeepersMain(m: KeeperManifest, ctx: RenderContext): SafeHt
     <noscript><p class="notice tone-caution" role="note">${INFO}<span>The search needs JavaScript. Without it, every station page lists its keepers, and each name with a page links to it.</span></p></noscript>
     <nav class="k-letters" aria-label="Browse by the first letter of the surname" data-letters hidden><ul>${letters.map(([l, n]) => html`<li><a href="?l=${encodeURIComponent(l)}" data-letter="${l}">${l}<span class="visually-hidden"> surnames</span><span class="k-n">${formatCount(n)}</span></a></li>`)}</ul></nav>
     <p class="k-status" role="status" aria-live="polite" data-status hidden>Choose a letter, or type a name, to see keepers.</p>
-    <ol class="k-list" data-list></ol>
+    <ol class="k-list" data-list aria-label="Keepers found"></ol>
     <p><button type="button" class="btn" data-more hidden>Show more</button></p>
     <p class="fine" data-everywhere hidden>A single word searches surnames that begin with it. <button type="button" class="linklike" data-search-all>Search first names too</button> (this reads the whole index).</p>
   </section>

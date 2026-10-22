@@ -393,6 +393,11 @@ describe('what a page must never do', () => {
     }
   });
 
+  it('titles a page by the name and where they are listed, never by a role the archive may not give (laborers and contractors are in it)', () => {
+    expect(renderPersonHead(person('jonas-example'), ctx).value).toContain('<title>Jonas Example: listed at 2 places · Fresnel</title>');
+    expect(renderPersonHead(person('mary-sample'), ctx).value).toContain('<title>Mary Sample: listed at Example Shoal Light · Fresnel</title>');
+  });
+
   it('marks a sample person’s page noindex, and a real one’s not', () => {
     expect(renderPersonHead(person('jonas-example'), ctx).value).toContain('name="robots" content="noindex"');
     expect(renderPersonHead({ ...person('jonas-example'), fixture: false }, ctx).value).not.toContain('noindex');

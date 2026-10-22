@@ -540,8 +540,10 @@ each line with its sources) and a one-line note that the archive lists N lines t
 roster, marked "Not yet checked", with the archive's sentence, the archive place linked, and the credit again
 under Sources and credits. Each name with a person page links to it. A person's page lists the stints in order
 with the station (linked, or the archive's place with a link when the station is not on the map), the role,
-the years as printed and the source of each stint, the "possibly the same person as" block, the stations'
-histories that mention the person, and the credit. Details in 4.2.
+the years as printed and the source of each stint, the "possibly the same person as" block, the written histories of the stations they served at (and whether the
+history's text names them), and the credit. A story is linked only through a station where the person is listed,
+never because its text contains their name: finding "Strout" in another station's story would be joining by
+name. Details in 4.2.
 
 **Roster shape** (`data/research/<id>.json` → `keepers`, rendered as the station page's Keepers
 table; `research/STORY_GUIDE.md` has the research rules):
