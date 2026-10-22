@@ -134,7 +134,8 @@ SOURCE_ORDER = ["wikidata", "osm",
                 "ca_lightships_lifesaving", "ca_staffed_lightstations", "ccg_list_of_lights", "lighthousefriends",
                 "parks_canada_hl", "uslhs", "nrhp", "territories", "rowlett", "uscg_light_list", "enc", "uslhs_passport"]
 PRECEDENCE = {
-    "name": ["wikidata", "osm", "lighthousefriends", "uslhs", "territories", "rowlett", "nrhp"],
+    # lightship_stations names a station as the Light Lists do ("Scotland", not the Society's "Wreck of Scotland")
+    "name": ["wikidata", "osm", "lighthousefriends", "lightship_stations", "uslhs", "territories", "rowlett", "nrhp"],
     # lightship_stations (DESIGN 2.5): its positions are the Light Lists' own, or worked from them, and lead for a lightship station
     # (Wikidata's and the Society's points for a mooring are rounded or copied from a lighthouse)
     "location": ["lightship_stations", "osm", "wikidata", "territories", "lighthousefriends", "uslhs", "nrhp"],

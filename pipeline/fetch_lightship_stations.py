@@ -81,6 +81,12 @@ ENTRY_STATIONS = {
 }
 # A station whose mooring lies in another country than the one the Society files it under
 COUNTRY_OF_POSITION = {"southeast-shoal-lightship-station": ("CA", "ON", "Lake Erie off Pelee Island, in Canadian waters")}
+# The Society's stub places: no years, one vessel without years, and a name that is the other name of a full record
+# ("Cape Hatteras" is Diamond Shoal's alternate name; LV-72 served Diamond Shoal 1900-1922). The stub is folded into the
+# full record (its vessel is on that record already) and is not a station of its own.
+FOLDED_STUBS = {"cape-hatteras-lightship-station": "diamond-shoal-lightship-station"}
+# The Society's name for a station against the name of the light vessel in the Light Lists: the Lists' name leads
+NAME_FIX = {"wreck-scotland-lightship-station": ("Scotland", ["Wreck of Scotland"])}
 # Places the Society lists as lightship stations that are not moorings
 NOT_A_MOORING = {
     "curtis-bay-depot-lightship-station": "a depot where lightships were kept and repaired (Curtis Bay, Baltimore), not a mooring",
@@ -225,7 +231,11 @@ def build() -> tuple[list[dict], dict]:
     pages = uv.station_pages()
     stations: dict[str, dict] = {}
     for slug, p in places.items():
+        if slug in FOLDED_STUBS:
+            continue
         name, alts, never_built = station_name(p["name"])
+        if slug in NAME_FIX:
+            name, alts = NAME_FIX[slug][0], NAME_FIX[slug][1] + alts
         pg = pages[slug]
         st = {"slug": slug, "name": name, "alts": alts, "never_built": never_built, "nid": p["nid"], "url": p["url"],
               "region": p.get("state"), "established": p.get("established") or pg.get("established"),

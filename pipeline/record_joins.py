@@ -1244,3 +1244,17 @@ _join('us-wa-klipsan-beach-life-saving-station', 'lss_reports:wa-ilwaco-beach')
 
 # West Quoddy Lifesaving Station (NRHP, Wikidata), 1.3 km from the list's "Quoddy Head".
 _join('us-me-west-quoddy-lifesaving-station', 'lss_reports:me-quoddy-head')
+
+
+# ---------------------------------------------------------------------------------------------
+# Lightship stations (agent/gaps, 2026-10-21): lightship_stations records whose station the matcher cannot see.
+# ---------------------------------------------------------------------------------------------
+
+# Wikidata's "Five Fathom Bank light station" (Q18150126) is the Society's Five Fathom Bank lightship station, but
+# its point (38.8354 N, 75.0119 W) is at the mouth of Delaware Bay, 38 km from where the Light List prints the
+# lightship (1900, page 92, entry 462: 38 47 20 N, 74 34 36 W, off Cape May). The Light List's point leads; Wikidata's is set aside.
+_join('us-nj-five-fathom-bank', 'lightship_stations:five-fathom-bank')
+NO_POSITION.add('wikidata:Q18150126')
+
+# The Society's and Light Lists' name for the station is "Five Fathom Bank"; Wikidata's label adds "light station".
+NAME_PICKS['us-nj-five-fathom-bank'] = 'Five Fathom Bank'

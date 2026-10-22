@@ -153,7 +153,11 @@ def berth_of(rec: dict, stations: list[dict]) -> dict | None:
 def build() -> dict[str, dict]:
     place_by_name: dict[str, str] = {}
     for p in uv.lightship_places():
+        if p["slug"] in fls.FOLDED_STUBS:
+            continue
         name, alts, _nb = fls.station_name(p["name"])
+        if p["slug"] in fls.NAME_FIX:
+            name, alts = fls.NAME_FIX[p["slug"]][0], fls.NAME_FIX[p["slug"]][1] + alts
         key = "lightship_stations:" + re.sub(r"-lightship-station.*$", "", p["slug"])
         place_by_name[fls.squash(name)] = key
         for a in alts:
