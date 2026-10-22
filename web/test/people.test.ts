@@ -32,7 +32,8 @@ import { contextFor, fixtureData, python, WEB } from './helpers.ts';
 
 const data = fixtureData();
 const ctx = contextFor(data.meta);
-const text = (h: string) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+/** The words a reader sees: tags dropped (a link's hidden "opens another site" note and the space a tag leaves before a comma too). */
+const text = (h: string) => h.replace(/<span class="visually-hidden">[^<]*<\/span>/g, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').replace(/\s+([,.;:])/g, '$1');
 const person = (id: string) => data.keepers.people.get(id)!;
 const personPage = (id: string) => renderPersonMain(person(id), ctx).value;
 const stationPage = (id: string) => renderStationMain(data.records.get(id)!, ctx).value;
@@ -185,7 +186,8 @@ describe('one person, several stations', () => {
   it('gives the source line of each stint and links the archive record', () => {
     expect(out).toContain('tag-unchecked');
     expect(out).toContain('href="https://archives.uslhs.org/places/example-shoal"');
-    expect(out).toContain('Keepers listed by the U.S. Lighthouse Society’s Digital Archive, from the National Archives’ keeper registers.');
+    expect(text(out)).toContain('Keepers listed by the U.S. Lighthouse Society’s Digital Archive, from the National Archives’ keeper registers.');
+    expect(out).toContain('<a href="https://archives.uslhs.org/" class="" rel="noopener">U.S. Lighthouse Society’s Digital Archive');
     expect(out).toContain('href="https://archives.uslhs.org/people/jonas-example"');
     expect(out).toContain('U.S. Lighthouse Society Digital Archive');
   });
@@ -235,6 +237,24 @@ describe('same name, different records', () => {
     expect(person('ezra-sample').stints).toHaveLength(1);
     expect(person('ezra-sample-0').stints).toHaveLength(1);
     expect(person('ezra-sample').stints[0]!.station).toBe('us-nc-example-shoal');
+  });
+});
+
+describe('stories', () => {
+  it('a history that uses the person’s name says so, carefully, and links it through the station they served at', () => {
+    const out = personPage('samuel-sample');
+    expect(out).toContain('<a href="/fresnel/s/us-me-example-head/#history">The history of Example Head Light</a>');
+    expect(text(out)).toContain('The history mentions the name “Samuel Sample”');
+  });
+
+  it('a history that does not use the name is still linked, and says it does not', () => {
+    const out = personPage('ezra-sample-1');
+    expect(out).toContain('<a href="/fresnel/s/us-me-example-head/#history">The history of Example Head Light</a>');
+    expect(text(out)).toContain('the history does not use the name');
+  });
+
+  it('a person at stations with no written history gets no stories section', () => {
+    expect(personPage('jonas-example')).not.toContain('In the histories');
   });
 });
 
@@ -430,6 +450,7 @@ describe('the /keepers/ page', () => {
     expect(out).toContain('<label for="k-station">Station</label>');
     expect(out).toContain('data-letter="S"');
     expect(t).toContain('Keepers listed by the U.S. Lighthouse Society’s Digital Archive, from the National Archives’ keeper registers.');
+    expect(out).toContain('href="https://archives.uslhs.org/"');
   });
 
   it('says where the names come from, that two people are never joined by name, and what “possibly” means', () => {

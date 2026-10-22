@@ -1030,12 +1030,13 @@ Feature (b) of section 1. The data and the rules are 3.6; this is what the site 
   The logic is `web/src/lib/people.ts` (pure, tested, and tested against `pipeline/keepers.py` for the name
   folding and the letters); the DOM is `src/pages/keepers.ts`.
 - **`/k/<person-id>/`**, prerendered like a station page (`person.html`, 16,884 pages, 8 to 27 KB each, median
-  8.7 KB or 3 KB gzipped; the build adds 17 s). Header: the name, "Listed at 3 places in Maine and New
+  8.7 KB or 3 KB gzipped; the prerender takes about 15 s for all 19,500 pages). Header: the name, "Listed at 3 places in Maine and New
   Hampshire, 1861–1878." Sections: **Where they served** (a table: station, role, years as printed, source of
   each stint: "Archive" with the archive place linked, or "Checked" with the research source numbers linked to
   the station's list), **Possibly the same person** (only when there is a hint), **In the histories** (the
-  stations' written histories where they served, saying "Names Jane Doe" only when the history's text does:
-  whole-name match, never part of a longer name), **Sources and credits** (the archive's sentence, the archive's
+  stations' written histories where they served, adding "The history mentions the name “Jane Doe”" only when
+  the history's text contains it: whole-name match, never part of a longer name; a common name may be another
+  person, so it says "the name"), **Sources and credits** (the archive's sentence, the archive's
   own person page linked, "two records with the same name are never joined", the credit line), and **Suggest a
   correction** (the edit form on GitHub, filled in). A stint at a place not on the map names the archive's place
   with a link and says "Not linked to a station page". The page never shows a race or sex, and a sample (fixture)

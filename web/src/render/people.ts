@@ -22,6 +22,11 @@ export const ARCHIVE_NAME = 'U.S. Lighthouse Society’s Digital Archive';
 export const ARCHIVE_SOURCE_LINE = 'Keepers listed by the U.S. Lighthouse Society’s Digital Archive, from the National Archives’ keeper registers.';
 export const ARCHIVE_HOME = 'https://archives.uslhs.org/';
 
+/** The same sentence with the archive linked, for pages that have no place or person link of their own to put beside it. */
+export function archiveSentence(): SafeHtml {
+  return html`Keepers listed by the ${externalLink(ARCHIVE_HOME, ARCHIVE_NAME)}, from the National Archives’ keeper registers.`;
+}
+
 export function personPath(id: string, ctx: Pick<RenderContext, 'base'>): string {
   return `${ctx.base}k/${id}/`;
 }
@@ -236,7 +241,7 @@ function historiesSection(p: PersonRecord, ctx: Pick<RenderContext, 'base'>): Sa
     seen.add(s.station);
     const name = s.station_name || s.station;
     items.push(
-      html`<li><a href="${ctx.base}s/${s.station}/#history">The history of ${name}</a>${s.mentioned ? html`<span class="sub">Names ${p.name}</span>` : html`<span class="sub">The station where ${p.name} is listed; the history does not name them</span>`}</li>`,
+      html`<li><a href="${ctx.base}s/${s.station}/#history">The history of ${name}</a>${s.mentioned ? html`<span class="sub">The history mentions the name “${p.name}”</span>` : html`<span class="sub">The station where ${p.name} is listed; the history does not use the name</span>`}</li>`,
     );
   }
   if (!items.length) return null;
@@ -275,7 +280,7 @@ export function renderPersonMain(p: PersonRecord, ctx: RenderContext): SafeHtml 
     {
       id: 'sources',
       title: 'Sources and credits',
-      body: html`<p>${ARCHIVE_SOURCE_LINE} ${p.stints.length > 1 ? 'This page puts the stints together only because the archive files them under one person record' : 'The archive keeps one record for this person'}${p.archive && safeUrl(p.archive) ? html`: ${externalLink(p.archive, 'the archive’s page for this person')}` : ''}. Two records with the same name are never joined.</p>
+      body: html`<p>${archiveSentence()} ${p.stints.length > 1 ? 'This page puts the stints together only because the archive files them under one person record' : 'The archive keeps one record for this person'}${p.archive && safeUrl(p.archive) ? html`: ${externalLink(p.archive, 'the archive’s page for this person')}` : ''}. Two records with the same name are never joined.</p>
         ${research ? html`<p>Lines marked <span class="tag tag-checked">Checked</span> come from Fresnel’s own research, each with the sources listed on that station’s page.</p>` : ''}
         <p class="fine">${info?.credit ?? ARCHIVE_NAME}. Facts only (names, roles, years, places); the archive’s text is not copied. See <a href="${keepersPath(ctx)}#where">where the names come from and who is left out</a>, and <a href="${ctx.base}credits/">all sources and licences</a>.</p>`,
     },
@@ -352,7 +357,7 @@ export function renderKeepersMain(m: KeeperManifest, ctx: RenderContext): SafeHt
 
   <section id="where" aria-labelledby="where-h">
     <h2 id="where-h">Where the names come from, and who is left out</h2>
-    <p>${ARCHIVE_SOURCE_LINE} The archive gives each person one record, and a record may list service at many stations. A person’s page is that record: <strong>two people are never joined because their names match</strong>. Where two records share a name and their years and places fit one career, each page says “possibly the same person as…” and nothing more. Fresnel’s own research can add a stint to a person only when it names the same archive record, or cites a source that connects them.</p>
+    <p>${archiveSentence()} The archive gives each person one record, and a record may list service at many stations. A person’s page is that record: <strong>two people are never joined because their names match</strong>. Where two records share a name and their years and places fit one career, each page says “possibly the same person as…” and nothing more. Fresnel’s own research can add a stint to a person only when it names the same archive record, or cites a source that connects them.</p>
     <p><strong>People who may be alive have no page.</strong> Anyone whose recorded service begins in 1950 or later or ends after 1960, or whose record carries no year at all, is left out of this index${m.withheld ? html` (${formatCount(m.withheld)} people)` : ''}. They still appear, exactly as the archive prints them (name, role, years), in the roster of the station where they served.</p>
     <p><strong>The United States only, so far.</strong> The archive covers the United States, so this index has no Canadian keepers yet. Canadian keepers will come from the researched histories of the stations, each line with its source.</p>
     <p>Rosters from the archive are marked “Not yet checked”: they are transcriptions of registers, not research. A station whose roster has been researched shows that one instead, marked “Checked”, with a source on every line. Facts only (names, roles, years, places) are taken from the archive; its text is not copied. <a href="${ctx.base}credits/">All sources and licences</a>.</p>
