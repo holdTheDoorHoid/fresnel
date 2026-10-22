@@ -57,8 +57,12 @@ LISTS = {
                "id": "lightlistatlant00servgoog", "url": "https://archive.org/details/lightlistatlant00servgoog", "bearings": "magnetic"},
     "ll1900": {"title": "Light List: Atlantic and Gulf Coasts of the United States, 1900 (Light-House Board)", "year": 1900,
                "id": "lightlistatlant01servgoog", "url": "https://archive.org/details/lightlistatlant01servgoog", "bearings": "magnetic"},
-    "gl1925": {"title": "Light List, Great Lakes, United States and Canada (Lighthouse Service), editions of 1924-28", "year": 1925,
+    "gl1925": {"title": "Light List, Great Lakes, United States and Canada, 1925 edition (Lighthouse Service)", "year": 1925,
                "id": "lightlist00unkngoog", "url": "https://archive.org/details/lightlist00unkngoog", "bearings": "true"},
+    "gl1928": {"title": "Light List, Great Lakes, United States and Canada, 1928 edition (Lighthouse Service)", "year": 1928,
+               "id": "lightlist00unkngoog", "url": "https://archive.org/details/lightlist00unkngoog", "bearings": "true"},
+    "lhb1895": {"title": "Annual Report of the Light-House Board for the fiscal year 1895", "year": 1895,
+                "id": "annualreportlig00boargoog", "url": "https://archive.org/details/annualreportlig00boargoog", "bearings": "true"},
 }
 
 # The Society files five stations without a state; each is one of these, by its own description
@@ -68,6 +72,13 @@ STATE_FIX = {
     "ship-shoal-lightship-station": ("LA", "off Raccoon Point (the Society's location)"),
     "willoughby-split-lightship-station": ("VA", "south side of the entrance to Hampton Roads (the Society's location)"),
 }
+# An entry that the rules below cannot tie to a station, tied by hand with the reason
+ENTRY_STATIONS = {
+    "gl1925:362": ("southeast-shoal-lightship-station", "name; the Society's years for the station (1901-1910, the Lake Carriers' Association's vessel) end before "
+                                                        "this list, which still prints the lightship at the same shoal"),
+}
+# A station whose mooring lies in another country than the one the Society files it under
+COUNTRY_OF_POSITION = {"southeast-shoal-lightship-station": ("CA", "ON", "Lake Erie off Pelee Island, in Canadian waters")}
 # Places the Society lists as lightship stations that are not moorings
 NOT_A_MOORING = {
     "curtis-bay-depot-lightship-station": "a depot where lightships were kept and repaired (Curtis Bay, Baltimore), not a mooring",
@@ -120,7 +131,10 @@ def entry_station(e: dict, stations: dict[str, dict]) -> tuple[str | None, str]:
     """The slug of the station an entry belongs to, and how that was settled: the vessel's number and the list's year
     against the Society's assignments, and the name; both must agree (a number only when the entry has one)."""
     year = LISTS[e["list"]]["year"]
-    name_key = squash(re.sub(r"\s*\(.*?\)", "", re.sub(r"\s*Light[\s\-]*Vessel.*$", "", e["name"], flags=re.I)))
+    manual = ENTRY_STATIONS.get(f"{e['list']}:{e['number']}")
+    if manual and manual[0] in stations:
+        return manual
+    name_key = squash(re.sub(r"\s*\(.*?\)", "", re.sub(r"\s*Light[\s\-]*(?:Vessel|ship).*$", "", e["name"], flags=re.I)))
     by_name, by_hull = [], []
     for slug, st in stations.items():
         sk = squash(st["name"])
@@ -130,7 +144,10 @@ def entry_station(e: dict, stations: dict[str, dict]) -> tuple[str | None, str]:
                 kind, no = hull_of(v["label"])
                 if no is not None and no == e.get("vessel_no") and v["start"] is not None and v["start"] - 1 <= year <= (v["end"] or 9999) + 1:
                     by_hull.append(slug)
-    live = [s for s in by_name if stations[s]["established"] is None or stations[s]["established"] - 1 <= year <= (stations[s]["discontinued"] or 9999) + 1]
+    def span_end(st: dict) -> int:
+        return max([st["discontinued"] or 0] + [v["end"] or 0 for v in st["vessels"]] + [0]) or 9999
+
+    live = [s for s in by_name if stations[s]["established"] is None or stations[s]["established"] - 1 <= year <= span_end(stations[s]) + 1]
     if len(set(by_hull)) == 1:
         return by_hull[0], "vessel number and year agree with the Society's assignment, and the name"
     if e.get("vessel_no") is None and len(live) == 1:
@@ -222,7 +239,10 @@ def build() -> tuple[list[dict], dict]:
         reasons = []
         if slug in NOT_A_MOORING:
             reasons.append(NOT_A_MOORING[slug])
-        rec = rx.new_record(SOURCE, ident, st["name"], url=st["url"], country="US", region=st["region"],
+        country, region = "US", st["region"]
+        if slug in COUNTRY_OF_POSITION and pos:
+            country, region = COUNTRY_OF_POSITION[slug][0], COUNTRY_OF_POSITION[slug][1]
+        rec = rx.new_record(SOURCE, ident, st["name"], url=st["url"], country=country, region=region,
                             lat=pos["lat"] if pos else None, lon=pos["lon"] if pos else None, precision="approximate",
                             kind="lightship_station", kind_raw="Lightship Station")
         rec["other_names"] = [a for a in ([st["alternate_name"]] if isinstance(st["alternate_name"], str) else []) + st["alts"] if a]
