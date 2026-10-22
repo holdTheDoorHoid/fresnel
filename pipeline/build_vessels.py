@@ -13,7 +13,7 @@ the Society knows by a letter code or a name is `lv-zz`, `kewaunee`), the names 
   words are not kept (the Society's text); the year it names is kept as the year of the fate.
 - *Berth*: a survivor's berth is a station on the map of kind `lightship` (from Wikidata, the National Register and
   Lighthouse Friends: `data/stations/`), found by the hull number or the name the station's other names carry; the berth
-  carries that station's id, which is permanent. A survivor that no station on the map carries gets no berth here (the one
+  carries that station's id, which is permanent (its name and point are read from the published station when the site is built). A survivor that no station on the map carries gets no berth here (the one
   the sources name no berth for, LV-75, "possibly scrapped 2013"); nothing is added to the map for it.
 
 Python 3.12, standard library only. Needs the corpus's USLHS cache (`$FRESNEL_RAW_ROOT/uslhs/`); `data/stations/` is read when
@@ -127,6 +127,8 @@ BERTH_BY_HAND = {
     "wlv-196": ("us-ak-umatilla", "named 'Lightship Umatilla WLV-196' on Lighthouse Friends; the Society says she was renamed Bio Researcher (private)"),
     "wal-612": ("us-ma-nantucket-i", "Lighthouse Friends' Nantucket I (WLV-612)"),
     "wal-613": ("us-ma-nantucket-i", "the same map station holds Lighthouse Friends' Nantucket II (WLV 613) with Nantucket I"),
+    # one vessel, once the pinned join (record_joins.py) has folded us-wa-swiftsure-2 into this station; the plain id survives
+    "lv-83": ("us-wa-swiftsure", "Swiftsure, the lightship at Lake Union, Seattle (Wikidata, Lighthouse Friends and the National Register describe one vessel)"),
 }
 # The names the map's own sources give the surviving hulls (Wikidata labels, National Register names, Lighthouse Friends)
 SURVIVOR_NAMES = {
@@ -142,14 +144,14 @@ def berth_of(rec: dict, stations: list[dict]) -> dict | None:
     if rec["id"] in BERTH_BY_HAND and BERTH_BY_HAND[rec["id"]][0] in by_id:
         sid, why = BERTH_BY_HAND[rec["id"]]
         st = by_id[sid]
-        return {"station_id": sid, "name": st["name"], "lat": st["lat"], "lon": st["lon"], "basis": why}
+        return {"station_id": sid, "name": st["name"], "basis": why}
     nums = {int(re.search(r"(\d+)", x).group(1)) for x in (rec["hull"], rec.get("wal")) if x and re.search(r"\d", x)}
     kind_ok = (lambda st: any(n >= 190 for n in st["hulls"] & nums)) if rec["id"].startswith(("wlv-", "wal-")) else (lambda st: True)
     cands = [st for st in stations if st["hulls"] & nums and kind_ok(st) and not any(v[0] == st["id"] for v in BERTH_BY_HAND.values())]
     if not cands:
         return None
     st = sorted(cands, key=lambda s: s["id"])[0]
-    out = {"station_id": st["id"], "name": st["name"], "lat": st["lat"], "lon": st["lon"], "basis": "the hull number in the map station's names"}
+    out = {"station_id": st["id"], "name": st["name"], "basis": "the hull number in the map station's names"}
     if len(cands) > 1:
         out["also"] = [x["id"] for x in cands[1:]]
     return out

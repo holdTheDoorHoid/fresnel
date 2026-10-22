@@ -79,11 +79,53 @@ class NameAndJoinTest(Case):
         self.assertEqual(keys, {"lightship_stations:pollock-rip", "uslhs:1"})
 
 
+class SwiftsureTest(Case):
+    """The surviving lightship Swiftsure (LV-83) was two stations: Wikidata's item (NRHP 75001852) put her 11.0 km from the register's own point
+    and Lighthouse Friends', which agree with each other to 30 m at Lake Union. The hard-key join reaches 10 km, so a pin joins them and
+    sets Wikidata's point aside; the station that loses its records is retired, never deleted."""
+
+    REG = [{"register": "NRHP", "number": "75001852", "url": "https://npgallery.nps.gov/AssetDetail/NRIS/75001852"}]
+
+    def write_all(self):
+        self.write("wikidata", [rec("wikidata", "Q7656131", "Swiftsure", 47.6749, -122.207, kind="lightship", region="WA", registers=self.REG)])
+        self.write("lighthousefriends", [rec("lighthousefriends", "185", "Swiftsure", 47.62806, -122.33703, kind="lightship", region="WA", other_names=["Lightship Swiftsure LV 83/WAL 508"])])
+        self.write("nrhp", [rec("nrhp", "75001852", "RELIEF (lightship)", 47.628175, -122.336713, kind="lightship", region="WA", precision="approximate",
+                                registers=[{**self.REG[0], "listed": "1975-04-23", "nhl": "1989-04-11", "nomination": "n"}])])
+
+    def test_without_the_pin_the_matcher_leaves_two_stations(self):
+        self.write_all()
+        merge.set_decisions(merge._NoDecisions())
+        self.run_merge()
+        self.assertEqual(len(self.files()), 2)                      # the gap the pin closes: 11 km is past the hard-key radius
+
+    def test_with_the_pin_there_is_one_station_at_the_registers_point_and_the_other_id_is_kept_and_retired(self):
+        self.write_all()
+        merge.set_decisions(merge._NoDecisions())
+        self.run_merge()
+        ids = sorted(self.files())
+        keep = next(i for i in ids if any(s["key"] == "wikidata:Q7656131" for s in self.files()[i]["sources"]))
+        gone = next(i for i in ids if i != keep)
+        merge.set_decisions(decisions(RECORD_JOINS={"lighthousefriends:185": keep, "nrhp:75001852": keep}, NO_POSITION={"wikidata:Q7656131"}))
+        self.run_merge()
+        files = self.files()
+        self.assertEqual(sorted(files), ids)                          # ids never go
+        self.assertEqual((files[gone]["merged_into"], files[gone]["hidden"]), (keep, True))
+        station = files[keep]
+        self.assertEqual({s["key"] for s in station["sources"]}, {"wikidata:Q7656131", "lighthousefriends:185", "nrhp:75001852"})
+        self.assertAlmostEqual(station["location"]["lat"], 47.62806, places=4)         # Lake Union, not Wikidata's 47.6749
+        self.assertEqual(station["location"]["from"], "lighthousefriends")
+
+
 class RealDecisionsTest(unittest.TestCase):
     def test_five_fathom_bank_is_pinned_to_the_wikidata_item_and_its_point_set_aside(self):
         self.assertEqual(record_joins.RECORD_JOINS["lightship_stations:five-fathom-bank"], "us-nj-five-fathom-bank")
         self.assertIn("wikidata:Q18150126", record_joins.NO_POSITION)
         self.assertEqual(record_joins.NAME_PICKS["us-nj-five-fathom-bank"], "Five Fathom Bank")
+
+    def test_the_two_swiftsure_stations_are_one(self):
+        self.assertEqual(record_joins.RECORD_JOINS["lighthousefriends:185"], "us-wa-swiftsure")
+        self.assertEqual(record_joins.RECORD_JOINS["nrhp:75001852"], "us-wa-swiftsure")
+        self.assertIn("wikidata:Q7656131", record_joins.NO_POSITION)
 
     def test_the_lightship_source_leads_for_position_and_name(self):
         self.assertEqual(merge.PRECEDENCE["location"][0], "lightship_stations")

@@ -499,7 +499,7 @@ years), its fate, and, if it survives, its berth. A surviving vessel is also on 
 {"id": "lv-112", "hull": "LV-112", "wal": "WAL-534", "names": ["Nantucket"], "built": 1936, "retired": 1975,
  "career": [{"station": "Nantucket Shoals", "station_key": "lightship_stations:nantucket-shoals", "start": 1936, "end": 1942}, ...],
  "fate": {"status": "survives" | "lost" | "scrapped" | "sold" | "unknown", "year": 1944 | null, "existing": true, "doubtful": true (only when the Society says both)},
- "berth": {"station_id": "us-ma-lightship-nantucket", "name": ..., "lat": ..., "lon": ..., "basis": ...} | null,
+ "berth": {"station_id": "us-ma-lightship-nantucket", "name": ..., "basis": ...} | null,   (the site shows the station's own name and point)
  "sources": [{"label": ..., "url": "https://archives.uslhs.org/node/4156", "credit": ...}]}
 ```
 

@@ -348,6 +348,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
     vessels = site_vessels.load_vessels(vessels_dir) if vessels_dir is not None else {}
     key_to_id: dict[str, str] = {}
     visible: dict[str, str] = {}
+    points: dict[str, tuple[float, float]] = {}
     if vessels_dir is not None:
         loaded = []
         for path in files:
@@ -355,7 +356,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
                 loaded.append(json.loads(path.read_text(encoding="utf-8")))
             except (OSError, json.JSONDecodeError):
                 pass
-        key_to_id, visible = site_vessels.scan(loaded, lambda r: check_record(r) is None)
+        key_to_id, visible = site_vessels.scan(loaded, lambda r: check_record(r) is None, points)
         del loaded
     on_station = site_vessels.station_vessels(vessels, key_to_id, visible)
     vocab = json.loads(vocab_path.read_text(encoding="utf-8")) if vocab_path.is_file() else {}
@@ -456,7 +457,7 @@ def build(stations_dir: Path, stories_dir: Path, research_dir: Path, sources_dir
     if vessels_dir is not None:
         (out / "v").mkdir(exist_ok=True)
         for vid, v in vessels.items():
-            _write_json(out / "v" / f"{vid}.json", site_vessels.vessel_page(v, key_to_id, visible))
+            _write_json(out / "v" / f"{vid}.json", site_vessels.vessel_page(v, key_to_id, visible, points))
         gap = site_vessels.unplaced(sources_dir, key_to_id, vessels)
         _write_json(out / "unplaced.json", gap)
         log.info(f"Wrote {len(vessels)} vessel records and {gap['count']} stations that cannot be placed yet")

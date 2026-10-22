@@ -97,6 +97,20 @@ class VesselPageTest(unittest.TestCase):
         self.assertIsNone(sv.vessel_page(VESSELS["lv-9"], self.key_to_id, self.visible)["berth"])
 
 
+class BerthPointTest(unittest.TestCase):
+    def test_the_berth_shows_the_published_stations_name_and_point_not_a_copy_in_the_record(self):
+        stations = [station("us-ma-lightship-nantucket", "Lightship Nantucket (renamed)", [], location={"lat": 42.3612, "lon": -71.0352})]
+        points: dict = {}
+        key_to_id, visible = sv.scan(stations, points=points)
+        page = sv.vessel_page(VESSELS["lv-112"], key_to_id, visible, points)
+        self.assertEqual(page["berth"], {"station_id": "us-ma-lightship-nantucket", "name": "Lightship Nantucket (renamed)", "lat": 42.3612, "lon": -71.0352})
+
+    def test_a_record_made_without_a_point_gets_none_when_the_station_has_none(self):
+        key_to_id, visible = sv.scan([station("us-ma-lightship-nantucket", "Nantucket")])
+        berth = sv.vessel_page({**VESSELS["lv-112"], "berth": {"station_id": "us-ma-lightship-nantucket", "name": "x", "basis": "b"}}, key_to_id, visible)["berth"]
+        self.assertEqual(berth, {"station_id": "us-ma-lightship-nantucket", "name": "Nantucket"})
+
+
 class UnplacedTest(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp())

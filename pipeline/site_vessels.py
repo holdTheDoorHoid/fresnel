@@ -23,14 +23,19 @@ from typing import Callable, Iterable
 KEYED_SOURCES = ("lightship_stations", "lss_reports")
 
 
-def scan(records: Iterable[dict], usable: Callable[[dict], bool] = lambda r: True) -> tuple[dict[str, str], dict[str, str]]:
-    """(source key -> station id, station id -> name) over the stations that will be published."""
+def scan(records: Iterable[dict], usable: Callable[[dict], bool] = lambda r: True,
+         points: dict[str, tuple[float, float]] | None = None) -> tuple[dict[str, str], dict[str, str]]:
+    """(source key -> station id, station id -> name) over the stations that will be published. When `points` is given it is
+    filled with each station's (lat, lon): a vessel's berth shows the station's own point, never a copy that may go stale."""
     key_to_id: dict[str, str] = {}
     visible: dict[str, str] = {}
     for rec in records:
         if not isinstance(rec, dict) or rec.get("merged_into") or rec.get("hidden") or not usable(rec):
             continue
         visible[rec["id"]] = rec["name"]
+        loc = rec.get("location") or {}
+        if points is not None and isinstance(loc.get("lat"), (int, float)) and isinstance(loc.get("lon"), (int, float)):
+            points[rec["id"]] = (loc["lat"], loc["lon"])
         for s in rec.get("sources") or []:
             if isinstance(s, dict) and s.get("source") in KEYED_SOURCES and isinstance(s.get("key"), str):
                 key_to_id.setdefault(s["key"], rec["id"])
@@ -75,7 +80,7 @@ def station_vessels(vessels: dict[str, dict], key_to_id: dict[str, str], visible
     return out
 
 
-def vessel_page(v: dict, key_to_id: dict[str, str], visible: dict[str, str]) -> dict:
+def vessel_page(v: dict, key_to_id: dict[str, str], visible: dict[str, str], points: dict[str, tuple[float, float]] | None = None) -> dict:
     career = []
     for line in v.get("career") or []:
         sid = key_to_id.get(line.get("station_key") or "")
@@ -83,7 +88,12 @@ def vessel_page(v: dict, key_to_id: dict[str, str], visible: dict[str, str]) -> 
                        "start": line.get("start"), "end": line.get("end")})
     berth = v.get("berth")
     if berth and berth.get("station_id") in visible:
-        berth = {k: berth[k] for k in ("station_id", "name", "lat", "lon", "note") if berth.get(k) is not None}
+        sid = berth["station_id"]
+        berth = {"station_id": sid, "name": visible[sid]}                      # the station's name today, not the one the record was made with
+        if points and sid in points:
+            berth["lat"], berth["lon"] = points[sid]
+        if v["berth"].get("note"):
+            berth["note"] = v["berth"]["note"]
     else:
         berth = None
     return {"id": v["id"], "hull": v["hull"], "wal": v.get("wal"), "names": v.get("names") or [], "built": v.get("built"),

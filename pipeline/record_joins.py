@@ -1258,3 +1258,13 @@ NO_POSITION.add('wikidata:Q18150126')
 
 # The Society's and Light Lists' name for the station is "Five Fathom Bank"; Wikidata's label adds "light station".
 NAME_PICKS['us-nj-five-fathom-bank'] = 'Five Fathom Bank'
+
+# The surviving lightship Swiftsure (LV-83) was two stations: us-wa-swiftsure (Wikidata Q7656131) and us-wa-swiftsure-2
+# (Lighthouse Friends 185 and the National Register 75001852). One vessel: both carry NRHP number 75001852, Wikidata's Wikipedia
+# link is "United States lightship Swiftsure (LV-83)" and Lighthouse Friends' title is "Lightship Swiftsure LV 83/WAL 508", both are
+# in King County, WA. The matcher kept them apart because Wikidata's point (47.6749 N, 122.207 W) is 11.0 km from the register's
+# batch point (47.6282, -122.3367) and Lighthouse Friends' (47.62806, -122.33703), which agree with each other to 30 m and lie at
+# Lake Union, Seattle, where the ship is berthed; the hard-key join reaches 10 km. Wikidata's point is the wrong one. The records of
+# us-wa-swiftsure-2 join the plainer id (both are live; the file of -2 stays, hidden, with merged_into, and its address redirects).
+_join('us-wa-swiftsure', 'lighthousefriends:185', 'nrhp:75001852')
+NO_POSITION.add('wikidata:Q7656131')
