@@ -143,6 +143,12 @@ class GroupingTest(unittest.TestCase):
         self.assertEqual((line["role"], line["role_raw"]), ("other", "Machinist"))
         self.assertNotIn("role_raw", kp.make_line(raw_line("A B", "1900-1901", "a-b")))
 
+    def test_an_acting_assistant_is_an_assistant_not_an_acting_keeper(self):
+        line = kp.make_line(raw_line("A B", "1900-1901", "a-b", "acting keeper", "Acting Assistant"))
+        self.assertEqual((line["role"], line["role_raw"]), ("assistant", "Acting Assistant"))
+        line = kp.make_line(raw_line("A B", "1900-1901", "a-b", "acting keeper", "Acting Principal Lighthouse Keeper"))
+        self.assertEqual(line["role"], "acting keeper")
+
     def test_the_archives_race_and_sex_fields_are_never_carried(self):
         raw = raw_line("A B", "1900-1901", "a-b")
         raw.update({"race": "x", "sex": "y", "gender": "z"})

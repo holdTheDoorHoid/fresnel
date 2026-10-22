@@ -153,13 +153,20 @@ def research_person_id(station_id: str, name: str, taken: set[str]) -> str:
 # ---------------------------------------------------------------------------------------------
 
 
+# research/roster.py maps every heading with "acting" to "acting keeper"; two of the archive's are not that.
+ROLE_FIXES = {
+    "Acting Assistant": "assistant",
+    "Temporary / Relief / Substitute Keeper (who is not Acting for Principal Keeper)": "other",
+}
+
+
 def make_line(raw: dict) -> dict:
     """An archive roster line (research/roster.py's rosters.json) in the shape the data files keep:
     name, role (normalised), role_raw only when the heading is not one of the standard seven, span as
     printed, years read from the span, and the archive's person slug."""
     f, t, fa, ta = parse_span(raw.get("span"))
-    line: dict = {"name": raw["name"], "role": raw.get("role") or "other"}
     heading = raw.get("role_raw") or ""
+    line: dict = {"name": raw["name"], "role": ROLE_FIXES.get(heading) or raw.get("role") or "other"}
     if heading and heading not in STANDARD_HEADINGS:
         line["role_raw"] = heading
     line["span"] = re.sub(r"\s+", " ", raw.get("span") or "").strip()

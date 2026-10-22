@@ -78,6 +78,8 @@ async function start(): Promise<void> {
     return;
   }
   formEl.hidden = false;
+  q('[data-letters]')!.hidden = false;
+  status.hidden = false;
   const roleIds = manifest.roles.map((r) => r.id);
   const chunks = new Map<string, IndexRow[]>();
   let stations: StationChoice[] | null = null;

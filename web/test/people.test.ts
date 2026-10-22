@@ -207,10 +207,10 @@ describe('one person, several stations', () => {
     expect(new URL(personEditUrl(person('jonas-example'), ctx)).searchParams.get('title')).toBe('Edit: keeper Jonas Example');
   });
 
-  it('a stint at a place not on the map is a plain archive place, said so', () => {
+  it('a stint at a place with no station page is a plain archive place, said so', () => {
     const lars = personPage('lars-fixture');
     expect(lars).toContain('Sample Buoy Depot');
-    expect(lars).toContain('Not on the Fresnel map');
+    expect(lars).toContain('Not linked to a station page');
     expect(lars).toContain('Machinist'); // the archive's own heading, as printed
   });
 });
@@ -438,8 +438,10 @@ describe('the /keepers/ page', () => {
     expect(text(out)).toContain('The archive covers the United States, so this index has no Canadian keepers yet.');
   });
 
-  it('works without JavaScript as far as it can: the form is hidden until the script runs, with a notice', () => {
+  it('works without JavaScript as far as it can: the form, the letters and the status line wait for the script, and a notice says why', () => {
     expect(out).toMatch(/<form class="k-form" data-keepers-form role="search" hidden>/);
+    expect(out).toMatch(/<nav class="k-letters"[^>]* data-letters hidden>/);
+    expect(out).toMatch(/<p class="k-status"[^>]* data-status hidden>/);
     expect(out).toContain('<noscript>');
   });
 

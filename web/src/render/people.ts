@@ -180,7 +180,7 @@ function stationCell(s: PersonStint, ctx: Pick<RenderContext, 'base'>): SafeHtml
     return html`<a href="${ctx.base}s/${s.station}/">${s.station_name || s.station}</a>${region ? html`<span class="sub">${region}</span>` : ''}`;
   }
   const name = s.place_name || s.station_name || 'A place the archive lists';
-  return html`${s.place_url ? externalLink(s.place_url, name) : name}${region ? html`<span class="sub">${region}</span>` : ''}<span class="sub">Not on the Fresnel map</span>`;
+  return html`${s.place_url ? externalLink(s.place_url, name) : name}${region ? html`<span class="sub">${region}</span>` : ''}<span class="sub">Not linked to a station page</span>`;
 }
 
 function sourceCell(s: PersonStint, ctx: Pick<RenderContext, 'base'>): SafeHtml {
@@ -209,10 +209,10 @@ export function stintsTable(p: PersonRecord, ctx: Pick<RenderContext, 'base'>): 
       <thead><tr><th scope="col">Station</th><th scope="col">Role</th><th scope="col">Years</th><th scope="col">Source</th></tr></thead>
       <tbody>${rows.map(
         (s) => html`<tr>
-          <th scope="row" data-label="Station">${stationCell(s, ctx)}</th>
-          <td data-label="Role">${roleLabel(s.role, s.role_raw) || html`<span class="muted">Not given</span>`}${s.note ? html`<span class="sub">${s.note}</span>` : ''}</td>
+          <th scope="row" data-label="Station"><span class="cell">${stationCell(s, ctx)}</span></th>
+          <td data-label="Role"><span class="cell">${roleLabel(s.role, s.role_raw) || html`<span class="muted">Not given</span>`}${s.note ? html`<span class="sub">${s.note}</span>` : ''}</span></td>
           <td data-label="Years" class="years">${stintYears(s)}</td>
-          <td data-label="Source" class="cites">${sourceCell(s, ctx)}</td>
+          <td data-label="Source" class="cites"><span class="cell">${sourceCell(s, ctx)}</span></td>
         </tr>`,
       )}</tbody>
     </table>
@@ -343,8 +343,8 @@ export function renderKeepersMain(m: KeeperManifest, ctx: RenderContext): SafeHt
       <div class="k-actions"><button type="button" class="btn btn-quiet" data-reset>Clear</button></div>
     </form>
     <noscript><p class="notice tone-caution" role="note">${INFO}<span>The search needs JavaScript. Without it, every station page lists its keepers, and each name with a page links to it.</span></p></noscript>
-    <nav class="k-letters" aria-label="Browse by the first letter of the surname" data-letters><ul>${letters.map(([l, n]) => html`<li><a href="?l=${encodeURIComponent(l)}" data-letter="${l}">${l}<span class="visually-hidden"> surnames</span><span class="k-n">${formatCount(n)}</span></a></li>`)}</ul></nav>
-    <p class="k-status" role="status" aria-live="polite" data-status>Choose a letter, or type a name, to see keepers.</p>
+    <nav class="k-letters" aria-label="Browse by the first letter of the surname" data-letters hidden><ul>${letters.map(([l, n]) => html`<li><a href="?l=${encodeURIComponent(l)}" data-letter="${l}">${l}<span class="visually-hidden"> surnames</span><span class="k-n">${formatCount(n)}</span></a></li>`)}</ul></nav>
+    <p class="k-status" role="status" aria-live="polite" data-status hidden>Choose a letter, or type a name, to see keepers.</p>
     <ol class="k-list" data-list></ol>
     <p><button type="button" class="btn" data-more hidden>Show more</button></p>
     <p class="fine" data-everywhere hidden>A single word searches surnames that begin with it. <button type="button" class="linklike" data-search-all>Search first names too</button> (this reads the whole index).</p>

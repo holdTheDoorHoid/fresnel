@@ -1036,7 +1036,7 @@ Feature (b) of section 1. The data and the rules are 3.6; this is what the site 
   whole-name match, never part of a longer name), **Sources and credits** (the archive's sentence, the archive's
   own person page linked, "two records with the same name are never joined", the credit line), and **Suggest a
   correction** (the edit form on GitHub, filled in). A stint at a place not on the map names the archive's place
-  with a link and says "Not on the Fresnel map". The page never shows a race or sex, and a sample (fixture)
+  with a link and says "Not linked to a station page". The page never shows a race or sex, and a sample (fixture)
   person's page is `noindex` and left out of the sitemap.
 - **Station pages** show the archive's roster as 3.6 says; the section appears for a lightship station too when it
   has one. A station with neither roster says so plainly and offers "Tell us".
