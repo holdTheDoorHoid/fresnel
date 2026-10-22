@@ -588,5 +588,34 @@ class CommittedDataTest(unittest.TestCase):
         self.assertEqual(rep["people_published"] + rep["people_withheld"], rep["archive_people"])
 
 
+def _cache_dir():
+    import _common
+    return _common.RAW_ROOT / "uslhs"
+
+
+@unittest.skipUnless((_cache_dir() / "rosters.json").is_file() and (_cache_dir() / "person").is_dir(),
+                     "needs the archive cache (data/raw/uslhs: rosters.json and the cached person pages)")
+class ArchiveGroundTruthTest(unittest.TestCase):
+    """The grouping rests on one claim: a person slug on roster lines names one archive person record, so the lines
+    that share it are that record's stints. The archive's own person pages (cached by `roster.py --detail`) are the
+    check: each lists its stints, and they must be exactly the lines the rosters group under the same slug."""
+
+    def test_the_stints_on_each_cached_person_page_are_the_lines_grouped_under_its_slug(self):
+        sys.path.insert(0, str(REPO / "research"))
+        import roster
+        import polite
+        rosters = json.loads((_cache_dir() / "rosters.json").read_text())
+        by: dict[str, list] = {}
+        for ro in rosters.values():
+            for l in ro["lines"]:
+                by.setdefault(l["person"], []).append((ro["slug"], kp.parse_span(l["span"])[0] or 0))
+        pages = sorted((_cache_dir() / "person").glob("*.html"))
+        self.assertGreater(len(pages), 0)
+        for path in pages:
+            page = roster.parse_person(polite.read_text(str(path)))
+            theirs = sorted((s["place"], s["from"] or 0) for s in page["stints"])
+            self.assertEqual(theirs, sorted(by.get(path.stem, [])), path.stem)
+
+
 if __name__ == "__main__":
     unittest.main()

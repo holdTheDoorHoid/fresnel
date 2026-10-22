@@ -45,7 +45,9 @@ jobs:
         run: python3 -m unittest discover -s pipeline
 
       # Schema and vocabulary checks over data/stations, data/research and data/stories (ids and
-      # folders, positions inside the country, vocabulary values, keepers rosters, footnotes).
+      # folders, positions inside the country, vocabulary values, keepers rosters, footnotes) and
+      # over the keepers index's data/people and data/rosters (the living-people rule, no race or
+      # sex field, hints that point at people who exist).
       # Fails the build on errors; an empty folder passes.
       - name: Validate the station database
         run: python3 pipeline/validate.py --quiet

@@ -468,7 +468,7 @@ National Archives' keeper registers". The corpus crawl (`research/roster.py craw
 rosters of 43,999 lines naming **24,355 people**. A roster line carries the archive's own person record (the slug of
 its `/people/<slug>` page, `william-robertson`, `charles-h-davis-0`), so one record seen at several places is one
 person without anyone reading a person page: the 24,355 pages would take 14 hours at 2 s each, and they would
-add only salary, source and birth and death years, none of which the index needs. `pipeline/build_people.py`
+add only salary, source and birth and death years, none of which the index needs. That one slug is one person is checked against the archive itself: the 34 person pages in the cache list exactly the stints that the rosters group under their slug (`ArchiveGroundTruthTest`). `pipeline/build_people.py`
 turns the cache into the committed files below; it fetches nothing.
 
 - **Never join two people by name alone.** Two roster lines become one person only when a source connects them.
