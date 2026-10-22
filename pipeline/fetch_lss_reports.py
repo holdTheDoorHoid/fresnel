@@ -348,8 +348,9 @@ def load_reference() -> list[dict]:
 
 
 def list_neighbours_ok(member: dict, by_list: dict[tuple[str, int], list[dict]]) -> tuple[bool, str]:
-    """A position read once is believed only if the stations printed on either side of it in the same list (the
-    list runs along the coast) are near it: a digit slipped in a degree puts a station 100 km from both."""
+    """A position read once is believed only if a station printed beside it in the same list (the list runs along the
+    coast) is near it: a digit slipped in a degree puts a station 100 km from both its neighbours (one slipped row
+    leaves the stations on either side of it with a good neighbour on their other side)."""
     rows = by_list.get((member["volume"], member["district"]), [])
     before = [r for r in rows if r["pos"] < member["pos"] and r["clean"]]
     after = [r for r in rows if r["pos"] > member["pos"] and r["clean"]]
@@ -358,8 +359,8 @@ def list_neighbours_ok(member: dict, by_list: dict[tuple[str, int], list[dict]])
         near.append(km_between((member["lat"], member["lon"]), (r["lat"], r["lon"])))
     if not near:
         return False, "it is the only position read in its district's list"
-    if max(near) > NEIGHBOUR_KM:
-        return False, f"the stations beside it in the list are {max(near):.0f} km away"
+    if min(near) > NEIGHBOUR_KM:
+        return False, f"the stations beside it in the list are {min(near):.0f} km away"
     return True, ""
 
 
