@@ -229,7 +229,8 @@ export interface StationRecord {
   water?: string | null;
   setting?: string | null;
   kind: string;
-  location: LatLon & { precision?: string | null; from?: string | null };
+  /** `from` "computed" is a position worked out from a bearing and distance; `note` then says how, or quotes the source of a printed one. */
+  location: LatLon & { precision?: string | null; from?: string | null; note?: string | null };
   status: string;
   status_note?: string | null;
   structures?: Structure[] | null;
@@ -256,6 +257,8 @@ export interface StationRecord {
   story_html?: string | null;
   chapters?: Chapter[] | null;
   keepers?: Keeper[] | null;
+  /** Lightship vessels that served this station, or the surviving vessel that lies at it (pipeline/site_vessels.py). */
+  vessels?: VesselLink[] | null;
   research_sources?: ResearchSource[] | null;
   research?: ResearchStamp | null;
 }
@@ -271,6 +274,56 @@ export interface SourceInfo {
   records?: number | null;
   /** Visible stations that cite it. */
   stations?: number | null;
+}
+
+/**
+ * A lightship vessel as the station pages link it (pipeline/site_vessels.py): on a lightship station the vessels that served
+ * it ("served", with each stint's years), on a surviving vessel's berth the hull itself ("berth").
+ */
+export interface VesselLink {
+  id: string;
+  hull: string;
+  names: string[];
+  role: 'served' | 'berth';
+  stints: { start?: number | null; end?: number | null }[];
+}
+
+/** v/<id>.json: one vessel's page (data/vessels/<id>.json with each station resolved to its page). */
+export interface VesselPage {
+  id: string;
+  hull: string;
+  wal?: string | null;
+  names: string[];
+  built?: number | null;
+  retired?: number | null;
+  fate: { status?: 'survives' | 'lost' | 'scrapped' | 'sold' | 'unknown'; year?: number | null; existing?: boolean; doubtful?: boolean };
+  berth?: { station_id: string; name: string; lat?: number; lon?: number; note?: string } | null;
+  career: { station: string; station_id: string | null; start?: number | null; end?: number | null }[];
+  sources: { label: string; url: string; credit?: string }[];
+}
+
+/** unplaced.json: stations the sources name that no source places on the map (the "can't place yet" page). */
+export interface UnplacedStation {
+  key: string;
+  kind: string;
+  name: string;
+  other_names: string[];
+  region: string | null;
+  country: string;
+  first: number | null;
+  last: number | null;
+  reason: string;
+  /** False for a depot, a bell boat or a station that was never built: there is no mooring to suggest. */
+  suggest: boolean;
+  vessels: { id: string; hull: string }[];
+  where?: string;
+  url?: string;
+}
+
+export interface UnplacedFile {
+  note: string;
+  count: number;
+  stations: UnplacedStation[];
 }
 
 export interface Meta {

@@ -270,3 +270,23 @@ a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
   .night-ranges > div { grid-template-columns: minmax(0, 1fr); }
   .night-map, .night-map-wrap:empty { height: 260px; min-height: 260px; }
 }
+
+/* Vessel pages, a lightship station's vessel list and the "can't place yet" page (pipeline/site_vessels.py) */
+.s-grid-wide { grid-template-columns: minmax(0, 1fr); }
+.vessels { list-style: none; margin: 8px 0; padding: 0; display: grid; gap: 6px; }
+.vessels a { font-weight: 700; }
+.vessel-years { color: var(--ink-2); font-variant-numeric: tabular-nums; margin-left: 8px; }
+.career, .gaps { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.career th, .career td, .gaps th, .gaps td { text-align: left; vertical-align: top; padding: 9px 12px; border-top: 1px solid var(--line); }
+.career thead th, .gaps thead th { border-top: 0; font: 800 0.75rem/1.3 var(--font-sans); letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); background: var(--surface-2); }
+.career tbody th, .gaps tbody th { font-weight: 700; }
+.career .years, .gaps .years { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.gaps .suggest { white-space: nowrap; }
+@media (max-width: 640px) {
+  .career thead, .gaps thead { display: none; }
+  .career tr, .gaps tr { display: block; padding: 10px 12px; border-top: 1px solid var(--line); }
+  .career tr:first-child, .gaps tr:first-child { border-top: 0; }
+  .career th, .career td, .gaps th, .gaps td { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 8px; padding: 2px 0; border: 0; }
+  .career th::before, .career td::before, .gaps th::before, .gaps td::before { content: attr(data-label); color: var(--muted); font-weight: 650; font-size: 0.85rem; }
+  .gaps .suggest { white-space: normal; }
+}

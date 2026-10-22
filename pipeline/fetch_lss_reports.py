@@ -544,7 +544,8 @@ def make_record(st: dict, ident: str, volumes_by_id: dict[str, dict], ranks: dic
         "name_read_once": single or None,
         "footnotes": sorted({r["footnote"].strip() for r in rs if r.get("footnote")}) or None,
         "house_of_refuge": ("the report's footnote 'House of refuge', or the reports call it '<name> House of Refuge' in their narratives" if hor else None),
-        "table_note": ("the printed list gives no latitude or longitude for this station (the Great Lakes stations have none)" if not pos else None),
+        "unplaced_reason": ("the reports list this station, but no latitude and longitude could be read for it cleanly from the scanned text of the lists "
+                            "(docs/sources/review_2026-10-lss_reports.md lists the rows that could not be read)" if not pos else None),
     }
     if pos:
         rec["extra"]["position_text"] = "Approximate position as printed in the Life-Saving Service's list of stations, in degrees, minutes and seconds"

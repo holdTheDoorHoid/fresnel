@@ -57,6 +57,7 @@ import {
 import { keepersTable, researchSourcesList } from './keepers.ts';
 import { nightSection, reachLine } from './night.ts';
 import { renderTimeline } from './timeline.ts';
+import { vesselsSection } from './vessel.ts';
 
 export type { RenderContext } from './common.ts';
 
@@ -70,6 +71,8 @@ const SHORT_SOURCE: Record<string, string> = {
   ccg: 'Canadian List of Lights',
   nrhp: 'National Register',
   research: 'Fresnel research',
+  lightship_stations: 'Light Lists and the Lighthouse Society (lightship stations)',
+  lss_reports: 'Life-Saving Service reports',
 };
 
 export function sourceShortName(id: string | null | undefined, ctx: Pick<RenderContext, 'sources'>): string {
@@ -288,6 +291,19 @@ function atonList(r: StationRecord): SafeHtml | null {
   return html`<ul class="plain">${rows.map(([w, v]) => html`<li><abbr title="${w.meaning}">${w.label}</abbr>: <code>${v}</code></li>`)}</ul>`;
 }
 
+/**
+ * Where an approximate position comes from, when the record says (a lightship station's, from a Light List): "computed"
+ * is worked out from a bearing and distance from a named light, and the note quotes the words it was worked from.
+ */
+export function positionBasis(r: Pick<StationRecord, 'location'>): SafeHtml | null {
+  const { from, note } = r.location;
+  const text = typeof note === 'string' ? note.trim() : '';
+  if (from === 'computed') {
+    return html`Worked out from a description (a bearing and distance from a named light), so only approximate.${text ? html`<span class="sub">${text}</span>` : ''}`;
+  }
+  return text ? html`${text}` : null;
+}
+
 export function factsSection(r: StationRecord): SafeHtml {
   const kind = kindWording(r.kind);
   const ver = verificationWording(r.verification);
@@ -300,6 +316,8 @@ export function factsSection(r: StationRecord): SafeHtml {
   if (setting || r.water) station.push(['Setting', [setting, r.water].filter(Boolean).join(', ')]);
   station.push(['Location', placeLine(r)]);
   station.push(['Coordinates', html`<span class="coords" data-coords="${plainCoords(r.location.lat, r.location.lon)}">${formatCoords(r.location.lat, r.location.lon)}</span>${r.location.precision && r.location.precision !== 'exact' ? ` (${r.location.precision})` : ''}${disagree(r, 'location')}`]);
+  const basis = positionBasis(r);
+  if (basis) station.push(['How the position was found', basis]);
   if (r.agency) station.push(['Run by', r.agency]);
   const own = lookup(OWNERSHIP, r.ownership);
   if (own && r.ownership !== 'unknown') station.push(['Owner', own]);
@@ -468,7 +486,11 @@ export function conflictSentence(c: Conflict, r: StationRecord, ctx: RenderConte
     if (d !== null) headline = html`Sources disagree on the location, by ${distanceFor(country, d)}.`;
   }
   const list = values.map((v) => html`<li><span class="src">${sourceShortName(v.source, ctx)}:</span> ${conflictValue(c.field, v.value, country)}</li>`);
-  const usedFrom = c.field === 'location' && r.location.from ? html`<p class="fine">The map uses the position from ${sourceShortName(r.location.from, ctx)}.</p>` : '';
+  const usedFrom = c.field === 'location' && r.location.from
+    ? r.location.from === 'computed'
+      ? html`<p class="fine">The map uses the position worked out from a Light List description (see Coordinates).</p>`
+      : html`<p class="fine">The map uses the position from ${sourceShortName(r.location.from, ctx)}.</p>`
+    : '';
   return html`<li class="conflict"><p class="conflict-head">${headline}</p>${list.length ? html`<ul class="plain">${list}</ul>` : ''}${c.note ? html`<p>${c.note}</p>` : ''}${usedFrom}</li>`;
 }
 
@@ -567,6 +589,7 @@ export const SECTIONS: readonly StationSection[] = [
   { id: 'history', title: 'History', render: historySection },
   { id: 'keepers', title: 'Keepers', render: (r, ctx) => (r.kind === 'lightship_station' && !r.keepers?.length ? null : keepersSection(r, ctx)) },
   { id: 'photos', title: 'Photos', render: photosSection },
+  { id: 'vessels', title: 'Lightship vessels', render: vesselsSection },
   { id: 'conflicts', title: 'Where sources disagree', render: conflictsSection },
   { id: 'related', title: 'Related stations', render: relatedSection },
   { id: 'sources', title: 'Sources and credits', render: sourcesSection },

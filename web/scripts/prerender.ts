@@ -5,8 +5,9 @@
  * Input:  dist/station.html (template with hashed asset links, from Vite)
  *         dist/data/s/<id>.json, dist/data/meta.json, dist/data/redirects.json
  *         (from pipeline/build_site_data.py, copied from public/data by Vite)
- * Output: dist/s/<id>/index.html; a redirecting page at the address of each station the merge
- *         folded into another; the key and counts in dist/about/index.html; the sources table
+ * Output: dist/s/<id>/index.html; dist/v/<id>/index.html for each lightship vessel (dist/data/v/<id>.json)
+ *         and dist/unplaced/index.html (dist/data/unplaced.json), both through the same template; a redirecting
+ *         page at the address of each station the merge folded into another; the key and counts in dist/about/index.html; the sources table
  *         in dist/credits/index.html; dist/sitemap.xml
  *
  * Plain string templates and synchronous file writes: ~3,000 pages take a few seconds.
@@ -18,11 +19,13 @@ import config from '../site.config.json' with { type: 'json' };
 import { isStationId } from '../src/lib/station-id.ts';
 import type { RedirectsFile } from '../src/lib/redirects.ts';
 import { isSafeStoryHtml } from '../src/lib/html.ts';
-import type { Meta, SourceInfo, StationRecord } from '../src/lib/types.ts';
+import type { Meta, SourceInfo, StationRecord, UnplacedFile, VesselPage } from '../src/lib/types.ts';
 import type { RenderContext } from '../src/render/common.ts';
 import { renderRedirectPage } from '../src/render/redirect.ts';
 import { countsLine, fixtureBanner, mapKey, sourcesRows, takedownEmail } from '../src/render/site.ts';
 import { renderStationHead, renderStationMain } from '../src/render/station.ts';
+import { renderUnplacedHead, renderUnplacedMain } from '../src/render/unplaced.ts';
+import { isVesselId, renderVesselHead, renderVesselMain } from '../src/render/vessel.ts';
 import { escapeHtml } from '../src/lib/html.ts';
 
 const t0 = performance.now();
@@ -106,6 +109,35 @@ if (existsSync(redirectsPath)) {
     redirectPages++;
   }
 }
+/* ---------- Lightship vessels (/v/<id>/) and the stations we can't place yet (/unplaced/) ---------- */
+let vesselPages = 0;
+const vesselDir = join(dataDir, 'v');
+if (existsSync(vesselDir)) {
+  const out = join(dist, 'v');
+  rmSync(out, { recursive: true, force: true });
+  mkdirSync(out);
+  for (const file of readdirSync(vesselDir).filter((f) => f.endsWith('.json'))) {
+    const v = JSON.parse(readFileSync(join(vesselDir, file), 'utf8')) as VesselPage;
+    if (!isVesselId(v.id) || `${v.id}.json` !== file) {
+      console.warn(`prerender: skipped vessel ${file}: id ${JSON.stringify(v.id)} does not match the file name`);
+      continue;
+    }
+    mkdirSync(join(out, v.id));
+    writeFileSync(join(out, v.id, 'index.html'), squeeze(beforeHead + renderVesselHead(v, ctx).value + headToBanner + banner + bannerToMain + renderVesselMain(v, ctx).value + afterMain));
+    vesselPages++;
+    if (!meta.fixtures) sitemap.push(`<url><loc>${escapeHtml(`${ctx.siteUrl}v/${v.id}/`)}</loc></url>`);
+  }
+}
+let unplacedPage = false;
+const unplacedPath = join(dataDir, 'unplaced.json');
+if (existsSync(unplacedPath)) {
+  const gap = JSON.parse(readFileSync(unplacedPath, 'utf8')) as UnplacedFile;
+  mkdirSync(join(dist, 'unplaced'), { recursive: true });
+  writeFileSync(join(dist, 'unplaced', 'index.html'), squeeze(beforeHead + renderUnplacedHead(gap, ctx).value + headToBanner + banner + bannerToMain + renderUnplacedMain(gap, ctx).value + afterMain));
+  unplacedPage = true;
+  if (!meta.fixtures) sitemap.push(`<url><loc>${escapeHtml(`${ctx.siteUrl}unplaced/`)}</loc></url>`);
+}
+
 rmSync(join(dist, 'station.html'));
 rmSync(join(dataDir, '.fresnel-site-data'), { force: true }); // the pipeline's own bookkeeping file
 
@@ -138,7 +170,7 @@ writeFileSync(
 
 const ms = performance.now() - t0;
 console.log(
-  `prerender: ${pages} station pages and ${redirectPages} redirects in ${(ms / 1000).toFixed(2)} s` +
+  `prerender: ${pages} station pages, ${vesselPages} vessel pages${unplacedPage ? ', the unplaced page' : ''} and ${redirectPages} redirects in ${(ms / 1000).toFixed(2)} s` +
     (meta.fixtures ? ' (FIXTURE DATA: station pages are marked noindex and left out of the sitemap)' : '') +
     (unsafeStories ? `; ${unsafeStories} unsafe stories replaced by a notice` : ''),
 );

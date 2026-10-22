@@ -265,7 +265,7 @@ class RecordTest(unittest.TestCase):
         vols = {f"v{y}": {"year": y, "identifier": f"v{y}"} for y in (1903, 1909)}
         rec = F.make_record(st, "ca-bolinas-bay", vols, {})
         self.assertEqual((rec["lat"], rec["lon"]), (None, None))
-        self.assertIn("table_note", rec["extra"])
+        self.assertIn("unplaced_reason", rec["extra"])
 
 
 if __name__ == "__main__":

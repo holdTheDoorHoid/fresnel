@@ -38,6 +38,7 @@ CREDIT = "U.S. Lighthouse Society Digital Archive (Lighthouse Research Catalog):
 LOST = re.compile(r"\b(sunk|sank|wreck|wrecked|foundered|burn(?:ed|t)|lost|capsized|destroyed|collision)\b", re.I)
 SCRAPPED = re.compile(r"\b(scrapp?ed|broken up|cut down|dismantled)\b", re.I)
 SOLD = re.compile(r"\b(sold|privately owned|private(?:ly)? owned)\b", re.I)
+DOUBT = re.compile(r"\b(possibly|probably|perhaps|may have been)\s+(scrapped|sunk|lost|broken up|destroyed)\b", re.I)
 YEAR = re.compile(r"\b(1[89]\d\d|20[0-2]\d)\b")
 
 
@@ -87,10 +88,14 @@ def fate_of(v: dict) -> dict:
         status = "sold"
     else:
         status = "unknown"
-    if status not in ("survives", "unknown"):
+    doubtful = bool(v.get("existing")) and bool(DOUBT.search(remarks))
+    if status not in ("survives", "unknown") or doubtful:
         years = [int(y) for y in YEAR.findall(remarks)]
-        year = years[-1] if years else v.get("retired")
-    return {"status": status, "year": year, "existing": bool(v.get("existing"))}
+        year = years[-1] if years else (None if doubtful else v.get("retired"))
+    out = {"status": status, "year": year, "existing": bool(v.get("existing"))}
+    if doubtful:
+        out["doubtful"] = True      # the Society says she exists and also that she was possibly scrapped (LV-75, "possibly scrapped 2013")
+    return out
 
 
 def hull_numbers_of_station(rec: dict) -> set[int]:
