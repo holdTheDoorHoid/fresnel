@@ -1,0 +1,66 @@
+Hunting Island Light is a black-and-white cast-iron tower on a South Carolina sea island in Beaufort County, now in Hunting Island State Park.[^1] It is the island's second lighthouse, first lit in 1875, and it stands where it does because the Atlantic ate the shore beneath it: in 1889 the whole tower was unbolted and rebuilt a mile and a quarter to the south.[^2][^3]
+
+## The place
+
+In 1853, according to LighthouseFriends, merchants, planters and ship owners in South Carolina petitioned for a light on the north end of Hunting Island to replace the St. Helena light-ship and to mark the Swash channel. The island lay roughly thirty-five miles from the coast lights at Charleston to the north and Tybee Island to the south, so a major light there would close a dark gap in the coast.[^4] The island took its name from hunting; a 2001 South Carolina ETV documentary, summarised on the broadcaster's site, describes it as unpopulated through the nineteenth century, with merchant ships passing carrying rice, cotton and other produce between Charleston and Savannah.[^5]
+
+## Building the light
+
+Congress appropriated $30,000 on 3 August 1854 for a lighthouse and a beacon light, but the Lighthouse Board's notice to mariners was not published until 8 March 1859.[^4] It announced that "at sundown on Friday, the 1st day of July next, the new light-house and beacon on the north point of Hunting island, S.C., will be lighted". The main tower was brick, 95 feet (29 m) high, with the upper 25 feet (7.6 m) painted white and a second-order Fresnel lens showing a flash every 30 seconds, visible 17 nautical miles in clear weather. The beacon was an open wooden frame 32 feet (9.8 m) high with a sixth-order fixed light.[^4] Anton Johnson was the first head keeper.[^4] The National Register nomination describes this first tower as wooden, built about 1859; the Board's notice describes brick.[^6][^4]
+
+The first tower did not last. LighthouseFriends reports that Confederate forces blew it up in 1861 ahead of the Union fleet's attack on Port Royal.[^4]
+
+Work on a second tower began after the war. On 10 June 1872 Congress gave $30,000, on condition that the site be government land. A district engineer's survey that year found that about half a mile of shoreline at the north end had gone in the previous three years, so the Board asked for $50,000 more to build an iron tower that could be moved, and Congress voted it on 3 March 1873.[^4] The shell was made by the Phoenix Iron Works of Philadelphia and lined with brick; work stopped through the warm months of 1873 and again from the end of June 1874, and the light was shown for the first time on 1 July 1875 under a second-order Fresnel lens.[^4]
+
+Arnold Burges Johnson's 1889 description of the Board's work uses Hunting Island as his example of an iron tower designed to come apart. Its shell was cast in panels of about 1,200 pounds each, all the same size so that any panel could take any place in the ring, with planed flanges bolted together.[^7] Johnson gives the foundation as "eight-inch" concrete, where LighthouseFriends says eight feet thick.[^7][^4] The original cost was $102,000.[^7] Johnson adds that the Board "was then criticised for placing it so far from the water", a quarter of a mile back from the sea.[^7] The tower is given as 121 feet (37 m) high, with the light 133 feet (40.5 m) above the sea and visible a little over 20 miles.[^2] The nomination form gives 136 feet.[^6]
+
+## The keepers
+
+The station had a head keeper and two assistants. The Board's 1894 summary gives their annual pay as $740, $540 and $490, and says the station burned 470 gallons of oil a year.[^2] LighthouseFriends reports that the twelve-room dwelling, 63 by 38 feet (19 by 11.6 m), was finished on 1 May 1876. Ditches were also dug to drain a freshwater pool near the tower, and eucalyptus seeds planted, because the pool was thought to be the main cause of the station's "unhealthiness".[^4]
+
+Oil and supplies came to the island by boat, were landed at a wharf on Johnson's Creek and then carried along a tramway to the station; the keepers' families also raised hogs, chickens and turkeys and kept a garden, again according to LighthouseFriends.[^4] The Board's own reports show the upkeep: in the year to June 1892 a new boat landing 10 by 50 feet (3 by 15 m) was built and some 3,200 running feet (975 m) of tramway renewed, and in the year to June 1896 a new wooden tramway 3,160 feet (963 m) long was laid.[^8][^9]
+
+The archive's roster lists twenty head-keeper terms between 1859 and 1933. Melville B. Trevitt held the post longest, from 1881 to 1891, having arrived as second assistant in 1880.[^10] Franz Traugott served three stints: first assistant in 1901, head keeper 1902 to 1907, and head keeper again 1914 to 1918.[^10] The archive lists Peter Peterson among the head keepers for 1859 to 1861, while LighthouseFriends lists him as first assistant, so his post is not settled.[^10][^4]
+
+Several keepers have been researched by the Friends of Hunting Island. August F. Wichmann, a native of Germany, came to the station as first assistant on 1 May 1908 and was promoted to head keeper on 17 November 1911, the day after Theodore S. Johansen died in service; he moved to Cape Romain in March 1913.[^11] In the Lighthouse Service's list of efficiency flags for 1920, Hunting Island under keeper James Smith was the station chosen for the Sixth District.[^12] James William Turner served as assistant from September 1924 to May 1928, having come from the Coast Guard, the Navy and the lighthouse tenders.[^11]
+
+Theodore T. Gaillard was the last head keeper. The archive dates his term 1927 to 1933, while Lighthouse Digest says he was appointed in 1926.[^10][^13] On 23 December 1929 an aeroplane that had run out of fuel landed on the beach by the lighthouse; the Sixth District superintendent commended Gaillard for helping its pilot, John Wolf.[^13] His wife Ellen is described by the Friends as not an official employee but, like all keepers' wives, very much an assistant keeper.[^11]
+
+## Storms, wrecks and rescues
+
+LighthouseFriends records that the Charleston earthquake reached the station at 9:50 p.m. on 31 August 1886. The tower clock stopped, the shock lasted about four minutes, and a half-full bucket on the top landing was nearly emptied. One assistant, outside on the gallery, was thrown back and forth between the railing and the tower, and the chickens ran from their coop.[^4]
+
+Erosion was the long emergency. A stone jetty built in 1886 worked until an August 1887 storm swept most of it away and, LighthouseFriends says, brought the sea within 60 feet (18 m) of the dwelling and 152 feet (46 m) of the tower; the South Carolina ETV page puts the water at 35 feet (11 m) from the keepers' house.[^4][^5] Congress voted $51,000 in April 1888 to buy a new site and move the buildings. A temporary tower with a fourth-order light was lit on 1 February 1889, and the iron tower was taken down and rebuilt, relit on 1 October 1889, with the dwelling and a new oil house following by 22 March 1890.[^4] The move cost $51,000.[^2] LighthouseFriends gives the dismantling as lasting from March to September of "1899", a misprint for 1889 by the dates it gives.[^4]
+
+In the hurricane of August 1893, LighthouseFriends reports, the steamship City of Savannah went aground on shoals off the island. Women and children came ashore in two lifeboats and waited out the storm at the lighthouse; the men lashed to the rigging were taken off after thirty-six hours by the City of Birmingham.[^4] This account rests on a modern source and has not been checked against a report of the time.
+
+## After the keepers
+
+The light was discontinued in 1933, when a lighted whistle buoy replaced it as part of an economy plan for the district.[^4][^6] The Friends give the date as 15 June 1933.[^11] The Lighthouse Service Bulletin of April 1934 records that on 27 March the "Hunting Island Lighted Buoy" was reported not burning, and that a tender about to leave Charleston on other work changed its plans and took a relief buoy.[^14]
+
+In August 1937 the Senate passed a bill giving the reservation to Beaufort County for a park or game preserve, and in 1938 South Carolina took over the island and made it a state park.[^4] The keepers' dwelling housed engineers' workers building bridges to the island and, reportedly, burned down on 9 June 1938 after a lantern was knocked over during a card game.[^4] LighthouseFriends dates the opening of the bridges to 1941; the ETV page says 1939.[^4][^5]
+
+The tower was listed on the National Register of Historic Places, which the Friends date to 1972.[^15] In 1995 the foundation of the dwelling was uncovered and capped with red brick to show its outline, and the tower was lit again as a private aid to navigation.[^4] Cracks found in the stair treads in 2003 were repaired in 2004 and the tower reopened to climbers on 18 February 2005.[^4]
+
+## Today
+
+The tower is in Hunting Island State Park, run by the South Carolina Department of Parks, Recreation and Tourism. It closed to visitors in 2022 for structural and safety work, a $4.75 million project of stair, railing, lantern-glass and paint repairs, and reopened in May 2026.[^3][^16] Climbing is by $5 ticket from the oil house, first-come, first-served, with a minimum height of 44 inches (112 cm) and a park admission fee on top. The climb is 167 cast-iron steps.[^3][^16] The park's visitor centre offers a virtual-reality climb as well.[^3]
+
+The first-order Fresnel lens shown at the park is not Hunting Island's own: it came from Morris Island Light and was moved to the park by the Coast Guard in 1962, and a ground-level building to house it is the next planned project.[^3] What became of the station's original second-order lens is not established here. LighthouseFriends notes that the tower stands about 400 feet (120 m) from the high-tide line and says it might have to move again if erosion continues.[^4]
+
+[^1]: Hunting Island lighthouse reopens for public access, South Carolina Department of Parks, Recreation and Tourism, https://www.scprt.com/articles/hunting-island-lighthouse-reopens-for-public-access (accessed 2026-10-27).
+[^2]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1894, "Hunting Island Light-House" (scan page 649; printed page not verified), https://archive.org/details/annualreportlig01statgoog/page/n649/mode/2up (accessed 2026-10-27).
+[^3]: Historic Hunting Island Lighthouse Reopens to the Public, South Carolina Parks, https://southcarolinaparks.com/stories/historic-hunting-island-lighthouse-reopens-to-the-public (accessed 2026-10-27).
+[^4]: Hunting Island Lighthouse, South Carolina, LighthouseFriends, https://www.lighthousefriends.com/light.asp?ID=332 (accessed 2026-10-27). The 1859 notice to mariners is quoted from this page.
+[^5]: Light on Treacherous Waters: The Hunting Island Light Station (2001), ETV Classics, South Carolina ETV, https://www.scetv.org/stories/2026/light-treacherous-waters-hunting-island-light-station-2001-etv-classics (accessed 2026-10-27).
+[^6]: National Register of Historic Places Inventory-Nomination Form, Hunting Island Lighthouse, National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/70000561.pdf (accessed 2026-10-27).
+[^7]: Arnold Burges Johnson, The Modern Light-House Service (1889), pp. 28-29 (general description of the Board's iron towers, using Hunting Island as the example), https://archive.org/details/modernlighthous01boargoog (accessed 2026-10-27).
+[^8]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1892, Sixth District, p. 104, https://archive.org/details/annualreportlig03statgoog/page/n459/mode/2up (accessed 2026-10-27).
+[^9]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1896, Sixth District, p. 98, https://archive.org/details/annualreportlig02statgoog (accessed 2026-10-27).
+[^10]: Hunting Island, Light Station, place record and keeper roster, US Lighthouse Society Digital Archive, https://archives.uslhs.org/places/hunting-island (accessed 2026-10-27).
+[^11]: Meet The Keepers, Friends of Hunting Island State Park, https://www.friendsofhuntingisland.org/keepers (accessed 2026-10-27).
+[^12]: Lighthouse Service Bulletin, 1921, "Efficiency flags," p. 174 (PDF page 14), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1921.pdf#page=14 (accessed 2026-10-27).
+[^13]: Ted Panayotoff, "Lighthouse Keeper Theodore T. Gaillard Honored with Marker," Lighthouse Digest, Nov/Dec 2018, https://lhdigest.com/Digest/StoryPage.cfm?StoryKey=4970 (accessed 2026-10-27).
+[^14]: Lighthouse Service Bulletin, 1 April 1934, PDF page 10, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1934.pdf#page=10 (accessed 2026-10-27).
+[^15]: Hunting Island Lighthouse, Friends of Hunting Island State Park, https://www.friendsofhuntingisland.org/lighthouse (accessed 2026-10-27).
+[^16]: Hunting Island lighthouse reopens for public access, SCPRT, 27 May 2026 (ticket and height rules, project cost), https://www.scprt.com/articles/hunting-island-lighthouse-reopens-for-public-access (accessed 2026-10-27).

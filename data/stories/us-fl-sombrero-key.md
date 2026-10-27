@@ -1,0 +1,70 @@
+Sombrero Key Light is a tall iron skeleton standing in the sea on the outer edge of the Florida Reef, about 5.5 miles south-southwest of Marathon in the Florida Keys. First lit in 1858, it is the tallest of the six Florida Reef Lights.[^1]
+
+## The place
+
+The Spanish called the spot Cayo Sombrero. It began as a small sandy islet, but erosion wore it down, and by the middle of the nineteenth century it showed above water only now and then. American mariners also called it Dry Bank.[^1] In 1852 a day beacon went up there: a 36-foot iron screw piling topped with a wooden barrel painted red and white.[^1]
+
+A day beacon was no use at night or in a storm. By the 1850s the two reef lights then standing, Carysfort Reef and Sand Key, were about 122 miles apart, which the National Register nomination calls a long stretch of hazardous water without a lighted aid to navigation.[^1] In 1854 the engineer George G. Meade proposed a light on Coffins Patch shoal, south of Grassy Key. After studying the reefs, the Lighthouse Board chose Sombrero Key instead, about 51 miles east of Sand Key and 71 miles west of Carysfort Reef, near the outer limit of the reef and close to the deep water where ships passed.[^1]
+
+## Building the light
+
+Meade first thought of a masonry tower, but the engineering and the cost of a masonry foundation under water led him to another tall iron skeleton like the ones at Carysfort Reef and Sand Key. The nomination calls it his last achievement in the Keys.[^1] LighthouseFriends reports an 1852 appropriation of $35,000 and a further $65,000 in 1855, with the iron parts cast by I. P. Morris and Company of Philadelphia and shipped to Duck Key, which served as the project's base.[^3]
+
+Work offshore began in 1856. A hurricane in August 1856 halted progress for that year, and construction resumed in 1857.[^1] LighthouseFriends dates that storm to 27 and 28 August and says it ruined the temporary platform.[^3] The foundation is nine cast-iron disks, each seven feet across, with a 12-inch iron pile driven through every one; the columns and braces of the tower rise from them.[^1] Partway up, on a platform, sits a one-story iron keepers' dwelling, about 30 feet 9 inches on a side and originally divided into four rooms. A cast-iron stair cylinder runs up from the middle of the dwelling to the watch room and lantern.[^1]
+
+The light was first shown on 17 March 1858. Its lens was a first-order Fresnel made by Henri Lepaute of Paris, bought for $20,000, with a focal plane 142 feet (43 m) above the sea and a fixed white light visible 22 miles in clear weather, as the nomination gives it.[^1] The tower's height is given differently by different sources: the nomination says about 154 feet, while the Lighthouse Service Bulletin of 1937 calls it 160 feet.[^1][^8]
+
+The light changed over the years. The nomination records a switch from oil to a kerosene lamp in 1884 and to an electric lamp in 1948.[^1] The Lighthouse Board's report records that in April 1893 the fixed white light was altered to fixed white with three red sectors, to warn of dangerous water north, east and west of the tower. It gives the date as 30 April in one place and 29 April in another.[^4][^1] By 1931 the Florida reef lights formed a numbered system of flashes, and Sombrero Key was the fifth, showing a group of five white flashes every 15 seconds.[^14]
+
+## The keepers
+
+The USLHS archive, working from the National Archives' keeper registers, lists the head keepers, assistants and, at the end, Coast Guard crew members who served at Sombrero Key between 1858 and 1962.[^2]
+
+The first head keeper, Joseph Bethel, came from Garden Key in the Dry Tortugas, according to LighthouseFriends, and lit the lamp for the first time on 17 March 1858. His family lived on the tower with him. In 1859 the station ran out of water, and he was ordered to send them ashore. Rather than live apart from them, LighthouseFriends says, he resigned. He and a son died later that year in the wreck of the schooner *Sarah Bartlett* off Louisiana.[^3][^2]
+
+Rudolph Rieke was head keeper for fifteen years, from 1889 to 1904.[^2] Miguel Fabal's career is better documented than most. His obituary in the Lighthouse Service Bulletin says he joined the service in November 1882 as a second assistant, resigned as keeper of Alligator Reef on 31 December 1890, and came back in 1892 as first assistant at Sombrero Key. He was promoted to keeper there in 1903 and retired on 1 October 1919, with, the Bulletin says, over 37 years of service.[^7] The USLHS roster dates his stint as head keeper to 1913-1919 and shows John Watkins as head keeper from 1904, so the two sources disagree on when Fabal took over.[^2] LighthouseFriends says that under Fabal and his successor William H. Pierce the station flew the district's lighthouse efficiency flag every year from 1917 to 1922.[^3] Pierce, an assistant from 1910 to 1917, was head keeper from 1919 to 1936.[^2]
+
+After 1939 the lighthouses were run by the Coast Guard. The nomination says a typical complement was four men serving three weeks at the light followed by one week ashore.[^1]
+
+A letter from one of the keepers survives from the late 1920s, after Secretary of Commerce Herbert Hoover appealed to the public to supply radios to isolated keepers, whom he called "shut-ins" with few other means of keeping in touch with the world.[^6] Nearly 300 sets were collected and distributed, and a set reached Sombrero Key. The keeper wrote that "we are kept in touch with the news of the country" by it, that it gave a Sunday morning Bible class broadcast from Miami, and that during storms it let them follow a hurricane's progress and pass messages to vessels nearby. He added that radio was the only way the station got the news, since newspapers were not accessible, and that he spoke for the station's three keepers.[^6][^3]
+
+## Storms, wrecks and rescues
+
+Reaching the tower in rough water was dangerous work. LighthouseFriends quotes the station journal for July and August 1873, and ties the account to first assistant Richard White. A man returning from Key West with the quarterly pay was caught by a squall about a mile and a half from the tower, and the boat capsized. The keepers watched him clinging to the spar until the tide swept him away to the west-southwest. They had no second boat, and they could not hail any passing vessels; the steamer *Clyde* answered their signal the next day, but could only carry word of the loss to the district officials at Key West.[^3]
+
+In October 1893 the keeper, Rudolph Rieke, and his first assistant, Michel Eichhoff (spelled Michael in LighthouseFriends), were alone on the tower. LighthouseFriends, which lists the *Philadelphia Record* of 6 November 1893 among its references, says that on 18 October Eichhoff collapsed while cooking, and Rieke hoisted a distress signal. The steamer *Comal* passed near enough for Rieke to read her name, but did not stop. Eichhoff died the next day. Two days later Rieke sewed the body into a hammock, read a burial service and put it into the sea, and he was alone on the light for nine days before the second assistant returned.[^3] The USLHS roster lists Eichhoff as first assistant from 1891 to 1893.[^2]
+
+A hurricane on 17 October 1910 drove the French line steamer *Louisiane* ashore at Sombrero Light. The revenue cutter *Forward* took off 600 passengers.[^9] LighthouseFriends adds that the reef was later blasted with dynamite to free the ship.[^3] The keeper at the time was John Watkins, according to the roster.[^2]
+
+In October 1926 a hurricane passed over Cuba and then close to Key West. The Lighthouse Service Bulletin says that at Sombrero Key the barometer fell to 28.82 and the keepers estimated the wind at 125 miles an hour. Part of the landing platform was washed away and the ladders were damaged beyond repair.[^5]
+
+In September 1960 Hurricane Donna passed close to the tower, which by then was manned by Coast Guard crews. LighthouseFriends reports that at 9 p.m. on 9 September the watch logged winds of 80 mph, and by 11 p.m. 100 mph. By 2 a.m. the next watch recorded gusts of 166 mph. The storm swept almost everything off the bottom platform except the hoisting engine, the catwalk and a ladder, and took away the fuel tanks and a workshop.[^3] The same source records an earlier death at the station in August 1959, when Seaman Willis Parker, returning to the tower by launch, was swung against a piling while holding the hoisting block and fell into the sea.[^3][^2]
+
+## After the keepers
+
+The sources disagree about when the keepers left. The National Register nomination says the light was automated in 1960, with power from an underwater cable laid from Vaca Key about then.[^1] LighthouseFriends says the crew was taken off on 23 October 1962, and the USLHS roster lists Coast Guard personnel through 1962.[^3][^2] The nomination gives 1960 as the end of the property's period of significance.[^1]
+
+In 1982 the first-order lens was taken out; it is on display at the Key West Lighthouse museum. A flash-tube array that replaced it proved unreliable and was replaced by a 300-millimetre optic, then a 190-millimetre optic in 1986 and a VRB-25 marine beacon in 1997.[^1] After the container ship *Houston* grounded near American Shoal in 1997, the settlement paid for eight radar beacons on Keys light towers, including one at Sombrero Key.[^1]
+
+In January 2015 the Coast Guard told mariners not to climb the old reef lights, including Sombrero Key, because of deterioration. It said the structures were not at risk of collapse, but that it planned to shift the lighting to cheaper structures with more reliable equipment, and to transfer the old ones to the General Services Administration.[^12] LighthouseFriends says the light was deactivated in 2015 and replaced by a 30-foot tower erected nearby.[^3] A 2022 report on the sale says the three Keys lights had been working beacons until as recently as 2015.[^10]
+
+## Today
+
+The Coast Guard declared the lighthouse excess on 1 February 2019, according to LighthouseFriends, and no eligible organisation took it over.[^3] The General Services Administration sold it by online auction in May 2022. The final price was $575,000. The National Park Service report says the three Keys lights went to the same high bidder, and the auction site did not disclose the winners' or other bidders' identities.[^10][^11] The tower is in private hands and is closed. The Coast Guard has called it unsafe to climb, so it should be viewed from a distance.[^3][^12]
+
+The nomination says the light is visible from shore.[^1] LighthouseFriends suggests Sombrero Beach in Marathon as a viewpoint and says the tower can also be seen from the east end of the Seven Mile Bridge; the surrounding reef is a snorkelling and diving site reached by boat.[^3] The National Register lists the light under reference 12000092.[^13]
+
+[^1]: Sombrero Key Light, National Register of Historic Places Registration Form (NRHP 12000092), National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/12000092.pdf (accessed 2026-10-27).
+[^2]: Sombrero Key (Dry Bank), place record and keeper roster, US Lighthouse Society Digital Archive (from the National Archives' Registers of Lighthouse Keepers via the Kraig Anderson inventory), https://archives.uslhs.org/places/sombrero-key-dry-bank (accessed 2026-10-27).
+[^3]: Sombrero Key Lighthouse, Florida, LighthouseFriends.com, https://www.lighthousefriends.com/light.asp?ID=701 (accessed 2026-10-27). A modern secondary account; it lists the Philadelphia Record of 6 November 1893, Lighthouse Service Bulletins and Love Dean's Lighthouses of the Florida Keys among its references.
+[^4]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1893, Seventh District entry for Sombrero Key (scan page 152) and the list of changes in characteristic (scan page 22), https://archive.org/details/annualreportlig01statgoog (accessed 2026-10-27).
+[^5]: Lighthouse Service Bulletin, 1926 volume, item on the hurricane of 17 to 20 October (PDF page 49), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1926.pdf#page=49 (accessed 2026-10-27).
+[^6]: "Radio receiving sets", Lighthouse Service Bulletin, 1929 volume, printed page 280 (PDF page 10), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1929.pdf#page=10 (accessed 2026-10-27).
+[^7]: "Death of Miguel Fabal", Lighthouse Service Bulletin, 1924 volume (PDF page 52), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1924.pdf#page=52 (accessed 2026-10-27).
+[^8]: Lighthouse Service Bulletin, 1937 volume, historical article on the Florida reef lights (PDF page 42), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1937.pdf#page=42 (accessed 2026-10-27).
+[^9]: "A Severe Storm Without Much Loss", Florida's Great Hurricane, page 86 (Wikisource transcription of the printed page), https://en.wikisource.org/wiki/Page:Florida%27s_Great_Hurricane.pdf/88 (accessed 2026-10-27).
+[^10]: "Auctions close for 3 iconic Keys lighthouses", Keys Weekly, https://keysweekly.com/42/auctions-close-for-3-iconic-keys-lighthouses/ (accessed 2026-10-27).
+[^11]: National Historic Lighthouse Preservation Act Program Highlights Report 2021-2022, National Park Service, https://www.npshistory.com/publications/maritime/nhlpa-annual-reports/2021-2022.pdf (accessed 2026-10-27).
+[^12]: "Coast Guard cautions boaters of unsafe reef lights in Florida Keys", 30 January 2015, American Pilots' / American Mariners' news archive (APMA), https://americanmariners.org/news/coast-guard-cautions-boaters-unsafe-reef-lights-florida-keys (accessed 2026-10-27).
+[^13]: Sombrero Key Light, NRHP asset record, National Park Service NPGallery, https://npgallery.nps.gov/AssetDetail/NRIS/12000092 (accessed 2026-10-27).
+[^14]: Lighthouse Service Bulletin, 1931 volume, article on the Florida reef lights' flash system (PDF page 22), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1931.pdf#page=22 (accessed 2026-10-27).
