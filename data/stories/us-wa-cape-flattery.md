@@ -1,0 +1,73 @@
+Cape Flattery Light stands on Tatoosh Island, just over half a mile off the northwestern tip of the Olympic Peninsula, where ships from the Pacific turn into the Strait of Juan de Fuca.[^2] The National Trust gives the distance as three-quarters of a mile.[^3] The island lies within the Makah Indian Reservation, and the Makah were using it in summer long before the government built a light there.[^3]
+
+## The place
+
+The Makah used Tatoosh Island for fishing, whaling and cultural practices in the warm months, and the National Trust for Historic Preservation records that building the lighthouse was a source of contention, because both the Makah and the United States claimed the island.[^3] Janine Bowechop of the Makah Cultural and Research Center has said the tribe held potlatches there from 1855 to 1934, when the federal government restricted such gatherings, and that the island's distance from the agents at Neah Bay and La Push mattered for that reason.[^4]
+
+For sailors the stakes were the entrance to the strait. The Light-House Board wrote in 1893 that the Flattery Rocks, west of the Tatoosh light, were "the greatest danger to navigation on the northern coast," and that "the densest and blackest fogs of that foggy coast hang about the mouth of the strait." It added that steamers bound north did not go near enough to the shore to hear the whistling buoy off the rocks, and that one steamer had once lain off the entrance for seven days in a southeaster and thick weather, afraid to try it.[^5] The Peninsula Daily News wrote in 2009 that the point is one that every ship calling at a port on the strait or Puget Sound passes, and for many of them the first land seen since Asia.[^4]
+
+A survey of the coast in 1849 and 1850 under William McArthur had recommended "a lighthouse on this island," in a report that LighthouseFriends quotes.[^2]
+
+## Building the light
+
+Congress allocated $39,000 in 1854 for lighthouses on Tatoosh Island and at New Dungeness.[^2] LighthouseFriends reports that the construction crew did not get a warm reception from the Makah, who had lost several hundred people to smallpox in 1853, and that the workers built a blockhouse of rough-hewn timbers before starting and kept one man on guard; apart from a few missing supplies and tools, it says, there were no problems.[^2]
+
+The plan was the usual one for the early Pacific coast lights: a one-and-a-half-storey stone dwelling with a round brick tower rising through its roof, so that keepers reached the lantern without going outdoors.[^2] The tower is given as 66 feet (20 m) tall in that account, large enough for a first-order Fresnel lens, which was lit on 28 December 1857 at a height of 162 feet (49 m) above the sea.[^2] The lens had been made for another station, Point Loma, and proved too large for it.[^2] The Lighthouse Service's own Bulletin says the station was established in 1857 with a first-order fixed lens that stayed in service until it was replaced in the 1930s.[^6]
+
+A fog signal followed. A building with a 12-inch steam whistle and a 33,000-gallon cistern was finished in the summer of 1872, but the whistle could not run until 1 November, when the rains began to fill the cistern.[^2] In the Light-House Board's report for the year to June 1897 a new fog-signal building of brick, with a cement floor and a galvanized iron roof, was recorded as built, along with a 15,000-gallon water tank beside the main dwelling and a replacement boiler.[^7] LighthouseFriends reports that the dwelling in the tower was called unfit in 1873, that Congress gave $18,000 for a new double dwelling in 1874, and that the tower rooms were then used for storage until families arrived and they were made habitable again in 1894.[^2]
+
+## The keepers
+
+From 1858 the archive's roster shows a head keeper and three assistants at the station.[^1] The first head keeper was Francis W. James, who served from 1857 to 1858.[^1] LighthouseFriends reports that several early keepers resigned over poor pay and conditions, and that a visitor in 1861 found the roof leaking, moss on the interior walls and smoke driven back down the chimney.[^2] It also repeats a story that James and an assistant settled a quarrel over hot coffee by firing three shots each at one another, then shaking hands.[^2]
+
+In 1862 the head keeper's post went to George K. Smith, whom the new customs collector for Puget Sound, Victor Smith, had named, and who was his father.[^2] The district inspector reported that the light was in "deplorable condition" and that the station needed families, not "rollicking bachelors."[^2] The same account says the station did not receive its first family until 1885.[^2] The archive lists Smith as head keeper from 1862 to 1864, while LighthouseFriends has him moved to Ediz Hook in 1865.[^1][^2]
+
+The longest early career was Alexander Sampson's. The archive lists him as a second assistant from 1866, head keeper from 1868 to 1872, first assistant from 1874 to 1879 while J. C. Floyd held the head post, and head keeper again from 1879 to 1893.[^1] The archive and LighthouseFriends list the head keeper of 1872 to 1879 as "J. C. Floyd" and the one of 1864 to 1868 as Jeremiah C. Floyd, without saying whether they are the same man.[^1][^2] The sources give no reason for the reshuffles.
+
+Getting anything onto the island took boatmen. LighthouseFriends reports that the keepers paid local Makah $1 a trip in calm water, and double in rough, to carry people, mail and supplies, and that one boatman lost three dugouts on the rocks.[^2]
+
+The best-documented keeper is John M. Cowan, head keeper from 1900 to 1932.[^1] He arrived with his wife and seven children, according to LighthouseFriends, and sent the children to relatives in Portland for school.[^2] Two more Cowans appear in the archive's roster as assistants: Forrest S. Cowan from 1907 to 1911, and Shirley F. Cowan from 1911 to 1923; the sources seen name Forrest as John Cowan's son and do not say how Shirley was related.[^1][^2] Cowan left on reaching the mandatory retirement age of 70, on 12 October 1932.[^2]
+
+## Storms, wrecks and rescues
+
+The station's worst losses were in boats between the island and the mainland. LighthouseFriends, which lists the San Francisco Call of 9 November 1900 among its references, says that on 27 October 1900 second assistant Nels Nelson and another man left the island in a small boat in a storm, and that their bodies were found on a Vancouver Island beach more than a week later.[^2] The archive lists Nels V. Nelson as second assistant from 1899 to 1900.[^1]
+
+On 18 February 1911, by the same account, John Cowan went out in heavy seas to a foundering boat and saved two Navy radio men, but not the three others aboard, one of them his son Forrest, then 21.[^2] The archive lists Forrest S. Cowan as a second assistant until 1911.[^1] On 18 September 1934 second assistant Ole Rasmussen was rowing two men who had repaired the radiobeacon out to the Neah Bay mail boat when swells capsized the boat and the craft struck him on the head; he could not be revived.[^2]
+
+The Lighthouse Service recorded rescues in the other direction. The Bulletin's 1913 volume reports that on the evening of 10 February keeper Cowan, Shirley Cowan and third assistant James E. Shaw went to the aid of two men who had left a burning gasoline launch and brought them about 10 miles to the station.[^8] In August 1920 first assistant Shirley Cowan towed a becalmed schooner, the *William Bowden*, clear of the breakers at the mouth of the Quillayute River.[^9] In March 1930 third assistant F. W. Sargant took the station surf boat to a disabled launch "under hazardous conditions" and rescued its owner.[^10]
+
+The Bulletin also records weather. On 29 January 1921 a record-breaking gale crossed the Oregon and Washington coast. At Cape Flattery a chimney of the tower dwelling was blown down, the doors were torn off outbuildings and the flagpole was lifted from the ground; the Weather Bureau's anemometer there recorded 110 miles an hour, and the gale did not last more than two hours at any point.[^11]
+
+Fog was the other season. The Board's reports give the steam whistle's year: about 571 hours in the year to June 1899, 620 in 1900 and 478 in 1901.[^12][^13][^14] LighthouseFriends reports that in October 1895 a dry year left the keepers with so little water that they sounded the whistle every five minutes instead of every minute.[^2]
+
+## After the keepers
+
+The fog signal changed with the century. The Lighthouse Service announced in October 1912 that the steam whistle would become a first-class air siren on about 1 May 1913.[^15] LighthouseFriends puts the change to an air siren at around 1910.[^2] In its report for 1917 the Commissioner of Lighthouses recorded the purchase of a diaphone for $1,320.[^16]
+
+In 1932 the old lens came out. The Bulletin reported that the first-order lens had been replaced by a fourth-order flashing lens of three flash panels, lit by an electric lamp, raising the candlepower from 13,000 to 300,000; three gasoline-driven generators supplied the power.[^6] The Bulletin does not give a day. The archive's roster lists Coast Guard crew on the island through 1969, and LighthouseFriends puts the closing of the island's weather station at 1966.[^1][^2]
+
+The light was automated in 1976 according to the National Trust, or 1977 according to LighthouseFriends.[^3][^2] A modern beacon replaced the fourth-order lens in 1996, and a 30-foot (9 m) skeleton tower with a solar-powered LED took over the light in 2008.[^2] In 2009 the Peninsula Daily News reported that Coast Guard crews, who reach the island by helicopter, had begun cleaning up the lighthouse and grounds so that management of the island and buildings could pass to the Makah, and had removed a generator and fuel tank no longer needed.[^4]
+
+## Today
+
+In 2017 the National Trust named the lighthouse a National Treasure, saying the lighthouse and fog-signal building sat abandoned and in "extreme disrepair" and needed almost $2 million in repairs; the Coast Guard had proposed transferring them to the Makah in 2012, and the tribe asked for stabilisation first.[^3] Makah Tribal Council chairman Nathan Tyler called it "the oldest standing historic structure on the Makah Indian Reservation."[^17] Congress had returned the island itself to the Makah in 1984.[^3]
+
+The island is closed. The tribe restricts access for its archaeological and environmental importance, and Bowechop said it is "basically closed" to anyone without a research permit from the Center.[^4] LighthouseFriends says the lighthouse is closed to visitors and that it can be seen from the observation platforms at the end of the Cape Flattery Trail on the mainland, reached from Neah Bay with a reservation recreation permit.[^2]
+
+[^1]: Cape Flattery, place record and keeper roster, U.S. Lighthouse Society Digital Archive, https://archives.uslhs.org/places/cape-flattery (accessed 2026-10-27).
+[^2]: Cape Flattery Lighthouse, Washington, LighthouseFriends.com (Kraig Anderson), https://www.lighthousefriends.com/light.asp?ID=120 (accessed 2026-10-27). A secondary source; it cites Light-House Board and Commissioner reports, Wayne Wheeler in The Keeper's Log (Summer 2001), the San Francisco Call of 9 November 1900, and the Umbrella Guide to Washington Lighthouses (1990).
+[^3]: "Nation's Leading Historic Preservation Organization Names Cape Flattery Lighthouse a National Treasure," press release, National Trust for Historic Preservation, 25 August 2017, https://savingplaces.org/press-center/media-resources/nations-leading-historic-preservation-organization-names-cape-flattery-lighthouse-a-national-treasure (accessed 2026-10-27).
+[^4]: Marcie Miller, "Historic Cape Flattery lighthouse to be turned over to Makah; no timeline set," Peninsula Daily News, 18 October 2009, https://www.peninsuladailynews.com/2009/10/18/historic-cape-flattery-lighthouse-to-be-turned-over-to-makah-no-timeline-set/ (accessed 2026-10-27).
+[^5]: Annual Report of the Light-House Board, 1893, scan page 243 (the passage is repeated in the 1894 report), Internet Archive, https://archive.org/details/annualreportlig01statgoog/page/n243/mode/2up (accessed 2026-10-27).
+[^6]: "Electrification of Cape Flattery Light Station," Lighthouse Service Bulletin, 1932, pp. 137-138, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1932.pdf (accessed 2026-10-27). The page numbers are the printed ones in the OCR text.
+[^7]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1897, Cape Flattery entry (page not confirmed), Internet Archive, https://archive.org/details/annualreportlig02statgoog (accessed 2026-10-27).
+[^8]: Lighthouse Service Bulletin, 1913, report of the rescue by the keeper of Cape Flattery Light Station, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1913_0.pdf (accessed 2026-10-27).
+[^9]: Lighthouse Service Bulletin, 1920, p. 147, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1920.pdf (accessed 2026-10-27).
+[^10]: "Saving of Life and Property," Lighthouse Service Bulletin, 1930, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1930.pdf (accessed 2026-10-27).
+[^11]: "Storm Damage," Lighthouse Service Bulletin, 1921, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1921.pdf (accessed 2026-10-27).
+[^12]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1899, fog-signal list, Internet Archive, https://archive.org/details/annualreportlig04statgoog (accessed 2026-10-27).
+[^13]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1900, fog-signal list, Internet Archive, https://archive.org/details/annualreportlig00statgoog (accessed 2026-10-27).
+[^14]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1901, fog-signal list, Internet Archive, https://archive.org/details/annualreportlig01boargoog (accessed 2026-10-27).
+[^15]: "Cape Flattery Fog Signal to Be Changed," Notice to Mariners of 25 October 1912, Lighthouse Service Bulletin, 1912, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1912.pdf (accessed 2026-10-27).
+[^16]: Annual Report of the Commissioner of Lighthouses for 1917, scan page 263, Cape Flattery Light Station entry, Internet Archive, https://archive.org/details/bub_gb_B2dYAAAAYAAJ (accessed 2026-10-27).
+[^17]: "Cape Flattery Lighthouse named a National Treasure," Peninsula Daily News, 28 August 2017, https://www.peninsuladailynews.com/2017/08/28/cape-flattery-lighthouse-named-a-national-treasure/ (accessed 2026-10-27).

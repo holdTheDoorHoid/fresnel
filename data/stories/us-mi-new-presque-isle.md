@@ -1,0 +1,54 @@
+At the north end of the Presque Isle peninsula on Lake Huron, a 113-foot (34 m) brick tower went up in 1870 to replace a smaller harbor light down the shore, and one family kept it for sixty-four years.[^4][^1][^5]
+
+## The place
+
+French trappers gave the peninsula its name, "almost an island", and by the 1830s steamers were stopping in its sheltered harbor to take on wood; in a hard north-westerly, Terry Pepper writes, an up-bound captain might turn back rather than fail to reach it.[^3] The first Presque Isle light was established in 1840, with Henry L. Woolsey as keeper.[^3][^2] Louis G. Metivier kept it from 1853, and Patrick Garrity took over in 1861.[^2]
+
+By 1866 the district inspector reported the old keeper's dwelling beyond repair, and Congress appropriated $7,000 for rebuilding it on 2 March 1867.[^3] (The museum society puts the estimated cost of the dwelling repairs, and the sum earmarked for them, at $7,500. LighthouseFriends mentions $7,500 only as an appropriation of 3 March 1869 for range lights to mark the channel into the harbor.)[^4][^5] Before the work was done the Lighthouse Board changed its mind. The 1840 tower's position and small size served only vessels already near the harbor, so the Board proposed a new first-class coastal light about two miles north, near the tip of the peninsula, after which the old light could be dropped.[^3] LighthouseFriends puts the distance at a mile; the Museum Society says "one mile beyond the Harbor".[^4][^5] In its report for 1892 the Board noted how bare the coast was: Cheboygan and Presque Isle lights stood "about 50 miles apart, with no aid to navigation between them."[^8]
+
+## Building the light
+
+Orlando M. Poe, the district engineer, drew up the plans, and Congress made the final appropriation on 15 July 1870.[^3] The tender *Warrington* brought a working party and materials that summer.[^3] The tower is a double-walled brick cone on a limestone foundation that reaches almost ten feet below grade; it is 19 feet 3 inches across at the base and 12 feet 4 inches at the parapet.[^3][^5] Sources disagree on the stairs: 138 steps in Pepper, 130 in the Museum Society's account.[^3][^5] A 16-foot covered passage joined the tower to a two-story brick dwelling.[^3] The lens was a third-order Fresnel, made by Henri Lepaute of Paris, showing a fixed white light.[^3][^6] Work ran late into winter, and the light was first shown at the opening of the 1871 navigation season.[^3] The Museum Society says Poe returned $700.35 of the money unspent on 21 August 1871.[^5]
+
+Sources count Poe's towers differently: the state marker says this is one of three Great Lakes towers built from the same plans, the Museum Society says one of nine.[^6][^5]
+
+## The keepers
+
+Patrick Garrity left the old light with his family and moved to the new one, a two-mile trip by wagon according to Pepper.[^3] LighthouseFriends says he brought his wife Mary and six children.[^4] The new station was to have an assistant, and Mary was appointed; the Digital Archive lists her as first assistant from 1872 to 1882.[^3][^1] The post was abolished on 1 October 1882, and Pepper says it came back in 1886 with the Garritys' 18-year-old son Thomas appointed on 19 May. The Digital Archive and LighthouseFriends give Thomas's service as 1884 to 1887, and the state marker has Patrick leaving the light in 1885, so the dates are not settled.[^3][^1][^4][^6]
+
+Patrick's sons John, Thomas and Patrick H. all became keepers, as did his daughter Anna.[^10] Anna T. Garraty, as the Lighthouse Service Bulletin spelled the name, was "one of the few women lighthouse keepers" and kept the Presque Isle range light from 1903 to 1926.[^10] According to LighthouseFriends, Thomas moved to the harbor range lights in 1887 and in 1891 swapped places with his 63-year-old father, so that Patrick would not have to climb the tower.[^4] The Digital Archive lists Thomas as head keeper from 1891 to 1935.[^1]
+
+Isolation was real. The Lighthouse Board wrote in 1902, as LighthouseFriends quotes it: "This is an isolated position, there being no town within 30 miles."[^4] Beside the tower, a second dwelling was built after Congress voted $5,000 on 28 April 1904 and was finished on 15 September 1905.[^3][^4] A second assistant, Arthur J. Cater, arrived on 22 November 1909, four years after the house was ready.[^3] LighthouseFriends also reports that Katherine Garrity lived with her bachelor brother Thomas and was paid $10 a month to show storm warning flags from a tower nearby.[^4]
+
+A Michigan newspaper of 4 January 1913 reported from Alpena the death of Mrs. Garrity, mother of the keeper of the Presque Isle lighthouse. Under the headline "Lived in Lighthouse 51 Years", it said her husband had been appointed keeper in 1861 and the light had been her home ever since.[^12]
+
+Thomas Garrity retired on 1 February 1935, aged 65, with fifty years of service.[^10] The Bulletin said the family "were consistently awarded" efficiency stars and flags, and its 1912 to 1917 index lists Thomas Garraty as receiving an efficiency pennant.[^10][^11] LighthouseFriends says he won the district pennant at least three times.[^4]
+
+Elmer C. Byrnes succeeded him in 1935.[^1][^4] When the Coast Guard took over the lights in 1939 he stayed on as a civilian keeper, and after his retirement Coast Guard crews tended the light.[^5] The Digital Archive dates his term 1935 to 1953; the Museum Society says he retired in 1954.[^1][^5] LighthouseFriends tells how his daughter Betty and her siblings earned tips by offering after-hours tower climbs to tourists, until their father learned of it; accepting gratuities for tours was strictly forbidden and he feared losing his job.[^4]
+
+## Storms, wrecks and rescues
+
+The fog signal is the part of the station's working life with figures attached. Congress voted $5,500 on 2 March 1889, and a 10-inch steam whistle was in place by the summer of 1890. LighthouseFriends dates it to 17 September 1890, and Pepper and LighthouseFriends disagree on the day the materials arrived (13 June and 13 July).[^3][^4] The Board's reports give the whistle's yearly work: 155 hours and about 12 tons of coal in the report for 1891, and some 446 hours and about 25 tons in the report for 1892.[^7][^8] A 2,240-foot tramway carried the coal; the Board's 1900 report says it was rebuilt, with 410 ties renewed and the whole track relaid.[^3][^9] A diaphone replaced the whistles on 27 September 1926, says LighthouseFriends.[^4]
+
+LighthouseFriends reports two forest fires: in October 1908 Thomas Garrity had to leave the station when the Metz fire swept through, and in 1911 he telegraphed for a tender and crew, and trees were cut to make a fire line.[^4] The same source says a message in a bottle from the steamer *Hudson*, lost in September 1901 off the Keweenaw peninsula, was found near Presque Isle the next summer.[^4] LighthouseFriends also tells of a violent storm in the spring of 1936, when the Byrnes family was woken by a diesel-powered ship and a nearly submerged grain carrier rounded the point into North Bay.[^4]
+
+## After the keepers
+
+The Coast Guard took over in 1939. Pepper says electricity and plumbing came the next year; the Museum Society says both dwellings were modernized between 1940 and 1952.[^3][^5] Pepper and LighthouseFriends put the demolition of the fog signal building and oil house in the 1950s; the Museum Society dates the fog signal building's demolition to 1968 and the oil house's to 1961.[^3][^4][^5] The light was automated in 1970 and leased to the township in 1973.[^4][^5] The tower brickwork was restored in 1988 and 1989 (the Museum Society says $99,000; LighthouseFriends says $100,000) and the property was deeded to the township on 16 June 1998.[^4][^5] The third-order lens was taken out in 2003, restored, and put on display in 2012 in the 1870 keeper's house.[^5]
+
+## Today
+
+The 99-acre station is owned by Presque Isle Township and run as a park and museum by the Presque Isle Township Museum Society.[^5] Visitors can climb the tower in season, subject to a 42-inch height minimum, and the 1905 keeper's house is a museum; the society calls this the tallest Great Lakes lighthouse the public may climb.[^5] Hours change, so check with the society before going. The Museum Society says the light remains an active aid to navigation, but the Digital Archive's record marks it as not active, and the question is left open here.[^5][^1]
+
+[^1]: Presque Isle (New), MI, place record and keeper roster, US Lighthouse Society Digital Archive, https://archives.uslhs.org/places/presque-isle-new-mi (accessed 2026-10-27).
+[^2]: Presque Isle (Old), MI, place record and keeper roster, US Lighthouse Society Digital Archive, https://archives.uslhs.org/places/presque-isle-old-mi (accessed 2026-10-27).
+[^3]: Terry Pepper, "New Presque Isle Light", Seeing the Light, http://www.terrypepper.com/Lights/huron/newpresqisl/newpresqisl.htm (accessed 2026-10-27).
+[^4]: "Presque Isle (New) Lighthouse, Michigan", Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=181 (accessed 2026-10-27). Its quotation of the Lighthouse Board's 1902 report is second-hand; the report itself was not read.
+[^5]: "New Presque Isle Lighthouse (1870)", Presque Isle Township Museum Society, https://www.presqueislelighthouses.org/lighthouses/new-presque-isle-lighthouse-1870/ (accessed 2026-10-27).
+[^6]: "Presque Isle Light Station", Michigan historical marker (Bureau of History, Michigan Department of State, 1990), transcription at Historical Marker Database, https://www.hmdb.org/m.asp?m=40062 (accessed 2026-10-27).
+[^7]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1891, Eleventh District, fog signals, scan page 208, https://archive.org/details/annualreportlig03statgoog/page/n208/mode/2up (accessed 2026-10-27).
+[^8]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1892, scan pages 541 and 552, https://archive.org/details/annualreportlig03statgoog/page/n541/mode/2up (accessed 2026-10-27).
+[^9]: Annual Report of the Light-House Board for 1900, Eleventh District, entry 202, https://archive.org/details/annualreportlig00statgoog (accessed 2026-10-27).
+[^10]: "Garraty family makes notable record as lighthouse keepers", Lighthouse Service Bulletin, 1 November 1935 issue (volume IV, no. 71), PDF p. 27, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1935.pdf#page=27 (accessed 2026-10-27).
+[^11]: Lighthouse Service Bulletin, Index to volume I (1912 to 1917), entry "Garraty, Thomas", https://uslhs.org/sites/default/files/bulletins/Index%20to%20volume%201.pdf (accessed 2026-10-27).
+[^12]: "Lived in Lighthouse 51 Years", The Diamond Drill (Crystal Falls, Michigan), 4 January 1913, p. 2, https://www.loc.gov/resource/sn96076817/1913-01-04/ed-1/?sp=2 (accessed 2026-10-27).

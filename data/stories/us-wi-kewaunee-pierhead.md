@@ -1,0 +1,53 @@
+A fog-signal house with a lantern on its roof stands at the end of the south pier at the mouth of the Kewaunee River, on the western shore of Lake Michigan, a quarter-mile walk from land.[^1][^12] Its diaphone horn was a regular part of life in the town, and a 1972 recording of it was added to the Library of Congress's National Recording Registry.[^2]
+
+## The place
+
+Kewaunee's first permanent European settlers arrived in 1836, drawn by reports of gold at the river mouth, and a pier was run out into the lake in 1850 and 1851. Citizens who sailed the northern lakes petitioned for a lighthouse in 1851, and in 1854 the Wisconsin legislature asked Congress for one to help steamers running between Chicago and Green Bay.[^1] The legislature argued that a light would make landing "practicable at all seasons, and at all times."[^1] A second pier followed in 1856, but a harbor improvement plan was not adopted until 1881.[^1]
+
+By the 1880s the harbor mattered to the lake's steamers. The Lighthouse Board, in a report quoted by LighthouseFriends, noted that Goodrich Transportation Company boats stopped three times a week and that the city's officials had put up a frame at the end of the north pier and kept a red light there with a signal lantern. The Board asked for a proper pierhead light, and Congress appropriated $16,000 for it and three others on the lakes.[^1] In October 1891 a railroad reached Kewaunee from Green Bay, and the next year a railroad car ferry began crossing to Frankfort, Michigan, which raised the harbor's importance.[^1][^2]
+
+## Building the light
+
+Work began in June 1889 on an open framework tower at the outer end of the north pier, with a gas machine for fuel. A sixth-order pierhead beacon was lit there on August 20, 1889.[^1] After the pier was extended in 1891, the tower was moved about 200 feet (61 m) lakeward and a second light was added in front of it, so that the two formed a range to guide vessels in. The front light was a tubular lantern showing fixed red; the rear light, from a white pyramidal tower, was also fixed red.[^1][^3] A 335-foot (102 m) conduit finished in November 1893 let the keeper run the lantern out to the front post and back without leaving the rear tower.[^1] The Lighthouse Board's report for fiscal 1894 says the conduit had worked satisfactorily since November 10, 1893.[^4]
+
+A fog signal followed. The Board asked for money in 1891 after one of the big railroad transfer boats ran ashore in thick weather, and the appropriation was approved on August 4, 1894.[^1] The tower was moved 300 feet (91 m) nearer the end of the pier, and a fog signal building was built just shoreward of it.[^1][^5] The ten-inch steam whistle was first sounded on January 31, 1895.[^5] By the Board's report for fiscal 1900 the whistle had run about 608 hours in the year and burned about 44 tons of coal.[^6]
+
+The lights changed again in 1905, when the range was rearranged at the outer end of the north pier.[^1] Then, when a new concrete south pier was finished in 1912, new range lights and a fog signal went up on it, not on the north pier; LighthouseFriends dates the lights to March 26, 1912 and the fog signal to June 28.[^1] The building that stands today is dated differently by different sources. The National Register record says it was "originally constructed as a fog signal building in 1909 and was converted to a lighthouse in 1931," and the Library of Congress essay also gives 1909 for the horn.[^7][^2] LighthouseFriends gives 1912 for the south pier works and says that in 1931 a square tower with a lantern room was installed atop the fog signal building.[^1] These accounts do not agree, and this story does not settle it. The National Register record adds that the octagonal lantern was moved in 1931 from the lighthouse built at the south pierhead in 1891.[^7]
+
+## The keepers
+
+The USLHS Digital Archive lists Orrin Warner, Jr. as principal keeper (1889-1892), followed by Charles C. Petersen (1892-1901).[^8] LighthouseFriends says that in 1893 Petersen had the idea that the American flag should fly over the station on certain days, and raised the money for a twenty-foot flag by passing the hat.[^1] Eugene V. Kimball, transferred from Chicago Harbor, took over in 1901 and kept until 1913.[^1][^8] Orland Lynd then held the light for twenty-four years (1913-1937), and Cecil S. Scofield followed from 1937.[^8] Assistants came and went; Thomas W. Nelson served as first assistant from 1925 to 1945.[^8]
+
+Supplies had to travel the length of the pier. A Lighthouse Service Bulletin of 1916 notes that at Kewaunee Pierhead locally bought oil was delivered at the shore end of the pier and carried out to the station by the keepers.[^9] In its report for fiscal 1900 the Board recorded a life line extending 1,054 feet (321 m) shoreward from the inner end of the elevated walk, for the keeper's protection in passing to and from the station.[^6]
+
+Coast Guard crews took over the station later. The archive lists Coast Guard men from 1954 on, and Thomas P. Ryan as principal keeper from 1970 to at least 1971.[^8]
+
+## Storms, wrecks and rescues
+
+One keeper's death is recorded at the station, on November 3, 1901. Keeper Petersen and his son Ralph set off in a boat to retrieve lumber lost from the schooner Julia B. Merrill. Just after they left the harbor, a westerly gale blew them out into Lake Michigan. There was hope they had landed elsewhere, but after a systematic search by local lifesavers and the fishing tug Carrie Hermann the two were presumed drowned.[^1] The USLHS archive's entry for Petersen gives the same date and says he drowned with his son while trying to recover lumber.[^10]
+
+The elevated walk, which the keepers used in bad weather, was struck at least once: a report in the Board's 1896-1897 volume says the walk "damaged by the schooner Ulida was repaired."[^11] The horn's work is the other record of weather. The Library of Congress essay says that in May 1959 it logged more than 300 hours, averaging over six and a half hours a day.[^2]
+
+## After the keepers
+
+LighthouseFriends says a diaphone fog signal replaced the chime whistle in 1919, while the Library of Congress essay dates the station's diaphone to 1909; the sources disagree.[^1][^2] The last keepers left, and the station was automated, in 1981.[^1] The Library of Congress essay says the original horn was also removed in 1981, was on its way to the Smithsonian, and was instead acquired by an organization in Duluth, Minnesota, called TOOT, which installed it at the South Breakwater Light until 2006.[^2] The essay says the professor James Lipsky recorded 31 minutes of the horn in 1972, along with a diesel train and a car ferry. The recording joined the National Recording Registry in 2005.[^2]
+
+The Coast Guard declared the lighthouse excess and offered it free to eligible public and nonprofit bodies in 2009. PETA wrote to the National Park Service about it; the City of Kewaunee also applied, and the National Park Service recommended on September 10, 2010 that it go to the city. The transfer was made in September 2011.[^1] A nonprofit, the Friends of the Kewaunee Pierhead Lighthouse, worked with the city from 2015 to renovate the exterior; the roof and siding were replaced.[^1] The Fresnel lens came out in June 2019 and went on display at the Kewaunee County Historical Society's History Center, with an LED beacon placed in the lantern room. The first public tour was held on July 20, 2019.[^1] The Wisconsin Historical Society announced the lighthouse's listing on the National Register of Historic Places, citing its part in the maritime transportation and commerce of Kewaunee County.[^13]
+
+## Today
+
+The lighthouse is owned by the City of Kewaunee and stands at the end of the south pier; it is a quarter-mile walk from the shore.[^1][^12] The Friends' volunteers open it for tours a few times a year, with a full climb from pier level to the lantern 45 feet (14 m) above the lake. The 2026 public tour dates listed ran from May 30 to October 3. They note there are no restrooms on the pier, that visitors climb stairs and ladders, and that the tours are not wheelchair accessible.[^12] LighthouseFriends lists the grounds as open and the tower as closed.[^1]
+
+[^1]: Kewaunee Pierhead Lighthouse, Wisconsin, Lighthousefriends.com (Kraig Anderson), https://www.lighthousefriends.com/light.asp?ID=253 (accessed 2026-10-27).
+[^2]: Erika Janik, "The old foghorn, Kewaunee, Wisconsin--Recorded by James A. Lipsky (1972)," essay for the National Recording Registry, Library of Congress, https://memory.loc.gov/static/programs/national-recording-preservation-board/documents/OldKewauneeFoghorn.pdf (accessed 2026-10-27).
+[^3]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1892, "Kewaunee Pierhead Range," Internet Archive, https://archive.org/details/annualreportlig03statgoog (accessed 2026-10-27).
+[^4]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1894, Internet Archive, https://archive.org/details/annualreportlig01statgoog (accessed 2026-10-27).
+[^5]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1895, Internet Archive, https://archive.org/details/annualreportlig00boargoog (accessed 2026-10-27).
+[^6]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1900, Internet Archive, https://archive.org/details/annualreportlig00statgoog (accessed 2026-10-27).
+[^7]: "Kewaunee Pierhead Lighthouse," National or State Registers record (NRHP 100007998), Wisconsin Historical Society, https://www.wisconsinhistory.org/record/national-register/NR2710 (accessed 2026-10-27).
+[^8]: Kewaunee South Pierhead, place record and keeper roster, USLHS Digital Archive (from NARA keeper registers via the Kraig Anderson inventory), https://archives.uslhs.org/places/kewaunee-south-pierhead (accessed 2026-10-27).
+[^9]: Lighthouse Service Bulletin, 1916, PDF page 36, U.S. Lighthouse Society, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1916.pdf#page=36 (accessed 2026-10-27).
+[^10]: Charles C. Petersen, USLHS Digital Archive, https://archives.uslhs.org/people/charles-c-petersen (accessed 2026-10-27).
+[^11]: Annual Report of the Light-House Board, 1896-1897 volume, Internet Archive, https://archive.org/details/annualreportlig02statgoog (accessed 2026-10-27).
+[^12]: Tours, Friends of the Kewaunee Pierhead Lighthouse, https://www.kewauneepierheadlighthouse.org/tours (accessed 2026-10-27).
+[^13]: "Kewaunee Pierhead Lighthouse Listed on the National Register of Historic Places," Wisconsin Historical Society, https://legacy.wisconsinhistory.org/Records/Article/CS16855 (accessed 2026-10-27).

@@ -1,0 +1,51 @@
+Watch Hill Light stands on the southern tip of Rhode Island, where Block Island Sound meets Fishers Island Sound. Its square granite tower has marked the point since 1856, the second lighthouse on a spot where a wooden tower first showed a light in 1807 or 1808.[^1][^2][^3]
+
+## The place
+
+Watch Hill sits at the extreme southwestern corner of Rhode Island, in the town of Westerly, on a triangular neck of land between Block Island Sound and Little Narragansett Bay. The National Register nomination describes the point as the site of a lighthouse since 1808.[^2] Local tradition, as the Watch Hill Lighthouse Keepers Association tells it, gives the place an older watching role: the Colony of Rhode Island put up a beacon or watch tower during King George's War (1744 to 1748), meant to warn of naval attack rather than to guide ships, and a storm destroyed it in 1781.[^3]
+
+## Building the light
+
+Congress passed "An Act to provide for lighthouses in Long Island Sound" in January 1806, and on 3 May 1806 George and Thankful Foster of Westerly sold four acres on the point for $500.[^3] Lighthouse Friends gives the first tower as a 35-foot (11 m) wood-framed structure that went into operation in 1808, with a five-room frame keeper's house, built by Abisha Woodward.[^4] The Association's history says the round shingled tower was completed in 1807 and was lit by ten whale-oil lamps; the two sources differ by a year on when the first light began.[^3][^4]
+
+By 1837 the apparatus was poor. A coast survey visitor, Edmund Blunt, called the light "a very bad one"; the lamps, he wrote, were bad and the reflectors too small. On that visit the thick glass placed before each lamp was temporarily removed, and, as Lighthouse Friends tells it, the collector of the port remarked that the light was so much brighter that "they would not know what to make of it at Stonington".[^4] New England Lighthouses adds that in 1827 the light had been made to rotate to tell it apart from the Stonington light.[^5]
+
+By the 1850s the wood of the tower and dwelling was rotten and the bluff was wearing away, and $8,300 was obtained in 1854 for a new lighthouse and dwelling.[^4] The present tower, about fifty feet (15 m) northwest of the old one, was finished in 1855 to 1856. It is a 45-foot (14 m) square tower of gray Westerly granite, rock-faced, with a cast-iron lantern that first held a fourth-order Fresnel lens, attached to a two-story brick dwelling.[^3][^4][^5] (The Digital Archive's place record gives 1857 for the tower and its lens, a year later than the other sources.[^1]) It was first lit on 1 February 1856 with a fixed white light.[^4][^5] A new sea wall followed: $10,000 was appropriated for one in 1856.[^4] The Association notes that the choice of granite from the nearby Westerly quarries, and brick for the dwelling, set the station apart from other New England lights.[^3]
+
+## The keepers
+
+The first keeper, Jonathan Nash of Westerly, was appointed at $200 a year and kept the light for about twenty-seven years, recording forty-five shipwrecks in that time.[^4][^5] Sources differ on when he left: the Digital Archive's roster says 1835, New England Lighthouses says he lost his post in 1834 for political reasons, and the National Register nomination says about 1835.[^1][^5][^2] The nomination also credits him with starting Watch Hill's life as a summer resort by taking in seasonal boarders, and says hotels were later built for his sons.[^2]
+
+Jared S. Crandall took charge in 1868.[^1] His wife Sally Ann Crandall succeeded him as principal keeper in 1879 and served until she resigned in 1888, at $500 a year.[^12][^5] Lighthouse Friends says the couple had seven children, that mariners signed a petition to keep her after the election of 1884, and that a newspaper describing her life at the lighthouse mentioned a cow, a dozen geese and forty fowls. In that account the lantern was swathed in cloth, which, she told visitors, was there because without it the lantern "might set fire to the lighthouse when the sun is shining brightly."[^4] Fanny K. Schuyler followed her in 1888 and served two years.[^4][^1]
+
+Among the later keepers, Lawrence H. Congdon held the post from 1924 to 1943 by the Digital Archive's roster, and the roster shows Coast Guard personnel at the station from 1953.[^1] William I. Clark, in charge for over a decade, died of a heart attack on watch on 18 July 1970, according to Lighthouse Friends.[^4]
+
+## Storms, wrecks and rescues
+
+The Light-House Board's reports record the work the sea forced on the station: a 520-foot (158 m) wire ribbon fence around the reservation in the year ended June 1893, and in the next year a rebuilt east sea wall and repairs to the south and west walls.[^8][^9] The Life-Saving Service's 1876 report, in its history of the service, says that money appropriated in 1850 was to be spent on several stations on Long Island and also one at Watch Hill.[^13] New England Lighthouses says that a Life Saving Service station was established close to the lighthouse a few years after the Metis was lost.[^5] The Digital Archive's account of the Metis rescue already has the lifeboat launching from a life-saving station in 1872 (see below).[^6]
+
+Lighthouse Friends counts the loss of the steamer Metis in August 1872 as one of the two worst maritime disasters in the area.[^4] Sources disagree on nearly every detail of it. Lighthouse Friends dates the collision to the night of 30 August and counts 85 rescued and 67 lost; the Digital Archive says 33 of 149 aboard survived; New England Lighthouses says 33 were saved and 130 lost; and the congressional resolution that honoured the rescuers gives 31 August.[^4][^6][^5][^7] The resolution and the Archive agree that the lifeboat and a fishing boat (a seine, in the Archive's words) saved thirty-two people.[^7][^6] Congress voted medals on 24 February 1873 to Captain Jared S. Crandall and nine others, among them Daniel F. Larkin, who the Digital Archive says was a retired light keeper and an early life-saving captain.[^7][^6] The Archive says the lifeboat crew launched from the life-saving station and that the revenue cutter Moccasin took their passengers and kept searching until dark.[^6]
+
+The passenger steamer Larchmont was lost on the night of 11 February 1907 after colliding with the schooner Harry Knowlton, according to Lighthouse Friends, which counts it with the Metis as one of the area's two worst disasters.[^4] New England Lighthouses places the collision four miles southwest of Watch Hill Light, in a February blizzard.[^5] In the 1938 hurricane, the keeper reported that waves broke over the top of the tower, smashing the lantern glass and sending seawater inside; Keeper Congdon and Assistant Richard Fricke came through, and the light took a few weeks to restore.[^5] In Hurricane Carol on 31 August 1954, Coast Guard assistant Bill Mack went to the fog signal building to start the horn while waves threw stones "the size of baseballs" at it; the damage at the station was about $125,000.[^5]
+
+## After the keepers
+
+A fog signal building with a Daboll trumpet was added in 1909, and an assistant keeper came with it.[^4] The light was automated on 31 August 1986, and a modern optic replaced the Fresnel lens.[^3][^5] That day the Watch Hill Lighthouse Keepers Association took the station on a lease, later a license, from the Coast Guard.[^3]
+
+## Today
+
+The lighthouse is part of the Watch Hill Historic District, listed on the National Register in 1985.[^3][^2] The Coast Guard transferred ownership to the Association in January 2024.[^10] The Association says the light continues to shine. The tower and the keeper's residence are closed to the public.[^11] The grounds are reached on foot down Lighthouse Road, a private road, and are open from 8 a.m. to sunset; the museum keeps limited summer hours.[^10][^11] The Association warns that the property and surrounding area are rocky and dangerous.[^11]
+
+[^1]: Watch Hill, Washington Co., RI, U.S. Lighthouse Society Digital Archive, https://archives.uslhs.org/places/watch-hill (accessed 2026-10-27).
+[^2]: National Register of Historic Places Inventory-Nomination Form, Watch Hill Historic District, Westerly, R.I. (1985), https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/85001948.pdf (accessed 2026-10-27).
+[^3]: Our History, Watch Hill Lighthouse Keepers Association, https://watchhilllighthousekeepers.org/history/ (accessed 2026-10-27).
+[^4]: Watch Hill Lighthouse, Rhode Island, Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=688 (accessed 2026-10-27).
+[^5]: Watch Hill Light history, New England Lighthouses: A Virtual Guide (Jeremy D'Entremont), https://www.newenglandlighthouses.net/watch-hill-light-history.html (accessed 2026-10-27).
+[^6]: Jared S. Crandall, U.S. Lighthouse Society Digital Archive, https://archives.uslhs.org/people/jared-s-crandall (accessed 2026-10-27).
+[^7]: 1872 For Courage and Humanity - Loss of the Steamer Metis, marinewives.com, reproducing the resolution of Congress of 24 February 1873 as printed in J. F. Loubat, The Medallic History of the United States of America 1776-1876 (1878), http://www.marinewives.com/index.php/table-medal-descript/1397-1872-for-courage-and-humanity-loss-of-the-steamer-metis (accessed 2026-10-27).
+[^8]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1893, scan page 78, https://archive.org/details/annualreportlig01statgoog (accessed 2026-10-27).
+[^9]: Annual Report of the Light-House Board for the fiscal year ended June 30, 1894, scan page 376, https://archive.org/details/annualreportlig01statgoog (accessed 2026-10-27).
+[^10]: Watch Hill Lighthouse Keepers Association, home page, https://watchhilllighthousekeepers.org/ (accessed 2026-10-27).
+[^11]: Hours & Rules, Watch Hill Lighthouse Keepers Association, https://watchhilllighthousekeepers.org/visitor-info/ (accessed 2026-10-27).
+[^12]: Sally Ann Crandall, U.S. Lighthouse Society Digital Archive, https://archives.uslhs.org/people/sally-ann-crandall (accessed 2026-10-27).
+[^13]: Annual Report of the Operations of the United States Life-Saving Service for the fiscal year ended June 30, 1876, https://archive.org/details/annualreportope07servgoog (accessed 2026-10-27).

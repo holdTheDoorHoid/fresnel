@@ -1,0 +1,47 @@
+The Plum Island Range Lights stand on the southwest side of Plum Island, off the tip of Wisconsin's Door Peninsula in Door County. They were built to help ships line up on the strait called Porte des Morts, "Death's Door", where Green Bay meets Lake Michigan.[^1] The rear light is a 65-foot (20 m) iron skeletal tower, and the two lights stand 1,650 feet (503 m) apart.[^2][^6]
+
+## The place
+
+Death's Door is the narrow passage between the tip of the Door Peninsula and the chain of islands to its north. An earlier lighthouse at Plum Island, built in 1849 and lit that year, proved to stand too far inside the passage, and a light on Pilot Island, about 1.7 miles to the southeast, replaced it in 1858.[^1] The National Register nomination for the island says the foundation of the 1849 lighthouse may survive a few hundred feet east of the present front range light.[^2]
+
+Even with the Pilot Island light, mariners found it hard to judge where to turn into the passage. Lighthouse Friends credits a suggestion made in 1889 by Captain William Nicholson of the Peshtigo Barge Line, who sailed between Green Bay and Chicago, that a pair of range lights on Plum Island would show the proper bearing.[^1] The nomination adds that range lights built in 1870 at Baileys Harbor, about twenty miles south, had proved effective.[^2]
+
+## Building the light
+
+The Light-House Board asked for the money in its report of 7 January 1890 and repeated the request in the years that followed; its report for the fiscal year ended 30 June 1892 renewed it, saying the range lights and fog signal could be built for $21,000.[^3] A congressional act approved in February 1893 authorised the funds, according to the nomination, and the act approved 2 March 1895 provided the $21,000 for range lights and a steam fog signal on or near Plum Island.[^2][^4] It was then too late in the 1895 season to start.[^1]
+
+Work began in July 1896. The tender *Amaranth* delivered materials, and the Board's report describes the first clearing: about an acre and a half for a camp and range sites, a strip 20 feet wide and 1,600 feet long between the sites of the two lights, a landing dock, and a 367-foot tramway track.[^5] The nomination counts thirty men in camp in July and forty by August, and gives the lane as 1,650 feet.[^2] The keepers' dwelling was a two-story triplex of Cream City brick, 50 by 32 feet, designed by an unnamed Light-House Board engineer; the head keeper and his family had the south half, the first assistant the north half of the ground floor, and the second assistant the floor above.[^2] On the quantity of brick, the Board's report for the year to June 1897 says some 82,000 had been hauled to the building site, while Lighthouse Friends says 164,000 were delivered; the two may count different stages of the work, and the sources do not say.[^5][^1]
+
+The rear tower is a central cast-iron stair cylinder inside a four-legged braced frame, its watch room 8 feet across, with the lens focal plane 80 feet (24 m) above low water.[^6][^2] The nomination notes that its parts were designed to be prefabricated and reassembled on site.[^2] The front light was a two-story wooden tower, square below and octagonal above, nearly identical to the one at Baileys Harbor.[^2]
+
+Lighthouse Friends says Martin Knudsen came from Pilot Island on 17 March 1897 and the lights were first shown on 1 May 1897, fixed red from both towers.[^1] The Board's report confirms the date: range lights and a steam fog signal were "established here on May 1, 1897."[^5] The rear light used a fourth-order Fresnel lens made by Sautter, Lemonnier & Co. of Paris.[^6] Sources disagree about the front light's lens: Lighthouse Friends says sixth order, the National Register nomination fifth order.[^1][^2] The fog signal was a pair of first-class steam sirens; in its first weeks, to the end of the Board's fiscal year on 30 June 1897, it ran some 175 hours, then about 282 hours in the fiscal year to June 1899 and 298 in the year to June 1900.[^5][^7][^8]
+
+## The keepers
+
+The US Lighthouse Society archive lists 93 roster lines for the rear light, running from 1849 to 1964.[^9] Martin N. Knudsen was the first head keeper of the new station (1897 to 1899); Hans J. Hanson, his first assistant, took over in 1899 and stayed until 1905.[^9] Lighthouse Friends says Knudsen was told to hire a laborer of his choice as second assistant and picked George Cornell, a friend from Washington Island, who went on to be keeper at Racine Reef in 1906.[^1] Charles E. Young followed Hanson in 1905, and Joseph Boshka replaced Young in 1907; in 1911 Joseph moved to Holland Harbor, Michigan, and his brother Charles Boshka came from Pottawatomie to take the station until 1925, the longest term of any head keeper there.[^9][^1] After him the roster lists Robert G. Young, Oscar Johnson, William Renier (1929 to 1937) and William C. Kincaide from 1937.[^9]
+
+The station worked a season, not a year. Lighthouse Friends says the Ann Arbor Railroad car ferries between Menominee and Frankfort set its rhythm, with the station typically closed from early January until the first part of April.[^1] A telephone cable was laid from Northport across Death's Door in 1904, and Hanson logged on 20 May: "Communication was had by telephone between Main-Land and Plum today for the first time."[^1]
+
+## After the keepers
+
+Both lights were electrified in 1931, the nomination says, and Lighthouse Friends adds that a compressed-air fog signal replaced the steam sirens that year and a radiobeacon began in 1941.[^2][^1] Lighthouse Friends says that after the Second World War the Coast Guard consolidated its work on the island: the dwelling was boarded up and a crew from the life-saving station on the other side of the island looked after the lights and fog signal.[^1] The nomination also has Coast Guard personnel maintaining the lights while the dwelling was closed, and dates the consolidation to 1942, when the first assistant Irving Carlson left.[^2] The archive lists Coast Guard personnel at the station from the 1950s to 1964.[^9]
+
+The decayed wooden front tower was replaced in 1964 by a steel skeletal one of about 25 feet.[^2] Sources differ on automation: the nomination and the archive say 1969, while Lighthouse Friends places it in the years after the war.[^2][^9][^1] The fog signal was silenced in 1975, and Lighthouse Friends says the Coast Guard left the island in 1991.[^2][^1] In October 2007 the island passed to the US Fish and Wildlife Service as part of the Green Bay National Wildlife Refuge, and the Friends of Plum and Pilot Islands began working with the Service to preserve the historic buildings.[^2][^1]
+
+## Today
+
+The rear light was listed on the National Register of Historic Places in 1984, and the island's life-saving and light station as a whole in 2010.[^2][^10] The original fourth-order lens was still in use when the nomination was written, but Lighthouse Friends says it was removed in 2015, restored and put on display at the Door County Maritime Museum's northern site in Gills Rock.[^2][^1] The Friends report that the final phase of a Rear Range Light restoration finished at the end of August 2024, a project they funded at $178,600.[^11]
+
+The island is a wildlife refuge owned by the US Fish and Wildlife Service, and Lighthouse Friends reports that the grounds, dwelling and tower are closed. The rear light can be seen from the Northport to Washington Island ferry.[^1]
+
+[^1]: Plum Island Rear Range Lighthouse, Wisconsin, Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=641 (accessed 2026-10-27).
+[^2]: National Register of Historic Places Registration Form, Plum Island Life-Saving and Light Station (reference 10000385), National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/10000385.pdf (accessed 2026-10-27).
+[^3]: Annual Report of the Light-House Board, 1892 (volume labelled 1891-1892; fiscal year ended 30 June 1892), Ninth District, "Porte des Morts Ranges" (scan page 501), https://archive.org/details/annualreportlig03statgoog (accessed 2026-10-27).
+[^4]: Annual Report of the Light-House Board, 1895, Ninth District, "Porte des Morts range", https://archive.org/details/annualreportlig00boargoog (accessed 2026-10-27).
+[^5]: Annual Report of the Light-House Board, 1897 (volume labelled 1896-1897), Ninth District, "Plum Island Range" and fog-signal tables, https://archive.org/details/annualreportlig02statgoog (accessed 2026-10-27).
+[^6]: National Register of Historic Places Inventory-Nomination Form, Plum Island Range Rear Light, reference 84003659, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/84003659.pdf (accessed 2026-10-27).
+[^7]: Annual Report of the Light-House Board, 1899, fog-signal table, https://archive.org/details/annualreportlig04statgoog/page/n199/mode/2up (accessed 2026-10-27).
+[^8]: Annual Report of the Light-House Board, 1900, fog-signal table, https://archive.org/details/annualreportlig00statgoog (accessed 2026-10-27).
+[^9]: PLUM ISLAND RANGE REAR, US Lighthouse Society Digital Archive, https://archives.uslhs.org/places/plum-island-range-rear (accessed 2026-10-27).
+[^10]: Plum Island (Front Range Light), Wisconsin Historical Society property record 162647, https://www.wisconsinhistory.org/record/property/HI162647/plum-island (accessed 2026-10-27).
+[^11]: Historic Preservation & Restoration, Friends of Plum and Pilot Islands, https://www.plumandpilot.org/hpr (accessed 2026-10-27).
