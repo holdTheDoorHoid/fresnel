@@ -1,0 +1,15 @@
+Calumet Light is a steel skeletal tower in Columbia Park, at the mouth of Pipe Creek on the east shore of Lake Winnebago, near the town of Pipe, Wisconsin. It was built as a water tower for a Fond du Lac factory. Since it was moved to the harbor in 1936 it has served as an observation tower and a navigation aid.[^1][^2]
+
+Calumet Harbor was small, with a bank of its own and a channel that needed dredging.[^1][^4][^5] In May 1908 the steamer Leander Choate was to make its first excursion "to Calumet Harbor on the east shore of Lake Winnebago," under a special permit from the government inspectors of steamboats.[^3] The State Bank of Calumet Harbor had closed on 12 January.[^4] In July 1931 it was expected to resume business, probably within a month.[^4] In December 1931 citizens and officials of Fond du Lac, Oshkosh, Neenah and Menasha were to put their case for "the channel at Calumet harbor" to War Department engineers, at a hearing in the federal building at Fond du Lac on 2 January 1932.[^5]
+
+LighthouseFriends describes a 75-foot (23 m) light tower that was first a water tower for the Fond du Lac Table Factory.[^1] Friends of the Fox gives its height as 70 feet (21 m).[^2] Neither source gives the year it was first built.[^1][^2] LighthouseFriends says the tower was moved to Calumet Harbor in 1936 and began a second life as an observation tower and navigation aid.[^1]
+
+By the early 1980s the tower's wooden staircase and observation decks had deteriorated to the point where they had to be removed.[^1] In 1992 the Columbia Park Tower Fund and Fond du Lac County restored the tower and opened it for climbing again.[^1][^2] LighthouseFriends says more than $53,000 came from the community, and the county put in $45,000.[^1]
+
+Today the county owns the light, according to LighthouseFriends.[^1] LighthouseFriends lists the grounds and tower as open, and Friends of the Fox lists the light as active.[^1][^2] The sources give no visiting hours, so check with the county before going up.
+
+[^1]: LighthouseFriends, "Calumet Harbor Lighthouse, Wisconsin," lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=579 (accessed 2026-10-28).
+[^2]: Friends of the Fox, "Lighthouse Tour" (entry for Calumet Harbor, by Raymond A. Foss), friendsofthefox.org, https://www.friendsofthefox.org/navigate/lighthouse-tour/ (accessed 2026-10-28).
+[^3]: "First Trip to Calumet Harbor," Watertown Weekly Leader (Watertown, Wis.), 29 May 1908, p. 3, Library of Congress Chronicling America, https://www.loc.gov/resource/sn85040724/1908-05-29/ed-1/?sp=3 (accessed 2026-10-28).
+[^4]: "Will Reopen Bank of Calumet Harbor," The Milwaukee Leader (Milwaukee, Wis.), 23 July 1931, p. 10, Library of Congress Chronicling America, https://www.loc.gov/resource/sn83045293/1931-07-23/ed-1/?sp=10 (accessed 2026-10-28).
+[^5]: "Winnebago Dredging Pleas Will Be Heard," The Milwaukee Leader (Milwaukee, Wis.), 29 December 1931, p. 1, Library of Congress Chronicling America, https://www.loc.gov/resource/sn83045293/1931-12-29/ed-1/?sp=1 (accessed 2026-10-28).

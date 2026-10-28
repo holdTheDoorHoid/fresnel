@@ -1,0 +1,15 @@
+The Baccalieu Island Southwest Point light stands at the southern tip of Baccalieu Island, a protected seabird island about 3.2 km (2 mi) off the Bay de Verde Peninsula in Newfoundland and Labrador.[^1] It is a square skeletal tower with a red and white daymark, lit since 1953 and set beside a fog alarm first operated in 1906.[^1][^3]
+
+Newfoundland's Commissioners of Lighthouses noted the need for a light on the island in 1840.[^1] This story covers only the southwest station. LighthouseFriends says work on a fog alarm there began in 1905, because the top of the island was occasionally shrouded in fog, and that the diaphone fog alarm began operating in August 1906.[^1] In 1964 it was noted that, in fog, the birds' own cries served as an aid to navigation.[^1]
+
+A light was mounted on a wooden pyramidal tower in 1953, according to LighthouseFriends.[^1] The Canadian Coast Guard's list now describes a square skeleton tower 4.3 m high, with the light at a focal height of 53.3 m and a range of 7 nautical miles. It shows one white flash of 1 second in each 4-second period (Fl W 4s).[^3] Rowlett gives a 3.5 m (12 ft) square cylindrical skeletal tower with a flash every ten seconds, the same interval LighthouseFriends gives. The sources do not reconcile that with the Coast Guard's figure.[^1][^2]
+
+LighthouseFriends names William Cranford (1908 to 1911) and then Duncan Blundon (from 1912) as southwest keepers. Ten more names follow: nine without dates, and Linus Walsh last, whose entry ends in 2002.[^1] The north-end list on the same page shares several family names. The sources do not say whether any man served at both stations, so this story does not link the lists.[^1]
+
+The station was de-staffed in 2002, but it still shows its white flash and, when needed, a four-second fog blast each minute.[^1][^2] LighthouseFriends says the Canadian Coast Guard owns the light, and the Lighthouse Directory names the Baccalieu Island Ecological Reserve as site manager. The grounds are open and the tower is closed.[^1][^2]
+
+The island is part of that reserve. LighthouseFriends says landing is possible at two coves, but not in the seabird nesting areas from 1 April to 30 October.[^1] The Lighthouse Directory gives the closure as May through October, and says the island is reachable only by helicopter or by boat in heavy seas.[^2] The light can be seen from Split Point Cove, across Baccalieu Tickle.[^1] Anyone thinking of landing should check the reserve's closure dates first.
+
+[^1]: Lighthouse Friends, "Baccalieu Island Southwest Point Lighthouse, Newfoundland", https://lighthousefriends.com/light.asp?ID=1248 (accessed 2026-10-28).
+[^2]: Rowlett, *The Lighthouse Directory*, Newfoundland and Labrador, "Baccalieu Island Southwest Point (2)", https://www.ibiblio.org/lighthouse/nfle.htm (accessed 2026-10-28).
+[^3]: Canadian Coast Guard, *List of Lights, Buoys and Fog Signals*, Newfoundland and Labrador, entry 473, "Baccalieu Island (Southwest Point) Light Station", https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4717-en.php (accessed 2026-10-28).

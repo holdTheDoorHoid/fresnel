@@ -1,0 +1,218 @@
+{
+  "id": "ca-nb-black-point",
+  "researched": "2026-10-28",
+  "summary": "Canadian Coast Guard light on the northern tip of Lamèque Island, marking the western entrance to Miscou Harbour. A skeleton tower established in 1967.",
+  "facts": {
+    "light": {
+      "first_lit": 1967,
+      "characteristic": "LFl W 6s",
+      "focal_height_m": 18,
+      "range_nm": 12,
+      "lens": {
+        "type": "drum",
+        "order": "4",
+        "status": "in_place"
+      }
+    },
+    "structures": [
+      {
+        "role": "tower",
+        "type": "skeletal",
+        "material": "steel",
+        "built": 1967,
+        "height_m": 17.7,
+        "status": "standing",
+        "note": "LighthouseFriends and the Coast Guard list give 17.7 m (58 ft). Rowlett gives the tower as 16.5 m (54 ft)."
+      }
+    ],
+    "access": {
+      "level": "public",
+      "note": "Grounds open, tower closed (LighthouseFriends; Rowlett). Rowlett says the entrance from NB 313 is not marked."
+    },
+    "visit": {
+      "grounds_open": true,
+      "climbable": false
+    },
+    "agency": "Canadian Coast Guard"
+  },
+  "events": [
+    {
+      "year": 1967,
+      "event": "first_lit",
+      "note": "Established 1967 (LighthouseFriends); Rowlett gives station date 1967.",
+      "cite": [
+        1,
+        2
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": 1,
+      "supports": "tower established 1967",
+      "quote": "was established in 1967"
+    },
+    {
+      "cite": 1,
+      "supports": "northern end of Lamèque Island; western entrance to Miscou Harbour",
+      "quote": "marking the western entrance to Miscou Harbour"
+    },
+    {
+      "cite": 1,
+      "supports": "tower 17.7 m (58 ft) tall",
+      "quote": "The tower is 17.7 m (58 feet) tall"
+    },
+    {
+      "cite": 1,
+      "supports": "yellow light, 4 s on, 2 s off, 2 s on, 2 s off (LighthouseFriends)",
+      "quote": "displays a yellow light that has the following characteristic"
+    },
+    {
+      "cite": 1,
+      "supports": "still equipped with a fourth-order drum lens, called dioptric",
+      "quote": "is still equipped with a fourth-order drum dioptric lens"
+    },
+    {
+      "cite": 1,
+      "supports": "the only skeleton tower of its kind in New Brunswick",
+      "quote": "it is the only one of its kind in New Brunswick"
+    },
+    {
+      "cite": 1,
+      "supports": "owned by the Canadian Coast Guard",
+      "quote": "The lighthouse is owned by the Canadian Coast Guard"
+    },
+    {
+      "cite": 1,
+      "supports": "grounds open, tower closed",
+      "quote": "Grounds open, tower closed"
+    },
+    {
+      "cite": 1,
+      "supports": "route from Route 313",
+      "quote": "make a left onto Route 313"
+    },
+    {
+      "cite": 2,
+      "supports": "station date 1967; focal plane 18 m; yellow light 4 s on, 2 s off, 2 s on, 2 s off (Rowlett)",
+      "quote": "1967. Active; focal plane 18 m (58 ft)"
+    },
+    {
+      "cite": 2,
+      "supports": "focal plane 18 m; yellow light with four-stage pattern (Rowlett)",
+      "quote": "yellow light, 4 s on, 2 s off, 2 s on, 2 s off"
+    },
+    {
+      "cite": 2,
+      "supports": "fourth-order drum-style Fresnel lens in use",
+      "quote": "4th order drum-style Fresnel lens in use"
+    },
+    {
+      "cite": 2,
+      "supports": "tower painted with broad red and white horizontal bands",
+      "quote": "Lighthouse painted with broad red and white horizontal bands"
+    },
+    {
+      "cite": 2,
+      "supports": "owner and site manager Canadian Coast Guard; site open, tower closed",
+      "quote": "Owner/site manager: Canadian Coast Guard"
+    },
+    {
+      "cite": 2,
+      "supports": "site open, tower closed",
+      "quote": "Site open, tower closed"
+    },
+    {
+      "cite": 2,
+      "supports": "entrance from NB 313 not marked",
+      "quote": "The entrance to the light station from NB 313 is not marked"
+    },
+    {
+      "cite": 3,
+      "supports": "CCG list: flash 2 s, eclipse 4 s (LFl W 6s), range 12 nm",
+      "quote": "Flash 2 s; eclipse 4 s."
+    },
+    {
+      "cite": 3,
+      "supports": "skeleton tower with red top, enclosed central portion, red and white daymark",
+      "quote": "Skeleton tower with red top, enclosed central portion, red and white rectangular daymark"
+    },
+    {
+      "cite": 3,
+      "supports": "CCG list position and entry 1275",
+      "quote": "Black Point"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "location",
+      "current": [
+        47.884235,
+        -64.62409
+      ],
+      "proposed": [
+        47.884389,
+        -64.623611
+      ],
+      "cite": [
+        1,
+        3
+      ],
+      "why": "The Canadian Coast Guard List of Lights (entry 1275) gives 47 53 03.8 N, 064 37 25.0 W, and LighthouseFriends gives the same point. The record's OpenStreetMap point is about 40 m away. A reviewer should confirm."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "light.characteristic",
+      "explanation": "The Coast Guard list gives LFl W 6s (white; flash 2 s, eclipse 4 s). LighthouseFriends and Rowlett describe a yellow light showing four seconds on, two off, two on, two off. The record keeps the Coast Guard value. The story gives both and does not choose.",
+      "cite": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "field": "structures.height_m",
+      "explanation": "LighthouseFriends and the Coast Guard list give 17.7 m (58 ft). Rowlett gives 16.5 m (54 ft) for the tower. The record keeps 17.7 m.",
+      "cite": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "field": "lens.type",
+      "explanation": "LighthouseFriends calls the fourth-order drum lens dioptric; Rowlett calls it a drum-style Fresnel lens. The research records 'drum' as the type both sources agree on.",
+      "cite": [
+        1,
+        2
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Black Point Lighthouse, New Brunswick",
+      "publisher": "LighthouseFriends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1225",
+      "accessed": "2026-10-28"
+    },
+    {
+      "n": 2,
+      "title": "Black Point, New Brunswick entry (The Lighthouse Directory)",
+      "publisher": "Russ Rowlett, University of North Carolina at Chapel Hill",
+      "url": "https://www.ibiblio.org/lighthouse/nbn.htm",
+      "accessed": "2026-10-28"
+    },
+    {
+      "n": 3,
+      "title": "List of Lights, Atlantic Coast, Gaspé and Chaleur Bay, entry 1275 (Black Point)",
+      "publisher": "Canadian Coast Guard",
+      "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl11691-en.php",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-28", "claims_checked": 14, "unsupported_removed": 0, "errors_fixed": 1, "atmosphere_fixes": 0, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Thin station: three sources (LighthouseFriends, Rowlett, Canadian Coast Guard List of Lights entry 1275, page dated 2026-07-28) agree on the place, the 1967 date and the tower's height at about 17.7 m. They disagree on colour and flash pattern and on the tower height in Rowlett; the story says so and does not choose. LighthouseFriends photographs are copyright (Kraig Anderson) and were not used; no free photo was checked. Corpus check: the Department of Marine reports for 1900 to 1924 (marine_ca series) were searched for 'Black Point' with 'Miscou' and show no light at Lamèque. That is a negative result from fuzzy OCR search, so the story says only that neither LighthouseFriends nor Rowlett mentions an earlier light. Name collisions in the corpus (Black Point at Saint John harbour, Lake Memphremagog, Nova Scotia) are other places and are not used. One web search (Black Point lighthouse Lamèque Miscou Harbour 1967) turned up only LighthouseFriends, a Flickr photo page quoting Rowlett, and the Miscou Island lead; Miscou Island Light (Birch Point, 1856) is a different station. Not searched: Chronicling America (no Lamèque coverage expected), provincial archives (blocked in DESIGN section 2), Parks Canada. No living people named. Distances and positions: see corrections."
+}
