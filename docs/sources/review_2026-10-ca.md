@@ -232,3 +232,149 @@ stations).
 4. **Unplaced Directory entries**: stay unplaced for now. The drafted note to Russ Rowlett was lost when the
    agent's worktree was removed (`docs/outreach/` is git-ignored); it will be re-drafted with the other outreach
    notes for the owner to send.
+
+## 10. Duplicate audit (2026-10-27)
+
+Story batches write a long history for each station, so a light split across two stations gets two histories.
+This pass looked for such splits: a name scan (same province, names equal once the kind words are dropped and
+Saint is folded to St.), a looser scan (also dropping Old / New, within 15 km), the report's 3 Canadian possible
+duplicates and 28 close namesakes, and a check of every display name for words that are not a light's name. The
+US side of the same audit is in `docs/sources/review_2026-10-us.md` ("Duplicate audit").
+
+Rulings applied (DESIGN 3.2):
+
+- **A range is one station**, also when its halves are kilometres apart because one tower was moved to private land
+  or a park (Grant Beach, Wallace Harbour, Stokes Bay, Miminegash, L'Ardoise, Summerside, Calvaire). The moved tower
+  stays a structure with its own position. This does not touch answer 3 above: the positions are not corrected here.
+- **A tower moved away from its station is a structure of that station**, not a station of its own (the 1902 Pelee
+  Passage tower at Windsor, the old Cape Tryon tower, the Northport back range light, Oakville's old lighthouse).
+- **Two Wikidata items for one light** (Cap de Rabast, Bon-Désir, Belle Isle South End Lower) are one station.
+- The id kept is the one with a published story, else the one in a story batch now (Leards Range and Belle Isle South
+  End Lower keep their `-2` ids for that reason), else the one with more sources.
+
+Every decision is an entry with its reason in `data/curation_ca.json`.
+
+**Merged** (`merge_stations`; the retired id stays on disk with `merged_into`):
+
+| Pair | Evidence | Decision |
+|---|---|---|
+| ca-nb-grant-beach-range-rear -> ca-nb-grant-beach-range-front (7.8 km) | Grant Beach Range (Miramichi, towers of 1903, inactive since 1972): the front and the rear of one range (DESIGN 3.2). Lighthouse Friends' points are 7.8 km apart because the towers were moved to private land (the front by its owners in 1986). | merged into `ca-nb-grant-beach-range-front` |
+| ca-nl-belle-isle-south-end-lower -> ca-nl-belle-isle-south-end-lower-2 (1.4 km) | Two Wikidata-era stations for the one Belle Isle South End Lower light: Wikidata's item carries Heritage Lighthouse 14933, the number of the Parks Canada record in the other station, 1.4 km from the Coast Guard's N234. The kept id is in a story batch. | merged into `ca-nl-belle-isle-south-end-lower-2` |
+| ca-ns-pictou-island-south-2 -> ca-ns-pictou-island-south (0 m) | Pictou Island South (the 1907 wharf light, Heritage Lighthouse 14894): Lighthouse Friends 1642, OpenStreetMap's way and Rowlett's entry made a second station 1.3 km from the first, whose pin was Wikidata's point at the island's west end. The storied id keeps the South light; the west-end records are detached to a station of their own. | merged into `ca-ns-pictou-island-south` |
+| ca-ns-sydney-range-front -> ca-ns-sydney-range (0 m) | Sydney Range: the front (Lighthouse Friends 1648, OpenStreetMap, Rowlett's 2010 replica of the 1905 tower at Dixon Point) and the rear (Lighthouse Friends 1649, Rowlett's old and 2024 rears) of one range, 770 m apart (DESIGN 3.2). | merged into `ca-ns-sydney-range` |
+| ca-ns-sydney-front-range -> ca-ns-sydney-range (1.8 km) | Wikidata's 'Sydney front range light' (a replica, 1.8 km from Lighthouse Friends' front) is the same front light; no source has a second Sydney front range. | merged into `ca-ns-sydney-range` |
+| ca-ns-wallace-harbour-range-rear -> ca-ns-wallace-harbour-front-range (13.4 km) | Wallace Harbour Range (1904): the rear tower was sold in 1994 and moved in 1995 to Malagash Point as a summer home (Lighthouse Friends 1005), 13 km from the front; one range, one station (the storied front's id). | merged into `ca-ns-wallace-harbour-front-range` |
+| ca-on-pelee-passage-2 -> ca-on-pelee-passage (61.2 km) | Pelee Passage: the 1902 tower, replaced on the passage in 1975 (Rowlett), now stands at Lakeview Park Marina, Windsor (Lighthouse Friends 1040). One station, its old tower relocated. | merged into `ca-on-pelee-passage` |
+| ca-on-stokes-bay-range-rear -> ca-on-stokes-bay-range-front (52.5 km) | Stokes Bay Range: the 1904 rear tower was flown out by helicopter in 2009 when a new rear was built (Lighthouse Friends 1595), so the sources place it 52 km from the front; one range. | merged into `ca-on-stokes-bay-range-front` |
+| ca-pe-brighton-beach-range-rear -> ca-pe-brighton-beach-range-front (398 m) | Brighton Beach Range: front (storied id) and rear, 400 m apart, with Wikidata's item for the pair (DESIGN 3.2). | merged into `ca-pe-brighton-beach-range-front` |
+| ca-pe-leards-range -> ca-pe-leards-range-2 (878 m) | Leards Range: the front (Wikidata 'Leards Range Front Lighthouse', Lighthouse Friends 970, Rowlett's Victoria Harbour, OpenStreetMap's 'Victoria Range Light') and the rear (OpenStreetMap's 'Leards Back Range Light', Lighthouse Friends 971, Rowlett's rear, Wikidata's item for the pair), 880 m apart. The kept id is in a story batch. | merged into `ca-pe-leards-range-2` |
+| ca-pe-malpeque-harbour-approach-range-rear -> ca-pe-malpeque-harbour-approach-range (1.0 km) | Malpeque Harbour Approach Range: Lighthouse Friends' rear (937, on Fish Island) is the rear light of the range whose station holds Wikidata's item and the OpenStreetMap rear node, 1 km away; one range. | merged into `ca-pe-malpeque-harbour-approach-range` |
+| ca-pe-malpeque-outer-range-2 -> ca-pe-malpeque-outer-range (0 m) | Malpeque Outer Range (Darnley Point, towers of 1922): two stations 590 m apart hold its two lights; OpenStreetMap and Lighthouse Friends label front and rear the other way round, but they are the two halves of one range. | merged into `ca-pe-malpeque-outer-range` |
+| ca-pe-miminegash-range-rear -> ca-pe-miminegash-range (18.4 km) | Miminegash Range: the old wooden rear tower was moved to a private cottage near Kildare (Lighthouse Friends 948), 18 km away; one range. | merged into `ca-pe-miminegash-range` |
+| ca-pe-former-northport-back-range -> ca-pe-northport-range (307 m) | Northport Range: the 'Former Northport Back Range Light' (1897, moved to private land, Lighthouse Friends 991), Wikidata's item for the range and Lighthouse Friends' and Rowlett's rear are the storied station's range. | merged into `ca-pe-northport-range` |
+| ca-pe-summerside-outer-range-rear -> ca-pe-summerside-outer-range-front (430 m) | Summerside Outer Range: front and rear, 430 m apart, with Wikidata's item for the pair (DESIGN 3.2). | merged into `ca-pe-summerside-outer-range-front` |
+| ca-qc-calvaire-cap-charles-front-range -> ca-qc-calvaire-cap-charles-range (0 m) | Calvaire (Cap Charles) Range: the 1915 front tower was moved by Deschaillons in the 1980s to a rest area at the village's western entrance (Lighthouse Friends 1478), 3.6 km from the range; one station. | merged into `ca-qc-calvaire-cap-charles-range` |
+| ca-qc-soulanges-canal-upper-entrance-range-rear -> ca-qc-soulanges-canal-upper-entrance-range-front (489 m) | Soulanges Canal Upper Entrance Range (1902-1960): front and rear, 490 m apart (DESIGN 3.2). | merged into `ca-qc-soulanges-canal-upper-entrance-range-front` |
+| ca-ns-lardoise-harbor-front -> ca-ns-lardoise-range (0 m) | L'Ardoise range (Lower L'Ardoise, 1909, inactive about 1970): Lighthouse Friends' front (private, 4.2 km away) and the station holding Wikidata's item and the rear; one range. | merged into `ca-ns-lardoise-range` |
+| ca-ns-pugwash-old -> ca-ns-old-pugwash (1.3 km) | Pugwash (Fishing Point): the 1871 tower (Lighthouse Friends 'Pugwash (Old)', destroyed 2018) and the 1962 tower (Wikidata, Lighthouse Friends 'Pugwash', demolished 2023), 1.3 km apart on the same point under one name; successive towers of one station. | merged into `ca-ns-old-pugwash` |
+| ca-pe-murray-harbour-back-range -> ca-pe-murray-harbour-range (1.4 km) | Murray Harbour Range: Wikidata's 'Murray Harbour Back Range Light', the Coast Guard's rear (A965) and Rowlett's rear are the rear the storied station already holds through Lighthouse Friends 956. | merged into `ca-pe-murray-harbour-range` |
+| ca-pe-cape-tryon-old -> ca-pe-cape-tryon (3.9 km) | Cape Tryon: the 1905 tower, retired in 1969 when the present tower was built, was moved to private land 3.9 km away (Lighthouse Friends 'Cape Tryon (Old)'); one station, the storied id. | merged into `ca-pe-cape-tryon` |
+| ca-qc-cap-de-rabast -> ca-qc-pointe-nord (1.4 km) | Cap de Rabast (Pointe-Nord, Anticosti): Wikidata has two items, 'Cap-de-Rabast Lighthouse' (a rounded point) and 'Phare de Pointe-Nord'; OpenStreetMap, Lighthouse Friends, the Coast Guard (A1515.2) and Rowlett all describe one light. | merged into `ca-qc-pointe-nord` |
+| ca-nl-flat-rock -> ca-nl-horse-chops (0 m) | The Coast Guard's 'Flat Rock Fog Signal Station' (N463, Admiralty H522) is 80 m from Horse Chops; OpenStreetMap's Horse Chops element carries H522 and Rowlett gives Horse Chops (fog signal) N463. The fog signal station is a structure of the Horse Chops light station (the first review had left it apart). | merged into `ca-nl-horse-chops` |
+| ca-qc-cap-de-bon-desir -> ca-qc-bon-desir (250 m) | Bon-Désir: Wikidata has two items, 'Cap-de-Bon-Désir Lighthouse' (rounded point, 250 m) and 'Phare de Bon-Désir'; Lighthouse Friends, the Coast Guard (A1755) and Rowlett describe one light. | merged into `ca-qc-bon-desir` |
+| ca-on-port-dalhousie-range-rear -> ca-on-port-dalhousie-outer-range (461 m) | Port Dalhousie Range: Wikidata's 'Outer' and 'Inner' range lighthouses are the front and rear that Lighthouse Friends, OpenStreetMap and Rowlett call Range Front and Rear, 460 m apart; one range. | merged into `ca-on-port-dalhousie-outer-range` |
+| ca-pe-summerside-range-front -> ca-pe-summerside-back-range (0 m) | Summerside Range: Lighthouse Friends' and Rowlett's front (private, inactive) is the front of the range whose rear is Wikidata's 'Summerside Back Range Light' (Coast Guard A1022); one range. | merged into `ca-pe-summerside-back-range` |
+| ca-on-old -> ca-on-oakville (397 m) | Wikidata's 'Old Lighthouse' at Lakeside Park, Oakville, is the 1889 Oakville harbour lighthouse moved off the pier; one station with the present Oakville light. | merged into `ca-on-oakville` |
+
+**Records moved without retiring an id.** Pictou Island: Wikidata's item for the South (wharf) light, Heritage
+Lighthouse 14894, has the coordinates of the island's west end, so the first build filed the west-end records
+(OpenStreetMap's "Pictou Island West End Lighthouse", Lighthouse Friends' "Pictou Island West", the Coast Guard's A897,
+Rowlett's West End) under the South station and its pin sat at the west end; Lighthouse Friends' South (1642) made a
+second South station. `detach` takes the four west-end records out of `ca-ns-pictou-island-south` (they make the
+new station `ca-ns-pictou-island-west`), `apart` keeps them off Wikidata's item, and `merge_stations` brings the second South
+station into the storied id, whose story is about the 1907 wharf light. Algernon Rock: Rowlett's "Roche à Veillon" was
+filed under Pilier-de-Pierre by name; `detach` and `join` send it to Lighthouse Friends' Algernon Rock.
+
+**Status.** The merged Sydney Range took `replica` from its 2010 front tower; `pipeline/record_joins.py` sets it
+back to `active` (`STATUS_PICKS`: curation has no status entry), with a note that the front is a replica.
+
+**Code.** The OpenStreetMap `wikidata=` tag path of the matcher ignored `detach` and `apart`, so the west-end element,
+which carries the South light's Wikidata tag, went back to the South station; it now respects them like every other
+path (`merge.py`, test `test_detach_and_apart_hold_against_an_osm_wikidata_tag`).
+
+**Renamed** (`rename`; ids unchanged):
+
+| Station | Name shown | Why |
+|---|---|---|
+| ca-ns-old-pugwash | Pugwash | With the 1871 tower's station merged in, Lighthouse Friends' 'Pugwash (Old)' won the name; the station is the Pugwash light (Lighthouse Friends, Rowlett). |
+| ca-ns-sydney-range | Sydney Range Lights | The merged range's name came out as 'Sydney range Lights' (from Wikidata's 'Sydney front range light'). |
+| ca-ns-wallace-harbour-front-range | Wallace Harbour Range Lights | The station now holds the range's front (the sector light) and its moved rear; the merged name came out as 'Wallace Harbour range Lights'. |
+| ca-pe-northport-range | Northport Range Lights | With the former back range light merged in, Wikidata's 'Former Northport Back Range Light' won the name; the station is the Northport range, as its story says. |
+| ca-qc-calvaire-cap-charles-range | Calvaire (Cap Charles) Range | With the moved 1915 front merged in, its Lighthouse Friends name 'Calvaire (Cap Charles) Front Range' won; the station is the range (Lighthouse Friends 1732, the Coast Guard's A2019-A2020). |
+| ca-nb-grant-beach-range-front | Grant Beach Range Lights | The station now holds the range's front and rear. |
+| ca-on-stokes-bay-range-front | Stokes Bay Range Lights | The station now holds the range's front and rear. |
+| ca-pe-summerside-outer-range-front | Summerside Outer Range Lights | The station now holds the range's front and rear; Wikidata's item for the pair is 'Summerside Outer Range Lights'. |
+| ca-qc-soulanges-canal-upper-entrance-range-front | Soulanges Canal Upper Entrance Range Lights | The station now holds the range's front and rear. |
+| ca-on-port-dalhousie-outer-range | Port Dalhousie Range Lights | The station now holds the range's front and rear. |
+| ca-pe-summerside-back-range | Summerside Range Lights | The station now holds the range's front and rear. |
+| ca-qc-pointe-nord | Cap-de-Rabast Lighthouse | OpenStreetMap, Lighthouse Friends, the Coast Guard (A1515.2) and Rowlett call the light Cap de Rabast; 'Phare de Pointe-Nord' is a second Wikidata label for the place. |
+| ca-bc-sand-heads | Sand Heads Lighthouse | Wikidata's French label 'phare de Sand Heads' won the name; OpenStreetMap calls it Sand Heads Lighthouse, Lighthouse Friends, the Coast Guard and Rowlett Sand Heads. |
+| ca-pe-wood-islands-range | Wood Islands Lighthouse | Wikidata's French labels produced 'phare de Wood Islands Range Lights'; the station is the 1876 Wood Islands lighthouse with its two range towers (Wikidata 'Wood Islands Lighthouse', Lighthouse Friends, the Coast Guard), as its story calls it. |
+| ca-qc-cap-a-lest | Cap à l'Est | Wikidata's lower-case label 'phare de Cap-à-l'Est' won the name; Lighthouse Friends, the Coast Guard (A1798) and Rowlett call it Cap à l'Est. |
+| ca-qc-la-pointe-duthie | Pointe Duthie | Wikidata's lower-case label 'phare de la Pointe Duthie'; Lighthouse Friends and Rowlett call it Pointe Duthie. |
+| ca-qc-lile-aux-ufs | Île aux Oeufs | Wikidata's lower-case label; Lighthouse Friends and Rowlett call it Île aux Oeufs (Egg Island). |
+| ca-qc-lile-du-grand-caoui | Île du Grand Caouis | Wikidata's lower-case label; Lighthouse Friends and Rowlett call it Île du Grand Caouis. |
+| ca-qc-lile-sainte-marie | Île Sainte-Marie | Wikidata's lower-case label; Lighthouse Friends, the Coast Guard (A1562) and Rowlett call it Île Sainte-Marie. |
+| ca-qc-vercheres-village-alignement-anterieur-feu-range | Verchères Village Range Lights | OpenStreetMap's Coast Guard text fragment ('Verchères, village – alignement antérieur, feu') won the name; Lighthouse Friends, the Coast Guard (A2319, A2320) and Rowlett call the pair Verchères Village Range. |
+| ca-on-dr-robertson-woods | Niagara River Range Front | OpenStreetMap's name for the building ('Dr. Robertson-Woods') won the name; Lighthouse Friends, the Coast Guard (I549) and Rowlett call the light Niagara River Range Front. |
+| ca-on-lighthouse-lighthouse-cove | Thames River Lighthouse | Wikidata's label 'Lighthouse/Lighthouse Cove' is the place, not the light; OpenStreetMap calls it Thames River Lighthouse, Lighthouse Friends and Rowlett Thames River Range Rear. |
+| ca-on-port-burwell-marine-museum-and-historic | Port Burwell Lighthouse | Wikidata's label names the museum ('Port Burwell Marine Museum and Historic Lighthouse'); its alias, Lighthouse Friends and Rowlett call the light Port Burwell. |
+| ca-nl-keppel-island-lighthouse-old | Keppel Island Lighthouse | OpenStreetMap's name for the old building ('Keppel Island Lighthouse (old)') won the station's name; the station is the Keppel Island light station (Coast Guard N208, Lighthouse Friends, Rowlett). |
+
+**Kept apart** (the report's possible duplicates and close namesakes, now each with a `NOT_DUPLICATES` entry in
+`pipeline/record_joins.py`, which is what the report reads for both countries; the name scan's other pairs are listed
+for the record):
+
+| Pair | Why |
+|---|---|
+| ca-on-bustard-rocks / ca-on-bustard-rocks-range | Separate Lighthouse Friends pages (the lighthouse and the range), 89 m apart; records already apart in the curation. |
+| ca-mb-red-river-range / ca-mb-black-bear-island | Separate pages in every source, 40 m apart; records already apart in the curation. |
+| ca-ns-terence-bay / ca-ns-pennant-harbour | Two lights 5.8 km apart (Coast Guard A498 and A501). |
+| ca-ns-maugher-beach / ca-ns-mcnabs-island | Maugher Beach lighthouse and the McNabs Island range light (A528), 1.3 km apart. |
+| ca-nb-beacon / ca-nb-saint-john-harbour | The 1828 Saint John Harbour Beacon and the Saint John Harbour range front, 2.6 km apart. |
+| ca-nb-quaco-head / ca-nb-st-martins | Quaco Head lighthouse and the 1983 St. Martins replica in the village, 4 km apart. |
+| ca-ns-cranberry-island / ca-ns-canso-harbour | Cranberry Island lighthouse and the Hart Island range at Canso, 5.3 km apart. |
+| ca-ns-pictou-island-south / ca-ns-pictou-island-east-end | The South (wharf) light and the East End light, 7 km apart. |
+| ca-ns-pictou-island-west / ca-ns-pictou-island-east-end | The west-end light (a station of its own after this audit) and the East End light, 7 km apart. |
+| ca-qc-route-louiseville-downstream / ca-qc-route-louiseville-upstream | Two ranges (downstream and upstream, Coast Guard A2143 and A2144), 1.9 km apart. |
+| ca-qc-grondines-upper-range / ca-qc-pointe-des-grondines-range | Two ranges (Upper, A2025-A2026; lower, A2023-A2024), 4.4 km apart. |
+| ca-qc-saint-antoine-course-range / ca-qc-saint-antoine-traverse-range | Two ranges sharing one light (Rowlett: 'Traverse Range Front/Course Range Rear'), separate Lighthouse Friends pages. |
+| ca-qc-algernon-rock-roche-a-veillon / ca-qc-pilier-de-pierre | Algernon Rock and Pilier-de-Pierre, 580 m apart; Rowlett's Roche à Veillon entry moves to Algernon Rock. |
+| ca-nl-baccalieu-island-lighthouse-southwest-point / ca-nl-baccalieu-island-lighthouse-north-point | The two lights at the ends of Baccalieu Island, 4.8 km apart. |
+| ca-nl-squarry-island / ca-nl-cape-bonavista | Squarry Island and Cape Bonavista, 6.3 km apart. |
+| ca-qc-anse-a-valleau / ca-qc-pointe-a-la-renommee | The 1975 Anse-à-Valleau light and the Pointe-à-la-Renommée lighthouse it replaced, 3.9 km apart: a new site with its own name. |
+| ca-mb-winnipeg-beach / ca-mb-winnipeg-beach-breakwater | The 1910 lighthouse (2017 replica) and the 2001 breakwater light, 330 m apart. |
+| ca-nl-belle-isle-south-end-upper / ca-nl-belle-isle-south-end-lower-2 | The upper and the lower lights at Belle Isle's south end. |
+| ca-qc-dorval / ca-qc-dorval-2 | The Dorval course range front and Lighthouse Friends' lost Dorval light, 1.8 km apart. |
+| ca-nb-oak-point / ca-nb-oak-point-range-front | Oak Point (Saint John River) and Oak Point Range Front (Miramichi), 178 km apart. |
+| ca-nl-green-island / ca-nl-green-island-2 | Green Island (Catalina) and Green Island (Fortune Bay), 290 km apart. |
+| ca-nl-long-point / ca-nl-long-point-2 | Long Point (Twillingate) and Long Point (Port au Port), 305 km apart. |
+| ca-ns-green-island / ca-ns-green-island-2 | Green Island (Cape Breton) and Green Island (Chebogue Point), 460 km apart. |
+| ca-ns-louisbourg / ca-ns-louisbourg-range | Louisbourg lighthouse and the Louisbourg range, 2.5 km apart. |
+| ca-ns-wedge-island / ca-ns-wedge-island-2 | Two Wedge Islands 118 km apart. |
+| ca-on-pointe-aux-pins / ca-on-pointe-aux-pins-2 | Pointe aux Pins on Lake Erie and Pointe aux Pins near Sault Ste. Marie, 512 km apart; at the latter, the main light (lost) and the range are separate Lighthouse Friends pages. |
+| ca-qc-sainte-croix / ca-qc-sainte-croix-range | Sainte-Croix lighthouse and the Sainte-Croix range, 2.4 km apart. |
+
+**Left for the owner.** Wright's Range (`ca-pe-wrights-range`, the front, and `ca-pe-wrights-back-range`, 690 m apart)
+is one range by DESIGN 3.2, but both stations have a published story. `ca-pe-leards-range-2` and
+`ca-nl-belle-isle-south-end-lower-2`, ids in the running story batch, keep their ids and now hold the merged records.
+
+**After the audit** (local merge of 2026-10-28): **1,168 Canadian stations shown** (1,194 before): 27 ids retired with
+`merged_into` (43 in all), one new station (`ca-ns-pictou-island-west`). `data/curation_ca.json` gained 27
+`merge_stations`, 24 `rename`, 5 `detach`, 4 `apart` and 1 `join` entries. The report's 3 Canadian possible duplicates
+and 28 close namesakes are now 0. A second run writes nothing.
+
+**Pins that moved with a merge.** A range's pin stands on its front light (DESIGN 3.9). Where the front tower was moved
+away, the merged station's pin is now on it: Calvaire (the 1915 front at the Deschaillons rest area, 3.6 km from the
+active range), Summerside Range (Lighthouse Friends' private front, 3.9 km) and L'Ardoise (the private front, 4.2 km).
+Curation has no way to set a position aside; these are listed for the owner.

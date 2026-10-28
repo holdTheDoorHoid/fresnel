@@ -4,6 +4,7 @@
   "other_names": [
     "Waukegan Harbor Lighthouse",
     "Waukegan Harbor",
+    "Waukegan Harbor Pierhead",
     "Waukegan North Pierhead Light"
   ],
   "country": "US",
@@ -34,7 +35,7 @@
     }
   ],
   "light": {
-    "first_lit": 1905,
+    "first_lit": 1899,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc G 4s",
@@ -54,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -76,6 +77,18 @@
       "event": "built",
       "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1899,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1905,
@@ -137,6 +150,11 @@
       "label": "Lighthouse Directory: Illinois",
       "url": "https://www.ibiblio.org/lighthouse/il.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Waukegan Harbor Pierhead",
+      "url": "https://archives.uslhs.org/places/waukegan-harbor-pierhead",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -149,7 +167,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -193,6 +210,16 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8428",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:42.36064,-87.81340",
       "part": "wikidata:Q7975147",
@@ -212,5 +239,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

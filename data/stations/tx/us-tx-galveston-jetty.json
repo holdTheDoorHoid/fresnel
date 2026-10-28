@@ -6,27 +6,27 @@
   "region": "TX",
   "county": "Galveston",
   "water": null,
-  "setting": "pier",
-  "kind": "pier_light",
+  "setting": null,
+  "kind": "lighthouse",
   "location": {
-    "lat": 29.59583,
-    "lon": -95.29283,
+    "lat": 29.32785,
+    "lon": -94.69274,
     "precision": "approximate",
-    "from": "uslhs"
+    "from": "lighthousefriends"
   },
-  "status": "inactive",
+  "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": "brick",
-      "built": 1918,
-      "height_m": 25.6,
-      "status": "standing",
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
       "note": null,
-      "from": "uslhs"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
@@ -85,6 +85,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Galveston Jetty",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=154",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Galveston Jetty",
       "url": "https://archives.uslhs.org/places/galveston-jetty",
       "kind": "reference"
@@ -92,19 +97,25 @@
   ],
   "sources": [
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:154",
+      "part": "lighthousefriends:154",
+      "fields": [
+        "kind",
+        "location",
+        "name",
+        "region"
+      ]
+    },
+    {
       "source": "uslhs",
       "key": "uslhs:3516",
-      "part": "uslhs:3516",
+      "part": "station",
       "fields": [
         "access",
         "county",
         "events",
-        "kind",
-        "light",
-        "location",
-        "name",
-        "region",
-        "structures"
+        "light"
       ]
     }
   ],
@@ -113,5 +124,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

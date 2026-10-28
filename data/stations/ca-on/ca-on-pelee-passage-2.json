@@ -1,12 +1,8 @@
 {
   "id": "ca-on-pelee-passage-2",
   "name": "Pelee Passage",
-  "other_names": [],
   "country": "CA",
   "region": "ON",
-  "county": null,
-  "water": null,
-  "setting": null,
   "kind": "lighthouse",
   "location": {
     "lat": 42.339304,
@@ -15,138 +11,10 @@
     "from": "osm"
   },
   "status": "inactive",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "tower",
-      "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "osm"
-    }
-  ],
-  "light": {
-    "first_lit": null,
-    "deactivated": 1975,
-    "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "rowlett"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-  },
-  "agency": "City of Windsor",
-  "ownership": "local",
-  "access": {
-    "level": "unknown",
-    "note": null
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": true,
-    "climbable": false,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1902,
-      "event": "built",
-      "note": "Year of the tower described by the Lighthouse Directory",
-      "from": "rowlett"
-    },
-    {
-      "year": 1975,
-      "event": "deactivated",
-      "note": null,
-      "from": "rowlett"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/2168223302",
-      "kind": "osm"
-    },
-    {
-      "label": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/way/168957710",
-      "kind": "osm"
-    },
-    {
-      "label": "Lighthouse Friends",
-      "url": "https://www.lighthousefriends.com/light.asp?ID=1040",
-      "kind": "reference"
-    },
-    {
-      "label": "Lighthouse Directory (Rowlett)",
-      "url": "https://www.ibiblio.org/lighthouse/onsw.htm",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "osm",
-      "key": "osm:node/2168223302",
-      "part": "lighthousefriends:1040",
-      "fields": [
-        "kind",
-        "location",
-        "region"
-      ]
-    },
-    {
-      "source": "osm",
-      "key": "osm:way/168957710",
-      "part": "lighthousefriends:1040",
-      "fields": []
-    },
-    {
-      "source": "lighthousefriends",
-      "key": "lighthousefriends:1040",
-      "part": "lighthousefriends:1040",
-      "fields": [
-        "name"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:onsw:pelee-passage-2",
-      "part": "station",
-      "fields": [
-        "agency",
-        "events",
-        "light",
-        "ownership",
-        "visit"
-      ]
-    }
-  ],
-  "conflicts": [],
+  "sources": [],
   "verification": "facts",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into ca-on-pelee-passage: the same station",
+  "merged_into": "ca-on-pelee-passage",
+  "updated": "2026-10-28"
 }

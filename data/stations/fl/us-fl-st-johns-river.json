@@ -40,7 +40,7 @@
     "deactivated": 1929,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 23.5,
     "range_nm": null,
     "fog_signal": null,
     "from": "rowlett"
@@ -65,11 +65,11 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Navy",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -81,7 +81,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -103,6 +103,12 @@
       "event": "built",
       "note": "Tower 3 (Rowlett's Lighthouse Directory)",
       "from": "osm"
+    },
+    {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1929,
@@ -178,6 +184,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: St. Johns River",
+      "url": "https://archives.uslhs.org/places/st-johns-river",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/77842291",
       "kind": "register"
@@ -228,12 +239,32 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2787",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:76002237",
       "part": "wikidata:Q7589019",
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:st-johns-river",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -242,5 +273,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -33,7 +33,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1908,
     "deactivated": 1951,
     "lens": null,
     "characteristic": "F R",
@@ -52,31 +52,37 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": {
     "type": "rental",
     "provider": null,
-    "url": null,
+    "url": "http://www.thelighthousegcm.com/",
     "season": null,
-    "checked": null,
-    "note": "LighthouseFriends marks overnight lodging here; it does not say whether this is a rental, a bed and breakfast or a hostel. Check with the operator."
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a vacation rental. Confirm availability and rules with the operator."
   },
   "events": [
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1910,
       "event": "built",
@@ -144,6 +150,16 @@
       "label": "Lighthouse Directory: California: North",
       "url": "https://www.ibiblio.org/lighthouse/ca.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Carquinez Strait",
+      "url": "https://archives.uslhs.org/places/carquinez-strait",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/california",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -169,7 +185,6 @@
       "part": "wikidata:Q5045947",
       "fields": [
         "location",
-        "stay",
         "visit"
       ]
     },
@@ -180,27 +195,39 @@
       "fields": [
         "events"
       ]
-    }
-  ],
-  "conflicts": [
+    },
     {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1963
-        },
-        {
-          "source": "wikidata",
-          "value": 1951
-        }
-      ],
-      "note": "A source gives the light's service entry (1963) after its retirement (1951); it may have been relit. Neither is shown as the first lighting."
+      "source": "uslhs",
+      "key": "uslhs:2704",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:carquinez-strait",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:ca:carquinez-strait-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
+      ]
     }
   ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

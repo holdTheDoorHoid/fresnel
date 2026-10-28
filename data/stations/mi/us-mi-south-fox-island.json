@@ -6,6 +6,7 @@
     "Old South Fox Island Lighthouse",
     "South Fox Island",
     "South Fox Island Old",
+    "South Fox Island New",
     "South Fox Island Light Station"
   ],
   "country": "US",
@@ -90,7 +91,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": {
@@ -98,14 +99,14 @@
     "provider": null,
     "url": null,
     "season": null,
-    "checked": null,
-    "note": "LighthouseFriends lists a volunteer keeper program here. Check with the host organisation for dates and requirements."
+    "checked": "2026-10-21",
+    "note": "Listed by the US Lighthouse Society as a volunteer host keeper program. Confirm availability and rules with the operator."
   },
   "events": [
     {
       "year": 1867,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
@@ -117,20 +118,26 @@
     {
       "year": 1934,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
       "year": 1934,
       "event": "deactivated",
-      "note": "Discontinued (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1959,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1969,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 2021,
@@ -194,8 +201,23 @@
       "kind": "reference"
     },
     {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: South Fox Island Old",
       "url": "https://archives.uslhs.org/places/south-fox-island-old",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: South Fox Island New",
+      "url": "https://archives.uslhs.org/places/south-fox-island-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society: lighthouse accommodations",
+      "url": "https://uslhs.org/travel/lighthouse-accommodations/michigan",
       "kind": "reference"
     }
   ],
@@ -236,8 +258,15 @@
       "key": "lighthousefriends:204",
       "part": "wikidata:Q7567310",
       "fields": [
-        "stay",
         "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:minwl:south-fox-island-1",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     },
     {
@@ -252,12 +281,36 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:9235",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:100006861",
       "part": "station",
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:south-fox-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stay:mi:south-fox-island-lighthouse",
+      "part": "station",
+      "fields": [
+        "stay"
       ]
     }
   ],
@@ -268,6 +321,10 @@
         {
           "source": "wikidata",
           "value": 1959
+        },
+        {
+          "source": "rowlett",
+          "value": 1934
         },
         {
           "source": "uslhs",
@@ -281,5 +338,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

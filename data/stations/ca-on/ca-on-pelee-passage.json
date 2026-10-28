@@ -21,7 +21,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Pelee Passage",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 42.339304,
+        "lon": -82.930888
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Pelee Passage",
       "type": null,
       "material": null,
       "built": null,
@@ -71,6 +86,12 @@
   "events": [
     {
       "year": 1902,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1902,
       "event": "first_lit",
       "note": "Station established",
       "from": "rowlett"
@@ -79,6 +100,12 @@
       "year": 1975,
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1975,
+      "event": "deactivated",
+      "note": null,
       "from": "rowlett"
     }
   ],
@@ -90,6 +117,21 @@
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1614392740",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/2168223302",
+      "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/168957710",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1040",
+      "kind": "reference"
     },
     {
       "label": "Lighthouse Friends",
@@ -118,6 +160,24 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/2168223302",
+      "part": "lighthousefriends:1040",
+      "fields": []
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/168957710",
+      "part": "lighthousefriends:1040",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1040",
+      "part": "lighthousefriends:1040",
+      "fields": []
     },
     {
       "source": "lighthousefriends",
@@ -149,12 +209,40 @@
         "ownership",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onsw:pelee-passage-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

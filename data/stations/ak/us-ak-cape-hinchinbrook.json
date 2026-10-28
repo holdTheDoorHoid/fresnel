@@ -92,7 +92,9 @@
     {
       "register": "NRHP",
       "number": "05000728",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000728"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/05000728",
+      "listed": "2005-07-29",
+      "nomination": "https://catalog.archives.gov/id/75325207"
     }
   ],
   "aton": {
@@ -161,7 +163,7 @@
     {
       "year": 2005,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -253,6 +255,11 @@
       "label": "US Lighthouse Society Digital Archive: Cape Hinchinbrook",
       "url": "https://archives.uslhs.org/places/cape-hinchinbrook",
       "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325207",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -358,6 +365,15 @@
       ]
     },
     {
+      "source": "nrhp",
+      "key": "nrhp:05000728",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:60.23750,-146.64656",
       "part": "wikidata:Q2268547",
@@ -371,5 +387,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

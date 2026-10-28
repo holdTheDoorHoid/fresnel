@@ -23,7 +23,22 @@
   "structures": [
     {
       "role": "rear_range",
-      "name": null,
+      "name": "Malpeque Harbour Approach Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 46.58482,
+        "lon": -63.7298
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Malpeque Harbour Approach Range Lights",
       "type": null,
       "material": null,
       "built": null,
@@ -66,7 +81,7 @@
     "climbable": null,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": "The Lighthouse Directory says the site is closed to visitors."
   },
@@ -121,6 +136,11 @@
       "kind": "osm"
     },
     {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=937",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory (Rowlett)",
       "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
       "kind": "reference"
@@ -149,6 +169,14 @@
       "fields": [
         "light",
         "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:937",
+      "part": "lighthousefriends:937",
+      "fields": [
+        "visit"
       ]
     },
     {
@@ -198,5 +226,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

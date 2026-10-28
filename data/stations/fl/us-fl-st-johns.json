@@ -58,15 +58,15 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "U.S. Navy",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1967"
   },
   "visit": {
     "grounds_open": null,
@@ -88,8 +88,14 @@
     {
       "year": 1954,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1967,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2018,
@@ -162,6 +168,11 @@
       "label": "Lighthouse Directory: Florida: East Coast",
       "url": "https://www.ibiblio.org/lighthouse/fl.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: St. Johns",
+      "url": "https://archives.uslhs.org/places/st-johns",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -219,6 +230,17 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:41509",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "ownership"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:100002224",
       "part": "wikidata:Q7589013",
@@ -241,5 +263,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

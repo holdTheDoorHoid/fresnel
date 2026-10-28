@@ -32,14 +32,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1833,
     "deactivated": 1874,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 18.3,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -70,9 +70,15 @@
   "stay": null,
   "events": [
     {
+      "year": 1833,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1874,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -110,6 +116,11 @@
       "label": "LighthouseFriends: East Rigolets",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1808",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: East Rigolets",
+      "url": "https://archives.uslhs.org/places/east-rigolets",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -133,6 +144,15 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8440",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
@@ -140,5 +160,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

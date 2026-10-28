@@ -1,15 +1,14 @@
 {
   "id": "us-de-reedy-island-range-rear-2",
-  "name": "Reedy Island Range Rear",
+  "name": "Old Reedy Island Light",
   "other_names": [
-    "Old Reedy Island",
     "Reedy Island Old Range Rear",
-    "Reedy Island Old",
-    "Old Reedy Island Light"
+    "Old Reedy Island",
+    "Reedy Island Old"
   ],
   "country": "US",
   "region": "DE",
-  "county": "New Castle",
+  "county": null,
   "water": null,
   "setting": null,
   "kind": "range_lights",
@@ -53,15 +52,15 @@
       }
     },
     {
-      "role": "rear_range",
+      "role": "tower",
       "name": "Old Reedy Island",
-      "type": "skeletal",
-      "material": "cast_iron",
-      "built": 1904,
-      "height_m": 31.1,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
       "status": "lost",
       "note": null,
-      "from": "uslhs"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
@@ -85,7 +84,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+    "note": null
   },
   "staffing": {
     "status": "unknown",
@@ -107,18 +106,6 @@
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
-    },
-    {
-      "year": 1904,
-      "event": "first_lit",
-      "note": "Station established (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1910,
-      "event": "lens_installed",
-      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -128,11 +115,6 @@
     {
       "label": "LighthouseFriends: Old Reedy Island",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1888",
-      "kind": "reference"
-    },
-    {
-      "label": "US Lighthouse Society Digital Archive: Reedy Island Range Rear",
-      "url": "https://archives.uslhs.org/places/reedy-island-range-rear",
       "kind": "reference"
     },
     {
@@ -166,24 +148,13 @@
     },
     {
       "source": "uslhs",
-      "key": "uslhs:2762",
-      "part": "lighthousefriends:1888",
-      "fields": [
-        "access",
-        "county",
-        "events",
-        "kind",
-        "name",
-        "structures"
-      ]
-    },
-    {
-      "source": "uslhs",
       "key": "uslhs:33276",
       "part": "uslhs:33276",
       "fields": [
         "events",
+        "kind",
         "light",
+        "name",
         "structures"
       ]
     },
@@ -209,5 +180,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -35,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1911,
     "deactivated": 1951,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 22.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
@@ -62,15 +62,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": true,
     "museum": null,
     "tours": null,
@@ -81,10 +81,22 @@
   "stay": null,
   "events": [
     {
+      "year": 1911,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1912,
       "event": "built",
       "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1912,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1951,
@@ -154,6 +166,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Punta Gorda",
+      "url": "https://archives.uslhs.org/places/punta-gorda",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/123858784",
       "kind": "register"
@@ -202,6 +219,17 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2727",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:76000483",
       "part": "station",
@@ -216,5 +244,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -2,6 +2,7 @@
   "id": "us-mi-ecorse-range",
   "name": "Ecorse Range Lights",
   "other_names": [
+    "Ecorse",
     "Ecorse Range Front",
     "Ecorse Range Rear"
   ],
@@ -44,6 +45,21 @@
       "location": {
         "lat": 42.24183,
         "lon": -83.12483
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Ecorse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 42.246667,
+        "lon": -83.130833
       }
     }
   ],
@@ -97,6 +113,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Ecorse",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1996",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Ecorse Range Front",
       "url": "https://archives.uslhs.org/places/ecorse-range-front",
       "kind": "reference"
@@ -109,6 +130,14 @@
   ],
   "sources": [
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1996",
+      "part": "lighthousefriends:1996",
+      "fields": [
+        "region"
+      ]
+    },
+    {
       "source": "uslhs",
       "key": "uslhs:8533",
       "part": "uslhs:8533",
@@ -117,7 +146,6 @@
         "kind",
         "light",
         "location",
-        "region",
         "structures"
       ]
     },
@@ -135,5 +163,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

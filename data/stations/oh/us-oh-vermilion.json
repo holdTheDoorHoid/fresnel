@@ -6,6 +6,7 @@
     "Vermilion Museum Lighthouse",
     "Vermilion",
     "Vermilion (Replica)",
+    "Vermilion Pierhead",
     "Vermillion"
   ],
   "country": "US",
@@ -25,7 +26,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Vermilion Pierhead",
+      "type": null,
+      "material": null,
+      "built": 1847,
+      "height_m": 6.1,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 41.43333,
+        "lon": -82.34083
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Vermilion Light",
       "type": null,
       "material": null,
       "built": 1877,
@@ -159,6 +175,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Vermilion Pierhead",
+      "url": "https://archives.uslhs.org/places/vermilion-pierhead",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Vermilion (Replica)",
       "url": "https://archives.uslhs.org/places/vermilion-replica",
       "kind": "reference"
@@ -210,12 +231,19 @@
     },
     {
       "source": "uslhs",
-      "key": "uslhs:9953",
-      "part": "wikidata:Q14716840",
+      "key": "uslhs:34241",
+      "part": "uslhs:34241",
       "fields": [
         "events",
-        "light"
+        "light",
+        "structures"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9953",
+      "part": "wikidata:Q14716840",
+      "fields": []
     },
     {
       "source": "enc",
@@ -234,25 +262,10 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1992
-        },
-        {
-          "source": "uslhs",
-          "value": 1847
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

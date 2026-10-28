@@ -1,7 +1,8 @@
 {
   "id": "us-wi-racine-harbor-lighthouse-and-life-saving",
-  "name": "Racine Harbor Lighthouse and Life Saving Station",
+  "name": "Racine Harbor Lighthouse",
   "other_names": [
+    "Racine Harbor Lighthouse and Life Saving Station",
     "Root River light",
     "Racine Harbor",
     "Root River",
@@ -59,7 +60,7 @@
   ],
   "aton": {
     "uscg_llnr": "7-20500",
-    "arlhs": null,
+    "arlhs": "USA-683",
     "ccg_list_number": null,
     "nga": null
   },
@@ -67,7 +68,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -93,8 +94,8 @@
     {
       "year": 1839,
       "event": "first_lit",
-      "note": "Station established (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1858,
@@ -104,9 +105,33 @@
     },
     {
       "year": 1865,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1865,
       "event": "deactivated",
       "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
+    },
+    {
+      "year": 1866,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1866,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1901,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 1903,
@@ -172,6 +197,16 @@
       "kind": "reference"
     },
     {
+      "label": "Lighthouse Directory: Wisconsin",
+      "url": "https://www.ibiblio.org/lighthouse/wi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Racine Harbor",
+      "url": "https://archives.uslhs.org/places/racine-harbor",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Racine (Root River)",
       "url": "https://archives.uslhs.org/places/racine-root-river",
       "kind": "reference"
@@ -207,6 +242,16 @@
       "key": "lighthousefriends:643",
       "part": "wikidata:Q16948352",
       "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:wi:racine-harbor-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
     },
     {
       "source": "uscg_light_list",
@@ -246,6 +291,15 @@
       "key": "uscg_light_list:7-20585",
       "part": "station",
       "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:35833",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
     },
     {
       "source": "uslhs",
@@ -295,6 +349,10 @@
           "value": 1903
         },
         {
+          "source": "rowlett",
+          "value": 1901
+        },
+        {
           "source": "uslhs",
           "value": 1865
         }
@@ -306,5 +364,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

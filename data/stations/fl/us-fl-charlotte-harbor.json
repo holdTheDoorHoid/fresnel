@@ -38,7 +38,7 @@
     "deactivated": 1943,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -74,13 +74,19 @@
     {
       "year": 1890,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1943,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -123,6 +129,11 @@
       "label": "LighthouseFriends: Charlotte Harbor (Cape Haze)",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1834",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Charlotte Harbor",
+      "url": "https://archives.uslhs.org/places/charlotte-harbor",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -147,6 +158,15 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8404",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
@@ -154,5 +174,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

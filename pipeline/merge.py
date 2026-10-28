@@ -6,7 +6,8 @@ Rules (the same as Firefinder's where they apply; DESIGN.md 3.5 has the full tex
 
 - **Never deletes.** A station file keeps its id forever. A station whose records all vanish from
   the extracts is kept as it is. Two stations found to be one keep both ids: one is retired with
-  `merged_into` and the site redirects its address.
+  `merged_into` and the site redirects its address. An id retired into a station that is retired later
+  follows it (its `merged_into` names the station that holds the records).
 - **Ids are permanent** (`<country>-<region>-<slug>`); new ones are numbered -2, -3 in a fixed
   order (region, slug, north to south, first key), so a run from scratch gives the same ids.
 - **Memory.** Every source key a station holds (`sources[].key`, with the structure it describes
@@ -953,6 +954,12 @@ class Matcher:
                     continue
             if rec.wikidata_tag:
                 st = self.station_of_key.get(f"wikidata:{rec.wikidata_tag}")
+                # curation (data/curation_ca.json) holds here too: an element tagged with the item of a station it was
+                # detached from, or kept apart from, is matched like any other record (Pictou Island's west-end light
+                # is tagged with the South light's item)
+                if st is not None and (self.ca_curation.barred(rec.key, st)
+                                       or self.ca_curation.kept_apart(rec.key, merge_ca.station_keys(st))):
+                    st = None
                 if st is not None and rec.has_point:
                     d = st.min_dist(rec.lat, rec.lon)
                     if d <= R_WIKIDATA_TAG and (st.country() in (None, rec.country)):
@@ -1964,6 +1971,22 @@ def run(sources_dir: Path, stations_dir: Path, report_path: Path | None, today: 
     for gone, keep in m.retired:
         path = gone.path or (stations_dir / regions.station_dir(gone.id) / f"{gone.id}.json")
         outputs.append((path, dump(retired_record(gone.existing, keep.id, today))))
+    # An id retired into a station that has since been retired too (now or by an earlier run) points at the station
+    # that holds the records, so every old address still redirects to a station that is shown.
+    retired_into = {gone.id: keep.id for gone, keep in m.retired}
+    for st in m.stations:
+        if st.id and (st.existing or {}).get("merged_into"):
+            retired_into.setdefault(st.id, st.existing["merged_into"])
+    for st in m.stations:
+        first = (st.existing or {}).get("merged_into")
+        if not first or not st.path:
+            continue
+        into, seen = first, {st.id}
+        while into in retired_into and into not in seen:
+            seen.add(into)
+            into = retired_into[into]
+        if into != first:
+            outputs.append((st.path, dump(retired_record(st.existing, into, today))))
     if write:
         for path, text in outputs:
             path.parent.mkdir(parents=True, exist_ok=True)

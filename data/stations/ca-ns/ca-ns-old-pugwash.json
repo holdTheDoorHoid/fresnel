@@ -2,6 +2,7 @@
   "id": "ca-ns-old-pugwash",
   "name": "Pugwash",
   "other_names": [
+    "Pugwash (Old)",
     "Old Pugwash lighthouse",
     "Old Pugwash Lighthouse",
     "Fishing Point"
@@ -23,7 +24,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Pugwash (Old)",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 45.8622,
+        "lon": -63.6668
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Old Pugwash lighthouse",
       "type": null,
       "material": "wood",
       "built": null,
@@ -35,7 +51,7 @@
   ],
   "light": {
     "first_lit": null,
-    "deactivated": 2012,
+    "deactivated": 1962,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
@@ -46,15 +62,15 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN419",
+    "arlhs": "CAN611",
     "ccg_list_number": "A926",
     "nga": "8508",
     "admiralty": "H1290"
   },
-  "agency": "Canadian Coast Guard",
-  "ownership": "federal",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -62,16 +78,22 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": true,
+    "grounds_open": false,
     "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
+    {
+      "year": 1871,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
     {
       "year": 1962,
       "event": "built",
@@ -79,8 +101,20 @@
       "from": "rowlett"
     },
     {
+      "year": 1962,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
       "year": 2012,
       "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 2018,
+      "event": "destroyed",
       "note": null,
       "from": "rowlett"
     },
@@ -122,6 +156,11 @@
     },
     {
       "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1001",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1002",
       "kind": "reference"
     },
@@ -153,15 +192,22 @@
     },
     {
       "source": "lighthousefriends",
-      "key": "lighthousefriends:1002",
-      "part": "wikidata:Q28375829",
+      "key": "lighthousefriends:1001",
+      "part": "lighthousefriends:1001",
       "fields": [
-        "name"
+        "name",
+        "visit"
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1002",
+      "part": "wikidata:Q28375829",
+      "fields": []
+    },
+    {
       "source": "rowlett",
-      "key": "rowlett:nsnw:pugwash-2",
+      "key": "rowlett:nsnw:pugwash",
       "part": "station",
       "fields": [
         "agency",
@@ -169,6 +215,16 @@
         "events",
         "light",
         "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsnw:pugwash-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
         "visit"
       ]
     }
@@ -193,5 +249,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

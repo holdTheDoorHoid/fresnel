@@ -37,7 +37,7 @@
     "deactivated": 1933,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 10.7,
     "range_nm": null,
     "fog_signal": null,
     "from": "rowlett"
@@ -49,23 +49,23 @@
     "ccg_list_number": null,
     "nga": null
   },
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "SHELBURNE MUSEUM",
+  "ownership": "nonprofit",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,6 +81,12 @@
       "event": "first_lit",
       "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1933,
@@ -133,6 +139,11 @@
       "label": "Lighthouse Directory: Vermont",
       "url": "https://www.ibiblio.org/lighthouse/vt.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Colchester Reef",
+      "url": "https://archives.uslhs.org/places/colchester-reef",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -183,6 +194,27 @@
         "events",
         "light"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3534",
+      "part": "station",
+      "fields": [
+        "access",
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:vt:colchester-reef",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -190,5 +222,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

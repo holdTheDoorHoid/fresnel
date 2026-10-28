@@ -1,15 +1,8 @@
 {
   "id": "us-ca-table-bluff-2",
   "name": "Table Bluff Light",
-  "other_names": [
-    "Table Bluff Lighthouse",
-    "Table Bluff"
-  ],
   "country": "US",
   "region": "CA",
-  "county": "Humboldt",
-  "water": null,
-  "setting": null,
   "kind": "lighthouse",
   "location": {
     "lat": 40.6958,
@@ -18,176 +11,10 @@
     "from": "wikidata"
   },
   "status": "inactive",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "tower",
-      "name": null,
-      "type": "integral",
-      "material": "wood",
-      "built": 1892,
-      "height_m": 11.0,
-      "status": "standing",
-      "note": null,
-      "from": "wikidata"
-    }
-  ],
-  "light": {
-    "first_lit": 1892,
-    "deactivated": 1961,
-    "lens": null,
-    "characteristic": null,
-    "focal_height_m": 14.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "uslhs"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": "USA832H",
-    "ccg_list_number": null,
-    "nga": null
-  },
-  "agency": null,
-  "ownership": "unknown",
-  "access": {
-    "level": "unknown",
-    "note": "The US Lighthouse Society's archive lists it as not open to the public."
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": null,
-    "climbable": null,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1892,
-      "event": "built",
-      "note": null,
-      "from": "wikidata"
-    },
-    {
-      "year": 1892,
-      "event": "first_lit",
-      "note": "Station established (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1892,
-      "event": "lens_installed",
-      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1961,
-      "event": "deactivated",
-      "note": "Discontinued (US Lighthouse Society Digital Archive)",
-      "from": "wikidata"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [
-    {
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/USCGtablebluffWith.JPG",
-      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/USCGtablebluffWith.JPG?width=640",
-      "source_url": "https://commons.wikimedia.org/wiki/File:USCGtablebluffWith.JPG",
-      "credit": "Wikimedia Commons",
-      "license": null,
-      "caption": null,
-      "year": null
-    }
-  ],
-  "links": [
-    {
-      "label": "Wikidata",
-      "url": "https://www.wikidata.org/wiki/Q7673128",
-      "kind": "wikidata"
-    },
-    {
-      "label": "Wikipedia",
-      "url": "https://en.wikipedia.org/wiki/Table_Bluff_Light",
-      "kind": "wikipedia"
-    },
-    {
-      "label": "Wikipédia (français)",
-      "url": "https://fr.wikipedia.org/wiki/Phare_de_Table_Bluff",
-      "kind": "wikipedia"
-    },
-    {
-      "label": "Wikimedia Commons category",
-      "url": "https://commons.wikimedia.org/wiki/Category:Table_Bluff_Light",
-      "kind": "commons"
-    },
-    {
-      "label": "ARLHS World List of Lights USA832H",
-      "url": "https://wlol.arlhs.com/lighthouse/USA832H.html",
-      "kind": "register"
-    },
-    {
-      "label": "US Lighthouse Society Digital Archive: Table Bluff",
-      "url": "https://archives.uslhs.org/places/table-bluff",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "wikidata",
-      "key": "wikidata:Q7673128",
-      "part": "wikidata:Q7673128",
-      "fields": [
-        "aton",
-        "county",
-        "events",
-        "kind",
-        "light",
-        "location",
-        "name",
-        "photos",
-        "region",
-        "structures"
-      ]
-    },
-    {
-      "source": "uslhs",
-      "key": "uslhs:2731",
-      "part": "wikidata:Q7673128",
-      "fields": [
-        "access",
-        "events",
-        "light"
-      ]
-    }
-  ],
-  "conflicts": [
-    {
-      "field": "light.focal_height_m",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 14.0
-        },
-        {
-          "source": "uslhs",
-          "value": 53.64
-        }
-      ],
-      "note": "Sources differ by more than 3 m."
-    }
-  ],
+  "sources": [],
   "verification": "facts",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into us-ca-table-bluff: the same station",
+  "merged_into": "us-ca-table-bluff",
+  "updated": "2026-10-28"
 }

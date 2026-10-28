@@ -3,7 +3,8 @@
   "name": "Cape Mendocino Light",
   "other_names": [
     "Cape Mendocino Lighthouse",
-    "Cape Mendocino"
+    "Cape Mendocino",
+    "original site"
   ],
   "country": "US",
   "region": "CA",
@@ -12,13 +13,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 40.4399,
-    "lon": -124.406,
+    "lat": 40.022367,
+    "lon": -124.069466,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "inactive",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "The 1868 tower was moved in 1998-99 from the cape to Mal Coombs Park, Shelter Cove, 54 km south; a modern light marked the cape until 2013.",
   "structures": [
     {
       "role": "tower",
@@ -65,7 +66,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -73,20 +74,26 @@
     {
       "year": 1868,
       "event": "built",
-      "note": null,
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
     },
     {
       "year": 1868,
       "event": "first_lit",
-      "note": "Station established (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1951,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1951,
       "event": "deactivated",
-      "note": "Discontinued (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2013,
@@ -135,6 +142,21 @@
       "kind": "register"
     },
     {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/940995632",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape Mendocino",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=25",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: California: North",
+      "url": "https://www.ibiblio.org/lighthouse/ca.htm",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Cape Mendocino",
       "url": "https://archives.uslhs.org/places/cape-mendocino",
       "kind": "reference"
@@ -151,7 +173,6 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
@@ -159,13 +180,50 @@
       ]
     },
     {
+      "source": "osm",
+      "key": "osm:way/940995632",
+      "part": "wikidata:Q5034946",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:25",
+      "part": "wikidata:Q5034946",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:cape-mendocino-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ca:cape-mendocino-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "uslhs",
       "key": "uslhs:2703",
       "part": "wikidata:Q5034946",
       "fields": [
-        "access",
-        "events",
-        "light"
+        "access"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:cape-mendocino",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -178,16 +236,48 @@
           "value": 2013
         },
         {
+          "source": "rowlett",
+          "value": 1951
+        },
+        {
           "source": "uslhs",
           "value": 1951
         }
       ],
       "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            40.4399,
+            -124.406
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            40.02237,
+            -124.06947
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            40.02236,
+            -124.06946
+          ]
+        }
+      ],
+      "distance_m": 54513,
+      "note": "Sources place this structure more than 500 m apart."
     }
   ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

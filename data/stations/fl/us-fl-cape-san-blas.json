@@ -25,13 +25,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": null,
-      "material": null,
+      "type": "skeletal",
+      "material": "cast_iron",
       "built": 1848,
-      "height_m": null,
+      "height_m": 27.4,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "uslhs"
     }
   ],
   "light": {
@@ -62,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -74,7 +74,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -90,6 +90,18 @@
       "event": "built",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1849,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1859,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1885,
@@ -169,6 +181,11 @@
       "label": "Lighthouse Directory: Florida: West Coast",
       "url": "https://www.ibiblio.org/lighthouse/flw.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Cape San Blas",
+      "url": "https://archives.uslhs.org/places/cape-san-blas",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -215,6 +232,16 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2769",
+      "part": "wikidata:Q5035030",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:15000208",
       "part": "wikidata:Q5035030",
@@ -222,12 +249,35 @@
         "events",
         "registers"
       ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:cape-san-blas",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1885
+        },
+        {
+          "source": "uslhs",
+          "value": 1849
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

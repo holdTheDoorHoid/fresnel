@@ -1,15 +1,8 @@
 {
   "id": "ca-nl-flat-rock",
   "name": "Flat Rock",
-  "other_names": [
-    "Horse Chops",
-    "fog signal"
-  ],
   "country": "CA",
   "region": "NL",
-  "county": null,
-  "water": null,
-  "setting": null,
   "kind": "lighthouse",
   "location": {
     "lat": 48.349444,
@@ -18,118 +11,10 @@
     "from": "ccg_list_of_lights"
   },
   "status": "active",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "tower",
-      "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "ccg_list_of_lights"
-    }
-  ],
-  "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": "horn",
-    "from": null
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": "N463",
-    "nga": "1692",
-    "admiralty": "H522"
-  },
-  "agency": "Canadian Coast Guard",
-  "ownership": "federal",
-  "access": {
-    "level": "unknown",
-    "note": null
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": null,
-    "climbable": null,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "Canadian Coast Guard List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Trinity Bay",
-      "url": "https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl4501-en.php",
-      "kind": "reference"
-    },
-    {
-      "label": "Lighthouse Directory (Rowlett)",
-      "url": "https://www.ibiblio.org/lighthouse/nfle.htm",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "ccg_list_of_lights",
-      "key": "ccg_list_of_lights:N463",
-      "part": "ccg_list_of_lights:N463",
-      "fields": [
-        "aton",
-        "light",
-        "location",
-        "name",
-        "region"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:nfle:horse-chops",
-      "part": "station",
-      "fields": [
-        "agency",
-        "aton",
-        "kind",
-        "ownership"
-      ]
-    }
-  ],
-  "conflicts": [
-    {
-      "field": "status",
-      "values": [
-        {
-          "source": "ccg_list_of_lights",
-          "value": "active"
-        },
-        {
-          "source": "rowlett",
-          "value": "inactive"
-        }
-      ],
-      "note": "Sources differ on whether the light is still lit."
-    }
-  ],
+  "sources": [],
   "verification": "unverified",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into ca-nl-horse-chops: the same station",
+  "merged_into": "ca-nl-horse-chops",
+  "updated": "2026-10-28"
 }

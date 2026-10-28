@@ -2,11 +2,12 @@
   "id": "ca-on-oakville",
   "name": "Oakville Lighthouse",
   "other_names": [
+    "Old Lighthouse",
     "Oakville"
   ],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Regional Municipality of Halton",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -21,7 +22,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Old Lighthouse",
+      "type": null,
+      "material": null,
+      "built": 1889,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 43.441427,
+        "lon": -79.669484
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Oakville Lighthouse",
       "type": null,
       "material": null,
       "built": null,
@@ -41,7 +57,13 @@
     "fog_signal": null,
     "from": "ccg_list_of_lights"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "designated heritage property (part IV)",
+      "number": null,
+      "url": null
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN632",
@@ -78,20 +100,31 @@
     {
       "year": 1889,
       "event": "built",
-      "note": "Year of the tower described by the Lighthouse Directory",
-      "from": "rowlett"
+      "note": null,
+      "from": "wikidata"
     },
     {
       "year": 1960,
       "event": "deactivated",
       "note": null,
       "from": "rowlett"
+    },
+    {
+      "year": 1991,
+      "event": "heritage_designated",
+      "note": "designated heritage property (part IV)",
+      "from": "wikidata"
     }
   ],
   "keepers_count": null,
   "related": [],
   "photos": [],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q138505962",
+      "kind": "wikidata"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/300473594",
@@ -115,14 +148,25 @@
   ],
   "sources": [
     {
+      "source": "wikidata",
+      "key": "wikidata:Q138505962",
+      "part": "wikidata:Q138505962",
+      "fields": [
+        "county",
+        "events",
+        "kind",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/300473594",
       "part": "osm:node/300473594",
       "fields": [
-        "kind",
         "location",
-        "name",
-        "region"
+        "name"
       ]
     },
     {
@@ -176,5 +220,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

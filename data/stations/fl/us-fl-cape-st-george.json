@@ -3,8 +3,10 @@
   "name": "Cape St. George Light",
   "other_names": [
     "Cape St. George Lighthouse",
+    "Cape Saint George Light",
     "Cape St. George",
-    "rebuilt"
+    "rebuilt",
+    "St. George Lighthouse"
   ],
   "country": "US",
   "region": "FL",
@@ -13,13 +15,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.587556,
-    "lon": -85.047033,
+    "lat": 29.663026,
+    "lon": -84.862702,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "osm"
   },
-  "status": "inactive",
-  "status_note": null,
+  "status": "active",
+  "status_note": "The 1852 tower on Cape St. George toppled into the Gulf on 21 October 2005; it was rebuilt in 2007-08 in the town of St. George Island, 20 km north-east, and shows a light again (Light List 4-75).",
   "structures": [
     {
       "role": "tower",
@@ -35,13 +37,13 @@
   ],
   "light": {
     "first_lit": 1833,
-    "deactivated": 1994,
+    "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 23.0,
+    "focal_height_m": 23.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "enc"
   },
   "registers": [
     {
@@ -70,11 +72,11 @@
   },
   "visit": {
     "grounds_open": true,
-    "climbable": null,
+    "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -167,6 +169,16 @@
       "kind": "register"
     },
     {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/319963532",
+      "kind": "osm"
+    },
+    {
+      "label": "LighthouseFriends: Cape St. George",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=592",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory: Florida: West Coast",
       "url": "https://www.ibiblio.org/lighthouse/flw.htm",
       "kind": "reference"
@@ -192,13 +204,27 @@
         "county",
         "events",
         "kind",
-        "light",
-        "location",
         "name",
         "photos",
         "region",
         "registers",
         "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/319963532",
+      "part": "wikidata:Q5035066",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:592",
+      "part": "wikidata:Q5035066",
+      "fields": [
+        "visit"
       ]
     },
     {
@@ -208,6 +234,12 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-75",
+      "part": "wikidata:Q5035066",
+      "fields": []
     },
     {
       "source": "uslhs",
@@ -229,9 +261,39 @@
         "events",
         "registers"
       ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:29.66294,-84.86287",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:fl:cape-st-george",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "light.characteristic",
+      "values": [
+        {
+          "source": "osm",
+          "value": "Fl Y"
+        },
+        {
+          "source": "wikidata",
+          "value": "Fl W 6s"
+        }
+      ],
+      "note": "Sources give different characteristics (often an old one beside the current one, or a sector)."
+    },
     {
       "field": "first_year",
       "values": [
@@ -245,11 +307,39 @@
         }
       ],
       "note": "Sources give different first years (often the first tower against the present one)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            29.58756,
+            -85.04703
+          ]
+        },
+        {
+          "source": "osm",
+          "value": [
+            29.66303,
+            -84.8627
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            29.66316,
+            -84.86284
+          ]
+        }
+      ],
+      "distance_m": 19695,
+      "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

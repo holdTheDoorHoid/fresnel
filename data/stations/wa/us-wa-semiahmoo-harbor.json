@@ -3,6 +3,7 @@
   "name": "Semiahmoo Harbor Light",
   "other_names": [
     "Semiahmoo Harbor Lighthouse",
+    "Semiahmoo",
     "Semiahmoo Harbor",
     "Semiahmoo Bay Light 4"
   ],
@@ -23,7 +24,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Semiahmoo Harbor Light",
       "type": null,
       "material": "wood",
       "built": 1905,
@@ -31,6 +32,21 @@
       "status": "lost",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Semiahmoo",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 48.996029,
+        "lon": -122.783375
+      }
     }
   ],
   "light": {
@@ -126,6 +142,11 @@
       "kind": "commons"
     },
     {
+      "label": "LighthouseFriends: Semiahmoo",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1783",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Semiahmoo Harbor",
       "url": "https://archives.uslhs.org/places/semiahmoo-harbor",
       "kind": "reference"
@@ -146,6 +167,12 @@
         "region",
         "structures"
       ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1783",
+      "part": "lighthousefriends:1783",
+      "fields": []
     },
     {
       "source": "uscg_light_list",
@@ -178,5 +205,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

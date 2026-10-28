@@ -9,10 +9,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 29.353,
-    "lon": -91.21717,
+    "lat": 29.219558,
+    "lon": -91.129228,
     "precision": "approximate",
-    "from": "uslhs"
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -20,13 +20,13 @@
     {
       "role": "tower",
       "name": null,
-      "type": "integral",
-      "material": "wood",
-      "built": 1904,
-      "height_m": 14.4,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
       "status": "lost",
       "note": null,
-      "from": "uslhs"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
@@ -97,6 +97,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Oyster Bayou",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1811",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Oyster Bayou",
       "url": "https://archives.uslhs.org/places/oyster-bayou",
       "kind": "reference"
@@ -104,17 +109,23 @@
   ],
   "sources": [
     {
-      "source": "uslhs",
-      "key": "uslhs:8444",
-      "part": "uslhs:8444",
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1811",
+      "part": "lighthousefriends:1811",
       "fields": [
-        "events",
         "kind",
-        "light",
         "location",
         "name",
-        "region",
-        "structures"
+        "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8444",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
       ]
     }
   ],
@@ -123,5 +134,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

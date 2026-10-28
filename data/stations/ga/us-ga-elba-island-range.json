@@ -1,7 +1,9 @@
 {
   "id": "us-ga-elba-island-range",
   "name": "Elba Island Range",
-  "other_names": [],
+  "other_names": [
+    "Elba Island"
+  ],
   "country": "US",
   "region": "GA",
   "county": null,
@@ -30,14 +32,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1905,
     "deactivated": null,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 5.5,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -50,7 +52,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,7 +68,14 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -74,6 +83,11 @@
     {
       "label": "LighthouseFriends: Elba Island Range",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1853",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Elba Island",
+      "url": "https://archives.uslhs.org/places/elba-island",
       "kind": "reference"
     }
   ],
@@ -88,6 +102,16 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8411",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
@@ -95,5 +119,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

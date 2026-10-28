@@ -1,10 +1,13 @@
 {
   "id": "ca-ns-wallace-harbour-front-range",
-  "name": "Wallace Harbour front range light",
+  "name": "Wallace Harbour Range Lights",
   "other_names": [
+    "Wallace Harbour range Lights",
+    "Wallace Harbour front range light",
     "phare de Wallace Harbour, Feu à secteurs",
     "Wallace Harbour Sector Lighthouse",
     "Wallace Harbour Sector (Range Front)",
+    "Wallace Harbour Range Rear",
     "Wallace Harbour Sector",
     "Wallace Harbor Range Front"
   ],
@@ -25,7 +28,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Wallace Harbour front range light",
       "type": "wood_frame",
       "material": "wood",
       "built": 1904,
@@ -33,6 +36,21 @@
       "status": "standing",
       "note": null,
       "from": "parks_canada_hl"
+    },
+    {
+      "role": "rear_range",
+      "name": "Wallace Harbour Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 45.80888,
+        "lon": -63.28977
+      }
     }
   ],
   "light": {
@@ -59,15 +77,15 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN518",
+    "arlhs": "CAN604",
     "ccg_list_number": "A924",
     "nga": "8554",
     "admiralty": "H1283"
   },
-  "agency": "Wallace Area Development Association",
-  "ownership": "nonprofit",
+  "agency": "private",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -75,13 +93,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": true,
+    "grounds_open": false,
     "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
@@ -89,6 +107,12 @@
       "year": 1904,
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "deactivated",
+      "note": null,
       "from": "rowlett"
     },
     {
@@ -138,6 +162,11 @@
       "kind": "reference"
     },
     {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1005",
+      "kind": "reference"
+    },
+    {
       "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Northumberland Strait - East",
       "url": "https://www.notmar.gc.ca/publications/list-lights/atl/atl8832-en.php",
       "kind": "reference"
@@ -157,7 +186,6 @@
         "county",
         "events",
         "kind",
-        "name",
         "photos",
         "region",
         "registers",
@@ -187,6 +215,14 @@
       "fields": []
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1005",
+      "part": "lighthousefriends:1005",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
       "source": "ccg_list_of_lights",
       "key": "ccg_list_of_lights:A924",
       "part": "wikidata:Q28375865",
@@ -197,7 +233,7 @@
     },
     {
       "source": "rowlett",
-      "key": "rowlett:nsnw:wallace-harbour-sector",
+      "key": "rowlett:nsnw:wallace-harbour-range-rear",
       "part": "station",
       "fields": [
         "agency",
@@ -206,12 +242,40 @@
         "ownership",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nsnw:wallace-harbour-sector",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    }
+  ],
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -28,6 +28,8 @@ Decisions recorded in `pipeline/record_joins.py`:
 | Successive lights linked (`SUCCESSION`) | 7 |
 | Reviewed and kept visible (`KEEP_VISIBLE`) | 12 |
 
+The duplicate audit of 2026-10-27 added to these (section "Duplicate audit" below).
+
 ## The three rulings (DESIGN 3.2)
 
 - **Twin lights are one station with two structures.** Navesink Twin Lights (NJ) and Cape Ann Light Station (Thacher Island, MA) were two stations each in the first build; Cape Elizabeth (ME) was already one. The towers are the station's structures, with one set of keepers and one register entry.
@@ -372,6 +374,234 @@ By status: active 556, inactive 319, lost 363, replica 39, ruins 5, unknown 150.
 | rowlett | 1697 | 970 | 82 | 645 | 0 |
 | uslhs_passport | 679 | 553 | 11 | 115 | 0 |
 | territories | 22 | 15 | 7 | 0 | 4 |
+
+## Duplicate audit (2026-10-27)
+
+Story batches write a long history for each station, so a light split across two stations gets two histories and a
+junk display name opens a story with a wrong name. This pass looked for both across every shown station:
+
+- a name scan (same country and region, names equal once Light, Lighthouse, Range, Front, Rear, The, Of, De, La, Le,
+  Du and Phare are dropped and Saint is folded to St.): 118 groups, 248 ids;
+- a looser scan (also dropping Old, New, Original, years, Harbor, Pier, Beacon; within 15 km): 112 more pairs, most of
+  them a light beside its life-saving station;
+- the report's lists (US: none open; Canada's are in `review_2026-10-ca.md`, section 10);
+- every display name, for house, owner, building and park names, coordinates, labels in the wrong language and
+  sentence fragments.
+
+Each group was decided on the records' own evidence: positions, NRHP, Light List and ARLHS numbers, the Society's
+dates and town, and LighthouseFriends' pages (read for every moved or rebuilt tower). Rulings applied (DESIGN 3.2):
+
+- **A tower moved or rebuilt away from its station is a structure of that station, not a station of its own**: Cape
+  St. George (rebuilt 20 km away in 2007-08), Cape Mendocino (Shelter Cove), Table Bluff (Woodley Island),
+  Southampton Shoal (Tinsley Island), Mispillion (Lewes), Frying Pan Island (Sault Ste. Marie), Peche Island Range Rear
+  (Marine City), and the Society's records of the original sites of Cape San Blas, Seven Foot Knoll and Roanoke River.
+  The pin follows the precedence (OpenStreetMap first), so it is where the tower stands now when OpenStreetMap maps it;
+  the other point stays on the page as a location conflict, and the status note says where it stood. A tower that
+  no longer shows a light is `relocated`. **Cape St. George stays `active`**, as Cape Hatteras does: the rebuilt tower
+  shows the light again (Light List 4-75), and `relocated` would make the site end the light's years at its 1994
+  discontinuance (`build_site_data.year_range`); the note records the collapse and the rebuild.
+- **A range is one station** with a front and a rear structure, also when the halves were filed apart (Port Penn,
+  Reedy Island, Bloody Point, Hilton Head, Morris Island, Ashtabula West Pier, Presque Isle Harbor, Grosse Ile South
+  Channel, Grassy Island, Strawberry Island Upper and Lower Cut, Fort Barrancas, Wolf Island, Ecorse, Elba Island).
+- **A Society or National Register record whose point is far from the only light of its name** joins that light, its
+  point set aside (`NO_POSITION`), as Split Rock and Cape Florida did in the first review. Most of these are the
+  Society's points (a typed latitude, a town's geocode, a point in the wrong lake) and the Register's batch points
+  (Cape Hinchinbrook, Liston Range Front, Mount Desert, Ram Island, Wolf Trap), whose numbers the light already held
+  through Wikidata but more than 10 km away. Where a Society point is only rounded but, as a structure of its own,
+  would have moved a station's pin or changed its status (Menominee, Lahaina, Waukegan, Elba Island, Elm Tree, and
+  the lost range fronts of St. Simons, Hilton Head and Reedy Island, whose standing towers keep the pin), it is set
+  aside too, and the record describes the station as a whole.
+- The id kept is the one with a published story, else the one in a story batch, else the plainer id, else the one
+  with more sources. No id with a story is retired.
+
+### Joined: stations that are one, and records moved
+
+| Pair | Decision | Why |
+|---|---|---|
+| us-fl-cape-saint-george -> us-fl-cape-st-george | One station (rebuilt tower, 19.7 km) | Cape St. George Light: the 1852 tower on Cape St. George (Little St. George Island; Wikidata Q5035066, NRHP 74000625, the Society's archive, Rowlett) toppled into the Gulf on 21 October 2005 and was rebuilt in 2007-08 from the original drawings in the county park in the town of St. George Island, 19.7 km north-east, opened in November 2008 and dedicated on 4 April 2009 (LighthouseFriends 592). The OpenStreetMap way, LighthouseFriends, the Light List's 'St. George Lighthouse' (4-75) and the ENC point are the rebuilt tower; OpenStreetMap tags it with the same NRHP number. One station whose tower was rebuilt elsewhere, not two; the Light List number 4-75 is Wikidata's 4-0075. |
+| us-ak-cape-hinchinbrook-2 -> us-ak-cape-hinchinbrook | One station (register point wrong, 33 km) | The National Register's Cape Hinchinbrook Light Station (05000728) is the station that Wikidata and OpenStreetMap already tag with that number; the register's batch point is 33 km south, in open water. Positions set aside: `nrhp:05000728`. |
+| us-ak-cape-st-elias-2 -> us-ak-cape-st-elias | One station (archive point wrong, 131 km) | The Society's Cape St. Elias (1916, active, third-order lens) is Cape St. Elias Light on Kayak Island; the archive's point (60.158 N, 146.835 W) is 131 km away, near Cordova. Positions set aside: `uslhs:2688`. |
+| us-ca-cape-mendocino-2 -> us-ca-cape-mendocino | One station (relocated tower, 54.5 km) | Cape Mendocino Light's 1868 iron tower was taken down in 1998 and re-erected at Mal Coombs Park, Shelter Cove, 54 km south; OpenStreetMap's 'Cape Mendocino Light' and LighthouseFriends map it there. Wikidata and the Society's archive place the station on the cape. One station, its tower now elsewhere. |
+| us-ca-carquinez-strait-2 -> us-ca-carquinez-strait | One station (archive point wrong, 13 km) | The Society's Carquinez Strait (1910 dwelling, discontinued 1951) is the lighthouse Wikidata, LighthouseFriends and Rowlett place at Glen Cove, Vallejo; the archive's rounded point is 13 km west and no other Carquinez light exists. Positions set aside: `uslhs:2704`. |
+| us-ca-punta-gorda-2 -> us-ca-punta-gorda | One station (archive point wrong, 27 km) | The Society's Punta Gorda (1912, discontinued 1951) is Punta Gorda Light; the archive's point is 27 km out at sea. Positions set aside: `uslhs:2727`. |
+| us-ca-southampton-shoal-2 -> us-ca-southampton-shoal | One station (relocated tower, 81 km) | LighthouseFriends' Southampton Shoal is the 1905 lighthouse whose top two stories were lifted off the shoal in 1966 and barged to Tinsley Island in the Delta for the St. Francis Yacht Club; its point is where they stand now. The station (Wikidata, the Light List's 6-5480, Rowlett, the Society) is on the shoal. |
+| us-ca-table-bluff-2 -> us-ca-table-bluff | One station (relocated tower, 15.5 km) | Table Bluff Light (1892, discontinued 1961; Wikidata, the Society's archive) stood on the bluff south of Humboldt Bay; the lighthouse was cut in two and moved to Woodley Island Marina, Eureka, in 1987 (LighthouseFriends 62, OpenStreetMap). One station, its tower now elsewhere. |
+| us-de-liston-range-front-2 -> us-de-liston-range-front | One station (register point wrong, 31 km) | The National Register's Liston Range Front Lighthouse (03001386) is the front light that Wikidata and OpenStreetMap tag with that number; the register's batch point is 31 km north, near Wilmington. Positions set aside: `nrhp:03001386`. |
+| us-de-mispillion-2 -> us-de-mispillion | One station (relocated tower, 24 km) | LighthouseFriends' Mispillion (place Lewes, private) is the 1873 Mispillion River lighthouse, moved to Lewes after the 2002 fire; the station (Wikidata, NRHP 86002919, Rowlett, the Society) is at the river mouth. |
+| us-de-port-penn-range-front -> us-de-port-penn-range | One station (range, 3.2 km) | The Society's Port Penn Range Front (1877-1904) is the front light of LighthouseFriends' Port Penn Range; DESIGN 3.2: a range is one station with a front and a rear structure. |
+| us-de-port-penn-range-rear -> us-de-port-penn-range | One station (range, 280 m) | The Society's Port Penn Range Rear (1877-1905) is the rear light of the same range, 280 m from LighthouseFriends' point. |
+| us-de-reedy-island-range-front -> us-de-reedy-island-range-rear | One station (range, 4.1 km) | The Society's Reedy Island Range Front (1904) is the front of the range whose rear is the Taylors Bridge tower (Wikidata, NRHP 89000288, Light List 2-2585); one station with a front and a rear structure. Positions set aside: `uslhs:33270`. |
+| uslhs:2762 -> us-de-reedy-island-range-rear | Record moved (record misfiled) | The Society's 'Reedy Island Range Rear' (1904, fourth-order lens of 1910, active) is the Taylors Bridge rear light; the archive gave it the same point as its 'Reedy Island Old' (39.5017 N, 75.57 W), so the first build filed it under the old Reedy Island light 10.6 km north. The record moves to the range; Old Reedy Island keeps its own records. Positions set aside: `uslhs:2762`. |
+| us-fl-cape-san-blas-2 -> us-fl-cape-san-blas | One station (relocated tower, 16.5 km) | The Society's Cape San Blas (1885 tower, discontinued 1996) is Cape San Blas Light; its point is the cape, where the tower stood until it was moved to Port St. Joe in 2014 (Wikidata, OpenStreetMap, NRHP 15000208 'Cape San Blas Lighthouse at Port St. Joe'). |
+| us-fl-charlotte-harbor-2 -> us-fl-charlotte-harbor | One station (archive point wrong, 95 km) | The Society's Charlotte Harbor (1890-1943) is Charlotte Harbor Light (Wikidata, LighthouseFriends); the archive's point is 95 km out in the Gulf. Positions set aside: `uslhs:8404`. |
+| us-fl-st-johns-2 -> us-fl-st-johns | One station (archive point wrong, 38 km) | The Society's St. Johns (1954, automated 1967) is St. Johns Light at Mayport; the archive's point is 38 km north-west. Positions set aside: `uslhs:41509`. |
+| us-fl-st-johns-river-2 -> us-fl-st-johns-river | One station (archive point wrong, 40 km) | The Society's St. Johns River (1859 tower, 1830-1929) is St. Johns River Light at Mayport; the archive's point is 40 km north-west. Positions set aside: `uslhs:2787`. |
+| us-ga-saint-simons-island-range-front -> us-ga-st-simons-island | One station (range, 870 m) | The Society's Saint Simons Island Range Front (1895) is the front of the range whose rear was the St. Simons lighthouse itself (the archive's 'St. Simons Island Range Rear', already in the station); one station. Positions set aside: `uslhs:15265`. |
+| us-la-amite-river-2 -> us-la-amite-river | One station (archive point wrong, 87 km) | Amite River light (1882, lost): the Society's point is a geocode of the town 87 km inland; LighthouseFriends and the Light List's Amite River Entrance Light place the light at the river's mouth on Lake Maurepas. One light; the plain id is kept. Positions set aside: `uslhs:8432`. |
+| us-la-east-rigolets-2 -> us-la-east-rigolets | One station (archive point wrong, 44 km) | The Society's East Rigolets (1833-1874) is East Rigolets Light (Wikidata, LighthouseFriends); the archive's point is 44 km west, on the north shore of Lake Pontchartrain. Positions set aside: `uslhs:8440`. |
+| us-la-oyster-bayou-2 -> us-la-oyster-bayou | One station (archive point wrong, 17 km) | Oyster Bayou light (1904-1975, lost): LighthouseFriends places it at the bayou's mouth on the Gulf; the Society's point is 17 km inland in the marsh. One light; the plain id is kept. Positions set aside: `uslhs:8444`. |
+| us-la-pass-a-l-outre -> us-la-pass-a-loutre | One station (archive point wrong, 14 km) | The Society's 'Pass a L' Outre' (1855-1934) is Pass A L'Outre Light (Wikidata, LighthouseFriends, Rowlett); the archive's point is 14 km north. The ids differ only by the apostrophe. Positions set aside: `uslhs:2808`. |
+| us-ma-old-harbor-u-s-life-saving-station-2 -> us-ma-old-harbor-u-s-life-saving-station | One station (relocated station, 48.7 km) | Old Harbor Life-Saving Station (1897) stood on Nauset Beach, Chatham (NRHP 75000159 and the Service's list place it there); it was floated by barge to Race Point, Provincetown, in 1977, where Wikidata places it (its item has the 1977 relocation). One station. |
+| us-md-seven-foot-knoll-2 -> us-md-seven-foot-knoll | One station (relocated tower, 22.5 km) | The Society's Seven Foot Knoll (1855-1987) is Seven Foot Knoll Light; its point is the knoll in the Patapsco, where the screwpile stood until it was moved to Baltimore's Inner Harbor in 1988 (Wikidata, OpenStreetMap, NRHP). |
+| us-me-mount-desert-2 -> us-me-mount-desert | One station (register point wrong, 66 km) | The National Register's Mount Desert Light Station (88000155, 'Mount Desert Rock Light Station') is the light on Mount Desert Rock that Wikidata and OpenStreetMap tag with that number; the batch point is 66 km west. Positions set aside: `nrhp:88000155`. |
+| us-me-ram-island-2 -> us-me-ram-island | One station (register point wrong, 90 km) | The National Register's Ram Island Light Station (87002280, Lincoln County) is Ram Island Light at Boothbay, which Wikidata tags with that number; the batch point is 90 km east. Positions set aside: `nrhp:87002280`. |
+| us-mi-frying-pan-island-2 -> us-mi-frying-pan-island | One station (relocated tower, 66 km) | Frying Pan Island light (1882, discontinued 1988): the Society's record says 'relocated to Coast Guard Station Sault St. Marie', where OpenStreetMap and LighthouseFriends map the tower; the archive's point and the Light List's modern 'Frying Pan Island Light 7' are at the island off De Tour. One station, its tower now elsewhere; the plain id is kept. |
+| us-mi-peche-island-range-rear -> us-mi-peche-island-rear-range | One station (archive point wrong, 86 km) | Peche Island Range Rear: the 1908 tower moved to Marine City in 1983 (Wikidata, OpenStreetMap, LighthouseFriends) and Rowlett's present rear light (Light List 7-8410) at the range; the Society's point is 86 km west, inland. One station. Positions set aside: `uslhs:7104`. |
+| us-mi-presque-isle-range-rear -> us-mi-presque-isle-rear-range | One station (range, 607 m) | Presque Isle Harbor Range (1870-71): the Light List's front (7-11565) and rear (7-11570) are 240 m apart; OpenStreetMap's 'Presque Isle Rear Range Lighthouse', LighthouseFriends' 'Presque Isle Range' and Rowlett's front made one station, the Society's, Rowlett's and the Light List's rear another. DESIGN 3.2: one station with a front and a rear. |
+| us-mi-squaw-island-2 -> us-mi-squaw-island | One station (archive point wrong, 130 km) | The Society's Squaw Island (1892) is Squaw (Ojibwa) Island Light off Beaver Island; the archive's point is 130 km south, inland. Positions set aside: `uslhs:3340`. |
+| us-mn-minnesota-point-2 -> us-mn-minnesota-point | One station (archive point wrong, 54 km) | The Society's Minnesota Point (1858, ruins) is Minnesota Point Light on Park Point, Duluth; the archive's point is 54 km north, inland. Positions set aside: `uslhs:8539`. |
+| us-ms-biloxi-2 -> us-ms-biloxi | One station (archive point wrong, 65 km) | The Society's Biloxi (1848, active, town Biloxi) is Biloxi Light; the archive's point is 65 km north-west, inland. Positions set aside: `uslhs:3359`. |
+| us-ms-ship-island-3 -> us-ms-ship-island-2 | One station (archive point wrong, 64 km) | The Society's Ship Island (1853) is Ship Island Light (Wikidata, LighthouseFriends, Light List 4-335); the archive's point is 64 km west, inland. Positions set aside: `uslhs:8549`. |
+| us-nc-roanoke-river-3 -> us-nc-roanoke-river | One station (relocated tower, 14.5 km) | The Society's Roanoke River (1887-1941) is the screwpile cottage that stood at the river's mouth, the archive's point; it was moved to Edenton, where Wikidata, OpenStreetMap and LighthouseFriends place it. The 2003 replica at Plymouth (us-nc-roanoke-river-2) is a separate station. |
+| us-ny-new-dorp-range-rear -> us-ny-new-dorp | One station (same light, 630 m) | The Society's New Dorp Range Rear (1856-1964) is New Dorp Light, the rear of the Swash Channel Range (Rowlett: 'New Dorp (Swash Channel Range Rear)'); same years, the archive's point rounded 630 m off. |
+| us-ny-shinnecock-2 -> us-ny-shinnecock | One station (archive point wrong, 29 km) | The Society's Shinnecock (1858-1931) is Shinnecock (Ponquogue) Light; the archive's point is 29 km west. Positions set aside: `uslhs:8825`. |
+| us-ny-strawberry-island-upper-cut-range-rear -> us-ny-strawberry-island-upper-cut-range | One station (range, archive point wrong) | The Society's Strawberry Island Upper Cut Range Rear (1908-1951) is the rear of the Upper Cut Range on the Niagara River at Buffalo; the archive's point is in Lake Ontario near Toronto, 86 km away. Positions set aside: `uslhs:8831`. |
+| rowlett:nyw:strawberry-island-lower-cut-range-rear-4 -> us-ny-strawberry-island-lower-cut-range | Record moved (range, record misfiled) | Rowlett's Strawberry Island Lower Cut Range Rear (1908) is the rear of the Lower Cut Range (LighthouseFriends, the Light List's front 7-3015); a truncated ARLHS number (Rowlett's 'USA-122') had filed it under a station named Titanic Memorial. The Society's record of the same rear stays in that station, now hidden, because a station needs a positioned record and the Society's is the only one there. |
+| us-ny-titanic-memorial-3 -> us-ny-titanic-memorial | One station (archive point wrong, 52 km) | The Society's Titanic Memorial (1913) is the Titanic Memorial Lighthouse at South Street Seaport (Wikidata, LighthouseFriends); the archive's point is 52 km north. Positions set aside: `uslhs:8835`. |
+| rowlett:nydn:titanic-memorial -> us-ny-titanic-memorial | Record moved (record misfiled) | Rowlett's Titanic Memorial (built 1913, light shown 1913-1967) is the Manhattan memorial; its truncated ARLHS number 'USA-122' (Wikidata: USA1229) had filed it with two unrelated upstate lights. |
+| us-oh-ashtabula-west-pier-range-rear -> us-oh-ashtabula-west-pier-range-front | One station (range, archive point wrong) | The Society's Ashtabula West Pier Range Rear (1876) is the rear of the range whose front it also lists; the archive's point for the rear is 5.9 km inland. One station with a front and a rear. Positions set aside: `uslhs:7419`. |
+| us-oh-cunningham-creek-2 -> us-oh-cunningham-creek | One station (archive point wrong, 93 km) | The Society's Cunningham Creek (1835-1847) is LighthouseFriends' lost Cunningham Creek light at Madison on Lake Erie; the archive's point is 93 km south (41.01 N for 41.85 N). Positions set aside: `uslhs:8873`. |
+| us-or-yaquina-bay-2 -> us-or-yaquina-bay | One station (archive point wrong, 46 km) | The Society's Yaquina Bay (1871, discontinued 1874) is Yaquina Bay Light at Newport; the archive's point is 46 km north. Positions set aside: `uslhs:3467`. |
+| us-sc-bloody-point-range-rear -> us-sc-bloody-point-range | One station (range, 680 m) | The Society's Bloody Point Range Rear (1883-1899) is the rear of the Bloody Point Range (Wikidata's item for the range, LighthouseFriends' and the Society's front); one station with a front and a rear. |
+| us-sc-bulls-bay-2 -> us-sc-bulls-bay | One station (archive point wrong, 18 km) | The Society's Bulls Bay (1852-1913) is Bulls Bay Light (Wikidata, LighthouseFriends); the archive's point is 18 km north, inland. Positions set aside: `uslhs:8911`. |
+| us-sc-fort-ripley-shoal-2 -> us-sc-fort-ripley-shoal | One station (archive point wrong, 80 km) | The Society's Fort Ripley Shoal (1878-1932) is Fort Ripley Shoal Light in Charleston Harbor; the archive's point is 80 km inland. Positions set aside: `uslhs:8915`. |
+| us-sc-hilton-head-range-front -> us-sc-hilton-head-range-rear | One station (range, 1.7 km) | The Society's Hilton Head Range Front (1880-1932, lost) is the front of the range whose rear is the Leamington tower; one station with a front and a rear. Positions set aside: `uslhs:8917`. |
+| us-sc-morris-island-range-rear -> us-sc-morris-island-range-front | One station (range, 3.7 km) | The Society's Morris Island Range Front and Rear (1902) are the two lights of one range, kept apart from the Morris Island lighthouse (the archive lists the range separately). |
+| uslhs:3515 -> us-sc-morris-island | Record moved (record misfiled) | The Society's 'Morris Island' (other name Old Charleston; tower 1876, light 1768-1962) is Morris Island Light; the archive's point is the Sullivan's Island light 7 km north, so the first build made it a second tower of us-sc-charleston. Positions set aside: `uslhs:3515`. |
+| us-tx-galveston-jetty-2 -> us-tx-galveston-jetty | One station (archive point wrong, 65 km) | Galveston Jetty light (1918-1973): LighthouseFriends places it on the south jetty at Galveston; the Society's point is 65 km inland, south of Houston. One light; the plain id is kept. Positions set aside: `uslhs:3516`. |
+| us-tx-sabine-bank-2 -> us-tx-sabine-bank | One station (shore point, 68 km) | LighthouseFriends' Sabine Bank is the 1906 caisson light on Sabine Bank, 16 miles off the Sabine River; its point is on shore at Port Arthur, 68 km from the bank (Wikidata), and is set aside. Positions set aside: `lighthousefriends:150`. |
+| us-va-hog-island-2 -> us-va-hog-island | One station (lens display point, 82 km) | LighthouseFriends' and Rowlett's Hog Island (tower of 1896, discontinued 1948) is Hog Island Light on the Eastern Shore (place Machipongo); the point LighthouseFriends gives is Portsmouth, where the light's lens is displayed (Rowlett: 'lens'), and is set aside. Positions set aside: `lighthousefriends:1894`. |
+| us-va-wolf-trap-2 -> us-va-wolf-trap | One station (register point wrong, 18 km) | The National Register's Wolf Trap Light Station (02001434) is Wolf Trap Light, which Wikidata tags with that number; the batch point is 18 km south. Positions set aside: `nrhp:02001434`. |
+| us-vt-colchester-reef-2 -> us-vt-colchester-reef | One station (archive point wrong, 96 km) | The Society's Colchester Reef (1871-1933) is Colchester Reef Light, now at the Shelburne Museum; the archive's longitude (72.05 W) is 96 km east of Lake Champlain. Positions set aside: `uslhs:3534`. |
+| us-wa-gig-harbor-2 -> us-wa-gig-harbor | One station (archive point wrong, 38 km) | The Society's Gig Harbor is the Gig Harbor light (OpenStreetMap, LighthouseFriends, Light List 6-17221), the only light of that name; the archive's point is 38 km north-west. Positions set aside: `uslhs:8982`. |
+| us-wi-racine-north-breakwater-2 -> us-wi-racine-north-breakwater | One station (archive point wrong, 69 km) | The Society's 'RACINE North Breakwater' (1872-1987) is Racine North Breakwater Light; the archive's point is 69 km inland. Positions set aside: `uslhs:3580`. |
+| us-wi-racine-harbor -> us-wi-racine-harbor-lighthouse-and-life-saving | One station (archive point wrong, 69 km) | The Society's Racine Harbor (1866) is the Racine Harbor (Root River) lighthouse of 1866; the archive gives it the same inland point as its Racine North Breakwater, 69 km off. Positions set aside: `uslhs:35833`. |
+| us-fl-fort-barrancas -> us-fl-fort-barrancas-range | One station (range, 720 m) | LighthouseFriends' Fort Barrancas page is the history of the Fort Barrancas range lights (front and rear), which the Society lists as the range; one station. Whether the range's rear is the Pensacola tower stays open. |
+| us-ga-elba-island -> us-ga-elba-island-range | One station (same light, 860 m) | The Society's Elba Island (light station, 1905) and LighthouseFriends' Elba Island Range are the Savannah River lights on Elba Island, which LighthouseFriends describes as a range of two lights; no source has another light on the island. Positions set aside: `uslhs:8411`. |
+| us-ga-wolf-island -> us-ga-wolf-island-range | One station (range, 570 m) | LighthouseFriends' Wolf Island page describes the Wolf Island beacons as a range (1822 beacon, 1868 rear range light), the range the Society lists with its front and rear; one station. |
+| us-mi-ecorse -> us-mi-ecorse-range | One station (range, 820 m) | LighthouseFriends' Ecorse (lost) and the Society's Ecorse Range front and rear (1895) are the Ecorse range lights on the Detroit River; one station. |
+| us-nc-brant-island -> us-nc-brant-island-shoal | One station (same light, 340 m) | LighthouseFriends' Brant Island (lost) is the Brant Island Shoal screwpile light in Pamlico Sound that Rowlett, the Society and the Light List (2-32650) call Brant Island Shoal; 340 m apart. |
+| us-hi-lahaina-harbor -> us-hi-lahaina | One station (same light, 345 m) | The Society's and the passport list's Lahaina Harbor is Lahaina Light (Wikidata, LighthouseFriends, Light List 6-28460); 345 m apart, rounded. Positions set aside: `uslhs:18617`. |
+| us-tx-brazos-santiago-pass-tx-new -> us-tx-brazos-santiago | One station (same light, 350 m) | The Society's 'Brazos Santiago Pass TX (New)' and 'Brazos Santiago Pass' are LighthouseFriends' Brazos Santiago at Port Isabel, 350 m apart. |
+| us-nc-southwest-point -> us-nc-southwest-point-royal-shoal | One station (same light, 365 m) | The Society's Southwest Point (other name Royal Shoal) is LighthouseFriends' Southwest Point Royal Shoal, 365 m apart. |
+| us-wa-semiahmoo -> us-wa-semiahmoo-harbor | One station (same light, 430 m) | LighthouseFriends' Semiahmoo (lost) is Semiahmoo Harbor Light (Wikidata, the Society, Light List 6-19920 at the site); 430 m apart. |
+| us-mi-grassy-island-south-channel-range -> us-mi-grassy-island | One station (range, 860 m) | LighthouseFriends' 'Grassy Island South Range' page (in this station with Wikidata's Grassy Island Light) is the history of the Grassy Island light station and its south range; the Society's South Channel Range front and rear are that range. |
+| us-mi-grassy-island-north-channel-range-rear -> us-mi-grassy-island-north-range | One station (range, 930 m) | The Society's Grassy Island North Channel Range Rear is the rear of LighthouseFriends' Grassy Island North Range. |
+| uslhs:9657 -> us-mi-grassy-island-north-range | Record moved (record misfiled) | The Society's Grassy Island North Channel Range Front belongs with the north range, not with the Grassy Island light station's south range. |
+| us-mi-grosse-isle-south-channel-range-front -> us-mi-grosse-isle-south-range | One station (range, 520 m) | The Grosse Ile South Channel Range: the Light List's and the Society's front (7-7165) joins the station that holds the rear (LighthouseFriends' Grosse Isle South Range, Rowlett, Light List 7-7170). |
+| us-il-waukegan-harbor-pierhead -> us-il-waukegan-harbor | One station (same light, 560 m) | The Society's Waukegan Harbor Pierhead is the Waukegan Harbor light on the north pierhead (the station holds the Light List's Waukegan North Pierhead Light); no other Waukegan station exists in the archive. Positions set aside: `uslhs:8428`. |
+| us-nc-bald-head-old-baldy -> us-nc-bald-head | One station (same light, 600 m) | The Society's 'Bald Head "Old Baldy"' is Bald Head Lighthouse (Old Baldy), 600 m off by its rounded point. |
+| us-md-fishing-battery-island -> us-md-fishing-battery | One station (same light, 610 m) | The Society's Fishing Battery Island is Fishing Battery Light, 610 m off by its rounded point. |
+| us-ca-ano-nuevo-island -> us-ca-ano-nuevo | One station (same light, 650 m) | The Society's Ano Nuevo Island is the Año Nuevo light station on the island, 650 m off by its rounded point. |
+| us-ny-elm-tree-range-front -> us-ny-elm-tree-beacon | One station (same light, 730 m) | The Society's Elm Tree Range Front is Elm Tree Beacon Light, the front of the Swash Channel Range (Rowlett: 'Elm Tree (Swash Channel Range Front)'). Positions set aside: `uslhs:8804`. |
+| us-ny-buffalo-1818 -> us-ny-buffalo-main | One station (successive tower, 350 m) | The Society's 'Buffalo 1818' is the first Buffalo lighthouse (1818), replaced in 1833 by the Buffalo Main tower at the same river mouth; successive towers of one station (DESIGN 3.2). |
+| us-mi-menominee -> us-mi-menominee-pier | One station (same light, 1.6 km) | The Society's Menominee (other name North Pier, active) is Menominee Pier Light; the archive's point is rounded to five minutes. Positions set aside: `uslhs:2996`. |
+| us-in-michigan-city-old -> us-in-old-michigan-city | One station (archive point wrong, 72 km) | The Society's Michigan City (Old) is Old Michigan City Light; the archive's latitude 41.073 is a slip for 41.723. Positions set aside: `uslhs:2805`. |
+| us-mi-south-fox-island-new -> us-mi-south-fox-island | One station (archive point wrong, 53 km) | The Society's South Fox Island New is the 1934 skeleton tower of South Fox Island Light, which the station already holds through OpenStreetMap; the archive's point is 53 km away. Positions set aside: `uslhs:9235`. |
+| us-oh-vermilion-pierhead -> us-oh-vermilion | One station (same light, 2.3 km) | The Society's Vermilion Pierhead (lost) is the 1877 Vermilion light whose replica stands at the museum and carries the light today (the station); the archive's point is rounded. |
+
+### Kept apart, and pairs left for the owner
+
+| Pair | Decision | Why |
+|---|---|---|
+| us-ga-sapelo-island / us-ga-sapelo-island-range-front | Left for the owner | One station by DESIGN 3.2 (the range's rear light was the Sapelo Island lighthouse; the range front's station even holds the Society's 'Sapelo Island Range Rear'), but the range front is in a story batch now: left for the owner. |
+| us-de-liston-range-front / us-de-liston-range-rear | Left for the owner | One range (DESIGN 3.2: one station), but both stations have a published story: left for the owner. |
+| us-md-craighill-channel-lower-range-front / us-md-craighill-channel-lower-range-rear | Left for the owner | One range, 4.5 km between the towers, each with its own NRHP listing; both stations have a published story: left for the owner. |
+| us-md-craighill-channel-upper-range-front / us-md-craighill-channel-upper-range-rear | Left for the owner | One range ('Cut-Off Channel Range'), 2.5 km between the towers; both stations have a published story: left for the owner. |
+| us-mn-duluth-south-breakwater-inner / us-mn-duluth-south-breakwater-outer | Two stations | The Duluth range (NRHP: 'Duluth South Breakwater Inner (Duluth Range Rear)'); both stations have a published story: left for the owner, with the Society-only us-mn-duluth-south-breakwater-range whose front and rear records belong to them. |
+| us-ny-new-dorp / us-ny-elm-tree-beacon | Two stations | New Dorp Light (rear) and Elm Tree Beacon (front) were the Swash Channel Range, 2 km apart, each with its own name and NRHP history; kept as two stations (left for the owner: DESIGN 3.2 would make a range one station). |
+| us-ma-newburyport-harbor / us-ma-newburyport-harbor-range | Two stations | Newburyport Harbor Light on Plum Island and the Newburyport range lights in town, 3.8 km apart. |
+| us-md-thomas-point-shoal / us-md-thomas-point | Two stations | Thomas Point (1825, on the point) and Thomas Point Shoal (1875 screwpile), 800 m apart, two names. |
+| us-md-greenbury-point / us-md-greenbury-point-shoal | Two stations | Greenbury Point (1848, on the point) and Greenbury Point Shoal (1891 screwpile): separate LighthouseFriends pages. |
+| us-nc-pamlico-point / us-nc-pamlico-point-shoal | Two stations | Pamlico Point and Pamlico Point Shoal: two lights in the archive. |
+| us-tx-red-fish-bar / us-tx-red-fish-bar-cut | Two stations | Red Fish Bar and Red Fish Bar Cut: separate LighthouseFriends pages. |
+| us-nj-cross-ledge / us-nj-elbow-of-cross-ledge | Two stations | Cross Ledge and Elbow of Cross Ledge: two lights, 4 km apart. |
+| us-ca-pigeon-point / us-ca-pigeon-point-2 | Two stations | us-ca-pigeon-point-2 is an OpenStreetMap-only 'Pigeon Point Lighthouse' at Lake Havasu, 790 km away: a scale copy (listed for the replica review). |
+| us-ca-table-bluff / us-ca-table-bluff-3 | Two stations | us-ca-table-bluff-3 is an OpenStreetMap-only copy at Lake Havasu, 1,100 km away (listed for the replica review). |
+| us-md-choptank-river / us-md-choptank-river-2 | Two stations | The lost 1871 light and the 2012 replica at Cambridge, 13 km apart (replica link listed for review). |
+| us-nc-roanoke-marshes / us-nc-roanoke-marshes-2 | Two stations | The 2004 replica at Manteo and the lost 1877 screwpile, 11 km apart. |
+| us-nc-roanoke-river / us-nc-roanoke-river-2 | Two stations | The 1887 light (now at Edenton) and the 2003 replica at Plymouth. |
+| us-mi-round-island / us-mi-round-island-2 | Two stations | Round Island (St. Marys River, 1892), Round Island (Mackinac, 1895) and Round Island near Brimley (lost): three lights 53-68 km apart. |
+| us-ny-stony-point / us-ny-stony-point-2 | Two stations | Stony Point (Henderson, Lake Ontario) and Stony Point (Hudson River): 346 km apart. |
+| us-pa-airport-beacon / us-pa-airport-beacon-2 | Two stations | Two OpenStreetMap airport beacons 37 km apart; neither is a light station (listed as other problems). |
+| us-mi-copper-harbor / us-mi-copper-harbor-range | Two stations | The lighthouse and the range lights, 770 m apart: separate aids. |
+| us-mi-eagle-harbor / us-mi-eagle-harbor-range | Two stations | The lighthouse and the 1877 range lights, 630 m apart: separate aids. |
+| us-me-doubling-point / us-me-doubling-point-range | Two stations | Doubling Point Light and the Kennebec River range lights, 890 m apart: separate aids, separate NRHP listings. |
+| us-nc-oak-island / us-nc-oak-island-range | Two stations | The 1958 lighthouse and the range lights of 1849-1894, 690 m apart. |
+| us-mi-muskegon-south-pierhead / us-mi-muskegon-south-pierhead-range-front | Two stations | The 1903 pierhead light and the Society's 1890 range front, 460 m apart: the archive lists them as separate places; not settled. |
+| us-mi-windmill-point / us-mi-windmill-point-range-front-new | Two stations | Windmill Point Light and the Society's range front, 540 m apart. |
+| us-ma-broad-sound-channel-range / us-ma-broad-sound-channel-inner-range | Two stations | The Society's Broad Sound Channel Range and the Inner Range, 480 m apart: which range the archive means is not settled; left as two. |
+| us-fl-carysfort-reef / us-fl-carysfort-reef-2; us-la-south-pass-range / us-la-south-pass; us-la-trinity-shoal / us-la-trinity-shoal-2; us-ma-boston / us-ma-boston-2; us-mi-grays-reef / us-mi-grays-reef-2; us-mi-lake-st-clair / us-mi-lake-st-clair-2; us-mi-north-manitou-shoal / us-mi-north-manitou-shoal-2; us-nc-diamond-shoal / us-nc-diamond-shoal-2; us-nc-frying-pan-shoals / us-nc-frying-pan-shoals-2; us-ny-fire-island / us-ny-fire-island-2; us-ri-brenton-reef / us-ri-brenton-reef-2; us-ri-hog-island-shoal / us-ri-hog-island-shoal-2; us-sc-charleston / us-sc-charleston-2; us-va-cape-charles / us-va-cape-charles-2; us-wi-peshtigo-reef / us-wi-peshtigo-reef-2; us-nj-barnegat-2 / us-nj-barnegat | Two stations | A lightship station and the light that later marked the same place are different kinds of station (DESIGN 3.4); never one. |
+
+The other groups of the name scan are different places that share a name (Green Island, Long Point, Round Island,
+Stony Point, Pointe aux Pins...) or a light beside the life-saving station of the same name; they are not listed.
+
+### Names
+
+| Station | Name shown | Why |
+|---|---|---|
+| us-me-moose-peak-light-shalens-new-home | Moose Peak Light | Wikidata's label 'Moose Peak Light Shalen’s New Home' is not the light's name; OpenStreetMap and the Light List (1-1390) call it Moose Peak Light, LighthouseFriends, Rowlett, the Society and the passport list Moose Peak. The id keeps the first build's slug. |
+| us-va-keepers-house | Old Point Comfort Light | OpenStreetMap's name for the keeper's house ('Keeper's House') won the station's name; the light is Old Point Comfort Light (Wikidata, NRHP 73002212, LighthouseFriends, Rowlett, the Society). |
+| us-ny-old-orchard-shoal | Old Orchard Shoal Light | The NRHP's inverted index form 'Orchard Shoal Light Station, Old' won the name; Wikidata, OpenStreetMap and the Light List call it Old Orchard Shoal Light. |
+| us-mi-old-presque-isle | Old Presque Isle Light | Both Presque Isle stations showed 'Presque Isle'; the 1840 tower is Old Presque Isle Light (Wikidata, OpenStreetMap, NRHP), its successor New Presque Isle Light. |
+| us-mi-new-presque-isle | New Presque Isle Light | Both Presque Isle stations showed 'Presque Isle'; the 1870 tower is New Presque Isle Light (Wikidata, OpenStreetMap). |
+| us-wi-racine-harbor-lighthouse-and-life-saving | Racine Harbor Lighthouse | The NRHP district's name 'Racine Harbor Lighthouse and Life Saving Station' was the lighthouse's display name; LighthouseFriends calls it Racine Harbor, and the life-saving station of the district has its own station. |
+| us-ma-newburyport-harbor-range | Newburyport Harbor Range Lights | The station holds both lights of the range (Wikidata's, OpenStreetMap's, LighthouseFriends' and Rowlett's front and rear); the name 'Newburyport Harbor Range Front' named only one of them. |
+| us-fl-st-joseph-point | St. Joseph Point Light | Rowlett's name for the modern rear aid ('St. Joseph Bay (Beacon Hill) Range Rear') won the station's name; the station is St. Joseph Point Light and its range (Wikidata, the Society). |
+| us-fl-big-marco-pass-and-rear-range | Big Marco Pass Range Lights | The Society's entry title 'Big Marco Pass And Rear Range' is a fragment; the record is the Big Marco Pass front and rear range. |
+| us-mi-presque-isle-rear-range | Presque Isle Range Lights | The station now holds the front and the rear of the Presque Isle Harbor Range; LighthouseFriends and the passport list call it Presque Isle Range. |
+| us-oh-ashtabula-west-pier-range-front | Ashtabula West Pier Range Lights | The station now holds the front and the rear of the range. |
+| us-sc-morris-island-range-front | Morris Island Range Lights | The station now holds the front and the rear of the range. |
+| us-il-light-2 | Great Lakes Light 2 | OpenStreetMap's bare 'Light 2'; the Light List calls the two aids at the Great Lakes harbor Great Lakes Light 1 and Light 2 (7-20290, 7-20285). |
+| us-nc-brant-island-shoal | Brant Island Shoal Light | With LighthouseFriends' 'Brant Island' joined, its name won; the light is Brant Island Shoal (Rowlett, the Society, the Light List's 'Brant Island Shoal Light BI'). |
+| us-de-reedy-island-range-rear-2 | Old Reedy Island Light | With the Taylors Bridge rear's record moved to the range, the station is the old light on Reedy Island (LighthouseFriends 'Old Reedy Island', the Light List's 'Old Reedy Island Light', the Society's 'Reedy Island Old'). |
+
+### Statuses
+
+| Station | Status | Why |
+|---|---|---|
+| us-hi-lahaina | active | In the Coast Guard's Light List (6-28460, Lahaina Light); the Society's archive, whose record joined this station in the duplicate audit, calls the light inactive. |
+| us-fl-cape-st-george | active | The 1852 tower on Cape St. George toppled into the Gulf on 21 October 2005; it was rebuilt in 2007-08 in the town of St. George Island, 20 km north-east, and shows a light again (Light List 4-75). |
+| us-ca-cape-mendocino | relocated | The 1868 tower was moved in 1998-99 from the cape to Mal Coombs Park, Shelter Cove, 54 km south; a modern light marked the cape until 2013. |
+| us-ca-table-bluff | relocated | The 1892 lighthouse was cut in two and moved from Table Bluff to Woodley Island Marina, Eureka, in 1987; the light was discontinued in 1961. |
+| us-de-mispillion | relocated | The 1873 lighthouse at the mouth of the Mispillion River was moved to Lewes after the 2002 fire; the light ended in 1929. |
+| us-ma-old-harbor-u-s-life-saving-station | relocated | Built in 1897 on Nauset Beach, Chatham; floated by barge to Race Point, Provincetown, in 1977. |
+| us-mi-frying-pan-island | relocated | The 1882 tower was moved from Frying Pan Island, off De Tour, to the Coast Guard station at Sault Ste. Marie; a modern light (Frying Pan Island Light 7) marks the island. |
+| us-va-hog-island | lost (was unknown) | Discontinued in 1948; LighthouseFriends (destroyed) and Rowlett, a station of their own until this audit, join it, and the Society's archive lists it as lost. |
+
+### Hidden
+
+| Station | Reason | Why |
+|---|---|---|
+| us-ny-titanic-memorial-2 | A duplicate listing: Rowlett's Titanic Memorial is us-ny-titanic-memorial and the Strawberry Island Lower Cut Range Rear is part of us-ny-strawberry-island-lower-cut-range; what is left is the Society's record of that rear (its point is in Lake Ontario) and Rowlett's 'Shoal Point' (upstate New York, 1890), filed here by a truncated ARLHS number | The station was built from four records that a truncated ARLHS number ('USA-122' in Rowlett's directory) tied together: Rowlett's Titanic Memorial, Rowlett's Shoal Point and the Strawberry Island Lower Cut Range Rear of Rowlett and the Society, under the name Titanic Memorial at a point in Lake Ontario. The Titanic and Strawberry records go to their stations; the station cannot be retired into one of them (the merge retires a station into one other station only, and a station needs a positioned record), so it is hidden with the two records left. |
+
+### Held story ids
+
+- `us-fl-cape-saint-george` is retired into `us-fl-cape-st-george` (the id in the running batch): queue nothing under
+  the retired id.
+- `us-me-moose-peak-light-shalens-new-home` keeps its id; its name is now Moose Peak Light.
+- `us-sc-bloody-point-range` keeps its id and now holds the range's rear.
+- `us-la-south-pass-range` keeps its id: the South Pass lightship station (`us-la-south-pass`) is a different kind
+  of station.
+
+### What the audit changed
+
+Local merge of 2026-10-28 (`FRESNEL_RAW_ROOT` = the main checkout's cache): **1,576 US stations shown** (1,653
+before); 76 US ids retired with `merged_into` by this audit (104 in all; no file deleted), 1 hidden
+(`us-ny-titanic-memorial-2`). Five stations are now `relocated` (Cape Mendocino, Table Bluff, Mispillion, Old Harbor
+Life-Saving Station, Frying Pan Island). A second run writes nothing.
+
+Entries this audit added to `pipeline/record_joins.py`: 102 records sent to a station (`RECORD_JOINS`, 221 in all), 47
+positions set aside (`NO_POSITION`, 70), 15 names (`NAME_PICKS`, 24), 9 statuses (`STATUS_PICKS`; Hog Island's was
+replaced; 25 in all), 1 hidden station (`HIDE`, 20) and 19 Canadian pairs found to be two (`NOT_DUPLICATES`, 74).
+The report's possible-duplicate and close-namesake lists are empty for both countries.
+
+`pipeline/build_people.py` was run after the merge: the Society's rosters of the retired ids moved to the stations that
+hold their records (53 roster files written, 52 removed; no person file changed).
+
+Code: a station retired into one that a later review retires as well now follows it (`merge.py`, test
+`test_an_id_retired_into_a_station_that_is_retired_later_follows_it`): `ca-pe-northport-range-2` had been retired into
+`ca-pe-former-northport-back-range`, which this audit retires into `ca-pe-northport-range`.
 
 ## Left open
 

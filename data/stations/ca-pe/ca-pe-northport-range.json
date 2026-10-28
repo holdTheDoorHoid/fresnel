@@ -2,17 +2,20 @@
   "id": "ca-pe-northport-range",
   "name": "Northport Range Lights",
   "other_names": [
+    "Former Northport Back Range Light",
     "Northport Front Range Light",
     "Northport Rear Range Lighthouse",
     "phare d’alignement postérieur de Northport",
     "Northport ex-Front Range Lighthouse",
+    "phare de Northport (ancien)",
     "Northport",
     "Alberton Front Range Light",
     "Northport Rear Range Light",
+    "Northport Range Rear",
+    "Northport Range (Former)",
     "Northport front range light",
     "Northport rear range light",
     "Alberton Breakwater",
-    "Northport Range Rear",
     "formerly Front"
   ],
   "country": "CA",
@@ -43,6 +46,21 @@
       "location": {
         "lat": 46.793971,
         "lon": -64.062331
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Northport Range Lights",
+      "type": null,
+      "material": null,
+      "built": 1897,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.79396,
+        "lon": -64.06215
       }
     },
     {
@@ -119,7 +137,7 @@
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "private",
     "note": null
   },
   "staffing": {
@@ -127,13 +145,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": true,
+    "grounds_open": false,
     "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
   "stay": null,
   "events": [
@@ -144,8 +162,32 @@
       "from": "wikidata"
     },
     {
+      "year": 1903,
+      "event": "modified",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1910,
+      "event": "relocated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1943,
+      "event": "relocated",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
       "year": 1962,
       "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1962,
+      "event": "deactivated",
       "note": null,
       "from": "wikidata"
     },
@@ -185,6 +227,15 @@
       "license": null,
       "caption": null,
       "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Northport_Back_Range_Lighthouse_%2822276813762%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Northport_Back_Range_Lighthouse_%2822276813762%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Former_Northport_Back_Range_Lighthouse_%2822276813762%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -214,6 +265,31 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q47007621",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_de_Northport_(ancien)",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN355",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN355.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q7059632",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Northport_Range_Lights",
+      "kind": "wikipedia"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1806785287",
       "kind": "osm"
@@ -227,6 +303,16 @@
       "label": "Directory of Federal Heritage Designations: heritage lighthouse and statement of significance",
       "url": "https://www.pc.gc.ca/apps/dfhd/page_hl_eng.aspx?id=14912",
       "kind": "register"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=932",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=991",
+      "kind": "reference"
     },
     {
       "label": "Canadian Coast Guard List of Lights, Atlantic Coast and the St. Lawrence to Montreal: Atlantic Coast - Prince Edward Island",
@@ -267,6 +353,24 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q47007621",
+      "part": "station",
+      "fields": [
+        "events",
+        "name",
+        "photos"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q7059632",
+      "part": "wikidata:Q7059632",
+      "fields": [
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/1806785287",
       "part": "wikidata:Q111486788",
@@ -286,6 +390,20 @@
       "part": "wikidata:Q45324411",
       "fields": [
         "structures"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:932",
+      "part": "wikidata:Q7059632",
+      "fields": []
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:991",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     },
     {
@@ -317,6 +435,14 @@
     },
     {
       "source": "rowlett",
+      "key": "rowlett:peiw:northport-range-rear",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
       "key": "rowlett:peiw:northport-range-rear-2",
       "part": "station",
       "fields": [
@@ -326,6 +452,48 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "ccg_list_of_lights",
+          "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        }
+      ],
+      "note": "Sources differ on whether the light is still lit."
+    },
     {
       "field": "light.characteristic",
       "values": [
@@ -369,9 +537,9 @@
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

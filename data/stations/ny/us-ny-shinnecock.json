@@ -54,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "private",
-    "note": "LighthouseFriends marks it privately owned, with no access without permission."
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -78,9 +78,15 @@
       "from": "wikidata"
     },
     {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1931,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -121,6 +127,11 @@
     {
       "label": "Lighthouse Directory: New York: Long Island",
       "url": "https://www.ibiblio.org/lighthouse/nyli.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Shinnecock",
+      "url": "https://archives.uslhs.org/places/shinnecock",
       "kind": "reference"
     }
   ],
@@ -164,6 +175,15 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8825",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
     }
   ],
   "conflicts": [],
@@ -171,5 +191,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -2,8 +2,10 @@
   "id": "us-ny-strawberry-island-lower-cut-range",
   "name": "Strawberry Island Lower Cut Range",
   "other_names": [
+    "Strawberry Island Lower Cut Range Rear",
     "Strawberry Island Lower Cut Range Front",
-    "Strawberry Island Cut Lower Range Front Light"
+    "Strawberry Island Cut Lower Range Front Light",
+    "Strawberry Island Cut Lower Range Rear Light"
   ],
   "country": "US",
   "region": "NY",
@@ -44,8 +46,8 @@
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": "7-3015",
-    "arlhs": null,
+    "uscg_llnr": "7-3020",
+    "arlhs": "USA-122",
     "ccg_list_number": null,
     "nga": null
   },
@@ -75,6 +77,12 @@
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
+    },
+    {
+      "year": 1908,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -84,6 +92,11 @@
     {
       "label": "LighthouseFriends: Strawberry Island Lower Cut Range",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1983",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: Western",
+      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
       "kind": "reference"
     },
     {
@@ -105,13 +118,27 @@
       ]
     },
     {
+      "source": "rowlett",
+      "key": "rowlett:nyw:strawberry-island-lower-cut-range-rear-4",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
       "source": "uscg_light_list",
       "key": "uscg_light_list:7-3015",
       "part": "lighthousefriends:1983",
       "fields": [
-        "aton",
         "light"
       ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-3020",
+      "part": "station",
+      "fields": []
     },
     {
       "source": "uslhs",
@@ -128,5 +155,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -2,28 +2,33 @@
   "id": "ca-ns-sydney-range",
   "name": "Sydney Range Lights",
   "other_names": [
+    "Sydney range Lights",
+    "Sydney front range light",
     "Sydney Range Rear Lighthouse",
     "Sydney",
-    "Sydney Range Rear"
+    "Sydney Range Front Lighthouse",
+    "Sydney Range Front",
+    "Sydney Range Rear",
+    "Dixon Point"
   ],
   "country": "CA",
   "region": "NS",
-  "county": null,
+  "county": "Cape Breton",
   "water": null,
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.174418,
-    "lon": -60.255739,
+    "lat": 46.18018,
+    "lon": -60.250216,
     "precision": "exact",
     "from": "osm"
   },
   "status": "active",
-  "status_note": null,
+  "status_note": "The range's front tower is a 2010 replica of the 1905 front (Rowlett, Wikidata); the range still shows its lights (OpenStreetMap's seamark lights; a new rear tower in 2024).",
   "structures": [
     {
       "role": "front_range",
-      "name": "Sydney Range Rear Lighthouse",
+      "name": "Sydney Range Front Lighthouse",
       "type": null,
       "material": null,
       "built": null,
@@ -33,15 +38,49 @@
       "from": "osm"
     },
     {
-      "role": "rear_range",
-      "name": "Sydney Range Rear",
+      "role": "front_range",
+      "name": "Sydney Range Rear Lighthouse",
       "type": null,
       "material": null,
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "lighthousefriends"
+      "from": "osm",
+      "location": {
+        "lat": 46.174418,
+        "lon": -60.255739
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Sydney front range light",
+      "type": null,
+      "material": "wood",
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.196082,
+        "lon": -60.248799
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": "Sydney Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "unknown",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 46.174428,
+        "lon": -60.25563
+      }
     }
   ],
   "light": {
@@ -57,15 +96,15 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN641",
-    "ccg_list_number": "A783",
-    "nga": "9108",
+    "arlhs": "CAN494",
+    "ccg_list_number": "A782",
+    "nga": "9104",
     "admiralty": "H761"
   },
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "closed",
     "note": null
   },
   "staffing": {
@@ -73,13 +112,13 @@
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": false,
     "climbable": false,
     "museum": null,
     "tours": null,
     "boat_only": null,
     "passport_stamp": null,
-    "note": null
+    "note": "The Lighthouse Directory says the site is closed to visitors."
   },
   "stay": null,
   "events": [
@@ -90,20 +129,62 @@
       "from": "rowlett"
     },
     {
+      "year": 2010,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
       "year": 2024,
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 2024,
+      "event": "deactivated",
+      "note": null,
       "from": "rowlett"
     }
   ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Front_Range_Lighthouse_%283%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Front_Range_Lighthouse_%283%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sydney_Front_Range_Lighthouse_%283%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28375851",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Sydney_front_range_light",
+      "kind": "commons"
+    },
     {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1740796724",
       "kind": "osm"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1740797647",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1648",
+      "kind": "reference"
     },
     {
       "label": "Lighthouse Friends",
@@ -118,21 +199,56 @@
   ],
   "sources": [
     {
+      "source": "wikidata",
+      "key": "wikidata:Q28375851",
+      "part": "wikidata:Q28375851",
+      "fields": [
+        "county",
+        "kind",
+        "photos",
+        "region",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/1740796724",
       "part": "osm:node/1740796724",
       "fields": [
-        "kind",
-        "light",
-        "location",
-        "region"
+        "light"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1740797647",
+      "part": "lighthousefriends:1648",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1648",
+      "part": "lighthousefriends:1648",
+      "fields": []
     },
     {
       "source": "lighthousefriends",
       "key": "lighthousefriends:1649",
       "part": "lighthousefriends:1649",
       "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:sydney-range-front",
+      "part": "station",
+      "fields": [
+        "agency",
+        "aton",
+        "events",
+        "ownership",
+        "visit"
+      ]
     },
     {
       "source": "rowlett",
@@ -147,10 +263,8 @@
       "key": "rowlett:nscbe:sydney-range-rear-2",
       "part": "station",
       "fields": [
-        "agency",
         "aton",
         "events",
-        "ownership",
         "visit"
       ]
     }
@@ -160,5 +274,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

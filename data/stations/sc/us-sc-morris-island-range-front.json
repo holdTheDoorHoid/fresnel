@@ -1,7 +1,10 @@
 {
   "id": "us-sc-morris-island-range-front",
-  "name": "Morris Island Range Front",
-  "other_names": [],
+  "name": "Morris Island Range Lights",
+  "other_names": [
+    "Morris Island Range Front",
+    "Morris Island Range Rear"
+  ],
   "country": "US",
   "region": "SC",
   "county": null,
@@ -19,7 +22,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Morris Island Range Front",
       "type": null,
       "material": "steel",
       "built": 1902,
@@ -27,6 +30,21 @@
       "status": "lost",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Morris Island Range Rear",
+      "type": null,
+      "material": "wood",
+      "built": 1902,
+      "height_m": 15.8,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 32.68867,
+        "lon": -79.8855
+      }
     }
   ],
   "light": {
@@ -82,6 +100,11 @@
       "label": "US Lighthouse Society Digital Archive: Morris Island Range Front",
       "url": "https://archives.uslhs.org/places/morris-island-range-front",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Morris Island Range Rear",
+      "url": "https://archives.uslhs.org/places/morris-island-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -94,8 +117,15 @@
         "kind",
         "light",
         "location",
-        "name",
         "region",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8919",
+      "part": "uslhs:8919",
+      "fields": [
         "structures"
       ]
     }
@@ -105,5 +135,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

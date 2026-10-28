@@ -3,7 +3,9 @@
   "name": "Grosse Isle South Range",
   "other_names": [
     "Grosse Ile South Range Rear",
+    "Grosse Isle South Channel Range Front",
     "Grosse Isle South Channel Range Rear",
+    "Grosse Ile South Channel Range Front Light",
     "Grosse Ile South Channel Range Rear Light"
   ],
   "country": "US",
@@ -13,32 +15,47 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 42.189203,
-    "lon": -83.143596,
+    "lat": 42.18472,
+    "lon": -83.14167,
     "precision": "approximate",
-    "from": "lighthousefriends"
+    "from": "uslhs"
   },
   "status": "lost",
   "status_note": null,
   "structures": [
     {
+      "role": "front_range",
+      "name": "Grosse Isle South Channel Range Front",
+      "type": null,
+      "material": null,
+      "built": 1891,
+      "height_m": 6.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs"
+    },
+    {
       "role": "rear_range",
-      "name": null,
+      "name": "Grosse Isle South Range",
       "type": null,
       "material": null,
       "built": 1891,
       "height_m": 12.6,
       "status": "lost",
       "note": null,
-      "from": "uslhs"
+      "from": "uslhs",
+      "location": {
+        "lat": 42.189203,
+        "lon": -83.143596
+      }
     }
   ],
   "light": {
     "first_lit": 1891,
     "deactivated": null,
     "lens": null,
-    "characteristic": "F G",
-    "focal_height_m": 16.8,
+    "characteristic": "Q G",
+    "focal_height_m": 9.1,
     "range_nm": 16.0,
     "fog_signal": null,
     "from": "enc"
@@ -73,6 +90,18 @@
   "events": [
     {
       "year": 1891,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1891,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1895,
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
@@ -93,6 +122,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Grosse Isle South Channel Range Front",
+      "url": "https://archives.uslhs.org/places/grosse-isle-south-channel-range-front",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Grosse Isle South Channel Range Rear",
       "url": "https://archives.uslhs.org/places/grosse-isle-south-channel-range-rear",
       "kind": "reference"
@@ -105,7 +139,6 @@
       "part": "lighthousefriends:2002",
       "fields": [
         "kind",
-        "location",
         "name",
         "region"
       ]
@@ -120,10 +153,26 @@
     },
     {
       "source": "uscg_light_list",
-      "key": "uscg_light_list:7-7170",
-      "part": "lighthousefriends:2002",
+      "key": "uscg_light_list:7-7165",
+      "part": "station",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-7170",
+      "part": "lighthousefriends:2002",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9660",
+      "part": "uslhs:9660",
+      "fields": [
+        "events",
+        "location",
+        "structures"
       ]
     },
     {
@@ -138,17 +187,31 @@
     },
     {
       "source": "enc",
-      "key": "enc:42.18920,-83.14360",
-      "part": "lighthousefriends:2002",
+      "key": "enc:42.18421,-83.14053",
+      "part": "station",
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.18530,-83.14195",
+      "part": "station",
+      "fields": [
+        "light"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:42.18920,-83.14360",
+      "part": "lighthousefriends:2002",
+      "fields": []
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

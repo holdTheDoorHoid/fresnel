@@ -1,7 +1,10 @@
 {
   "id": "us-de-port-penn-range",
   "name": "Port Penn Range",
-  "other_names": [],
+  "other_names": [
+    "Port Penn Range Front",
+    "Port Penn Range Rear"
+  ],
   "country": "US",
   "region": "DE",
   "county": null,
@@ -9,35 +12,50 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 39.511372,
-    "lon": -75.609415,
+    "lat": 39.48833,
+    "lon": -75.587,
     "precision": "approximate",
-    "from": "lighthousefriends"
+    "from": "uslhs"
   },
   "status": "lost",
   "status_note": null,
   "structures": [
     {
-      "role": "tower",
-      "name": null,
+      "role": "front_range",
+      "name": "Port Penn Range Front",
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "wood",
+      "built": 1877,
+      "height_m": 10.7,
       "status": "lost",
       "note": null,
-      "from": "lighthousefriends"
+      "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Port Penn Range Rear",
+      "type": null,
+      "material": "steel",
+      "built": 1877,
+      "height_m": 36.6,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.51111,
+        "lon": -75.60617
+      }
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1877,
+    "deactivated": 1904,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 12.2,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -66,7 +84,26 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1904,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1905,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -75,18 +112,47 @@
       "label": "LighthouseFriends: Port Penn Range",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1889",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port Penn Range Front",
+      "url": "https://archives.uslhs.org/places/port-penn-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Port Penn Range Rear",
+      "url": "https://archives.uslhs.org/places/port-penn-range-rear",
+      "kind": "reference"
     }
   ],
   "sources": [
     {
       "source": "lighthousefriends",
       "key": "lighthousefriends:1889",
-      "part": "lighthousefriends:1889",
+      "part": "station",
       "fields": [
         "kind",
-        "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:32690",
+      "part": "uslhs:32690",
+      "fields": [
+        "events",
+        "light",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8400",
+      "part": "uslhs:8400",
+      "fields": [
+        "events",
+        "structures"
       ]
     }
   ],
@@ -95,5 +161,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

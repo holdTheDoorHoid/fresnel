@@ -1,12 +1,8 @@
 {
   "id": "ca-pe-miminegash-range-rear",
   "name": "Miminegash Range Rear",
-  "other_names": [],
   "country": "CA",
   "region": "PE",
-  "county": null,
-  "water": null,
-  "setting": null,
   "kind": "range_lights",
   "location": {
     "lat": 46.86987,
@@ -15,140 +11,10 @@
     "from": "lighthousefriends"
   },
   "status": "inactive",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "rear_range",
-      "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "lighthousefriends"
-    }
-  ],
-  "light": {
-    "first_lit": 1886,
-    "deactivated": 2017,
-    "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "rowlett"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": "CAN319",
-    "ccg_list_number": "A1034",
-    "nga": "8388",
-    "admiralty": "H1072.1"
-  },
-  "agency": "Canadian Coast Guard",
-  "ownership": "federal",
-  "access": {
-    "level": "private",
-    "note": null
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": null,
-    "climbable": false,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": "Lighthouse Friends marks it as private property with no access without permission."
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1886,
-      "event": "first_lit",
-      "note": "Station established",
-      "from": "rowlett"
-    },
-    {
-      "year": 1900,
-      "event": "built",
-      "note": "Year of the tower described by the Lighthouse Directory",
-      "from": "rowlett"
-    },
-    {
-      "year": 1972,
-      "event": "deactivated",
-      "note": null,
-      "from": "rowlett"
-    },
-    {
-      "year": 2017,
-      "event": "deactivated",
-      "note": null,
-      "from": "rowlett"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "Lighthouse Friends",
-      "url": "https://www.lighthousefriends.com/light.asp?ID=948",
-      "kind": "reference"
-    },
-    {
-      "label": "Lighthouse Directory (Rowlett)",
-      "url": "https://www.ibiblio.org/lighthouse/peiw.htm",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "lighthousefriends",
-      "key": "lighthousefriends:948",
-      "part": "lighthousefriends:948",
-      "fields": [
-        "kind",
-        "location",
-        "name",
-        "region",
-        "visit"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:peiw:miminegash-range-rear",
-      "part": "station",
-      "fields": [
-        "agency",
-        "aton",
-        "events",
-        "light",
-        "ownership",
-        "visit"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:peiw:miminegash-range-rear-2",
-      "part": "station",
-      "fields": [
-        "aton",
-        "events",
-        "visit"
-      ]
-    }
-  ],
-  "conflicts": [],
+  "sources": [],
   "verification": "unverified",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into ca-pe-miminegash-range: the same station",
+  "merged_into": "ca-pe-miminegash-range",
+  "updated": "2026-10-28"
 }

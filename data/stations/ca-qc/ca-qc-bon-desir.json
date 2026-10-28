@@ -3,6 +3,8 @@
   "name": "Phare de Bon-Désir",
   "other_names": [
     "phare de Bon-Désir",
+    "Cap-de-Bon-Désir Lighthouse",
+    "phare du Cap-de-Bon-Désir",
     "Bon Desir",
     "Bon Désir",
     "Bon-Désir"
@@ -24,7 +26,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Phare de Bon-Désir",
       "type": null,
       "material": null,
       "built": null,
@@ -32,6 +34,21 @@
       "status": "standing",
       "note": null,
       "from": "osm"
+    },
+    {
+      "role": "tower",
+      "name": "Cap-de-Bon-Désir Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 48.27,
+        "lon": -69.47
+      }
     }
   ],
   "light": {
@@ -88,11 +105,26 @@
   ],
   "keepers_count": null,
   "related": [],
-  "photos": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Bon_Desir_lighthouse.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Bon_Desir_lighthouse.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cap_de_Bon_Desir_lighthouse.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q114733580",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q32754132",
       "kind": "wikidata"
     },
     {
@@ -126,6 +158,14 @@
         "kind",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q32754132",
+      "part": "wikidata:Q32754132",
+      "fields": [
+        "photos"
       ]
     },
     {
@@ -173,5 +213,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

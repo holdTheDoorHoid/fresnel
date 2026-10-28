@@ -4,7 +4,8 @@
   "other_names": [
     "Minnesota Point Lighthouse",
     "Minnesota Point",
-    "Zero Point"
+    "Zero Point",
+    "ruins"
   ],
   "country": "US",
   "region": "MN",
@@ -34,14 +35,14 @@
     }
   ],
   "light": {
-    "first_lit": 1858,
+    "first_lit": 1857,
     "deactivated": 1913,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [
     {
@@ -61,7 +62,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -73,11 +74,23 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1857,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1858,
       "event": "built",
@@ -89,6 +102,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1878,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1885,
@@ -162,6 +181,11 @@
       "label": "Lighthouse Directory: Minnesota",
       "url": "https://www.ibiblio.org/lighthouse/mn.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Minnesota Point (ruins)",
+      "url": "https://archives.uslhs.org/places/minnesota-point-ruins",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -205,12 +229,30 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8539",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:74002206",
       "part": "wikidata:Q6868398",
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mn:minnesota-point",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -225,6 +267,10 @@
         {
           "source": "rowlett",
           "value": 1885
+        },
+        {
+          "source": "uslhs",
+          "value": 1878
         }
       ],
       "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
@@ -234,5 +280,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

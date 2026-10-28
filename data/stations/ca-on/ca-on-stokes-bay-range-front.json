@@ -1,7 +1,9 @@
 {
   "id": "ca-on-stokes-bay-range-front",
-  "name": "Stokes Bay Range Front",
+  "name": "Stokes Bay Range Lights",
   "other_names": [
+    "Stokes Bay Range Front",
+    "Stokes Bay Range Rear",
     "Stokes Bay front range light",
     "Knife Island"
   ],
@@ -22,7 +24,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Stokes Bay Range Front",
       "type": null,
       "material": null,
       "built": null,
@@ -30,10 +32,25 @@
       "status": "standing",
       "note": null,
       "from": "ccg_list_of_lights"
+    },
+    {
+      "role": "rear_range",
+      "name": "Stokes Bay Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 44.495495,
+        "lon": -81.368158
+      }
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1904,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
@@ -52,7 +69,7 @@
   "agency": "Canadian Coast Guard",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
+    "level": "public",
     "note": null
   },
   "staffing": {
@@ -66,12 +83,24 @@
     "tours": null,
     "boat_only": true,
     "passport_stamp": null,
-    "note": null
+    "note": "Lighthouse Friends: interior open or a museum on site. The Lighthouse Directory says the site is open."
   },
   "stay": null,
   "events": [
     {
       "year": 1904,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1904,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 2009,
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
       "from": "rowlett"
@@ -84,6 +113,11 @@
     {
       "label": "Lighthouse Friends",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1054",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1595",
       "kind": "reference"
     },
     {
@@ -104,8 +138,15 @@
       "part": "lighthousefriends:1054",
       "fields": [
         "kind",
-        "name",
         "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1595",
+      "part": "lighthousefriends:1595",
+      "fields": [
         "visit"
       ]
     },
@@ -131,6 +172,24 @@
         "ownership",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:stokes-bay-range-rear",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onlh:stokes-bay-range-rear-2",
+      "part": "station",
+      "fields": [
+        "events",
+        "light",
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -140,6 +199,14 @@
         {
           "source": "ccg_list_of_lights",
           "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
         },
         {
           "source": "rowlett",
@@ -153,5 +220,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

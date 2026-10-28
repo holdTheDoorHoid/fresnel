@@ -4,14 +4,15 @@
   "other_names": [
     "Elm Tree Beacon Lighthouse",
     "Elm Tree",
-    "Swash Channel Range Front"
+    "Swash Channel Range Front",
+    "Elm Tree Range Front"
   ],
   "country": "US",
   "region": "NY",
   "county": "Staten Island",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 40.56393,
     "lon": -74.09518,
@@ -38,7 +39,7 @@
     "deactivated": 1964,
     "lens": null,
     "characteristic": "F W - visible on Range line only",
-    "focal_height_m": null,
+    "focal_height_m": 18.3,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -54,7 +55,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -139,6 +140,11 @@
       "label": "Lighthouse Directory: New York: City and Hudson River",
       "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Elm Tree Range Front",
+      "url": "https://archives.uslhs.org/places/elm-tree-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -150,7 +156,6 @@
         "aton",
         "county",
         "events",
-        "kind",
         "light",
         "name",
         "photos",
@@ -173,6 +178,16 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8804",
+      "part": "station",
+      "fields": [
+        "access",
+        "kind",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
@@ -180,5 +195,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

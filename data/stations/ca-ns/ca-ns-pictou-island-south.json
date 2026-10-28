@@ -3,10 +3,10 @@
   "name": "Pictou Island South Lighthouse",
   "other_names": [
     "phare de Pictou Island, Feu Sud",
-    "Pictou Island West End Lighthouse",
-    "Pictou Island West",
-    "Pictou Island",
-    "Pictou Island West End"
+    "Pictou Island South",
+    "Pictou Island West Breakwater",
+    "Pictou Island East Breakwater",
+    "Pictou Island West Wharf"
   ],
   "country": "CA",
   "region": "NS",
@@ -15,8 +15,8 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 45.804101,
-    "lon": -62.602184,
+    "lat": 45.8038,
+    "lon": -62.585616,
     "precision": "exact",
     "from": "osm"
   },
@@ -25,23 +25,53 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Pictou Island South Lighthouse",
       "type": "wood_frame",
       "material": "wood",
       "built": 1907,
-      "height_m": 6.9,
+      "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "parks_canada_hl"
+      "from": "parks_canada_hl",
+      "location": {
+        "lat": 45.80389,
+        "lon": -62.58722
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Pictou Island East Breakwater",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "ccg_list_of_lights",
+      "location": {
+        "lat": 45.802611,
+        "lon": -62.585306
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Pictou Island South Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": 9.8,
+      "status": "standing",
+      "note": null,
+      "from": "osm"
     }
   ],
   "light": {
-    "first_lit": 1905,
+    "first_lit": null,
     "deactivated": null,
     "lens": null,
-    "characteristic": "LFl W 6s",
-    "focal_height_m": 14.0,
-    "range_nm": 6.0,
+    "characteristic": "Iso G 4s",
+    "focal_height_m": 4.9,
+    "range_nm": 4.0,
     "fog_signal": null,
     "from": "ccg_list_of_lights"
   },
@@ -54,13 +84,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN381",
-    "ccg_list_number": "A897",
-    "nga": "8612",
-    "admiralty": "H1244"
+    "arlhs": "CAN380",
+    "ccg_list_number": "A898",
+    "nga": "8608",
+    "admiralty": "H1240"
   },
-  "agency": "Canadian Coast Guard",
-  "ownership": "federal",
+  "agency": null,
+  "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
@@ -81,13 +111,7 @@
   "stay": null,
   "events": [
     {
-      "year": 1905,
-      "event": "first_lit",
-      "note": "Station established",
-      "from": "rowlett"
-    },
-    {
-      "year": 1965,
+      "year": 1907,
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
       "from": "rowlett"
@@ -110,7 +134,7 @@
     },
     {
       "label": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/2475959280",
+      "url": "https://www.openstreetmap.org/way/867579065",
       "kind": "osm"
     },
     {
@@ -120,7 +144,7 @@
     },
     {
       "label": "Lighthouse Friends",
-      "url": "https://www.lighthousefriends.com/light.asp?ID=2029",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1642",
       "kind": "reference"
     },
     {
@@ -150,10 +174,11 @@
     },
     {
       "source": "osm",
-      "key": "osm:node/2475959280",
-      "part": "wikidata:Q45324360",
+      "key": "osm:way/867579065",
+      "part": "osm:way/867579065",
       "fields": [
-        "location"
+        "location",
+        "structures"
       ]
     },
     {
@@ -166,63 +191,37 @@
     },
     {
       "source": "lighthousefriends",
-      "key": "lighthousefriends:2029",
-      "part": "wikidata:Q45324360",
+      "key": "lighthousefriends:1642",
+      "part": "osm:way/867579065",
       "fields": []
     },
     {
       "source": "ccg_list_of_lights",
-      "key": "ccg_list_of_lights:A897",
-      "part": "wikidata:Q45324360",
+      "key": "ccg_list_of_lights:A898",
+      "part": "osm:way/867579065",
       "fields": [
         "aton",
-        "light",
-        "structures"
+        "light"
       ]
     },
     {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A898.5",
+      "part": "ccg_list_of_lights:A898.5",
+      "fields": []
+    },
+    {
       "source": "rowlett",
-      "key": "rowlett:nsnw:pictou-island-west-end",
+      "key": "rowlett:nsnw:pictou-island-south",
       "part": "station",
       "fields": [
-        "agency",
         "aton",
         "events",
-        "light",
-        "ownership",
         "visit"
       ]
     }
   ],
   "conflicts": [
-    {
-      "field": "status",
-      "values": [
-        {
-          "source": "osm",
-          "value": "standing"
-        },
-        {
-          "source": "lighthousefriends",
-          "value": "lost"
-        }
-      ],
-      "note": "A source says this structure is gone, but OpenStreetMap maps it today."
-    },
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "rowlett",
-          "value": 1905
-        },
-        {
-          "source": "parks_canada_hl",
-          "value": 1907
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    },
     {
       "field": "location",
       "values": [
@@ -234,41 +233,20 @@
           ]
         },
         {
-          "source": "osm",
-          "value": [
-            45.8041,
-            -62.60218
-          ]
-        },
-        {
           "source": "parks_canada_hl",
           "value": [
             45.80389,
             -62.58722
           ]
-        },
-        {
-          "source": "lighthousefriends",
-          "value": [
-            45.80417,
-            -62.60194
-          ]
-        },
-        {
-          "source": "ccg_list_of_lights",
-          "value": [
-            45.80417,
-            -62.602
-          ]
         }
       ],
-      "distance_m": 1160,
+      "distance_m": 1199,
       "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

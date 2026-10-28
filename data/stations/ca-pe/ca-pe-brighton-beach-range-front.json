@@ -1,11 +1,17 @@
 {
   "id": "ca-pe-brighton-beach-range-front",
-  "name": "Brighton Beach Range Front Light",
+  "name": "Brighton Beach Range Lights",
   "other_names": [
+    "Brighton Beach Range Front Light",
     "phare d'alignement antérieur de Brighton Beach",
+    "Brighton Beach Range Rear Light",
+    "phare arrière de Brighton Beach",
+    "phares d'alignement de Brighton Beach",
     "Brighton Beach Front Range Lighthouse",
     "Brighton Beach Range Front",
-    "Brighton Beach front range light"
+    "Brighton Beach Range Rear",
+    "Brighton Beach front range light",
+    "Brighton Beach rear range light"
   ],
   "country": "CA",
   "region": "PE",
@@ -24,7 +30,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Brighton Beach Range Front Light",
       "type": "wood_frame",
       "material": "wood",
       "built": 1889,
@@ -32,10 +38,36 @@
       "status": "standing",
       "note": null,
       "from": "parks_canada_hl"
+    },
+    {
+      "role": "rear_range",
+      "name": "Brighton Beach Range Rear Light",
+      "type": "concrete",
+      "material": "concrete",
+      "built": 1890,
+      "height_m": 18.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.233992,
+        "lon": -63.14958
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Brighton Beach Range Lights",
+      "type": null,
+      "material": null,
+      "built": 1890,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
     }
   ],
   "light": {
-    "first_lit": 1892,
+    "first_lit": 1890,
     "deactivated": null,
     "lens": null,
     "characteristic": "F Y",
@@ -87,7 +119,13 @@
     {
       "year": 1890,
       "event": "built",
-      "note": "Year of the tower described by the Lighthouse Directory",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1890,
+      "event": "first_lit",
+      "note": "Station established",
       "from": "rowlett"
     },
     {
@@ -95,6 +133,18 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1968,
+      "event": "first_lit",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1969,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
     },
     {
       "year": 2013,
@@ -110,6 +160,15 @@
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brighton_Beach_Front_Lighthouse_%2822289015685%29.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brighton_Beach_Front_Lighthouse_%2822289015685%29.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:Brighton_Beach_Front_Lighthouse_%2822289015685%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brighton_Beach_Back_Range_Lighthouse_%2821668046293%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brighton_Beach_Back_Range_Lighthouse_%2821668046293%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Brighton_Beach_Back_Range_Lighthouse_%2821668046293%29.jpg",
       "credit": "Wikimedia Commons",
       "license": null,
       "caption": null,
@@ -138,6 +197,46 @@
       "kind": "register"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q46996993",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_arri%C3%A8re_de_Brighton_Beach",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Brighton_Beach_Range_Rear_Lighthouse",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN127",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN127.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q4967602",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Brighton_Beach_Range_Lights",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Brighton_Beach_Range_Lights",
+      "kind": "commons"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6548334650",
+      "kind": "osm"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/way/543767996",
       "kind": "osm"
@@ -150,6 +249,11 @@
     {
       "label": "Lighthouse Friends",
       "url": "https://www.lighthousefriends.com/light.asp?ID=965",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=966",
       "kind": "reference"
     },
     {
@@ -174,13 +278,36 @@
         "county",
         "events",
         "kind",
-        "light",
-        "name",
         "photos",
         "region",
         "registers",
         "structures"
       ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q46996993",
+      "part": "wikidata:Q46996993",
+      "fields": [
+        "events",
+        "photos",
+        "structures"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q4967602",
+      "part": "wikidata:Q4967602",
+      "fields": [
+        "name",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/6548334650",
+      "part": "wikidata:Q46996993",
+      "fields": []
     },
     {
       "source": "osm",
@@ -205,6 +332,12 @@
       "fields": []
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:966",
+      "part": "wikidata:Q46996993",
+      "fields": []
+    },
+    {
       "source": "ccg_list_of_lights",
       "key": "ccg_list_of_lights:A994",
       "part": "wikidata:Q45324401",
@@ -214,40 +347,39 @@
       ]
     },
     {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A995",
+      "part": "wikidata:Q46996993",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:pei:brighton-beach-range-front",
       "part": "station",
       "fields": [
         "aton",
-        "events",
         "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:brighton-beach-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light",
         "visit"
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1892
-        },
-        {
-          "source": "rowlett",
-          "value": 1890
-        },
-        {
-          "source": "parks_canada_hl",
-          "value": 1889
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

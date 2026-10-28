@@ -4,6 +4,7 @@
   "other_names": [
     "Sabine Bank Lighthouse",
     "Sabine Bank",
+    "lantern",
     "Sabine River Range (Range C) Rear"
   ],
   "country": "US",
@@ -79,6 +80,12 @@
     },
     {
       "year": 1906,
+      "event": "built",
+      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1906,
       "event": "first_lit",
       "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
@@ -92,7 +99,7 @@
     {
       "year": 2001,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -100,6 +107,12 @@
       "event": "built",
       "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 2002,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -137,8 +150,18 @@
       "kind": "register"
     },
     {
+      "label": "LighthouseFriends: Sabine Bank",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=150",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory: Texas: Southeast",
       "url": "https://www.ibiblio.org/lighthouse/tx.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sabine Bank",
+      "url": "https://archives.uslhs.org/places/sabine-bank",
       "kind": "reference"
     }
   ],
@@ -161,6 +184,20 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:150",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:tx:sabine-bank-1",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:tx:sabine-bank-2",
       "part": "station",
@@ -173,6 +210,14 @@
       "key": "rowlett:tx:sabine-river-range-range-c-rear-2",
       "part": "station",
       "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3522",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
     }
   ],
   "conflicts": [],
@@ -180,5 +225,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

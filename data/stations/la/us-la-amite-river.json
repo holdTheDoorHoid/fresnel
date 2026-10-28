@@ -1,7 +1,9 @@
 {
   "id": "us-la-amite-river",
   "name": "Amite River",
-  "other_names": [],
+  "other_names": [
+    "Amite River Entrance Light"
+  ],
   "country": "US",
   "region": "LA",
   "county": null,
@@ -9,10 +11,10 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 30.55417,
-    "lon": -91.41983,
+    "lat": 30.297125,
+    "lon": -90.558041,
     "precision": "approximate",
-    "from": "uslhs"
+    "from": "lighthousefriends"
   },
   "status": "lost",
   "status_note": null,
@@ -21,27 +23,27 @@
       "role": "tower",
       "name": null,
       "type": null,
-      "material": "wood",
-      "built": 1882,
+      "material": null,
+      "built": null,
       "height_m": null,
       "status": "lost",
       "note": null,
-      "from": "uslhs"
+      "from": "lighthousefriends"
     }
   ],
   "light": {
     "first_lit": 1882,
     "deactivated": null,
     "lens": null,
-    "characteristic": null,
+    "characteristic": "Fl W 4s",
     "focal_height_m": 13.7,
-    "range_nm": null,
+    "range_nm": 4.0,
     "fog_signal": null,
-    "from": "uslhs"
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
+    "uscg_llnr": "4-11650",
     "arlhs": null,
     "ccg_list_number": null,
     "nga": null
@@ -79,6 +81,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Amite River",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1802",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Amite River",
       "url": "https://archives.uslhs.org/places/amite-river",
       "kind": "reference"
@@ -86,17 +93,32 @@
   ],
   "sources": [
     {
-      "source": "uslhs",
-      "key": "uslhs:8432",
-      "part": "uslhs:8432",
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1802",
+      "part": "lighthousefriends:1802",
       "fields": [
-        "events",
         "kind",
-        "light",
         "location",
         "name",
-        "region",
-        "structures"
+        "region"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-11650",
+      "part": "lighthousefriends:1802",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8432",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
       ]
     }
   ],
@@ -105,5 +127,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

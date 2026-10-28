@@ -5,6 +5,7 @@
     "New Dorp Lighthouse",
     "New Dorp",
     "New Dorp (Swash Channel Range Rear (1))",
+    "New Dorp Range Rear",
     "Moravian Light"
   ],
   "country": "US",
@@ -12,7 +13,7 @@
   "county": "Staten Island",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 40.580787,
     "lon": -74.120121,
@@ -23,8 +24,23 @@
   "status_note": null,
   "structures": [
     {
+      "role": "rear_range",
+      "name": "New Dorp Range Rear",
+      "type": "integral",
+      "material": "wood",
+      "built": 1856,
+      "height_m": 12.2,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 40.57517,
+        "lon": -74.119
+      }
+    },
+    {
       "role": "tower",
-      "name": null,
+      "name": "New Dorp Light",
       "type": "integral",
       "material": "wood",
       "built": 1856,
@@ -68,7 +84,7 @@
   "ownership": "unknown",
   "access": {
     "level": "private",
-    "note": "OpenStreetMap tags the structure access=private. LighthouseFriends marks it privately owned, with no access without permission."
+    "note": "OpenStreetMap tags the structure access=private. LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -94,7 +110,7 @@
     {
       "year": 1856,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -165,6 +181,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: New Dorp Range Rear",
+      "url": "https://archives.uslhs.org/places/new-dorp-range-rear",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/75321377",
       "kind": "register"
@@ -179,7 +200,6 @@
         "aton",
         "county",
         "events",
-        "kind",
         "light",
         "name",
         "photos",
@@ -214,6 +234,17 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3420",
+      "part": "uslhs:3420",
+      "fields": [
+        "access",
+        "events",
+        "kind",
+        "structures"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:73001260",
       "part": "wikidata:Q1796230",
@@ -228,5 +259,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

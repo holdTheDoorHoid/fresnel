@@ -75,15 +75,15 @@
   "agency": "U.S. Coast Guard",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1974"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": null,
     "museum": null,
     "tours": null,
@@ -115,8 +115,14 @@
     {
       "year": 1916,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1916,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1974,
@@ -221,6 +227,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Cape St. Elias",
+      "url": "https://archives.uslhs.org/places/cape-st-elias",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/75325812",
       "kind": "register"
@@ -317,6 +328,16 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2688",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "visit"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:75002157",
       "part": "wikidata:Q1840489",
@@ -354,5 +375,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

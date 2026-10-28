@@ -3,7 +3,8 @@
   "name": "Ship Island Light",
   "other_names": [
     "Ship Island Lighthouse",
-    "Ship Island"
+    "Ship Island",
+    "Gulfport Upper Reach Outbound Range Rear"
   ],
   "country": "US",
   "region": "MS",
@@ -33,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1853,
     "deactivated": 1964,
     "lens": null,
     "characteristic": "Fl W 6s",
@@ -77,10 +78,28 @@
       "from": "wikidata"
     },
     {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1853,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1964,
       "event": "deactivated",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1971,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1971,
@@ -132,6 +151,16 @@
       "label": "LighthouseFriends: Ship Island",
       "url": "https://www.lighthousefriends.com/light.asp?ID=648",
       "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Mississippi",
+      "url": "https://www.ibiblio.org/lighthouse/ms.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ship Island",
+      "url": "https://archives.uslhs.org/places/ship-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -160,6 +189,14 @@
       ]
     },
     {
+      "source": "rowlett",
+      "key": "rowlett:ms:ship-island-3",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
       "source": "uscg_light_list",
       "key": "uscg_light_list:4-335",
       "part": "wikidata:Q7497930",
@@ -172,6 +209,21 @@
       "fields": []
     },
     {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:4-9795",
+      "part": "wikidata:Q7497930",
+      "fields": []
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8549",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:30.21262,-88.96632",
       "part": "wikidata:Q7497930",
@@ -180,25 +232,10 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1971
-        },
-        {
-          "source": "wikidata",
-          "value": 1964
-        }
-      ],
-      "note": "A source gives the light's service entry (1971) after its retirement (1964); it may have been relit. Neither is shown as the first lighting."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

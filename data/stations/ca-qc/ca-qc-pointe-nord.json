@@ -1,8 +1,10 @@
 {
   "id": "ca-qc-pointe-nord",
-  "name": "Phare de Pointe-Nord",
+  "name": "Cap-de-Rabast Lighthouse",
   "other_names": [
+    "Phare de Pointe-Nord",
     "phare de Pointe-Nord",
+    "phare du Cap-de-Rabast",
     "Cap de Rabast",
     "Cap de Rabast (North Point)",
     "Cap-de-Rabast",
@@ -25,7 +27,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Phare de Pointe-Nord",
       "type": null,
       "material": null,
       "built": null,
@@ -33,6 +35,21 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "tower",
+      "name": "Cap-de-Rabast Lighthouse",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 49.95,
+        "lon": -64.13
+      }
     }
   ],
   "light": {
@@ -45,7 +62,18 @@
     "fog_signal": null,
     "from": "ccg_list_of_lights"
   },
-  "registers": [],
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "10948",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=10948"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3954",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3954"
+    }
+  ],
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN84",
@@ -86,6 +114,12 @@
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
       "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
     }
   ],
   "keepers_count": null,
@@ -95,6 +129,11 @@
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q114733575",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q32756769",
       "kind": "wikidata"
     },
     {
@@ -128,6 +167,15 @@
         "kind",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q32756769",
+      "part": "wikidata:Q32756769",
+      "fields": [
+        "events",
+        "registers"
       ]
     },
     {
@@ -173,5 +221,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -782,7 +782,8 @@ file describes the merged state, not the run). The module docstring has every ru
   - *Curation* (`data/curation_ca.json`; every entry needs a reason; the decisions are in
     `docs/sources/review_2026-10-ca.md`): `rekind`, `join`, `apart`, `hide` (by id, or by record key before
     the station has an id), `rename` (display name only) and `merge_stations` (retires one id with
-    `merged_into`; the file stays).
+    `merged_into`; the file stays). `detach` and `apart` also hold against an OpenStreetMap element's
+    `wikidata=` tag (Pictou Island's west-end light is tagged with the South light's item).
   - *The review file* has a `canada` section (counts by province, status, kind, staffing and access; the
     staffed list and the stations that rest only on the 2010 list; unplaced Directory entries; stations the
     Coast Guard list started; curation entries). What a run did (joins by kind, ambiguous identifiers) is

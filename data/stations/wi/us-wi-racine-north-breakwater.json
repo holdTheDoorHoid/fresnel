@@ -4,12 +4,14 @@
   "other_names": [
     "Racine Breakwater Lighthouse",
     "Racine Breakwater",
+    "Racine North Breakwater",
     "Racine West Harbor Entrance",
+    "RACINE North Breakwater",
     "Racine West Harbor Entrance Light 3"
   ],
   "country": "US",
   "region": "WI",
-  "county": null,
+  "county": "Racine",
   "water": null,
   "setting": "pier",
   "kind": "pier_light",
@@ -47,7 +49,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": "7-20495",
-    "arlhs": null,
+    "arlhs": "USA-682",
     "ccg_list_number": null,
     "nga": null
   },
@@ -55,7 +57,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -79,9 +81,33 @@
       "from": "wikidata"
     },
     {
+      "year": 1872,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1872,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1900,
+      "event": "first_lit",
+      "note": "Station established (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1901,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
       "year": 1987,
       "event": "deactivated",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     }
   ],
@@ -129,6 +155,11 @@
       "label": "Lighthouse Directory: Wisconsin",
       "url": "https://www.ibiblio.org/lighthouse/wi.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: RACINE North Breakwater",
+      "url": "https://archives.uslhs.org/places/racine-north-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -161,6 +192,15 @@
     },
     {
       "source": "rowlett",
+      "key": "rowlett:wi:racine-north-breakwater-2",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events"
+      ]
+    },
+    {
+      "source": "rowlett",
       "key": "rowlett:wi:racine-west-harbor-entrance",
       "part": "station",
       "fields": [
@@ -174,6 +214,16 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3580",
+      "part": "station",
+      "fields": [
+        "access",
+        "county",
+        "events"
+      ]
     }
   ],
   "conflicts": [],
@@ -181,5 +231,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

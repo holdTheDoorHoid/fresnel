@@ -3,11 +3,12 @@
   "name": "Fishing Battery Light",
   "other_names": [
     "Fishing Battery Lighthouse",
-    "Fishing Battery"
+    "Fishing Battery",
+    "Fishing Battery Island"
   ],
   "country": "US",
   "region": "MD",
-  "county": null,
+  "county": "Harford",
   "water": null,
   "setting": null,
   "kind": "lighthouse",
@@ -22,7 +23,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Fishing Battery Island",
+      "type": null,
+      "material": "brick",
+      "built": 1853,
+      "height_m": 9.8,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 39.48917,
+        "lon": -76.08367
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Fishing Battery Light",
       "type": "integral",
       "material": null,
       "built": null,
@@ -37,7 +53,7 @@
     "deactivated": 1925,
     "lens": null,
     "characteristic": "F W (original); Fl W with two R sectors (current)",
-    "focal_height_m": null,
+    "focal_height_m": 11.0,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -53,7 +69,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -79,7 +95,7 @@
     {
       "year": 1853,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -150,6 +166,11 @@
       "label": "Lighthouse Directory: Maryland",
       "url": "https://www.ibiblio.org/lighthouse/md.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Fishing Battery Island",
+      "url": "https://archives.uslhs.org/places/fishing-battery-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -202,6 +223,18 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2873",
+      "part": "uslhs:2873",
+      "fields": [
+        "access",
+        "county",
+        "events",
+        "light",
+        "structures"
+      ]
+    },
+    {
       "source": "uslhs_passport",
       "key": "uslhs_passport:stamp:md:fishing-battery",
       "part": "station",
@@ -221,6 +254,10 @@
         {
           "source": "rowlett",
           "value": 1921
+        },
+        {
+          "source": "uslhs",
+          "value": 1921
         }
       ],
       "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
@@ -230,5 +267,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

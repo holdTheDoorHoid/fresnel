@@ -1,10 +1,11 @@
 {
   "id": "us-mi-grassy-island",
-  "name": "Grassy Island Light",
+  "name": "Grassy Island South Range",
   "other_names": [
+    "Grassy Island Light",
     "Grassy Island Lighthouse",
-    "Grassy Island South Range",
-    "Grassy Island North Channel Range Front"
+    "Grassy Island South Channel Range Front",
+    "Grassy Island South Channel Range Rear"
   ],
   "country": "US",
   "region": "MI",
@@ -13,28 +14,58 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 42.224444,
-    "lon": -83.133333,
+    "lat": 42.21867,
+    "lon": -83.12633,
     "precision": "approximate",
-    "from": "lighthousefriends"
+    "from": "uslhs"
   },
   "status": "lost",
   "status_note": null,
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Grassy Island South Channel Range Front",
       "type": null,
       "material": null,
-      "built": 1897,
+      "built": 1896,
       "height_m": null,
       "status": "lost",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Grassy Island South Channel Range Rear",
+      "type": null,
+      "material": null,
+      "built": 1897,
+      "height_m": 14.5,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 42.22083,
+        "lon": -83.12633
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Grassy Island Light",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 42.224444,
+        "lon": -83.133333
+      }
     }
   ],
   "light": {
-    "first_lit": 1897,
+    "first_lit": 1849,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl G 4s",
@@ -72,9 +103,21 @@
   "stay": null,
   "events": [
     {
-      "year": 1897,
+      "year": 1849,
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1896,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1897,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
     }
   ],
@@ -108,8 +151,13 @@
       "kind": "reference"
     },
     {
-      "label": "US Lighthouse Society Digital Archive: Grassy Island North Channel Range Front",
-      "url": "https://archives.uslhs.org/places/grassy-island-north-channel-range-front",
+      "label": "US Lighthouse Society Digital Archive: Grassy Island South Channel Range Front",
+      "url": "https://archives.uslhs.org/places/grassy-island-south-channel-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Grassy Island South Channel Range Rear",
+      "url": "https://archives.uslhs.org/places/grassy-island-south-channel-range-rear",
       "kind": "reference"
     }
   ],
@@ -121,7 +169,6 @@
       "fields": [
         "aton",
         "county",
-        "name",
         "photos",
         "region"
       ]
@@ -132,7 +179,7 @@
       "part": "wikidata:Q16840811",
       "fields": [
         "kind",
-        "location"
+        "name"
       ]
     },
     {
@@ -143,8 +190,18 @@
     },
     {
       "source": "uslhs",
-      "key": "uslhs:9657",
-      "part": "wikidata:Q16840811",
+      "key": "uslhs:8509",
+      "part": "uslhs:8509",
+      "fields": [
+        "events",
+        "location",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:9658",
+      "part": "uslhs:9658",
       "fields": [
         "events",
         "light",
@@ -161,9 +218,9 @@
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

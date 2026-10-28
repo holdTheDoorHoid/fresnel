@@ -16,8 +16,8 @@
     "precision": "exact",
     "from": "lighthousefriends"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "inactive",
+  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
   "structures": [
     {
       "role": "tower",
@@ -26,20 +26,20 @@
       "material": null,
       "built": 1913,
       "height_m": 18.3,
-      "status": "unknown",
+      "status": "standing",
       "note": null,
       "from": "wikidata"
     }
   ],
   "light": {
     "first_lit": null,
-    "deactivated": null,
+    "deactivated": 1967,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "rowlett"
   },
   "registers": [],
   "aton": {
@@ -52,7 +52,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -72,8 +72,14 @@
     {
       "year": 1913,
       "event": "built",
-      "note": null,
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1967,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -119,6 +125,16 @@
       "label": "LighthouseFriends: Titanic Memorial",
       "url": "https://www.lighthousefriends.com/light.asp?ID=585",
       "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: New York: City and Hudson River",
+      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Titanic Memorial",
+      "url": "https://archives.uslhs.org/places/titanic-memorial",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -144,6 +160,23 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nydn:titanic-memorial",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8835",
+      "part": "station",
+      "fields": [
+        "access"
+      ]
     }
   ],
   "conflicts": [],
@@ -151,5 +184,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

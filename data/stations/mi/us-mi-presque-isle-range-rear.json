@@ -1,14 +1,8 @@
 {
   "id": "us-mi-presque-isle-range-rear",
   "name": "Presque Isle Range Rear",
-  "other_names": [
-    "Presque Isle Harbor Range Rear Light"
-  ],
   "country": "US",
   "region": "MI",
-  "county": null,
-  "water": null,
-  "setting": null,
   "kind": "range_lights",
   "location": {
     "lat": 45.3375,
@@ -17,153 +11,10 @@
     "from": "uslhs"
   },
   "status": "inactive",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "rear_range",
-      "name": null,
-      "type": null,
-      "material": null,
-      "built": 1870,
-      "height_m": 7.6,
-      "status": "standing",
-      "note": null,
-      "from": "uslhs"
-    }
-  ],
-  "light": {
-    "first_lit": 1870,
-    "deactivated": 1967,
-    "lens": null,
-    "characteristic": "Q R",
-    "focal_height_m": 11.0,
-    "range_nm": 12.0,
-    "fog_signal": null,
-    "from": "enc"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": "7-11570",
-    "arlhs": "USA-670",
-    "ccg_list_number": null,
-    "nga": null
-  },
-  "agency": null,
-  "ownership": "unknown",
-  "access": {
-    "level": "unknown",
-    "note": "The US Lighthouse Society's archive lists it as not open to the public."
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": null,
-    "climbable": null,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1870,
-      "event": "first_lit",
-      "note": "Station established (Rowlett's Lighthouse Directory)",
-      "from": "rowlett"
-    },
-    {
-      "year": 1871,
-      "event": "built",
-      "note": "Tower 1 (Rowlett's Lighthouse Directory)",
-      "from": "rowlett"
-    },
-    {
-      "year": 1967,
-      "event": "built",
-      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
-      "from": "rowlett"
-    },
-    {
-      "year": 1967,
-      "event": "deactivated",
-      "note": "Rowlett's Lighthouse Directory",
-      "from": "rowlett"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "Lighthouse Directory: Michigan",
-      "url": "https://www.ibiblio.org/lighthouse/minel.htm",
-      "kind": "reference"
-    },
-    {
-      "label": "US Lighthouse Society Digital Archive: Presque Isle Range Rear",
-      "url": "https://archives.uslhs.org/places/presque-isle-range-rear",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "rowlett",
-      "key": "rowlett:minel:presque-isle-range-rear-1",
-      "part": "station",
-      "fields": [
-        "aton",
-        "events",
-        "light",
-        "name",
-        "region"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:minel:presque-isle-range-rear-2",
-      "part": "station",
-      "fields": [
-        "aton",
-        "events",
-        "light"
-      ]
-    },
-    {
-      "source": "uscg_light_list",
-      "key": "uscg_light_list:7-11570",
-      "part": "station",
-      "fields": [
-        "light"
-      ]
-    },
-    {
-      "source": "uslhs",
-      "key": "uslhs:9820",
-      "part": "uslhs:9820",
-      "fields": [
-        "access",
-        "kind",
-        "location",
-        "structures"
-      ]
-    },
-    {
-      "source": "enc",
-      "key": "enc:45.33834,-83.48243",
-      "part": "uslhs:9820",
-      "fields": [
-        "light"
-      ]
-    }
-  ],
-  "conflicts": [],
+  "sources": [],
   "verification": "unverified",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into us-mi-presque-isle-rear-range: the same station",
+  "merged_into": "us-mi-presque-isle-rear-range",
+  "updated": "2026-10-28"
 }

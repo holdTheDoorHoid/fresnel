@@ -39,7 +39,7 @@
     "deactivated": 1962,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 47.2,
     "range_nm": null,
     "fog_signal": null,
     "from": "rowlett"
@@ -63,7 +63,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -75,7 +75,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -91,6 +91,18 @@
       "event": "first_lit",
       "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 1768,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1858,
+      "event": "lens_installed",
+      "note": "Original lens: order 1 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1876,
@@ -172,6 +184,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Morris Island (Old Charleston)",
+      "url": "https://archives.uslhs.org/places/morris-island-old-charleston",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/118997393",
       "kind": "register"
@@ -224,12 +241,30 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3515",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:82003837",
       "part": "wikidata:Q6913753",
       "fields": [
         "events",
         "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:sc:morris-island",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -238,5 +273,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -16,13 +16,13 @@
   "setting": null,
   "kind": "lighthouse",
   "location": {
-    "lat": 38.9474,
-    "lon": -75.3151,
+    "lat": 38.776648,
+    "lon": -75.145565,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "lighthousefriends"
   },
-  "status": "lost",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "The 1873 lighthouse at the mouth of the Mispillion River was moved to Lewes after the 2002 fire; the light ended in 1929.",
   "structures": [
     {
       "role": "tower",
@@ -79,8 +79,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "The US Lighthouse Society's archive lists it as not open to the public."
+    "level": "private",
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -126,6 +126,12 @@
       "event": "lens_installed",
       "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Tower 3 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1926,
@@ -212,6 +218,11 @@
       "kind": "register"
     },
     {
+      "label": "LighthouseFriends: Mispillion",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=455",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory: Delaware",
       "url": "https://www.ibiblio.org/lighthouse/de.htm",
       "kind": "reference"
@@ -242,7 +253,6 @@
         "events",
         "kind",
         "light",
-        "location",
         "name",
         "photos",
         "region",
@@ -263,12 +273,30 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:455",
+      "part": "wikidata:Q111395782",
+      "fields": [
+        "access",
+        "location",
+        "visit"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:de:mispillion-2",
       "part": "station",
       "fields": [
         "events",
         "light"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:de:mispillion-3",
+      "part": "station",
+      "fields": [
+        "events"
       ]
     },
     {
@@ -318,11 +346,39 @@
         }
       ],
       "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    },
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": [
+            38.9474,
+            -75.3151
+          ]
+        },
+        {
+          "source": "wikidata",
+          "value": [
+            38.9474,
+            -75.3151
+          ]
+        },
+        {
+          "source": "lighthousefriends",
+          "value": [
+            38.77665,
+            -75.14557
+          ]
+        }
+      ],
+      "distance_m": 23999,
+      "note": "Sources place this structure more than 500 m apart."
     }
   ],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

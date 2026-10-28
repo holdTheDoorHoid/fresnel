@@ -1,7 +1,10 @@
 {
   "id": "us-nc-southwest-point-royal-shoal",
   "name": "Southwest Point Royal Shoal",
-  "other_names": [],
+  "other_names": [
+    "Southwest Point",
+    "Royal Shoal"
+  ],
   "country": "US",
   "region": "NC",
   "county": null,
@@ -19,7 +22,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Southwest Point",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1826,
+      "height_m": 10.7,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 35.11717,
+        "lon": -76.13917
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Southwest Point Royal Shoal",
       "type": null,
       "material": null,
       "built": null,
@@ -30,14 +48,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1867,
+    "deactivated": 1923,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 10.7,
     "range_nm": null,
     "fog_signal": null,
-    "from": null
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -66,7 +84,32 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1826,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1867,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1867,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1923,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -74,6 +117,11 @@
     {
       "label": "LighthouseFriends: Southwest Point Royal Shoal",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1918",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Southwest Point (Royal Shoal)",
+      "url": "https://archives.uslhs.org/places/southwest-point-royal-shoal",
       "kind": "reference"
     }
   ],
@@ -88,12 +136,22 @@
         "name",
         "region"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8866",
+      "part": "uslhs:8866",
+      "fields": [
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

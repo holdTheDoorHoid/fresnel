@@ -33,14 +33,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1852,
     "deactivated": 1913,
     "lens": null,
     "characteristic": null,
-    "focal_height_m": null,
+    "focal_height_m": 14.9,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -77,9 +77,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1852,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1856,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1913,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -106,6 +118,11 @@
       "label": "LighthouseFriends: Bulls Bay",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1858",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bulls Bay",
+      "url": "https://archives.uslhs.org/places/bulls-bay",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -130,6 +147,15 @@
       "fields": [
         "location"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8911",
+      "part": "station",
+      "fields": [
+        "events",
+        "light"
+      ]
     }
   ],
   "conflicts": [],
@@ -137,5 +163,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

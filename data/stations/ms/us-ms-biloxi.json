@@ -35,7 +35,12 @@
   "light": {
     "first_lit": 1848,
     "deactivated": null,
-    "lens": null,
+    "lens": {
+      "type": "fresnel",
+      "order": "5",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Oc W 4s",
     "focal_height_m": 18.6,
     "range_nm": null,
@@ -65,20 +70,20 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "automated",
     "as_of": "1941"
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -92,7 +97,7 @@
     {
       "year": 1848,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -168,6 +173,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Biloxi",
+      "url": "https://archives.uslhs.org/places/biloxi",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/73891206",
       "kind": "register"
@@ -224,6 +234,17 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3359",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:73001012",
       "part": "wikidata:Q4913574",
@@ -239,6 +260,14 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ms:biloxi",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -246,5 +275,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -2,6 +2,7 @@
   "id": "us-fl-fort-barrancas-range",
   "name": "Fort Barrancas Range Lights",
   "other_names": [
+    "Fort Barrancas",
     "Fort Barrancas Range Front",
     "Fort Barrancas Range Rear"
   ],
@@ -41,6 +42,21 @@
       "status": "lost",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Fort Barrancas",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 30.346952,
+        "lon": -87.301956
+      }
     }
   ],
   "light": {
@@ -93,6 +109,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Fort Barrancas",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1832",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Fort Barrancas Range Front",
       "url": "https://archives.uslhs.org/places/fort-barrancas-range-front",
       "kind": "reference"
@@ -105,14 +126,21 @@
   ],
   "sources": [
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1832",
+      "part": "lighthousefriends:1832",
+      "fields": [
+        "region"
+      ]
+    },
+    {
       "source": "uslhs",
       "key": "uslhs:18667",
       "part": "uslhs:18667",
       "fields": [
         "county",
         "kind",
-        "location",
-        "region"
+        "location"
       ]
     },
     {
@@ -131,5 +159,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

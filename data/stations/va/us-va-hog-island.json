@@ -3,7 +3,8 @@
   "name": "Hog Island Light",
   "other_names": [
     "Hog Island Lighthouse",
-    "Hog Island"
+    "Hog Island",
+    "lens"
   ],
   "country": "US",
   "region": "VA",
@@ -17,8 +18,8 @@
     "precision": "exact",
     "from": "wikidata"
   },
-  "status": "unknown",
-  "status_note": "Reviewed 2026-10: Wikidata's end date (1948) is the only evidence that this light is gone; no source maps or lists a structure.",
+  "status": "lost",
+  "status_note": "Discontinued in 1948; LighthouseFriends lists the tower as destroyed and the Society's archive as lost. Its lens is displayed at Portsmouth.",
   "structures": [
     {
       "role": "tower",
@@ -85,8 +86,8 @@
     {
       "year": 1896,
       "event": "built",
-      "note": "Present tower (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
     },
     {
       "year": 1896,
@@ -97,7 +98,7 @@
     {
       "year": 1948,
       "event": "deactivated",
-      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
     },
     {
@@ -142,6 +143,16 @@
       "kind": "commons"
     },
     {
+      "label": "LighthouseFriends: Hog Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1894",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory: Virginia",
+      "url": "https://www.ibiblio.org/lighthouse/va.htm",
+      "kind": "reference"
+    },
+    {
       "label": "US Lighthouse Society Digital Archive: Hog Island",
       "url": "https://archives.uslhs.org/places/hog-island",
       "kind": "reference"
@@ -164,6 +175,20 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1894",
+      "part": "station",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:va:hog-island-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
       "source": "uslhs",
       "key": "uslhs:8958",
       "part": "wikidata:Q5876980",
@@ -174,25 +199,10 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1853
-        },
-        {
-          "source": "uslhs",
-          "value": 1852
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    }
-  ],
+  "conflicts": [],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

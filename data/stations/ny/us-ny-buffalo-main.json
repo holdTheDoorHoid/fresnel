@@ -7,6 +7,7 @@
     "Buffalo Main",
     "Buffalo",
     "Main",
+    "Buffalo 1818",
     "Buffalo Main LIght",
     "Buffalo Harbor North Entrance Light 7",
     "Buffalo Coast Guard Slip Light",
@@ -30,7 +31,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Buffalo 1818",
+      "type": null,
+      "material": "stone",
+      "built": 1818,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 42.87483,
+        "lon": -78.89083
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Buffalo Main Light",
       "type": null,
       "material": "cast_iron",
       "built": 1833,
@@ -102,6 +118,12 @@
       "year": 1833,
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1833,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
     },
     {
@@ -209,6 +231,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Buffalo 1818",
+      "url": "https://archives.uslhs.org/places/buffalo-1818",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/28891094",
       "kind": "register"
@@ -288,6 +315,15 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:6802",
+      "part": "uslhs:6802",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:84002383",
       "part": "wikidata:Q4985783",
@@ -325,29 +361,10 @@
       "fields": []
     }
   ],
-  "conflicts": [
-    {
-      "field": "first_year",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1987
-        },
-        {
-          "source": "osm",
-          "value": 1833
-        },
-        {
-          "source": "uslhs",
-          "value": 1833
-        }
-      ],
-      "note": "Sources give different first years (often the first tower against the present one)."
-    }
-  ],
+  "conflicts": [],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

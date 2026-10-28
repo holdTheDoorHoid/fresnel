@@ -3,7 +3,8 @@
   "name": "Malpeque Outer Range Lights",
   "other_names": [
     "Darnley Point",
-    "Malpeque Outer Range Rear"
+    "Malpeque Outer Range Rear",
+    "Malpeque Outer Range Front"
   ],
   "country": "CA",
   "region": "PE",
@@ -12,14 +13,25 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 46.561379,
-    "lon": -63.656666,
+    "lat": 46.56429,
+    "lon": -63.65028,
     "precision": "exact",
-    "from": "osm"
+    "from": "lighthousefriends"
   },
   "status": "active",
   "status_note": null,
   "structures": [
+    {
+      "role": "front_range",
+      "name": "Malpeque Outer Range Front",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
+    },
     {
       "role": "front_range",
       "name": "Darnley Point",
@@ -29,7 +41,26 @@
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "osm",
+      "location": {
+        "lat": 46.561379,
+        "lon": -63.656666
+      }
+    },
+    {
+      "role": "rear_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "osm",
+      "location": {
+        "lat": 46.564551,
+        "lon": -63.65153
+      }
     },
     {
       "role": "rear_range",
@@ -61,8 +92,8 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN770",
-    "ccg_list_number": "A1063",
-    "nga": "7916",
+    "ccg_list_number": "A1062",
+    "nga": "7912",
     "admiralty": "H1116"
   },
   "agency": "Canadian Coast Guard",
@@ -151,8 +182,18 @@
       "kind": "osm"
     },
     {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1918120803",
+      "kind": "osm"
+    },
+    {
       "label": "Lighthouse Friends",
       "url": "https://www.lighthousefriends.com/light.asp?ID=934",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=985",
       "kind": "reference"
     },
     {
@@ -181,9 +222,14 @@
       "key": "osm:node/1918120419",
       "part": "osm:node/1918120419",
       "fields": [
-        "light",
-        "location"
+        "light"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1918120803",
+      "part": "osm:node/1918120803",
+      "fields": []
     },
     {
       "source": "lighthousefriends",
@@ -194,8 +240,17 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:985",
+      "part": "lighthousefriends:985",
+      "fields": [
+        "location",
+        "visit"
+      ]
+    },
+    {
       "source": "rowlett",
-      "key": "rowlett:peiw:malpeque-outer-range-rear",
+      "key": "rowlett:peiw:malpeque-outer-range-front",
       "part": "station",
       "fields": [
         "agency",
@@ -203,6 +258,15 @@
         "events",
         "light",
         "ownership",
+        "visit"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:peiw:malpeque-outer-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
         "visit"
       ]
     }
@@ -214,6 +278,14 @@
         {
           "source": "osm",
           "value": "active"
+        },
+        {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
         },
         {
           "source": "rowlett",
@@ -248,5 +320,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

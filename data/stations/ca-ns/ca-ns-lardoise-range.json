@@ -3,8 +3,10 @@
   "name": "L'Ardoise range lights",
   "other_names": [
     "L'Ardoise Harbor Rear",
-    "Lower l'Ardoise Range Rear",
-    "L'Ardoise Harbour"
+    "L'Ardoise Harbor Front",
+    "Lower l'Ardoise Range Front",
+    "L'Ardoise Harbour",
+    "Lower l'Ardoise Range Rear"
   ],
   "country": "CA",
   "region": "NS",
@@ -13,8 +15,8 @@
   "setting": null,
   "kind": "range_lights",
   "location": {
-    "lat": 45.596894,
-    "lon": -60.743043,
+    "lat": 45.58835,
+    "lon": -60.690386,
     "precision": "exact",
     "from": "lighthousefriends"
   },
@@ -22,15 +24,30 @@
   "status_note": null,
   "structures": [
     {
+      "role": "front_range",
+      "name": "L'Ardoise Harbor Front",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends"
+    },
+    {
       "role": "rear_range",
-      "name": null,
+      "name": "L'Ardoise range lights",
       "type": null,
       "material": "wood",
       "built": null,
       "height_m": null,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 45.596894,
+        "lon": -60.743043
+      }
     }
   ],
   "light": {
@@ -46,7 +63,7 @@
   "registers": [],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN1228",
+    "arlhs": "CAN1227",
     "ccg_list_number": null,
     "nga": null
   },
@@ -108,6 +125,11 @@
       "kind": "reference"
     },
     {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1696",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory (Rowlett)",
       "url": "https://www.ibiblio.org/lighthouse/nscbe.htm",
       "kind": "reference"
@@ -131,13 +153,21 @@
       "key": "lighthousefriends:1683",
       "part": "wikidata:Q28375832",
       "fields": [
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1696",
+      "part": "lighthousefriends:1696",
+      "fields": [
         "location",
         "visit"
       ]
     },
     {
       "source": "rowlett",
-      "key": "rowlett:nscbe:lower-l-ardoise-range-rear",
+      "key": "rowlett:nscbe:lower-l-ardoise-range-front",
       "part": "station",
       "fields": [
         "agency",
@@ -146,12 +176,20 @@
         "ownership",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nscbe:lower-l-ardoise-range-rear",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

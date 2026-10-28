@@ -1,7 +1,9 @@
 {
   "id": "us-nc-brant-island-shoal",
-  "name": "Brant Island Shoal",
+  "name": "Brant Island Shoal Light",
   "other_names": [
+    "Brant Island",
+    "Brant Island Shoal",
     "Brant Island Shoal Light BI"
   ],
   "country": "US",
@@ -21,7 +23,7 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Brant Island Shoal",
       "type": "screwpile",
       "material": null,
       "built": 1831,
@@ -29,6 +31,21 @@
       "status": "lost",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "tower",
+      "name": "Brant Island",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 35.135968,
+        "lon": -76.293001
+      }
     }
   ],
   "light": {
@@ -36,10 +53,10 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl W 6s",
-    "focal_height_m": 10.7,
+    "focal_height_m": 12.2,
     "range_nm": 7.0,
     "fog_signal": null,
-    "from": "uscg_light_list"
+    "from": "enc"
   },
   "registers": [],
   "aton": {
@@ -99,6 +116,11 @@
   "photos": [],
   "links": [
     {
+      "label": "LighthouseFriends: Brant Island",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1907",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory: North Carolina",
       "url": "https://www.ibiblio.org/lighthouse/nc.htm",
       "kind": "reference"
@@ -111,25 +133,30 @@
   ],
   "sources": [
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1907",
+      "part": "lighthousefriends:1907",
+      "fields": [
+        "kind",
+        "name",
+        "region"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:nc:brant-island-shoal-3",
       "part": "station",
       "fields": [
         "aton",
         "events",
-        "kind",
-        "light",
-        "name",
-        "region"
+        "light"
       ]
     },
     {
       "source": "uscg_light_list",
       "key": "uscg_light_list:2-32650",
       "part": "uslhs:8844",
-      "fields": [
-        "light"
-      ]
+      "fields": []
     },
     {
       "source": "uslhs",
@@ -137,16 +164,23 @@
       "part": "uslhs:8844",
       "fields": [
         "events",
-        "light",
         "location",
         "structures"
+      ]
+    },
+    {
+      "source": "enc",
+      "key": "enc:35.13597,-76.29296",
+      "part": "station",
+      "fields": [
+        "light"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -11,6 +11,8 @@
     "Menominee (Marinette) North Pier",
     "Light 6",
     "Menominee (Marinette) North Pierhead",
+    "Menominee",
+    "North Pier",
     "Menominee North Pier Light",
     "Menominee Pierhead Light",
     "Menominee Pier Light 4",
@@ -45,7 +47,7 @@
     }
   ],
   "light": {
-    "first_lit": 1927,
+    "first_lit": 1877,
     "deactivated": null,
     "lens": null,
     "characteristic": "Oc R 4s",
@@ -73,11 +75,11 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1972"
   },
   "visit": {
     "grounds_open": null,
@@ -97,6 +99,18 @@
       "from": "osm"
     },
     {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1877,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1927,
       "event": "built",
       "note": "Rowlett's Lighthouse Directory",
@@ -107,6 +121,12 @@
       "event": "first_lit",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "year": 1972,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 2005,
@@ -176,6 +196,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Menominee (North Pier)",
+      "url": "https://archives.uslhs.org/places/menominee-north-pier",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/75325107",
       "kind": "register"
@@ -191,7 +216,6 @@
         "county",
         "events",
         "kind",
-        "light",
         "name",
         "photos",
         "region",
@@ -251,6 +275,16 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:2996",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:05000738",
       "part": "station",
@@ -296,5 +330,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -34,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": 1996,
+    "first_lit": 1871,
     "deactivated": null,
     "lens": null,
     "characteristic": "F W",
@@ -61,20 +61,20 @@
   "agency": "Private",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": true,
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": {
@@ -99,9 +99,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1871,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1871,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1874,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -172,6 +184,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Yaquina Bay",
+      "url": "https://archives.uslhs.org/places/yaquina-bay",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/77849904",
       "kind": "register"
@@ -229,6 +246,17 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3467",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:74001692",
       "part": "wikidata:Q1555757",
@@ -243,6 +271,14 @@
       "part": "wikidata:Q1555757",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:or:yaquina-bay-lighthouse",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -266,5 +302,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

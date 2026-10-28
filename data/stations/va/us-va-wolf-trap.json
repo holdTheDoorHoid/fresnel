@@ -3,7 +3,8 @@
   "name": "Wolf Trap Light",
   "other_names": [
     "Wolf Trap Lighthouse",
-    "Wolf Trap"
+    "Wolf Trap",
+    "Wolf Trap Light Station"
   ],
   "country": "US",
   "region": "VA",
@@ -46,7 +47,9 @@
     {
       "register": "NRHP",
       "number": "02001434",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001434"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001434",
+      "listed": "2002-12-02",
+      "nomination": "https://catalog.archives.gov/id/75325105"
     },
     {
       "register": "Virginia Historic Landmark",
@@ -76,7 +79,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -120,7 +123,7 @@
     {
       "year": 2002,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     },
     {
@@ -194,6 +197,11 @@
       "label": "US Lighthouse Society Digital Archive: Wolf Trap",
       "url": "https://archives.uslhs.org/places/wolf-trap",
       "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/75325105",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -250,6 +258,23 @@
         "light",
         "structures"
       ]
+    },
+    {
+      "source": "nrhp",
+      "key": "nrhp:02001434",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:va:wolf-trap",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [
@@ -286,5 +311,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

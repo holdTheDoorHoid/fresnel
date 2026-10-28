@@ -1,7 +1,10 @@
 {
   "id": "us-tx-brazos-santiago",
   "name": "Brazos Santiago",
-  "other_names": [],
+  "other_names": [
+    "Brazos Santiago Pass TX (New)",
+    "Brazos Santiago Pass"
+  ],
   "country": "US",
   "region": "TX",
   "county": null,
@@ -19,7 +22,22 @@
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Brazos Santiago Pass",
+      "type": "screwpile",
+      "material": "wood",
+      "built": 1853,
+      "height_m": 18.3,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 26.07333,
+        "lon": -97.16333
+      }
+    },
+    {
+      "role": "tower",
+      "name": "Brazos Santiago",
       "type": null,
       "material": null,
       "built": null,
@@ -30,11 +48,11 @@
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1853,
+    "deactivated": 1943,
     "lens": null,
     "characteristic": "Fl G 4s",
-    "focal_height_m": null,
+    "focal_height_m": 18.3,
     "range_nm": null,
     "fog_signal": null,
     "from": "enc"
@@ -50,7 +68,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,7 +84,32 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1853,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1939,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
+    },
+    {
+      "year": 1943,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1943,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -74,6 +117,16 @@
     {
       "label": "LighthouseFriends: Brazos Santiago",
       "url": "https://www.lighthousefriends.com/light.asp?ID=1792",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brazos Santiago Pass TX (New)",
+      "url": "https://archives.uslhs.org/places/brazos-santiago-pass-tx-new",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Brazos Santiago Pass",
+      "url": "https://archives.uslhs.org/places/brazos-santiago-pass",
       "kind": "reference"
     }
   ],
@@ -87,6 +140,25 @@
         "location",
         "name",
         "region"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:13395",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8925",
+      "part": "uslhs:8925",
+      "fields": [
+        "events",
+        "light",
+        "structures"
       ]
     },
     {
@@ -105,9 +177,9 @@
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

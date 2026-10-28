@@ -4,7 +4,9 @@
   "other_names": [
     "Mount Desert Lighthouse",
     "Mount Desert Rock Light",
-    "Mount Desert Rock"
+    "Mount Desert Rock",
+    "Mount Desert Light Station",
+    "Mount Desert Rock Light Station"
   ],
   "country": "US",
   "region": "ME",
@@ -47,7 +49,9 @@
     {
       "register": "NRHP",
       "number": "88000155",
-      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000155"
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88000155",
+      "listed": "1988-03-14",
+      "nomination": "https://catalog.archives.gov/id/88684911"
     }
   ],
   "aton": {
@@ -72,7 +76,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -116,7 +120,7 @@
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": null,
+      "note": "National Register of Historic Places",
       "from": "wikidata"
     }
   ],
@@ -178,6 +182,11 @@
       "label": "US Lighthouse Society Digital Archive: Mount Desert Rock",
       "url": "https://archives.uslhs.org/places/mount-desert-rock",
       "kind": "reference"
+    },
+    {
+      "label": "NRHP nomination (National Archives)",
+      "url": "https://catalog.archives.gov/id/88684911",
+      "kind": "register"
     }
   ],
   "sources": [
@@ -248,11 +257,28 @@
       ]
     },
     {
+      "source": "nrhp",
+      "key": "nrhp:88000155",
+      "part": "station",
+      "fields": [
+        "events",
+        "registers"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:43.96861,-68.12834",
       "part": "wikidata:Q15256757",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:me:mount-desert-rock",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -280,5 +306,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

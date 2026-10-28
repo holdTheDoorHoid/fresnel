@@ -4,10 +4,13 @@
   "other_names": [
     "Murray Harbour Front Range Light",
     "phare avant de Murray Harbour",
+    "Murray Harbour Back Range Light",
+    "phare arrière de Murray Harbour",
     "Murray Harbour Range Front Lighthouse",
     "Murray Harbour Range Front",
     "Murray Harbour Range Rear",
     "Murray Harbour front range light",
+    "Murray Harbour rear range light",
     "Murray Head",
     "Beach Point"
   ],
@@ -36,6 +39,21 @@
       "status": "standing",
       "note": null,
       "from": "wikidata"
+    },
+    {
+      "role": "rear_range",
+      "name": "Murray Harbour Back Range Light",
+      "type": null,
+      "material": null,
+      "built": 1869,
+      "height_m": 13.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.014389,
+        "lon": -62.492472
+      }
     },
     {
       "role": "rear_range",
@@ -70,6 +88,11 @@
       "url": null
     },
     {
+      "register": "PEI Register of Historic Places",
+      "number": "8234",
+      "url": null
+    },
+    {
       "register": "Registered Heritage Place",
       "number": null,
       "url": null
@@ -78,7 +101,7 @@
   "aton": {
     "uscg_llnr": null,
     "arlhs": "CAN328",
-    "ccg_list_number": "A964",
+    "ccg_list_number": "A965",
     "nga": "110-8140",
     "admiralty": "H954"
   },
@@ -145,6 +168,15 @@
       "license": null,
       "caption": null,
       "year": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murray_Harbour_Back_Range_Lighthouse_%2822288213635%29.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murray_Harbour_Back_Range_Lighthouse_%2822288213635%29.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Murray_Harbour_Back_Range_Lighthouse_%2822288213635%29.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -171,6 +203,16 @@
     {
       "label": "ARLHS World List of Lights CAN328",
       "url": "https://wlol.arlhs.com/lighthouse/CAN328.html",
+      "kind": "register"
+    },
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q69730714",
+      "kind": "wikidata"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN329",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN329.html",
       "kind": "register"
     },
     {
@@ -232,6 +274,17 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q69730714",
+      "part": "wikidata:Q69730714",
+      "fields": [
+        "aton",
+        "photos",
+        "registers",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/2186385250",
       "part": "station",
@@ -267,6 +320,14 @@
       ]
     },
     {
+      "source": "ccg_list_of_lights",
+      "key": "ccg_list_of_lights:A965",
+      "part": "wikidata:Q69730714",
+      "fields": [
+        "aton"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:pei:murray-harbour-range-front",
       "part": "station",
@@ -276,6 +337,15 @@
         "light",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:murray-harbour-range-rear",
+      "part": "station",
+      "fields": [
+        "aton",
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -283,5 +353,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

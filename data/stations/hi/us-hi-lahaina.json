@@ -4,6 +4,7 @@
   "other_names": [
     "Lahaina",
     "LÃÂhainÃÂ",
+    "Lahaina Harbor",
     "Lahaina Light",
     "Lahaina Boat Basin Range Front Light",
     "Lahaina Boat Basin Range Rear Light"
@@ -21,7 +22,7 @@
     "from": "osm"
   },
   "status": "active",
-  "status_note": "Taken from sources that give no usable position for this light (Rowlett's Lighthouse Directory, or a record whose coordinates are known to be wrong).",
+  "status_note": "In the Coast Guard's Light List (6-28460, Lahaina Light); the Society's archive, whose record joined this station in the duplicate audit, calls the light inactive.",
   "structures": [
     {
       "role": "tower",
@@ -40,7 +41,7 @@
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 4s",
-    "focal_height_m": null,
+    "focal_height_m": 18.3,
     "range_nm": 7.0,
     "fog_signal": null,
     "from": "enc"
@@ -56,7 +57,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -68,7 +69,7 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -78,6 +79,12 @@
       "event": "first_lit",
       "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 1905,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1917,
@@ -138,6 +145,11 @@
     {
       "label": "Lighthouse Directory: Hawaii",
       "url": "https://www.ibiblio.org/lighthouse/hi.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Lahaina Harbor",
+      "url": "https://archives.uslhs.org/places/lahaina-harbor",
       "kind": "reference"
     }
   ],
@@ -200,6 +212,16 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:18617",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:20.87136,-156.67958",
       "part": "wikidata:Q28376274",
@@ -218,6 +240,14 @@
       "key": "enc:20.87215,-156.67924",
       "part": "wikidata:Q28376274",
       "fields": []
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:hi:lahaina-harbor",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -225,5 +255,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

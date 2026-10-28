@@ -3,7 +3,8 @@
   "name": "Roanoke River Light",
   "other_names": [
     "Roanoke River Lighthouse",
-    "Roanoke River"
+    "Roanoke River",
+    "1886"
   ],
   "country": "US",
   "region": "NC",
@@ -24,8 +25,8 @@
       "role": "tower",
       "name": null,
       "type": "integral",
-      "material": null,
-      "built": null,
+      "material": "wood",
+      "built": 1903,
       "height_m": 11.0,
       "status": "standing",
       "note": null,
@@ -53,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -65,11 +66,17 @@
     "museum": null,
     "tours": null,
     "boat_only": null,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
   "events": [
+    {
+      "year": 1866,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1867,
       "event": "first_lit",
@@ -81,6 +88,18 @@
       "event": "built",
       "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 1887,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1903,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1941,
@@ -142,6 +161,11 @@
       "label": "Lighthouse Directory: North Carolina",
       "url": "https://www.ibiblio.org/lighthouse/nc.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Roanoke River",
+      "url": "https://archives.uslhs.org/places/roanoke-river",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -184,18 +208,51 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3370",
+      "part": "wikidata:Q7339803",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:36.05581,-76.60977",
       "part": "wikidata:Q7339803",
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:nc:roanoke-river-1886",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1867
+        },
+        {
+          "source": "uslhs",
+          "value": 1887
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -5,7 +5,10 @@
     "Leards Range Front Lighthouse",
     "Victoria Range Light",
     "Leard's Front Range Light",
+    "Leards Back Range Light",
+    "Leards Range Rear Light",
     "Leards Range Front",
+    "Leards Range Rear",
     "Victoria Harbour",
     "Leards Range Front/Palmer Range Rear"
   ],
@@ -49,6 +52,21 @@
         "lat": 46.214185,
         "lon": -63.488843
       }
+    },
+    {
+      "role": "rear_range",
+      "name": "Leards Range Lights",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata",
+      "location": {
+        "lat": 46.221275,
+        "lon": -63.492877
+      }
     }
   ],
   "light": {
@@ -80,13 +98,13 @@
   ],
   "aton": {
     "uscg_llnr": null,
-    "arlhs": "CAN512",
-    "ccg_list_number": "A1008.1",
-    "nga": "8264",
+    "arlhs": "CAN513",
+    "ccg_list_number": "A1009",
+    "nga": "110-8268",
     "admiralty": "H1029.1"
   },
-  "agency": "Village of Victoria",
-  "ownership": "local",
+  "agency": "Canadian Coast Guard",
+  "ownership": "federal",
   "access": {
     "level": "public",
     "note": null
@@ -117,6 +135,12 @@
       "event": "built",
       "note": "Year of the tower described by the Lighthouse Directory",
       "from": "rowlett"
+    },
+    {
+      "year": 2011,
+      "event": "deactivated",
+      "note": null,
+      "from": "wikidata"
     },
     {
       "year": 2012,
@@ -156,6 +180,21 @@
       "kind": "commons"
     },
     {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q6510000",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Leards_Range_Lights",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN513",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN513.html",
+      "kind": "register"
+    },
+    {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org/node/1748034323",
       "kind": "osm"
@@ -166,8 +205,23 @@
       "kind": "website"
     },
     {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/1748035564",
+      "kind": "osm"
+    },
+    {
+      "label": "Website",
+      "url": "https://lighthousefriends.com/light.asp?ID=971",
+      "kind": "website"
+    },
+    {
       "label": "Lighthouse Friends",
       "url": "https://www.lighthousefriends.com/light.asp?ID=970",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=971",
       "kind": "reference"
     },
     {
@@ -191,12 +245,28 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q6510000",
+      "part": "wikidata:Q6510000",
+      "fields": [
+        "aton",
+        "events",
+        "name"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/1748034323",
       "part": "osm:node/1748034323",
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/1748035564",
+      "part": "wikidata:Q6510000",
+      "fields": []
     },
     {
       "source": "lighthousefriends",
@@ -208,15 +278,30 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:971",
+      "part": "wikidata:Q6510000",
+      "fields": []
+    },
+    {
       "source": "rowlett",
-      "key": "rowlett:pei:victoria-harbour",
+      "key": "rowlett:pei:leards-range-rear",
       "part": "station",
       "fields": [
         "agency",
         "aton",
         "events",
+        "ownership"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:pei:victoria-harbour",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
         "light",
-        "ownership",
         "visit"
       ]
     }
@@ -230,6 +315,18 @@
           "value": "active"
         },
         {
+          "source": "osm",
+          "value": "active"
+        },
+        {
+          "source": "wikidata",
+          "value": "inactive"
+        },
+        {
+          "source": "rowlett",
+          "value": "inactive"
+        },
+        {
           "source": "rowlett",
           "value": "inactive"
         }
@@ -241,5 +338,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

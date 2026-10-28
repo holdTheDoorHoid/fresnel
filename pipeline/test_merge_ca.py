@@ -295,6 +295,53 @@ class CurationTest(MergeCase):
             self.assertEqual(by_key["wikidata:Q1"], by_key["lighthousefriends:1278"])
             self.assertNotEqual(by_key["wikidata:Q1"], "ca-nl-flowers-cove")
 
+    def test_detach_and_apart_hold_against_an_osm_wikidata_tag(self):
+        # Wikidata's item for the South light has the west end's coordinates, and OpenStreetMap's west-end element is
+        # tagged with that item: the first build files the west end under the South station.
+        south_wd = ca("wikidata", "Q1", "Pictou Island South Lighthouse", 45.80401, -62.60268)
+        west_osm = ca("osm", "node/1", "Pictou Island West End Lighthouse", 45.80410, -62.60218,
+                      extra={"forms": ["man_made=lighthouse"], "wikidata": "Q1"})
+        self.write("wikidata", [south_wd])
+        self.write("osm", [west_osm])
+        self.run_merge()
+        self.assertEqual(sorted(self.station_files()), ["ca-ns-pictou-island-south"])
+        # Curation: the west-end element leaves the South station and stays off Wikidata's item.
+        self.curation({"detach": [{"key": "osm:node/1", "from_station": "ca-ns-pictou-island-south", "reason": "the west-end light"}],
+                       "apart": [{"keys": ["osm:node/1", "wikidata:Q1"], "reason": "two lights"}]})
+        for _ in range(2):                                                  # and it stays out on the next run
+            self.run_merge()
+            files = self.station_files()
+            by_key = {s["key"]: i for i, f in files.items() for s in f["sources"] if not f.get("merged_into")}
+            self.assertEqual(by_key["wikidata:Q1"], "ca-ns-pictou-island-south")
+            self.assertNotEqual(by_key["osm:node/1"], "ca-ns-pictou-island-south")
+
+    def test_an_id_retired_into_a_station_that_is_retired_later_follows_it(self):
+        self.write("wikidata", [ca("wikidata", "Q1", "Northport Range Lights", 46.7933, -64.0660, region="PE"),
+                                ca("wikidata", "Q2", "Former Northport Back Range Light", 46.8083, -64.0528, region="PE"),
+                                ca("wikidata", "Q3", "Alberton Range", 46.8090, -64.0520, region="PE")])
+        self.run_merge()
+        ids = sorted(self.station_files())
+        self.assertEqual(ids, ["ca-pe-alberton-range", "ca-pe-former-northport-back-range", "ca-pe-northport-range"])
+        merges = [{"keep": "ca-pe-former-northport-back-range", "retire": "ca-pe-alberton-range", "reason": "the same light"}]
+        self.curation({"merge_stations": merges})
+        self.run_merge()
+        self.assertEqual(self.station_files()["ca-pe-alberton-range"]["merged_into"], "ca-pe-former-northport-back-range")
+        # a later review finds the back range light is part of the Northport range: the earlier retired id follows it
+        self.curation({"merge_stations": merges + [{"keep": "ca-pe-northport-range", "retire": "ca-pe-former-northport-back-range", "reason": "one range"}]})
+        for _ in range(2):                                                  # and a second run changes nothing
+            self.run_merge()
+            files = self.station_files()
+            self.assertEqual(files["ca-pe-former-northport-back-range"]["merged_into"], "ca-pe-northport-range")
+            self.assertEqual(files["ca-pe-alberton-range"]["merged_into"], "ca-pe-northport-range")
+            self.assertNotIn("merged_into", files["ca-pe-northport-range"])
+        # a chain left by earlier runs (the old address points at a retired id) is repaired too
+        path = next(self.stations.rglob("ca-pe-alberton-range.json"))
+        old = json.loads(path.read_text())
+        old["merged_into"] = "ca-pe-former-northport-back-range"
+        path.write_text(json.dumps(old))
+        self.run_merge()
+        self.assertEqual(self.station_files()["ca-pe-alberton-range"]["merged_into"], "ca-pe-northport-range")
+
     def test_merge_stations_retires_one_id_and_keeps_both_files(self):
         self.write("wikidata", [ca("wikidata", "Q1", "Richibucto Head Lighthouse", 46.6698, -64.7116, region="NB"),
                                 ca("wikidata", "Q2", "Cap-Lumière lighthouse", 46.6720, -64.7117, region="NB")])

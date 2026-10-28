@@ -1,16 +1,8 @@
 {
   "id": "ca-pe-leards-range",
   "name": "Leards Range Lights",
-  "other_names": [
-    "Leards Back Range Light",
-    "Leards Range Rear Light",
-    "Leards Range Rear"
-  ],
   "country": "CA",
   "region": "PE",
-  "county": null,
-  "water": null,
-  "setting": null,
   "kind": "range_lights",
   "location": {
     "lat": 46.221275,
@@ -19,175 +11,10 @@
     "from": "osm"
   },
   "status": "active",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "rear_range",
-      "name": null,
-      "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
-      "status": "standing",
-      "note": null,
-      "from": "wikidata"
-    }
-  ],
-  "light": {
-    "first_lit": null,
-    "deactivated": null,
-    "lens": null,
-    "characteristic": "F G",
-    "focal_height_m": 31.0,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "osm"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": "CAN513",
-    "ccg_list_number": "A1009",
-    "nga": "110-8268",
-    "admiralty": "H1028.1"
-  },
-  "agency": "Canadian Coast Guard",
-  "ownership": "federal",
-  "access": {
-    "level": "unknown",
-    "note": null
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": null,
-    "climbable": null,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1879,
-      "event": "built",
-      "note": "Year of the tower described by the Lighthouse Directory",
-      "from": "rowlett"
-    },
-    {
-      "year": 2011,
-      "event": "deactivated",
-      "note": null,
-      "from": "wikidata"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "Wikidata",
-      "url": "https://www.wikidata.org/wiki/Q6510000",
-      "kind": "wikidata"
-    },
-    {
-      "label": "Wikipedia",
-      "url": "https://en.wikipedia.org/wiki/Leards_Range_Lights",
-      "kind": "wikipedia"
-    },
-    {
-      "label": "ARLHS World List of Lights CAN513",
-      "url": "https://wlol.arlhs.com/lighthouse/CAN513.html",
-      "kind": "register"
-    },
-    {
-      "label": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/1748035564",
-      "kind": "osm"
-    },
-    {
-      "label": "Website",
-      "url": "https://lighthousefriends.com/light.asp?ID=971",
-      "kind": "website"
-    },
-    {
-      "label": "Lighthouse Friends",
-      "url": "https://www.lighthousefriends.com/light.asp?ID=971",
-      "kind": "reference"
-    },
-    {
-      "label": "Lighthouse Directory (Rowlett)",
-      "url": "https://www.ibiblio.org/lighthouse/pei.htm",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "wikidata",
-      "key": "wikidata:Q6510000",
-      "part": "wikidata:Q6510000",
-      "fields": [
-        "aton",
-        "events",
-        "kind",
-        "name",
-        "region"
-      ]
-    },
-    {
-      "source": "osm",
-      "key": "osm:node/1748035564",
-      "part": "wikidata:Q6510000",
-      "fields": [
-        "light",
-        "location"
-      ]
-    },
-    {
-      "source": "lighthousefriends",
-      "key": "lighthousefriends:971",
-      "part": "wikidata:Q6510000",
-      "fields": []
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:pei:leards-range-rear",
-      "part": "station",
-      "fields": [
-        "agency",
-        "aton",
-        "events",
-        "ownership"
-      ]
-    }
-  ],
-  "conflicts": [
-    {
-      "field": "status",
-      "values": [
-        {
-          "source": "osm",
-          "value": "active"
-        },
-        {
-          "source": "wikidata",
-          "value": "inactive"
-        },
-        {
-          "source": "rowlett",
-          "value": "inactive"
-        }
-      ],
-      "note": "Sources differ on whether the light is still lit."
-    }
-  ],
+  "sources": [],
   "verification": "unverified",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into ca-pe-leards-range-2: the same station",
+  "merged_into": "ca-pe-leards-range-2",
+  "updated": "2026-10-28"
 }

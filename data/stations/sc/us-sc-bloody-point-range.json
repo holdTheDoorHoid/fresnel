@@ -4,6 +4,7 @@
   "other_names": [
     "Bloody Point Front Range",
     "Bloody Point Range Front",
+    "Bloody Point Range Rear",
     "Bloody Point Range"
   ],
   "country": "US",
@@ -23,7 +24,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Bloody Point Range Lights",
       "type": "integral",
       "material": null,
       "built": 1883,
@@ -31,6 +32,21 @@
       "status": "standing",
       "note": null,
       "from": "uslhs"
+    },
+    {
+      "role": "rear_range",
+      "name": "Bloody Point Range Rear",
+      "type": null,
+      "material": null,
+      "built": 1883,
+      "height_m": 24.7,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 32.0915,
+        "lon": -80.8705
+      }
     }
   ],
   "light": {
@@ -90,6 +106,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1899,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1922,
       "event": "deactivated",
       "note": "Discontinued (US Lighthouse Society Digital Archive)",
@@ -124,6 +146,11 @@
     {
       "label": "US Lighthouse Society Digital Archive: Bloody Point Range Front",
       "url": "https://archives.uslhs.org/places/bloody-point-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Bloody Point Range Rear",
+      "url": "https://archives.uslhs.org/places/bloody-point-range-rear",
       "kind": "reference"
     }
   ],
@@ -166,6 +193,15 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8910",
+      "part": "uslhs:8910",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
       "source": "uslhs_passport",
       "key": "uslhs_passport:stamp:sc:bloody-point-range",
       "part": "station",
@@ -179,5 +215,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -34,14 +34,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1892,
     "deactivated": 1928,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -54,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "private",
-    "note": "LighthouseFriends marks it privately owned, with no access without permission."
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -66,7 +66,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -76,6 +76,12 @@
       "event": "built",
       "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1892,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1928,
@@ -137,6 +143,11 @@
       "label": "Lighthouse Directory: Michigan",
       "url": "https://www.ibiblio.org/lighthouse/minwl.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Squaw Island",
+      "url": "https://archives.uslhs.org/places/squaw-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -180,6 +191,24 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3340",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:mi:squaw-island",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -187,5 +216,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

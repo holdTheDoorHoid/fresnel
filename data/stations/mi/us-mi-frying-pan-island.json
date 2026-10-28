@@ -2,7 +2,9 @@
   "id": "us-mi-frying-pan-island",
   "name": "Frying Pan Island Lighthouse",
   "other_names": [
-    "Frying Pan Island"
+    "Frying Pan Island",
+    "relocated to Coast Guard Station Sault St. Marie",
+    "Frying Pan Island Light 7"
   ],
   "country": "US",
   "region": "MI",
@@ -16,35 +18,35 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "The 1882 tower was moved from Frying Pan Island, off De Tour, to the Coast Guard station at Sault Ste. Marie; a modern light (Frying Pan Island Light 7) marks the island.",
   "structures": [
     {
       "role": "tower",
       "name": null,
       "type": null,
-      "material": null,
-      "built": null,
-      "height_m": null,
+      "material": "steel",
+      "built": 1882,
+      "height_m": 4.6,
       "status": "standing",
       "note": null,
-      "from": "osm"
+      "from": "uslhs"
     }
   ],
   "light": {
-    "first_lit": null,
-    "deactivated": null,
+    "first_lit": 1882,
+    "deactivated": 1937,
     "lens": null,
-    "characteristic": null,
-    "focal_height_m": null,
-    "range_nm": null,
+    "characteristic": "QG",
+    "focal_height_m": 5.6,
+    "range_nm": 6.0,
     "fog_signal": null,
-    "from": null
+    "from": "uscg_light_list"
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
+    "uscg_llnr": "7-12835",
+    "arlhs": "USA-312",
     "ccg_list_number": null,
     "nga": null
   },
@@ -52,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -68,7 +70,38 @@
     "note": null
   },
   "stay": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1882,
+      "event": "built",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1882,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1882,
+      "event": "lens_installed",
+      "note": "Original lens: order 6 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1937,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1988,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    }
+  ],
   "keepers_count": null,
   "related": [],
   "photos": [],
@@ -82,6 +115,16 @@
       "label": "Website",
       "url": "https://www.lighthousefriends.com/light.asp?ID=721",
       "kind": "website"
+    },
+    {
+      "label": "Lighthouse Directory: Michigan",
+      "url": "https://www.ibiblio.org/lighthouse/miup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Frying Pan Island (relocated to Coast Guard Station Sault St. Marie)",
+      "url": "https://archives.uslhs.org/places/frying-pan-island-relocated-coast-guard-station-sault-st-marie",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -101,12 +144,57 @@
       "key": "lighthousefriends:721",
       "part": "osm:node/1011846466",
       "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:miup:frying-pan-island",
+      "part": "station",
+      "fields": [
+        "aton",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uscg_light_list",
+      "key": "uscg_light_list:7-12835",
+      "part": "osm:node/1011846466",
+      "fields": [
+        "aton",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8506",
+      "part": "osm:node/1011846466",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "structures"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "rowlett",
+          "value": 1937
+        },
+        {
+          "source": "uslhs",
+          "value": 1988
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

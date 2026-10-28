@@ -5,7 +5,8 @@
     "Año Nuevo light station",
     "Lighthouse station (abandoned)",
     "Ano Nuevo",
-    "Año Nuevo"
+    "Año Nuevo",
+    "Ano Nuevo Island"
   ],
   "country": "US",
   "region": "CA",
@@ -22,6 +23,21 @@
   "status": "inactive",
   "status_note": null,
   "structures": [
+    {
+      "role": "tower",
+      "name": "Ano Nuevo Island",
+      "type": null,
+      "material": "wood",
+      "built": 1890,
+      "height_m": null,
+      "status": "lost",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 37.11222,
+        "lon": -122.33083
+      }
+    },
     {
       "role": "tower",
       "name": "Lighthouse station (abandoned)",
@@ -100,6 +116,12 @@
       "from": "rowlett"
     },
     {
+      "year": 1890,
+      "event": "built",
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1914,
       "event": "built",
       "note": "Tower 3 (Rowlett's Lighthouse Directory)",
@@ -172,6 +194,11 @@
       "label": "Lighthouse Directory: California: North",
       "url": "https://www.ibiblio.org/lighthouse/ca.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Ano Nuevo Island",
+      "url": "https://archives.uslhs.org/places/ano-nuevo-island",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -214,6 +241,15 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8371",
+      "part": "uslhs:8371",
+      "fields": [
+        "events",
+        "structures"
+      ]
+    },
+    {
       "source": "uslhs_passport",
       "key": "uslhs_passport:stamp:ca:ano-nuevo",
       "part": "station",
@@ -227,5 +263,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

@@ -1,8 +1,11 @@
 {
   "id": "ca-nb-grant-beach-range-front",
-  "name": "Grant Beach Range Front",
+  "name": "Grant Beach Range Lights",
   "other_names": [
-    "Grants Beach Range Front"
+    "Grant Beach Range Front",
+    "Grant Beach Range Rear",
+    "Grants Beach Range Front",
+    "Grants Beach Range Rear"
   ],
   "country": "CA",
   "region": "NB",
@@ -21,7 +24,7 @@
   "structures": [
     {
       "role": "front_range",
-      "name": null,
+      "name": "Grant Beach Range Front",
       "type": null,
       "material": null,
       "built": null,
@@ -29,6 +32,21 @@
       "status": "standing",
       "note": null,
       "from": "lighthousefriends"
+    },
+    {
+      "role": "rear_range",
+      "name": "Grant Beach Range Rear",
+      "type": null,
+      "material": null,
+      "built": null,
+      "height_m": null,
+      "status": "standing",
+      "note": null,
+      "from": "lighthousefriends",
+      "location": {
+        "lat": 47.112094,
+        "lon": -65.292327
+      }
     }
   ],
   "light": {
@@ -63,7 +81,7 @@
     "climbable": false,
     "museum": null,
     "tours": null,
-    "boat_only": null,
+    "boat_only": true,
     "passport_stamp": null,
     "note": "Lighthouse Friends marks it as private property with no access without permission."
   },
@@ -98,6 +116,11 @@
       "kind": "reference"
     },
     {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1235",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory (Rowlett)",
       "url": "https://www.ibiblio.org/lighthouse/nbe.htm",
       "kind": "reference"
@@ -111,8 +134,15 @@
       "fields": [
         "kind",
         "location",
-        "name",
         "region",
+        "visit"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1235",
+      "part": "lighthousefriends:1235",
+      "fields": [
         "visit"
       ]
     },
@@ -128,6 +158,14 @@
         "ownership",
         "visit"
       ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:nbe:grants-beach-range-rear",
+      "part": "station",
+      "fields": [
+        "visit"
+      ]
     }
   ],
   "conflicts": [],
@@ -135,5 +173,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

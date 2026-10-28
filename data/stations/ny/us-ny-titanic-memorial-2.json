@@ -1,8 +1,7 @@
 {
   "id": "us-ny-titanic-memorial-2",
-  "name": "Titanic Memorial",
+  "name": "Shoal Point",
   "other_names": [
-    "Shoal Point",
     "Strawberry Island Lower Cut Range Rear"
   ],
   "country": "US",
@@ -34,7 +33,7 @@
   ],
   "light": {
     "first_lit": 1907,
-    "deactivated": 1967,
+    "deactivated": null,
     "lens": null,
     "characteristic": null,
     "focal_height_m": null,
@@ -44,7 +43,7 @@
   },
   "registers": [],
   "aton": {
-    "uscg_llnr": "7-3020",
+    "uscg_llnr": null,
     "arlhs": "USA-122",
     "ccg_list_number": null,
     "nga": null
@@ -81,24 +80,6 @@
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "uslhs"
-    },
-    {
-      "year": 1908,
-      "event": "first_lit",
-      "note": "Station established (Rowlett's Lighthouse Directory)",
-      "from": "rowlett"
-    },
-    {
-      "year": 1913,
-      "event": "built",
-      "note": "Rowlett's Lighthouse Directory",
-      "from": "rowlett"
-    },
-    {
-      "year": 1967,
-      "event": "deactivated",
-      "note": "Rowlett's Lighthouse Directory",
-      "from": "rowlett"
     }
   ],
   "keepers_count": null,
@@ -106,18 +87,8 @@
   "photos": [],
   "links": [
     {
-      "label": "Lighthouse Directory: New York: City and Hudson River",
-      "url": "https://www.ibiblio.org/lighthouse/nydn.htm",
-      "kind": "reference"
-    },
-    {
       "label": "Lighthouse Directory: New York: Central and Northern",
       "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
-      "kind": "reference"
-    },
-    {
-      "label": "Lighthouse Directory: New York: Western",
-      "url": "https://www.ibiblio.org/lighthouse/nyw.htm",
       "kind": "reference"
     },
     {
@@ -129,31 +100,13 @@
   "sources": [
     {
       "source": "rowlett",
-      "key": "rowlett:nydn:titanic-memorial",
+      "key": "rowlett:nyup:shoal-point",
       "part": "station",
       "fields": [
         "aton",
         "events",
-        "light",
         "name",
         "region"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:nyup:shoal-point",
-      "part": "station",
-      "fields": [
-        "events"
-      ]
-    },
-    {
-      "source": "rowlett",
-      "key": "rowlett:nyw:strawberry-island-lower-cut-range-rear-4",
-      "part": "station",
-      "fields": [
-        "aton",
-        "events"
       ]
     },
     {
@@ -172,7 +125,7 @@
   "conflicts": [],
   "verification": "unverified",
   "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "A duplicate listing: Rowlett's Titanic Memorial is us-ny-titanic-memorial and the Strawberry Island Lower Cut Range Rear is part of us-ny-strawberry-island-lower-cut-range; what is left is the Society's record of that rear (its point is in Lake Ontario) and Rowlett's 'Shoal Point' (upstate New York, 1890), filed here by a truncated ARLHS number",
+  "updated": "2026-10-28"
 }

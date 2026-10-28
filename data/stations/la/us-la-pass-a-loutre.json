@@ -3,7 +3,8 @@
   "name": "Pass A L'Outre Light",
   "other_names": [
     "Pass a l'Outre",
-    "Pass à l'Outre"
+    "Pass à l'Outre",
+    "Pass a L' Outre"
   ],
   "country": "US",
   "region": "LA",
@@ -37,7 +38,7 @@
     "deactivated": 1930,
     "lens": null,
     "characteristic": "F R",
-    "focal_height_m": null,
+    "focal_height_m": 21.3,
     "range_nm": null,
     "fog_signal": null,
     "from": "wikidata"
@@ -53,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -79,14 +80,26 @@
     {
       "year": 1855,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1855,
+      "event": "lens_installed",
+      "note": "Original lens: order 3 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1930,
       "event": "deactivated",
       "note": "Rowlett's Lighthouse Directory",
       "from": "wikidata"
+    },
+    {
+      "year": 1934,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -132,6 +145,11 @@
       "label": "Lighthouse Directory: Louisiana",
       "url": "https://www.ibiblio.org/lighthouse/la.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Pass a L' Outre",
+      "url": "https://archives.uslhs.org/places/pass-l-outre",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -167,12 +185,41 @@
       "fields": [
         "events"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2808",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1930
+        },
+        {
+          "source": "rowlett",
+          "value": 1930
+        },
+        {
+          "source": "uslhs",
+          "value": 1934
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

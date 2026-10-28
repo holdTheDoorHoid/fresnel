@@ -5,6 +5,7 @@
     "Bald Head",
     "Bald Head Island",
     "Old Baldy",
+    "Bald Head \"Old Baldy\"",
     "Bald Head Island Lighthouse"
   ],
   "country": "US",
@@ -22,6 +23,21 @@
   "status": "inactive",
   "status_note": null,
   "structures": [
+    {
+      "role": "tower",
+      "name": "Bald Head \"Old Baldy\"",
+      "type": null,
+      "material": "brick",
+      "built": 1817,
+      "height_m": 29.3,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs",
+      "location": {
+        "lat": 33.87347,
+        "lon": -78.00681
+      }
+    },
     {
       "role": "tower",
       "name": "Bald Head Lighthouse",
@@ -73,15 +89,15 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": true,
     "museum": null,
     "tours": null,
@@ -100,7 +116,7 @@
     {
       "year": 1817,
       "event": "built",
-      "note": null,
+      "note": "Present tower (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -114,6 +130,18 @@
       "event": "built",
       "note": "Tower 2 (Rowlett's Lighthouse Directory)",
       "from": "rowlett"
+    },
+    {
+      "year": 1851,
+      "event": "lens_installed",
+      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1930,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1935,
@@ -193,6 +221,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Bald Head \"Old Baldy\"",
+      "url": "https://archives.uslhs.org/places/bald-head-old-baldy",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/47719103",
       "kind": "register"
@@ -249,6 +282,17 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:3361",
+      "part": "uslhs:3361",
+      "fields": [
+        "access",
+        "events",
+        "structures",
+        "visit"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:75001242",
       "part": "wikidata:Q4286356",
@@ -266,10 +310,25 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1935
+        },
+        {
+          "source": "uslhs",
+          "value": 1930
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }
