@@ -1,0 +1,17 @@
+Long Point Lighthouse stands at the southern tip of White Head Island, in the Grand Manan archipelago of Charlotte County, New Brunswick, in the Bay of Fundy.[^1][^2][^3] The station was built in 1929 with a fog alarm, and its buildings were replaced in 1966.[^1]
+
+Before low water and at the first of the flood, Lorimer wrote in 1876, ledges and sandbars formed a little isthmus, and White Head was then, for the time being, a peninsula.[^3] The principal fishing on the island was herring taken in weirs, and nearly all of the weir herring was smoked.[^3] An earlier light on the island was a mast light at Gull Cove, established on December 30, 1902 to guide fishing boats. Its mast was 10.7 m (35 ft) tall.[^1]
+
+In October 1927 a petition from 330 residents of Grand Manan and Nova Scotia went to the Department of Marine, asking for a fog alarm at Long Point. About 100 fishing boats worked off White Head at that time.[^1] In September 1928 tenders were invited for a combined dwelling and fog-alarm building, but the district engineer found that configuration unacceptable. Its windows and doors would have had to stay open for ventilation, which was not possible in winter.[^1]
+
+In March 1929 tenders were invited for three separate buildings: a fog-alarm building, a dwelling and a boathouse. The lowest of five bids, $7,489, was accepted, and the articles of agreement were signed on April 22, 1929.[^1] The fog alarm was a diaphone, driven by air compressed by oil engines. It sounded three blasts of three seconds each minute.[^1] Arthur Wilson was the first keeper, from 1929 until 1958.[^1]
+
+In 1966 a combined lighthouse and fog-alarm building went up: a one-storey cement structure with a square tower at one corner. Shortly afterwards the whistle house was torn down and the old keeper's dwelling was burned.[^1] Later keepers, all from the island, had to provide their own accommodation.[^1] LighthouseFriends lists Kitchener Randall (1958-1960), Percy Harvey (1960-1964), Wilfred Morse (1964-1984) and Kenton Tate (from 1984).[^1]
+
+The Canadian Coast Guard owns the lighthouse, and the light is still in its List of Lights.[^1][^2] It shows a white light, six seconds on and six off (Iso W 12s), from a white rectangular tower with a red top. Its focal height is 15.6 m (51 ft), and its nominal range is 14 nautical miles.[^2][^1] The Coast Guard list gives the present fog signal as a fog horn, with a two-second blast and 18 seconds of silence.[^2] LighthouseFriends says the fog alarm gives a two-second blast every twenty seconds when needed.[^1]
+
+Visitors reach the island by a free 30-minute car ferry from Ingalls Head on Grand Manan.[^1] LighthouseFriends says the grounds are open and the tower closed. From the island's roads, visitors park on Long Point Road and walk about 1 km to the light, or drive the last part in a four-wheel-drive vehicle.[^1]
+
+[^1]: Long Point Lighthouse, New Brunswick, LighthouseFriends, https://lighthousefriends.com/light.asp?ID=1208 (accessed 2026-10-28).
+[^2]: Canadian Coast Guard, List of Lights, Atlantic Coast, Bay of Fundy, N.B. West, https://www.notmar.gc.ca/publications/list-lights/atl/atl58-en.php (accessed 2026-10-28).
+[^3]: John Gordon Lorimer, History of Islands & Islets in the Bay of Fundy, Charlotte County, New Brunswick (1876), pp. 44-45, Internet Archive, https://archive.org/stream/historyofislands00lori/historyofislands00lori_djvu.txt (accessed 2026-10-28).

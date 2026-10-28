@@ -1,0 +1,14 @@
+Colombier Islands Light stands on an island just offshore at the entrance to the harbour at Burnt Islands, on Newfoundland's south-west coast, about 27 km east of Port aux Basques.[^1][^2] Its story begins with a fog alarm, set up on Big Colombier Island in 1929, to which a light was added in 1971.[^1][^2]
+
+Burnt Islands grew out of the fishery.[^1] Lighthouse Friends says the first recorded settlers took up the "main" section of the community in 1839, and two years later families settled the "island" section.[^1] The harbour had lights before the island did.[^1] In 1915 Burnt Island Leading Lights were set up to help fishermen make the harbour, shown from two square, pyramidal wooden towers.[^1] Lighthouse Friends says the pair of range lights in Burnt Islands today are their modern versions.[^1]
+
+The town's history says the present tower was built in 1929 as a fog alarm: an 11 m (36 ft) skeletal tower with a lantern, balcony and concrete base.[^2] Lighthouse Friends says the fog alarm was established that year and that a light was added to the station in 1971.[^1] Neither source says who built the fog alarm or what it cost.
+
+The Coast Guard's list describes the tower as a square skeleton tower with an octagonal upper portion, 11.3 m high, showing a white flash every five seconds.[^3] The focal height is 18.3 m (60 ft) and the range 15 nautical miles, and the list gives a fog horn.[^3] The town says the light is solar-powered and that its fog signal sounds once every thirty seconds.[^2]
+
+The Canadian Coast Guard owns the light.[^1] A Fisheries and Oceans Canada brochure (page modified 2019) lists Colombier Island among the unstaffed lightstations of Newfoundland and Labrador.[^4] Lighthouse Friends says the grounds are open and the tower closed, and that the light can be seen offshore from Burnt Islands.[^1] The sources describe no public landing on the island and do not say how it is reached. The tower is closed, so visitors should not climb it.[^1]
+
+[^1]: Colombier Islands Lighthouse, Newfoundland Canada, Lighthousefriends.com, https://lighthousefriends.com/light.asp?ID=1260 (accessed 2026-10-28). Lighthouse Friends is a secondary compilation; its facts are restated here in our own words.
+[^2]: Home, Town of Burnt Islands (sections "Connected by a Causeway" and "A Beacon Powered by the Sun"), https://townofburntislands.ca/ (accessed 2026-10-28).
+[^3]: List of Lights, Newfoundland and Labrador: Newfoundland and Labrador Coast - Southwest Coast, Canadian Coast Guard, https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl121-en.php (accessed 2026-10-28).
+[^4]: Lightstations of Newfoundland and Labrador, Fisheries and Oceans Canada (brochure, page modified 2019-09-24), https://www.dfo-mpo.gc.ca/otw-am/lighthouses-phares/publications/lightstationsnl-lespharestnl-eng.html (accessed 2026-10-28).
