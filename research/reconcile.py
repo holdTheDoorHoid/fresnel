@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tidy a batch of research output before the merge.
 
-- `cite` values written as a bare number become a list (events, corrections, resolved_conflicts).
+- `cite` values written as a bare number become a list (events, corrections, resolved_conflicts, keepers).
 - A story footnote whose number is missing from the research file's `sources` gets a source entry
   built from the footnote text itself (title, URL, accessed date), so the two stay in step.
 Reports what it changed; run it after every story batch, then `pipeline/validate.py`."""
@@ -39,7 +39,7 @@ def main():
         rid = os.path.basename(p)[:-5]
         r = json.load(open(p, encoding="utf-8"))
         changed = False
-        for k in ("corrections", "events", "resolved_conflicts"):
+        for k in ("corrections", "events", "resolved_conflicts", "keepers"):
             for c in r.get(k) or []:
                 if isinstance(c, dict) and isinstance(c.get("cite"), int):
                     c["cite"] = [c["cite"]]; changed = True; fixed_cites += 1
