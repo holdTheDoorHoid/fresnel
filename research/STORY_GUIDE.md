@@ -36,7 +36,7 @@ life-saving stations in the US (territories included) and Canada.
 Never pad to reach a length. A short honest story beats a long padded one.
 
 **Shape.** Do not start with a title (the page shows the name). Start with one short opening
-paragraph, no heading, that says what and where in a way a visitor remembers. Then chapters, as
+paragraph, no heading, that names the station in its first sentence and says what and where in a way a visitor remembers. Then chapters, as
 `## ` headings, **in this order and with exactly these names**, skipping any you have nothing
 sourced for:
 
