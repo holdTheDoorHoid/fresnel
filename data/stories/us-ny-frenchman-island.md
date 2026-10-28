@@ -1,0 +1,14 @@
+Frenchman's Island Light stands on an island in Oneida Lake, New York, on a concrete tower that has shown a light since 1918.[^1][^2] It is one of three concrete lights the state built on the lake for its Barge Canal.[^1][^4] The contract, numbered 132, went to Lupfer & Remick of Buffalo, and the three towers were built from the same forms.[^1][^4]
+
+The Frenchman's Island tower was not begun until the summer of 1917, though some preparatory work came earlier.[^1] It stands on a knoll 18 feet (5.5 m) above the lake and is 85 feet (26 m) tall.[^1][^2] The other two towers showed their lights for the first time in late summer 1917, and the light on Frenchman's Island did not come on until the following year.[^1] Each tower had a gas beacon behind an exposed glass lens, and the Frenchman's Island light stayed on gas for several years.[^1]
+
+Lighthouse Friends says that in 1920 the state put in place a structured system for hiring and assessing its keepers.[^1] Keepers were issued motorboats and inspected all the aids each day across a sector roughly ten miles wide.[^1] That describes the state's system as a whole, not a record of this light.[^1] No source read here names a keeper for the Frenchman's Island light.[^1]
+
+In 1949 a 20-foot (6 m) steel skeletal tower was mounted on the concrete one.[^1][^2] It raised the focal plane by twenty feet, so that the light could be seen from about twenty miles.[^1] The directory says the addition kept the light visible above the surrounding trees.[^2] In 2008 New York State Parks reopened the island, after years in which vandalism had kept it closed.[^2] The directory says the park service planned no development beyond nature trails.[^2] The island went to the state Department of Environmental Conservation to be run as a wildlife preserve.[^2] The directory's sentence gives the date only as "transferred to 2011", and no other source read here dates the transfer.[^2]
+
+The directory lists the light as active and gives a focal plane of 123 feet (37.5 m).[^2] The island is reached only by boat, with a rustic dock.[^2] The site is open, but the tower is closed.[^2] The Lighthouse Society's archive lists the island as not open to the public, and that does not match the 2008 reopening.[^3]
+
+[^1]: LighthouseFriends, "Frenchman's Island Lighthouse, New York," Lighthouse Friends, https://www.lighthousefriends.com/light.asp?ID=1569 (accessed 2026-10-28).
+[^2]: Russ Rowlett, "Lighthouses of the U.S.: New York: Central and Northern," The Lighthouse Directory, University of North Carolina at Chapel Hill, https://www.ibiblio.org/lighthouse/nyup.htm (accessed 2026-10-28).
+[^3]: "Frenchman's Island," U.S. Lighthouse Society Digital Archive, https://archives.uslhs.org/places/frenchmans-island (accessed 2026-10-28).
+[^4]: Bill Orzell, "The History of the Barge Canal Lighthouses of Oneida Lake," Verona Beach Lighthouse Association, https://www.sylvanbeach.org/pdf/lighthouse.pdf (accessed 2026-10-28).

@@ -1,0 +1,14 @@
+Chicago Harbor Southeast Guidewall Light stands at the end of a guidewall where the Chicago River enters Lake Michigan, just south of Navy Pier. Its tower was built in 1912 for a lighthouse on the south pier at Kewaunee, Wisconsin, and was installed in Chicago in 1938, the year the river lock was completed.[^1][^2][^3]
+
+The Lighthouse Service's history of the district that took in Chicago says the first lighthouse built in the Lake Michigan area was placed at the mouth of the Chicago River in 1832.[^4] LighthouseFriends dates the first Chicago light near the river mouth to 1833.[^1]
+
+LighthouseFriends says the guidewall was built when the river locks went up between 1936 and 1938, to comply with a 1930 Supreme Court order that limited the water flowing from Lake Michigan into the river.[^1] The Illinois Department of Natural Resources gives a different court date: a Supreme Court decree of 1933 ordered the construction of the Chicago River lock and controlling works, which it says was completed in 1938.[^3] The sources disagree on the date of the court action, but both date the end of the work to 1938.
+
+The tower's first life was at Kewaunee. The new lighthouse on that city's south pier was first exhibited on the night of 26 March 1912, with a 45-foot (14 m) open-frame light tower.[^2] In November 1930 a railroad carferry collided with the end of the pier, damaging it and twisting one of the tower's support legs.[^2] The tower was stored at the base of the pier until 27 May 1932, when it was sailed to Milwaukee.[^2] LighthouseFriends dates the tower's Kewaunee service as 1912 to 1931, which differs from the Kewaunee history's account of it staying at the pier until May 1932.[^1][^2] Slight damage was repaired at the Milwaukee Lighthouse Depot, and the tower was installed in Chicago in 1938.[^2] The 1912 date belongs to Kewaunee. The Chicago light dates from 1938.[^1][^2]
+
+LighthouseFriends says the Coast Guard owns the light and that its tower is closed. It reports fairly good views from the south side of Navy Pier.[^1] The Kewaunee history says the tower still serves as an active aid to navigation, marking the entrance to the Chicago River lock.[^2] The tower is closed to visitors and should not be climbed.[^1]
+
+[^1]: "Chicago Harbor Southeast Guidewall Lighthouse, Illinois", LighthouseFriends, https://www.lighthousefriends.com/light.asp?ID=235 (accessed 2026-10-28).
+[^2]: "History", Kewaunee Pierhead Lighthouse, https://www.kewauneepierheadlighthouse.org/history (accessed 2026-10-28).
+[^3]: "History of Flood Control & Drainage in Northeastern Illinois", Illinois Department of Natural Resources, https://dnr.illinois.gov/waterresources/historyoffloodcontroldrainageinnortheasternillinois.html (accessed 2026-10-28).
+[^4]: Lighthouse Service Bulletin, 1937, p. 37, U.S. Lighthouse Society, https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1937.pdf#page=37 (accessed 2026-10-28).
