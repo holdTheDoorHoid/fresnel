@@ -1,0 +1,17 @@
+The Nantucket Harbor Range Lights are a pair of wooden skeletal towers on the Coast Guard grounds at Brant Point, which line up to guide vessels into Nantucket Harbor.[^1][^3] They were placed in operation in July 1908. Lighthouse Friends says the older Nantucket Cliff Range Lights were discontinued on 14 July 1908.[^2][^3] The directory gives 1912 as the year the Cliff Range lights became inactive.[^1]
+
+Brant Point lies at the entrance to Nantucket Harbor.[^3] A brick tower was built there in 1856, and in January 1901 the Light-House Board recorded the Brant Point light-station as moved 596 feet (182 m).[^5][^3] The Board's 1901 report also says that a new tower was built at the extremity of the point and that the light was exhibited from it on 31 January 1901.[^5] Lighthouse Friends says the present wooden tower went up in 1901, about 600 feet east of the 1856 one.[^3] The two range towers stand on the same grounds.[^4][^1] The front tower is a few feet north-east of the 1856 Brant Point light, and the rear tower is 89 yards (81 m) south-south-east of the front.[^1]
+
+The sources describe the lights differently. Lighthouse Friends says the 1908 towers showed fixed white lights from pyramidal skeleton towers with a central lantern box.[^2] The directory gives the front a quick-flashing white light and the rear a continuous white light, both brighter on the range line.[^1] It gives the focal planes as 35 ft (10.5 m) for the front and 51 ft (15.5 m) for the rear.[^1]
+
+No source read names a keeper for the range towers alone. The archive's Brant Point record lists the two wooden range lights among the station's structures.[^4] Lighthouse Friends quotes a 1928 duty description by Keeper Gerald Reed, who ran the Brant Point station. He described two kerosene range lights, 31 and 48 feet (9.4 and 14.6 m) high, which were raised and lowered by hand-operated cable each night and morning.[^3]
+
+Lighthouse Friends also reports that Keeper Richard Dixon rescued two men in 1926 from a motorboat that had been damaged by ice and sank. The account does not say where the rescue happened in relation to the range towers.[^3]
+
+The Coast Guard owns the lights, and the directory lists the site as open, with the towers closed.[^1][^3] The U.S. Lighthouse Society's archive lists the Brant Point station as not open to the public.[^4] The range towers stand on the grounds of the Coast Guard station on Brant Point, which is at the end of Easton Street. The grounds are open and the towers closed, so visitors should not climb them.[^1][^3]
+
+[^1]: Russ Rowlett, "The Lighthouse Directory: Massachusetts: South," University of North Carolina at Chapel Hill, https://www.ibiblio.org/lighthouse/maso.htm (accessed 2026-10-28).
+[^2]: Lighthouse Friends, "Nantucket Cliff Range Lighthouse, Massachusetts," Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=631 (accessed 2026-10-28).
+[^3]: Lighthouse Friends, "Brant Point Lighthouse, Massachusetts," Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=629 (accessed 2026-10-28).
+[^4]: U.S. Lighthouse Society Digital Archive, "Brant Point" place record, https://archives.uslhs.org/places/brant-point (accessed 2026-10-28).
+[^5]: Light-House Board, annual report for 1901, "Brant Point light-station, Nantucket Harbor," scan pp. 31 and 81, Internet Archive, https://archive.org/details/annualreportlig01boargoog (accessed 2026-10-28).

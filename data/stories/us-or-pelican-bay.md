@@ -1,0 +1,9 @@
+Pelican Bay Light is a white octagonal tower attached to a house on a cliff above the Port of Brookings Harbor, near Harbor, Oregon, on the southern Oregon coast.[^1][^2][^3] The Coast Guard's Light List gives its characteristic as Fl (3)W 20s, with a range of 11.[^1] Lighthouse Digest describes the light as three white flashes every 20 seconds.[^3] The Lighthouse Hunters says it can be seen 11 miles away.[^2] It is a private aid to navigation, and it was built by its owners.[^2][^3]
+
+The house was moved to its cliff-top site in 1997, and the light was added to it afterwards.[^2] The Coast Guard commissioned the light as a private aid to navigation on 24 June 1999, and it was first lit on 4 July 1999, according to a regional lighthouse-hunters' site.[^2] The Digest gives the tower as 35 feet (11 m) high, though its entry does not print a unit. It gives the focal plane as 141 feet (43 m). The Lighthouse Hunters puts the tower 141 feet above the Pacific.[^3][^2] The lens is a fixed acrylic Fresnel.[^2] Lighthouse Digest's database calls it the second private residence on the Oregon coast to be designated a private aid to navigation, after Cleft of the Rock.[^3]
+
+The Digest lists the light as privately managed and not open to the public. This story does not suggest visiting it.[^3]
+
+[^1]: U.S. Coast Guard, *Light List*, Volume VI, Pacific Coast and Pacific Islands (2025 edition), LLNR 570, Pelican Bay Light, copy at https://www.npshistory.com/publications/maritime/light-list-v6-2025.pdf (accessed 2026-10-28).
+[^2]: The Lighthouse Hunters, "Pelican Bay Lighthouse, Oregon," updated September 2012, http://www.thelighthousehunters.com/oregon-pelican-bay.htm (accessed 2026-10-28).
+[^3]: Lighthouse Digest, Lighthouse Explorer Database, "Pelican Bay Lighthouse," https://www.lighthousedigest.com/Digest/database/uniquelighthouse.cfm?value=1613 (accessed 2026-10-28).
