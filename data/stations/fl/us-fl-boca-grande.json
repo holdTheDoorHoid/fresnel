@@ -14,6 +14,7 @@
     "Boca Grande Entrance Rear Range",
     "Port Boca Grande",
     "Boca Grande",
+    "Gasparilla Island Rear Range",
     "Gasparilla Island LIghthouse",
     "Gasparilla Is",
     "Pt Boca Grande"
@@ -89,7 +90,7 @@
   "ownership": "state",
   "access": {
     "level": "public",
-    "note": "The US Lighthouse Society's archive lists it as open to the public."
+    "note": "The US Lighthouse Society's archive lists it as open to the public. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -123,6 +124,12 @@
       "event": "first_lit",
       "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1932,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1966,
@@ -260,6 +267,11 @@
       "kind": "reference"
     },
     {
+      "label": "US Lighthouse Society Digital Archive: Gasparilla Island Rear Range",
+      "url": "https://archives.uslhs.org/places/gasparilla-island-rear-range",
+      "kind": "reference"
+    },
+    {
       "label": "NRHP nomination (National Archives)",
       "url": "https://catalog.archives.gov/id/77842878",
       "kind": "register"
@@ -370,6 +382,15 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:7610",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
       "source": "nrhp",
       "key": "nrhp:80000953",
       "part": "station",
@@ -441,5 +462,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

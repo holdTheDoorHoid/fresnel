@@ -5,6 +5,7 @@
     "Barber's Point Lighthouse",
     "Barbers Point",
     "Barber's Point",
+    "Barber's Point NY",
     "Barber Point Light B"
   ],
   "country": "US",
@@ -55,11 +56,11 @@
   "ownership": "unknown",
   "access": {
     "level": "private",
-    "note": "LighthouseFriends marks it privately owned, with no access without permission."
+    "note": "LighthouseFriends marks it privately owned, with no access without permission. The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "automated",
+    "as_of": "1935"
   },
   "visit": {
     "grounds_open": null,
@@ -83,6 +84,18 @@
       "event": "first_lit",
       "note": "Station established (Rowlett's Lighthouse Directory)",
       "from": "wikidata"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1935,
+      "event": "automated",
+      "note": "US Lighthouse Society Digital Archive",
+      "from": "uslhs"
     },
     {
       "year": 1935,
@@ -133,6 +146,11 @@
     {
       "label": "Lighthouse Directory: New York: Central and Northern",
       "url": "https://www.ibiblio.org/lighthouse/nyup.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Barber's Point NY",
+      "url": "https://archives.uslhs.org/places/barbers-point-ny",
       "kind": "reference"
     }
   ],
@@ -192,6 +210,15 @@
       "fields": [
         "light"
       ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:3391",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
     }
   ],
   "conflicts": [],
@@ -199,5 +226,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

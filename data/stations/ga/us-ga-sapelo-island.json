@@ -2,40 +2,63 @@
   "id": "us-ga-sapelo-island",
   "name": "Sapelo Island Light",
   "other_names": [
+    "Sapelo Island Range Front Light",
     "Sapelo Island Lighthouse",
-    "Sapelo Island"
+    "Sapelo Island",
+    "Sapelo Island Range Front",
+    "Sapelo Island Range Rear"
   ],
   "country": "US",
   "region": "GA",
   "county": "McIntosh",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
-    "lat": 31.391266,
-    "lon": -81.285646,
+    "lat": 31.38993,
+    "lon": -81.28416,
     "precision": "exact",
-    "from": "osm"
+    "from": "lighthousefriends"
   },
   "status": "inactive",
   "status_note": null,
   "structures": [
     {
       "role": "tower",
-      "name": null,
+      "name": "Sapelo Island Light",
       "type": "conical_masonry",
       "material": "brick",
       "built": 1820,
       "height_m": 20.0,
       "status": "standing",
       "note": null,
-      "from": "wikidata"
+      "from": "wikidata",
+      "location": {
+        "lat": 31.391266,
+        "lon": -81.285646
+      }
+    },
+    {
+      "role": "front_range",
+      "name": "Sapelo Island Range Front Light",
+      "type": null,
+      "material": null,
+      "built": 1877,
+      "height_m": 7.6,
+      "status": "standing",
+      "note": null,
+      "from": "uslhs"
     }
   ],
   "light": {
     "first_lit": 1820,
-    "deactivated": 1905,
-    "lens": null,
+    "deactivated": 1898,
+    "lens": {
+      "type": "fresnel",
+      "order": "4",
+      "status": "in_place",
+      "where": null
+    },
     "characteristic": "Fl W 45s",
     "focal_height_m": 23.0,
     "range_nm": null,
@@ -49,26 +72,31 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/97000335",
       "listed": "1997-08-26",
       "nomination": "https://catalog.archives.gov/id/93208941"
+    },
+    {
+      "register": "National Register of Historic Places contributing property",
+      "number": null,
+      "url": null
     }
   ],
   "aton": {
     "uscg_llnr": "3-5946",
-    "arlhs": "USA738",
+    "arlhs": "USA1014",
     "ccg_list_number": null,
     "nga": null
   },
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The US Lighthouse Society's archive lists it as not open to the public. The US Lighthouse Society's archive lists it as open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "grounds_open": null,
+    "grounds_open": true,
     "climbable": true,
     "museum": null,
     "tours": null,
@@ -87,8 +115,32 @@
     {
       "year": 1820,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
+    },
+    {
+      "year": 1877,
+      "event": "built",
+      "note": "Tower 2 (Rowlett's Lighthouse Directory)",
+      "from": "rowlett"
+    },
+    {
+      "year": 1877,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "wikidata"
+    },
+    {
+      "year": 1898,
+      "event": "deactivated",
+      "note": "Rowlett's Lighthouse Directory",
+      "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     },
     {
       "year": 1905,
@@ -107,6 +159,15 @@
   "related": [],
   "photos": [
     {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapelo_Island_Range_Light_%282%29%2C_GA%2C_US.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapelo_Island_Range_Light_%282%29%2C_GA%2C_US.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sapelo_Island_Range_Light_%282%29%2C_GA%2C_US.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapelo_Island_Lighthouse%2C_GA%2C_US.jpg",
       "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapelo_Island_Lighthouse%2C_GA%2C_US.jpg?width=640",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sapelo_Island_Lighthouse%2C_GA%2C_US.jpg",
@@ -117,6 +178,26 @@
     }
   ],
   "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q16961245",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sapelo_Island_Range_Front_Light",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "Wikipédia (français)",
+      "url": "https://fr.wikipedia.org/wiki/Phare_avant_de_Sapelo_Island",
+      "kind": "wikipedia"
+    },
+    {
+      "label": "ARLHS World List of Lights USA1014",
+      "url": "https://wlol.arlhs.com/lighthouse/USA1014.html",
+      "kind": "register"
+    },
     {
       "label": "Wikidata",
       "url": "https://www.wikidata.org/wiki/Q7420934",
@@ -153,8 +234,23 @@
       "kind": "reference"
     },
     {
+      "label": "LighthouseFriends: Sapelo Island Range Front",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=327",
+      "kind": "reference"
+    },
+    {
       "label": "Lighthouse Directory: Georgia",
       "url": "https://www.ibiblio.org/lighthouse/ga.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sapelo Island Range Front",
+      "url": "https://archives.uslhs.org/places/sapelo-island-range-front",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Sapelo Island Range Rear",
+      "url": "https://archives.uslhs.org/places/sapelo-island-range-rear",
       "kind": "reference"
     },
     {
@@ -166,8 +262,8 @@
   "sources": [
     {
       "source": "wikidata",
-      "key": "wikidata:Q7420934",
-      "part": "wikidata:Q7420934",
+      "key": "wikidata:Q16961245",
+      "part": "lighthousefriends:327",
       "fields": [
         "aton",
         "county",
@@ -182,12 +278,23 @@
       ]
     },
     {
+      "source": "wikidata",
+      "key": "wikidata:Q7420934",
+      "part": "wikidata:Q7420934",
+      "fields": [
+        "aton",
+        "events",
+        "light",
+        "photos",
+        "registers",
+        "structures"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/670500856",
       "part": "wikidata:Q7420934",
-      "fields": [
-        "location"
-      ]
+      "fields": []
     },
     {
       "source": "lighthousefriends",
@@ -198,11 +305,48 @@
       ]
     },
     {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:327",
+      "part": "lighthousefriends:327",
+      "fields": [
+        "location"
+      ]
+    },
+    {
       "source": "rowlett",
       "key": "rowlett:ga:sapelo-island-1",
       "part": "station",
       "fields": [
         "events"
+      ]
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:ga:sapelo-island-range-front-2",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:15257",
+      "part": "lighthousefriends:327",
+      "fields": [
+        "access",
+        "events",
+        "structures"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:2793",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light",
+        "visit"
       ]
     },
     {
@@ -236,5 +380,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

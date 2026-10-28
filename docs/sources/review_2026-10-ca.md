@@ -282,7 +282,6 @@ Every decision is an entry with its reason in `data/curation_ca.json`.
 | ca-qc-cap-de-rabast -> ca-qc-pointe-nord (1.4 km) | Cap de Rabast (Pointe-Nord, Anticosti): Wikidata has two items, 'Cap-de-Rabast Lighthouse' (a rounded point) and 'Phare de Pointe-Nord'; OpenStreetMap, Lighthouse Friends, the Coast Guard (A1515.2) and Rowlett all describe one light. | merged into `ca-qc-pointe-nord` |
 | ca-nl-flat-rock -> ca-nl-horse-chops (0 m) | The Coast Guard's 'Flat Rock Fog Signal Station' (N463, Admiralty H522) is 80 m from Horse Chops; OpenStreetMap's Horse Chops element carries H522 and Rowlett gives Horse Chops (fog signal) N463. The fog signal station is a structure of the Horse Chops light station (the first review had left it apart). | merged into `ca-nl-horse-chops` |
 | ca-qc-cap-de-bon-desir -> ca-qc-bon-desir (250 m) | Bon-Désir: Wikidata has two items, 'Cap-de-Bon-Désir Lighthouse' (rounded point, 250 m) and 'Phare de Bon-Désir'; Lighthouse Friends, the Coast Guard (A1755) and Rowlett describe one light. | merged into `ca-qc-bon-desir` |
-| ca-on-port-dalhousie-range-rear -> ca-on-port-dalhousie-outer-range (461 m) | Port Dalhousie Range: Wikidata's 'Outer' and 'Inner' range lighthouses are the front and rear that Lighthouse Friends, OpenStreetMap and Rowlett call Range Front and Rear, 460 m apart; one range. | merged into `ca-on-port-dalhousie-outer-range` |
 | ca-pe-summerside-range-front -> ca-pe-summerside-back-range (0 m) | Summerside Range: Lighthouse Friends' and Rowlett's front (private, inactive) is the front of the range whose rear is Wikidata's 'Summerside Back Range Light' (Coast Guard A1022); one range. | merged into `ca-pe-summerside-back-range` |
 | ca-on-old -> ca-on-oakville (397 m) | Wikidata's 'Old Lighthouse' at Lakeside Park, Oakville, is the 1889 Oakville harbour lighthouse moved off the pier; one station with the present Oakville light. | merged into `ca-on-oakville` |
 
@@ -302,6 +301,13 @@ back to `active` (`STATUS_PICKS`: curation has no status entry), with a note tha
 which carries the South light's Wikidata tag, went back to the South station; it now respects them like every other
 path (`merge.py`, test `test_detach_and_apart_hold_against_an_osm_wikidata_tag`).
 
+**Hidden** (`hide`; files kept):
+
+- `ca-nb-barrack-block-h23`: A barracks building at Canadian Forces Base Gagetown (Barrack Block H23 and H21, federal heritage buildings), not a light. Two Wikidata items for barracks buildings at CFB Gagetown, Oromocto, inland; no Canadian light list or lighthouse source lists a light there.
+- `ca-nb-junior-ranks-quarters-d23`: A quarters building at Canadian Forces Base Gagetown (Junior Ranks Quarters D23), not a light. A Wikidata item for a federal heritage building at CFB Gagetown, inland; no light source lists it.
+- `ca-qc-hirondelles-noires-de-dorval`: A purple-martin nesting house shaped like a lighthouse (Dorval Purple Martin Lighthouse), not an aid to navigation. OpenStreetMap's 'Phare des hirondelles noires de Dorval' (Dorval Purple Martin Lighthouse); no Coast Guard list entry or lighthouse source.
+- `ca-on-tower`: OpenStreetMap's 'Tower Light' on the Ottawa River: no light list or lighthouse source has a light here. OpenStreetMap only (man_made=lighthouse, no seamark tags); no Coast Guard list entry, Lighthouse Friends or Rowlett entry within 3 km.
+
 **Renamed** (`rename`; ids unchanged):
 
 | Station | Name shown | Why |
@@ -315,7 +321,6 @@ path (`merge.py`, test `test_detach_and_apart_hold_against_an_osm_wikidata_tag`)
 | ca-on-stokes-bay-range-front | Stokes Bay Range Lights | The station now holds the range's front and rear. |
 | ca-pe-summerside-outer-range-front | Summerside Outer Range Lights | The station now holds the range's front and rear; Wikidata's item for the pair is 'Summerside Outer Range Lights'. |
 | ca-qc-soulanges-canal-upper-entrance-range-front | Soulanges Canal Upper Entrance Range Lights | The station now holds the range's front and rear. |
-| ca-on-port-dalhousie-outer-range | Port Dalhousie Range Lights | The station now holds the range's front and rear. |
 | ca-pe-summerside-back-range | Summerside Range Lights | The station now holds the range's front and rear. |
 | ca-qc-pointe-nord | Cap-de-Rabast Lighthouse | OpenStreetMap, Lighthouse Friends, the Coast Guard (A1515.2) and Rowlett call the light Cap de Rabast; 'Phare de Pointe-Nord' is a second Wikidata label for the place. |
 | ca-bc-sand-heads | Sand Heads Lighthouse | Wikidata's French label 'phare de Sand Heads' won the name; OpenStreetMap calls it Sand Heads Lighthouse, Lighthouse Friends, the Coast Guard and Rowlett Sand Heads. |
@@ -365,14 +370,16 @@ for the record):
 | ca-on-pointe-aux-pins / ca-on-pointe-aux-pins-2 | Pointe aux Pins on Lake Erie and Pointe aux Pins near Sault Ste. Marie, 512 km apart; at the latter, the main light (lost) and the range are separate Lighthouse Friends pages. |
 | ca-qc-sainte-croix / ca-qc-sainte-croix-range | Sainte-Croix lighthouse and the Sainte-Croix range, 2.4 km apart. |
 
-**Left for the owner.** Wright's Range (`ca-pe-wrights-range`, the front, and `ca-pe-wrights-back-range`, 690 m apart)
-is one range by DESIGN 3.2, but both stations have a published story. `ca-pe-leards-range-2` and
+**Left for the owner.** Two ranges are one station each by DESIGN 3.2, but both halves have a published story, so
+they are not merged: Wright's Range (`ca-pe-wrights-range`, the front, and `ca-pe-wrights-back-range`, 690 m apart)
+and Port Dalhousie (`ca-on-port-dalhousie-outer-range`, the front, and `ca-on-port-dalhousie-range-rear`, 460 m apart;
+a first pass merged them before the rear's story was published in batch H7, and was undone). `ca-pe-leards-range-2` and
 `ca-nl-belle-isle-south-end-lower-2`, ids in the running story batch, keep their ids and now hold the merged records.
 
-**After the audit** (local merge of 2026-10-28): **1,168 Canadian stations shown** (1,194 before): 27 ids retired with
-`merged_into` (43 in all), one new station (`ca-ns-pictou-island-west`). `data/curation_ca.json` gained 27
-`merge_stations`, 24 `rename`, 5 `detach`, 4 `apart` and 1 `join` entries. The report's 3 Canadian possible duplicates
-and 28 close namesakes are now 0. A second run writes nothing.
+**After the audit** (local merge of 2026-10-28): **1,165 Canadian stations shown** (1,194 before): 26 ids retired with
+`merged_into` (42 in all), 4 hidden, one new station (`ca-ns-pictou-island-west`). `data/curation_ca.json` gained 26
+`merge_stations`, 23 `rename`, 4 `hide`, 5 `detach`, 4 `apart` and 1 `join` entries. The report's 3 Canadian possible
+duplicates and 28 close namesakes are now 0. A second run writes nothing.
 
 **Pins that moved with a merge.** A range's pin stands on its front light (DESIGN 3.9). Where the front tower was moved
 away, the merged station's pin is now on it: Calvaire (the 1915 front at the Deschaillons rest area, 3.6 km from the

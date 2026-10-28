@@ -1788,7 +1788,91 @@ NO_POSITION.add('uslhs:9235')
 # carries the light today (the station); the archive's point is rounded.
 _join('us-oh-vermilion', 'uslhs:34241')
 
+# us-ga-sapelo-island-range-front into us-ga-sapelo-island (range, 205 m)
+# Sapelo Island: about 1877 the 1820 tower was relit as the rear light of a range whose front was the iron beacon
+# 205 m away (Wikidata's 'Sapelo Island Range Front Light', LighthouseFriends 327; both discontinued 1898-99). The
+# Society files the lighthouse itself as 'Sapelo Island Range Rear'. DESIGN 3.2: one station with two structures,
+# kept under the storied lighthouse id; the range front's story was held back from publishing. The Society's rear
+# record describes the station as a whole (its rounded point would have made a second tower).
+_join('us-ga-sapelo-island',
+      'lighthousefriends:327',
+      'rowlett:ga:sapelo-island-range-front-2',
+      'uslhs:15257',
+      'uslhs:2793',
+      'wikidata:Q16961245')
+NO_POSITION.add('uslhs:2793')
+
+# us-mn-two-harbors-east-breakwater into us-mn-two-harbors-breakwater (archive point wrong, 34 km)
+# The Society's Two Harbors East Breakwater (1895) is the light that Rowlett ('Two Harbors East Breakwater'), the
+# Light List (7-16505) and LighthouseFriends 268 place on the breakwater at Two Harbors; the archive's point is
+# near Duluth, 34 km away.
+_join('us-mn-two-harbors-breakwater', 'uslhs:9219')
+NO_POSITION.add('uslhs:9219')
+
+# us-ca-long-beach-harbor into us-ca-long-beach (archive point wrong, 55 km)
+# The Society's Long Beach Harbor (1949) is the 1949 'Robot Light' on the Long Beach breakwater,
+# LighthouseFriends' 'Long Beach Harbor'; the archive's point is 55 km north, inland.
+_join('us-ca-long-beach', 'uslhs:8375')
+NO_POSITION.add('uslhs:8375')
+
+# us-fl-gasparilla-island-rear-range into us-fl-boca-grande (archive point wrong, 58 km)
+# The Society's Gasparilla Island Rear Range (active) is the Boca Grande entrance rear range light at the north
+# end of Gasparilla Island, which the station already holds (Wikidata, Light List 3-1310); the archive's point is
+# 58 km north.
+_join('us-fl-boca-grande', 'uslhs:7610')
+NO_POSITION.add('uslhs:7610')
+
+# us-md-lazaretto-point-replica into us-md-lazaretto-point (archive point wrong, 38 km)
+# The Society's Lazaretto Point (Replica) (1985) is the replica that OpenStreetMap, Wikidata and LighthouseFriends
+# ('Lazaretto Point (Replica)') place at Baltimore; the archive's point is 38 km west.
+_join('us-md-lazaretto-point', 'uslhs:23261')
+NO_POSITION.add('uslhs:23261')
+
+# us-mi-frankfort-south-pierhead into us-mi-frankfort (archive point wrong, 49 km)
+# The Society's Frankfort South Pierhead is Frankfort's first light, on the south pier from 1873
+# (LighthouseFriends 198, whose page is the station's history); the archive's point is 49 km north.
+_join('us-mi-frankfort', 'uslhs:8505')
+NO_POSITION.add('uslhs:8505')
+
+# us-mi-grosse-isle-north-channel-range-rear into us-mi-grosse-ile-north-channel-range-front (range, 480 m)
+# The Society's Grosse Isle North Channel Range Rear (1894) is the rear of the range whose front the station holds
+# (OpenStreetMap, LighthouseFriends 'Grosse Ile North Range', Rowlett, the Light List, the Society's front).
+_join('us-mi-grosse-ile-north-channel-range-front', 'uslhs:9659')
+
+# us-nc-prices-creek-range-front into us-nc-price-creek (archive point wrong, 92 km)
+# The Society's Prices Creek Range Front (1850-1867) is Price's Creek Light, the front range light that Wikidata,
+# OpenStreetMap, LighthouseFriends and Rowlett ('Price's Creek Range Front') place at Southport; the archive's
+# point is 92 km inland.
+_join('us-nc-price-creek', 'uslhs:8863')
+NO_POSITION.add('uslhs:8863')
+
+# us-ny-barbers-point-ny into us-ny-barbers-point (archive point wrong, 24 km)
+# The Society's Barber's Point NY (1873-1935) is Barber's Point Light at Westport on Lake Champlain; the archive's
+# point is 24 km inland.
+_join('us-ny-barbers-point', 'uslhs:3391')
+NO_POSITION.add('uslhs:3391')
+
+# us-ri-block-island into us-ri-block-island-north (archive point wrong, 29 km)
+# The Society's Block Island (other name North; tower of 1867, station of 1829) is Block Island North Light; the
+# archive's rounded point (41.23 N, 71.23 W) is 29 km from it.
+_join('us-ri-block-island-north', 'uslhs:3488')
+NO_POSITION.add('uslhs:3488')
+
+# us-sc-daufuskie-island-range into us-sc-haig-point-range (same range, 1 km)
+# The Society's Daufuskie Island Range front and rear (1873) are the Haig Point range on Daufuskie Island
+# (LighthouseFriends 'Daufuskie Island (Haig Point)', Wikidata's front, rear and pair); the archive's points are 1
+# km off and are set aside so the storied station gains no extra towers.
+_join('us-sc-haig-point-range',
+      'uslhs:15281',
+      'uslhs:8914')
+NO_POSITION.add('uslhs:15281')
+NO_POSITION.add('uslhs:8914')
+
 # ---- Names (duplicate audit) ----
+# With the range front joined, the station holds a front and a rear; it keeps the lighthouse's name, as its story
+# does.
+NAME_PICKS['us-ga-sapelo-island'] = 'Sapelo Island Light'
+
 # Wikidata's label 'Moose Peak Light Shalen’s New Home' is not the light's name; OpenStreetMap and the Light List
 # (1-1390) call it Moose Peak Light, LighthouseFriends, Rowlett, the Society and the passport list Moose Peak. The
 # id keeps the first build's slug.
@@ -1873,6 +1957,79 @@ STATUS_PICKS['us-mi-frying-pan-island'] = ('relocated', 'The 1882 tower was move
 # records go to their stations; the station cannot be retired into one of them (the merge retires a station into
 # one other station only, and a station needs a positioned record), so it is hidden with the two records left.
 HIDE['us-ny-titanic-memorial-2'] = "A duplicate listing: Rowlett's Titanic Memorial is us-ny-titanic-memorial and the Strawberry Island Lower Cut Range Rear is part of us-ny-strawberry-island-lower-cut-range; what is left is the Society's record of that rear (its point is in Lake Ontario) and Rowlett's 'Shoal Point' (upstate New York, 1890), filed here by a truncated ARLHS number"
+
+# OpenStreetMap's 'Airport Beacon' (man_made=lighthouse) near Franklin, PA, inland; OpenStreetMap only; no light
+# list, register or lighthouse directory lists a light within 3 km.
+HIDE['us-pa-airport-beacon'] = 'An airport rotating beacon, not an aid to navigation on the water'
+
+# OpenStreetMap's second 'Airport Beacon' in western Pennsylvania, inland; OpenStreetMap only; no light list,
+# register or lighthouse directory lists a light within 3 km.
+HIDE['us-pa-airport-beacon-2'] = 'An airport rotating beacon, not an aid to navigation on the water'
+
+# OpenStreetMap's 'Airport Beacon' at Springfield, IL, inland; OpenStreetMap only; no light list, register or
+# lighthouse directory lists a light within 3 km.
+HIDE['us-il-airport-beacon'] = 'An airport rotating beacon, not an aid to navigation on the water'
+
+# OpenStreetMap's 'Airport Beacon' at Appleton, WI, inland; OpenStreetMap only; no light list, register or
+# lighthouse directory lists a light within 3 km.
+HIDE['us-wi-airport-beacon'] = 'An airport rotating beacon, not an aid to navigation on the water'
+
+# OpenStreetMap's 'PIAFB Beacon', inland at Presque Isle, ME; OpenStreetMap only; no light list, register or
+# lighthouse directory lists a light within 3 km.
+HIDE['us-me-piafb-beacon'] = 'The aerodrome beacon of the former Presque Isle Air Force Base, not an aid to navigation on the water'
+
+# OpenStreetMap's 'IWD Beacon', inland near Ironwood, MI; OpenStreetMap only; no light list, register or
+# lighthouse directory lists a light within 3 km.
+HIDE['us-mi-iwd-beacon'] = 'The aerodrome beacon of Gogebic-Iron County Airport (IWD), not an aid to navigation on the water'
+
+# OpenStreetMap's 'Edwards AFB Aerodrome Beacon' in the Mojave Desert; OpenStreetMap only; no light list, register
+# or lighthouse directory lists a light within 3 km.
+HIDE['us-ca-edwards-afb-aerodrome-beacon'] = 'The aerodrome beacon of Edwards Air Force Base, not an aid to navigation'
+
+# The National Register listing 70000411 is the stone altar screen of the chapel of Our Lady of Light; the
+# register record was read as a lighthouse by its name.
+HIDE['us-nm-reredos-of-our-lady-of'] = 'A church altar screen in Santa Fe (Reredos of Our Lady of Light), not a lighthouse'
+
+# The National Register listing 11000131 'Light House' is in San Antonio, 200 km from the coast; no light list or
+# lighthouse directory lists it.
+HIDE['us-tx-light-house'] = "A building named 'Light House' in San Antonio, not a lighthouse"
+
+# OpenStreetMap's building 'The Lighthouse' (man_made=lighthouse, building=yes) is 1 km from Tongue Point Light,
+# which is its own station; nothing lists a light at the building.
+HIDE['us-ct-the'] = "A building called 'The Lighthouse' in Bridgeport, not a light"
+
+# OpenStreetMap's 'Kenly 95' is at the Kenly 95 travel plaza on Interstate 95, 140 km from the coast;
+# OpenStreetMap only; no light list, register or lighthouse directory lists a light within 3 km.
+HIDE['us-nc-kenly-95'] = 'A lighthouse-shaped tower at an inland travel stop (Kenly 95), not an aid to navigation'
+
+# OpenStreetMap's element is named 'N41°44.423 W83°27.167 (6' Deep)' in western Lake Erie; no light list, chart or
+# lighthouse directory has a light there.
+HIDE['us-mi-n41-44-423-w83-27-167-6-deep'] = "An OpenStreetMap point named only by its coordinates ('6' Deep'), not a light station"
+
+# Wikidata's item is the Wikipedia list article 'Unmanned reef lights of the Florida Keys' (the minor reef lights
+# as a group), with one point for all of them; the lights it covers that have a history are stations of their own.
+HIDE['us-fl-unmanned-reef-lights-of-the-florida-keys'] = 'A group article about several reef lights, not one station'
+
+# ---- Scale copies (duplicate audit) ----
+# OpenStreetMap's 'Pigeon Point Lighthouse' at Lake Havasu City, among the town's scale copies of named lights
+# (DESIGN 3.2), 790 km from Pigeon Point.
+REPLICA_OF['us-ca-pigeon-point-2'] = 'us-ca-pigeon-point'
+
+# OpenStreetMap's 'Table Bluff Lighthouse' at Lake Havasu City, one of the town's scale copies of named lights,
+# 1,100 km from Table Bluff.
+REPLICA_OF['us-ca-table-bluff-3'] = 'us-ca-table-bluff'
+
+# The 2012 Choptank River Lighthouse at Cambridge: LighthouseFriends 'Choptank River (Replica)', Rowlett and the
+# Society list it as a replica of the 1871 screwpile.
+REPLICA_OF['us-md-choptank-river-2'] = 'us-md-choptank-river'
+
+# The 2004 lighthouse at Manteo: LighthouseFriends, Rowlett and the Society list it as the Roanoke Marshes
+# replica; the 1877 screwpile is us-nc-roanoke-marshes-2.
+REPLICA_OF['us-nc-roanoke-marshes'] = 'us-nc-roanoke-marshes-2'
+
+# The 2003 lighthouse at Plymouth: LighthouseFriends, Rowlett and the Society list it as the Roanoke River
+# replica; the 1887 lighthouse (now at Edenton) is us-nc-roanoke-river.
+REPLICA_OF['us-nc-roanoke-river-2'] = 'us-nc-roanoke-river'
 
 # ---- Canadian pairs the report listed, reviewed and found to be two (docs/sources/review_2026-10-ca.md) ----
 # Separate Lighthouse Friends pages (the lighthouse and the range), 89 m apart; records already apart in the

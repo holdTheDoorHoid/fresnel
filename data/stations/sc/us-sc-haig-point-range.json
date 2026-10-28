@@ -8,6 +8,8 @@
     "Daufuskie Island",
     "Haig Point",
     "Range Rear",
+    "Daufuskie Island Range Rear",
+    "Daufuskie Island Range Front",
     "Haig Point Light"
   ],
   "country": "US",
@@ -53,7 +55,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1873,
     "deactivated": 1924,
     "lens": null,
     "characteristic": "Fl W 14s",
@@ -79,7 +81,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -116,9 +118,21 @@
       "from": "wikidata"
     },
     {
+      "year": 1873,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
+      "year": 1873,
+      "event": "lens_installed",
+      "note": "Original lens: order 5 Fresnel (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1924,
       "event": "deactivated",
-      "note": null,
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     },
     {
@@ -201,6 +215,16 @@
       "label": "Lighthouse Directory: South Carolina",
       "url": "https://www.ibiblio.org/lighthouse/sc.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Daufuskie Island Range Rear",
+      "url": "https://archives.uslhs.org/places/daufuskie-island-range-rear",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Daufuskie Island Range Front",
+      "url": "https://archives.uslhs.org/places/daufuskie-island-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -226,7 +250,6 @@
       "fields": [
         "aton",
         "events",
-        "light",
         "photos",
         "registers",
         "structures"
@@ -264,6 +287,24 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:15281",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
+      "source": "uslhs",
+      "key": "uslhs:8914",
+      "part": "station",
+      "fields": [
+        "events"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:32.14525,-80.83648",
       "part": "wikidata:Q107267459",
@@ -272,25 +313,10 @@
       ]
     }
   ],
-  "conflicts": [
-    {
-      "field": "light.first_lit",
-      "values": [
-        {
-          "source": "wikidata",
-          "value": 1987
-        },
-        {
-          "source": "wikidata",
-          "value": 1924
-        }
-      ],
-      "note": "A source gives the light's service entry (1987) after its retirement (1924); it may have been relit. Neither is shown as the first lighting."
-    }
-  ],
+  "conflicts": [],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

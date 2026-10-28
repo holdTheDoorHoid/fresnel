@@ -1,8 +1,16 @@
 {
   "id": "ca-on-port-dalhousie-range-rear",
   "name": "Port Dalhousie Range Rear Lighthouse",
+  "other_names": [
+    "Port Dalhousie Inner Range Lighthouse",
+    "Rear Range Lighthouse, Port Dalhousie",
+    "Port Dalhousie Range Rear"
+  ],
   "country": "CA",
   "region": "ON",
+  "county": "Regional Municipality of Niagara",
+  "water": null,
+  "setting": null,
   "kind": "range_lights",
   "location": {
     "lat": 43.206917,
@@ -11,10 +19,219 @@
     "from": "osm"
   },
   "status": "inactive",
-  "sources": [],
+  "status_note": null,
+  "structures": [
+    {
+      "role": "rear_range",
+      "name": null,
+      "type": null,
+      "material": null,
+      "built": 1898,
+      "height_m": 12.0,
+      "status": "standing",
+      "note": null,
+      "from": "wikidata"
+    }
+  ],
+  "light": {
+    "first_lit": 1852,
+    "deactivated": 1988,
+    "lens": null,
+    "characteristic": null,
+    "focal_height_m": null,
+    "range_nm": null,
+    "fog_signal": null,
+    "from": "rowlett"
+  },
+  "registers": [
+    {
+      "register": "Canadian Register of Historic Places",
+      "number": "4745",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=4745"
+    },
+    {
+      "register": "Federal Heritage Building (Canada)",
+      "number": "3368",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=3368"
+    },
+    {
+      "register": "designated heritage property (part IV)",
+      "number": null,
+      "url": null
+    }
+  ],
+  "aton": {
+    "uscg_llnr": null,
+    "arlhs": "CAN541",
+    "ccg_list_number": null,
+    "nga": null
+  },
+  "agency": "City of St",
+  "ownership": "local",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "grounds_open": true,
+    "climbable": false,
+    "museum": null,
+    "tours": null,
+    "boat_only": null,
+    "passport_stamp": null,
+    "note": null
+  },
+  "stay": null,
+  "events": [
+    {
+      "year": 1852,
+      "event": "first_lit",
+      "note": "Station established",
+      "from": "rowlett"
+    },
+    {
+      "year": 1898,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
+      "year": 1899,
+      "event": "built",
+      "note": "Year of the tower described by the Lighthouse Directory",
+      "from": "rowlett"
+    },
+    {
+      "year": 1988,
+      "event": "deactivated",
+      "note": null,
+      "from": "rowlett"
+    },
+    {
+      "year": 1990,
+      "event": "heritage_designated",
+      "note": "recognized federal heritage building of Canada",
+      "from": "wikidata"
+    },
+    {
+      "year": 1997,
+      "event": "heritage_designated",
+      "note": "designated heritage property (part IV)",
+      "from": "wikidata"
+    }
+  ],
+  "keepers_count": null,
+  "related": [],
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rrl_entrance.jpg",
+      "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rrl_entrance.jpg?width=640",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rrl_entrance.jpg",
+      "credit": "Wikimedia Commons",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q28919186",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikimedia Commons category",
+      "url": "https://commons.wikimedia.org/wiki/Category:Rear_Range_Lighthouse%2C_Port_Dalhousie",
+      "kind": "commons"
+    },
+    {
+      "label": "ARLHS World List of Lights CAN541",
+      "url": "https://wlol.arlhs.com/lighthouse/CAN541.html",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6549644884",
+      "kind": "osm"
+    },
+    {
+      "label": "Lighthouse Friends",
+      "url": "https://www.lighthousefriends.com/light.asp?ID=1068",
+      "kind": "reference"
+    },
+    {
+      "label": "Lighthouse Directory (Rowlett)",
+      "url": "https://www.ibiblio.org/lighthouse/onso.htm",
+      "kind": "reference"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q28919186",
+      "part": "wikidata:Q28919186",
+      "fields": [
+        "aton",
+        "county",
+        "events",
+        "kind",
+        "name",
+        "photos",
+        "region",
+        "registers",
+        "structures"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/6549644884",
+      "part": "wikidata:Q28919186",
+      "fields": [
+        "location"
+      ]
+    },
+    {
+      "source": "lighthousefriends",
+      "key": "lighthousefriends:1068",
+      "part": "wikidata:Q28919186",
+      "fields": []
+    },
+    {
+      "source": "rowlett",
+      "key": "rowlett:onso:port-dalhousie-range-rear",
+      "part": "station",
+      "fields": [
+        "agency",
+        "events",
+        "light",
+        "ownership",
+        "visit"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "first_year",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1898
+        },
+        {
+          "source": "rowlett",
+          "value": 1852
+        }
+      ],
+      "note": "Sources give different first years (often the first tower against the present one)."
+    }
+  ],
   "verification": "facts",
-  "hidden": true,
-  "hidden_reason": "Merged into ca-on-port-dalhousie-outer-range: the same station",
-  "merged_into": "ca-on-port-dalhousie-outer-range",
-  "updated": "2026-10-28"
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-21"
 }

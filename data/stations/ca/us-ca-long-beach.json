@@ -5,7 +5,8 @@
     "Long Beach Lighthouse",
     "Long Beach Harbor",
     "Long Beach",
-    "Robot Light"
+    "Robot Light",
+    "Long Beach Harbor (Robot)"
   ],
   "country": "US",
   "region": "CA",
@@ -55,7 +56,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -67,7 +68,7 @@
     "museum": null,
     "tours": null,
     "boat_only": true,
-    "passport_stamp": null,
+    "passport_stamp": true,
     "note": null
   },
   "stay": null,
@@ -81,7 +82,7 @@
     {
       "year": 1949,
       "event": "first_lit",
-      "note": null,
+      "note": "Station established (US Lighthouse Society Digital Archive)",
       "from": "wikidata"
     }
   ],
@@ -137,6 +138,11 @@
     {
       "label": "Lighthouse Directory: California: South",
       "url": "https://www.ibiblio.org/lighthouse/ca2.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Long Beach Harbor",
+      "url": "https://archives.uslhs.org/places/long-beach-harbor",
       "kind": "reference"
     }
   ],
@@ -195,11 +201,28 @@
       "fields": []
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8375",
+      "part": "station",
+      "fields": [
+        "access",
+        "events"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:33.72323,-118.18669",
       "part": "wikidata:Q6672305",
       "fields": [
         "light"
+      ]
+    },
+    {
+      "source": "uslhs_passport",
+      "key": "uslhs_passport:stamp:ca:long-beach-harbor-robot",
+      "part": "station",
+      "fields": [
+        "visit"
       ]
     }
   ],
@@ -208,5 +231,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

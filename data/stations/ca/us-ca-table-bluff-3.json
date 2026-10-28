@@ -14,7 +14,7 @@
     "precision": "exact",
     "from": "osm"
   },
-  "status": "unknown",
+  "status": "replica",
   "status_note": null,
   "structures": [
     {
@@ -68,7 +68,13 @@
   "stay": null,
   "events": [],
   "keepers_count": null,
-  "related": [],
+  "related": [
+    {
+      "id": "us-ca-table-bluff",
+      "relation": "replica_of",
+      "name": "Table Bluff Light"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -95,5 +101,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

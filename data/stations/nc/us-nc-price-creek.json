@@ -6,6 +6,7 @@
     "Price's Creek Lighthouse",
     "Prices Creek",
     "Price's Creek Range Front",
+    "Prices Creek Range Front",
     "Price's Creek"
   ],
   "country": "US",
@@ -13,7 +14,7 @@
   "county": "Brunswick",
   "water": null,
   "setting": null,
-  "kind": "lighthouse",
+  "kind": "range_lights",
   "location": {
     "lat": 33.93609,
     "lon": -77.989717,
@@ -36,14 +37,14 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1850,
     "deactivated": 1860,
     "lens": null,
     "characteristic": null,
     "focal_height_m": 9.4,
     "range_nm": null,
     "fog_signal": null,
-    "from": "wikidata"
+    "from": "uslhs"
   },
   "registers": [],
   "aton": {
@@ -56,7 +57,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -80,6 +81,12 @@
       "from": "wikidata"
     },
     {
+      "year": 1850,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
+    {
       "year": 1860,
       "event": "deactivated",
       "note": null,
@@ -90,6 +97,12 @@
       "event": "deactivated",
       "note": "Rowlett's Lighthouse Directory",
       "from": "rowlett"
+    },
+    {
+      "year": 1867,
+      "event": "deactivated",
+      "note": "Discontinued (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
     }
   ],
   "keepers_count": null,
@@ -145,6 +158,11 @@
       "label": "Lighthouse Directory: North Carolina",
       "url": "https://www.ibiblio.org/lighthouse/nc.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Prices Creek Range Front",
+      "url": "https://archives.uslhs.org/places/prices-creek-range-front",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -156,7 +174,6 @@
         "aton",
         "county",
         "events",
-        "kind",
         "light",
         "name",
         "photos",
@@ -187,6 +204,17 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:8863",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "kind",
+        "light"
+      ]
+    },
+    {
       "source": "uslhs_passport",
       "key": "uslhs_passport:stamp:nc:price-s-creek",
       "part": "station",
@@ -195,10 +223,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "light.deactivated",
+      "values": [
+        {
+          "source": "wikidata",
+          "value": 1860
+        },
+        {
+          "source": "rowlett",
+          "value": 1861
+        },
+        {
+          "source": "uslhs",
+          "value": 1867
+        }
+      ],
+      "note": "Sources give different years for the light going out (a retirement against a later removal, or the first against the last of several towers)."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }

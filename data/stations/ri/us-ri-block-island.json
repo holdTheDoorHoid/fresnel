@@ -1,14 +1,8 @@
 {
   "id": "us-ri-block-island",
   "name": "Block Island",
-  "other_names": [
-    "North"
-  ],
   "country": "US",
   "region": "RI",
-  "county": "Washington",
-  "water": null,
-  "setting": null,
   "kind": "lighthouse",
   "location": {
     "lat": 41.23,
@@ -17,116 +11,10 @@
     "from": "uslhs"
   },
   "status": "active",
-  "status_note": null,
-  "structures": [
-    {
-      "role": "tower",
-      "name": null,
-      "type": "integral",
-      "material": "stone",
-      "built": 1867,
-      "height_m": 14.0,
-      "status": "standing",
-      "note": null,
-      "from": "uslhs"
-    }
-  ],
-  "light": {
-    "first_lit": 1829,
-    "deactivated": null,
-    "lens": null,
-    "characteristic": null,
-    "focal_height_m": 17.7,
-    "range_nm": null,
-    "fog_signal": null,
-    "from": "uslhs"
-  },
-  "registers": [],
-  "aton": {
-    "uscg_llnr": null,
-    "arlhs": null,
-    "ccg_list_number": null,
-    "nga": null
-  },
-  "agency": null,
-  "ownership": "unknown",
-  "access": {
-    "level": "public",
-    "note": "The US Lighthouse Society's archive lists it as open to the public."
-  },
-  "staffing": {
-    "status": "unknown",
-    "as_of": null
-  },
-  "visit": {
-    "grounds_open": true,
-    "climbable": null,
-    "museum": null,
-    "tours": null,
-    "boat_only": null,
-    "passport_stamp": null,
-    "note": null
-  },
-  "stay": null,
-  "events": [
-    {
-      "year": 1829,
-      "event": "first_lit",
-      "note": "Station established (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1867,
-      "event": "built",
-      "note": "Present tower (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1867,
-      "event": "lens_installed",
-      "note": "Original lens: order 4 Fresnel (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    },
-    {
-      "year": 1970,
-      "event": "deactivated",
-      "note": "Discontinued (US Lighthouse Society Digital Archive)",
-      "from": "uslhs"
-    }
-  ],
-  "keepers_count": null,
-  "related": [],
-  "photos": [],
-  "links": [
-    {
-      "label": "US Lighthouse Society Digital Archive: Block Island (North)",
-      "url": "https://archives.uslhs.org/places/block-island-north",
-      "kind": "reference"
-    }
-  ],
-  "sources": [
-    {
-      "source": "uslhs",
-      "key": "uslhs:3488",
-      "part": "uslhs:3488",
-      "fields": [
-        "access",
-        "county",
-        "events",
-        "kind",
-        "light",
-        "location",
-        "name",
-        "region",
-        "structures",
-        "visit"
-      ]
-    }
-  ],
-  "conflicts": [],
+  "sources": [],
   "verification": "unverified",
-  "locked": [],
-  "hidden": false,
-  "hidden_reason": null,
-  "updated": "2026-10-21"
+  "hidden": true,
+  "hidden_reason": "Merged into us-ri-block-island-north: the same station",
+  "merged_into": "us-ri-block-island-north",
+  "updated": "2026-10-28"
 }

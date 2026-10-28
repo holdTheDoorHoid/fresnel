@@ -34,7 +34,7 @@
     }
   ],
   "light": {
-    "first_lit": null,
+    "first_lit": 1895,
     "deactivated": null,
     "lens": null,
     "characteristic": "Fl R 6s",
@@ -54,7 +54,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The US Lighthouse Society's archive lists it as not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -71,6 +71,12 @@
   },
   "stay": null,
   "events": [
+    {
+      "year": 1895,
+      "event": "first_lit",
+      "note": "Station established (US Lighthouse Society Digital Archive)",
+      "from": "uslhs"
+    },
     {
       "year": 1897,
       "event": "built",
@@ -136,6 +142,11 @@
       "label": "Lighthouse Directory: Minnesota",
       "url": "https://www.ibiblio.org/lighthouse/mn.htm",
       "kind": "reference"
+    },
+    {
+      "label": "US Lighthouse Society Digital Archive: Two Harbors East Breakwater",
+      "url": "https://archives.uslhs.org/places/two-harbors-east-breakwater",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -191,6 +202,16 @@
       ]
     },
     {
+      "source": "uslhs",
+      "key": "uslhs:9219",
+      "part": "station",
+      "fields": [
+        "access",
+        "events",
+        "light"
+      ]
+    },
+    {
       "source": "enc",
       "key": "enc:47.01061,-91.66947",
       "part": "wikidata:Q84704456",
@@ -204,5 +225,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-21"
+  "updated": "2026-10-28"
 }
