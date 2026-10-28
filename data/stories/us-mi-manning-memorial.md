@@ -1,0 +1,12 @@
+Robert H. Manning Memorial Light is a small white tower in a park at Empire, Michigan, on the shore of Lake Michigan. It is a private aid to navigation that the Coast Guard lists, built by family and friends in memory of Robert Manning, a local fisherman who had often wished for a light at Empire.[^1][^2]
+
+Manning was born in 1927 and lived his whole life in the Empire area. He sold insurance and later worked in supply for the Empire Air Force Station. He fished offshore, and after returning to shore he often lamented that there was no light at Empire to guide him home. He died in December 1989, and his family and friends raised the money for the tower.[^1][^3] The family had an architect in Traverse City draw the design, which some observers compare to the flared tower at Point Betsie.[^1]
+
+The sources disagree on the year the light first showed. Northern Michigan History says it was illuminated in 1990 and formally dedicated the following year.[^3] Lighthouse Friends gives 1991 as the dedication year, and Rowlett and US-Lighthouses give 1991 for the light.[^1][^2][^4]
+
+The tower is about 35 feet (11 m) tall, round and clad in stucco over wood, with a white flash every four seconds from a focal plane of 38 feet (11.5 m). Lighthouse Friends gives its season as 15 April to 15 November, and Northern Michigan History says it runs seasonally from mid-April to mid-November.[^1][^3] The grounds are open and the tower is closed, and the light does not offer tours.[^2][^3] Rowlett names the Village of Empire as owner; Lighthouse Friends names the Town of Empire.[^2][^1]
+
+[^1]: Robert H. Manning Memorial Lighthouse (LighthouseFriends.com page, facts only), LighthouseFriends.com (Kraig Anderson), https://www.lighthousefriends.com/light.asp?ID=200 (accessed 2026-10-28).
+[^2]: Lighthouses of the United States: Michigan's Western Lower Peninsula, Leelanau County, Manning entry, Russ Rowlett, The Lighthouse Directory, University of North Carolina at Chapel Hill, https://www.ibiblio.org/lighthouse/minwl.htm (accessed 2026-10-28).
+[^3]: Manning Memorial Lighthouse: A Local Tribute (local history article), Northern Michigan History, https://northernmichiganhistory.com/manning-memorial-lighthouse/ (accessed 2026-10-28).
+[^4]: Robert H. Manning Memorial Lighthouse, Empire, Michigan (tower information), US-Lighthouses.com (Bryan Penberthy), https://us-lighthouses.com/robert-manning-memorial-ligthouse (accessed 2026-10-28).
