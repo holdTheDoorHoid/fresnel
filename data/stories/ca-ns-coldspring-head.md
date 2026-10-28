@@ -1,0 +1,14 @@
+Coldspring Head Lighthouse is a small white wooden tower on the south shore of Baie Verte, on the Northumberland Strait side of Nova Scotia, near Northport and Amherst Shore.[^1] It was built in 1890 and, on the dates Lighthouse Friends gives, showed its light for more than a century.[^1]
+
+A square, tapering tower about 11 m (36 ft) high, it carried a fixed white light 18 m (60 ft) above high water, visible from about 13 miles away, according to the notice that *The Nautical Magazine* printed in January 1890, as quoted by Lighthouse Friends. That notice described the lantern as iron and painted red, and the tower as white, standing roughly 30 m (100 ft) from the northern side of the head.[^1] The tower was put up under contract by J. Harvey Brownell for $894.[^1]
+
+The tower went up while work was under way on the Chignecto Ship Railway, a scheme to haul ships overland across the isthmus between the Bay of Fundy and the Northumberland Strait, and Canada's heritage statement says the light was built in anticipation of the extra traffic that railway would bring.[^2][^1] The money behind the railway collapsed in 1890 with the failure of Baring Brothers, and it was never finished, though the lighthouse stayed in service.[^1]
+
+Brownell also became the first keeper, starting on 12 April 1890, but he resigned after thirteen months and a relative, Alfred Brownell, took over.[^1] Lighthouse Friends lists the keepers who followed as Luther Brownell (1901 to 1909), Willard Vanemburg (1909 to 1914), Frederick P. Ackles (1914 to 1924) and Elmer Embree (1924 to 1951).[^1] A federal heritage building review (report 90-106) judged the tower a very good example of an early square-tapered wooden light, with good craftsmanship in its wood frame and classical details, including a bracketed frieze below the lantern gallery.[^3][^2] The light was not deactivated until 2013, and in 2015 it was designated a Heritage Lighthouse.[^1]
+
+The Coast Guard still owns the property. Lighthouse Friends and the Lighthouse Directory both describe the site as open and the tower as closed; the lighthouse is reached by Cold Spring Head Road off Route 366.[^1][^4]
+
+[^1]: Coldspring Head Lighthouse, Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=999 (accessed 2026-10-27).
+[^2]: Coldspring Head Lighthouse, statement of significance, Canadian Register of Historic Places 20772, https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=20772 (accessed 2026-10-27).
+[^3]: Tower, Coldspring Head, heritage character statement, Canadian Register of Historic Places 9682, https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=9682 (accessed 2026-10-27).
+[^4]: Lighthouses of Nova Scotia, northwest, The Lighthouse Directory, University of North Carolina at Chapel Hill (Russ Rowlett), https://www.ibiblio.org/lighthouse/nsnw.htm (accessed 2026-10-27).
