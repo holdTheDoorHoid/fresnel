@@ -27,9 +27,13 @@ def run(cmd, cwd=ROOT, quiet=True):
     return p
 
 
-def station_name(sid):
+def station_names(sid):
+    """The station's name and its other names: a story may name Milneberg Lighthouse as Port Pontchartrain."""
     p = glob.glob(os.path.join(ROOT, "data", "stations", "*", f"{sid}.json"))
-    return json.load(open(p[0], encoding="utf-8"))["name"] if p else None
+    if not p:
+        return []
+    s = json.load(open(p[0], encoding="utf-8"))
+    return [s["name"], *(s.get("other_names") or [])]
 
 
 STOP = {"light", "lighthouse", "station", "range", "lights", "front", "rear", "the", "of", "de", "la", "le", "du",
@@ -84,9 +88,9 @@ def main():
             print(f"   NO STORY {sid}")
             continue
         head = fold(open(sp, encoding="utf-8").read()[:3000])
-        name = station_name(sid) or sid
-        if not any(k in head for k in name_keys(name)):
-            print(f"   CHECK IDENTITY {sid}: the opening never names {name!r}"); ok = False
+        names = station_names(sid) or [sid]
+        if not any(k in head for n in names for k in name_keys(n)):
+            print(f"   CHECK IDENTITY {sid}: the opening never names {names[0]!r}"); ok = False
     st = run(["git", "status", "--porcelain", "--untracked-files=all"]).stdout.splitlines()
     touched = {re.sub(r"^.. ", "", l) for l in st}
     batch = {f"data/stories/{i}.md" for i in ids} | {f"data/research/{i}.json" for i in ids}
