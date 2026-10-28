@@ -1,0 +1,16 @@
+Bay Bulls Lighthouse, also called Bull Head, is a cast-iron tower on the headland north of the entrance to Bay Bulls, a fishing community on the eastern shore of the Avalon Peninsula, about 29 km south of St. John's. It was first lit in 1908, and the iron tower is now the only part of the station still standing.[^1]
+
+The light sits about halfway between the two main coast lights, at Cape Spear and Ferryland.[^1] In 1920 a royal commission on the lights of the Newfoundland coast reported on it. Lighthouse Friends quotes the commissioners as wanting it improved to make "a good coasting light," and as writing that "Deep sea ships do not often make land at this point."[^1]
+
+Lighthouse Friends says a cast-iron lighthouse was manufactured for Bay Bulls in 1906, and that it was first lit in spring 1908.[^1] The Newfoundland 3D gallery says it was built in 1906 and officially lit in 1908.[^2] The federal heritage statement says it was built in 1908 and was most likely assembled from parts made in Britain. It gives no date for the manufacture.[^3] The gallery and the heritage statement therefore disagree on when the tower was built. The first lens was a fourth-order one, showing white for seven seconds and then dark for three. A wooden keepers' dwelling stood up the hill, joined to the tower by a covered passage.[^1]
+
+Lighthouse Friends names F. Williams as keeper in 1908, and Thomas Williams from 1909 to at least 1912. It also names Thomas Lundrigan, without dates. The keeper's name, it says, was "listed the first year as F. Williams" before it became Thomas Williams.[^1]
+
+The station was electrified in 1931, when the light was changed to fixed white. In 1956 it went onto battery power. The Coast Guard kept the light in its care until 1969, when a Bay Bulls man was hired on contract. He resigned after a single month, and attempts to find a replacement failed.[^1]
+
+The Canadian Coast Guard owns the lighthouse. In 1992 the tower was given Recognized Federal Heritage Building status.[^1] The grounds are open and the tower is closed. Drivers park beside two small graveyards at Gunridge, then walk Spout Path, part of the East Coast Trail, for 3.5 km (2.2 miles) to the light. The trail sign warns of cliffs, steep climbs and danger in fog.[^1] The Coast Guard list gives one white flash every six seconds.[^4] Lighthouse Friends says the flash comes every five seconds, and the sources do not explain the difference.[^1]
+
+[^1]: Bay Bulls (Bull Head) Lighthouse, Newfoundland Canada, Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=1305 (accessed 2026-10-27).
+[^2]: Bay Bulls (Bull Head) Lighthouse, The Newfoundland 3D Lighthouse Gallery, https://www.nllh3d.ca/lighthouse-details/bay-bulls-lighthouse (accessed 2026-10-27).
+[^3]: Heritage Character Statement, Lighthouse: Bull Head, Bay Bulls, Newfoundland, Federal Heritage Building Review Office Building Report 91-34, historicplaces.ca, https://www.historicplaces.ca/media/14990/1991-034(e)lighthouse-bullhead.pdf (accessed 2026-10-27).
+[^4]: Newfoundland and Labrador Coast, Cape St. Francis to Renews, Canadian Coast Guard List of Lights, https://www.notmar.gc.ca/publications/list-lights/newfoundland/nl499-en.php (accessed 2026-10-27).
