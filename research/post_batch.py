@@ -14,7 +14,7 @@ the build and tests read all of it). Steps, stopping at the first failure:
   4. pipeline/validate.py, the pipeline tests, build_site_data, the web type check, tests and build
   5. with --publish: git add data/stories data/research, commit, push
 Exit status 0 only when every step passed."""
-import argparse, glob, json, os, re, shutil, subprocess, sys
+import argparse, glob, json, os, re, shutil, subprocess, sys, unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,9 +37,15 @@ STOP = {"light", "lighthouse", "station", "range", "lights", "front", "rear", "t
         "north", "south", "east", "west", "phare", "faro", "isla", "punta", "mount", "rock", "reef", "shoal"}
 
 
+def fold(text):
+    """Lower case without accents: a story may write "Ile Verte" for the record's "Île-Verte"."""
+    return "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c))
+
+
 def name_keys(name):
-    words = [w for w in re.findall(r"[\w'’-]+", name.lower()) if w not in STOP and len(w) > 2]
-    return words or [w for w in re.findall(r"[\w'’-]+", name.lower()) if len(w) > 2]
+    # Hyphens split words too: "Île-Verte" is named in a story as "Île Verte".
+    words = re.findall(r"[\w'’]+", fold(name))
+    return [w for w in words if w not in STOP and len(w) > 2] or [w for w in words if len(w) > 2]
 
 
 def main():
@@ -77,7 +83,7 @@ def main():
         if not os.path.exists(sp):
             print(f"   NO STORY {sid}")
             continue
-        head = open(sp, encoding="utf-8").read()[:3000].lower()
+        head = fold(open(sp, encoding="utf-8").read()[:3000])
         name = station_name(sid) or sid
         if not any(k in head for k in name_keys(name)):
             print(f"   CHECK IDENTITY {sid}: the opening never names {name!r}"); ok = False
