@@ -1,0 +1,61 @@
+On Sandy Point, at the southeast corner of South Manitou Island in Lake Michigan, a conical brick tower 104 feet (32 m) tall stands joined by a covered brick walkway to a yellow-brick keeper's house that is older than the tower.[^2] They mark a harbour that an 1869 lighthouse inspector said was probably used more than any other on the whole chain of lakes.[^1]
+
+## The place
+
+South Manitou lies beside the Manitou Passage, the stretch of water between the Manitou islands and the Michigan mainland, which most vessels used on the route between the Straits of Mackinac and Chicago.[^1] The island's crescent-shaped harbour on its eastern side was where steamers anchored to take on fuel or wait out storms.[^1] Lieutenant James T. Homans, who toured the lakes in 1838 to propose lighthouse sites, stopped at South Manitou and wrote that the harbour was the only one admitting the largest vessels in all weather on the 300-mile direct route between the Straits and Chicago.[^1] The island's hardwood forest supplied cordwood for refuelling steamships, and its first settlement, begun in 1838 by William Burton, started with a dock built to sell that wood.[^3][^4]
+
+Congress appropriated $5,000 for a light on the island in 1838.[^3][^1]
+
+## Building the light
+
+The first light was built in 1839 and shown in 1840. The sources disagree on the year it began: the National Register nomination says the Federal Government established a lighthouse and fog bell on the island in 1839, while the US Lighthouse Society archive gives 1840 as the year the station was established, and the keepers' list begins with William N. Burton's appointment on 28 September 1840.[^2][^5][^6] LighthouseFriends describes it as a stone dwelling, 34 by 20 feet, with a detached brick-and-stone tower about 30 feet tall, built to the same specification as the old Presque Isle lighthouse, showing a fixed white light from eight lamps with 14-inch reflectors.[^1] The National Park Service says little is known about this first building, other than that it was the only light in the area for at least a decade.[^4]
+
+An inspection report of 1850, as summarised on LighthouseFriends, found the tower and dwelling needed pointing and whitewash and the fireplaces had been undermined by rats.[^1] The National Park Service says the first light carried a fourth-order Fresnel lens, while LighthouseFriends dates a fourth-order lens to 1857, by which time a fog bell was also in use.[^3][^1] The sources do not settle which is right.
+
+In 1858 the yellow-brick house that still stands was built, with a wooden tower and lantern attached to its roof; the year is worked into the brick on its south side.[^1][^2] By 1869 the inspector for the district, T. H. Stevens, wanted more. He wrote that "South Manitou is one of the most important stations in the district," and asked for a taller tower, a larger lens and a distinct light character.[^1] Congress gave $10,000 in 1870 and another $20,000 on 3 March 1871.[^1] A work crew arrived in 1871 and built the present tower on a pile foundation.[^1] The National Register nomination dates the tower and walkway to 1871-72, and says the old wooden tower came off the house when the new one was finished in 1872.[^2]
+
+The new tower is described as conical, 18 feet across at the base and 12 feet at the parapet, and held a third-order Fresnel lens made by Henri Lepaute of Paris that projected its light "17-3/4 miles."[^2] The sources do not agree on the figures for height: the nomination and the Park Service say the tower is 104 feet tall, LighthouseFriends calls it a 100-foot tower with the light 104 feet above the water, and the nomination puts the focal plane at 100 feet.[^2][^4][^1] The US Lighthouse Society archive gives 91 feet from base to the centre of the lantern.[^5]
+
+A steam fog signal was added in 1875, and the whistle shed that housed it was replaced by the present one in 1896.[^2] LighthouseFriends adds that a duplicate whistle was installed three years after the first, and that a circular iron oil house went up 100 feet northeast of the tower in 1893, which the Light-House Board's report for that year confirms.[^1][^7]
+
+## The keepers
+
+William N. Burton, the first keeper, was the son of the island's first permanent settler, according to LighthouseFriends.[^1] The roster the US Lighthouse Society archive draws from federal records lists twenty-one head-keeper entries between 1840 and 1958, and from 1871 the station was authorised to have two assistants, who lived in the keeper's house.[^5][^2]
+
+Aaron A. Sheridan took charge in 1866.[^5][^6] LighthouseFriends reports that he had served in the Civil War, where a wound at the Battle of Ringgold left his lower left arm useless.[^1] In July 1869 the master of the *Equinox*, out of Buffalo, complained that the light had gone out between midnight and 1 a.m.; Sheridan explained that the lamp had been overflowing, that he had reduced the oil flow, and that after an hour's rest he found the oil stopped and the light out.[^1] His wife, Julia Sheridan, was appointed first assistant keeper on 9 September 1872, and Jeremiah Becker became second assistant in 1875 to help run the steam whistle.[^6][^5][^1] In May 1875, LighthouseFriends relates, Sheridan let the water in the boilers fall too low, and the inspector who reported it judged that he should have been moved to another station.[^1]
+
+Lyman Sheridan, Aaron's first cousin, took over in 1878. LighthouseFriends says his wife Mary died of tuberculosis in 1882, that he blamed the damp of the dwelling, and that he resigned.[^1] His successor Martin Knudsen, appointed 2 June 1882, met the same damp. Years later, writing to the Lighthouse Service, he said water stood in puddles on the floor of the tower base from moisture running down the walls, and that he cured it by opening windows in dry weather and shutting them in damp; the letter was printed in the *Lighthouse Service Bulletin* in 1921.[^6][^11]
+
+## Storms, wrecks and rescues
+
+On Friday, 15 March 1878 (the date LighthouseFriends gives, and the Friday before the Tribune's report), a small boat left Glen Haven with the keeper, Mr. Sheridan, his wife, one child and a Norwegian. A dispatch dated Leland and printed in the Chicago Daily Tribune of 19 March reported that within a mile of the island "tho boat was capsized, and Mr. and Mrs. Sheridan and the child wore drowned" [sic]; the Norwegian clung to the boat until a man came out in a skiff, and the Sheridans left five small children, the oldest about thirteen.[^8][^1] The passenger was Chris Ankerson, a South Manitou resident, according to LighthouseFriends, which says that he reported the keeper could have saved himself but gave his life trying to save his wife and baby, and that Katherine Hutzler was minding the couple's five other sons, aged three to twelve, at the time.[^1] The Tribune gives no ages and no baby's name; LighthouseFriends names the infant Robert and says he was ten months old.[^1]
+
+The fog signal's work shows in the Light-House Board's reports. In the report for 1893 the pair of 10-inch steam whistles ran some 771 hours and burned about 44 cords of wood; two years later, in the report for 1895, they ran some 928 hours and burned about 2 tons of coal and 73 cords of wood.[^7][^9]
+
+In an October report to the Milwaukee lighthouse inspector, published in the *Lighthouse Service Bulletin* in 1918, Keeper James P. Burdick wrote that a duck had flown through the storm pane and plate glass in the tower the night before, and that "Both the outside and inside glass were cracked all to pieces."[^10] (The year in the printed date is garbled in the scanned copy; the *Bulletin*'s index lists the report under Burdick, and LighthouseFriends dates it 1917.[^13][^1]) In the Commissioner of Lighthouses' report for 1922, Keeper Burdick, first assistant George J. Meengs and second assistant John K. Tobin are listed for helping take passengers ashore from the mail boat *Violet*, caught fast in an ice floe offshore.[^12]
+
+## After the keepers
+
+LighthouseFriends dates several changes of the later years: the fog signal became an air diaphone in 1933, electric power reached the light in 1942, the lighthouse and the nearby lifeboat station were consolidated in 1945, and the fog signal was discontinued in 1954.[^1] The US Lighthouse Society archive gives 1935 as the year the light was automated, yet its roster continues with head keepers until the station was discontinued in 1958; the sources do not explain the gap.[^5] The nomination says the Coast Guard closed the station in 1958 and that the keeper's residence housed the keeper and his family until then.[^2]
+
+The buildings stood neglected until they became part of Sleeping Bear Dunes National Lakeshore in 1970.[^1] A campaign by the Manitou Island Memorial Society and Manitou Island Transit to relight the tower led to the Park Service restoring the lantern room and spiral staircase in 2008; a replica of the original third-order lens, made by Artworks Florida, was installed that autumn, and the light was reactivated on 30 May 2009. According to LighthouseFriends it was switched on by Jack Sheridan, a great-grandson of Keeper Aaron Sheridan.[^1]
+
+## Today
+
+The lighthouse and its keeper's house belong to the National Park Service and form part of Sleeping Bear Dunes National Lakeshore.[^5][^1] The island is reached by the ferry from Leland (Manitou Island Transit).[^1] LighthouseFriends reports the grounds open, the dwelling closed and the tower open for tours in season.[^1] The Park Service's page says visitors can climb the 117 steps to the balcony and see the replica lens, but also that the South Manitou Island complex is closed for the 2026 season because of a large construction project, so check with the park before planning a trip.[^4]
+
+The island also had a life-saving station, which opened in 1902 and has its own entry on this site.[^2]
+
+[^1]: South Manitou Island Lighthouse, Michigan, Lighthousefriends.com, https://www.lighthousefriends.com/light.asp?ID=715 (accessed 2026-10-27).
+[^2]: National Register of Historic Places Inventory-Nomination Form, South Manitou Island Lighthouse Complex and Life-Saving Station Historical District (NRHP 83003782), National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/83003782.pdf (accessed 2026-10-27).
+[^3]: South Manitou Island History, Sleeping Bear Dunes National Lakeshore, National Park Service, https://home.nps.gov/slbe/learn/historyculture/smihistory.htm (accessed 2026-10-27).
+[^4]: South Manitou Lighthouse Complex, National Park Service, https://www.nps.gov/places/000/south-manitou-lighthouse-complex.htm (accessed 2026-10-27).
+[^5]: South Manitou Island, US Lighthouse Society Digital Archive, https://archives.uslhs.org/places/south-manitou-island (accessed 2026-10-27).
+[^6]: South Manitou Island Lighthouse Keepers, Sleeping Bear Dunes National Lakeshore, National Park Service, https://www.nps.gov/slbe/planyourvisit/smilighthousekeepers.htm (accessed 2026-10-27).
+[^7]: Annual Report of the Light-House Board for 1893, https://archive.org/details/annualreportlig01statgoog/page/n179/mode/2up (scan pages 171 and 179; accessed 2026-10-27).
+[^8]: Chicago Daily Tribune, 19 March 1878, p. 2, Library of Congress, https://www.loc.gov/resource/sn84031492/1878-03-19/ed-1/?sp=2 (accessed 2026-10-27).
+[^9]: Annual Report of the Light-House Board for 1895, https://archive.org/details/annualreportlig00boargoog (page not determined from the scan index; accessed 2026-10-27).
+[^10]: Lighthouse Service Bulletin, 1918, p. 3 (PDF page), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1918.pdf#page=3 (accessed 2026-10-27).
+[^11]: Lighthouse Service Bulletin, 1921, p. 2 (PDF page), https://uslhs.org/sites/default/files/bulletins/LighthouseServiceBulletin_1921.pdf#page=2 (accessed 2026-10-27).
+[^12]: Annual Report of the Commissioner of Lighthouses for 1922, https://archive.org/details/bub_gb_B2dYAAAAYAAJ/page/n756/mode/2up (scan page 756; accessed 2026-10-27).
+[^13]: Lighthouse Service Bulletin, index to 1918-1923, PDF page 5, https://uslhs.org/sites/default/files/bulletins/1918_1923_Index.pdf#page=5 (accessed 2026-10-27).
