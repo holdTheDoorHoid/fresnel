@@ -1,0 +1,16 @@
+The Northwood Lighthouse stands on the north shore of Grand Lake St. Marys, a reservoir mainly in Mercer County in western Ohio. It is a two-thirds-scale copy of the Eddystone Lighthouse in the English Channel. Its fifty-foot (15 m) conical tower dates to 1923 in LighthouseFriends and in Rowlett's directory. It stands on private property and is closed to visitors.[^1][^3]
+
+Developer Bill Jasperson built it as what LighthouseFriends calls a "drawing card" for his Northwood subdivision.[^1] A community history of the development spells his name Jaspersen. It gives the date as 1925 and the height as seventy feet.[^4] The sources disagree on the date and the height, and the record does not settle either.
+
+The community history says the lighthouse was commissioned as both a navigational aid and a promotional symbol, and that it carried a fifth-order Fresnel lens.[^4] LighthouseFriends says it was reportedly equipped with a Fresnel lens taken from a lighthouse off Cuba, and that it operated under a government license as a seasonal aid to navigation from April through November.[^1] The community history says its beam "guided pleasure boats" through the 1920s and 1930s.[^4] The U.S. Lighthouse Society's archive lists the structure as a "Private (Faux) Lighthouse" that is not an active aid to navigation.[^2]
+
+The owners changed within the development. LighthouseFriends says Frank Sommers, who bought the development in the 1930s, offered the lighthouse for sale in 1972 at $50,000, with an easement across neighboring land for access.[^1] The same account says the price also included lease rights to state-owned land where the lighthouse stands, so the status of the land is unclear.[^1] The community history gives a Sommers family owner from 1932 to 1975.[^4] LighthouseFriends says the lighthouse was placed on the National Register of Historic Places in 1982.[^1]
+
+Rowlett's directory names the Lake Improvement Association as owner and site manager, and says it restored and reactivated the light in 2020.[^3] The community history says a later steward relit it in 2012.[^4] The two accounts disagree on who restored the light and when, and the USLHS record still lists it as not an active aid.[^2]
+
+Today the lighthouse is closed, and the USLHS record lists it as not open to the public.[^2] LighthouseFriends advises viewing it from the water or from Northwood Drive, and Rowlett's directory notes that access is through private property.[^1][^3]
+
+[^1]: LighthouseFriends, "Northwood Lighthouse, Ohio," https://www.lighthousefriends.com/light.asp?ID=849 (accessed 2026-10-27). A community site under its own copyright; used for facts, with the account reworded.
+[^2]: U.S. Lighthouse Society Digital Archive, "Grand Lake Saint Marys" place record, https://archives.uslhs.org/places/grand-lake-saint-marys (accessed 2026-10-27).
+[^3]: Russ Rowlett, "Lighthouse Directory: Ohio," University of North Carolina at Chapel Hill, ibiblio, https://www.ibiblio.org/lighthouse/oh.htm (accessed 2026-10-27). Used for facts.
+[^4]: "History," Welcome to Northwood (Northwood community site), https://www.welcometonorthwood.com/history (accessed 2026-10-27). A community history, not an authority; its dates and owners conflict with other sources.
