@@ -41,9 +41,13 @@ STOP = {"light", "lighthouse", "station", "range", "lights", "front", "rear", "t
         "north", "south", "east", "west", "phare", "faro", "isla", "punta", "mount", "rock", "reef", "shoal"}
 
 
+APOSTROPHES = dict.fromkeys(map(ord, "'‘’ʻʼ`"))
+
+
 def fold(text):
-    """Lower case without accents: a story may write "Ile Verte" for the record's "Île-Verte"."""
-    return "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c))
+    """Lower case without accents or apostrophes: a story may write "Ile Verte" for the record's "Île-Verte",
+    and "La‘au" (an ʻokina) for "La'au"."""
+    return "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c)).translate(APOSTROPHES)
 
 
 def name_keys(name):
